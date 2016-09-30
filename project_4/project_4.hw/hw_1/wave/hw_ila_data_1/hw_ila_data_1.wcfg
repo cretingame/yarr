@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="/home/asautaux/project_4/project_4.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="22">
+	</WVObjectSize>
+	<wvobject fp_name="clk_i" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_0" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_1" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_2" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_3" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_4" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_5" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_6" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[0]_i_1_n_7" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_0" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_1" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_2" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_3" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_4" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_5" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_6" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[4]_i_1_n_7" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[8]_i_1_n_2" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[8]_i_1_n_3" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[8]_i_1_n_5" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[8]_i_1_n_6" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="u1/count_int_reg[8]_i_1_n_7" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+
