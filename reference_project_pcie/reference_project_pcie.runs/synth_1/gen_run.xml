@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1475531784">
+  <File Type="PA-TCL" Name="qpcie_xilinx_top.tcl"/>
+  <File Type="RDS-RDS" Name="qpcie_xilinx_top.vds"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="qpcie_xilinx_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="qpcie_xilinx_top_timing_summary_synth.pb"/>
+  <File Type="RDS-DCP" Name="qpcie_xilinx_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="qpcie_xilinx_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="qpcie_xilinx_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="qpcie_xilinx_top_drc_synth.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_cpllpd_ovrd.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_bram_7x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_rx_null_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_rx_pipeline.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_tx_pipeline.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtx_cpllpd_ovrd.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_brams_7x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_qpll_drp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_qpll_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_rxeq_scan.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_rx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_pipe_drp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_pipe_rate.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_pipe_reset.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gt_common.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gt_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_bram_top_7x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_pipe_lane.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_pipe_misc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_drp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_eq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_rate.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_reset.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_user.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_qpll_reset.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_axi_basic_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gt_rx_valid_filter_7x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_7x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_pipe_pipeline.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gt_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_core_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_clock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_s7_hip.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_xx_hip_pcie.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_axi4lite_dec.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_external_reg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_axi4slv_ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_scfifo.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_ref_design.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/top/qpcie_xilinx_top_x4_gen2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie2_top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="qpcie_xilinx_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

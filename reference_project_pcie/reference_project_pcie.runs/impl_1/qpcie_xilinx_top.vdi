@@ -1,0 +1,629 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct  3 15:05:56 2016
+# Process ID: 19384
+# Current directory: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1
+# Command line: vivado -log qpcie_xilinx_top.vdi -applog -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace
+# Log file: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/qpcie_xilinx_top.vdi
+# Journal file: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source qpcie_xilinx_top.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 1367 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7k160tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+create_generated_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2043.410 ; gain = 493.500 ; free physical = 10255 ; free virtual = 20324
+Finished Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2059.410 ; gain = 1005.715 ; free physical = 10119 ; free virtual = 20120
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2091.426 ; gain = 32.016 ; free physical = 10062 ; free virtual = 20064
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 2109b126f
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: c9877218
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9725 ; free virtual = 19726
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 8 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-10] Eliminated 1372 cells.
+Phase 2 Constant Propagation | Checksum: 25b1afdb8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9726 ; free virtual = 19728
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 5117 unconnected nets.
+INFO: [Opt 31-11] Eliminated 755 unconnected cells.
+Phase 3 Sweep | Checksum: 1e078067f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9574 ; free virtual = 19575
+
+Phase 4 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 4 Constant Propagation | Checksum: 1e078067f
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9573 ; free virtual = 19575
+
+Phase 5 Sweep
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 5 Sweep | Checksum: 1e078067f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9573 ; free virtual = 19575
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9573 ; free virtual = 19575
+Ending Logic Optimization Task | Checksum: 1e078067f
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2091.426 ; gain = 0.000 ; free physical = 9573 ; free virtual = 19575
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 21 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 25 Total Ports: 42
+Number of Flops added for Enable Generation: 6
+
+Ending PowerOpt Patch Enables Task | Checksum: 1d7693c40
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10419 ; free virtual = 20421
+Ending Power Optimization Task | Checksum: 1d7693c40
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.754 ; gain = 168.328 ; free physical = 10419 ; free virtual = 20421
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2259.754 ; gain = 200.344 ; free physical = 10419 ; free virtual = 20421
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10417 ; free virtual = 20420
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10188 ; free virtual = 20198
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/qpcie_xilinx_top_drc_opted.rpt.
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__1) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_4) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_1 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_1/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_5) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_0 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_0/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_1) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_1 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_1/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_2) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_2 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_2/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_2_ENARDEN_cooolgate_en_sig_3) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 7 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 9962 ; free virtual = 19971
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10443 ; free virtual = 20452
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop
+
+Phase 1.1.1.1 Pre-Place Cells
+Phase 1.1.1.1 Pre-Place Cells | Checksum: 90296764
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 90296764
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1.1.1.3 IO and Clk Clean Up
+
+Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr
+Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr | Checksum: 90296764
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+Phase 1.1.1.3 IO and Clk Clean Up | Checksum: 90296764
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+
+Phase 1.1.1.4 Implementation Feasibility check On IDelay
+Phase 1.1.1.4 Implementation Feasibility check On IDelay | Checksum: 90296764
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+
+Phase 1.1.1.5 Commit IO Placement
+Phase 1.1.1.5 Commit IO Placement | Checksum: b7ec2f7d
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: b7ec2f7d
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 109ac7c00
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Make Others
+Phase 1.2.1.1 Make Others | Checksum: 109f592e7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10614 ; free virtual = 20623
+
+Phase 1.2.1.2 Init Lut Pin Assignment
+Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 109f592e7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10613 ; free virtual = 20622
+Phase 1.2.1 Place Init Design | Checksum: 1169efa15
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 20613
+Phase 1.2 Build Placer Netlist Model | Checksum: 1169efa15
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 20613
+
+Phase 1.3 Constrain Clocks/Macros
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1169efa15
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 20613
+Phase 1 Placer Initialization | Checksum: 1169efa15
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 20613
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 206f1349a
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:37 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10600 ; free virtual = 20609
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 206f1349a
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:38 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10600 ; free virtual = 20609
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: d47e828e
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:43 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10598 ; free virtual = 20607
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 12d8d69ba
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:43 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10598 ; free virtual = 20607
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 12d8d69ba
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:43 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10598 ; free virtual = 20607
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: a39ff828
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:44 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10598 ; free virtual = 20607
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: a39ff828
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:45 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10598 ; free virtual = 20607
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: b3af4698
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:57 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10591 ; free virtual = 20600
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: a4670c19
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10591 ; free virtual = 20600
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: a4670c19
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:59 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10591 ; free virtual = 20600
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: a4670c19
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:01 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10589 ; free virtual = 20598
+Phase 3 Detail Placement | Checksum: a4670c19
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:01 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10589 ; free virtual = 20598
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 updateClock Trees: PCOPT
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: ca5846c2
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:05 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.1.2 Post Placement Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.623. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 11585487a
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:05 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+Phase 4.1 Post Commit Optimization | Checksum: 11585487a
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 11585487a
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.3 Uram Pipeline Register Optimization
+Phase 4.3 Uram Pipeline Register Optimization | Checksum: 11585487a
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.4 Post Placement Cleanup
+Phase 4.4 Post Placement Cleanup | Checksum: 11585487a
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.5 Placer Reporting
+Phase 4.5 Placer Reporting | Checksum: 11585487a
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:07 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+
+Phase 4.6 Final Placement Cleanup
+Phase 4.6 Final Placement Cleanup | Checksum: e79605c6
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:07 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: e79605c6
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:07 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+Ending Placer Task | Checksum: 817a6dfc
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:07 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+INFO: [Common 17-83] Releasing license: Implementation
+51 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20590
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10516 ; free virtual = 20589
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10568 ; free virtual = 20589
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20588
+report_utilization: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10566 ; free virtual = 20588
+report_control_sets: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20589
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20589
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: 1dc5edff4
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20589
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Ending Physical Synthesis Task | Checksum: 18fa3007b
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20589
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 20589
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10508 ; free virtual = 20588
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.754 ; gain = 0.000 ; free physical = 10555 ; free virtual = 20588
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: 52882ce5 ConstDB: 0 ShapeSum: b0f2fcba RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 795151a5
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2347.902 ; gain = 88.148 ; free physical = 10436 ; free virtual = 20469
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 795151a5
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2347.906 ; gain = 88.152 ; free physical = 10436 ; free virtual = 20469
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 795151a5
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 2349.902 ; gain = 90.148 ; free physical = 10435 ; free virtual = 20468
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 795151a5
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2349.902 ; gain = 90.148 ; free physical = 10435 ; free virtual = 20468
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1b575b207
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10386 ; free virtual = 20419
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.607  | TNS=0.000  | WHS=-0.492 | THS=-693.795|
+
+Phase 2 Router Initialization | Checksum: 128c27d1c
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10386 ; free virtual = 20419
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12cc9f845
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:25 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10382 ; free virtual = 20415
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 5290
+ Number of Nodes with overlaps = 138
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 1574b1543
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.152  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1132469ea
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:00:35 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+Phase 4 Rip-up And Reroute | Checksum: 1132469ea
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:00:35 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 134345c5e
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:36 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 134345c5e
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:36 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 134345c5e
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:36 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+Phase 5 Delay and Skew Optimization | Checksum: 134345c5e
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:37 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 105633400
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=0.036  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 105633400
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+Phase 6 Post Hold Fix | Checksum: 105633400
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 1792ddabc
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 1792ddabc
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 7.52226 %
+  Global Horizontal Routing Utilization  = 8.0107 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 1792ddabc
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 1792ddabc
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1fd4eaabb
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20412
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.166  | TNS=0.000  | WHS=0.038  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 11 Post Router Timing | Checksum: 1e16f1af3
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:47 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20411
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:47 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20411
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+72 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:56 ; elapsed = 00:00:49 . Memory (MB): peak = 2381.723 ; gain = 121.969 ; free physical = 10378 ; free virtual = 20411
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2395.723 ; gain = 0.000 ; free physical = 10299 ; free virtual = 20408
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.727 ; gain = 14.004 ; free physical = 10360 ; free virtual = 20409
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/qpcie_xilinx_top_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2459.164 ; gain = 60.043 ; free physical = 10303 ; free virtual = 20376
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  3 15:09:28 2016...
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct  3 15:09:33 2016
+# Process ID: 22675
+# Current directory: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1
+# Command line: vivado -log qpcie_xilinx_top.vdi -applog -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace
+# Log file: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/qpcie_xilinx_top.vdi
+# Journal file: /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source qpcie_xilinx_top.tcl -notrace
+Command: open_checkpoint qpcie_xilinx_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1047.684 ; gain = 0.000 ; free physical = 11552 ; free virtual = 21624
+INFO: [Netlist 29-17] Analyzing 1365 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7k160tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/.Xil/Vivado-22675-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top_early.xdc]
+Finished Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/.Xil/Vivado-22675-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top_early.xdc]
+Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/.Xil/Vivado-22675-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+create_generated_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2009.402 ; gain = 491.500 ; free physical = 10597 ; free virtual = 20741
+Finished Parsing XDC File [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/.Xil/Vivado-22675-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2025.402 ; gain = 0.000 ; free physical = 10480 ; free virtual = 20663
+Restored from archive | CPU: 1.900000 secs | Memory: 53.862915 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2025.402 ; gain = 0.000 ; free physical = 10480 ; free virtual = 20663
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 12 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2025.402 ; gain = 977.719 ; free physical = 10535 ; free virtual = 20653
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__1) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_4) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_1 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_1/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_5) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_0 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_0/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_1) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_1 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_1/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_2) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_2 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_2/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_2_ENARDEN_cooolgate_en_sig_3) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 7 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 28930528 bits.
+Writing bitstream ./qpcie_xilinx_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Oct  3 15:10:30 2016. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2016.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:52 ; elapsed = 00:00:29 . Memory (MB): peak = 2521.141 ; gain = 495.738 ; free physical = 10165 ; free virtual = 20260
+INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file qpcie_xilinx_top.hwdef
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  3 15:10:30 2016...
