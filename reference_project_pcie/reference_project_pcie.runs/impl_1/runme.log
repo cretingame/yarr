@@ -625,3 +625,73 @@ INFO: [Common 17-83] Releasing license: Implementation
 write_bitstream: Time (s): cpu = 00:00:52 ; elapsed = 00:00:29 . Memory (MB): peak = 2521.141 ; gain = 495.738 ; free physical = 10165 ; free virtual = 20260
 INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file qpcie_xilinx_top.hwdef
 INFO: [Common 17-206] Exiting Vivado at Mon Oct  3 15:10:30 2016...
+
+*** Running vivado
+    with args -log qpcie_xilinx_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source qpcie_xilinx_top.tcl -notrace
+Command: open_checkpoint qpcie_xilinx_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1047.684 ; gain = 0.000 ; free physical = 9944 ; free virtual = 20807
+INFO: [Netlist 29-17] Analyzing 1365 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7k160tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1/.Xil/Vivado-23636-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top_early.xdc]
+Finished Parsing XDC File [/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1/.Xil/Vivado-23636-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top_early.xdc]
+Parsing XDC File [/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1/.Xil/Vivado-23636-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design.xdc:15]
+create_generated_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2010.402 ; gain = 492.500 ; free physical = 8990 ; free virtual = 19919
+Finished Parsing XDC File [/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1/.Xil/Vivado-23636-spikepig.dhcp.lbl.gov/dcp/qpcie_xilinx_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2026.402 ; gain = 0.000 ; free physical = 8979 ; free virtual = 19900
+Restored from archive | CPU: 1.800000 secs | Memory: 53.863007 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2026.402 ; gain = 0.000 ; free physical = 8979 ; free virtual = 19900
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 12 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2026.402 ; gain = 978.719 ; free physical = 9060 ; free virtual = 19901
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_dma3_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_dma3_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_16) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__1) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_0 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_0/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_4) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 qpcie_ipcore/scram_q2p_inst/ram_block_reg_1 has an input control pin qpcie_ipcore/scram_q2p_inst/ram_block_reg_1/ENARDEN (net: qpcie_ipcore/scram_q2p_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_5) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_0 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_0/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_0_ENARDEN_cooolgate_en_sig_1) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_1 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_1/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_1_ENARDEN_cooolgate_en_sig_2) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 ref_design/scfifo_inst/scram_inst/ram_block_reg_2 has an input control pin ref_design/scfifo_inst/scram_inst/ram_block_reg_2/ENARDEN (net: ref_design/scfifo_inst/scram_inst/ram_block_reg_2_ENARDEN_cooolgate_en_sig_3) which is driven by a register (qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_srst_out_reg_rep__6) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 7 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 28930528 bits.
+Writing bitstream ./qpcie_xilinx_top.bit...
+Writing bitstream ./qpcie_xilinx_top.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Oct  5 09:00:08 2016. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2016.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:51 ; elapsed = 00:00:28 . Memory (MB): peak = 2521.102 ; gain = 494.699 ; free physical = 8593 ; free virtual = 19440
+INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file qpcie_xilinx_top.hwdef
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  5 09:00:08 2016...

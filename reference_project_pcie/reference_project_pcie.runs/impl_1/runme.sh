@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/impl_1'
+HD_PWD='/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

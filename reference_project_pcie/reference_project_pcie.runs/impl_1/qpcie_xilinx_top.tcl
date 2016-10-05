@@ -48,10 +48,11 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   open_checkpoint qpcie_xilinx_top_routed.dcp
-  set_property webtalk.parent_dir /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/wt [current_project]
   catch { write_mem_info -force qpcie_xilinx_top.mmi }
-  write_bitstream -force qpcie_xilinx_top.bit 
+  write_bitstream -force qpcie_xilinx_top.bit -bin_file
   catch { write_sysdef -hwdef qpcie_xilinx_top.hwdef -bitfile qpcie_xilinx_top.bit -meminfo qpcie_xilinx_top.mmi -file qpcie_xilinx_top.sysdef }
   catch {write_debug_probes -quiet -force debug_nets}
   close_msg_db -file write_bitstream.pb
