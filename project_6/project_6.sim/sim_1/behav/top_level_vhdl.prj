@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../project_6.srcs/sources_1/new/ram_ctrl.vhd"
-vhdl xil_defaultlib  "../../../project_6.srcs/sources_1/new/ram_interface.vhd"
-vhdl xil_defaultlib  "../../../project_6.srcs/sources_1/imports/sources_1/imports/new/simple_counter.vhd"
-vhdl xil_defaultlib  "../../../project_6.srcs/sources_1/imports/sources_1/new/top_level.vhd"
-
-# Do not sort compile order
-nosort

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/asautaux/project_5/project_5.runs/synth_2'
+HD_PWD='/home/asautaux/yarr/project_6/project_6.runs/synth_2'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

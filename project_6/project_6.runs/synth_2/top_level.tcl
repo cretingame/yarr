@@ -12,21 +12,22 @@ create_project -in_memory -part xc7k160tfbg676-2
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/asautaux/project_5/project_5.cache/wt [current_project]
-set_property parent.project_path /home/asautaux/project_5/project_5.xpr [current_project]
+set_property webtalk.parent_dir /home/asautaux/yarr/project_6/project_6.cache/wt [current_project]
+set_property parent.project_path /home/asautaux/yarr/project_6/project_6.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 read_vhdl -library xil_defaultlib {
-  /home/asautaux/project_5/project_5.srcs/sources_1/imports/sources_1/imports/new/simple_counter.vhd
-  /home/asautaux/project_5/project_5.srcs/sources_1/new/ram_interface.vhd
-  /home/asautaux/project_5/project_5.srcs/sources_1/new/ram_ctrl.vhd
-  /home/asautaux/project_5/project_5.srcs/sources_1/imports/sources_1/new/top_level.vhd
+  /home/asautaux/yarr/project_6/project_6.srcs/sources_1/new/test_bench.vhd
+  /home/asautaux/yarr/project_6/project_6.srcs/sources_1/imports/sources_1/imports/new/simple_counter.vhd
+  /home/asautaux/yarr/project_6/project_6.srcs/sources_1/new/ram_interface.vhd
+  /home/asautaux/yarr/project_6/project_6.srcs/sources_1/new/ram_ctrl.vhd
+  /home/asautaux/yarr/project_6/project_6.srcs/sources_1/imports/sources_1/new/top_level.vhd
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/asautaux/project_5/project_5.srcs/constrs_1/new/project_2.xdc
-set_property used_in_implementation false [get_files /home/asautaux/project_5/project_5.srcs/constrs_1/new/project_2.xdc]
+read_xdc /home/asautaux/yarr/project_6/project_6.srcs/constrs_1/new/project_2.xdc
+set_property used_in_implementation false [get_files /home/asautaux/yarr/project_6/project_6.srcs/constrs_1/new/project_2.xdc]
 
 
 synth_design -top top_level -part xc7k160tfbg676-2

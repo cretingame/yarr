@@ -8,7 +8,7 @@
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7k160t_1" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_2/debug_nets.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_2/top_level.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_3/top_level.bit"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
@@ -50,7 +50,7 @@
         <net name="clk_i"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq11&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq11&apos;h000"/>
@@ -77,7 +77,7 @@
         <net name="count_o_OBUF[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;h2"/>
@@ -454,7 +454,7 @@
         <net name="u1/count_int_reg[8]_i_1_n_7"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq17&apos;hX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq17&apos;hX_XXXX"/>
