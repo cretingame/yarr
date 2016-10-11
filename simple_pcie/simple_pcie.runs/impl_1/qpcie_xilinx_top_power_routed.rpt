@@ -1,0 +1,325 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
+| Date             : Mon Oct  3 15:09:26 2016
+| Host             : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
+| Command          : report_power -file qpcie_xilinx_top_power_routed.rpt -pb qpcie_xilinx_top_power_summary_routed.pb -rpx qpcie_xilinx_top_power_routed.rpx
+| Design           : qpcie_xilinx_top
+| Device           : xc7k160tfbg676-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 1.881 |
+| Dynamic (W)              | 1.748 |
+| Device Static (W)        | 0.133 |
+| Effective TJA (C/W)      | 1.9   |
+| Max Ambient (C)          | 81.5  |
+| Junction Temperature (C) | 28.5  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.170 |       12 |       --- |             --- |
+| Slice Logic              |     0.040 |    59848 |       --- |             --- |
+|   LUT as Logic           |     0.038 |    30490 |    101400 |           30.07 |
+|   Register               |     0.001 |    21351 |    202800 |           10.53 |
+|   CARRY4                 |    <0.001 |     1337 |     25350 |            5.27 |
+|   F7/F8 Muxes            |    <0.001 |      371 |    101400 |            0.37 |
+|   LUT as Distributed RAM |    <0.001 |       48 |     35000 |            0.14 |
+|   Others                 |     0.000 |      249 |       --- |             --- |
+|   LUT as Shift Register  |     0.000 |       28 |     35000 |            0.08 |
+| Signals                  |     0.051 |    45678 |       --- |             --- |
+| Block RAM                |     0.067 |     20.5 |       325 |            6.31 |
+| MMCM                     |     0.108 |        1 |         8 |           12.50 |
+| I/O                      |    <0.001 |       12 |       400 |            3.00 |
+| GTX                      |     1.253 |        4 |         8 |           50.00 |
+| Hard IPs                 |     0.058 |        1 |       --- |             --- |
+|   PCIE                   |     0.058 |        1 |         1 |          100.00 |
+| Static Power             |     0.133 |          |           |                 |
+| Total                    |     1.881 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.577 |       0.530 |      0.047 |
+| Vccaux    |       1.800 |     0.078 |       0.059 |      0.018 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.001 |       0.000 |      0.001 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.005 |       0.003 |      0.002 |
+| MGTAVcc   |       1.000 |     0.642 |       0.637 |      0.005 |
+| MGTAVtt   |       1.200 |     0.382 |       0.377 |      0.005 |
+| MGTVccaux |       1.800 |     0.010 |       0.010 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock               | Domain                                                                                                                                               | Constraint (ns) |
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| TXOUTCLK            | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/pipe_txoutclk_in |            10.0 |
+| clk_125mhz_mux_x0y0 | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/pipe_oobclk_out                                                        |             4.0 |
+| clk_125mhz_x0y0     | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/clk_125mhz                                                             |             8.0 |
+| clk_250mhz_mux_x0y0 | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/pipe_oobclk_out                                                        |             4.0 |
+| clk_250mhz_x0y0     | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/clk_250mhz                                                             |             4.0 |
+| mmcm_fb             | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/mmcm_fb                                                                |            10.0 |
+| sys_clk             | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/sys_clk                                                                             |            10.0 |
+| sys_clk_p           | sys_clk_p                                                                                                                                            |            10.0 |
+| userclk1            | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/userclk1                                                               |             4.0 |
+| userclk2            | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pipe_clock_i/userclk2                                                               |             8.0 |
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------------------------------------------+-----------+
+| Name                                                                               | Power (W) |
++------------------------------------------------------------------------------------+-----------+
+| qpcie_xilinx_top                                                                   |     1.748 |
+|   qpcie_ipcore                                                                     |     1.731 |
+|     qpcie_xx_hip_top                                                               |     1.691 |
+|       g_xx_pcie_hip.ptx_arbiter_inst                                               |    <0.001 |
+|       g_xx_pcie_hip.qpcie_pcie_core_inst                                           |     1.499 |
+|         pcie_7x_0_i                                                                |     1.389 |
+|           inst                                                                     |     1.389 |
+|             gt_top_i                                                               |     1.296 |
+|               gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst                     |     0.001 |
+|               gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst                     |     0.001 |
+|               gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst                     |     0.001 |
+|               gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst                     |     0.001 |
+|               pipe_wrapper_i                                                       |     1.292 |
+|                 pipe_lane[0].gt_wrapper_i                                          |     0.314 |
+|                   cpllPDInst                                                       |    <0.001 |
+|                 pipe_lane[0].pipe_drp.pipe_drp_i                                   |     0.001 |
+|                 pipe_lane[0].pipe_eq.pipe_eq_i                                     |     0.002 |
+|                   rxeq_scan_i                                                      |     0.001 |
+|                 pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i |    <0.001 |
+|                   qpll_drp_i                                                       |    <0.001 |
+|                   qpll_wrapper_i                                                   |    <0.001 |
+|                 pipe_lane[0].pipe_rate.pipe_rate_i                                 |     0.003 |
+|                 pipe_lane[0].pipe_sync_i                                           |    <0.001 |
+|                 pipe_lane[0].pipe_user_i                                           |     0.001 |
+|                 pipe_lane[1].gt_wrapper_i                                          |     0.314 |
+|                   cpllPDInst                                                       |    <0.001 |
+|                 pipe_lane[1].pipe_drp.pipe_drp_i                                   |     0.001 |
+|                 pipe_lane[1].pipe_eq.pipe_eq_i                                     |     0.002 |
+|                   rxeq_scan_i                                                      |     0.001 |
+|                 pipe_lane[1].pipe_rate.pipe_rate_i                                 |     0.003 |
+|                 pipe_lane[1].pipe_sync_i                                           |    <0.001 |
+|                 pipe_lane[1].pipe_user_i                                           |     0.001 |
+|                 pipe_lane[2].gt_wrapper_i                                          |     0.314 |
+|                   cpllPDInst                                                       |    <0.001 |
+|                 pipe_lane[2].pipe_drp.pipe_drp_i                                   |     0.001 |
+|                 pipe_lane[2].pipe_eq.pipe_eq_i                                     |     0.002 |
+|                   rxeq_scan_i                                                      |     0.001 |
+|                 pipe_lane[2].pipe_rate.pipe_rate_i                                 |     0.004 |
+|                 pipe_lane[2].pipe_sync_i                                           |    <0.001 |
+|                 pipe_lane[2].pipe_user_i                                           |     0.001 |
+|                 pipe_lane[3].gt_wrapper_i                                          |     0.314 |
+|                   cpllPDInst                                                       |    <0.001 |
+|                 pipe_lane[3].pipe_drp.pipe_drp_i                                   |     0.001 |
+|                 pipe_lane[3].pipe_eq.pipe_eq_i                                     |     0.002 |
+|                   rxeq_scan_i                                                      |     0.001 |
+|                 pipe_lane[3].pipe_rate.pipe_rate_i                                 |     0.004 |
+|                 pipe_lane[3].pipe_sync_i                                           |    <0.001 |
+|                 pipe_lane[3].pipe_user_i                                           |     0.001 |
+|                 pipe_reset.pipe_reset_i                                            |     0.001 |
+|                 qpll_reset.qpll_reset_i                                            |    <0.001 |
+|             pcie_top_i                                                             |     0.093 |
+|               axi_basic_top                                                        |     0.006 |
+|                 rx_inst                                                            |     0.005 |
+|                   rx_null_gen_inst                                                 |    <0.001 |
+|                   rx_pipeline_inst                                                 |     0.004 |
+|                 tx_inst                                                            |     0.001 |
+|                   thrtl_ctl_enabled.tx_thrl_ctl_inst                               |    <0.001 |
+|                   tx_pipeline_inst                                                 |     0.001 |
+|               pcie_7x_i                                                            |     0.086 |
+|                 pcie_bram_top                                                      |     0.023 |
+|                   pcie_brams_rx                                                    |     0.011 |
+|                     brams[0].ram                                                   |     0.006 |
+|                       use_tdp.ramb36                                               |     0.006 |
+|                     brams[1].ram                                                   |     0.006 |
+|                       use_tdp.ramb36                                               |     0.006 |
+|                   pcie_brams_tx                                                    |     0.011 |
+|                     brams[0].ram                                                   |     0.006 |
+|                       use_tdp.ramb36                                               |     0.006 |
+|                     brams[1].ram                                                   |     0.006 |
+|                       use_tdp.ramb36                                               |     0.006 |
+|         pipe_clock_i                                                               |     0.109 |
+|       protocore_inst                                                               |     0.001 |
+|       qpcie_ireg_inst                                                              |     0.016 |
+|       qpcie_pcie_if_inst                                                           |     0.034 |
+|         qpcie_cfgio_mgt_inst                                                       |     0.003 |
+|           g_cfgio_fifo_implemented.cfgio_fifo_inst                                 |     0.001 |
+|             ram_block_reg_0_15_0_5                                                 |    <0.001 |
+|             ram_block_reg_0_15_12_17                                               |    <0.001 |
+|             ram_block_reg_0_15_18_23                                               |    <0.001 |
+|             ram_block_reg_0_15_24_29                                               |    <0.001 |
+|             ram_block_reg_0_15_30_35                                               |    <0.001 |
+|             ram_block_reg_0_15_36_41                                               |    <0.001 |
+|             ram_block_reg_0_15_42_47                                               |    <0.001 |
+|             ram_block_reg_0_15_60_65                                               |    <0.001 |
+|             ram_block_reg_0_15_6_11                                                |    <0.001 |
+|             ram_block_reg_0_15_72_77                                               |    <0.001 |
+|             ram_block_reg_0_15_78_83                                               |    <0.001 |
+|             ram_block_reg_0_15_84_89                                               |    <0.001 |
+|         qpcie_p2q_rd_mgt_inst                                                      |     0.008 |
+|         qpcie_p2q_wr_mgt_inst                                                      |     0.006 |
+|         qpcie_q2p_np_mgt_inst                                                      |     0.013 |
+|         qpcie_q2p_p_mgt_inst                                                       |     0.002 |
+|       qpcie_top_inst                                                               |     0.128 |
+|         g_i_axi4_mst0_if.axi4_mst0_if_inst                                         |     0.003 |
+|         g_i_axi4lite_mst_if.axi4lite_mst_if_inst                                   |     0.002 |
+|           a_rdstate_sync                                                           |    <0.001 |
+|           a_wrstate_sync                                                           |    <0.001 |
+|           q_rdstate_sync                                                           |    <0.001 |
+|           q_wrstate_sync                                                           |    <0.001 |
+|         g_i_axi4lite_slv_if.axi4lite_slv_if_inst                                   |     0.002 |
+|           a_rdstate_sync                                                           |    <0.001 |
+|           a_wrstate_sync                                                           |    <0.001 |
+|           q_rdstate_sync                                                           |    <0.001 |
+|           q_wrstate_sync                                                           |    <0.001 |
+|         g_i_axi4str0_if.axi4str0_if_inst                                           |     0.006 |
+|           asti_syncreset_i                                                         |    <0.001 |
+|             cd1_rst_ack_sync                                                       |    <0.001 |
+|             cd1_rst_req_sync                                                       |    <0.001 |
+|             cd2_rst_ack_sync                                                       |    <0.001 |
+|             cd2_rst_req_sync                                                       |    <0.001 |
+|           asto_syncreset_i                                                         |    <0.001 |
+|             cd1_rst_ack_sync                                                       |    <0.001 |
+|             cd1_rst_req_sync                                                       |    <0.001 |
+|             cd2_rst_ack_sync                                                       |    <0.001 |
+|             cd2_rst_req_sync                                                       |    <0.001 |
+|         qpcie_layer_i_inst                                                         |     0.115 |
+|           g_i_ad_translator[0].g_adt_implemented.ad_translator_i_inst              |     0.021 |
+|           g_i_dma_engine[0].dma_engine_i_inst                                      |     0.018 |
+|           g_i_dma_engine[1].dma_engine_i_inst                                      |     0.030 |
+|           g_i_dma_engine[2].dma_engine_i_inst                                      |     0.012 |
+|           g_i_dma_engine[3].dma_engine_i_inst                                      |     0.014 |
+|           interconnect_inst                                                        |     0.019 |
+|             qpcie_interco_rcpl                                                     |     0.006 |
+|               g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                   |     0.003 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p            |     0.001 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m            |     0.002 |
+|               g_req_arbitration[0].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[2].req_arbitration.arbiter_req_inst                |    <0.001 |
+|             qpcie_interco_rreq                                                     |     0.003 |
+|               g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                   |    <0.001 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p            |    <0.001 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m            |    <0.001 |
+|               g_req_arbitration[0].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[12].req_arbitration.arbiter_req_inst               |    <0.001 |
+|               g_req_arbitration[1].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[2].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[4].req_arbitration.arbiter_req_inst                |    <0.001 |
+|             qpcie_interco_wcpl                                                     |    <0.001 |
+|               g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                   |    <0.001 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p            |    <0.001 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m            |    <0.001 |
+|               g_req_arbitration[0].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[2].req_arbitration.arbiter_req_inst                |    <0.001 |
+|             qpcie_interco_wreq                                                     |     0.009 |
+|               g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                   |     0.004 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p            |     0.002 |
+|               g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m            |     0.002 |
+|               g_req_arbitration[0].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[12].req_arbitration.arbiter_req_inst               |    <0.001 |
+|               g_req_arbitration[1].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[2].req_arbitration.arbiter_req_inst                |    <0.001 |
+|               g_req_arbitration[4].req_arbitration.arbiter_req_inst                |    <0.001 |
+|     scram_dma0_inst                                                                |     0.008 |
+|     scram_dma1_inst                                                                |     0.008 |
+|     scram_dma2_inst                                                                |     0.008 |
+|     scram_dma3_inst                                                                |     0.004 |
+|     scram_p2q_inst                                                                 |     0.010 |
+|     scram_q2p_inst                                                                 |     0.004 |
+|   ref_design                                                                       |     0.016 |
+|     axi4lite_dec                                                                   |    <0.001 |
+|     axi4slv_ram                                                                    |     0.008 |
+|       scrambe_inst                                                                 |     0.008 |
+|     external_reg                                                                   |     0.002 |
+|     scfifo_inst                                                                    |     0.001 |
+|       scram_inst                                                                   |    <0.001 |
++------------------------------------------------------------------------------------+-----------+
+
+
