@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
-         "-log qpcie_xilinx_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace" );
+         "-log simple_pci_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source simple_pci_top.tcl -notrace" );
 
 
 

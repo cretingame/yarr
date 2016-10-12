@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.runs/impl_1'
+HD_PWD='/home/asautaux/yarr/simple_pcie/simple_pcie.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log qpcie_xilinx_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace
+EAStep vivado -log simple_pci_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source simple_pci_top.tcl -notrace
 
 

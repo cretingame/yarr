@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -40,19 +41,19 @@ entity simple_pci_top is
     sys_clk_n : in std_logic;
     sys_rst_n : in std_logic;
     --  . Serial I/F
-    pci_exp_txn : out std_logic_vector(3 downto 0);--output wire [4                                -1:0] pci_exp_txn           ,
-    pci_exp_txp : out std_logic_vector(3 downto 0);--output wire [4                                -1:0] pci_exp_txp           ,
-    pci_exp_rxn : in std_logic_vector(3 downto 0);--input  wire [4                                -1:0] pci_exp_rxn           ,
-    pci_exp_rxp : in std_logic_vector(3 downto 0);--input  wire [4                                -1:0] pci_exp_rxp           ,
+    pci_exp_txn : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] pci_exp_txn           ,
+    pci_exp_txp : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] pci_exp_txp           ,
+    pci_exp_rxn : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] pci_exp_rxn           ,
+    pci_exp_rxp : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] pci_exp_rxp           ,
     ---------------------------------------------------------------------------
     -- Protection logic interface
     prot0_out : out std_logic;--output wire                                         prot0_out             ,
-    prot2_in : in std_logic_vector(1 downto 0);--    input  wire [2                                -1:0] prot2_in              ,
+    prot2_in : in std_logic_vector(2-1 downto 0);--    input  wire [2                                -1:0] prot2_in              ,
     prot2_out : out std_logic;--    output wire                                         prot2_out             ,
     ---------------------------------------------------------------------------
     -- User Leds and switches
-    usr_sw : in std_logic_vector(2 downto 0);--    input  wire [3                                -1:0] usr_sw                ,   
-    usr_led : out std_logic_vector(2 downto 0)--    output wire [4                                -1:0] usr_led
+    usr_sw : in std_logic_vector(3-1 downto 0);--    input  wire [3                                -1:0] usr_sw                ,   
+    usr_led : out std_logic_vector(4-1 downto 0)--    output wire [4                                -1:0] usr_led
     ---------------------------------------------------------------------------
   );
 end simple_pci_top;
@@ -393,6 +394,151 @@ architecture Behavioral of simple_pci_top is
 
     );
     end component;
+    
+    --module qpcie_ref_design
+    component qpcie_ref_design
+    generic(
+               G_DATAPATH_SIZE : integer        :=  128; -- Datapath size in Bits
+               QPCIE_CLOCK_SPEED : integer      :=  125  -- Application clock speed in MHZ
+           );
+    Port(
+        ---------------------------------------------------------------------------
+        -- Clocks and Resets
+        --  . AXI Interfaces Clocks
+        aclk : in std_logic;--input  wire                                         aclk                  ,
+        aresetn : in std_logic;--input  wire                                         aresetn               ,
+        asrst : in std_logic;--input  wire                                         asrst                 ,
+        ---------------------------------------------------------------------------
+        -- Interrupt Interface
+        local_interrupt_in : out std_logic_vector(8-1 downto 0);--output wire [8                                -1:0] local_interrupt_in    ,
+        local_interrupt_out : in std_logic_vector(32-1 downto 0);--input  wire [32                               -1:0] local_interrupt_out   ,
+        ---------------------------------------------------------------------------
+        -- AXI4 Slave Lite Interface
+        --  . Write Address Channel
+        axi4_slvl_awaddr : out std_logic_vector(14-1 downto 0);--output wire [14                               -1:0] axi4_slvl_awaddr      ,
+        axi4_slvl_awprot : out std_logic_vector(3-1 downto 0);--output wire [3                                -1:0] axi4_slvl_awprot      ,
+        axi4_slvl_awvalid : out std_logic;--output wire                                         axi4_slvl_awvalid     ,
+        axi4_slvl_awready : in std_logic;--input  wire                                         axi4_slvl_awready     ,
+        --  . Write Data Channel
+        axi4_slvl_wdata : out std_logic_vector(32-1 downto 0);--output wire [32                               -1:0] axi4_slvl_wdata       ,
+        axi4_slvl_wstrb : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] axi4_slvl_wstrb       ,
+        axi4_slvl_wvalid : out std_logic;--output wire                                         axi4_slvl_wvalid      ,
+        axi4_slvl_wready : in std_logic;--input  wire                                         axi4_slvl_wready      ,
+        --  . Write Response Channel
+        axi4_slvl_bresp : in std_logic_vector(2-1 downto 0);--input  wire [2                                -1:0] axi4_slvl_bresp       ,
+        axi4_slvl_bvalid : in std_logic;--input  wire                                         axi4_slvl_bvalid      ,
+        axi4_slvl_bready : out std_logic;--output wire                                         axi4_slvl_bready      ,
+        --  . Read Address Channel
+        axi4_slvl_araddr : out std_logic_vector(14-1 downto 0);--output wire [14                               -1:0] axi4_slvl_araddr      ,
+        axi4_slvl_arprot : out std_logic_vector(3-1 downto 0);--output wire [3                                -1:0] axi4_slvl_arprot      ,
+        axi4_slvl_arvalid : out std_logic;--output wire                                         axi4_slvl_arvalid     ,
+        axi4_slvl_arready : in std_logic;--input  wire                                         axi4_slvl_arready     ,
+        --  . Read Data Channel
+        axi4_slvl_rdata : in std_logic_vector(32-1 downto 0);--input  wire [32                               -1:0] axi4_slvl_rdata       ,
+        axi4_slvl_rresp : in std_logic_vector(2-1 downto 0);--input  wire [2                                -1:0] axi4_slvl_rresp       ,
+        axi4_slvl_rvalid : in std_logic;--input  wire                                         axi4_slvl_rvalid      ,
+        axi4_slvl_rready : out std_logic;--output wire                                         axi4_slvl_rready      ,
+        ---------------------------------------------------------------------------
+        -- AXI4 Master Lite Interface
+        --  . Write Address Channel
+        axi4_mstl_awaddr : in std_logic_vector(13-1 downto 0);--input  wire [13                               -1:0] axi4_mstl_awaddr      ,
+        axi4_mstl_awprot : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mstl_awprot      ,
+        axi4_mstl_awvalid : in std_logic;--input  wire                                         axi4_mstl_awvalid     ,
+        axi4_mstl_awready : out std_logic;--output wire                                         axi4_mstl_awready     ,
+        --  . Write Data Channel
+        axi4_mstl_wdata : in std_logic_vector(32-1 downto 0);--input  wire [32                               -1:0] axi4_mstl_wdata       ,
+        axi4_mstl_wstrb : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mstl_wstrb       ,
+        axi4_mstl_wvalid : in std_logic;--input  wire                                         axi4_mstl_wvalid      ,
+        axi4_mstl_wready : out std_logic;--output wire                                         axi4_mstl_wready      ,
+        --  . Write Response Channel
+        axi4_mstl_bresp : out std_logic_vector(2-1 downto 0);--output wire [2                                -1:0] axi4_mstl_bresp       ,
+        axi4_mstl_bvalid : out std_logic;--output wire                                         axi4_mstl_bvalid      ,
+        axi4_mstl_bready : in std_logic;--input  wire                                         axi4_mstl_bready      ,
+        --  . Read Address Channel
+        axi4_mstl_araddr : in std_logic_vector(13-1 downto 0);--input  wire [13                               -1:0] axi4_mstl_araddr      ,
+        axi4_mstl_arprot : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mstl_arprot      ,
+        axi4_mstl_arvalid : in std_logic;--input  wire                                         axi4_mstl_arvalid     ,
+        axi4_mstl_arready : out std_logic;--output wire                                         axi4_mstl_arready     ,
+        --  . Read Data Channel
+        axi4_mstl_rdata : out std_logic_vector(32-1 downto 0);--output wire [32                               -1:0] axi4_mstl_rdata       ,
+        axi4_mstl_rresp : out std_logic_vector(2-1 downto 0);--output wire [2                                -1:0] axi4_mstl_rresp       ,
+        axi4_mstl_rvalid : out std_logic;--output wire                                         axi4_mstl_rvalid      ,
+        axi4_mstl_rready : in std_logic;--input  wire                                         axi4_mstl_rready      ,
+        ---------------------------------------------------------------------------
+        -- AXI4 Master 0 Interface
+        --  . Write Address Channel
+        axi4_mst0_awid : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_awid        ,
+        axi4_mst0_awaddr : in std_logic_vector(64-1 downto 0);--input  wire [64                               -1:0] axi4_mst0_awaddr      ,
+        axi4_mst0_awregion : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_awregion    ,
+        axi4_mst0_awlen : in std_logic_vector(8-1 downto 0);--input  wire [8                                -1:0] axi4_mst0_awlen       ,
+        axi4_mst0_awsize : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mst0_awsize      ,
+        axi4_mst0_awburst : in std_logic_vector(2-1 downto 0);--input  wire [2                                -1:0] axi4_mst0_awburst     ,
+        axi4_mst0_awlock : in std_logic;--input  wire                                         axi4_mst0_awlock      ,
+        axi4_mst0_awcache : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_awcache     ,
+        axi4_mst0_awprot : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mst0_awprot      ,
+        axi4_mst0_awqos : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_awqos       ,
+        axi4_mst0_awvalid : in std_logic;--input  wire                                         axi4_mst0_awvalid     ,
+        axi4_mst0_awready : out std_logic;--output wire                                         axi4_mst0_awready     ,
+        --  . Write Data Channel
+        axi4_mst0_wdata : in std_logic_vector(G_DATAPATH_SIZE-1 downto 0);--input  wire [G_DATAPATH_SIZE                  -1:0] axi4_mst0_wdata       ,
+        axi4_mst0_wstrb : in std_logic_vector(G_DATAPATH_SIZE/8-1 downto 0);--input  wire [G_DATAPATH_SIZE/8                -1:0] axi4_mst0_wstrb       ,
+        axi4_mst0_wlast : in std_logic;--input  wire                                         axi4_mst0_wlast       ,
+        axi4_mst0_wvalid : in std_logic;--input  wire                                         axi4_mst0_wvalid      ,
+        axi4_mst0_wready : out std_logic;--output wire                                         axi4_mst0_wready      ,
+        --  . Write Response Channel
+        axi4_mst0_bid : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] axi4_mst0_bid         ,
+        axi4_mst0_bresp : out std_logic_vector(2-1 downto 0);--output wire [2                                -1:0] axi4_mst0_bresp       ,
+        axi4_mst0_bvalid : out std_logic;--output wire                                         axi4_mst0_bvalid      ,
+        axi4_mst0_bready : in std_logic;--input  wire                                         axi4_mst0_bready      ,
+        --  . Read Address Channel
+        axi4_mst0_arid : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_arid        ,
+        axi4_mst0_araddr : in std_logic_vector(64-1 downto 0);--input  wire [64                               -1:0] axi4_mst0_araddr      ,
+        axi4_mst0_arregion : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_arregion    ,
+        axi4_mst0_arlen : in std_logic_vector(8-1 downto 0);--input  wire [8                                -1:0] axi4_mst0_arlen       ,
+        axi4_mst0_arsize : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mst0_arsize      ,
+        axi4_mst0_arburst : in std_logic_vector(2-1 downto 0);--input  wire [2                                -1:0] axi4_mst0_arburst     ,
+        axi4_mst0_arlock : in std_logic;--input  wire                                         axi4_mst0_arlock      ,
+        axi4_mst0_arcache : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_arcache     ,
+        axi4_mst0_arprot : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] axi4_mst0_arprot      ,
+        axi4_mst0_arqos : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_mst0_arqos       ,
+        axi4_mst0_arvalid : in std_logic;--input  wire                                         axi4_mst0_arvalid     ,
+        axi4_mst0_arready : out std_logic;--output wire                                         axi4_mst0_arready     ,
+        --  . Read Data Channel
+        axi4_mst0_rid : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] axi4_mst0_rid         ,
+        axi4_mst0_rdata : out std_logic_vector(G_DATAPATH_SIZE-1 downto 0);--output wire [G_DATAPATH_SIZE                  -1:0] axi4_mst0_rdata       ,
+        axi4_mst0_rresp : out std_logic_vector(2-1 downto 0);--output wire [2                                -1:0] axi4_mst0_rresp       ,
+        axi4_mst0_rlast : in std_logic;--output wire                                         axi4_mst0_rlast       ,
+        axi4_mst0_rvalid : out std_logic;--output wire                                         axi4_mst0_rvalid      ,
+        axi4_mst0_rready : in std_logic;--input  wire                                         axi4_mst0_rready      ,
+        ---------------------------------------------------------------------------
+        -- AXI4-Stream 0 Interface
+        --  . Stream Out Channel
+        axi4_sto0_tvalid : in std_logic;--input  wire                                         axi4_sto0_tvalid      ,
+        axi4_sto0_tready : out std_logic;--output wire                                         axi4_sto0_tready      ,
+        axi4_sto0_tdata : in std_logic_vector(G_DATAPATH_SIZE-1 downto 0);--input  wire [G_DATAPATH_SIZE                  -1:0] axi4_sto0_tdata       ,
+        axi4_sto0_tstrb : in std_logic_vector(G_DATAPATH_SIZE/8-1 downto 0);--input  wire [G_DATAPATH_SIZE/8                -1:0] axi4_sto0_tstrb       ,
+        axi4_sto0_tkeep : in std_logic_vector(G_DATAPATH_SIZE/8-1 downto 0);--input  wire [G_DATAPATH_SIZE/8                -1:0] axi4_sto0_tkeep       ,
+        axi4_sto0_tlast : in std_logic;--input  wire                                         axi4_sto0_tlast       ,
+        axi4_sto0_tid : in std_logic_vector(8-1 downto 0);--input  wire [8                                -1:0] axi4_sto0_tid         ,
+        axi4_sto0_tdest : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] axi4_sto0_tdest       ,
+        ---------------------------------------------------------------------------
+        -- AXI4-Stream 0 Interface
+        --  . Stream In Channel
+        axi4_sti0_tvalid : out std_logic;--output reg                                          axi4_sti0_tvalid      ,
+        axi4_sti0_tready : in std_logic;--input  wire                                         axi4_sti0_tready      ,
+        axi4_sti0_tdata : out std_logic_vector(G_DATAPATH_SIZE-1 downto 0);--output reg  [G_DATAPATH_SIZE                  -1:0] axi4_sti0_tdata       ,
+        axi4_sti0_tstrb : out std_logic_vector(G_DATAPATH_SIZE/8-1 downto 0);--output reg  [G_DATAPATH_SIZE/8                -1:0] axi4_sti0_tstrb       ,
+        axi4_sti0_tkeep : out std_logic_vector(0-1 downto 0);--output wire [G_DATAPATH_SIZE/8                -1:0] axi4_sti0_tkeep       ,
+        axi4_sti0_tlast : out std_logic;--output reg                                          axi4_sti0_tlast       ,
+        axi4_sti0_tid : out std_logic_vector(8-1 downto 0);--output wire [8                                -1:0] axi4_sti0_tid         ,
+        axi4_sti0_tdest : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] axi4_sti0_tdest       ,
+        ---------------------------------------------------------------------------
+        -- User Leds and switches
+        usr_sw : in std_logic_vector(3-1 downto 0);--input  wire [3                                -1:0] usr_sw                ,
+        usr_led : out std_logic_vector(3-1 downto 0)--output wire [3                                -1:0] usr_led               
+        ---------------------------------------------------------------------------
+    );
+    end component;
 
 begin
 
@@ -581,151 +727,198 @@ begin
         test_out           =>     test_out                
         --    ---------------------------------------------------------------------------
        );
+       
+    -----------------------------------------------------------------------------
+    -- QuickPCIe Reference Design Instance
+    -----------------------------------------------------------------------------
+    
+    ref_design:qpcie_ref_design
+    generic map(
+    G_DATAPATH_SIZE  =>  128,
+    QPCIE_CLOCK_SPEED => 125)
+    port map(
+    ---------------------------------------------------------------------------
+    -- Interrupt Interface
+    local_interrupt_in   =>   local_interrupt_in,
+    local_interrupt_out  =>   local_interrupt_out,
+    ---------------------------------------------------------------------------
+    -- Clocks and Resets
+    --  . AXI Interfaces Clocks
+    aclk  =>      aclk,
+    aresetn  =>   aresetn,
+    asrst  =>     asrst,
+    ---------------------------------------------------------------------------
+    -- AXI4 Slave Lite Interface
+    --  . Write Address Channel
+    axi4_slvl_awaddr  => axi4_slvl_awaddr,
+    axi4_slvl_awprot  => axi4_slvl_awprot,
+    axi4_slvl_awvalid  =>axi4_slvl_awvalid,
+    axi4_slvl_awready  =>axi4_slvl_awready,
+    --  . Write Data Channel
+    axi4_slvl_wdata  =>  axi4_slvl_wdata,
+    axi4_slvl_wstrb  =>  axi4_slvl_wstrb,
+    axi4_slvl_wvalid  => axi4_slvl_wvalid,
+    axi4_slvl_wready  => axi4_slvl_wready,
+    --  . Write Response Channel
+    axi4_slvl_bresp  =>  axi4_slvl_bresp,
+    axi4_slvl_bvalid  => axi4_slvl_bvalid,
+    axi4_slvl_bready  => axi4_slvl_bready,
+    --  . Read Address Channel
+    axi4_slvl_araddr  => axi4_slvl_araddr,
+    axi4_slvl_arprot  => axi4_slvl_arprot,
+    axi4_slvl_arvalid  =>axi4_slvl_arvalid,
+    axi4_slvl_arready  =>axi4_slvl_arready,
+    --  . Read Data Channel
+    axi4_slvl_rdata  =>  axi4_slvl_rdata,
+    axi4_slvl_rresp  =>  axi4_slvl_rresp,
+    axi4_slvl_rvalid  => axi4_slvl_rvalid,
+    axi4_slvl_rready  => axi4_slvl_rready,
+    ---------------------------------------------------------------------------
+    -- AXI4 Master Lite Interface
+    --  . Write Address Channel
+    axi4_mstl_awaddr  => axi4_mstl_awaddr,
+    axi4_mstl_awprot  => axi4_mstl_awprot,
+    axi4_mstl_awvalid  =>axi4_mstl_awvalid,
+    axi4_mstl_awready  =>axi4_mstl_awready,
+    --  . Write Data Channel
+    axi4_mstl_wdata  =>  axi4_mstl_wdata,
+    axi4_mstl_wstrb  =>  axi4_mstl_wstrb,
+    axi4_mstl_wvalid  => axi4_mstl_wvalid,
+    axi4_mstl_wready  => axi4_mstl_wready,
+    --  . Write Response Channel
+    axi4_mstl_bresp  =>  axi4_mstl_bresp,
+    axi4_mstl_bvalid  => axi4_mstl_bvalid,
+    axi4_mstl_bready  => axi4_mstl_bready,
+    --  . Read Address Channel
+    axi4_mstl_araddr  => axi4_mstl_araddr,
+    axi4_mstl_arprot  => axi4_mstl_arprot,
+    axi4_mstl_arvalid  =>axi4_mstl_arvalid,
+    axi4_mstl_arready  =>axi4_mstl_arready,
+    --  . Read Data Channel
+    axi4_mstl_rdata  =>  axi4_mstl_rdata,
+    axi4_mstl_rresp  =>  axi4_mstl_rresp,
+    axi4_mstl_rvalid  => axi4_mstl_rvalid,
+    axi4_mstl_rready  => axi4_mstl_rready,
+    ---------------------------------------------------------------------------
+    -- AXI4 Master 0 Interface
+    --  . Write Address Channel
+    axi4_mst0_awid  =>   axi4_mst0_awid,
+    axi4_mst0_awaddr  => axi4_mst0_awaddr,
+    axi4_mst0_awregion  =>    axi4_mst0_awregion,
+    axi4_mst0_awlen  =>  axi4_mst0_awlen,
+    axi4_mst0_awsize  => axi4_mst0_awsize,
+    axi4_mst0_awburst  =>axi4_mst0_awburst,
+    axi4_mst0_awlock  => axi4_mst0_awlock,
+    axi4_mst0_awcache  =>axi4_mst0_awcache,
+    axi4_mst0_awprot  => axi4_mst0_awprot,
+    axi4_mst0_awqos  =>  axi4_mst0_awqos,
+    axi4_mst0_awvalid  =>axi4_mst0_awvalid,
+    axi4_mst0_awready  =>axi4_mst0_awready,
+    --  . Write Data Channel
+    axi4_mst0_wdata  =>  axi4_mst0_wdata,
+    axi4_mst0_wstrb  =>  axi4_mst0_wstrb,
+    axi4_mst0_wlast  =>  axi4_mst0_wlast,
+    axi4_mst0_wvalid  => axi4_mst0_wvalid,
+    axi4_mst0_wready  => axi4_mst0_wready,
+    --  . Write Response Channel
+    axi4_mst0_bid  =>    axi4_mst0_bid,
+    axi4_mst0_bresp  =>  axi4_mst0_bresp,
+    axi4_mst0_bvalid  => axi4_mst0_bvalid,
+    axi4_mst0_bready  => axi4_mst0_bready,
+    --  . Read Address Channel
+    axi4_mst0_arid  =>   axi4_mst0_arid,
+    axi4_mst0_araddr  => axi4_mst0_araddr,
+    axi4_mst0_arregion  =>    axi4_mst0_arregion,
+    axi4_mst0_arlen  =>  axi4_mst0_arlen,
+    axi4_mst0_arsize  => axi4_mst0_arsize,
+    axi4_mst0_arburst  =>axi4_mst0_arburst,
+    axi4_mst0_arlock  => axi4_mst0_arlock,
+    axi4_mst0_arcache  =>axi4_mst0_arcache,
+    axi4_mst0_arprot  => axi4_mst0_arprot,
+    axi4_mst0_arqos  =>  axi4_mst0_arqos,
+    axi4_mst0_arvalid  =>axi4_mst0_arvalid,
+    axi4_mst0_arready  =>axi4_mst0_arready,
+    --  . Read Data Channel
+    axi4_mst0_rid  =>    axi4_mst0_rid,
+    axi4_mst0_rdata  =>  axi4_mst0_rdata,
+    axi4_mst0_rresp  =>  axi4_mst0_rresp,
+    axi4_mst0_rlast  =>  axi4_mst0_rlast,
+    axi4_mst0_rvalid  => axi4_mst0_rvalid,
+    axi4_mst0_rready  => axi4_mst0_rready,
+    ---------------------------------------------------------------------------
+    -- AXI4-Stream 0 Interface
+    --  . Stream Out Channel
+    axi4_sto0_tvalid  => axi4_sto0_tvalid,
+    axi4_sto0_tready  => axi4_sto0_tready,
+    axi4_sto0_tdata  =>  axi4_sto0_tdata,
+    axi4_sto0_tstrb  =>  axi4_sto0_tstrb,
+    axi4_sto0_tkeep  =>  axi4_sto0_tkeep,
+    axi4_sto0_tlast  =>  axi4_sto0_tlast,
+    axi4_sto0_tid  =>    axi4_sto0_tid,
+    axi4_sto0_tdest  =>  axi4_sto0_tdest,
+    ---------------------------------------------------------------------------
+    -- AXI4-Stream 0 Interface
+    --  . Stream In Channel
+    axi4_sti0_tvalid  => axi4_sti0_tvalid,
+    axi4_sti0_tready  => axi4_sti0_tready,
+    axi4_sti0_tdata  =>  axi4_sti0_tdata,
+    axi4_sti0_tstrb  =>  axi4_sti0_tstrb,
+    axi4_sti0_tkeep  =>  axi4_sti0_tkeep,
+    axi4_sti0_tlast  =>  axi4_sti0_tlast,
+    axi4_sti0_tid  =>    axi4_sti0_tid,
+    axi4_sti0_tdest  =>  axi4_sti0_tdest,
+    ---------------------------------------------------------------------------
+    -- User Leds and switches
+    usr_sw  =>    usr_sw,
+    usr_led  =>   open
+    ---------------------------------------------------------------------------
+    );
+    
+--    //Link width
+--      assign usr_led[1:0] = (test_out[3] == 1'b1) ? 2'b11 : // x8
+--                            (test_out[2] == 1'b1) ? 2'b10 : // x4
+--                            (test_out[1] == 1'b1) ? 2'b01 : // x2
+--                                                    2'b00 ; // x1
+--      //Link speed
+--      assign usr_led[3:2] = (test_out[15:14] == 2'b01) ? {aclk_cnt[24] , 1'b1} : // Polling.Compliance
+--                            (test_out[15:14] == 2'b00) ? {aclk_cnt[24] , 1'b0} : // Not in L0/L0s/Polling.Compliance
+--                            (test_out[8:6] == 3'b001 ) ? {1'b0         , 1'b1} : // L0/L0s Gen1
+--                            (test_out[8:6] == 3'b010 ) ? {1'b1         , 1'b0} : // L0/L0s Gen2
+--                            (test_out[8:6] == 3'b011 ) ? {1'b1         , 1'b1} : // L0/L0s Gen3
+--                            (test_out[8:6] == 3'b100 ) ? {1'b1 , aclk_cnt[24]} : // L0/L0s Gen4
+--                                                         {1'b0         , 1'b0} ; // Undefined
+        usr_led(1 downto 0) <= "11" when test_out(3) = '1' else
+                               "10" when test_out(2) = '1' else
+                               "01" when test_out(1) = '1' else
+                               "00";
+                               
+        usr_led(3 downto 2) <= (aclk_cnt(24) & '1') when test_out(15 downto 14) = "01" else
+                               (aclk_cnt(24) & '0') when test_out(15 downto 14) = "00" else
+                               ('0' & '1') when test_out(8 downto 6) = "001" else
+                               ('1' & '0') when test_out(8 downto 6) = "010" else
+                               ('1' & '1') when test_out(8 downto 6) = "011" else
+                               ('1' & aclk_cnt(24)) when test_out(8 downto 6) = "000" else
+                               ('0' & '0');
 
+        process(aresetn,aclk)
+        begin
+            if(aresetn = '0') then
+                aclk_cnt <=  (others => '0');
+            elsif (aclk'event and aclk='1') then
+                aclk_cnt <= aclk_cnt + 1;
+            end if;
+        end process;
 
---  //---------------------------------------------------------------------------
---  // QuickPCIe Reference Design Instance
---  //---------------------------------------------------------------------------
-
---  qpcie_ref_design #(
---    .G_DATAPATH_SIZE         (128                     ),
---    .QPCIE_CLOCK_SPEED       (125                     )
---  ) ref_design (
---    //-------------------------------------------------------------------------
---    // Interrupt Interface
---    .local_interrupt_in      (local_interrupt_in      ),
---    .local_interrupt_out     (local_interrupt_out     ),
---    //-------------------------------------------------------------------------
---    // Clocks and Resets
---    //  . AXI Interfaces Clocks
---    .aclk                    (aclk                    ),
---    .aresetn                 (aresetn                 ),
---    .asrst                   (asrst                   ),
---    //-------------------------------------------------------------------------
---    // AXI4 Slave Lite Interface
---    //  . Write Address Channel
---    .axi4_slvl_awaddr        (axi4_slvl_awaddr        ),
---    .axi4_slvl_awprot        (axi4_slvl_awprot        ),
---    .axi4_slvl_awvalid       (axi4_slvl_awvalid       ),
---    .axi4_slvl_awready       (axi4_slvl_awready       ),
---    //  . Write Data Channel
---    .axi4_slvl_wdata         (axi4_slvl_wdata         ),
---    .axi4_slvl_wstrb         (axi4_slvl_wstrb         ),
---    .axi4_slvl_wvalid        (axi4_slvl_wvalid        ),
---    .axi4_slvl_wready        (axi4_slvl_wready        ),
---    //  . Write Response Channel
---    .axi4_slvl_bresp         (axi4_slvl_bresp         ),
---    .axi4_slvl_bvalid        (axi4_slvl_bvalid        ),
---    .axi4_slvl_bready        (axi4_slvl_bready        ),
---    //  . Read Address Channel
---    .axi4_slvl_araddr        (axi4_slvl_araddr        ),
---    .axi4_slvl_arprot        (axi4_slvl_arprot        ),
---    .axi4_slvl_arvalid       (axi4_slvl_arvalid       ),
---    .axi4_slvl_arready       (axi4_slvl_arready       ),
---    //  . Read Data Channel
---    .axi4_slvl_rdata         (axi4_slvl_rdata         ),
---    .axi4_slvl_rresp         (axi4_slvl_rresp         ),
---    .axi4_slvl_rvalid        (axi4_slvl_rvalid        ),
---    .axi4_slvl_rready        (axi4_slvl_rready        ),
---    //-------------------------------------------------------------------------
---    // AXI4 Master Lite Interface
---    //  . Write Address Channel
---    .axi4_mstl_awaddr        (axi4_mstl_awaddr        ),
---    .axi4_mstl_awprot        (axi4_mstl_awprot        ),
---    .axi4_mstl_awvalid       (axi4_mstl_awvalid       ),
---    .axi4_mstl_awready       (axi4_mstl_awready       ),
---    //  . Write Data Channel
---    .axi4_mstl_wdata         (axi4_mstl_wdata         ),
---    .axi4_mstl_wstrb         (axi4_mstl_wstrb         ),
---    .axi4_mstl_wvalid        (axi4_mstl_wvalid        ),
---    .axi4_mstl_wready        (axi4_mstl_wready        ),
---    //  . Write Response Channel
---    .axi4_mstl_bresp         (axi4_mstl_bresp         ),
---    .axi4_mstl_bvalid        (axi4_mstl_bvalid        ),
---    .axi4_mstl_bready        (axi4_mstl_bready        ),
---    //  . Read Address Channel
---    .axi4_mstl_araddr        (axi4_mstl_araddr        ),
---    .axi4_mstl_arprot        (axi4_mstl_arprot        ),
---    .axi4_mstl_arvalid       (axi4_mstl_arvalid       ),
---    .axi4_mstl_arready       (axi4_mstl_arready       ),
---    //  . Read Data Channel
---    .axi4_mstl_rdata         (axi4_mstl_rdata         ),
---    .axi4_mstl_rresp         (axi4_mstl_rresp         ),
---    .axi4_mstl_rvalid        (axi4_mstl_rvalid        ),
---    .axi4_mstl_rready        (axi4_mstl_rready        ),
---    //-------------------------------------------------------------------------
---    // AXI4 Master 0 Interface
---    //  . Write Address Channel
---    .axi4_mst0_awid          (axi4_mst0_awid          ),
---    .axi4_mst0_awaddr        (axi4_mst0_awaddr        ),
---    .axi4_mst0_awregion      (axi4_mst0_awregion      ),
---    .axi4_mst0_awlen         (axi4_mst0_awlen         ),
---    .axi4_mst0_awsize        (axi4_mst0_awsize        ),
---    .axi4_mst0_awburst       (axi4_mst0_awburst       ),
---    .axi4_mst0_awlock        (axi4_mst0_awlock        ),
---    .axi4_mst0_awcache       (axi4_mst0_awcache       ),
---    .axi4_mst0_awprot        (axi4_mst0_awprot        ),
---    .axi4_mst0_awqos         (axi4_mst0_awqos         ),
---    .axi4_mst0_awvalid       (axi4_mst0_awvalid       ),
---    .axi4_mst0_awready       (axi4_mst0_awready       ),
---    //  . Write Data Channel
---    .axi4_mst0_wdata         (axi4_mst0_wdata         ),
---    .axi4_mst0_wstrb         (axi4_mst0_wstrb         ),
---    .axi4_mst0_wlast         (axi4_mst0_wlast         ),
---    .axi4_mst0_wvalid        (axi4_mst0_wvalid        ),
---    .axi4_mst0_wready        (axi4_mst0_wready        ),
---    //  . Write Response Channel
---    .axi4_mst0_bid           (axi4_mst0_bid           ),
---    .axi4_mst0_bresp         (axi4_mst0_bresp         ),
---    .axi4_mst0_bvalid        (axi4_mst0_bvalid        ),
---    .axi4_mst0_bready        (axi4_mst0_bready        ),
---    //  . Read Address Channel
---    .axi4_mst0_arid          (axi4_mst0_arid          ),
---    .axi4_mst0_araddr        (axi4_mst0_araddr        ),
---    .axi4_mst0_arregion      (axi4_mst0_arregion      ),
---    .axi4_mst0_arlen         (axi4_mst0_arlen         ),
---    .axi4_mst0_arsize        (axi4_mst0_arsize        ),
---    .axi4_mst0_arburst       (axi4_mst0_arburst       ),
---    .axi4_mst0_arlock        (axi4_mst0_arlock        ),
---    .axi4_mst0_arcache       (axi4_mst0_arcache       ),
---    .axi4_mst0_arprot        (axi4_mst0_arprot        ),
---    .axi4_mst0_arqos         (axi4_mst0_arqos         ),
---    .axi4_mst0_arvalid       (axi4_mst0_arvalid       ),
---    .axi4_mst0_arready       (axi4_mst0_arready       ),
---    //  . Read Data Channel
---    .axi4_mst0_rid           (axi4_mst0_rid           ),
---    .axi4_mst0_rdata         (axi4_mst0_rdata         ),
---    .axi4_mst0_rresp         (axi4_mst0_rresp         ),
---    .axi4_mst0_rlast         (axi4_mst0_rlast         ),
---    .axi4_mst0_rvalid        (axi4_mst0_rvalid        ),
---    .axi4_mst0_rready        (axi4_mst0_rready        ),
---    //-------------------------------------------------------------------------
---    // AXI4-Stream 0 Interface
---    //  . Stream Out Channel
---    .axi4_sto0_tvalid        (axi4_sto0_tvalid        ),
---    .axi4_sto0_tready        (axi4_sto0_tready        ),
---    .axi4_sto0_tdata         (axi4_sto0_tdata         ),
---    .axi4_sto0_tstrb         (axi4_sto0_tstrb         ),
---    .axi4_sto0_tkeep         (axi4_sto0_tkeep         ),
---    .axi4_sto0_tlast         (axi4_sto0_tlast         ),
---    .axi4_sto0_tid           (axi4_sto0_tid           ),
---    .axi4_sto0_tdest         (axi4_sto0_tdest         ),
---    //-------------------------------------------------------------------------
---    // AXI4-Stream 0 Interface
---    //  . Stream In Channel
---    .axi4_sti0_tvalid        (axi4_sti0_tvalid        ),
---    .axi4_sti0_tready        (axi4_sti0_tready        ),
---    .axi4_sti0_tdata         (axi4_sti0_tdata         ),
---    .axi4_sti0_tstrb         (axi4_sti0_tstrb         ),
---    .axi4_sti0_tkeep         (axi4_sti0_tkeep         ),
---    .axi4_sti0_tlast         (axi4_sti0_tlast         ),
---    .axi4_sti0_tid           (axi4_sti0_tid           ),
---    .axi4_sti0_tdest         (axi4_sti0_tdest         ),
---    //-------------------------------------------------------------------------
---    // User Leds and switches
---    .usr_sw                  (usr_sw                  ),
---    .usr_led                 (                        )
---    //-------------------------------------------------------------------------
-
-
+--      // Blink LED
+--      always @(posedge aclk or negedge aresetn)
+--        if (aresetn == 1'b0) begin
+--            aclk_cnt <= 25'b0;
+--        end else begin
+--          if (asrst == 1'b1)
+--            aclk_cnt <= 25'b0;
+--          else
+--            aclk_cnt <= aclk_cnt+1'b1;
+--        end
+    
+    
 end Behavioral;

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/qpcie_ref_design/qpcie_ref_design.runs/synth_1'
+HD_PWD='/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log qpcie_xilinx_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source qpcie_xilinx_top.tcl
+EAStep vivado -log simple_pci_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source simple_pci_top.tcl

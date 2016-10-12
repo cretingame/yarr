@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1475531784">
-  <File Type="RDS-UTIL-PB" Name="qpcie_xilinx_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="qpcie_xilinx_top.dcp"/>
-  <File Type="RDS-UTIL" Name="qpcie_xilinx_top_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="qpcie_xilinx_top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="qpcie_xilinx_top_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="qpcie_xilinx_top.vds"/>
   <File Type="VDS-TIMING-PB" Name="qpcie_xilinx_top_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="qpcie_xilinx_top.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="qpcie_xilinx_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="qpcie_xilinx_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="qpcie_xilinx_top_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_cpllpd_ovrd.v">
