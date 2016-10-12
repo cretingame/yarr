@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log qpcie_xilinx_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source qpcie_xilinx_top.tcl" );
+         "-log simple_pci_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source simple_pci_top.tcl" );
 
 
 

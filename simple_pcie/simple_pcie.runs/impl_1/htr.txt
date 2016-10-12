@@ -6,4 +6,4 @@
 # Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log qpcie_xilinx_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source qpcie_xilinx_top.tcl -notrace
+vivado -log simple_pci_top.vdi -applog -m64 -messageDb vivado.pb -mode batch -source simple_pci_top.tcl -notrace
