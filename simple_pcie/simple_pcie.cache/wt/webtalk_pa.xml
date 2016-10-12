@@ -3,7 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pa" timeStamp="Wed Oct 12 16:05:11 2016">
+=======
+<application name="pa" timeStamp="Wed Oct 12 15:58:43 2016">
+>>>>>>> 9a06f9111d7d68b67e422492c1eaefc00099bb68
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="6b6fa5623bc54bdcb1c67f6234eb2474" type="ProjectID"/>
 <property name="ProjectIteration" value="9" type="ProjectIteration"/>
@@ -22,10 +26,17 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditUndo" value="24" type="JavaHandler"/>
 <property name="FlipToViewTaskImplementation" value="1" type="JavaHandler"/>
 <property name="FlipToViewTaskRTLAnalysis" value="1" type="JavaHandler"/>
+<<<<<<< HEAD
 <property name="LaunchProgramFpga" value="7" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="13" type="JavaHandler"/>
 <property name="OpenProject" value="7" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="7" type="JavaHandler"/>
+=======
+<property name="LaunchProgramFpga" value="6" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="12" type="JavaHandler"/>
+<property name="OpenProject" value="7" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="6" type="JavaHandler"/>
+>>>>>>> 9a06f9111d7d68b67e422492c1eaefc00099bb68
 <property name="ProgramCfgMem" value="1" type="JavaHandler"/>
 <property name="ProgramDevice" value="6" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="4" type="JavaHandler"/>
@@ -36,11 +47,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RunSchematic" value="5" type="JavaHandler"/>
 <property name="RunSynthesis" value="3" type="JavaHandler"/>
 <property name="SaveProjectAs" value="1" type="JavaHandler"/>
+<<<<<<< HEAD
 <property name="ShowView" value="4" type="JavaHandler"/>
+=======
+<property name="ShowView" value="3" type="JavaHandler"/>
+>>>>>>> 9a06f9111d7d68b67e422492c1eaefc00099bb68
 <property name="ViewLayoutCmd" value="3" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="2" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="4" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="3" type="JavaHandler"/>
+<<<<<<< HEAD
 </item>
 <item name="Gui Resources Info">
 <property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Open Target], 39, false" value="1" type="GuiResourceData"/>
@@ -54,6 +70,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="GuiMode" value="40" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="32" type="TclMode"/>
+=======
+>>>>>>> 9a06f9111d7d68b67e422492c1eaefc00099bb68
 </item>
 </section>
 </application>
