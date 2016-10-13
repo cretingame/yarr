@@ -539,7 +539,37 @@ architecture Behavioral of simple_pci_top is
         ---------------------------------------------------------------------------
     );
     end component;
+    
+    COMPONENT ila_0
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(13 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(13 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe16 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe18 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    );
+    END COMPONENT  ;
 
+    
 begin
 
 -----------------------------------------------------------------------------
@@ -919,6 +949,61 @@ begin
 --          else
 --            aclk_cnt <= aclk_cnt+1'b1;
 --        end
+
+    ila_axi_slave : ila_0
+    PORT MAP (
+        clk => aclk,
     
+    
+    
+        probe0 => axi4_slvl_awaddr, 
+        probe1 => axi4_slvl_awprot, 
+        probe2(0) => axi4_slvl_awvalid, 
+        probe3(0) => axi4_slvl_awready, 
+        probe4 => axi4_slvl_wdata, 
+        probe5 => axi4_slvl_wstrb, 
+        probe6(0) => axi4_slvl_wvalid, 
+        probe7(0) => axi4_slvl_wready, 
+        probe8 => axi4_slvl_bresp, 
+        probe9(0) => axi4_slvl_bvalid, 
+        probe10(0) => axi4_slvl_bready, 
+        probe11 => axi4_slvl_araddr, 
+        probe12 => axi4_slvl_arprot, 
+        probe13(0) => axi4_slvl_arvalid, 
+        probe14(0) => axi4_slvl_arready, 
+        probe15 => axi4_slvl_rdata, 
+        probe16 => axi4_slvl_rresp, 
+        probe17(0) => axi4_slvl_rvalid,
+        probe18(0) => axi4_slvl_rready
+    );
+    
+    ila_axi_master : ila_0
+    PORT MAP (
+        clk => aclk,
+    
+    
+        probe0(13) => '0',
+        probe0(12 downto 0) => axi4_mstl_awaddr, 
+        probe1 => axi4_mstl_awprot, 
+        probe2(0) => axi4_mstl_awvalid, 
+        probe3(0) => axi4_mstl_awready, 
+        probe4 => axi4_mstl_wdata, 
+        probe5 => axi4_mstl_wstrb, 
+        probe6(0) => axi4_mstl_wvalid, 
+        probe7(0) => axi4_mstl_wready, 
+        probe8 => axi4_mstl_bresp, 
+        probe9(0) => axi4_mstl_bvalid, 
+        probe10(0) => axi4_mstl_bready, 
+        probe11(13) => '0',
+        probe11(12 downto 0) => axi4_mstl_araddr, 
+        probe12 => axi4_mstl_arprot, 
+        probe13(0) => axi4_mstl_arvalid, 
+        probe14(0) => axi4_mstl_arready, 
+        probe15(31 downto 13) => (others => '0'),
+        probe15(12 downto 0) => axi4_mstl_rdata, 
+        probe16 => axi4_mstl_rresp, 
+        probe17(0) => axi4_mstl_rvalid,
+        probe18(0) => axi4_mstl_rready
+    );
     
 end Behavioral;

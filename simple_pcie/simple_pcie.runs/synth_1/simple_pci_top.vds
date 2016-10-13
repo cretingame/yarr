@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Oct 12 15:47:14 2016
-# Process ID: 26343
+# Start of session at: Wed Oct 12 17:51:02 2016
+# Process ID: 8860
 # Current directory: /home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1
 # Command line: vivado -log simple_pci_top.vds -mode batch -messageDb vivado.pb -notrace -source simple_pci_top.tcl
 # Log file: /home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/simple_pci_top.vds
@@ -15,14 +15,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26351 
+INFO: Helper process launched with PID 8866 
 WARNING: [Synth 8-2507] parameter declaration becomes local in protocore with formal parameter declaration list [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v:53]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1155.465 ; gain = 180.324 ; free physical = 6751 ; free virtual = 17733
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1156.465 ; gain = 181.324 ; free physical = 6753 ; free virtual = 18186
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'simple_pci_top' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:61]
 	Parameter G_PCIE_REFCLK_FREQ bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'qpcie_ipcore_x4_gen2' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178' bound to instance 'qpcie_ipcore' of component 'qpcie_ipcore_x4_gen2' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
+INFO: [Synth 8-3491] module 'qpcie_ipcore_x4_gen2' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178' bound to instance 'qpcie_ipcore' of component 'qpcie_ipcore_x4_gen2' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
 INFO: [Synth 8-638] synthesizing module 'qpcie_ipcore_x4_gen2' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178]
 	Parameter G_PCIE_REFCLK_FREQ bound to: 100 - type: integer 
 	Parameter G_DATAPATH bound to: 128 - type: integer 
@@ -4033,7 +4033,7 @@ INFO: [Synth 8-256] done synthesizing module 'qpcie_ipcore_x4_gen2' (77#1) [/hom
 	Parameter G_DATAPATH_SIZE bound to: 128 - type: integer 
 	Parameter QPCIE_CLOCK_SPEED bound to: 125 - type: integer 
 WARNING: [Synth 8-506] null port 'axi4_sti0_tkeep' ignored [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:531]
-INFO: [Synth 8-3491] module 'qpcie_ref_design' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_ref_design.v:28' bound to instance 'ref_design' of component 'qpcie_ref_design' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:735]
+INFO: [Synth 8-3491] module 'qpcie_ref_design' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_ref_design.v:28' bound to instance 'ref_design' of component 'qpcie_ref_design' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:765]
 INFO: [Synth 8-638] synthesizing module 'qpcie_ref_design' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_ref_design.v:28]
 	Parameter G_DATAPATH_SIZE bound to: 128 - type: integer 
 	Parameter QPCIE_CLOCK_SPEED bound to: 125 - type: integer 
@@ -4070,7 +4070,10 @@ INFO: [Synth 8-638] synthesizing module 'qpcie_scrambe' [/home/asautaux/yarr/sim
 INFO: [Synth 8-256] done synthesizing module 'qpcie_scrambe' (81#1) [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v:627]
 INFO: [Synth 8-256] done synthesizing module 'qpcie_axi4slv_ram' (82#1) [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_axi4slv_ram.v:52]
 INFO: [Synth 8-256] done synthesizing module 'qpcie_ref_design' (83#1) [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/ref_design/qpcie_ref_design.v:28]
-WARNING: [Synth 8-547] port direction mismatch for port 'axi4_mst0_rlast' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:735]
+WARNING: [Synth 8-547] port direction mismatch for port 'axi4_mst0_rlast' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:765]
+INFO: [Synth 8-3491] module 'ila_0' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:5' bound to instance 'ila_axi_slave' of component 'ila_0' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:953]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'ila_0' declared at '/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:5' bound to instance 'ila_axi_master' of component 'ila_0' [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:980]
 WARNING: [Synth 8-3848] Net axi4_mst0_rlast in module/entity simple_pci_top does not have driver. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:171]
 WARNING: [Synth 8-3848] Net axi4_sti0_tkeep in module/entity simple_pci_top does not have driver. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:190]
 INFO: [Synth 8-256] done synthesizing module 'simple_pci_top' (84#1) [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:61]
@@ -4176,7 +4179,7 @@ WARNING: [Synth 8-3331] design qpcie_axi4slv_ram has unconnected port araddr[49]
 WARNING: [Synth 8-3331] design qpcie_axi4slv_ram has unconnected port araddr[48]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 2022.465 ; gain = 1047.324 ; free physical = 5867 ; free virtual = 16859
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2024.465 ; gain = 1049.324 ; free physical = 5859 ; free virtual = 17302
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4185,26 +4188,27 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_mst0_rlast to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[15] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[14] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[13] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[12] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[11] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[10] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[9] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[8] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[7] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[6] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[5] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[4] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[3] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[2] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[1] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
-WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[0] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:558]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_mst0_rlast to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[15] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[14] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[13] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[12] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[11] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[10] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[9] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[8] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[7] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[6] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[5] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[4] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[3] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[2] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[1] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_sti0_tkeep[0] to constant 0 [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:588]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2022.465 ; gain = 1047.324 ; free physical = 5867 ; free virtual = 16859
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 2024.465 ; gain = 1049.324 ; free physical = 5859 ; free virtual = 17303
 ---------------------------------------------------------------------------------
+WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'ila_0' instantiated as 'ila_axi_slave'. 2 instances of this cell are unresolved black boxes. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:953]
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7k160tfbg676-2
@@ -4212,6 +4216,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/dcp/ila_0_in_context.xdc] for cell 'ila_axi_slave'
+Finished Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/dcp/ila_0_in_context.xdc] for cell 'ila_axi_slave'
+Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/dcp/ila_0_in_context.xdc] for cell 'ila_axi_master'
+Finished Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.runs/synth_1/.Xil/Vivado-8860-spikepig.dhcp.lbl.gov/dcp/ila_0_in_context.xdc] for cell 'ila_axi_master'
 Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/constrs_1/imports/vlog/qpcie_ref_design.xdc]
 INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/constrs_1/imports/vlog/qpcie_ref_design.xdc:15]
 Finished Parsing XDC File [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/constrs_1/imports/vlog/qpcie_ref_design.xdc]
@@ -4222,9 +4230,11 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2824.219 ; gain = 0.000 ; free physical = 5229 ; free virtual = 16220
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2823.910 ; gain = 0.004 ; free physical = 5234 ; free virtual = 16678
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ila_axi_master' at clock pin 'clk' is different from the actual clock period '8.000', this can result in different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ila_axi_slave' at clock pin 'clk' is different from the actual clock period '8.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:27 ; elapsed = 00:02:26 . Memory (MB): peak = 2824.223 ; gain = 1849.082 ; free physical = 5226 ; free virtual = 16219
+Finished Constraint Validation : Time (s): cpu = 00:02:22 ; elapsed = 00:02:20 . Memory (MB): peak = 2823.910 ; gain = 1848.770 ; free physical = 5244 ; free virtual = 16688
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
@@ -4232,14 +4242,14 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:27 ; elapsed = 00:02:26 . Memory (MB): peak = 2835.992 ; gain = 1860.859 ; free physical = 5226 ; free virtual = 16218
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:22 ; elapsed = 00:02:20 . Memory (MB): peak = 2835.688 ; gain = 1860.547 ; free physical = 5243 ; free virtual = 16687
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:27 ; elapsed = 00:02:26 . Memory (MB): peak = 2843.855 ; gain = 1868.715 ; free physical = 5199 ; free virtual = 16191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:22 ; elapsed = 00:02:20 . Memory (MB): peak = 2843.543 ; gain = 1868.402 ; free physical = 5214 ; free virtual = 16658
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "null_is_eof" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'pcie_7x_0_pipe_reset'
@@ -4821,7 +4831,7 @@ state_f_init_start_change |                             0101 |                  
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'hs_fsm_reg' using encoding 'sequential' in module 'protocore'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:32 ; elapsed = 00:03:34 . Memory (MB): peak = 2971.863 ; gain = 1996.723 ; free physical = 4093 ; free virtual = 15086
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:27 ; elapsed = 00:03:29 . Memory (MB): peak = 2971.551 ; gain = 1996.410 ; free physical = 4130 ; free virtual = 15574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7269,7 +7279,7 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:40 ; elapsed = 00:03:42 . Memory (MB): peak = 2971.863 ; gain = 1996.723 ; free physical = 4052 ; free virtual = 15045
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:34 ; elapsed = 00:03:37 . Memory (MB): peak = 2971.551 ; gain = 1996.410 ; free physical = 4090 ; free virtual = 15534
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -7383,9 +7393,9 @@ INFO: [Synth 8-5545] ROM "int_sent" won't be mapped to RAM because address size 
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:03:57 ; elapsed = 00:04:02 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 3662 ; free virtual = 14656
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:51 ; elapsed = 00:03:58 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 3719 ; free virtual = 15164
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:03:57 ; elapsed = 00:04:02 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 3662 ; free virtual = 14656
+Finished Parallel Reinference  : Time (s): cpu = 00:03:51 ; elapsed = 00:03:58 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 3719 ; free virtual = 15164
 
 Report RTL Partitions: 
 +------+--------------------------------------+------------+----------+
@@ -7415,8 +7425,8 @@ Report RTL Partitions:
 |22    |qpcie_ipcore_x4_gen2__GC0             |           1|        12|
 |23    |simple_pci_top__GC0                   |           1|      6123|
 +------+--------------------------------------+------------+----------+
-WARNING: [Synth 8-3936] Found unconnected internal register 'ref_design/scfifo_inst/scram_inst/scram_rddata_reg' and it is trimmed from '148' to '145' bits. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v:604]
-INFO: [Synth 8-5784] Optimized 0 bits of RAM "ref_design/scfifo_inst/scram_inst/ram_block_reg" due to constant propagation. Old ram width 145 bits, new ram width 145 bits.
+WARNING: [Synth 8-3936] Found unconnected internal register 'scfifo_inst/scram_inst/scram_rddata_reg' and it is trimmed from '148' to '145' bits. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v:604]
+INFO: [Synth 8-5784] Optimized 0 bits of RAM "scfifo_inst/scram_inst/ram_block_reg" due to constant propagation. Old ram width 145 bits, new ram width 145 bits.
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -7451,234 +7461,147 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][0]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][1]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][2]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][3]' (FDCE) to 'g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[15][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[14][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[13][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[12][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[11][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[10][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[9][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[8][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[7][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[6][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[5][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[4][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[3][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[2][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[1][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[0][4] )
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[0]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[1]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[2]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[3]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[4]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[5]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[6]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[8]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[9]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[10]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[10]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[11]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[12]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[12]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[13]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[13]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[14]'
-INFO: [Synth 8-3886] merging instance 'i_18/ref_design/gen_strb_r_reg[14]' (FDCE) to 'i_18/ref_design/gen_strb_r_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\qpll_reset.qpll_reset_i/ovrd_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i /\qpll_drp_i/mode_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_eq.pipe_eq_i /\txeq_preset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_drp.pipe_drp_i /mode_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_eq.pipe_eq_i /\txeq_preset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_drp.pipe_drp_i /mode_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_eq.pipe_eq_i /\txeq_preset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_drp.pipe_drp_i /mode_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_eq.pipe_eq_i /\txeq_preset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i /\qpll_drp_i/addr_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_drp.pipe_drp_i /mode_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_rate.pipe_rate_i /\rate_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_rate.pipe_rate_i /\sysclksel_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_sync_i /\rxsync_fsm_disable.rxdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[0].pipe_user_i /\resetovrd_disble.reset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_rate.pipe_rate_i /\rate_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_rate.pipe_rate_i /\sysclksel_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_sync_i /\txsync_fsm.txdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_sync_i /\rxsync_fsm_disable.rxdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[1].pipe_user_i /\resetovrd_disble.reset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_rate.pipe_rate_i /\rate_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_rate.pipe_rate_i /\sysclksel_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_sync_i /\txsync_fsm.txdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_sync_i /\rxsync_fsm_disable.rxdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[2].pipe_user_i /\resetovrd_disble.reset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_rate.pipe_rate_i /\rate_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_rate.pipe_rate_i /\sysclksel_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_sync_i /\txsync_fsm.txdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_sync_i /\rxsync_fsm_disable.rxdlyen_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_lane[3].pipe_user_i /\resetovrd_disble.reset_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i /\pipe_reset.pipe_reset_i /cpllpd_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pcie_7x_0_i/inst/pcie_top_i/axi_basic_top/rx_inst/rx_pipeline_inst/m_axis_rx_tuser_reg[16] )
-INFO: [Synth 8-3332] Sequential element (cpllpd_reg) is unused and will be removed from module pcie_7x_0_pipe_reset.
-INFO: [Synth 8-3332] Sequential element (sysclksel_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_rate__1.
-INFO: [Synth 8-3332] Sequential element (rate_out_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_rate__1.
-INFO: [Synth 8-3332] Sequential element (rate_out_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_rate__1.
-WARNING: [Synth 8-3332] Sequential element (mode_reg) is unused and will be removed from module pcie_7x_0_pipe_drp__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/lffs_sel_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (txeq_done_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[17]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[16]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[15]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[14]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[13]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[12]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[11]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[10]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[9]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[8]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[7]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[3]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[17]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[16]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[15]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[14]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[13]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[12]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[11]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[10]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[9]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[8]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[7]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[3]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_lffs_sel_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (rxeq_done_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__1.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/mode_reg) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/fsm_reg[8]) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/fsm_reg[7]) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/addr_reg[6]) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/addr_reg[4]) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (qpll_drp_i/addr_reg[3]) is unused and will be removed from module pcie_7x_0_gt_common.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[7]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[3]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.reset_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.fsm_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-INFO: [Synth 8-3332] Sequential element (resetovrd_disble.fsm_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_user__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[3]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.rxdlyen_reg) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-WARNING: [Synth 8-3332] Sequential element (rxsync_fsm_disable.fsm_rx_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_sync__1.
-INFO: [Synth 8-3332] Sequential element (sysclksel_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_rate__2.
-INFO: [Synth 8-3332] Sequential element (rate_out_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_rate__2.
-INFO: [Synth 8-3332] Sequential element (rate_out_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_rate__2.
-WARNING: [Synth 8-3332] Sequential element (mode_reg) is unused and will be removed from module pcie_7x_0_pipe_drp__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/lffs_sel_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (txeq_preset_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (txeq_done_reg) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[17]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[16]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[15]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[14]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[13]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[12]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[11]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[10]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[9]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[8]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[7]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[6]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[5]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[4]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[3]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[2]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[1]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_scan_i/new_txcoeff_reg[0]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Synth 8-3332] Sequential element (rxeq_new_txcoeff_reg[17]) is unused and will be removed from module pcie_7x_0_pipe_eq__2.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][0]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][1]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][2]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[15][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][3]' (FDCE) to 'qpcie_ipcore/g_i_dma_engine[1].dma_engine_i_insti_6/buf_align_reg[0][4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[15][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[14][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[12][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[10][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[6][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[5][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (qpcie_ipcore/\g_i_dma_engine[1].dma_engine_i_insti_6 /\buf_align_reg[0][4] )
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[0]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[1]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[2]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[3]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[4]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[5]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[6]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[8]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[9]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[10]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[11]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[12]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[13]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/ref_design/gen_strb_r_reg[14]' (FDCE) to 'i_0/ref_design/gen_strb_r_reg[15]'
+WARNING: [Synth 8-3332] Sequential element (gen_lcnt_r_reg[12]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[112]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[105]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[97]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[96]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[90]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[82]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[80]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[74]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[73]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[66]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[65]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[64]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[59]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[51]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[48]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[43]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[41]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[35]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[33]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[32]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[27]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[26]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[19]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[18]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[16]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[11]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[10]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[9]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[3]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[2]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[1]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_data_r_reg[0]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[14]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[13]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[12]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[11]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[10]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[9]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[8]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[6]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[5]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[4]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[3]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[2]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[1]) is unused and will be removed from module qpcie_ref_design.
+WARNING: [Synth 8-3332] Sequential element (gen_strb_r_reg[0]) is unused and will be removed from module qpcie_ref_design.
 INFO: [Synth 8-3886] merging instance 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_id_reg[30]' (FDCE) to 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_num_reg[3]'
 INFO: [Synth 8-3886] merging instance 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_id_reg[29]' (FDCE) to 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_num_reg[3]'
 INFO: [Synth 8-3886] merging instance 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_id_reg[28]' (FDCE) to 'g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_num_reg[3]'
@@ -7708,6 +7631,60 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_ar
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_arbitration[2].req_arbitration.arbiter_req_inst /\arb_gnt_num_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_arbitration[4].req_arbitration.arbiter_req_inst /\arb_gnt_num_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_arbitration[12].req_arbitration.arbiter_req_inst /\arb_gnt_num_reg[4] )
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[419]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[418]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[417]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[416]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[415]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[414]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[413]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[412]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[411]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[410]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[409]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[408]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[407]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[406]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[405]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[404]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[403]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[402]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[401]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[399]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[398]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[397]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[396]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[395]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[394]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[393]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[391]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[388]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_i_pipe_imp.p_tdata_i_r_reg[384]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[419]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[418]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[417]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[416]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[415]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[414]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[413]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[412]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[411]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[410]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[409]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[408]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[407]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[406]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[405]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[404]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[403]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[402]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[401]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[399]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[398]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[397]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[396]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+WARNING: [Synth 8-3332] Sequential element (str_o_pipe_imp.p_tdata_o_reg[395]) is unused and will be removed from module qpcie_str_pipeline__parameterized49.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_arbitration[0].req_arbitration.arbiter_req_inst/arb_gnt_num_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_req_arbitration[2].req_arbitration.arbiter_req_inst/arb_gnt_num_reg[4] )
@@ -7748,6 +7725,12 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_st
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_status_reg[3][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_status_reg[3][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc_rcpl_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[0][4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\max_wreq_size_r_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_status_reg[3][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_status_reg[1][3] )
@@ -7758,15 +7741,42 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_st
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_status_reg[2][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_status_reg[0][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dmareg_status_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc_rcpl_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_wreq_prot_r_reg[31] )
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc2_next_desc_addr_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\desc1_next_desc_addr_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrdec_wraddr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rddec_rdaddr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrdec_match_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rddec_match_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_rreq_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_wreq_param_reg[31] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_wreq_param_reg[103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_wreq_tsf_id_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdres_resp_reg[3][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdres_resp_reg[1][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdres_resp_reg[2][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdres_resp_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_rreq_param_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_m_rreq_param_reg[103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrres_destid_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrres_destid_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrres_destid_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wrres_destid_reg[0][7] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:44 ; elapsed = 00:05:01 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 2620 ; free virtual = 13615
+Finished Area Optimization : Time (s): cpu = 00:04:41 ; elapsed = 00:05:01 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 2659 ; free virtual = 14105
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:04:44 ; elapsed = 00:05:01 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 2620 ; free virtual = 13615
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:41 ; elapsed = 00:05:01 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 2659 ; free virtual = 14105
 
 Report RTL Partitions: 
 +------+--------------------------------------+------------+----------+
@@ -7780,7 +7790,7 @@ Report RTL Partitions:
 |6     |qpcie_dma_engine__GB1                 |           1|      4389|
 |7     |qpcie_dma_engine__GB2                 |           1|     23940|
 |8     |qpcie_dma_engine__parameterized0__GB0 |           1|     20723|
-|9     |qpcie_dma_engine__parameterized0__GB1 |           1|      5634|
+|9     |qpcie_dma_engine__parameterized0__GB1 |           1|      5635|
 |10    |qpcie_dma_engine__parameterized0__GB2 |           1|     23955|
 |11    |qpcie_ad_translator__GB0              |           1|     17013|
 |12    |qpcie_ad_translator__GB1              |           1|      9946|
@@ -7791,10 +7801,10 @@ Report RTL Partitions:
 |17    |qpcie_top__GC0                        |           1|      7204|
 |18    |qpcie_pcie_if__GB0                    |           1|     16327|
 |19    |qpcie_pcie_if__GB1                    |           1|     18245|
-|20    |qpcie_pcie_if__GB2                    |           1|         8|
+|20    |qpcie_pcie_if__GB2                    |           1|         9|
 |21    |qpcie_xx_hip_top__GC0                 |           1|      8804|
 |22    |qpcie_ipcore_x4_gen2__GC0             |           1|        12|
-|23    |simple_pci_top__GC0                   |           1|      3135|
+|23    |simple_pci_top__GC0                   |           1|      3179|
 +------+--------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -7804,10 +7814,10 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:50 ; elapsed = 00:05:07 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 2534 ; free virtual = 13529
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:47 ; elapsed = 00:05:07 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 2450 ; free virtual = 13895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:26 ; elapsed = 00:05:45 . Memory (MB): peak = 2971.875 ; gain = 1996.734 ; free physical = 2469 ; free virtual = 13467
+Finished Timing Optimization : Time (s): cpu = 00:05:24 ; elapsed = 00:05:45 . Memory (MB): peak = 2971.562 ; gain = 1996.422 ; free physical = 2345 ; free virtual = 13832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7815,81 +7825,82 @@ Report RTL Partitions:
 |      |RTL Partition                         |Replication |Instances |
 +------+--------------------------------------+------------+----------+
 |1     |qpcie_xx_hip_pcie__GC0                |           1|     11135|
-|2     |qpcie_interco__parameterized1         |           1|      8335|
-|3     |qpcie_interco__parameterized2         |           1|       348|
-|4     |qpcie_interconnect__GB2               |           1|      6658|
-|5     |qpcie_dma_engine__GB0                 |           1|     12061|
-|6     |qpcie_dma_engine__GB1                 |           1|      2223|
-|7     |qpcie_dma_engine__GB2                 |           1|      2875|
-|8     |qpcie_dma_engine__parameterized0__GB0 |           1|     17275|
-|9     |qpcie_dma_engine__parameterized0__GB1 |           1|      4247|
-|10    |qpcie_dma_engine__parameterized0__GB2 |           1|     11920|
-|11    |qpcie_ad_translator__GB0              |           1|      1687|
-|12    |qpcie_ad_translator__GB1              |           1|      3818|
-|13    |qpcie_ad_translator__GB2              |           1|      4014|
-|14    |qpcie_dma_engine__parameterized2      |           1|     10957|
-|15    |qpcie_dma_engine__parameterized1      |           1|      9024|
-|16    |qpcie_top__GC0                        |           1|      4807|
-|17    |qpcie_pcie_if__GB0                    |           1|     10284|
-|18    |qpcie_pcie_if__GB1                    |           1|      8539|
-|19    |qpcie_pcie_if__GB2                    |           1|         8|
-|20    |qpcie_xx_hip_top__GC0                 |           1|      7748|
+|2     |qpcie_interco__parameterized1         |           1|      9513|
+|3     |qpcie_interco__parameterized2         |           1|       383|
+|4     |qpcie_interconnect__GB2               |           1|      7249|
+|5     |qpcie_dma_engine__GB0                 |           1|     12063|
+|6     |qpcie_dma_engine__GB1                 |           1|      2224|
+|7     |qpcie_dma_engine__GB2                 |           1|      2876|
+|8     |qpcie_dma_engine__parameterized0__GB0 |           1|     17277|
+|9     |qpcie_dma_engine__parameterized0__GB1 |           1|      4248|
+|10    |qpcie_dma_engine__parameterized0__GB2 |           1|     11921|
+|11    |qpcie_ad_translator__GB0              |           1|      1755|
+|12    |qpcie_ad_translator__GB1              |           1|      4348|
+|13    |qpcie_ad_translator__GB2              |           1|      4079|
+|14    |qpcie_dma_engine__parameterized2      |           1|     11509|
+|15    |qpcie_dma_engine__parameterized1      |           1|     10610|
+|16    |qpcie_top__GC0                        |           1|      5626|
+|17    |qpcie_pcie_if__GB0                    |           1|     10357|
+|18    |qpcie_pcie_if__GB1                    |           1|      8649|
+|19    |qpcie_pcie_if__GB2                    |           1|         9|
+|20    |qpcie_xx_hip_top__GC0                 |           1|      7826|
 |21    |qpcie_ipcore_x4_gen2__GC0             |           1|        12|
-|22    |simple_pci_top__GC0                   |           1|      3028|
+|22    |simple_pci_top__GC0                   |           1|      3179|
 +------+--------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 Found timing loop:
-     0: \g_i_dma_engine[0].dma_engine_i_insti_3 /O69 (qpcie_dma_engine__GB1)
-     1: \g_i_dma_engine[0].dma_engine_i_insti_3 /O69 (qpcie_dma_engine__GB1)
-WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:35]
+     0: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /O69 (qpcie_dma_engine__GB1)
+     1: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /O69 (qpcie_dma_engine__GB1)
+WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178]
 Found timing loop:
-     0: \g_i_dma_engine[0].dma_engine_i_insti_3 /O66 (qpcie_dma_engine__GB1)
-     1: \g_i_dma_engine[0].dma_engine_i_insti_3 /O66 (qpcie_dma_engine__GB1)
-WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:35]
+     0: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /O66 (qpcie_dma_engine__GB1)
+     1: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /O66 (qpcie_dma_engine__GB1)
+WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178]
 Found timing loop:
-     0: \g_i_dma_engine[0].dma_engine_i_insti_3 /extract_sm1 (qpcie_dma_engine__GB1)
-     1: \g_i_dma_engine[0].dma_engine_i_insti_3 /extract_sm1 (qpcie_dma_engine__GB1)
-WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/new/simple_pci_top.vhd:35]
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_p2q_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_p2q_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_q2p_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_q2p_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma0_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma0_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma1_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma1_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma2_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma2_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma3_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+     0: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /extract_sm1 (qpcie_dma_engine__GB1)
+     1: qpcie_ipcore/\g_i_dma_engine[0].dma_engine_i_insti_3 /extract_sm1 (qpcie_dma_engine__GB1)
+WARNING: [Synth 8-295] found timing loop. [/home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v:178]
+INFO: [Synth 8-4480] The timing for the instance scram_p2q_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_p2q_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_q2p_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_q2p_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma0_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma0_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma1_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma1_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma2_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma2_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma3_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma3_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:45 ; elapsed = 00:06:05 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1709 ; free virtual = 12728
+Finished Technology Mapping : Time (s): cpu = 00:05:43 ; elapsed = 00:06:07 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1553 ; free virtual = 13083
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:05:45 ; elapsed = 00:06:05 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1709 ; free virtual = 12728
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:05:43 ; elapsed = 00:06:07 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1553 ; free virtual = 13083
 
 Report RTL Partitions: 
 +------+--------------------------------------+------------+----------+
 |      |RTL Partition                         |Replication |Instances |
 +------+--------------------------------------+------------+----------+
 |1     |qpcie_xx_hip_pcie__GC0                |           1|      6348|
-|2     |qpcie_dma_engine__GB0                 |           1|      5617|
-|3     |qpcie_dma_engine__parameterized0__GB0 |           1|      8810|
-|4     |qpcie_dma_engine__parameterized0__GB2 |           1|      4231|
-|5     |qpcie_dma_engine__parameterized2      |           1|      5794|
-|6     |qpcie_pcie_if__GB0                    |           1|      4419|
+|2     |qpcie_dma_engine__GB0                 |           1|      5618|
+|3     |qpcie_dma_engine__parameterized0__GB0 |           1|      8811|
+|4     |qpcie_dma_engine__parameterized0__GB2 |           1|      4232|
+|5     |qpcie_dma_engine__parameterized2      |           1|      6199|
+|6     |qpcie_dma_engine__parameterized1      |           1|      5607|
+|7     |qpcie_pcie_if__GB0                    |           1|      4443|
 +------+--------------------------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:05:45 ; elapsed = 00:06:05 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1709 ; free virtual = 12728
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:05:43 ; elapsed = 00:06:07 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1552 ; free virtual = 13083
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -7902,28 +7913,29 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_p2q_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_p2q_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_q2p_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_q2p_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma0_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma0_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma1_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma1_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma2_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma2_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma3_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance qpcie_ipcore/scram_dma3_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/scfifo_inst/scram_inst/ram_block_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance ref_design/axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_p2q_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_p2q_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_q2p_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_q2p_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma0_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma0_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma1_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma1_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma2_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma2_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma3_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scram_dma3_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance scfifo_inst/scram_inst/ram_block_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance axi4slv_ram/scrambe_inst/wren_byte[1].ram_block_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin qpcie_ipcore:axi4_mst0_rlast to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:53 ; elapsed = 00:06:13 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1709 ; free virtual = 12727
+Finished IO Insertion : Time (s): cpu = 00:05:53 ; elapsed = 00:06:18 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1517 ; free virtual = 13051
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7936,7 +7948,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:53 ; elapsed = 00:06:13 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1709 ; free virtual = 12727
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:53 ; elapsed = 00:06:18 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1517 ; free virtual = 13051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7948,37 +7960,37 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:02 ; elapsed = 00:06:22 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1706 ; free virtual = 12724
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:02 ; elapsed = 00:06:26 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1557 ; free virtual = 13086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:03 ; elapsed = 00:06:23 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1706 ; free virtual = 12724
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:02 ; elapsed = 00:06:27 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1569 ; free virtual = 13099
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:08 ; elapsed = 00:06:28 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1705 ; free virtual = 12724
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:17 ; elapsed = 00:06:42 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1588 ; free virtual = 13088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:09 ; elapsed = 00:06:29 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1705 ; free virtual = 12724
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:17 ; elapsed = 00:06:42 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1588 ; free virtual = 13088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name    | RTL Name                                                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|simple_pci_top | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/cpllPDInst/cpllpd_wait_reg[95]     | 96     | 4     | NO           | NO                 | YES               | 0      | 12      | 
-|simple_pci_top | qpcie_ipcore/qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/cpllPDInst/cpllreset_wait_reg[127] | 128    | 4     | NO           | NO                 | YES               | 0      | 16      | 
-+---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                                                                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|qpcie_ipcore_x4_gen2 | qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/cpllPDInst/cpllpd_wait_reg[95]     | 96     | 4     | NO           | NO                 | YES               | 0      | 12      | 
+|qpcie_ipcore_x4_gen2 | qpcie_xx_hip_top/g_xx_pcie_hip.qpcie_pcie_core_inst/pcie_7x_0_i/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/cpllPDInst/cpllreset_wait_reg[127] | 128    | 4     | NO           | NO                 | YES               | 0      | 16      | 
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -7988,55 +8000,58 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ila_0         |         2|
++------+--------------+----------+
 
 Report Cell Usage: 
 +------+--------------+------+
 |      |Cell          |Count |
 +------+--------------+------+
-|1     |BUFG          |     5|
-|2     |BUFGCTRL      |     1|
-|3     |CARRY4        |  1339|
-|4     |GTXE2_CHANNEL |     4|
-|5     |GTXE2_COMMON  |     1|
-|6     |IBUFDS_GTE2   |     1|
-|7     |LUT1          |  2402|
-|8     |LUT2          |  6499|
-|9     |LUT3          |  4834|
-|10    |LUT4          |  4636|
-|11    |LUT5          |  4958|
-|12    |LUT6          | 15365|
-|13    |MMCME2_ADV    |     1|
-|14    |MUXF7         |   289|
-|15    |MUXF8         |   105|
-|16    |PCIE_2_1      |     1|
-|17    |RAM32M        |    12|
-|18    |RAMB18E1      |     1|
-|19    |RAMB36E1      |     4|
-|20    |RAMB36E1_1    |    16|
-|21    |SRLC32E       |    28|
-|22    |FDCE          |     9|
-|23    |FDPE          |    17|
-|24    |FDRE          | 22353|
-|25    |FDSE          |    74|
-|26    |IBUF          |     8|
-|27    |OBUF          |     6|
+|1     |ila_0_bbox    |     1|
+|2     |ila_0_bbox_0  |     1|
+|3     |BUFG          |     5|
+|4     |BUFGCTRL      |     1|
+|5     |CARRY4        |  1391|
+|6     |GTXE2_CHANNEL |     4|
+|7     |GTXE2_COMMON  |     1|
+|8     |IBUFDS_GTE2   |     1|
+|9     |LUT1          |  2612|
+|10    |LUT2          |  6738|
+|11    |LUT3          |  5212|
+|12    |LUT4          |  4786|
+|13    |LUT5          |  5157|
+|14    |LUT6          | 15972|
+|15    |MMCME2_ADV    |     1|
+|16    |MUXF7         |   290|
+|17    |MUXF8         |   105|
+|18    |PCIE_2_1      |     1|
+|19    |RAM32M        |    13|
+|20    |RAMB18E1      |     1|
+|21    |RAMB36E1      |     4|
+|22    |RAMB36E1_1    |    16|
+|23    |SRLC32E       |    28|
+|24    |FDCE          | 19511|
+|25    |FDPE          |   148|
+|26    |FDRE          |  3833|
+|27    |FDSE          |    74|
+|28    |IBUF          |     8|
+|29    |OBUF          |     6|
 +------+--------------+------+
 
 Report Instance Areas: 
 +------+-------------------------------------------------------------------------------------+------------------------------------+------+
 |      |Instance                                                                             |Module                              |Cells |
 +------+-------------------------------------------------------------------------------------+------------------------------------+------+
-|1     |top                                                                                  |                                    | 62969|
-|2     |  qpcie_ipcore                                                                       |qpcie_ipcore_x4_gen2                | 61022|
-|3     |    qpcie_xx_hip_top                                                                 |qpcie_xx_hip_top                    | 60242|
+|1     |top                                                                                  |                                    | 65919|
+|2     |  qpcie_ipcore                                                                       |qpcie_ipcore_x4_gen2                | 63822|
+|3     |    qpcie_xx_hip_top                                                                 |qpcie_xx_hip_top                    | 63040|
 |4     |      \g_xx_pcie_hip.ptx_arbiter_inst                                                |qpcie_arbiter                       |    15|
-|5     |      \g_xx_pcie_hip.qpcie_pcie_core_inst                                            |qpcie_xx_hip_pcie                   |  5717|
-|6     |        pcie_7x_0_i                                                                  |qpcie_s7_hip                        |  5683|
-|7     |          inst                                                                       |pcie_7x_0_core_top                  |  5683|
+|5     |      \g_xx_pcie_hip.qpcie_pcie_core_inst                                            |qpcie_xx_hip_pcie                   |  5705|
+|6     |        pcie_7x_0_i                                                                  |qpcie_s7_hip                        |  5671|
+|7     |          inst                                                                       |pcie_7x_0_core_top                  |  5671|
 |8     |            gt_top_i                                                                 |pcie_7x_0_gt_top                    |  4679|
 |9     |              \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst                      |pcie_7x_0_gt_rx_valid_filter_7x     |    57|
 |10    |              \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst                      |pcie_7x_0_gt_rx_valid_filter_7x_24  |    56|
@@ -8080,7 +8095,7 @@ Report Instance Areas:
 |48    |                \pipe_lane[3].pipe_user_i                                            |pcie_7x_0_pipe_user_44              |   121|
 |49    |                \pipe_reset.pipe_reset_i                                             |pcie_7x_0_pipe_reset                |   160|
 |50    |                \qpll_reset.qpll_reset_i                                             |pcie_7x_0_qpll_reset                |    48|
-|51    |            pcie_top_i                                                               |pcie_7x_0_pcie_top                  |   982|
+|51    |            pcie_top_i                                                               |pcie_7x_0_pcie_top                  |   984|
 |52    |              axi_basic_top                                                          |pcie_7x_0_axi_basic_top             |   936|
 |53    |                rx_inst                                                              |pcie_7x_0_axi_basic_rx              |   740|
 |54    |                  rx_null_gen_inst                                                   |pcie_7x_0_axi_basic_rx_null_gen     |    56|
@@ -8088,7 +8103,7 @@ Report Instance Areas:
 |56    |                tx_inst                                                              |pcie_7x_0_axi_basic_tx              |   196|
 |57    |                  \thrtl_ctl_enabled.tx_thrl_ctl_inst                                |pcie_7x_0_axi_basic_tx_thrtl_ctl    |    53|
 |58    |                  tx_pipeline_inst                                                   |pcie_7x_0_axi_basic_tx_pipeline     |   143|
-|59    |              pcie_7x_i                                                              |pcie_7x_0_pcie_7x                   |    32|
+|59    |              pcie_7x_i                                                              |pcie_7x_0_pcie_7x                   |    34|
 |60    |                pcie_bram_top                                                        |pcie_7x_0_pcie_bram_top_7x          |     4|
 |61    |                  pcie_brams_rx                                                      |pcie_7x_0_pcie_brams_7x             |     2|
 |62    |                    \brams[0].ram                                                    |pcie_7x_0_pcie_bram_7x_20           |     1|
@@ -8102,58 +8117,58 @@ Report Instance Areas:
 |70    |                      \use_tdp.ramb36                                                |BRAM_TDP_MACRO                      |     1|
 |71    |        pipe_clock_i                                                                 |pcie_7x_0_pipe_clock                |    28|
 |72    |      protocore_inst                                                                 |protocore                           |   290|
-|73    |      qpcie_ireg_inst                                                                |qpcie_internal_reg                  |  3093|
-|74    |      qpcie_pcie_if_inst                                                             |qpcie_pcie_if                       |  7080|
-|75    |        qpcie_cfgio_mgt_inst                                                         |qpcie_cfgio_mgt                     |   451|
-|76    |          \g_cfgio_fifo_implemented.cfgio_fifo_inst                                  |qpcie_regfile                       |   150|
-|77    |        qpcie_p2q_rd_mgt_inst                                                        |qpcie_p2q_rd_mgt                    |  1627|
-|78    |        qpcie_p2q_wr_mgt_inst                                                        |qpcie_p2q_wr_mgt                    |  1390|
-|79    |        qpcie_q2p_np_mgt_inst                                                        |qpcie_q2p_np_mgt                    |  2912|
+|73    |      qpcie_ireg_inst                                                                |qpcie_internal_reg                  |  2973|
+|74    |      qpcie_pcie_if_inst                                                             |qpcie_pcie_if                       |  7199|
+|75    |        qpcie_cfgio_mgt_inst                                                         |qpcie_cfgio_mgt                     |   465|
+|76    |          \g_cfgio_fifo_implemented.cfgio_fifo_inst                                  |qpcie_regfile                       |   160|
+|77    |        qpcie_p2q_rd_mgt_inst                                                        |qpcie_p2q_rd_mgt                    |  1669|
+|78    |        qpcie_p2q_wr_mgt_inst                                                        |qpcie_p2q_wr_mgt                    |  1495|
+|79    |        qpcie_q2p_np_mgt_inst                                                        |qpcie_q2p_np_mgt                    |  2871|
 |80    |        qpcie_q2p_p_mgt_inst                                                         |qpcie_q2p_p_mgt                     |   602|
-|81    |      qpcie_top_inst                                                                 |qpcie_top                           | 43707|
-|82    |        \g_i_axi4_mst0_if.axi4_mst0_if_inst                                          |qpcie_axi4_mst_if                   |   485|
-|83    |        \g_i_axi4lite_mst_if.axi4lite_mst_if_inst                                    |qpcie_axi4lite_mst_if               |   567|
+|81    |      qpcie_top_inst                                                                 |qpcie_top                           | 46537|
+|82    |        \g_i_axi4_mst0_if.axi4_mst0_if_inst                                          |qpcie_axi4_mst_if                   |   803|
+|83    |        \g_i_axi4lite_mst_if.axi4lite_mst_if_inst                                    |qpcie_axi4lite_mst_if               |   432|
 |84    |          a_rdstate_sync                                                             |qpcie_synchronizer_13               |     5|
 |85    |          a_wrstate_sync                                                             |qpcie_synchronizer_14               |     8|
 |86    |          q_rdstate_sync                                                             |qpcie_synchronizer_15               |     7|
 |87    |          q_wrstate_sync                                                             |qpcie_synchronizer_16               |     8|
-|88    |        \g_i_axi4lite_slv_if.axi4lite_slv_if_inst                                    |qpcie_axi4lite_slv_if               |   354|
+|88    |        \g_i_axi4lite_slv_if.axi4lite_slv_if_inst                                    |qpcie_axi4lite_slv_if               |   883|
 |89    |          a_rdstate_sync                                                             |qpcie_synchronizer_9                |     9|
 |90    |          a_wrstate_sync                                                             |qpcie_synchronizer_10               |     6|
 |91    |          q_rdstate_sync                                                             |qpcie_synchronizer_11               |     5|
 |92    |          q_wrstate_sync                                                             |qpcie_synchronizer_12               |     8|
-|93    |        \g_i_axi4str0_if.axi4str0_if_inst                                            |qpcie_axi4str_if                    |  1370|
+|93    |        \g_i_axi4str0_if.axi4str0_if_inst                                            |qpcie_axi4str_if                    |  1402|
 |94    |          asti_syncreset_i                                                           |qpcie_syncreset                     |    34|
 |95    |            cd1_rst_ack_sync                                                         |qpcie_synchronizer_5                |     2|
 |96    |            cd1_rst_req_sync                                                         |qpcie_synchronizer_6                |     3|
 |97    |            cd2_rst_ack_sync                                                         |qpcie_synchronizer_7                |     2|
 |98    |            cd2_rst_req_sync                                                         |qpcie_synchronizer_8                |     3|
-|99    |          asto_syncreset_i                                                           |qpcie_syncreset_1                   |    16|
+|99    |          asto_syncreset_i                                                           |qpcie_syncreset_1                   |    17|
 |100   |            cd1_rst_ack_sync                                                         |qpcie_synchronizer                  |     2|
 |101   |            cd1_rst_req_sync                                                         |qpcie_synchronizer_2                |     3|
 |102   |            cd2_rst_ack_sync                                                         |qpcie_synchronizer_3                |     2|
 |103   |            cd2_rst_req_sync                                                         |qpcie_synchronizer_4                |     3|
-|104   |        qpcie_layer_i_inst                                                           |qpcie_layer                         | 40931|
-|105   |          \g_i_ad_translator[0].g_adt_implemented.ad_translator_i_inst               |qpcie_ad_translator                 |  4226|
+|104   |        qpcie_layer_i_inst                                                           |qpcie_layer                         | 43017|
+|105   |          \g_i_ad_translator[0].g_adt_implemented.ad_translator_i_inst               |qpcie_ad_translator                 |  4632|
 |106   |          \g_i_dma_engine[0].dma_engine_i_inst                                       |qpcie_dma_engine                    |  7759|
-|107   |          \g_i_dma_engine[1].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized0    | 13687|
-|108   |          \g_i_dma_engine[2].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized1    |  4025|
-|109   |          \g_i_dma_engine[3].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized2    |  5055|
-|110   |          interconnect_inst                                                          |qpcie_interconnect                  |  5144|
-|111   |            qpcie_interco_rcpl                                                       |qpcie_interco__parameterized0       |  1414|
+|107   |          \g_i_dma_engine[1].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized0    | 13688|
+|108   |          \g_i_dma_engine[2].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized1    |  4860|
+|109   |          \g_i_dma_engine[3].dma_engine_i_inst                                       |qpcie_dma_engine__parameterized2    |  5442|
+|110   |          interconnect_inst                                                          |qpcie_interconnect                  |  5531|
+|111   |            qpcie_interco_rcpl                                                       |qpcie_interco__parameterized0       |  1610|
 |112   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized23 |   543|
-|113   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p             |qpcie_str_pipeline__parameterized29 |   276|
+|113   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p             |qpcie_str_pipeline__parameterized29 |   275|
 |114   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m             |qpcie_str_pipeline__parameterized30 |   407|
 |115   |              \g_req_arbitration[0].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized5       |   175|
-|116   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized6       |    13|
-|117   |            qpcie_interco_rreq                                                       |qpcie_interco                       |   873|
-|118   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized1  |   192|
+|116   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized6       |   210|
+|117   |            qpcie_interco_rreq                                                       |qpcie_interco                       |   945|
+|118   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized1  |   256|
 |119   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p             |qpcie_str_pipeline__parameterized11 |   192|
 |120   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m             |qpcie_str_pipeline__parameterized12 |   224|
 |121   |              \g_req_arbitration[0].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized0       |   236|
-|122   |              \g_req_arbitration[12].req_arbitration.arbiter_req_inst                |qpcie_arbiter__parameterized4       |    10|
-|123   |              \g_req_arbitration[1].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized1       |     3|
-|124   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized2       |     4|
+|122   |              \g_req_arbitration[12].req_arbitration.arbiter_req_inst                |qpcie_arbiter__parameterized4       |     8|
+|123   |              \g_req_arbitration[1].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized1       |     8|
+|124   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized2       |     9|
 |125   |              \g_req_arbitration[4].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized3       |    12|
 |126   |            qpcie_interco_wcpl                                                       |qpcie_interco__parameterized2       |    76|
 |127   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized71 |    40|
@@ -8161,50 +8176,50 @@ Report Instance Areas:
 |129   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m             |qpcie_str_pipeline__parameterized78 |     8|
 |130   |              \g_req_arbitration[0].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized12      |     8|
 |131   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized13      |     7|
-|132   |            qpcie_interco_wreq                                                       |qpcie_interco__parameterized1       |  2436|
-|133   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized49 |   764|
+|132   |            qpcie_interco_wreq                                                       |qpcie_interco__parameterized1       |  2204|
+|133   |              \g_in_req_pipeline[0].req_pipeline.str_pipe_req_m2i                    |qpcie_str_pipeline__parameterized49 |   555|
 |134   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_i2p             |qpcie_str_pipeline__parameterized59 |   448|
 |135   |              \g_outreq_pipeline[0].req_arb_implemented.str_pipe_req_p2m             |qpcie_str_pipeline__parameterized60 |   897|
 |136   |              \g_req_arbitration[0].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized7       |   267|
-|137   |              \g_req_arbitration[12].req_arbitration.arbiter_req_inst                |qpcie_arbiter__parameterized11      |    43|
-|138   |              \g_req_arbitration[1].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized8       |     3|
-|139   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized9       |     3|
-|140   |              \g_req_arbitration[4].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized10      |    11|
+|137   |              \g_req_arbitration[12].req_arbitration.arbiter_req_inst                |qpcie_arbiter__parameterized11      |     8|
+|138   |              \g_req_arbitration[1].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized8       |     8|
+|139   |              \g_req_arbitration[2].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized9       |     8|
+|140   |              \g_req_arbitration[4].req_arbitration.arbiter_req_inst                 |qpcie_arbiter__parameterized10      |    13|
 |141   |    scram_dma0_inst                                                                  |qpcie_scram__parameterized0         |   130|
 |142   |    scram_dma1_inst                                                                  |qpcie_scram__parameterized1         |   130|
 |143   |    scram_dma2_inst                                                                  |qpcie_scram__parameterized2         |   130|
 |144   |    scram_dma3_inst                                                                  |qpcie_scram__parameterized3         |   130|
 |145   |    scram_p2q_inst                                                                   |qpcie_scram                         |   130|
 |146   |    scram_q2p_inst                                                                   |qpcie_scram_0                       |   130|
-|147   |  ref_design                                                                         |qpcie_ref_design                    |  1875|
-|148   |    axi4lite_dec                                                                     |qpcie_axi4lite_dec                  |    61|
-|149   |    axi4slv_ram                                                                      |qpcie_axi4slv_ram                   |   247|
-|150   |      scrambe_inst                                                                   |qpcie_scrambe                       |   139|
-|151   |    external_reg                                                                     |qpcie_external_reg                  |   510|
-|152   |    scfifo_inst                                                                      |qpcie_scfifo                        |   275|
+|147   |  ref_design                                                                         |qpcie_ref_design                    |  2023|
+|148   |    axi4lite_dec                                                                     |qpcie_axi4lite_dec                  |    73|
+|149   |    axi4slv_ram                                                                      |qpcie_axi4slv_ram                   |   175|
+|150   |      scrambe_inst                                                                   |qpcie_scrambe                       |    27|
+|151   |    external_reg                                                                     |qpcie_external_reg                  |   677|
+|152   |    scfifo_inst                                                                      |qpcie_scfifo                        |   296|
 |153   |      scram_inst                                                                     |qpcie_scram__parameterized4         |   141|
 +------+-------------------------------------------------------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:09 ; elapsed = 00:06:29 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1705 ; free virtual = 12724
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:17 ; elapsed = 00:06:42 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1588 ; free virtual = 13088
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7026 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:49 ; elapsed = 00:05:12 . Memory (MB): peak = 2979.879 ; gain = 1115.844 ; free physical = 1705 ; free virtual = 12724
-Synthesis Optimization Complete : Time (s): cpu = 00:06:09 ; elapsed = 00:06:29 . Memory (MB): peak = 2979.879 ; gain = 2004.738 ; free physical = 1732 ; free virtual = 12727
+Synthesis finished with 0 errors, 0 critical warnings and 6512 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:57 ; elapsed = 00:05:25 . Memory (MB): peak = 2979.562 ; gain = 1113.836 ; free physical = 1589 ; free virtual = 13090
+Synthesis Optimization Complete : Time (s): cpu = 00:06:17 ; elapsed = 00:06:42 . Memory (MB): peak = 2979.562 ; gain = 2004.422 ; free physical = 1615 ; free virtual = 13091
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1381 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1434 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 12 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+  A total of 13 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 13 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1242 Infos, 250 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1155 Infos, 344 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:16 ; elapsed = 00:06:35 . Memory (MB): peak = 2999.961 ; gain = 1950.262 ; free physical = 5037 ; free virtual = 16031
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3031.980 ; gain = 32.020 ; free physical = 5027 ; free virtual = 16030
-report_utilization: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.24 . Memory (MB): peak = 3031.980 ; gain = 0.000 ; free physical = 5027 ; free virtual = 16030
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 12 15:54:06 2016...
+synth_design: Time (s): cpu = 00:06:25 ; elapsed = 00:06:50 . Memory (MB): peak = 2999.652 ; gain = 1945.957 ; free physical = 4944 ; free virtual = 16413
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3031.668 ; gain = 32.016 ; free physical = 4935 ; free virtual = 16413
+report_utilization: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3031.668 ; gain = 0.000 ; free physical = 4934 ; free virtual = 16412
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 12 17:58:04 2016...

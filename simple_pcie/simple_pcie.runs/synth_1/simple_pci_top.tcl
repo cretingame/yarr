@@ -13,13 +13,16 @@ set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir /home/asautaux/yarr/simple_pcie/simple_pcie.cache/wt [current_project]
 set_property parent.project_path /home/asautaux/yarr/simple_pcie/simple_pcie.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property include_dirs {
   /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/quickpcie/include/common
   {/home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/synthesis/xilinx/plda_xpressk7_xc7k160tfbg676-2/x4_gen2/vlog/;}
   /home/asautaux/vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2
 } [current_fileset]
+add_files -quiet /home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/ip/ila_0_1/ila_0.dcp
+set_property used_in_implementation false [get_files /home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/ip/ila_0_1/ila_0.dcp]
 read_verilog -library xil_defaultlib {
   /home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_bram_7x.v
   /home/asautaux/yarr/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_gtp_cpllpd_ovrd.v
