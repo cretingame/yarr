@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1476320353">
+<GenRun Id="impl_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1476390915">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="simple_pci_top.vdi"/>
   <File Type="BG-DRC" Name="simple_pci_top.drc"/>
@@ -383,46 +383,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_s7_hip.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_s7_hip.v"/>
-        <Attr Name="ImportTime" Val="1458226968"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_clock.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pipe_clock.v"/>
-        <Attr Name="ImportTime" Val="1458226968"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_xx_hip_pcie.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_xx_hip_pcie.v"/>
-        <Attr Name="ImportTime" Val="1458226968"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/synthesis/xilinx/vlog/qpcie_lib.v"/>
         <Attr Name="ImportTime" Val="1458227110"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../vhdl/quickpcie-expert_gen2_v156_b085_xilinx_eval/ref_design/source/endpoint/design/wrapper/k7/qpcie_ipcore_x4_gen2.v"/>
-        <Attr Name="ImportTime" Val="1458227019"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -538,5 +502,9 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="qpcie_ipcore_x4_gen2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>

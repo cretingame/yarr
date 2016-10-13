@@ -74,6 +74,14 @@ architecture Behavioral of simple_pci_top is
     signal test_out : std_logic_vector(64-1 downto 0);--wire [64                               -1:0] test_out              ;
     signal aclk_cnt : std_logic_vector(25-1 downto 0);--reg  [25                               -1:0] aclk_cnt              ;
     
+    -- PCIe Interface
+--    signal pci_exp_txn_s : std_logic_vector(4-1 downto 0);
+--    signal pci_exp_txp_s : std_logic_vector(4-1 downto 0);
+--    signal pci_exp_rxn_s : std_logic_vector(4-1 downto 0);
+--    signal pci_exp_rxp_s : std_logic_vector(4-1 downto 0);
+--    signal pci_exp_tx_s : std_logic_vector(4-1 downto 0);
+--    signal pci_exp_rx_s : std_logic_vector(4-1 downto 0);
+    
     -- AXI4 Slave Lite Interface
     --  . Write Address Channel
     signal axi4_slvl_awaddr : std_logic_vector(14-1 downto 0);--wire [14                               -1:0] axi4_slvl_awaddr      ;
@@ -569,6 +577,89 @@ architecture Behavioral of simple_pci_top is
     );
     END COMPONENT  ;
 
+    COMPONENT ila_1
+
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(127 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(15 DOWNTO 0); 
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe18 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe21 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe22 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe23 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe24 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe25 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe26 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe27 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe28 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe29 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe30 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe31 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe32 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe33 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+        probe34 : IN STD_LOGIC_VECTOR(127 DOWNTO 0); 
+        probe35 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
+        probe36 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe37 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe38 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    );
+    END COMPONENT  ;
+    
+    COMPONENT ila_2
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(127 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(15 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(15 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+        probe7 : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+    );
+    END COMPONENT  ;
+    
+--    COMPONENT ila_3
+    
+--    PORT (
+--        clk : IN STD_LOGIC;
+    
+    
+    
+--        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+--        probe1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+--        probe2 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
+--        probe3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+--        probe4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--        probe5 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+--        probe6 : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+--    );
+--    END COMPONENT  ;
     
 begin
 
@@ -757,6 +848,38 @@ begin
         test_out           =>     test_out                
         --    ---------------------------------------------------------------------------
        );
+       
+--    pci_exp_txn        <=     pci_exp_txn_s;
+--    pci_exp_txp        <=     pci_exp_txp_s;             
+--    pci_exp_rxn_s        <=     pci_exp_rxn;             
+--    pci_exp_rxp_s        <=     pci_exp_rxp;             
+    
+--   pice_bufds:
+--   for x in 0 to 3 generate
+--      begin
+--        pci_tx : IBUFDS
+--        generic map(
+--          IOSTANDARD => "DEFAULT"
+--        )
+--        port map(
+--          I  => pci_exp_txp_s(x),
+--          IB => pci_exp_txn_s(x),
+--          O  => pci_exp_tx_s(x)
+--        );
+          
+--        pci_rx : IBUFDS
+--        generic map(
+--            IOSTANDARD => "DEFAULT"
+--        )
+--        port map(
+--            I  => pci_exp_rxp(x),
+--            IB => pci_exp_rxn(x),
+--            O  => pci_exp_rx_s(x)
+--        );
+--   end generate;
+
+
+
        
     -----------------------------------------------------------------------------
     -- QuickPCIe Reference Design Instance
@@ -950,7 +1073,7 @@ begin
 --            aclk_cnt <= aclk_cnt+1'b1;
 --        end
 
-    ila_axi_slave : ila_0
+    ila_axi_slave_lite : ila_0
     PORT MAP (
         clk => aclk,
     
@@ -977,7 +1100,7 @@ begin
         probe18(0) => axi4_slvl_rready
     );
     
-    ila_axi_master : ila_0
+    ila_axi_master_lite : ila_0
     PORT MAP (
         clk => aclk,
     
@@ -1005,5 +1128,100 @@ begin
         probe17(0) => axi4_mstl_rvalid,
         probe18(0) => axi4_mstl_rready
     );
+    
+    ila_axi_master_0 : ila_1
+    PORT MAP (
+        clk => aclk,
+    
+    
+    
+        probe0 => axi4_mst0_awid, 
+        probe1 => axi4_mst0_awaddr, 
+        probe2 => axi4_mst0_awregion, 
+        probe3 => axi4_mst0_awlen, 
+        probe4 => axi4_mst0_awsize, 
+        probe5 => axi4_mst0_awburst, 
+        probe6(0) => axi4_mst0_awlock, 
+        probe7 => axi4_mst0_awcache, 
+        probe8 => axi4_mst0_awprot, 
+        probe9 => axi4_mst0_awqos, 
+        probe10(0) => axi4_mst0_awvalid, 
+        probe11(0) => axi4_mst0_awready, 
+        probe12 => axi4_mst0_wdata, 
+        probe13 => axi4_mst0_wstrb, 
+        probe14(0) => axi4_mst0_wlast, 
+        probe15(0) => axi4_mst0_wvalid, 
+        probe16(0) => axi4_mst0_wready, 
+        probe17 => axi4_mst0_bid, 
+        probe18 => axi4_mst0_bresp, 
+        probe19(0) => axi4_mst0_bvalid, 
+        probe20(0) => axi4_mst0_bready, 
+        probe21 => axi4_mst0_arid, 
+        probe22 => axi4_mst0_araddr, 
+        probe23 => axi4_mst0_arregion, 
+        probe24 => axi4_mst0_arlen, 
+        probe25 => axi4_mst0_arsize, 
+        probe26 => axi4_mst0_arburst, 
+        probe27(0) => axi4_mst0_arlock, 
+        probe28 => axi4_mst0_arcache, 
+        probe29 => axi4_mst0_arprot, 
+        probe30 => axi4_mst0_arqos, 
+        probe31(0) => axi4_mst0_arvalid, 
+        probe32(0) => axi4_mst0_arready, 
+        probe33 => axi4_mst0_rid, 
+        probe34 => axi4_mst0_rdata, 
+        probe35 => axi4_mst0_rresp, 
+        probe36(0) => axi4_mst0_rlast, 
+        probe37(0) => axi4_mst0_rvalid,
+        probe38(0) => axi4_mst0_rready
+    );
+    
+    ila_axi_stream_out : ila_2
+    PORT MAP (
+        clk => aclk,
+    
+    
+    
+        probe0(0) => axi4_sto0_tvalid, 
+        probe1(0) => axi4_sto0_tready, 
+        probe2 => axi4_sto0_tdata, 
+        probe3 => axi4_sto0_tstrb, 
+        probe4 => axi4_sto0_tkeep, 
+        probe5(0) => axi4_sto0_tlast, 
+        probe6 => axi4_sto0_tid,
+        probe7 => axi4_sto0_tdest
+    );
+    
+    ila_axi_stream_in : ila_2
+    PORT MAP (
+        clk => aclk,
+    
+    
+    
+        probe0(0) => axi4_sti0_tvalid, 
+        probe1(0) => axi4_sti0_tready, 
+        probe2 => axi4_sti0_tdata, 
+        probe3 => axi4_sti0_tstrb, 
+        probe4 => axi4_sti0_tkeep, 
+        probe5(0) => axi4_sti0_tlast, 
+        probe6 => axi4_sti0_tid,
+        probe7 => axi4_sti0_tdest
+    );
+    
+--    ila_pcie_int : ila_3
+--    PORT MAP (
+--        clk => aclk,
+    
+    
+    
+--        probe0(0) => sys_rst_n, 
+--        probe1 => pci_exp_txp_s, 
+--        probe2 => pci_exp_txn_s, 
+--        probe3 => local_interrupt_in, 
+--        probe4 => local_interrupt_out,
+--        probe5 => pci_exp_rxp_s,
+--        probe6 => pci_exp_rxn_s
+--    );
+    
     
 end Behavioral;

@@ -12,11 +12,11 @@ int main(int argc, char **argv) {
         specNum = atoi(argv[1]);
     SpecController mySpec(specNum);
     std::string tmp;
-    const size_t size = 0x100;
+    const size_t size = 0x2000;
     unsigned int err_count = 0;
    
     unsigned int address=0;
-    unsigned int offset = 0x1000;
+    unsigned int offset = 0x0000;
  
     //uint32_t *data = new uint32_t[size];
     uint32_t *resp = new uint32_t[size];

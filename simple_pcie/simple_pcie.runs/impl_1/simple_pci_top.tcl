@@ -50,6 +50,7 @@ set_msg_config -id {Synth 8-638} -limit 10000
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   open_checkpoint simple_pci_top_routed.dcp
   set_property webtalk.parent_dir /home/asautaux/yarr/simple_pcie/simple_pcie.cache/wt [current_project]
   catch { write_mem_info -force simple_pci_top.mmi }

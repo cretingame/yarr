@@ -10,141 +10,133 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="4011fs"></ZoomEndTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="19" />
-   <wvobject type="array" fp_name="axi4_slvl_awaddr">
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="axi4_mstl_araddr">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_araddr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_araddr[12:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_awaddr[13:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_awaddr[13:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_awprot">
+   <wvobject type="array" fp_name="axi4_mstl_arprot">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_arprot[2:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_awprot[2:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_awprot[2:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_awvalid">
+   <wvobject type="logic" fp_name="axi4_mstl_arready">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_awvalid</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_awvalid</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_arready</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_arready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_awready">
+   <wvobject type="logic" fp_name="axi4_mstl_arvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_awready</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_awready</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_arvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_arvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_wdata">
+   <wvobject type="array" fp_name="axi4_mstl_awaddr">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_awaddr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_awaddr[12:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_wdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_wdata[31:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_wstrb">
+   <wvobject type="array" fp_name="axi4_mstl_awprot">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_awprot[2:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_wstrb[3:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_wstrb[3:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_wvalid">
+   <wvobject type="logic" fp_name="axi4_mstl_awready">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_wvalid</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_wvalid</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_awready</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_awready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_wready">
+   <wvobject type="logic" fp_name="axi4_mstl_awvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_wready</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_wready</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_awvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_awvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_bresp">
+   <wvobject type="logic" fp_name="axi4_mstl_bready">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_bresp[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_bresp[1:0]</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_bready</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_bready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_bvalid">
+   <wvobject type="array" fp_name="axi4_mstl_bresp">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_bresp[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_bvalid</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_bvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_bready">
+   <wvobject type="logic" fp_name="axi4_mstl_bvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_bready</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_bready</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_bvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_bvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_araddr">
+   <wvobject type="array" fp_name="axi4_mstl_rdata">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_rdata[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_araddr[13:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_araddr[13:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_arprot">
+   <wvobject type="logic" fp_name="axi4_mstl_rready">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_arprot[2:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_arprot[2:0]</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_rready</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_rready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_arvalid">
+   <wvobject type="array" fp_name="axi4_mstl_rresp">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_rresp[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_arvalid</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_arvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_arready">
+   <wvobject type="logic" fp_name="axi4_mstl_rvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_arready</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_arready</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_rvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_rdata">
+   <wvobject type="array" fp_name="axi4_mstl_wdata">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_wdata[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_rdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_rdata[31:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="axi4_slvl_rresp">
+   <wvobject type="logic" fp_name="axi4_mstl_wready">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_rresp[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_rresp[1:0]</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_wready</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_wready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_rvalid">
+   <wvobject type="array" fp_name="axi4_mstl_wstrb">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_wstrb[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_rvalid</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_rvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi4_slvl_rready">
+   <wvobject type="logic" fp_name="axi4_mstl_wvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">axi4_slvl_rready</obj_property>
-      <obj_property name="ObjectShortName">axi4_slvl_rready</obj_property>
+      <obj_property name="ElementShortName">axi4_mstl_wvalid</obj_property>
+      <obj_property name="ObjectShortName">axi4_mstl_wvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>
