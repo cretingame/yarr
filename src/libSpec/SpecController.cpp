@@ -35,7 +35,7 @@ SpecController::SpecController(unsigned int id) {
 
 SpecController::~SpecController() {
     spec->unmapBAR(0, bar0);
-    spec->unmapBAR(2, bar2);
+    //spec->unmapBAR(2, bar2);
     spec->close();
     delete spec;
 }
@@ -163,10 +163,10 @@ void SpecController::init() {
         std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR0 at 0x" << std::hex << bar0 
             << " with size 0x" << spec->getBARsize(0) << std::dec << std::endl;
 #endif
-        bar2 = spec->mapBAR(2);
+        //bar2 = spec->mapBAR(2);
 #ifdef DEBUG
-        std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
-            << " with size 0x" << spec->getBARsize(2) << std::dec << std::endl;
+        //std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
+        //    << " with size 0x" << spec->getBARsize(2) << std::dec << std::endl;
 #endif
     } catch (Exception &e) {
         std::cerr << __PRETTY_FUNCTION__ << " -> " << e.toString() << std::endl;

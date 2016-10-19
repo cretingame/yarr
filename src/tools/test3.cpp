@@ -21,9 +21,9 @@ int main(void) {
 		bar0 = spec->mapBAR(0);
 		std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR0 at 0x" << std::hex << bar0 
 			<< " with size 0x" << spec->getBARsize(0) << std::dec << std::endl;
-		bar2 = spec->mapBAR(2);
-		std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
-			<< " with size 0x" << spec->getBARsize(2) << std::dec << std::endl;
+		//bar2 = spec->mapBAR(2);
+		//std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
+		//	<< " with size 0x" << spec->getBARsize(2) << std::dec << std::endl;
 		//bar4 = spec->mapBAR(3);
 		//std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
 		//	<< " with size 0x" << spec->getBARsize(3) << std::dec << std::endl;

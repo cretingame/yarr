@@ -70,8 +70,8 @@ typedef struct  {
 } specdriver_privdata_t;
 
 /* Identifies the SPEC card */
-#define PCIE_SPEC_VENDOR_ID 0x1556
-#define PCIE_SPEC_DEVICE_ID 0x1100
+#define PCIE_SPEC_VENDOR_ID 0x10ee
+#define PCIE_SPEC_DEVICE_ID 0x7024
 
 /*************************************************************************/
 /* Some nice defines that make code more readable */
