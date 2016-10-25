@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="/home/asautaux/yarr/pcie_lite_2/pcie_lite_2.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="9">
+	</WVObjectSize>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TDATA" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/probe2" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TLAST" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TUSER" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/probe7" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/probe8" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+

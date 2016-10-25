@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7k160tfbg676-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="/home/asautaux/yarr/reference_project_pcie/reference_project_pcie.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>

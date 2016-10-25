@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="/home/asautaux/yarr/pcie_lite_2/pcie_lite_2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="19">
+	</WVObjectSize>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_WREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_AWADDR" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_BRESP" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_BVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_BREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_ARADDR" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_RREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_WVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_ARVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_ARREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_RDATA" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_AWVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_AWREADY" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_RRESP" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_WDATA" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_WSTRB" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/pcie_axi_lite_v1_0_0_M_AXI_RVALID" type="logic" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/probe17" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="design_1_i/probe18" type="array" db_ref_id="1">
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+

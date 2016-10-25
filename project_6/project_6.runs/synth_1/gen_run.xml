@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1475001892">
-  <File Type="RDS-PROPCONSTRS" Name="simple_counter_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="simple_counter_utilization_synth.rpt"/>
-  <File Type="RDS-RDS" Name="simple_counter.vds"/>
   <File Type="VDS-TIMING-PB" Name="simple_counter_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="simple_counter.vds"/>
   <File Type="PA-TCL" Name="simple_counter.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="simple_counter_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="simple_counter.dcp"/>
   <File Type="RDS-UTIL-PB" Name="simple_counter_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="simple_counter_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="simple_counter_drc_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../project_5/project_5.srcs/sources_1/imports/new/simple_counter.vhd">

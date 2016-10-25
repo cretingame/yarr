@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1476390881">
+  <File Type="RDS-PROPCONSTRS" Name="simple_pci_top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="simple_pci_top_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="simple_pci_top.vds"/>
   <File Type="VDS-TIMING-PB" Name="simple_pci_top_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="simple_pci_top.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="simple_pci_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="simple_pci_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="simple_pci_top_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="simple_pci_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="simple_pci_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="simple_pci_top.vds"/>
-  <File Type="PA-TCL" Name="simple_pci_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_bram_7x.v">
@@ -435,9 +435,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_3"/>
   <BlockFileSet Type="BlockSrcs" Name="qpcie_ipcore_x4_gen2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
 </GenRun>

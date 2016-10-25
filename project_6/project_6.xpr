@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7k160tfbg676-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../../project_6/project_6.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="/project_6/project_6.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="/project_6/project_6.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="/project_6/project_6.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="/project_6/project_6.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="/project_6/project_6.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="/project_6/project_6.cache/compile_simlib/activehdl"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>

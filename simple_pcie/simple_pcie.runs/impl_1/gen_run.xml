@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1476390915">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="simple_pci_top.vdi"/>
-  <File Type="BG-DRC" Name="simple_pci_top.drc"/>
-  <File Type="BG-BGN" Name="simple_pci_top.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="simple_pci_top.sysdef"/>
-  <File Type="BITSTR-MMI" Name="simple_pci_top.mmi"/>
-  <File Type="BITSTR-BMM" Name="simple_pci_top_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="simple_pci_top.nky"/>
-  <File Type="BITSTR-RBT" Name="simple_pci_top.rbt"/>
-  <File Type="BITSTR-MSK" Name="simple_pci_top.msk"/>
-  <File Type="BG-BIN" Name="simple_pci_top.bin"/>
-  <File Type="BG-BIT" Name="simple_pci_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simple_pci_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="simple_pci_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simple_pci_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simple_pci_top_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-CLK" Name="simple_pci_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="simple_pci_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="simple_pci_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="simple_pci_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="simple_pci_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="simple_pci_top_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="simple_pci_top_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="simple_pci_top_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="simple_pci_top_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="simple_pci_top_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simple_pci_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="simple_pci_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="simple_pci_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="simple_pci_top_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="simple_pci_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="simple_pci_top_routed.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="simple_pci_top_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="simple_pci_top_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="simple_pci_top_physopt.dcp"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="simple_pci_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_pci_top_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="simple_pci_top_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="simple_pci_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="simple_pci_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="simple_pci_top_control_sets_placed.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="simple_pci_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="simple_pci_top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="simple_pci_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="simple_pci_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="simple_pci_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="simple_pci_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="simple_pci_top_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="simple_pci_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simple_pci_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="simple_pci_top_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="simple_pci_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="simple_pci_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="simple_pci_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="simple_pci_top_route_status.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="simple_pci_top.sysdef"/>
+  <File Type="ROUTE-TIMING-RPX" Name="simple_pci_top_timing_summary_routed.rpx"/>
+  <File Type="BG-BGN" Name="simple_pci_top.bgn"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simple_pci_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-MMI" Name="simple_pci_top.mmi"/>
+  <File Type="ROUTE-TIMING-PB" Name="simple_pci_top_timing_summary_routed.pb"/>
   <File Type="PLACE-UTIL-PB" Name="simple_pci_top_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="simple_pci_top_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="simple_pci_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="simple_pci_top_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="simple_pci_top_placed.dcp"/>
+  <File Type="BITSTR-NKY" Name="simple_pci_top.nky"/>
+  <File Type="PLACE-CLK" Name="simple_pci_top_clock_utilization_placed.rpt"/>
   <File Type="PWROPT-TIMING" Name="simple_pci_top_timing_summary_pwropted.rpt"/>
+  <File Type="OPT-DRC" Name="simple_pci_top_drc_opted.rpt"/>
+  <File Type="RDI-RDI" Name="simple_pci_top.vdi"/>
   <File Type="PWROPT-DRC" Name="simple_pci_top_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="simple_pci_top_pwropt.dcp"/>
+  <File Type="BITSTR-BMM" Name="simple_pci_top_bd.bmm"/>
+  <File Type="PA-TCL" Name="simple_pci_top.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="simple_pci_top_postroute_physopt.dcp"/>
+  <File Type="OPT-DCP" Name="simple_pci_top_opt.dcp"/>
+  <File Type="BITSTR-RBT" Name="simple_pci_top.rbt"/>
+  <File Type="PLACE-IO" Name="simple_pci_top_io_placed.rpt"/>
   <File Type="OPT-TIMING" Name="simple_pci_top_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="simple_pci_top.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="simple_pci_top_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="simple_pci_top_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="simple_pci_top_opt.dcp"/>
+  <File Type="PLACE-TIMING" Name="simple_pci_top_timing_summary_placed.rpt"/>
   <File Type="INIT-TIMING" Name="simple_pci_top_timing_summary_init.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="simple_pci_top_postroute_physopt.dcp"/>
-  <File Type="PA-TCL" Name="simple_pci_top.tcl"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="simple_pci_top_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-CTRL" Name="simple_pci_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="simple_pci_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="simple_pci_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_pci_top_postplace_pwropt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simple_pci_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="simple_pci_top.bit"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="simple_pci_top_timing_summary_routed.rpt"/>
+  <File Type="BG-BIN" Name="simple_pci_top.bin"/>
+  <File Type="ROUTE-SIMILARITY" Name="simple_pci_top_incremental_reuse_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="simple_pci_top.msk"/>
+  <File Type="ROUTE-CLK" Name="simple_pci_top_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simple_pci_top_postroute_physopt_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="simple_pci_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="BG-DRC" Name="simple_pci_top.drc"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/source/pcie_7x_0_pcie_bram_7x.v">
@@ -502,9 +502,9 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_3"/>
   <BlockFileSet Type="BlockSrcs" Name="qpcie_ipcore_x4_gen2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
 </GenRun>

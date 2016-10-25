@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="qpcie_ipcore_x4_gen2_synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1476377086">
-  <File Type="VDS-TIMING-PB" Name="qpcie_ipcore_x4_gen2_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="qpcie_ipcore_x4_gen2_timing_summary_synth.rpt"/>
-  <File Type="RDS-RDS" Name="qpcie_ipcore_x4_gen2.vds"/>
-  <File Type="PA-TCL" Name="qpcie_ipcore_x4_gen2.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="qpcie_ipcore_x4_gen2_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="qpcie_ipcore_x4_gen2_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="qpcie_ipcore_x4_gen2_drc_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="qpcie_ipcore_x4_gen2_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="qpcie_ipcore_x4_gen2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="qpcie_ipcore_x4_gen2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="qpcie_ipcore_x4_gen2_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="qpcie_ipcore_x4_gen2.vds"/>
+  <File Type="PA-TCL" Name="qpcie_ipcore_x4_gen2.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/qpcie_ipcore_x4_gen2">
     <File Path="$PSRCDIR/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/core/source/vlog/hip/s7/qpcie_s7_hip.v">
       <FileInfo>
@@ -775,9 +775,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

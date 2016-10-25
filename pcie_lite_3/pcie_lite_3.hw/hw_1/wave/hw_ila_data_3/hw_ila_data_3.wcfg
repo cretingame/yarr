@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="268000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="24" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[127:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_19">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_19</obj_property>
+      <obj_property name="ObjectShortName">n_0_19</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_18">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_18</obj_property>
+      <obj_property name="ObjectShortName">n_0_18</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_17">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_17</obj_property>
+      <obj_property name="ObjectShortName">n_0_17</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_16">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_16</obj_property>
+      <obj_property name="ObjectShortName">n_0_16</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_15">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_15</obj_property>
+      <obj_property name="ObjectShortName">n_0_15</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_14">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_14</obj_property>
+      <obj_property name="ObjectShortName">n_0_14</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_13">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_13</obj_property>
+      <obj_property name="ObjectShortName">n_0_13</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_12">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_12</obj_property>
+      <obj_property name="ObjectShortName">n_0_12</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_11">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_11</obj_property>
+      <obj_property name="ObjectShortName">n_0_11</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_10">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_10</obj_property>
+      <obj_property name="ObjectShortName">n_0_10</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_9">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_9</obj_property>
+      <obj_property name="ObjectShortName">n_0_9</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_8">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_8</obj_property>
+      <obj_property name="ObjectShortName">n_0_8</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_7">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_7</obj_property>
+      <obj_property name="ObjectShortName">n_0_7</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_6">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_6</obj_property>
+      <obj_property name="ObjectShortName">n_0_6</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_5">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_5</obj_property>
+      <obj_property name="ObjectShortName">n_0_5</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_4">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_4</obj_property>
+      <obj_property name="ObjectShortName">n_0_4</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TVALID</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TLAST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TLAST</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TUSER">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TUSER[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TUSER[3:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[15:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_2</obj_property>
+      <obj_property name="ObjectShortName">n_0_2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/n_0_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/n_0_0</obj_property>
+      <obj_property name="ObjectShortName">n_0_0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+</wave_config>

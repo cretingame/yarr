@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Oct  6 16:23:12 2016">
+<application name="pa" timeStamp="Tue Oct 25 10:01:39 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="5cd0d1b6a98b4fed8ec1645f34465aff" type="ProjectID"/>
 <property name="ProjectIteration" value="96" type="ProjectIteration"/>
@@ -48,7 +48,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OpenBlockDesign" value="43" type="JavaHandler"/>
 <property name="OpenExistingReport" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="34" type="JavaHandler"/>
-<property name="OpenProject" value="18" type="JavaHandler"/>
+<property name="OpenProject" value="22" type="JavaHandler"/>
 <property name="OpenRSBHierarchyBlock" value="3" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="9" type="JavaHandler"/>
 <property name="ProgramDevice" value="13" type="JavaHandler"/>
@@ -62,7 +62,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ReportUtilization" value="2" type="JavaHandler"/>
 <property name="RunBitgen" value="41" type="JavaHandler"/>
 <property name="RunImplementation" value="71" type="JavaHandler"/>
-<property name="RunSchematic" value="57" type="JavaHandler"/>
+<property name="RunSchematic" value="58" type="JavaHandler"/>
 <property name="RunScript" value="1" type="JavaHandler"/>
 <property name="RunSynthesis" value="59" type="JavaHandler"/>
 <property name="RunTrigger" value="29" type="JavaHandler"/>
@@ -93,7 +93,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewTaskImplementation" value="25" type="JavaHandler"/>
 <property name="ViewTaskProgramandDebug" value="3" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="9" type="JavaHandler"/>
-<property name="ViewTaskRTLAnalysis" value="21" type="JavaHandler"/>
+<property name="ViewTaskRTLAnalysis" value="22" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="17" type="JavaHandler"/>
 <property name="XdcCreateClock" value="3" type="JavaHandler"/>
 <property name="ZoomFit" value="1" type="JavaHandler"/>
@@ -101,25 +101,24 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ZoomOut" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceAtoD.AddIlaProbesPopup_CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Open Target], 27, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 28, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Open Hardware Manager], 26, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_6/project_6.xpr, 2" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.IlaProbeTablePanel_ADD_PROBE, IlaProbeTablePanel_new" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.IlaProbeTablePanel_SPECIFY_PROBES_FILE_AND_REFRESH, Specify the probes file and refresh the device" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, project_2.xdc], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints, constrs_1, project_2.xdc], 4, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Constraints], 2" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis, Elaborated Design, Schematic], 18, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis, Open Elaborated Design], 14" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis, Open Elaborated Design], 14, true" value="1" type="GuiResourceData"/>
 <property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="1" type="GuiResourceData"/>
 <property name="PAResourceItoN.MainToolbarMgr_OPEN, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramDebugTab_OPEN_RECENTLY_OPENED_TARGET, Recent Targets" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, Program device" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.RefreshDeviceDialog_REFRESH_DEVICE, Refresh" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, ILA_run_trigger" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, L23" value="1" type="GuiResourceData"/>
+<property name="project_2.xdc, 566, 246" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="33" type="GuiMode"/>
+<property name="GuiMode" value="93" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="27" type="TclMode"/>
+<property name="TclMode" value="78" type="TclMode"/>
 </item>
 </section>
 </application>
