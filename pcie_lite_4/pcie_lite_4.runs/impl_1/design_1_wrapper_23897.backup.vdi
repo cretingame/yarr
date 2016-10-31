@@ -1,0 +1,712 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Oct 20 10:33:07 2016
+# Process ID: 23897
+# Current directory: /home/asautaux/yarr/pcie_lite_3/pcie_lite_3.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/asautaux/yarr/pcie_lite_3/pcie_lite_3.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/asautaux/yarr/pcie_lite_3/pcie_lite_3.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 796 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7k160tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc] for cell 'design_1_i/pcie_7x_0/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc:118]
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc:118]
+create_generated_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1909.652 ; gain = 478.500 ; free physical = 5738 ; free virtual = 17149
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc] for cell 'design_1_i/pcie_7x_0/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_0/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_0/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_1/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_1/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_2/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_2/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_3/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_3/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_4_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_4/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/sources_1/bd/design_1/ip/design_1_ila_4_0/ila_v6_1/constraints/ila.xdc] for cell 'design_1_i/ila_4/U0'
+Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc]
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+Finished Parsing XDC File [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc]
+Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'design_1_i/pcie_7x_0/U0/inst/pl_phy_lnk_up_cdc'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'design_1_i/pcie_7x_0/U0/inst/pl_phy_lnk_up_cdc'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'design_1_i/pcie_7x_0/U0/inst/pl_received_hot_rst_cdc'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'design_1_i/pcie_7x_0/U0/inst/pl_received_hot_rst_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 528 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 528 instances
+
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1910.652 ; gain = 856.957 ; free physical = 5734 ; free virtual = 17107
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1942.668 ; gain = 32.008 ; free physical = 5706 ; free virtual = 17109
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/asautaux/yarr/packaged_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2016.2/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:1.1 for cell dbg_hub_CV.
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1942.672 ; gain = 0.000 ; free physical = 5840 ; free virtual = 17253
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 222ec40bf
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1942.672 ; gain = 0.004 ; free physical = 5839 ; free virtual = 17252
+Implement Debug Cores | Checksum: 1c65a367b
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 5 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 23955f6da
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1942.672 ; gain = 0.004 ; free physical = 5829 ; free virtual = 17242
+
+Phase 3 Constant Propagation
+INFO: [Opt 31-138] Pushed 8 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-10] Eliminated 1508 cells.
+Phase 3 Constant Propagation | Checksum: 1881f4c21
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1942.672 ; gain = 0.004 ; free physical = 5816 ; free virtual = 17229
+
+Phase 4 Sweep
+INFO: [Opt 31-12] Eliminated 1819 unconnected nets.
+INFO: [Opt 31-11] Eliminated 837 unconnected cells.
+Phase 4 Sweep | Checksum: 1be6f46f2
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1942.672 ; gain = 0.004 ; free physical = 5825 ; free virtual = 17238
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1942.672 ; gain = 0.000 ; free physical = 5825 ; free virtual = 17238
+Ending Logic Optimization Task | Checksum: 1be6f46f2
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1942.672 ; gain = 0.004 ; free physical = 5825 ; free virtual = 17238
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 19 BRAM(s) out of a total of 28 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 5 newly gated: 0 Total Ports: 56
+Ending PowerOpt Patch Enables Task | Checksum: 17da6a2a3
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5668 ; free virtual = 17080
+Ending Power Optimization Task | Checksum: 17da6a2a3
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 237.074 ; free physical = 5667 ; free virtual = 17080
+INFO: [Common 17-83] Releasing license: Implementation
+35 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:52 . Memory (MB): peak = 2179.746 ; gain = 269.086 ; free physical = 5667 ; free virtual = 17080
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5665 ; free virtual = 17081
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/asautaux/yarr/pcie_lite_3/pcie_lite_3.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXWADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/MIMRXRADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENARDEN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/mim_rx_wen) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENBWREN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/use_tdp.ramb36/mim_rx_ren) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXWADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/MIMRXRADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENARDEN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/mim_rx_wen) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENBWREN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/use_tdp.ramb36/mim_rx_ren) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXWADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/MIMRXRADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENARDEN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/mim_rx_wen) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENBWREN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/use_tdp.ramb36/mim_rx_ren) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXWADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[14] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[10]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[4] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[0]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[5] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[1]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[6] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[2]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[7] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[3]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[8] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[4]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRBWRADDR[9] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/MIMRXRADDR[5]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENARDEN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/mim_rx_wen) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ENBWREN (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/use_tdp.ramb36/mim_rx_ren) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[10] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/MIMTXWADDR[6]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[11] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/MIMTXWADDR[7]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[12] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/MIMTXWADDR[8]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl has an input control pin design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/ramb_bl.ramb36_dp_bl.ram36_bl/ADDRARDADDR[13] (net: design_1_i/pcie_7x_0/U0/inst/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/use_tdp.ramb36/MIMTXWADDR[9]) which is driven by a register (design_1_i/pcie_7x_0/U0/inst/gt_top_i/phy_rdy_n_int_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Common 17-14] Message 'DRC 23-20' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 192 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5657 ; free virtual = 17074
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5656 ; free virtual = 17073
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop
+
+Phase 1.1.1.1 Pre-Place Cells
+Phase 1.1.1.1 Pre-Place Cells | Checksum: 3d0157a4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5655 ; free virtual = 17072
+
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 3d0157a4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5653 ; free virtual = 17070
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1.1.1.3 IO and Clk Clean Up
+
+Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr
+Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr | Checksum: 3d0157a4
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5648 ; free virtual = 17065
+Phase 1.1.1.3 IO and Clk Clean Up | Checksum: 3d0157a4
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5647 ; free virtual = 17064
+
+Phase 1.1.1.4 Implementation Feasibility check On IDelay
+Phase 1.1.1.4 Implementation Feasibility check On IDelay | Checksum: 3d0157a4
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5647 ; free virtual = 17064
+
+Phase 1.1.1.5 Commit IO Placement
+Phase 1.1.1.5 Commit IO Placement | Checksum: dbf2f735
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5647 ; free virtual = 17064
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: dbf2f735
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5647 ; free virtual = 17064
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 196e39fc4
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5647 ; free virtual = 17064
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Make Others
+Phase 1.2.1.1 Make Others | Checksum: 231531e24
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5638 ; free virtual = 17063
+
+Phase 1.2.1.2 Init Lut Pin Assignment
+Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 231531e24
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5632 ; free virtual = 17063
+Phase 1.2.1 Place Init Design | Checksum: 1feba9078
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5622 ; free virtual = 17053
+Phase 1.2 Build Placer Netlist Model | Checksum: 1feba9078
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5622 ; free virtual = 17053
+
+Phase 1.3 Constrain Clocks/Macros
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1feba9078
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5621 ; free virtual = 17052
+Phase 1 Placer Initialization | Checksum: 1feba9078
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5620 ; free virtual = 17051
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 1c947078a
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5534 ; free virtual = 17010
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1c947078a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5534 ; free virtual = 17010
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 24eedbcbb
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5533 ; free virtual = 17016
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1a744886a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5533 ; free virtual = 17016
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 1a744886a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5533 ; free virtual = 17017
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 197049c57
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5533 ; free virtual = 17016
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 1a9d5a677
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5533 ; free virtual = 17016
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 216bf315e
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5515 ; free virtual = 17004
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 1b9e9d731
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5515 ; free virtual = 17005
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 1b9e9d731
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5515 ; free virtual = 17005
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 281ff4d63
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5514 ; free virtual = 17003
+Phase 3 Detail Placement | Checksum: 281ff4d63
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5514 ; free virtual = 17003
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+WARNING: [Constraints 18-633] Creating clock clk_in with 3 sources. [/home/asautaux/yarr/pcie_lite_3/pcie_lite_3.srcs/constrs_1/new/top.xdc:36]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 updateClock Trees: PCOPT
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 257f946b0
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:27 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5498 ; free virtual = 16987
+
+Phase 4.1.2 Post Placement Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-4.491. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5564 ; free virtual = 17014
+Phase 4.1 Post Commit Optimization | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5564 ; free virtual = 17014
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5565 ; free virtual = 17015
+
+Phase 4.3 Uram Pipeline Register Optimization
+Phase 4.3 Uram Pipeline Register Optimization | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5566 ; free virtual = 17016
+
+Phase 4.4 Post Placement Cleanup
+Phase 4.4 Post Placement Cleanup | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5567 ; free virtual = 17016
+
+Phase 4.5 Placer Reporting
+Phase 4.5 Placer Reporting | Checksum: 2811e73e3
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5569 ; free virtual = 17018
+
+Phase 4.6 Final Placement Cleanup
+Phase 4.6 Final Placement Cleanup | Checksum: 239ea8735
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5570 ; free virtual = 17019
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 239ea8735
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5571 ; free virtual = 17020
+Ending Placer Task | Checksum: 198e09f77
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5572 ; free virtual = 17020
+INFO: [Common 17-83] Releasing license: Implementation
+53 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:31 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5572 ; free virtual = 17021
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.69 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5565 ; free virtual = 17036
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5563 ; free virtual = 17019
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5566 ; free virtual = 17022
+report_control_sets: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2179.746 ; gain = 0.000 ; free physical = 5566 ; free virtual = 17022
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: f6242c78 ConstDB: 0 ShapeSum: a2bc72ff RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 7633add3
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2240.410 ; gain = 60.664 ; free physical = 5334 ; free virtual = 16809
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 7633add3
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2240.414 ; gain = 60.668 ; free physical = 5340 ; free virtual = 16815
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 7633add3
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2240.414 ; gain = 60.668 ; free physical = 5337 ; free virtual = 16812
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 7633add3
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2240.414 ; gain = 60.668 ; free physical = 5338 ; free virtual = 16813
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1839c26d8
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5357 ; free virtual = 16832
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.632 | TNS=-131.550| WHS=-0.554 | THS=-541.327|
+
+Phase 2 Router Initialization | Checksum: 170172889
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5360 ; free virtual = 16821
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1b7f9adae
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:18 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5350 ; free virtual = 16811
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1140
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: e92c50f7
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:23 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5327 ; free virtual = 16797
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.529 | TNS=-99.838| WHS=N/A    | THS=N/A    |
+
+
+Phase 4.1.2 GlobIterForTiming
+
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: 178be99c2
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5326 ; free virtual = 16796
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: 2034feb7d
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5334 ; free virtual = 16804
+Phase 4.1.2 GlobIterForTiming | Checksum: 1c573d2dc
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5334 ; free virtual = 16804
+Phase 4.1 Global Iteration 0 | Checksum: 1c573d2dc
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5334 ; free virtual = 16804
+Phase 4 Rip-up And Reroute | Checksum: 1c573d2dc
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:24 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5334 ; free virtual = 16804
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 257e6c428
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5331 ; free virtual = 16800
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.533 | TNS=-99.870| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1ecb9d6f8
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5330 ; free virtual = 16800
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1ecb9d6f8
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5330 ; free virtual = 16800
+Phase 5 Delay and Skew Optimization | Checksum: 1ecb9d6f8
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5330 ; free virtual = 16800
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 20aeecbac
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:25 . Memory (MB): peak = 2250.230 ; gain = 70.484 ; free physical = 5344 ; free virtual = 16806
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.533 | TNS=-99.902| WHS=-5.178 | THS=-782.637|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 1b39aadab
+
+Time (s): cpu = 00:16:08 ; elapsed = 00:06:58 . Memory (MB): peak = 3153.801 ; gain = 974.055 ; free physical = 4349 ; free virtual = 15768
+Phase 6.1 Hold Fix Iter | Checksum: 1b39aadab
+
+Time (s): cpu = 00:16:08 ; elapsed = 00:06:58 . Memory (MB): peak = 3153.801 ; gain = 974.055 ; free physical = 4349 ; free virtual = 15768
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.533 | TNS=-99.902| WHS=-5.178 | THS=-465.439|
+
+Phase 6.2 Additional Hold Fix | Checksum: ed3005c5
+
+Time (s): cpu = 00:18:51 ; elapsed = 00:08:00 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+Phase 6 Post Hold Fix | Checksum: ed3005c5
+
+Time (s): cpu = 00:18:51 ; elapsed = 00:08:00 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 3.97159 %
+  Global Horizontal Routing Utilization  = 3.39484 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 82.8829%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 87.3874%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X46Y208 -> INT_L_X46Y208
+   INT_L_X46Y199 -> INT_L_X46Y199
+East Dir 1x1 Area, Max Cong = 82.3529%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 85.2941%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X48Y221 -> INT_L_X48Y221
+Phase 7 Route finalize | Checksum: bb647815
+
+Time (s): cpu = 00:18:51 ; elapsed = 00:08:00 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: bb647815
+
+Time (s): cpu = 00:18:51 ; elapsed = 00:08:00 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 73701e0e
+
+Time (s): cpu = 00:18:52 ; elapsed = 00:08:01 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: ddd682aa
+
+Time (s): cpu = 00:18:53 ; elapsed = 00:08:01 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-3.533 | TNS=-99.902| WHS=-5.178 | THS=-451.589|
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: ddd682aa
+
+Time (s): cpu = 00:18:53 ; elapsed = 00:08:01 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+WARNING: [Route 35-456] Router was unable to fix hold violation on 32 pins because of tight setup and hold constraints. Such pins are:
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/u_srl_drive/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[2].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[3].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[4].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[0].mu_srl_reg/xsdb_reg[15]_i_4__0/I0
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/reg_16/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[13]/CE
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[0].mu_srl_reg/xsdb_reg[15]_i_4__0/I1
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[0].mu_srl_reg/xsdb_reg[15]_i_4__0/I2
+	.. and 22 more pins.
+
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-455] Router was unable to fix hold violation on 70 pins because of high hold requirement. Such pins are:
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[5].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[6].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[7].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[8].mu_srl_reg/slaveRegDo_mux_4[11]_i_1/I3
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[8].mu_srl_reg/slaveRegDo_mux_4[13]_i_1/I3
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[8].mu_srl_reg/slaveRegDo_mux_4[14]_i_1/I3
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[8].mu_srl_reg/slaveRegDo_mux_4[15]_i_1/I3
+	design_1_i/ila_1/U0/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[8].U_ALL_SRL_SLICE/u_srlA/S1/CE
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/slaveRegDo_mux[8]_i_1/I3
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/slaveRegDo_mux[7]_i_1/I3
+	.. and 60 more pins.
+
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-459] Router was unable to fix hold violation on 85 pins. This could be due to a combination of congestion, blockages and run-time limitations. Such pins are:
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/reg_80/I_EN_CTL_EQ1.U_CTL/xsdb_reg[15]_i_4/I4
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[1].mu_srl_reg/data_out_sel_i_1__1/I3
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[8].mu_srl_reg/shadow[6]_i_1__8/I2
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/slaveRegDo_mux[4]_i_1/I4
+	design_1_i/ila_1/U0/ila_core_inst/u_ila_regs/MU_SRL[7].mu_srl_reg/shadow[3]_i_1__7/I1
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[1].mu_srl_reg/data_out_sel_i_1__1/I1
+	design_1_i/ila_1/U0/ila_core_inst/u_ila_regs/MU_SRL[7].mu_srl_reg/shadow[4]_i_1__7/I2
+	design_1_i/ila_2/U0/ila_core_inst/u_ila_regs/MU_SRL[1].mu_srl_reg/shadow[0]_i_1__1/I1
+	design_1_i/ila_1/U0/ila_core_inst/u_ila_regs/MU_SRL[7].mu_srl_reg/shadow[2]_i_1__7/I2
+	design_1_i/ila_1/U0/ila_core_inst/u_ila_regs/MU_SRL[7].mu_srl_reg/shadow[3]_i_1__7/I2
+	.. and 75 more pins.
+
+Resolution: You may try high effort hold fixing by turning on param route.enableGlobalHoldIter.
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:18:53 ; elapsed = 00:08:01 . Memory (MB): peak = 3228.801 ; gain = 1049.055 ; free physical = 4277 ; free virtual = 15695
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+66 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:18:54 ; elapsed = 00:08:02 . Memory (MB): peak = 3229.008 ; gain = 1049.262 ; free physical = 4277 ; free virtual = 15695
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.73 . Memory (MB): peak = 3244.809 ; gain = 0.000 ; free physical = 4251 ; free virtual = 15696
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/asautaux/yarr/pcie_lite_3/pcie_lite_3.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 20 10:43:10 2016...

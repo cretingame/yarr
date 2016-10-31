@@ -1,0 +1,53 @@
+set_property PACKAGE_PIN U16 [get_ports sys_rst_n]
+
+#PCIe signals
+
+set_property LOC GTXE2_CHANNEL_X0Y4 [get_cells {design_1_i/pcie_7x_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[3].gt_wrapper_i/gtx_channel.gtxe2_channel_i}]
+set_property PACKAGE_PIN G3 [get_ports {pcie_7x_mgt_rxn[3]}]
+set_property PACKAGE_PIN G4 [get_ports {pcie_7x_mgt_rxp[3]}]
+set_property PACKAGE_PIN F1 [get_ports {pcie_7x_mgt_txn[3]}]
+set_property PACKAGE_PIN F2 [get_ports {pcie_7x_mgt_txp[3]}]
+set_property LOC GTXE2_CHANNEL_X0Y5 [get_cells {design_1_i/pcie_7x_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[2].gt_wrapper_i/gtx_channel.gtxe2_channel_i}]
+set_property PACKAGE_PIN E3 [get_ports {pcie_7x_mgt_rxn[2]}]
+set_property PACKAGE_PIN E4 [get_ports {pcie_7x_mgt_rxp[2]}]
+set_property PACKAGE_PIN D1 [get_ports {pcie_7x_mgt_txn[2]}]
+set_property PACKAGE_PIN D2 [get_ports {pcie_7x_mgt_txp[2]}]
+set_property LOC GTXE2_CHANNEL_X0Y6 [get_cells {design_1_i/pcie_7x_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[1].gt_wrapper_i/gtx_channel.gtxe2_channel_i}]
+set_property PACKAGE_PIN C3 [get_ports {pcie_7x_mgt_rxn[1]}]
+set_property PACKAGE_PIN C4 [get_ports {pcie_7x_mgt_rxp[1]}]
+set_property PACKAGE_PIN B1 [get_ports {pcie_7x_mgt_txn[1]}]
+set_property PACKAGE_PIN B2 [get_ports {pcie_7x_mgt_txp[1]}]
+set_property LOC GTXE2_CHANNEL_X0Y7 [get_cells {design_1_i/pcie_7x_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtx_channel.gtxe2_channel_i}]
+set_property PACKAGE_PIN B5 [get_ports {pcie_7x_mgt_rxn[0]}]
+set_property PACKAGE_PIN B6 [get_ports {pcie_7x_mgt_rxp[0]}]
+set_property PACKAGE_PIN A3 [get_ports {pcie_7x_mgt_txn[0]}]
+set_property PACKAGE_PIN A4 [get_ports {pcie_7x_mgt_txp[0]}]
+
+set_property PACKAGE_PIN W13 [get_ports {led_o[3]}]
+set_property PACKAGE_PIN Y10 [get_ports {led_o[2]}]
+set_property PACKAGE_PIN V11 [get_ports {led_o[1]}]
+set_property PACKAGE_PIN W10 [get_ports {led_o[0]}]
+set_property PACKAGE_PIN Y20 [get_ports reset]
+set_property PACKAGE_PIN D6 [get_ports {CLK_IN_D_clk_p[0]}]
+
+set_property IOSTANDARD LVCMOS15 [get_ports reset]
+set_property IOSTANDARD LVCMOS15 [get_ports {led_o[3]}]
+set_property IOSTANDARD LVCMOS15 [get_ports {led_o[2]}]
+set_property IOSTANDARD LVCMOS15 [get_ports {led_o[1]}]
+set_property IOSTANDARD LVCMOS15 [get_ports {led_o[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports sys_rst_n]
+
+create_clock -period 10.000 -name clk_in -waveform {0.000 5.000} [list [get_ports *clk_*] [get_nets -hierarchical *sys_clk*]]
+
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+set_property BITSTREAM.CONFIG.EXTMASTERCCLK_EN DIV-1 [current_design]
+set_property CONFIG_VOLTAGE 1.8 [current_design]
+set_property CFGBVS GND [current_design]
+set_property BITSTREAM.CONFIG.BPI_SYNC_MODE TYPE1 [current_design]
+set_property CONFIG_MODE BPI16 [current_design]
+
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]
+
