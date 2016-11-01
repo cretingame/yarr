@@ -25,8 +25,10 @@ set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pc
 set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc]
 set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/synth/design_1_pcie_7x_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/ila_v6_1/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/design_1_ila_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property is_locked true [get_files /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.srcs/sources_1/bd/design_1/design_1.bd]
 

@@ -10,40 +10,28 @@ preplace inst pcie_axi_lite_v1_0_0 -pg 1 -lvl 3 -y 700 -defaultsOSRD
 preplace inst pcie_7x_0 -pg 1 -lvl 2 -y 730 -defaultsOSRD
 preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 5 -y 630 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 300 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -y 950 -defaultsOSRD
+preplace inst ila_1 -pg 1 -lvl 3 -y 900 -defaultsOSRD
 preplace inst simple_counter_0 -pg 1 -lvl 5 -y 30 -defaultsOSRD
-preplace inst ila_3 -pg 1 -lvl 2 -y 1430 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 650 -defaultsOSRD
 preplace inst util_ds_buf_0 -pg 1 -lvl 1 -y 370 -defaultsOSRD
-preplace netloc pcie_axi_lite_v1_0_0_M_AXI 1 3 1 N
-preplace netloc pcie_7x_0_m_axis_rx_tkeep 1 2 1 190
-preplace netloc pcie_7x_0_m_axis_rx_tdata 1 2 1 170
+preplace netloc pcie_axi_lite_v1_0_0_M_AXI 1 3 1 640
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tuser 1 1 3 -300 520 NJ 520 780
-preplace netloc pcie_7x_0_user_app_rdy 1 1 2 -300 900 180
-preplace netloc CLK_IN_D_1 1 0 1 -710
-preplace netloc pcie_7x_0_pcie_7x_mgt 1 2 4 220 370 NJ 370 NJ 370 NJ
+preplace netloc CLK_IN_D_1 1 0 1 -780
+preplace netloc pcie_7x_0_pcie_7x_mgt 1 2 4 90 370 NJ 370 NJ 370 NJ
 preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 4 1 NJ
-preplace netloc sys_rst_n_1 1 0 2 NJ 440 -430
-preplace netloc pcie_7x_0_user_reset_out 1 1 2 -390 890 210
-preplace netloc pcie_7x_0_m_axis_rx_tuser 1 2 1 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx 1 1 3 -290 540 NJ 540 750
-preplace netloc pcie_7x_0_m_axis_rx_tvalid 1 1 2 -350 570 160
+preplace netloc sys_rst_n_1 1 0 2 NJ 440 -500
+preplace netloc pcie_7x_0_user_reset_out 1 1 2 -470 390 70
+preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx 1 1 3 NJ 620 NJ 620 620
 preplace netloc simple_counter_0_led_o 1 5 1 NJ
-preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 -420
-preplace netloc pcie_7x_0_m_axis_rx 1 2 1 170
-preplace netloc proc_sys_reset_0_peripheral_reset 1 2 3 160 20 NJ 20 NJ
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tlast 1 1 3 -310 510 NJ 510 790
-preplace netloc pcie_7x_0_user_lnk_up 1 1 2 -290 910 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tkeep 1 1 3 -320 500 NJ 500 800
-preplace netloc pcie_axi_lite_v1_0_0_s_axis_rx_tready 1 1 2 -360 550 200
-preplace netloc pcie_7x_0_m_axis_rx_tlast 1 2 1 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tvalid 1 1 3 -370 530 NJ 530 770
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tdata 1 1 3 -330 490 NJ 490 810
-preplace netloc reset_1 1 0 2 NJ 80 -410
-preplace netloc pcie_7x_0_s_axis_tx_tready 1 1 3 -340 560 NJ 560 760
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 3 -380 470 210 550 NJ
-preplace netloc clk_wiz_clk_out1 1 1 4 -400 460 180 460 NJ 40 NJ
-levelinfo -pg 1 -730 -570 -30 560 1120 1400 1530 -top -30 -bot 1620
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 -490
+preplace netloc pcie_7x_0_m_axis_rx 1 2 1 120
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 3 70 20 NJ 20 NJ
+preplace netloc pcie_7x_0_user_lnk_up 1 2 1 110
+preplace netloc reset_1 1 0 2 NJ 80 -490
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 2 100 580 NJ
+preplace netloc clk_wiz_clk_out1 1 1 4 -480 600 80 600 NJ 40 NJ
+levelinfo -pg 1 -800 -640 -100 490 1050 1330 1460 -top -40 -bot 1010
 ",
 }
 {

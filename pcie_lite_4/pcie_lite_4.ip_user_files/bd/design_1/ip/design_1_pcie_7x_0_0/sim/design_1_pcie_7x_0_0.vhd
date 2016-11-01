@@ -86,26 +86,6 @@ ENTITY design_1_pcie_7x_0_0 IS
     cfg_interrupt_msixfm : OUT STD_LOGIC;
     cfg_interrupt_stat : IN STD_LOGIC;
     cfg_pciecap_interrupt_msgnum : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    pl_directed_link_change : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pl_directed_link_width : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pl_directed_link_speed : IN STD_LOGIC;
-    pl_directed_link_auton : IN STD_LOGIC;
-    pl_upstream_prefer_deemph : IN STD_LOGIC;
-    pl_sel_lnk_rate : OUT STD_LOGIC;
-    pl_sel_lnk_width : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pl_ltssm_state : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-    pl_lane_reversal_mode : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pl_phy_lnk_up : OUT STD_LOGIC;
-    pl_tx_pm_state : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-    pl_rx_pm_state : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    pl_link_upcfg_cap : OUT STD_LOGIC;
-    pl_link_gen2_cap : OUT STD_LOGIC;
-    pl_link_partner_gen2_supported : OUT STD_LOGIC;
-    pl_initial_link_width : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-    pl_directed_change_done : OUT STD_LOGIC;
-    pl_received_hot_rst : OUT STD_LOGIC;
-    pl_transmit_hot_rst : IN STD_LOGIC;
-    pl_downstream_deemph_source : IN STD_LOGIC;
     sys_clk : IN STD_LOGIC;
     sys_rst_n : IN STD_LOGIC
   );
@@ -651,26 +631,6 @@ ARCHITECTURE design_1_pcie_7x_0_0_arch OF design_1_pcie_7x_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF cfg_interrupt_msixfm: SIGNAL IS "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt msixfm";
   ATTRIBUTE X_INTERFACE_INFO OF cfg_interrupt_stat: SIGNAL IS "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt stat";
   ATTRIBUTE X_INTERFACE_INFO OF cfg_pciecap_interrupt_msgnum: SIGNAL IS "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt pciecap_interrupt_msgnum";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_directed_link_change: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl directed_link_change";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_directed_link_width: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl directed_link_width";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_directed_link_speed: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl directed_link_speed";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_directed_link_auton: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl directed_link_auton";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_upstream_prefer_deemph: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl upstream_prefer_deemph";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_sel_lnk_rate: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl sel_lnk_rate";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_sel_lnk_width: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl sel_lnk_width";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_ltssm_state: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl ltssm_state";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_lane_reversal_mode: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl lane_reversal_mode";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_phy_lnk_up: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl phy_lnk_up";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_tx_pm_state: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl tx_pm_state";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_rx_pm_state: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl rx_pm_state";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_link_upcfg_cap: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl link_upcfg_cap";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_link_gen2_cap: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl link_gen2_cap";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_link_partner_gen2_supported: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl link_partner_gen2_supported";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_initial_link_width: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl initial_link_width";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_directed_change_done: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl directed_change_done";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_received_hot_rst: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl received_hot_rst";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_transmit_hot_rst: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl transmit_hot_rst";
-  ATTRIBUTE X_INTERFACE_INFO OF pl_downstream_deemph_source: SIGNAL IS "xilinx.com:interface:pcie2_pl:1.0 pcie2_pl downstream_deemph_source";
   ATTRIBUTE X_INTERFACE_INFO OF sys_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.sys_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF sys_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.sys_rst_n RST";
 BEGIN
@@ -877,7 +837,7 @@ BEGIN
       TRANSCEIVER_CTRL_STATUS_PORTS => "FALSE",
       SHARED_LOGIC_IN_CORE => "FALSE",
       ERR_REPORTING_IF => "FALSE",
-      PL_INTERFACE => "TRUE",
+      PL_INTERFACE => "FALSE",
       CFG_MGMT_IF => "FALSE",
       CFG_CTL_IF => "FALSE",
       CFG_STATUS_IF => "FALSE",
@@ -969,26 +929,13 @@ BEGIN
       cfg_ds_device_number => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 5)),
       cfg_ds_function_number => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
       cfg_mgmt_wr_rw1c_as_rw => '0',
-      pl_directed_link_change => pl_directed_link_change,
-      pl_directed_link_width => pl_directed_link_width,
-      pl_directed_link_speed => pl_directed_link_speed,
-      pl_directed_link_auton => pl_directed_link_auton,
-      pl_upstream_prefer_deemph => pl_upstream_prefer_deemph,
-      pl_sel_lnk_rate => pl_sel_lnk_rate,
-      pl_sel_lnk_width => pl_sel_lnk_width,
-      pl_ltssm_state => pl_ltssm_state,
-      pl_lane_reversal_mode => pl_lane_reversal_mode,
-      pl_phy_lnk_up => pl_phy_lnk_up,
-      pl_tx_pm_state => pl_tx_pm_state,
-      pl_rx_pm_state => pl_rx_pm_state,
-      pl_link_upcfg_cap => pl_link_upcfg_cap,
-      pl_link_gen2_cap => pl_link_gen2_cap,
-      pl_link_partner_gen2_supported => pl_link_partner_gen2_supported,
-      pl_initial_link_width => pl_initial_link_width,
-      pl_directed_change_done => pl_directed_change_done,
-      pl_received_hot_rst => pl_received_hot_rst,
-      pl_transmit_hot_rst => pl_transmit_hot_rst,
-      pl_downstream_deemph_source => pl_downstream_deemph_source,
+      pl_directed_link_change => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
+      pl_directed_link_width => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
+      pl_directed_link_speed => '0',
+      pl_directed_link_auton => '0',
+      pl_upstream_prefer_deemph => '1',
+      pl_transmit_hot_rst => '0',
+      pl_downstream_deemph_source => '0',
       cfg_err_aer_headerlog => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 128)),
       cfg_aer_interrupt_msgnum => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 5)),
       sys_clk => sys_clk,

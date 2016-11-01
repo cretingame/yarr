@@ -190,18 +190,31 @@ CONFIG.use_bram_block {BRAM_Controller} \
 CONFIG.use_bram_block.VALUE_SRC {DEFAULT} \
  ] $axi_bram_ctrl_0_bram
 
-  # Create instance: ila_3, and set properties
-  set ila_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.1 ila_3 ]
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.1 ila_0 ]
   set_property -dict [ list \
-CONFIG.C_DATA_DEPTH {1024} \
-CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-CONFIG.C_INPUT_PIPE_STAGES {0} \
-CONFIG.C_MONITOR_TYPE {Native} \
-CONFIG.C_NUM_OF_PROBES {10} \
-CONFIG.C_PROBE10_WIDTH {1} \
-CONFIG.C_PROBE11_WIDTH {1} \
-CONFIG.C_PROBE13_WIDTH {1} \
- ] $ila_3
+CONFIG.C_MONITOR_TYPE {AXI} \
+CONFIG.C_NUM_OF_PROBES {9} \
+CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $ila_0
+
+  # Need to retain value_src of defaults
+  set_property -dict [ list \
+CONFIG.C_MONITOR_TYPE.VALUE_SRC {DEFAULT} \
+ ] $ila_0
+
+  # Create instance: ila_1, and set properties
+  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.1 ila_1 ]
+  set_property -dict [ list \
+CONFIG.C_MONITOR_TYPE {AXI} \
+CONFIG.C_NUM_OF_PROBES {9} \
+CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $ila_1
+
+  # Need to retain value_src of defaults
+  set_property -dict [ list \
+CONFIG.C_MONITOR_TYPE.VALUE_SRC {DEFAULT} \
+ ] $ila_1
 
   # Create instance: pcie_7x_0, and set properties
   set pcie_7x_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:pcie_7x:3.3 pcie_7x_0 ]
@@ -301,32 +314,21 @@ CONFIG.C_BUF_TYPE {IBUFDSGTE} \
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTB [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
   connect_bd_intf_net -intf_net pcie_7x_0_m_axis_rx [get_bd_intf_pins pcie_7x_0/m_axis_rx] [get_bd_intf_pins pcie_axi_lite_v1_0_0/s_axis_rx]
+connect_bd_intf_net -intf_net [get_bd_intf_nets pcie_7x_0_m_axis_rx] [get_bd_intf_pins ila_1/SLOT_0_AXIS] [get_bd_intf_pins pcie_7x_0/m_axis_rx]
   connect_bd_intf_net -intf_net pcie_7x_0_pcie_7x_mgt [get_bd_intf_ports pcie_7x_mgt] [get_bd_intf_pins pcie_7x_0/pcie_7x_mgt]
   connect_bd_intf_net -intf_net pcie_axi_lite_v1_0_0_M_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins pcie_axi_lite_v1_0_0/M_AXI]
   connect_bd_intf_net -intf_net pcie_axi_lite_v1_0_0_m_axis_tx [get_bd_intf_pins pcie_7x_0/s_axis_tx] [get_bd_intf_pins pcie_axi_lite_v1_0_0/m_axis_tx]
+connect_bd_intf_net -intf_net [get_bd_intf_nets pcie_axi_lite_v1_0_0_m_axis_tx] [get_bd_intf_pins ila_0/SLOT_0_AXIS] [get_bd_intf_pins pcie_axi_lite_v1_0_0/m_axis_tx]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins ila_3/clk] [get_bd_pins pcie_7x_0/user_clk_out] [get_bd_pins pcie_axi_lite_v1_0_0/user_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins simple_counter_0/clk_i]
-  connect_bd_net -net pcie_7x_0_m_axis_rx_tdata [get_bd_pins pcie_7x_0/m_axis_rx_tdata] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tdata]
-  connect_bd_net -net pcie_7x_0_m_axis_rx_tkeep [get_bd_pins pcie_7x_0/m_axis_rx_tkeep] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tkeep]
-  connect_bd_net -net pcie_7x_0_m_axis_rx_tlast [get_bd_pins pcie_7x_0/m_axis_rx_tlast] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tlast]
-  connect_bd_net -net pcie_7x_0_m_axis_rx_tuser [get_bd_pins pcie_7x_0/m_axis_rx_tuser] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tuser]
-  connect_bd_net -net pcie_7x_0_m_axis_rx_tvalid [get_bd_pins ila_3/probe9] [get_bd_pins pcie_7x_0/m_axis_rx_tvalid] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tvalid]
-  connect_bd_net -net pcie_7x_0_s_axis_tx_tready [get_bd_pins ila_3/probe6] [get_bd_pins pcie_7x_0/s_axis_tx_tready] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tready]
-  connect_bd_net -net pcie_7x_0_user_app_rdy [get_bd_pins ila_3/probe5] [get_bd_pins pcie_7x_0/user_app_rdy]
-  connect_bd_net -net pcie_7x_0_user_lnk_up [get_bd_pins ila_3/probe4] [get_bd_pins pcie_7x_0/user_lnk_up] [get_bd_pins pcie_axi_lite_v1_0_0/user_lnk_up]
-  connect_bd_net -net pcie_7x_0_user_reset_out [get_bd_pins ila_3/probe1] [get_bd_pins pcie_7x_0/user_reset_out] [get_bd_pins proc_sys_reset_0/aux_reset_in]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_m_axis_tx_tdata [get_bd_pins pcie_7x_0/s_axis_tx_tdata] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tdata]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_m_axis_tx_tkeep [get_bd_pins pcie_7x_0/s_axis_tx_tkeep] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tkeep]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_m_axis_tx_tlast [get_bd_pins pcie_7x_0/s_axis_tx_tlast] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tlast]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_m_axis_tx_tuser [get_bd_pins pcie_7x_0/s_axis_tx_tuser] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tuser]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_m_axis_tx_tvalid [get_bd_pins ila_3/probe7] [get_bd_pins pcie_7x_0/s_axis_tx_tvalid] [get_bd_pins pcie_axi_lite_v1_0_0/m_axis_tx_tvalid]
-  connect_bd_net -net pcie_axi_lite_v1_0_0_s_axis_rx_tready [get_bd_pins ila_3/probe8] [get_bd_pins pcie_7x_0/m_axis_rx_tready] [get_bd_pins pcie_axi_lite_v1_0_0/s_axis_rx_tready]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins ila_1/clk] [get_bd_pins pcie_7x_0/user_clk_out] [get_bd_pins pcie_axi_lite_v1_0_0/user_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins simple_counter_0/clk_i]
+  connect_bd_net -net pcie_7x_0_user_lnk_up [get_bd_pins pcie_7x_0/user_lnk_up] [get_bd_pins pcie_axi_lite_v1_0_0/user_lnk_up]
+  connect_bd_net -net pcie_7x_0_user_reset_out [get_bd_pins pcie_7x_0/user_reset_out] [get_bd_pins proc_sys_reset_0/aux_reset_in]
   connect_bd_net -net proc_sys_reset_0_peripheral_reset [get_bd_pins proc_sys_reset_0/peripheral_reset] [get_bd_pins simple_counter_0/rst_i]
-  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins ila_3/probe0] [get_bd_pins proc_sys_reset_0/ext_reset_in]
-  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins ila_3/probe3] [get_bd_pins pcie_axi_lite_v1_0_0/M_AXI_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins pcie_axi_lite_v1_0_0/M_AXI_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net simple_counter_0_led_o [get_bd_ports led_o] [get_bd_pins simple_counter_0/led_o]
-  connect_bd_net -net sys_rst_n_1 [get_bd_ports sys_rst_n] [get_bd_pins ila_3/probe2] [get_bd_pins pcie_7x_0/sys_rst_n]
+  connect_bd_net -net sys_rst_n_1 [get_bd_ports sys_rst_n] [get_bd_pins pcie_7x_0/sys_rst_n]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins pcie_7x_0/sys_clk] [get_bd_pins util_ds_buf_0/IBUF_OUT]
 
   # Create address segments
@@ -345,40 +347,28 @@ preplace inst pcie_axi_lite_v1_0_0 -pg 1 -lvl 3 -y 700 -defaultsOSRD
 preplace inst pcie_7x_0 -pg 1 -lvl 2 -y 730 -defaultsOSRD
 preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 5 -y 630 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 300 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -y 950 -defaultsOSRD
+preplace inst ila_1 -pg 1 -lvl 3 -y 900 -defaultsOSRD
 preplace inst simple_counter_0 -pg 1 -lvl 5 -y 30 -defaultsOSRD
-preplace inst ila_3 -pg 1 -lvl 2 -y 1430 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 650 -defaultsOSRD
 preplace inst util_ds_buf_0 -pg 1 -lvl 1 -y 370 -defaultsOSRD
-preplace netloc pcie_axi_lite_v1_0_0_M_AXI 1 3 1 N
-preplace netloc pcie_7x_0_m_axis_rx_tkeep 1 2 1 190
-preplace netloc pcie_7x_0_m_axis_rx_tdata 1 2 1 170
+preplace netloc pcie_axi_lite_v1_0_0_M_AXI 1 3 1 640
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tuser 1 1 3 -300 520 NJ 520 780
-preplace netloc pcie_7x_0_user_app_rdy 1 1 2 -300 900 180
-preplace netloc CLK_IN_D_1 1 0 1 -710
-preplace netloc pcie_7x_0_pcie_7x_mgt 1 2 4 220 370 NJ 370 NJ 370 NJ
+preplace netloc CLK_IN_D_1 1 0 1 -780
+preplace netloc pcie_7x_0_pcie_7x_mgt 1 2 4 90 370 NJ 370 NJ 370 NJ
 preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 4 1 NJ
-preplace netloc sys_rst_n_1 1 0 2 NJ 440 -430
-preplace netloc pcie_7x_0_user_reset_out 1 1 2 -390 890 210
-preplace netloc pcie_7x_0_m_axis_rx_tuser 1 2 1 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx 1 1 3 -290 540 NJ 540 750
-preplace netloc pcie_7x_0_m_axis_rx_tvalid 1 1 2 -350 570 160
+preplace netloc sys_rst_n_1 1 0 2 NJ 440 -500
+preplace netloc pcie_7x_0_user_reset_out 1 1 2 -470 390 70
+preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx 1 1 3 NJ 620 NJ 620 620
 preplace netloc simple_counter_0_led_o 1 5 1 NJ
-preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 -420
-preplace netloc pcie_7x_0_m_axis_rx 1 2 1 170
-preplace netloc proc_sys_reset_0_peripheral_reset 1 2 3 160 20 NJ 20 NJ
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tlast 1 1 3 -310 510 NJ 510 790
-preplace netloc pcie_7x_0_user_lnk_up 1 1 2 -290 910 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tkeep 1 1 3 -320 500 NJ 500 800
-preplace netloc pcie_axi_lite_v1_0_0_s_axis_rx_tready 1 1 2 -360 550 200
-preplace netloc pcie_7x_0_m_axis_rx_tlast 1 2 1 230
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tvalid 1 1 3 -370 530 NJ 530 770
-preplace netloc pcie_axi_lite_v1_0_0_m_axis_tx_tdata 1 1 3 -330 490 NJ 490 810
-preplace netloc reset_1 1 0 2 NJ 80 -410
-preplace netloc pcie_7x_0_s_axis_tx_tready 1 1 3 -340 560 NJ 560 760
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 3 -380 470 210 550 NJ
-preplace netloc clk_wiz_clk_out1 1 1 4 -400 460 180 460 NJ 40 NJ
-levelinfo -pg 1 -730 -570 -30 560 1120 1400 1530 -top -30 -bot 1620
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 -490
+preplace netloc pcie_7x_0_m_axis_rx 1 2 1 120
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 3 70 20 NJ 20 NJ
+preplace netloc pcie_7x_0_user_lnk_up 1 2 1 110
+preplace netloc reset_1 1 0 2 NJ 80 -490
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 2 100 580 NJ
+preplace netloc clk_wiz_clk_out1 1 1 4 -480 600 80 600 NJ 40 NJ
+levelinfo -pg 1 -800 -640 -100 490 1050 1330 1460 -top -40 -bot 1010
 ",
 }
 

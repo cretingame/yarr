@@ -55,8 +55,8 @@
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_TLAST" gui_info=""/>
-    <Object name="design_1_i/pcie_7x_0_m_axis_rx_TREADY" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/pcie_7x_0_m_axis_rx_TVALID" gui_info="Trigger Setup=1"/>
+    <Object name="design_1_i/pcie_7x_0_m_axis_rx_TREADY" gui_info="Trigger Setup=1"/>
+    <Object name="design_1_i/pcie_7x_0_m_axis_rx_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_tlast" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_tvalid" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/pcie_7x_0_s_axis_tx_tready" gui_info="Trigger Setup=1"/>
@@ -211,8 +211,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[9]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[5]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -228,8 +228,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[8]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[4]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -245,8 +245,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[7]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[3]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -262,8 +262,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[6]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[2]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -279,8 +279,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[5]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[1]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -296,8 +296,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[4]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -330,8 +330,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[2]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe7[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -364,8 +364,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -946,6 +946,86 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[63]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[62]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[61]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[60]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[59]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[58]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[57]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[56]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[55]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[54]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[53]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[52]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[51]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[50]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[49]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[48]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[47]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[46]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[45]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[44]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[43]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[42]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[41]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[40]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[39]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[38]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[37]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[36]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[35]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[34]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[33]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[32]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[31]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[30]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[29]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[28]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[27]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[26]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[25]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[24]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[23]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[22]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[21]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[20]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[19]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[18]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[17]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[16]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[15]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[14]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[13]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[12]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[11]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[10]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[9]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[8]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[7]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[6]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[5]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[4]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[3]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[2]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[1]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TDATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -966,6 +1046,30 @@
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[10]"/>
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[9]"/>
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[8]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[7]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[6]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[5]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[4]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[3]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[2]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[1]"/>
+        <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe6[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[7]"/>
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[6]"/>
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP[5]"/>
@@ -1010,7 +1114,7 @@
         <net name="design_1_i/pcie_7x_0_m_axis_rx_TREADY"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq22&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq22&apos;hXX_XXXX"/>
@@ -1805,6 +1909,86 @@
         <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[0]"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[63]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[62]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[61]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[60]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[59]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[58]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[57]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[56]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[55]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[54]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[53]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[52]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[51]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[50]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[49]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[48]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[47]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[46]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[45]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[44]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[43]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[42]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[41]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[40]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[39]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[38]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[37]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[36]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[35]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[34]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[33]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[32]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[31]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[30]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[29]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[28]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[27]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[26]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[25]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[24]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[23]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[22]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[21]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[20]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[19]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[18]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[17]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[16]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[15]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[14]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[13]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[12]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[11]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[10]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[9]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[8]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[7]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[6]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[5]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[4]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[3]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[2]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[1]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
@@ -1839,11 +2023,35 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe6[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[7]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[6]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[5]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[4]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[3]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[2]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[1]"/>
+        <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -1860,7 +2068,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe0[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -1871,13 +2079,13 @@
         <net name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe5[3:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -1897,7 +2105,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe3[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -2029,6 +2237,30 @@
         <net name="design_1_i/probe2[0]"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe2[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/probe2[7]"/>
+        <net name="design_1_i/probe2[6]"/>
+        <net name="design_1_i/probe2[5]"/>
+        <net name="design_1_i/probe2[4]"/>
+        <net name="design_1_i/probe2[3]"/>
+        <net name="design_1_i/probe2[2]"/>
+        <net name="design_1_i/probe2[1]"/>
+        <net name="design_1_i/probe2[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -2052,7 +2284,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>

@@ -308,7 +308,7 @@ entity design_1_pcie_7x_0_0_core_top is
     PCIE_EXT_GT_COMMON                             : string     := "FALSE";
     EXT_CH_GT_DRP                                  : string     := "FALSE";
     TRANSCEIVER_CTRL_STATUS_PORTS                  : string     := "FALSE";
-    PL_INTERFACE                                   : string     := "TRUE";
+    PL_INTERFACE                                   : string     := "FALSE";
     CFG_MGMT_IF                                    : string     := "FALSE";
     CFG_CTL_IF                                     : string     := "FALSE";
     CFG_STATUS_IF                                  : string     := "FALSE";

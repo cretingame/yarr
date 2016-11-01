@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
---Date        : Tue Oct 25 16:52:55 2016
+--Date        : Tue Nov  1 14:05:17 2016
 --Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -24,7 +24,7 @@ entity design_1 is
     sys_rst_n : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_bram_cntlr_cnt=2,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_bram_cntlr_cnt=2,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -182,21 +182,6 @@ architecture STRUCTURE of design_1 is
     sys_rst_n : in STD_LOGIC
   );
   end component design_1_pcie_7x_0_0;
-  component design_1_ila_3_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_ila_3_0;
   component design_1_simple_counter_0_0 is
   port (
     rst_i : in STD_LOGIC;
@@ -205,6 +190,34 @@ architecture STRUCTURE of design_1 is
     led_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_simple_counter_0_0;
+  component design_1_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_ila_0_0;
+  component design_1_ila_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 21 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_ila_0_1;
   signal CLK_IN_D_1_CLK_N : STD_LOGIC_VECTOR ( 0 to 0 );
   signal CLK_IN_D_1_CLK_P : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
@@ -222,17 +235,16 @@ architecture STRUCTURE of design_1 is
   signal axi_bram_ctrl_0_BRAM_PORTB_RST : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTB_WE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal clk_wiz_clk_out1 : STD_LOGIC;
-  signal pcie_7x_0_m_axis_rx_tdata : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal pcie_7x_0_m_axis_rx_tkeep : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal pcie_7x_0_m_axis_rx_tlast : STD_LOGIC;
-  signal pcie_7x_0_m_axis_rx_tuser : STD_LOGIC_VECTOR ( 21 downto 0 );
-  signal pcie_7x_0_m_axis_rx_tvalid : STD_LOGIC;
+  signal pcie_7x_0_m_axis_rx_TDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal pcie_7x_0_m_axis_rx_TKEEP : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal pcie_7x_0_m_axis_rx_TLAST : STD_LOGIC;
+  signal pcie_7x_0_m_axis_rx_TREADY : STD_LOGIC;
+  signal pcie_7x_0_m_axis_rx_TUSER : STD_LOGIC_VECTOR ( 21 downto 0 );
+  signal pcie_7x_0_m_axis_rx_TVALID : STD_LOGIC;
   signal pcie_7x_0_pcie_7x_mgt_rxn : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pcie_7x_0_pcie_7x_mgt_rxp : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pcie_7x_0_pcie_7x_mgt_txn : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pcie_7x_0_pcie_7x_mgt_txp : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal pcie_7x_0_s_axis_tx_tready : STD_LOGIC;
-  signal pcie_7x_0_user_app_rdy : STD_LOGIC;
   signal pcie_7x_0_user_lnk_up : STD_LOGIC;
   signal pcie_7x_0_user_reset_out : STD_LOGIC;
   signal pcie_axi_lite_v1_0_0_M_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -252,12 +264,12 @@ architecture STRUCTURE of design_1 is
   signal pcie_axi_lite_v1_0_0_M_AXI_WREADY : STD_LOGIC;
   signal pcie_axi_lite_v1_0_0_M_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pcie_axi_lite_v1_0_0_M_AXI_WVALID : STD_LOGIC;
-  signal pcie_axi_lite_v1_0_0_m_axis_tx_tdata : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal pcie_axi_lite_v1_0_0_m_axis_tx_tkeep : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal pcie_axi_lite_v1_0_0_m_axis_tx_tlast : STD_LOGIC;
-  signal pcie_axi_lite_v1_0_0_m_axis_tx_tuser : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal pcie_axi_lite_v1_0_0_m_axis_tx_tvalid : STD_LOGIC;
-  signal pcie_axi_lite_v1_0_0_s_axis_rx_tready : STD_LOGIC;
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TLAST : STD_LOGIC;
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TREADY : STD_LOGIC;
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TUSER : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal pcie_axi_lite_v1_0_0_m_axis_tx_TVALID : STD_LOGIC;
   signal proc_sys_reset_0_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal reset_1 : STD_LOGIC;
   signal rst_clk_wiz_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -268,6 +280,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_pcie_7x_0_cfg_interrupt_msixenable_UNCONNECTED : STD_LOGIC;
   signal NLW_pcie_7x_0_cfg_interrupt_msixfm_UNCONNECTED : STD_LOGIC;
   signal NLW_pcie_7x_0_cfg_interrupt_rdy_UNCONNECTED : STD_LOGIC;
+  signal NLW_pcie_7x_0_user_app_rdy_UNCONNECTED : STD_LOGIC;
   signal NLW_pcie_7x_0_cfg_interrupt_do_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pcie_7x_0_cfg_interrupt_mmenable_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -342,19 +355,31 @@ axi_bram_ctrl_0_bram: component design_1_axi_bram_ctrl_0_bram_0
       wea(3 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_WE(3 downto 0),
       web(3 downto 0) => axi_bram_ctrl_0_BRAM_PORTB_WE(3 downto 0)
     );
-ila_3: component design_1_ila_3_0
+ila_0: component design_1_ila_0_0
      port map (
       clk => clk_wiz_clk_out1,
-      probe0(0) => reset_1,
-      probe1(0) => pcie_7x_0_user_reset_out,
-      probe2(0) => sys_rst_n_1,
-      probe3(0) => rst_clk_wiz_100M_peripheral_aresetn(0),
-      probe4(0) => pcie_7x_0_user_lnk_up,
-      probe5(0) => pcie_7x_0_user_app_rdy,
-      probe6(0) => pcie_7x_0_s_axis_tx_tready,
-      probe7(0) => pcie_axi_lite_v1_0_0_m_axis_tx_tvalid,
-      probe8(0) => pcie_axi_lite_v1_0_0_s_axis_rx_tready,
-      probe9(0) => pcie_7x_0_m_axis_rx_tvalid
+      probe0(0) => pcie_axi_lite_v1_0_0_m_axis_tx_TREADY,
+      probe1(63 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TDATA(63 downto 0),
+      probe2(7 downto 0) => B"00000000",
+      probe3(0) => pcie_axi_lite_v1_0_0_m_axis_tx_TVALID,
+      probe4(0) => pcie_axi_lite_v1_0_0_m_axis_tx_TLAST,
+      probe5(3 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TUSER(3 downto 0),
+      probe6(7 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP(7 downto 0),
+      probe7(0) => '0',
+      probe8(0) => '0'
+    );
+ila_1: component design_1_ila_0_1
+     port map (
+      clk => clk_wiz_clk_out1,
+      probe0(0) => pcie_7x_0_m_axis_rx_TREADY,
+      probe1(63 downto 0) => pcie_7x_0_m_axis_rx_TDATA(63 downto 0),
+      probe2(7 downto 0) => B"00000000",
+      probe3(0) => pcie_7x_0_m_axis_rx_TVALID,
+      probe4(0) => pcie_7x_0_m_axis_rx_TLAST,
+      probe5(21 downto 0) => pcie_7x_0_m_axis_rx_TUSER(21 downto 0),
+      probe6(7 downto 0) => pcie_7x_0_m_axis_rx_TKEEP(7 downto 0),
+      probe7(0) => '0',
+      probe8(0) => '0'
     );
 pcie_7x_0: component design_1_pcie_7x_0_0
      port map (
@@ -369,25 +394,25 @@ pcie_7x_0: component design_1_pcie_7x_0_0
       cfg_interrupt_rdy => NLW_pcie_7x_0_cfg_interrupt_rdy_UNCONNECTED,
       cfg_interrupt_stat => '0',
       cfg_pciecap_interrupt_msgnum(4 downto 0) => B"00000",
-      m_axis_rx_tdata(63 downto 0) => pcie_7x_0_m_axis_rx_tdata(63 downto 0),
-      m_axis_rx_tkeep(7 downto 0) => pcie_7x_0_m_axis_rx_tkeep(7 downto 0),
-      m_axis_rx_tlast => pcie_7x_0_m_axis_rx_tlast,
-      m_axis_rx_tready => pcie_axi_lite_v1_0_0_s_axis_rx_tready,
-      m_axis_rx_tuser(21 downto 0) => pcie_7x_0_m_axis_rx_tuser(21 downto 0),
-      m_axis_rx_tvalid => pcie_7x_0_m_axis_rx_tvalid,
+      m_axis_rx_tdata(63 downto 0) => pcie_7x_0_m_axis_rx_TDATA(63 downto 0),
+      m_axis_rx_tkeep(7 downto 0) => pcie_7x_0_m_axis_rx_TKEEP(7 downto 0),
+      m_axis_rx_tlast => pcie_7x_0_m_axis_rx_TLAST,
+      m_axis_rx_tready => pcie_7x_0_m_axis_rx_TREADY,
+      m_axis_rx_tuser(21 downto 0) => pcie_7x_0_m_axis_rx_TUSER(21 downto 0),
+      m_axis_rx_tvalid => pcie_7x_0_m_axis_rx_TVALID,
       pci_exp_rxn(3 downto 0) => pcie_7x_0_pcie_7x_mgt_rxn(3 downto 0),
       pci_exp_rxp(3 downto 0) => pcie_7x_0_pcie_7x_mgt_rxp(3 downto 0),
       pci_exp_txn(3 downto 0) => pcie_7x_0_pcie_7x_mgt_txn(3 downto 0),
       pci_exp_txp(3 downto 0) => pcie_7x_0_pcie_7x_mgt_txp(3 downto 0),
-      s_axis_tx_tdata(63 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tdata(63 downto 0),
-      s_axis_tx_tkeep(7 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tkeep(7 downto 0),
-      s_axis_tx_tlast => pcie_axi_lite_v1_0_0_m_axis_tx_tlast,
-      s_axis_tx_tready => pcie_7x_0_s_axis_tx_tready,
-      s_axis_tx_tuser(3 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tuser(3 downto 0),
-      s_axis_tx_tvalid => pcie_axi_lite_v1_0_0_m_axis_tx_tvalid,
+      s_axis_tx_tdata(63 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TDATA(63 downto 0),
+      s_axis_tx_tkeep(7 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP(7 downto 0),
+      s_axis_tx_tlast => pcie_axi_lite_v1_0_0_m_axis_tx_TLAST,
+      s_axis_tx_tready => pcie_axi_lite_v1_0_0_m_axis_tx_TREADY,
+      s_axis_tx_tuser(3 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TUSER(3 downto 0),
+      s_axis_tx_tvalid => pcie_axi_lite_v1_0_0_m_axis_tx_TVALID,
       sys_clk => util_ds_buf_0_IBUF_OUT(0),
       sys_rst_n => sys_rst_n_1,
-      user_app_rdy => pcie_7x_0_user_app_rdy,
+      user_app_rdy => NLW_pcie_7x_0_user_app_rdy_UNCONNECTED,
       user_clk_out => clk_wiz_clk_out1,
       user_lnk_up => pcie_7x_0_user_lnk_up,
       user_reset_out => pcie_7x_0_user_reset_out
@@ -412,18 +437,18 @@ pcie_axi_lite_v1_0_0: component design_1_pcie_axi_lite_v1_0_0_1
       M_AXI_WREADY => pcie_axi_lite_v1_0_0_M_AXI_WREADY,
       M_AXI_WSTRB(3 downto 0) => pcie_axi_lite_v1_0_0_M_AXI_WSTRB(3 downto 0),
       M_AXI_WVALID => pcie_axi_lite_v1_0_0_M_AXI_WVALID,
-      m_axis_tx_tdata(63 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tdata(63 downto 0),
-      m_axis_tx_tkeep(7 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tkeep(7 downto 0),
-      m_axis_tx_tlast => pcie_axi_lite_v1_0_0_m_axis_tx_tlast,
-      m_axis_tx_tready => pcie_7x_0_s_axis_tx_tready,
-      m_axis_tx_tuser(3 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_tuser(3 downto 0),
-      m_axis_tx_tvalid => pcie_axi_lite_v1_0_0_m_axis_tx_tvalid,
-      s_axis_rx_tdata(63 downto 0) => pcie_7x_0_m_axis_rx_tdata(63 downto 0),
-      s_axis_rx_tkeep(7 downto 0) => pcie_7x_0_m_axis_rx_tkeep(7 downto 0),
-      s_axis_rx_tlast => pcie_7x_0_m_axis_rx_tlast,
-      s_axis_rx_tready => pcie_axi_lite_v1_0_0_s_axis_rx_tready,
-      s_axis_rx_tuser(21 downto 0) => pcie_7x_0_m_axis_rx_tuser(21 downto 0),
-      s_axis_rx_tvalid => pcie_7x_0_m_axis_rx_tvalid,
+      m_axis_tx_tdata(63 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TDATA(63 downto 0),
+      m_axis_tx_tkeep(7 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP(7 downto 0),
+      m_axis_tx_tlast => pcie_axi_lite_v1_0_0_m_axis_tx_TLAST,
+      m_axis_tx_tready => pcie_axi_lite_v1_0_0_m_axis_tx_TREADY,
+      m_axis_tx_tuser(3 downto 0) => pcie_axi_lite_v1_0_0_m_axis_tx_TUSER(3 downto 0),
+      m_axis_tx_tvalid => pcie_axi_lite_v1_0_0_m_axis_tx_TVALID,
+      s_axis_rx_tdata(63 downto 0) => pcie_7x_0_m_axis_rx_TDATA(63 downto 0),
+      s_axis_rx_tkeep(7 downto 0) => pcie_7x_0_m_axis_rx_TKEEP(7 downto 0),
+      s_axis_rx_tlast => pcie_7x_0_m_axis_rx_TLAST,
+      s_axis_rx_tready => pcie_7x_0_m_axis_rx_TREADY,
+      s_axis_rx_tuser(21 downto 0) => pcie_7x_0_m_axis_rx_TUSER(21 downto 0),
+      s_axis_rx_tvalid => pcie_7x_0_m_axis_rx_TVALID,
       user_clk => clk_wiz_clk_out1,
       user_lnk_up => pcie_7x_0_user_lnk_up
     );
