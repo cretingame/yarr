@@ -10,35 +10,49 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="483655684fs"></ZoomEndTime>
+      <ZoomEndTime time="5891fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TDATA[63:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TDATA[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TKEEP">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TKEEP[7:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TKEEP[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TLAST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TLAST</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TREADY</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TUSER">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TUSER[21:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TUSER[21:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_TVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_TVALID</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

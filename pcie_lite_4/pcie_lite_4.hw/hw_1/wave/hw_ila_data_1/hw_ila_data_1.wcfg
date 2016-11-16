@@ -10,48 +10,49 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="3832fs"></ZoomEndTime>
+      <ZoomEndTime time="5911fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
    <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[63:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TDATA[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[7:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TKEEP[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TLAST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TLAST</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TUSER">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TUSER[3:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TUSER[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TVALID</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_TVALID</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="design_1_i/probe2">
-      <obj_property name="ElementShortName">design_1_i/probe2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">probe2[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/probe7">
-      <obj_property name="ElementShortName">design_1_i/probe7</obj_property>
-      <obj_property name="ObjectShortName">probe7</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/probe8">
-      <obj_property name="ElementShortName">design_1_i/probe8</obj_property>
-      <obj_property name="ObjectShortName">probe8</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

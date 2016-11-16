@@ -21,6 +21,9 @@ int main(void) {
 		bar0 = spec->mapBAR(0);
 		std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR0 at 0x" << std::hex << bar0 
 			<< " with size 0x" << spec->getBARsize(0) << std::dec << std::endl;
+		bar2 = spec->mapBAR(2);
+		std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar0 
+			<< " with size 0x" << spec->getBARsize(0) << std::dec << std::endl;
 		//bar2 = spec->mapBAR(2);
 		//std::cout << __PRETTY_FUNCTION__ << " -> Mapped BAR2 at 0x" << std::hex << bar2 
 		//	<< " with size 0x" << spec->getBARsize(2) << std::dec << std::endl;
@@ -34,9 +37,22 @@ int main(void) {
 	}
 	
 
-	for (unsigned int i=0; i<8; i++) {
-		//std::cout << "[" << i << "] " << std::hex << *((uint32_t*) bar0+i) << std::dec << std::endl;
-		std::cout << "[" << i << "] " << std::hex << (unsigned)spec->readConfigByte(i) << std::dec << std::endl;
+	//for (unsigned int i=0; i<32; i++) {
+		*((uint32_t*) bar0) = 0xA5A5A5A5;
+		*((uint32_t*) bar0+1) = 0x5A5A5A5A;
+		//std::cout << "[" << i << "] " << std::hex << (unsigned)spec->readConfigByte(i) << std::dec << std::endl;
+	//}
+	
+	uint32_t table[32];
+	
+	for (unsigned int i=0; i<32; i++) {
+		table[i] = *((uint32_t*) bar0 + i);
+	}
+
+	for (unsigned int i=0; i<32; i++) {
+		std::cout << "[" << i << "] " << std::hex << table[i]  << std::endl;
+		
+		//std::cout << "[" << std::hex << i << "] " << std::hex << (unsigned)spec->readConfigByte(i) << std::dec << std::endl;
 	}
 
 	return 0;
