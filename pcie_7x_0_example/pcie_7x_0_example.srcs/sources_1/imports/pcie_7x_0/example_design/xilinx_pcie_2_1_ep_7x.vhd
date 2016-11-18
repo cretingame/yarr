@@ -237,15 +237,6 @@ architecture rtl of xilinx_pcie_2_1_ep_7x is
        return 3;
      end if;
    end get_gt_lnk_spd_cfg;
-   
-   component simple_counter is
-       Port ( 
-              rst_i : in STD_LOGIC;
-              clk_i : in STD_LOGIC;
-              count_o : out STD_LOGIC_VECTOR (28 downto 0);
-              led_o : out STD_LOGIC_VECTOR (3 downto 0)
-               );
-   end component;
 
   -- PCI Express Fast Config Initialization pattern
   signal init_pattern_bus_pre2  : std_logic_vector(INIT_PATTERN_WIDTH-1 downto 0);
@@ -462,13 +453,5 @@ app : pcie_app_7x
   cfg_interrupt_stat             => cfg_interrupt_stat ,
   cfg_pciecap_interrupt_msgnum   => cfg_pciecap_interrupt_msgnum 
   );
-  
-  count: simple_counter
-      Port map( 
-             rst_i => sys_rst_c,
-             clk_i => user_clk,
-             count_o => open,
-             led_o => led_o
-              );
 
 end rtl;

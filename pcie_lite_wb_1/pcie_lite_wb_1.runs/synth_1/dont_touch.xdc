@@ -18,17 +18,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_pcie_7
 # IP: bd/design_1/ip/design_1_simple_counter_0_0/design_1_simple_counter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_simple_counter_0_0 || ORIG_REF_NAME==design_1_simple_counter_0_0}]
 
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0}]
-
-# IP: bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_1 || ORIG_REF_NAME==design_1_ila_0_1}]
-
 # IP: bd/design_1/ip/design_1_axis_rx_0_0/design_1_axis_rx_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_rx_0_0 || ORIG_REF_NAME==design_1_axis_rx_0_0}]
 
 # IP: bd/design_1/ip/design_1_bram_wbs_0_0/design_1_bram_wbs_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_bram_wbs_0_0 || ORIG_REF_NAME==design_1_bram_wbs_0_0}]
+
+# IP: bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_2 || ORIG_REF_NAME==design_1_ila_0_2}]
 
 # XDC: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0}] {/U0 }]/U0 ]]
@@ -46,14 +43,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_pcie_7x_0_0/synth/design_1_pcie_7x_0_0_ooc.xdc
 
-# XDC: bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0}] {/U0 }]/U0 ]]
+# XDC: bd/design_1/ip/design_1_ila_0_2/ila_v6_1/constraints/ila.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_2 || ORIG_REF_NAME==design_1_ila_0_2}] {/U0 }]/U0 ]]
 
-# XDC: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc
-
-# XDC: bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_1 || ORIG_REF_NAME==design_1_ila_0_1}] {/U0 }]/U0 ]]
-
-# XDC: bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1_ooc.xdc
+# XDC: bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc

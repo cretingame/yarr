@@ -48,7 +48,6 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.cache/wt [current_project]
@@ -68,10 +67,8 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
   read_xdc -ref design_1_pcie_7x_0_0 -cells U0 /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_pcie_7x_0_0/source/design_1_pcie_7x_0_0-PCIE_X0Y0.xdc]
-  read_xdc -ref design_1_ila_0_0 -cells U0 /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_1/constraints/ila.xdc]
-  read_xdc -ref design_1_ila_0_1 -cells U0 /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/ila_v6_1/constraints/ila.xdc]
+  read_xdc -ref design_1_ila_0_2 -cells U0 /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_1/constraints/ila.xdc
+  set_property processing_order EARLY [get_files /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_1/constraints/ila.xdc]
   read_xdc /home/asautaux/yarr/pcie_lite_wb_1/pcie_lite_wb_1.srcs/constrs_1/new/top.xdc
   link_design -top design_1_wrapper -part xc7k160tfbg676-2
   write_hwdef -file design_1_wrapper.hwdef

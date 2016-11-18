@@ -260,17 +260,16 @@
         <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ila_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">9</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE10_WIDTH">22</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE6_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_WIDTH">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">12</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_PROTOCOL">AXI4S</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ila_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ila_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">9</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_PROTOCOL">AXI4S</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -295,21 +294,6 @@
         <spirit:activeInterface spirit:busRef="s_axis_tx" spirit:componentRef="pcie_7x_0"/>
         <spirit:activeInterface spirit:busRef="m_axis_tx" spirit:componentRef="pcie_axi_lite_v1_0_0"/>
       </spirit:interconnection>
-      <spirit:monitorInterconnection>
-        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx</spirit:name>
-        <spirit:monitoredActiveInterface spirit:busRef="s_axis_tx" spirit:componentRef="pcie_7x_0"/>
-        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS" spirit:componentRef="ila_0"/>
-      </spirit:monitorInterconnection>
-      <spirit:interconnection>
-        <spirit:name>pcie_7x_0_m_axis_rx</spirit:name>
-        <spirit:activeInterface spirit:busRef="m_axis_rx" spirit:componentRef="pcie_7x_0"/>
-        <spirit:activeInterface spirit:busRef="s_axis_rx" spirit:componentRef="pcie_axi_lite_v1_0_0"/>
-      </spirit:interconnection>
-      <spirit:monitorInterconnection>
-        <spirit:name>pcie_7x_0_m_axis_rx</spirit:name>
-        <spirit:monitoredActiveInterface spirit:busRef="m_axis_rx" spirit:componentRef="pcie_7x_0"/>
-        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS" spirit:componentRef="ila_1"/>
-      </spirit:monitorInterconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -320,7 +304,6 @@
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="simple_counter_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>reset_1</spirit:name>
@@ -362,6 +345,78 @@
         <spirit:name>proc_sys_reset_0_peripheral_reset</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="peripheral_reset"/>
         <spirit:internalPortReference spirit:componentRef="simple_counter_0" spirit:portRef="rst_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_m_axis_rx_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe6"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_m_axis_rx_tkeep</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tkeep"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tkeep"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe7"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_m_axis_rx_tlast</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tlast"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tlast"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe8"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_s_axis_rx_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tready"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tready"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe11"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_m_axis_rx_tuser</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe10"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_m_axis_rx_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="m_axis_rx_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="s_axis_rx_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe9"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx_tkeep</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tkeep"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tkeep"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx_tlast</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tlast"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tlast"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_7x_0_s_axis_tx_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tready"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tready"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx_tuser</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pcie_axi_lite_v1_0_0_m_axis_tx_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pcie_axi_lite_v1_0_0" spirit:portRef="m_axis_tx_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="pcie_7x_0" spirit:portRef="s_axis_tx_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe5"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

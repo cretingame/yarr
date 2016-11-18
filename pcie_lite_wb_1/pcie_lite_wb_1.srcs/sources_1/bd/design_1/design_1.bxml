@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1479264142"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1479264142"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1479264142"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1479404067"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1479404067"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1479404067"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci" Type="IP">
         <Instance HierarchyPath="proc_sys_reset_0"/>
@@ -44,22 +44,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_ila_0_0/design_1_ila_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_ila_0_1/design_1_ila_0_1.xci" Type="IP">
-        <Instance HierarchyPath="ila_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/design_1_axis_rx_0_0/design_1_axis_rx_0_0.xci" Type="IP">
         <Instance HierarchyPath="axis_rx_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -70,6 +54,14 @@
       </File>
       <File Name="ip/design_1_bram_wbs_0_0/design_1_bram_wbs_0_0.xci" Type="IP">
         <Instance HierarchyPath="bram_wbs_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/design_1_ila_0_2/design_1_ila_0_2.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

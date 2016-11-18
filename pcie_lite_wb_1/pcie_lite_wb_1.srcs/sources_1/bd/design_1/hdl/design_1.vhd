@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
---Date        : Tue Nov 15 18:42:16 2016
+--Date        : Thu Nov 17 09:34:20 2016
 --Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -24,7 +24,7 @@ entity design_1 is
     sys_rst_n : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=3,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_bram_cntlr_cnt=2,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=3,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_bram_cntlr_cnt=2,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -97,34 +97,6 @@ architecture STRUCTURE of design_1 is
     led_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_simple_counter_0_0;
-  component design_1_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_ila_0_0;
-  component design_1_ila_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 21 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_ila_0_1;
   component design_1_bram_wbs_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -164,14 +136,31 @@ architecture STRUCTURE of design_1 is
     wb_ack_i : in STD_LOGIC
   );
   end component design_1_axis_rx_0_0;
+  component design_1_ila_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 21 downto 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_ila_0_2;
   signal CLK_IN_D_1_CLK_N : STD_LOGIC_VECTOR ( 0 to 0 );
   signal CLK_IN_D_1_CLK_P : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Net : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Net1 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal Net2 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Net3 : STD_LOGIC;
   signal Net4 : STD_LOGIC;
   signal Net5 : STD_LOGIC;
+  signal axis_rx_0_m_axis_tx_tuser_o : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axis_rx_0_wb_adr_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axis_rx_0_wb_cyc_o : STD_LOGIC;
   signal axis_rx_0_wb_dat_o : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -196,7 +185,6 @@ architecture STRUCTURE of design_1 is
   signal simple_counter_0_led_o : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal sys_rst_n_1 : STD_LOGIC;
   signal util_ds_buf_0_IBUF_OUT : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_ila_0_probe2_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal NLW_pcie_7x_0_cfg_interrupt_msienable_UNCONNECTED : STD_LOGIC;
   signal NLW_pcie_7x_0_cfg_interrupt_msixenable_UNCONNECTED : STD_LOGIC;
   signal NLW_pcie_7x_0_cfg_interrupt_msixfm_UNCONNECTED : STD_LOGIC;
@@ -228,7 +216,7 @@ axis_rx_0: component design_1_axis_rx_0_0
       m_axis_tx_tdata_o(63 downto 0) => Net(63 downto 0),
       m_axis_tx_tkeep_o(7 downto 0) => Net1(7 downto 0),
       m_axis_tx_tlast_o => Net3,
-      m_axis_tx_tuser_o(3 downto 0) => Net2(3 downto 0),
+      m_axis_tx_tuser_o(3 downto 0) => axis_rx_0_m_axis_tx_tuser_o(3 downto 0),
       m_axis_tx_tvalid_o => Net4,
       rst_i => proc_sys_reset_0_peripheral_reset(0),
       s_axis_rx_ready_o => Net5,
@@ -258,32 +246,21 @@ bram_wbs_0: component design_1_bram_wbs_0_0
       wb_stb_i => axis_rx_0_wb_stb_o,
       wb_we_i => axis_rx_0_wb_we_o
     );
-ila_0: component design_1_ila_0_0
+ila_0: component design_1_ila_0_2
      port map (
       clk => clk_wiz_clk_out1,
-      probe0(0) => '0',
-      probe1(63 downto 0) => Net(63 downto 0),
-      probe2(7 downto 4) => NLW_ila_0_probe2_UNCONNECTED(7 downto 4),
-      probe2(3 downto 0) => Net2(3 downto 0),
-      probe3(0) => '0',
-      probe4(0) => pcie_7x_0_s_axis_tx_tready,
-      probe5(3 downto 0) => B"0000",
-      probe6(7 downto 0) => Net1(7 downto 0),
-      probe7(0) => Net4,
-      probe8(0) => Net3
-    );
-ila_1: component design_1_ila_0_1
-     port map (
-      clk => clk_wiz_clk_out1,
-      probe0(0) => '0',
-      probe1(63 downto 0) => pcie_7x_0_m_axis_rx_tdata(63 downto 0),
-      probe2(7 downto 0) => B"00000000",
-      probe3(0) => '0',
-      probe4(0) => pcie_7x_0_m_axis_rx_tvalid,
-      probe5(21 downto 0) => pcie_7x_0_m_axis_rx_tuser(21 downto 0),
-      probe6(7 downto 0) => pcie_7x_0_m_axis_rx_tkeep(7 downto 0),
-      probe7(0) => Net5,
-      probe8(0) => pcie_7x_0_m_axis_rx_tlast
+      probe0(63 downto 0) => Net(63 downto 0),
+      probe1(7 downto 0) => Net1(7 downto 0),
+      probe10(21 downto 0) => pcie_7x_0_m_axis_rx_tuser(21 downto 0),
+      probe11(0) => pcie_7x_0_m_axis_rx_tvalid,
+      probe2(0) => Net3,
+      probe3(0) => pcie_7x_0_s_axis_tx_tready,
+      probe4(3 downto 0) => axis_rx_0_m_axis_tx_tuser_o(3 downto 0),
+      probe5(0) => Net4,
+      probe6(63 downto 0) => pcie_7x_0_m_axis_rx_tdata(63 downto 0),
+      probe7(7 downto 0) => pcie_7x_0_m_axis_rx_tkeep(7 downto 0),
+      probe8(0) => pcie_7x_0_m_axis_rx_tlast,
+      probe9(0) => Net5
     );
 pcie_7x_0: component design_1_pcie_7x_0_0
      port map (
@@ -312,7 +289,7 @@ pcie_7x_0: component design_1_pcie_7x_0_0
       s_axis_tx_tkeep(7 downto 0) => Net1(7 downto 0),
       s_axis_tx_tlast => Net3,
       s_axis_tx_tready => pcie_7x_0_s_axis_tx_tready,
-      s_axis_tx_tuser(3 downto 0) => Net2(3 downto 0),
+      s_axis_tx_tuser(3 downto 0) => axis_rx_0_m_axis_tx_tuser_o(3 downto 0),
       s_axis_tx_tvalid => Net4,
       sys_clk => util_ds_buf_0_IBUF_OUT(0),
       sys_rst_n => sys_rst_n_1,

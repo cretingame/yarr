@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Oct 19 10:05:42 2016
-# Process ID: 4375
+# Start of session at: Fri Nov 18 12:41:59 2016
+# Process ID: 4941
 # Current directory: /home/asautaux/yarr/project_pcie_3/project_pcie_3.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_3/project_pcie_3.runs/synth_1/top_level.vds

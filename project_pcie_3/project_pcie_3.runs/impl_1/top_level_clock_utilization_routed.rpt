@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date              : Wed Oct 19 10:09:58 2016
+| Date              : Fri Nov 18 12:44:54 2016
 | Host              : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command           : report_clock_utilization -file top_level_clock_utilization_routed.rpt
 | Design            : top_level
@@ -56,11 +56,11 @@ Table of Contents
 +-------+-------+-----------------+------------+----------------+--------------+------+-------------------+---------------+-------------+-----------------+--------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 | GlbID | SrcId | Driver Type/Pin | Constraint | Site           | Clock Region | Root | Clock Delay Group | Clock Regions | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                               | Driver Pin                                                                                    | Net                                                                                  |
 +-------+-------+-----------------+------------+----------------+--------------+------+-------------------+---------------+-------------+-----------------+--------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
-| g0    | src0  | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |      |                   |             5 |        8828 |               0 |        5.000 | clk_200                                                             | clk200_BUFG_inst/O                                                                            | clk200_BUFG                                                                          |
-| g1    | src1  | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |      |                   |             4 |        2800 |               0 |        4.000 | userclk1                                                            | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1/O   | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT  |
-| g2    | src1  | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1  | n/a          |      |                   |             2 |        1287 |               0 |        4.000 | Multiple                                                            | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/O | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
+| g0    | src0  | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |      |                   |             4 |        5434 |               0 |        5.000 | clk_200                                                             | clk200_BUFG_inst/O                                                                            | clk200_BUFG                                                                          |
+| g1    | src1  | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |      |                   |             3 |        1607 |               0 |        4.000 | userclk1                                                            | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1/O   | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT  |
+| g2    | src1  | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1  | n/a          |      |                   |             2 |        1287 |               0 |        8.000 | Multiple                                                            | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/O | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
 | g3    | src1  | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |      |                   |             2 |         379 |               0 |        8.000 | clk_125mhz_x0y0                                                     | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i/O       | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
-| g4    | src2  | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |      |                   |             1 |         275 |               0 |       30.000 | dbg_hub/inst/N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK   | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon/O                                                        | dbg_hub/inst/idrck                                                                   |
+| g4    | src2  | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |      |                   |             2 |         273 |               0 |       30.000 | dbg_hub/inst/N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK   | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon/O                                                        | dbg_hub/inst/idrck                                                                   |
 | g5    | src3  | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |      |                   |             1 |          36 |               0 |       10.000 | pcie_clk                                                            | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/cpllpd_refclk_inst/O                                   | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/gt_cpllpdrefclk                               |
 | g6    | src2  | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |      |                   |             1 |           1 |               0 |       60.000 | dbg_hub/inst/N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/UPDATE | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon_update/O                                                 | dbg_hub/inst/UPDATE_temp                                                             |
 | g7    | src4  | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |      |                   |             1 |           1 |               0 |       10.000 | txoutclk_x0y0                                                       | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/txoutclk_i.txoutclk_i/O    | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk            |
@@ -108,12 +108,12 @@ Table of Contents
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 21600 |    0 |  3800 |    0 |     0 |    0 |    40 |    0 |    60 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 22400 |    0 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 21600 |    0 |  3800 |    0 |     0 |    0 |    40 |    0 |    60 |
-| X0Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  408 | 17600 |   46 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2748 | 21600 |  458 |  3800 |    0 |     0 |    6 |    40 |    0 |    60 |
-| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  884 | 17600 |  108 |  3400 |    0 |     0 |    3 |    30 |    0 |    60 |
-| X1Y3              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 | 3498 | 17200 |  522 |  3200 |    0 |     0 |   16 |    25 |    0 |    60 |
+| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 17600 |    0 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  732 | 21600 |  118 |  3800 |    0 |     0 |    3 |    40 |    0 |    60 |
+| X0Y3              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  176 | 17600 |   35 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
+| X1Y3              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 | 3616 | 17200 |  505 |  3200 |    0 |     0 |   15 |    25 |    0 |    60 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 22400 |    0 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
-| X1Y4              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    5 |     5 |    0 |     0 |    0 |     0 |    0 |     0 | 1278 | 18400 |  104 |  3400 |    0 |     0 |    0 |    30 |    0 |    60 |
+| X1Y4              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    5 |     5 |    0 |     0 |    0 |     0 |    0 |     0 | 1153 | 18400 |   66 |  3400 |    0 |     0 |    1 |    30 |    0 |    60 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Used Global Clocks includes only global clock resources based on load placement but does not consider global clock resources used to traverse a clock region. Therefore the actual total of Used Global Clocks may be higher.
 ** RAMB36 site can be used as two RAMB18/FIFO18 sites.
@@ -126,8 +126,8 @@ Table of Contents
 |    | X0 | X1 |
 +----+----+----+
 | Y4 |  0 |  4 |
-| Y3 |  2 |  6 |
-| Y2 |  3 |  2 |
+| Y3 |  3 |  6 |
+| Y2 |  1 |  2 |
 | Y1 |  0 |  0 |
 | Y0 |  0 |  0 |
 +----+----+----+
@@ -137,25 +137,23 @@ Table of Contents
 7. Cell Type Counts per Global Clock: Region X0Y2
 -------------------------------------------------
 
-+-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
-| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                 |
-+-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |             399 | 399 |     44 |    0 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                         |
-| g1    | n/a   | BUFG/O          | None       |           0 |               9 |   9 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
-| g7    | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk           |
-+-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
++-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
+| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                       |
++-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
+| g7    | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk |
++-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
 
 8. Cell Type Counts per Global Clock: Region X1Y2
 -------------------------------------------------
 
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
-| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                 |
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            2010 | 2003 |    356 |    6 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                         |
-| g1    | n/a   | BUFG/O          | None       |           0 |             755 |  748 |    105 |    6 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
+| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                 |
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
+| g0    | n/a   | BUFG/O          | None       |           0 |             537 | 534 |    105 |    3 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                         |
+| g1    | n/a   | BUFG/O          | None       |           0 |             202 | 199 |     14 |    3 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
 
@@ -165,8 +163,9 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                 |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |             751 | 748 |     92 |    3 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                         |
-| g1    | n/a   | BUFG/O          | None       |           0 |             140 | 137 |     17 |    3 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
+| g0    | n/a   | BUFG/O          | None       |           0 |             104 | 104 |     32 |    0 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                         |
+| g1    | n/a   | BUFG/O          | None       |           0 |              72 |  72 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
+| g4    | n/a   | BUFG/O          | None       |           0 |               1 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/idrck                                                                  |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
@@ -177,12 +176,12 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                  |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            2590 | 2582 |    434 |    7 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                          |
-| g1    | n/a   | BUFG/O          | None       |           0 |             664 |  651 |     54 |   12 |   0 |  0 |    0 |   0 |       1 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT  |
-| g2    | n/a   | BUFGCTRL/O      | None       |           0 |              94 |   93 |     11 |    0 |   0 |  0 |    0 |   0 |       1 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
-| g3    | n/a   | BUFG/O          | None       |           0 |              21 |   21 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
-| g4    | n/a   | BUFG/O          | None       |           0 |             157 |  157 |     28 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/idrck                                                                   |
-| g6    | n/a   | BUFG/O          | None       |           0 |               1 |    1 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/UPDATE_temp                                                             |
+| g0    | n/a   | BUFG/O          | None       |           0 |            2678 | 2671 |    421 |    6 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                          |
+| g1    | n/a   | BUFG/O          | None       |           0 |             632 |  619 |     58 |   12 |   0 |  0 |    0 |   0 |       1 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT  |
+| g2    | n/a   | BUFGCTRL/O      | None       |           0 |             125 |  124 |      9 |    0 |   0 |  0 |    0 |   0 |       1 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
+| g3    | n/a   | BUFG/O          | None       |           0 |              20 |   20 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
+| g4    | n/a   | BUFG/O          | None       |           0 |             187 |  187 |     22 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/idrck                                                                   |
+| g6    | n/a   | BUFG/O          | None       |           0 |               1 |    1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/UPDATE_temp                                                             |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
@@ -193,9 +192,9 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                  |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |             249 | 249 |     65 |    0 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                          |
-| g2    | n/a   | BUFGCTRL/O      | None       |           0 |             746 | 742 |     30 |    0 |   0 |  4 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
-| g3    | n/a   | BUFG/O          | None       |           0 |             288 | 283 |      5 |    0 |   0 |  5 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
+| g0    | n/a   | BUFG/O          | None       |           0 |              94 |  93 |     30 |    1 |   0 |  0 |    0 |   0 |       0 | clk200_BUFG                                                                          |
+| g2    | n/a   | BUFGCTRL/O      | None       |           0 |             779 | 775 |     27 |    0 |   0 |  4 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK               |
+| g3    | n/a   | BUFG/O          | None       |           0 |             286 | 281 |      5 |    0 |   0 |  5 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
 | g5    | n/a   | BUFG/O          | None       |           0 |               4 |   4 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/gt_cpllpdrefclk                               |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
@@ -207,16 +206,16 @@ Table of Contents
 +-------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+-------------+----+-------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net         |
 +-------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+-------------+----+-------------+
-| g0    | BUFG/O          | n/a               | clk_200 |       5.000 | {0.000 2.500} |          |        5999 |        0 |           0 |  0 | clk200_BUFG |
+| g0    | BUFG/O          | n/a               | clk_200 |       5.000 | {0.000 2.500} |          |        3413 |        0 |           0 |  0 | clk200_BUFG |
 +-------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+-------------+----+-------------+
 
 
 +----+------+-------+
 |    | X0   | X1    |
 +----+------+-------+
-| Y4 |    0 |   249 |
-| Y3 |  751 |  2590 |
-| Y2 |  399 |  2010 |
+| Y4 |    0 |    94 |
+| Y3 |  104 |  2678 |
+| Y2 |    0 |   537 |
 | Y1 |    0 |     0 |
 | Y0 |    0 |     0 |
 +----+------+-------+
@@ -228,19 +227,19 @@ Table of Contents
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+-------------------------------------------------------------------------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                                                                                 |
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+-------------------------------------------------------------------------------------+
-| g1    | BUFG/O          | n/a               | userclk1 |       4.000 | {0.000 2.000} |          |        1568 |        0 |           0 |  0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
+| g1    | BUFG/O          | n/a               | userclk1 |       4.000 | {0.000 2.000} |          |         906 |        0 |           0 |  0 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT |
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+-------------------------------------------------------------------------------------+
 
 
-+----+------+------+
-|    | X0   | X1   |
-+----+------+------+
-| Y4 |    0 |    0 |
-| Y3 |  140 |  664 |
-| Y2 |    9 |  755 |
-| Y1 |    0 |    0 |
-| Y0 |    0 |    0 |
-+----+------+------+
++----+-----+------+
+|    | X0  | X1   |
++----+-----+------+
+| Y4 |   0 |    0 |
+| Y3 |  72 |  632 |
+| Y2 |   0 |  202 |
+| Y1 |   0 |    0 |
+| Y0 |   0 |    0 |
++----+-----+------+
 
 
 14. Load Cell Placement Summary for Global Clock g2
@@ -249,15 +248,15 @@ Table of Contents
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+------------------------------------------------------------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                                                                    |
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+------------------------------------------------------------------------+
-| g2    | BUFGCTRL/O      | n/a               | Multiple |       4.000 | {0.000 2.000} |          |         836 |        0 |           0 |  4 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK |
+| g2    | BUFGCTRL/O      | n/a               | Multiple |       8.000 | {0.000 4.000} |          |         900 |        0 |           0 |  4 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK |
 +-------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+-------------+----+------------------------------------------------------------------------+
 
 
 +----+----+------+
 |    | X0 | X1   |
 +----+----+------+
-| Y4 |  0 |  746 |
-| Y3 |  0 |   94 |
+| Y4 |  0 |  779 |
+| Y3 |  0 |  125 |
 | Y2 |  0 |    0 |
 | Y1 |  0 |    0 |
 | Y0 |  0 |    0 |
@@ -270,15 +269,15 @@ Table of Contents
 +-------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+-------------+----+--------------------------------------------------------------------------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock           | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                                                                                  |
 +-------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+-------------+----+--------------------------------------------------------------------------------------+
-| g3    | BUFG/O          | n/a               | clk_125mhz_x0y0 |       8.000 | {0.000 4.000} |          |         304 |        0 |           0 |  5 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
+| g3    | BUFG/O          | n/a               | clk_125mhz_x0y0 |       8.000 | {0.000 4.000} |          |         301 |        0 |           0 |  5 | pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_rst_reg2_reg |
 +-------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+-------------+----+--------------------------------------------------------------------------------------+
 
 
 +----+----+------+
 |    | X0 | X1   |
 +----+----+------+
-| Y4 |  0 |  288 |
-| Y3 |  0 |   21 |
+| Y4 |  0 |  286 |
+| Y3 |  0 |   20 |
 | Y2 |  0 |    0 |
 | Y1 |  0 |    0 |
 | Y0 |  0 |    0 |
@@ -291,7 +290,7 @@ Table of Contents
 +-------+-----------------+-------------------+-------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+-------------+----+--------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock                                                             | Period (ns) | Waveform (ns)  | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                |
 +-------+-----------------+-------------------+-------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+-------------+----+--------------------+
-| g4    | BUFG/O          | n/a               | dbg_hub/inst/N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK |      30.000 | {0.000 15.000} |          |         157 |        0 |           0 |  0 | dbg_hub/inst/idrck |
+| g4    | BUFG/O          | n/a               | dbg_hub/inst/N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK |      30.000 | {0.000 15.000} |          |         188 |        0 |           0 |  0 | dbg_hub/inst/idrck |
 +-------+-----------------+-------------------+-------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+-------------+----+--------------------+
 
 
@@ -299,7 +298,7 @@ Table of Contents
 |    | X0 | X1   |
 +----+----+------+
 | Y4 |  0 |    0 |
-| Y3 |  0 |  157 |
+| Y3 |  1 |  187 |
 | Y2 |  0 |    0 |
 | Y1 |  0 |    0 |
 | Y0 |  0 |    0 |
@@ -399,7 +398,7 @@ resize_pblock [get_pblocks {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_cl
 #startgroup
 create_pblock {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT}
 add_cells_to_pblock [get_pblocks  {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT"}]]]
-resize_pblock [get_pblocks {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+resize_pblock [get_pblocks {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/INT_USERCLK1_OUT}] -add {CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK" driven by instance "pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1" located at site "BUFGCTRL_X0Y1"
@@ -413,12 +412,19 @@ resize_pblock [get_pblocks {CLKAG_pcie_0/U0/inst/gt_top_i/pipe_wrapper_i/pipe_cl
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/idrck}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/idrck}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/idrck"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/idrck}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/idrck}] -add {CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "dbg_hub/inst/UPDATE_temp" driven by instance "dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon_update" located at site "BUFGCTRL_X0Y5"
+#startgroup
+create_pblock {CLKAG_dbg_hub/inst/UPDATE_temp}
+add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/UPDATE_temp}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/UPDATE_temp"}]]]
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/UPDATE_temp}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "clk200_BUFG" driven by instance "clk200_BUFG_inst" located at site "BUFGCTRL_X0Y3"
 #startgroup
 create_pblock {CLKAG_clk200_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk200_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk200_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_clk200_BUFG}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+resize_pblock [get_pblocks {CLKAG_clk200_BUFG}] -add {CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
