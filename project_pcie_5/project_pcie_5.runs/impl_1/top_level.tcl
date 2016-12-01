@@ -60,10 +60,16 @@ set rc [catch {
   add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/top_level.dcp
   add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp
   set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
+  add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0.dcp
+  set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0.dcp]
   read_xdc -mode out_of_context -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
   read_xdc -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]
+  read_xdc -mode out_of_context -ref ila_0 -cells U0 /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc
+  set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
+  read_xdc -ref ila_0 -cells U0 /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_v6_1/constraints/ila.xdc
+  set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_v6_1/constraints/ila.xdc]
   read_xdc /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc
   link_design -top top_level -part xc7k160tfbg676-2
   write_hwdef -file top_level.hwdef

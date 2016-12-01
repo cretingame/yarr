@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7k160t_1" gui_info=""/>
+  <device name="xc7k160t_1" gui_info="dashboard1=hw_ila_1[xc7k160t_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_1/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7k160t_1" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
@@ -12,6 +12,10 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="app_0/debug_comp" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
     <Object name="hw_ila_1" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
@@ -34,6 +38,7 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="app_0/wbm_arb_tvalid_s" gui_info="Trigger Setup=0"/>
     <Object name="m_axis_rx_tvalid_s" gui_info="Trigger Setup=0"/>
     <Object name="s_axi_mem_arvalid" gui_info="Trigger Setup=0"/>
     <Object name="s_axi_mem_awvalid" gui_info="Trigger Setup=1"/>
@@ -2916,6 +2921,367 @@
       </probeOptions>
       <nets>
         <net name="&lt;const0>_99"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/eop_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe7[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/m_axis_tx_tdata_s[63]"/>
+        <net name="app_0/m_axis_tx_tdata_s[62]"/>
+        <net name="app_0/m_axis_tx_tdata_s[61]"/>
+        <net name="app_0/m_axis_tx_tdata_s[60]"/>
+        <net name="app_0/m_axis_tx_tdata_s[59]"/>
+        <net name="app_0/m_axis_tx_tdata_s[58]"/>
+        <net name="app_0/m_axis_tx_tdata_s[57]"/>
+        <net name="app_0/m_axis_tx_tdata_s[56]"/>
+        <net name="app_0/m_axis_tx_tdata_s[55]"/>
+        <net name="app_0/m_axis_tx_tdata_s[54]"/>
+        <net name="app_0/m_axis_tx_tdata_s[53]"/>
+        <net name="app_0/m_axis_tx_tdata_s[52]"/>
+        <net name="app_0/m_axis_tx_tdata_s[51]"/>
+        <net name="app_0/m_axis_tx_tdata_s[50]"/>
+        <net name="app_0/m_axis_tx_tdata_s[49]"/>
+        <net name="app_0/m_axis_tx_tdata_s[48]"/>
+        <net name="app_0/m_axis_tx_tdata_s[47]"/>
+        <net name="app_0/m_axis_tx_tdata_s[46]"/>
+        <net name="app_0/m_axis_tx_tdata_s[45]"/>
+        <net name="app_0/m_axis_tx_tdata_s[44]"/>
+        <net name="app_0/m_axis_tx_tdata_s[43]"/>
+        <net name="app_0/m_axis_tx_tdata_s[42]"/>
+        <net name="app_0/m_axis_tx_tdata_s[41]"/>
+        <net name="app_0/m_axis_tx_tdata_s[40]"/>
+        <net name="app_0/m_axis_tx_tdata_s[39]"/>
+        <net name="app_0/m_axis_tx_tdata_s[38]"/>
+        <net name="app_0/m_axis_tx_tdata_s[37]"/>
+        <net name="app_0/m_axis_tx_tdata_s[36]"/>
+        <net name="app_0/m_axis_tx_tdata_s[35]"/>
+        <net name="app_0/m_axis_tx_tdata_s[34]"/>
+        <net name="app_0/m_axis_tx_tdata_s[33]"/>
+        <net name="app_0/m_axis_tx_tdata_s[32]"/>
+        <net name="app_0/m_axis_tx_tdata_s[31]"/>
+        <net name="app_0/m_axis_tx_tdata_s[30]"/>
+        <net name="app_0/m_axis_tx_tdata_s[29]"/>
+        <net name="app_0/m_axis_tx_tdata_s[28]"/>
+        <net name="app_0/m_axis_tx_tdata_s[27]"/>
+        <net name="app_0/m_axis_tx_tdata_s[26]"/>
+        <net name="app_0/m_axis_tx_tdata_s[25]"/>
+        <net name="app_0/m_axis_tx_tdata_s[24]"/>
+        <net name="app_0/m_axis_tx_tdata_s[23]"/>
+        <net name="app_0/m_axis_tx_tdata_s[22]"/>
+        <net name="app_0/m_axis_tx_tdata_s[21]"/>
+        <net name="app_0/m_axis_tx_tdata_s[20]"/>
+        <net name="app_0/m_axis_tx_tdata_s[19]"/>
+        <net name="app_0/m_axis_tx_tdata_s[18]"/>
+        <net name="app_0/m_axis_tx_tdata_s[17]"/>
+        <net name="app_0/m_axis_tx_tdata_s[16]"/>
+        <net name="app_0/m_axis_tx_tdata_s[15]"/>
+        <net name="app_0/m_axis_tx_tdata_s[14]"/>
+        <net name="app_0/m_axis_tx_tdata_s[13]"/>
+        <net name="app_0/m_axis_tx_tdata_s[12]"/>
+        <net name="app_0/m_axis_tx_tdata_s[11]"/>
+        <net name="app_0/m_axis_tx_tdata_s[10]"/>
+        <net name="app_0/m_axis_tx_tdata_s[9]"/>
+        <net name="app_0/m_axis_tx_tdata_s[8]"/>
+        <net name="app_0/m_axis_tx_tdata_s[7]"/>
+        <net name="app_0/m_axis_tx_tdata_s[6]"/>
+        <net name="app_0/m_axis_tx_tdata_s[5]"/>
+        <net name="app_0/m_axis_tx_tdata_s[4]"/>
+        <net name="app_0/m_axis_tx_tdata_s[3]"/>
+        <net name="app_0/m_axis_tx_tdata_s[2]"/>
+        <net name="app_0/m_axis_tx_tdata_s[1]"/>
+        <net name="app_0/m_axis_tx_tdata_s[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe8[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/m_axis_tx_tkeep_s[7]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[6]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[5]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[4]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[3]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[2]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[1]"/>
+        <net name="app_0/m_axis_tx_tkeep_s[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe9[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/m_axis_tx_tlast_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/m_axis_tx_tready_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/m_axis_tx_tvalid_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/rst_n_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_req_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_tdata_s[63]"/>
+        <net name="app_0/wbm_arb_tdata_s[62]"/>
+        <net name="app_0/wbm_arb_tdata_s[61]"/>
+        <net name="app_0/wbm_arb_tdata_s[60]"/>
+        <net name="app_0/wbm_arb_tdata_s[59]"/>
+        <net name="app_0/wbm_arb_tdata_s[58]"/>
+        <net name="app_0/wbm_arb_tdata_s[57]"/>
+        <net name="app_0/wbm_arb_tdata_s[56]"/>
+        <net name="app_0/wbm_arb_tdata_s[55]"/>
+        <net name="app_0/wbm_arb_tdata_s[54]"/>
+        <net name="app_0/wbm_arb_tdata_s[53]"/>
+        <net name="app_0/wbm_arb_tdata_s[52]"/>
+        <net name="app_0/wbm_arb_tdata_s[51]"/>
+        <net name="app_0/wbm_arb_tdata_s[50]"/>
+        <net name="app_0/wbm_arb_tdata_s[49]"/>
+        <net name="app_0/wbm_arb_tdata_s[48]"/>
+        <net name="app_0/wbm_arb_tdata_s[47]"/>
+        <net name="app_0/wbm_arb_tdata_s[46]"/>
+        <net name="app_0/wbm_arb_tdata_s[45]"/>
+        <net name="app_0/wbm_arb_tdata_s[44]"/>
+        <net name="app_0/wbm_arb_tdata_s[43]"/>
+        <net name="app_0/wbm_arb_tdata_s[42]"/>
+        <net name="app_0/wbm_arb_tdata_s[41]"/>
+        <net name="app_0/wbm_arb_tdata_s[40]"/>
+        <net name="app_0/wbm_arb_tdata_s[39]"/>
+        <net name="app_0/wbm_arb_tdata_s[38]"/>
+        <net name="app_0/wbm_arb_tdata_s[37]"/>
+        <net name="app_0/wbm_arb_tdata_s[36]"/>
+        <net name="app_0/wbm_arb_tdata_s[35]"/>
+        <net name="app_0/wbm_arb_tdata_s[34]"/>
+        <net name="app_0/wbm_arb_tdata_s[33]"/>
+        <net name="app_0/wbm_arb_tdata_s[32]"/>
+        <net name="app_0/wbm_arb_tdata_s[31]"/>
+        <net name="app_0/wbm_arb_tdata_s[30]"/>
+        <net name="app_0/wbm_arb_tdata_s[29]"/>
+        <net name="app_0/wbm_arb_tdata_s[28]"/>
+        <net name="app_0/wbm_arb_tdata_s[27]"/>
+        <net name="app_0/wbm_arb_tdata_s[26]"/>
+        <net name="app_0/wbm_arb_tdata_s[25]"/>
+        <net name="app_0/wbm_arb_tdata_s[24]"/>
+        <net name="app_0/wbm_arb_tdata_s[23]"/>
+        <net name="app_0/wbm_arb_tdata_s[22]"/>
+        <net name="app_0/wbm_arb_tdata_s[21]"/>
+        <net name="app_0/wbm_arb_tdata_s[20]"/>
+        <net name="app_0/wbm_arb_tdata_s[19]"/>
+        <net name="app_0/wbm_arb_tdata_s[18]"/>
+        <net name="app_0/wbm_arb_tdata_s[17]"/>
+        <net name="app_0/wbm_arb_tdata_s[16]"/>
+        <net name="app_0/wbm_arb_tdata_s[15]"/>
+        <net name="app_0/wbm_arb_tdata_s[14]"/>
+        <net name="app_0/wbm_arb_tdata_s[13]"/>
+        <net name="app_0/wbm_arb_tdata_s[12]"/>
+        <net name="app_0/wbm_arb_tdata_s[11]"/>
+        <net name="app_0/wbm_arb_tdata_s[10]"/>
+        <net name="app_0/wbm_arb_tdata_s[9]"/>
+        <net name="app_0/wbm_arb_tdata_s[8]"/>
+        <net name="app_0/wbm_arb_tdata_s[7]"/>
+        <net name="app_0/wbm_arb_tdata_s[6]"/>
+        <net name="app_0/wbm_arb_tdata_s[5]"/>
+        <net name="app_0/wbm_arb_tdata_s[4]"/>
+        <net name="app_0/wbm_arb_tdata_s[3]"/>
+        <net name="app_0/wbm_arb_tdata_s[2]"/>
+        <net name="app_0/wbm_arb_tdata_s[1]"/>
+        <net name="app_0/wbm_arb_tdata_s[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe2[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_tkeep_s[7]"/>
+        <net name="app_0/wbm_arb_tkeep_s[6]"/>
+        <net name="app_0/wbm_arb_tkeep_s[5]"/>
+        <net name="app_0/wbm_arb_tkeep_s[4]"/>
+        <net name="app_0/wbm_arb_tkeep_s[3]"/>
+        <net name="app_0/wbm_arb_tkeep_s[2]"/>
+        <net name="app_0/wbm_arb_tkeep_s[1]"/>
+        <net name="app_0/wbm_arb_tkeep_s[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_tlast_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_tready_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/wbm_arb_tvalid_s"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

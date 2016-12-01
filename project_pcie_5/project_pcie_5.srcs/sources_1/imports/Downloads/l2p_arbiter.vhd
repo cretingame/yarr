@@ -82,13 +82,17 @@ entity l2p_arbiter is
       ldm_arb_ready_o : out std_logic;
 
       ---------------------------------------------------------
-      -- From arbiter (arb) to pcie_tx (tx
+      -- From arbiter (arb) to pcie_tx (tx)
       axis_tx_tdata_o : out STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
       axis_tx_tkeep_o : out STD_LOGIC_VECTOR (axis_data_width_c/8 - 1 downto 0);
       axis_tx_tuser_o : out STD_LOGIC_VECTOR (3 downto 0);
       axis_tx_tlast_o : out STD_LOGIC;
       axis_tx_tvalid_o : out STD_LOGIC;
-      axis_tx_ready_i : in STD_LOGIC
+      axis_tx_ready_i : in STD_LOGIC;
+      
+      ---------------------------------------------------------
+      -- Debug
+      eop_do : out std_logic
       );
 end l2p_arbiter;
 
@@ -120,6 +124,7 @@ begin
   wbm_arb_req_valid <= wbm_arb_req_i and (not(arb_pdm_ready) and not(arb_ldm_ready));
   pdm_arb_req_valid <= pdm_arb_req_i and (not(wbm_arb_ready) and not(arb_ldm_ready));
   ldm_arb_req_valid <= ldm_arb_req_i and (not(wbm_arb_ready) and not(arb_pdm_ready));
+  eop_do <= eop;
 
   -- Detect end of packet to delimit the arbitration phase
 --  eop <= ((arb_wbm_gnt and not(wbm_arb_dframe_i) and wbm_arb_valid_i) or
@@ -228,5 +233,7 @@ begin
   wbm_arb_ready_o <= wbm_arb_ready;
   pdm_arb_ready_o <= arb_pdm_ready;
   ldm_arb_ready_o <= arb_ldm_ready;
+  
+  axis_tx_tuser_o <= "0000";
 
 end rtl;

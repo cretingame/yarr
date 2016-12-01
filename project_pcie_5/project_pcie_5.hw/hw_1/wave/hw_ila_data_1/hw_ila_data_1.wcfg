@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/asautaux/yarr/project_pcie_5/project_pcie_5.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="13" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="logic" fp_name="app_0/rst_n_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/rst_n_s</obj_property>
+      <obj_property name="ObjectShortName">rst_n_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_arb_tdata_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tdata_s[63:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_arb_tkeep_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wbm_arb_tlast_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tlast_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wbm_arb_tvalid_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tvalid_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wbm_arb_req_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_req_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_req_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wbm_arb_tready_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_arb_tready_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tready_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/m_axis_tx_tdata_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tdata_s[63:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/m_axis_tx_tkeep_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tkeep_s[7:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/m_axis_tx_tlast_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tlast_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/m_axis_tx_tvalid_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tvalid_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/m_axis_tx_tready_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tready_s</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tready_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/eop_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/eop_s</obj_property>
+      <obj_property name="ObjectShortName">eop_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+</wave_config>

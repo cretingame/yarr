@@ -18,7 +18,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp
 set_property used_in_implementation false [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
+add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0.dcp
+set_property used_in_implementation false [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_0/ila_0.dcp]
 read_vhdl -library xil_defaultlib {
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd

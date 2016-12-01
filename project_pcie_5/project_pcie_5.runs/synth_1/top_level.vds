@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Nov 30 16:09:28 2016
-# Process ID: 28189
+# Start of session at: Thu Dec  1 11:20:09 2016
+# Process ID: 8778
 # Current directory: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/top_level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28196 
+INFO: Helper process launched with PID 8787 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.273 ; gain = 155.137 ; free physical = 12193 ; free virtual = 21411
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 12142 ; free virtual = 21235
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -32,8 +32,8 @@ INFO: [Synth 8-113] binding component instance 'CLK_IBUFDS' to cell 'IBUFDS' [/h
 	Parameter CLKRCV_TRST bound to: 1 - type: bool 
 	Parameter CLKSWING_CFG bound to: 2'b11 
 INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:224]
-INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-28189-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-28189-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
 INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:34' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:279]
 INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:83]
@@ -44,15 +44,14 @@ INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_
 	Parameter wb_address_width_c bound to: 8 - type: integer 
 	Parameter wb_data_width_c bound to: 32 - type: integer 
 	Parameter address_mask_c bound to: 32'b00000000000000000000000011111111 
-INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'u1' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:203]
+INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'u1' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:292]
 INFO: [Synth 8-638] synthesizing module 'simple_counter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'simple_counter' (1#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
-WARNING: [Synth 8-5640] Port 'm_axis_tx_req_o' is missing in component declaration [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:93]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 8 - type: integer 
 	Parameter wb_data_width_c bound to: 32 - type: integer 
 	Parameter address_mask_c bound to: 255 - type: integer 
-INFO: [Synth 8-3491] module 'axis_rx' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:5' bound to instance 'u2' of component 'axis_rx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:210]
+INFO: [Synth 8-3491] module 'axis_rx' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:5' bound to instance 'u2' of component 'axis_rx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:299]
 INFO: [Synth 8-638] synthesizing module 'axis_rx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:43]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 8 - type: integer 
@@ -64,13 +63,21 @@ WARNING: [Synth 8-614] signal 'address_s' is read in the process but is not in t
 INFO: [Synth 8-256] done synthesizing module 'axis_rx' (2#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:43]
 	Parameter ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'bram_wbs' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:27' bound to instance 'u3' of component 'bram_wbs' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:247]
+INFO: [Synth 8-3491] module 'bram_wbs' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:27' bound to instance 'u3' of component 'bram_wbs' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:337]
 INFO: [Synth 8-638] synthesizing module 'bram_wbs' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:51]
 	Parameter ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'bram_wbs' (3#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'app' (4#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:83]
-INFO: [Synth 8-256] done synthesizing module 'top_level' (5#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
+	Parameter axis_data_width_c bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:46' bound to instance 'u4' of component 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:100]
+	Parameter axis_data_width_c bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'l2p_arbiter' (4#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:100]
+INFO: [Synth 8-3491] module 'ila_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:5' bound to instance 'debug_comp' of component 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:409]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:25]
+INFO: [Synth 8-256] done synthesizing module 'app' (5#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (6#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
+WARNING: [Synth 8-3331] design l2p_arbiter has unconnected port axis_tx_ready_i
 WARNING: [Synth 8-3331] design bram_wbs has unconnected port wb_lock_i
 WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[7]
 WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[6]
@@ -120,7 +127,7 @@ WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msienable_
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixenable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixfm_i
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.719 ; gain = 208.582 ; free physical = 12138 ; free virtual = 21357
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 12085 ; free virtual = 21178
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -130,8 +137,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1183.719 ; gain = 208.582 ; free physical = 12139 ; free virtual = 21357
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 12085 ; free virtual = 21178
 ---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_0' instantiated as 'app_0/debug_comp' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:409]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -140,8 +148,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-28189-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-28189-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
 Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc]
 WARNING: [Constraints 18-633] Creating clock pcie_clk with 2 sources. [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc:2]
 WARNING: [Constraints 18-633] Creating clock clk_200 with 2 sources. [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc:71]
@@ -153,22 +163,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1545.820 ; gain = 0.004 ; free physical = 11848 ; free virtual = 21068
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1548.051 ; gain = 0.004 ; free physical = 11877 ; free virtual = 20965
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/debug_comp' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11847 ; free virtual = 21067
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11847 ; free virtual = 21067
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11847 ; free virtual = 21067
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_s_reg' in module 'axis_rx'
 INFO: [Synth 8-5546] ROM "wb_we_s" won't be mapped to RAM because it is too sparse
@@ -300,7 +311,7 @@ INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instan
 INFO: [Synth 8-3354] encoded FSM with state register 'state_s_reg' using encoding 'sequential' in module 'axis_rx'
 WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tx_tdata_o_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:288]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11846 ; free virtual = 21066
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11874 ; free virtual = 20961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -313,15 +324,18 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               64 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
 	               32 Bit    Registers := 260   
 	               30 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
 +---Muxes : 
 	   9 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
 	  22 Input      4 Bit        Muxes := 1     
 	  19 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 257   
+	   2 Input      1 Bit        Muxes := 264   
 	   9 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -352,6 +366,16 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 256   
+Module l2p_arbiter 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -364,16 +388,63 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11846 ; free virtual = 21066
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11874 ; free virtual = 20961
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3917] design top_level has port usr_led_o[3] driven by constant 1
+WARNING: [Synth 8-3331] design l2p_arbiter has unconnected port axis_tx_ready_i
 WARNING: [Synth 8-3331] design bram_wbs has unconnected port wb_lock_i
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[7]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[6]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[5]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[4]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[3]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[2]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[1]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[0]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[21]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[20]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[19]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[18]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[17]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[16]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[15]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[14]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[13]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[12]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[11]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[10]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[9]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[8]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[7]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[6]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[5]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[4]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[3]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[2]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[1]
+WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tuser_i[0]
+WARNING: [Synth 8-3331] design app has unconnected port user_lnk_up_i
+WARNING: [Synth 8-3331] design app has unconnected port user_app_rdy_i
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_rdy_i
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[7]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[6]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[5]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[4]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[3]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[2]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[1]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_do_i[0]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_mmenable_i[2]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_mmenable_i[1]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_mmenable_i[0]
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msienable_i
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixenable_i
+WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixfm_i
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11849 ; free virtual = 21069
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20963
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1545.820 ; gain = 570.684 ; free physical = 11849 ; free virtual = 21069
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20963
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -404,8 +475,8 @@ INFO: [Synth 8-3886] merging instance 'app_0/u2/address_s_reg[25]' (FDCE) to 'ap
 INFO: [Synth 8-3886] merging instance 'app_0/u2/address_s_reg[26]' (FDCE) to 'app_0/u2/address_s_reg[27]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/address_s_reg[27]' (FDCE) to 'app_0/u2/address_s_reg[28]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/address_s_reg[28]' (FDCE) to 'app_0/u2/address_s_reg[29]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app_0/u2/address_s_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app_0/u2/m_axis_tx_tdata_o_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/u2/\address_s_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/u2/\m_axis_tx_tdata_o_reg[1] )
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[10]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[31]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[1]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[31]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[11]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[31]'
@@ -427,72 +498,72 @@ INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[26]' (LD) 
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[27]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[30]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[28]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[31]'
 INFO: [Synth 8-3886] merging instance 'app_0/u2/m_axis_tx_tdata_o_reg[29]' (LD) to 'app_0/u2/m_axis_tx_tdata_o_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app_0/u2/m_axis_tx_tdata_o_reg[31] )
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[31]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[29]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[28]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[27]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[26]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[25]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[24]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[23]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[22]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[21]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[20]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[19]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[18]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[17]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[16]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[15]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[14]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[13]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[12]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[11]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[10]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/m_axis_tx_tdata_o_reg[1]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[29]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[23]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[22]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[21]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[20]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[19]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[18]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[17]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[16]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[15]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[14]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[13]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[12]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[11]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[10]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[1]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/s_axis_rx_tdata_s_reg[0]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[29]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[28]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[27]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[26]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[25]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[24]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[23]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[22]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[21]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[20]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[19]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[18]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[17]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[16]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[15]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[14]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[13]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[12]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[11]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[10]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[9]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[8]) is unused and will be removed from module top_level.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/u2/\m_axis_tx_tdata_o_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[31]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[29]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[28]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[27]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[26]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[25]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[24]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[23]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[22]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[21]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[20]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[19]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[18]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[17]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[16]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[15]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[14]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[13]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[12]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[11]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[10]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (m_axis_tx_tdata_o_reg[1]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[29]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[23]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[22]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[21]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[20]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[19]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[18]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[17]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[16]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[15]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[14]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[13]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[12]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[11]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[10]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[1]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_s_reg[0]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[29]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[28]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[27]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[26]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[25]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[24]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[23]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[22]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[21]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[20]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[19]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[18]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[17]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[16]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[15]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[14]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[13]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[12]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[11]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[10]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[9]) is unused and will be removed from module axis_rx.
+WARNING: [Synth 8-3332] Sequential element (address_s_reg[8]) is unused and will be removed from module axis_rx.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1545.824 ; gain = 570.688 ; free physical = 11845 ; free virtual = 21059
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11818 ; free virtual = 20904
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1545.824 ; gain = 570.688 ; free physical = 11845 ; free virtual = 21059
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11818 ; free virtual = 20904
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -508,10 +579,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'pcie_0/user_clk_out' to pin 'pcie_0/bbstub_user_clk_out/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1545.824 ; gain = 570.688 ; free physical = 11836 ; free virtual = 21057
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11799 ; free virtual = 20886
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1587.543 ; gain = 612.406 ; free physical = 11795 ; free virtual = 21017
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11643 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,16 +594,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20981
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20981
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20981
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -549,7 +620,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -562,7 +633,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -574,25 +645,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -603,48 +674,51 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |pcie_7x_0     |         1|
+|2     |ila_0         |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
 +------+---------------+------+
 |      |Cell           |Count |
 +------+---------------+------+
-|1     |pcie_7x_0_bbox |     1|
-|2     |BUFG           |     1|
-|3     |CARRY4         |     8|
-|4     |IBUFDS_GTE2    |     1|
-|5     |LUT1           |    30|
-|6     |LUT2           |    69|
-|7     |LUT3           |     1|
-|8     |LUT4           |    83|
-|9     |LUT5           |    49|
-|10    |LUT6           |  2436|
-|11    |MUXF7          |  1088|
-|12    |MUXF8          |   544|
-|13    |FDCE           |  8411|
-|14    |FDRE           |   143|
-|15    |LD             |    42|
-|16    |IBUF           |    15|
-|17    |IBUFDS         |     1|
-|18    |OBUF           |    16|
+|1     |ila_0_bbox     |     1|
+|2     |pcie_7x_0_bbox |     1|
+|3     |BUFG           |     1|
+|4     |CARRY4         |     8|
+|5     |IBUFDS_GTE2    |     1|
+|6     |LUT1           |    32|
+|7     |LUT2           |    28|
+|8     |LUT3           |     3|
+|9     |LUT4           |    21|
+|10    |LUT5           |    90|
+|11    |LUT6           |  2502|
+|12    |MUXF7          |  1088|
+|13    |MUXF8          |   544|
+|14    |FDCE           |  8419|
+|15    |FDRE           |   143|
+|16    |LD             |    42|
+|17    |IBUF           |    15|
+|18    |IBUFDS         |     1|
+|19    |OBUF           |    16|
 +------+---------------+------+
 
 Report Instance Areas: 
 +------+---------+---------------+------+
 |      |Instance |Module         |Cells |
 +------+---------+---------------+------+
-|1     |top      |               | 13062|
-|2     |  app_0  |app            | 12904|
-|3     |    u1   |simple_counter |    66|
-|4     |    u2   |axis_rx        |   804|
-|5     |    u3   |bram_wbs       | 12034|
+|1     |top      |               | 13078|
+|2     |  app_0  |app            | 12920|
+|3     |    u2   |axis_rx        |   260|
+|4     |    u4   |l2p_arbiter    |   232|
+|5     |    u1   |simple_counter |    66|
+|6     |    u3   |bram_wbs       | 12361|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.941 ; gain = 647.805 ; free physical = 11759 ; free virtual = 20980
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1622.941 ; gain = 194.562 ; free physical = 11759 ; free virtual = 20980
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.949 ; gain = 647.812 ; free physical = 11759 ; free virtual = 20980
+Synthesis finished with 0 errors, 0 critical warnings and 111 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1696.586 ; gain = 266.977 ; free physical = 11642 ; free virtual = 20729
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.594 ; gain = 721.453 ; free physical = 11643 ; free virtual = 20729
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -656,8 +730,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 42 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-193 Infos, 120 Warnings, 0 Critical Warnings and 0 Errors encountered.
+198 Infos, 169 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1622.949 ; gain = 569.258 ; free physical = 11760 ; free virtual = 20982
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1654.961 ; gain = 0.000 ; free physical = 11759 ; free virtual = 20982
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 30 16:10:11 2016...
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.594 ; gain = 642.895 ; free physical = 11645 ; free virtual = 20731
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1728.605 ; gain = 0.000 ; free physical = 11642 ; free virtual = 20729
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  1 11:20:53 2016...

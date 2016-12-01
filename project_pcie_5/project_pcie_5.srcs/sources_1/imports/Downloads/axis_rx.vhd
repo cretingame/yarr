@@ -353,7 +353,7 @@ begin
 					wb_cyc_o <= '0';
 					wb_stb_o <= '0';
 					wb_we_o <= '0';
-				when wait_1| wait_2 =>
+				when wait_1 | wait_2 =>
 				    s_axis_rx_ready_o <= '1';
                     m_axis_tx_tvalid_o <= '0';
                     m_axis_tx_tlast_o <= '0';

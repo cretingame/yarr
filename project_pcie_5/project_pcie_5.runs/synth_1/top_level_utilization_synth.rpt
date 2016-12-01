@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov 30 16:10:11 2016
+| Date         : Thu Dec  1 11:20:53 2016
 | Host         : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command      : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
 | Design       : top_level
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2604 |     0 |    101400 |  2.57 |
-|   LUT as Logic          | 2604 |     0 |    101400 |  2.57 |
+| Slice LUTs*             | 2632 |     0 |    101400 |  2.60 |
+|   LUT as Logic          | 2632 |     0 |    101400 |  2.60 |
 |   LUT as Memory         |    0 |     0 |     35000 |  0.00 |
-| Slice Registers         | 8596 |     0 |    202800 |  4.24 |
-|   Register as Flip Flop | 8554 |     0 |    202800 |  4.22 |
+| Slice Registers         | 8604 |     0 |    202800 |  4.24 |
+|   Register as Flip Flop | 8562 |     0 |    202800 |  4.22 |
 |   Register as Latch     |   42 |     0 |    202800 |  0.02 |
 | F7 Muxes                | 1088 |     0 |     50700 |  2.15 |
 | F8 Muxes                |  544 |     0 |     25350 |  2.15 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 8453  |          Yes |           - |        Reset |
+| 8461  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 143   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -151,20 +151,20 @@ Table of Contents
 +-------------+------+---------------------+
 |   Ref Name  | Used | Functional Category |
 +-------------+------+---------------------+
-| FDCE        | 8411 |        Flop & Latch |
-| LUT6        | 2436 |                 LUT |
+| FDCE        | 8419 |        Flop & Latch |
+| LUT6        | 2502 |                 LUT |
 | MUXF7       | 1088 |               MuxFx |
 | MUXF8       |  544 |               MuxFx |
 | FDRE        |  143 |        Flop & Latch |
-| LUT4        |   83 |                 LUT |
-| LUT2        |   69 |                 LUT |
-| LUT5        |   49 |                 LUT |
+| LUT5        |   90 |                 LUT |
 | LDCE        |   42 |        Flop & Latch |
+| LUT2        |   28 |                 LUT |
+| LUT4        |   21 |                 LUT |
 | OBUF        |   16 |                  IO |
 | IBUF        |   15 |                  IO |
 | CARRY4      |    8 |          CarryLogic |
-| LUT1        |    2 |                 LUT |
-| LUT3        |    1 |                 LUT |
+| LUT1        |    4 |                 LUT |
+| LUT3        |    3 |                 LUT |
 | IBUFDS_GTE2 |    1 |                  IO |
 | IBUFDS      |    1 |                  IO |
 | BUFG        |    1 |               Clock |
@@ -178,6 +178,7 @@ Table of Contents
 |  Ref Name | Used |
 +-----------+------+
 | pcie_7x_0 |    1 |
+| ila_0     |    1 |
 +-----------+------+
 
 

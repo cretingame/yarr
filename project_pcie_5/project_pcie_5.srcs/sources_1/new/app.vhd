@@ -115,6 +115,7 @@ architecture Behavioral of app is
             m_axis_tx_tlast_o : out STD_LOGIC;
             m_axis_tx_tvalid_o : out STD_LOGIC;
             m_axis_tx_ready_i : in STD_LOGIC;
+            m_axis_tx_req_o    : out  std_logic;
             -- Wishbone master
             wb_adr_o : out STD_LOGIC_VECTOR (wb_address_width_c - 1 downto 0);
             wb_dat_o : out STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
@@ -151,7 +152,84 @@ architecture Behavioral of app is
     );
     end component;
     
+    component l2p_arbiter is
+      generic(
+        axis_data_width_c : integer := 64
+      );
+      port
+        (
+          ---------------------------------------------------------
+          -- GN4124 core clock and reset
+          clk_i   : in std_logic;
+          rst_n_i : in std_logic;
+    
+          ---------------------------------------------------------
+          -- From Wishbone master (wbm) to arbiter (arb)      
+          wbm_arb_tdata_i : in std_logic_vector (axis_data_width_c - 1 downto 0);
+          wbm_arb_tkeep_i : in std_logic_vector (axis_data_width_c/8 - 1 downto 0);
+          wbm_arb_tlast_i : in std_logic;
+          wbm_arb_tvalid_i : in std_logic;
+          wbm_arb_req_i    : in  std_logic;
+          wbm_arb_ready_o : out std_logic;
+    
+          ---------------------------------------------------------
+          -- From P2L DMA master (pdm) to arbiter (arb)
+          pdm_arb_tdata_i : in std_logic_vector (axis_data_width_c - 1 downto 0);
+          pdm_arb_tkeep_i : in std_logic_vector (axis_data_width_c/8 - 1 downto 0);
+          pdm_arb_tlast_i : in std_logic;
+          pdm_arb_tvalid_i : in std_logic;
+          pdm_arb_req_i    : in  std_logic;
+          pdm_arb_ready_o : out std_logic;
+    
+          ---------------------------------------------------------
+          -- From L2P DMA master (ldm) to arbiter (arb)
+          ldm_arb_tdata_i : in std_logic_vector (axis_data_width_c - 1 downto 0);
+          ldm_arb_tkeep_i : in std_logic_vector (axis_data_width_c/8 - 1 downto 0);
+          ldm_arb_tlast_i : in std_logic;
+          ldm_arb_tvalid_i : in std_logic;
+          ldm_arb_req_i    : in  std_logic;
+          ldm_arb_ready_o : out std_logic;
+    
+          ---------------------------------------------------------
+          -- From arbiter (arb) to pcie_tx (tx
+          axis_tx_tdata_o : out STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
+          axis_tx_tkeep_o : out STD_LOGIC_VECTOR (axis_data_width_c/8 - 1 downto 0);
+          axis_tx_tuser_o : out STD_LOGIC_VECTOR (3 downto 0);
+          axis_tx_tlast_o : out STD_LOGIC;
+          axis_tx_tvalid_o : out STD_LOGIC;
+          axis_tx_ready_i : in STD_LOGIC;
+          ---------------------------------------------------------
+          -- Debug
+          eop_do : out std_logic
+          );
+    end component;
+    
+    COMPONENT ila_0
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    );
+    END COMPONENT  ;
+    
+    signal rst_n_s : std_logic;
     signal count_s : STD_LOGIC_VECTOR (28 downto 0);
+    signal eop_s : std_logic;
     
     -- Wishbone bus
     signal wb_adr_s : STD_LOGIC_VECTOR (wb_address_width_c - 1 downto 0);
@@ -177,9 +255,20 @@ architecture Behavioral of app is
     signal m_axis_tx_tlast_s : STD_LOGIC;
     signal m_axis_tx_tvalid_s : STD_LOGIC;
     signal m_axis_tx_tready_s : STD_LOGIC;
+    
+    ---------------------------------------------------------
+    -- From Wishbone master (wbm) to arbiter (arb)      
+    signal wbm_arb_tdata_s : std_logic_vector (axis_data_width_c - 1 downto 0);
+    signal wbm_arb_tkeep_s : std_logic_vector (axis_data_width_c/8 - 1 downto 0);
+    signal wbm_arb_tlast_s : std_logic;
+    signal wbm_arb_tvalid_s : std_logic;
+    signal wbm_arb_req_s    : std_logic;
+    signal wbm_arb_tready_s : std_logic;
 
 begin
-
+    
+    rst_n_s <= not rst_i;
+    
     cfg_interrupt_o <= '0';
     cfg_interrupt_assert_o <= '0';
     cfg_interrupt_di_o <= (others => '0');
@@ -227,12 +316,13 @@ begin
             s_axis_rx_tuser_i => s_axis_rx_tuser_s,
             s_axis_rx_tvalid_i => s_axis_rx_tvalid_s,
             -- Master AXI-Stream
-            m_axis_tx_tdata_o => m_axis_tx_tdata_s,
-            m_axis_tx_tkeep_o => m_axis_tx_tkeep_s,
-            m_axis_tx_tuser_o => m_axis_tx_tuser_s,
-            m_axis_tx_tlast_o => m_axis_tx_tlast_s,
-            m_axis_tx_tvalid_o => m_axis_tx_tvalid_s,
-            m_axis_tx_ready_i => m_axis_tx_tready_s,
+            m_axis_tx_tdata_o => wbm_arb_tdata_s,
+            m_axis_tx_tkeep_o => wbm_arb_tkeep_s,
+            m_axis_tx_tuser_o => open,
+            m_axis_tx_tlast_o => wbm_arb_tlast_s,
+            m_axis_tx_tvalid_o => wbm_arb_tvalid_s,
+            m_axis_tx_ready_i => wbm_arb_tready_s,
+            m_axis_tx_req_o => wbm_arb_req_s,
             -- Wishbone Master
             wb_adr_o => wb_adr_s,
             wb_dat_o => wb_dat_o_s,
@@ -266,6 +356,76 @@ begin
             wb_dat_o    => wb_dat_i_s,
             wb_ack_o    => wb_ack_s
         );
+        
+        u4:l2p_arbiter
+        generic map(
+            axis_data_width_c => axis_data_width_c
+        )
+        port map(
+            ---------------------------------------------------------
+            -- GN4124 core clock and reset
+            clk_i   => clk_i,
+            rst_n_i => rst_n_s,
+            
+            ---------------------------------------------------------
+            -- From Wishbone master (wbm) to arbiter (arb)      
+            wbm_arb_tdata_i => wbm_arb_tdata_s,
+            wbm_arb_tkeep_i => wbm_arb_tkeep_s,
+            wbm_arb_tlast_i => wbm_arb_tlast_s,
+            wbm_arb_tvalid_i => wbm_arb_tvalid_s,
+            wbm_arb_req_i => wbm_arb_req_s,
+            wbm_arb_ready_o => wbm_arb_tready_s,
+            
+            ---------------------------------------------------------
+            -- From P2L DMA master (pdm) to arbiter (arb)
+            pdm_arb_tdata_i => (others => '0'),
+            pdm_arb_tkeep_i => (others => '0'),
+            pdm_arb_tlast_i => '0',
+            pdm_arb_tvalid_i => '0',
+            pdm_arb_req_i => '0',
+            pdm_arb_ready_o => open,
+            
+            ---------------------------------------------------------
+            -- From L2P DMA master (ldm) to arbiter (arb)
+            ldm_arb_tdata_i => (others => '0'),
+            ldm_arb_tkeep_i => (others => '0'),
+            ldm_arb_tlast_i => '0',
+            ldm_arb_tvalid_i => '0',
+            ldm_arb_req_i    => '0',
+            ldm_arb_ready_o => open,
+            
+            ---------------------------------------------------------
+            -- From arbiter (arb) to pcie_tx (tx
+            axis_tx_tdata_o => m_axis_tx_tdata_s,
+            axis_tx_tkeep_o => m_axis_tx_tkeep_s,
+            axis_tx_tuser_o => m_axis_tx_tuser_s,
+            axis_tx_tlast_o => m_axis_tx_tlast_s,
+            axis_tx_tvalid_o => m_axis_tx_tvalid_s,
+            axis_tx_ready_i => m_axis_tx_tready_s,
+            
+            eop_do => eop_s
+        );
+  
+  debug_comp : ila_0
+    PORT MAP (
+        clk => clk_i,
+    
+    
+    
+        probe0(0) => rst_n_s, 
+        probe1 => wbm_arb_tdata_s, 
+        probe2 => wbm_arb_tkeep_s, 
+        probe3(0) => wbm_arb_tlast_s, 
+        probe4(0) => wbm_arb_tvalid_s, 
+        probe5(0) => wbm_arb_req_s, 
+        probe6(0) => wbm_arb_tready_s, 
+        probe7 => m_axis_tx_tdata_s, 
+        probe8 => m_axis_tx_tkeep_s,
+        probe9(0) =>  m_axis_tx_tlast_s,
+        probe10(0) => m_axis_tx_tvalid_s, 
+        probe11(0) => m_axis_tx_tready_s,
+        probe12(0) => eop_s
+    );
   
   front_led_o <= count_s(28 downto 25);
   usr_led_o <= '1' & usr_sw_i;
