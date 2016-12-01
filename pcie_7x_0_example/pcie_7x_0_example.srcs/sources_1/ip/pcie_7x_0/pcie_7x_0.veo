@@ -64,13 +64,13 @@ pcie_7x_0 your_instance_name (
   .user_lnk_up(user_lnk_up),                                    // output wire user_lnk_up
   .user_app_rdy(user_app_rdy),                                  // output wire user_app_rdy
   .s_axis_tx_tready(s_axis_tx_tready),                          // output wire s_axis_tx_tready
-  .s_axis_tx_tdata(s_axis_tx_tdata),                            // input wire [127 : 0] s_axis_tx_tdata
-  .s_axis_tx_tkeep(s_axis_tx_tkeep),                            // input wire [15 : 0] s_axis_tx_tkeep
+  .s_axis_tx_tdata(s_axis_tx_tdata),                            // input wire [63 : 0] s_axis_tx_tdata
+  .s_axis_tx_tkeep(s_axis_tx_tkeep),                            // input wire [7 : 0] s_axis_tx_tkeep
   .s_axis_tx_tlast(s_axis_tx_tlast),                            // input wire s_axis_tx_tlast
   .s_axis_tx_tvalid(s_axis_tx_tvalid),                          // input wire s_axis_tx_tvalid
   .s_axis_tx_tuser(s_axis_tx_tuser),                            // input wire [3 : 0] s_axis_tx_tuser
-  .m_axis_rx_tdata(m_axis_rx_tdata),                            // output wire [127 : 0] m_axis_rx_tdata
-  .m_axis_rx_tkeep(m_axis_rx_tkeep),                            // output wire [15 : 0] m_axis_rx_tkeep
+  .m_axis_rx_tdata(m_axis_rx_tdata),                            // output wire [63 : 0] m_axis_rx_tdata
+  .m_axis_rx_tkeep(m_axis_rx_tkeep),                            // output wire [7 : 0] m_axis_rx_tkeep
   .m_axis_rx_tlast(m_axis_rx_tlast),                            // output wire m_axis_rx_tlast
   .m_axis_rx_tvalid(m_axis_rx_tvalid),                          // output wire m_axis_rx_tvalid
   .m_axis_rx_tready(m_axis_rx_tready),                          // input wire m_axis_rx_tready
@@ -87,7 +87,25 @@ pcie_7x_0 your_instance_name (
   .cfg_interrupt_stat(cfg_interrupt_stat),                      // input wire cfg_interrupt_stat
   .cfg_pciecap_interrupt_msgnum(cfg_pciecap_interrupt_msgnum),  // input wire [4 : 0] cfg_pciecap_interrupt_msgnum
   .sys_clk(sys_clk),                                            // input wire sys_clk
-  .sys_rst_n(sys_rst_n)                                        // input wire sys_rst_n
+  .sys_rst_n(sys_rst_n),                                        // input wire sys_rst_n
+  .startup_cfgclk(startup_cfgclk),                              // output wire startup_cfgclk
+  .startup_cfgmclk(startup_cfgmclk),                            // output wire startup_cfgmclk
+  .startup_eos(startup_eos),                                    // output wire startup_eos
+  .startup_preq(startup_preq),                                  // output wire startup_preq
+  .startup_clk(startup_clk),                                    // input wire startup_clk
+  .startup_gsr(startup_gsr),                                    // input wire startup_gsr
+  .startup_gts(startup_gts),                                    // input wire startup_gts
+  .startup_keyclearb(startup_keyclearb),                        // input wire startup_keyclearb
+  .startup_pack(startup_pack),                                  // input wire startup_pack
+  .startup_usrcclko(startup_usrcclko),                          // input wire startup_usrcclko
+  .startup_usrcclkts(startup_usrcclkts),                        // input wire startup_usrcclkts
+  .startup_usrdoneo(startup_usrdoneo),                          // input wire startup_usrdoneo
+  .startup_usrdonets(startup_usrdonets),                        // input wire startup_usrdonets
+  .icap_clk(icap_clk),                                          // input wire icap_clk
+  .icap_csib(icap_csib),                                        // input wire icap_csib
+  .icap_rdwrb(icap_rdwrb),                                      // input wire icap_rdwrb
+  .icap_i(icap_i),                                              // input wire [31 : 0] icap_i
+  .icap_o(icap_o)                                              // output wire [31 : 0] icap_o
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

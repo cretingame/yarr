@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1475001892">
-  <File Type="OPT-DCP" Name="simple_counter_opt.dcp"/>
-  <File Type="BITSTR-RBT" Name="simple_counter.rbt"/>
-  <File Type="BITSTR-MMI" Name="simple_counter.mmi"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_counter_postplace_pwropt.dcp"/>
+  <File Type="ROUTE-STATUS" Name="simple_counter_route_status.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="simple_counter_physopt.dcp"/>
+  <File Type="ROUTE-STATUS-PB" Name="simple_counter_route_status.pb"/>
+  <File Type="PWROPT-DRC" Name="simple_counter_drc_pwropted.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="simple_counter.sysdef"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="simple_counter_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PLACE-IO" Name="simple_counter_io_placed.rpt"/>
+  <File Type="OPT-TIMING" Name="simple_counter_timing_summary_opted.rpt"/>
+  <File Type="BG-DRC" Name="simple_counter.drc"/>
+  <File Type="ROUTE-TIMING-PB" Name="simple_counter_timing_summary_routed.pb"/>
+  <File Type="PLACE-TIMING" Name="simple_counter_timing_summary_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="simple_counter.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="simple_counter_postroute_physopt.dcp"/>
+  <File Type="PA-TCL" Name="simple_counter.tcl"/>
+  <File Type="BITSTR-BMM" Name="simple_counter_bd.bmm"/>
+  <File Type="PWROPT-DCP" Name="simple_counter_pwropt.dcp"/>
+  <File Type="PLACE-UTIL-PB" Name="simple_counter_utilization_placed.pb"/>
+  <File Type="ROUTE-CLK" Name="simple_counter_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="simple_counter.msk"/>
+  <File Type="INIT-TIMING" Name="simple_counter_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="simple_counter_power_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simple_counter_timing_summary_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="simple_counter.bit"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="simple_counter_timing_summary_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simple_counter_postroute_physopt_bb.dcp"/>
+  <File Type="PLACE-DCP" Name="simple_counter_placed.dcp"/>
+  <File Type="BITSTR-NKY" Name="simple_counter.nky"/>
+  <File Type="PLACE-UTIL" Name="simple_counter_utilization_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simple_counter_timing_summary_postroute_physopted.rpx"/>
+  <File Type="OPT-DRC" Name="simple_counter_drc_opted.rpt"/>
   <File Type="PWROPT-TIMING" Name="simple_counter_timing_summary_pwropted.rpt"/>
   <File Type="RDI-RDI" Name="simple_counter.vdi"/>
-  <File Type="OPT-DRC" Name="simple_counter_drc_opted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simple_counter_timing_summary_postroute_physopted.rpx"/>
-  <File Type="PLACE-UTIL" Name="simple_counter_utilization_placed.rpt"/>
-  <File Type="BITSTR-NKY" Name="simple_counter.nky"/>
-  <File Type="PLACE-DCP" Name="simple_counter_placed.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simple_counter_postroute_physopt_bb.dcp"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BIT" Name="simple_counter.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simple_counter_timing_summary_postroute_physopted.rpt"/>
   <File Type="ROUTE-TIMING-RPX" Name="simple_counter_timing_summary_routed.rpx"/>
   <File Type="BG-BGN" Name="simple_counter.bgn"/>
+  <File Type="BITSTR-RBT" Name="simple_counter.rbt"/>
+  <File Type="OPT-DCP" Name="simple_counter_opt.dcp"/>
+  <File Type="BITSTR-MMI" Name="simple_counter.mmi"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_counter_postplace_pwropt.dcp"/>
   <File Type="ROUTE-PWR-RPX" Name="simple_counter_power_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="simple_counter_drc_routed.pb"/>
   <File Type="PHYSOPT-DRC" Name="simple_counter_drc_physopted.rpt"/>
@@ -33,30 +55,8 @@
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simple_counter_methodology_drc_routed.pb"/>
   <File Type="BG-BIN" Name="simple_counter.bin"/>
   <File Type="ROUTE-SIMILARITY" Name="simple_counter_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="simple_counter_timing_summary_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="simple_counter_timing_summary_postroute_physopted.pb"/>
   <File Type="ROUTE-DCP" Name="simple_counter_routed.dcp"/>
-  <File Type="ROUTE-PWR" Name="simple_counter_power_routed.rpt"/>
-  <File Type="INIT-TIMING" Name="simple_counter_timing_summary_init.rpt"/>
-  <File Type="BITSTR-MSK" Name="simple_counter.msk"/>
-  <File Type="ROUTE-CLK" Name="simple_counter_clock_utilization_routed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="simple_counter_utilization_placed.pb"/>
-  <File Type="PWROPT-DCP" Name="simple_counter_pwropt.dcp"/>
-  <File Type="BITSTR-BMM" Name="simple_counter_bd.bmm"/>
-  <File Type="PA-TCL" Name="simple_counter.tcl"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="simple_counter_postroute_physopt.dcp"/>
-  <File Type="OPT-HWDEF" Name="simple_counter.hwdef"/>
-  <File Type="PLACE-TIMING" Name="simple_counter_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="simple_counter_timing_summary_routed.pb"/>
-  <File Type="BG-DRC" Name="simple_counter.drc"/>
-  <File Type="OPT-TIMING" Name="simple_counter_timing_summary_opted.rpt"/>
-  <File Type="PLACE-IO" Name="simple_counter_io_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="simple_counter_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="simple_counter.sysdef"/>
-  <File Type="PWROPT-DRC" Name="simple_counter_drc_pwropted.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="simple_counter_route_status.pb"/>
-  <File Type="PHYSOPT-DCP" Name="simple_counter_physopt.dcp"/>
-  <File Type="ROUTE-STATUS" Name="simple_counter_route_status.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/simple_counter.vhd">

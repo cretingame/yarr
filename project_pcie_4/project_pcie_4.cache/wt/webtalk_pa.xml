@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Nov 18 15:41:57 2016">
+<application name="pa" timeStamp="Mon Nov 21 10:00:00 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
-<property name="ProjectIteration" value="30" type="ProjectIteration"/>
+<property name="ProjectIteration" value="31" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -30,10 +30,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditUndo" value="9" type="JavaHandler"/>
 <property name="FlipToViewTaskRTLAnalysis" value="1" type="JavaHandler"/>
 <property name="GenerateOutputForBDFile" value="1" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="17" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="18" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="3" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="37" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="38" type="JavaHandler"/>
 <property name="OpenProject" value="8" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="4" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="2" type="JavaHandler"/>
@@ -43,7 +43,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RefreshDevice" value="1" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="19" type="JavaHandler"/>
+<property name="RunBitgen" value="20" type="JavaHandler"/>
 <property name="RunImplementation" value="10" type="JavaHandler"/>
 <property name="RunSchematic" value="16" type="JavaHandler"/>
 <property name="RunSynthesis" value="13" type="JavaHandler"/>
@@ -68,19 +68,17 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="XdcSetOutputDelay" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, top_level - Behavioral (top_level.vhd" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis, Open Elaborated Design], 14, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_pcie_4/project_pcie_4.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, Open Hardware Manager" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_OPEN_RECENTLY_OPENED_TARGET, Recent Targets" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, Open target" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, Program device" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="1" type="GuiResourceData"/>
 <property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, Default Layout, 0" value="1" type="GuiResourceData"/>
-<property name="RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, Floorplanning, 3" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="123" type="GuiMode"/>
+<property name="GuiMode" value="124" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="107" type="TclMode"/>
+<property name="TclMode" value="108" type="TclMode"/>
 </item>
 </section>
 </application>

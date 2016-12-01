@@ -44,8 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set rc [catch {
@@ -60,8 +58,6 @@ set rc [catch {
   add_files -quiet /home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/top_level.dcp
   add_files -quiet /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp
   set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
-  read_xdc -prop_thru_buffers -ref design_1_util_ds_buf_0_0 -cells U0 /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc
-  set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
   read_xdc -mode out_of_context -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
   read_xdc -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc

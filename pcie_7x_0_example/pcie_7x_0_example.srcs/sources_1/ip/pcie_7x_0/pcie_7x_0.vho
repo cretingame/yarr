@@ -63,13 +63,13 @@ COMPONENT pcie_7x_0
     user_lnk_up : OUT STD_LOGIC;
     user_app_rdy : OUT STD_LOGIC;
     s_axis_tx_tready : OUT STD_LOGIC;
-    s_axis_tx_tdata : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    s_axis_tx_tkeep : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axis_tx_tdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    s_axis_tx_tkeep : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axis_tx_tlast : IN STD_LOGIC;
     s_axis_tx_tvalid : IN STD_LOGIC;
     s_axis_tx_tuser : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    m_axis_rx_tdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
-    m_axis_rx_tkeep : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    m_axis_rx_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+    m_axis_rx_tkeep : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axis_rx_tlast : OUT STD_LOGIC;
     m_axis_rx_tvalid : OUT STD_LOGIC;
     m_axis_rx_tready : IN STD_LOGIC;
@@ -86,7 +86,25 @@ COMPONENT pcie_7x_0
     cfg_interrupt_stat : IN STD_LOGIC;
     cfg_pciecap_interrupt_msgnum : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     sys_clk : IN STD_LOGIC;
-    sys_rst_n : IN STD_LOGIC
+    sys_rst_n : IN STD_LOGIC;
+    startup_cfgclk : OUT STD_LOGIC;
+    startup_cfgmclk : OUT STD_LOGIC;
+    startup_eos : OUT STD_LOGIC;
+    startup_preq : OUT STD_LOGIC;
+    startup_clk : IN STD_LOGIC;
+    startup_gsr : IN STD_LOGIC;
+    startup_gts : IN STD_LOGIC;
+    startup_keyclearb : IN STD_LOGIC;
+    startup_pack : IN STD_LOGIC;
+    startup_usrcclko : IN STD_LOGIC;
+    startup_usrcclkts : IN STD_LOGIC;
+    startup_usrdoneo : IN STD_LOGIC;
+    startup_usrdonets : IN STD_LOGIC;
+    icap_clk : IN STD_LOGIC;
+    icap_csib : IN STD_LOGIC;
+    icap_rdwrb : IN STD_LOGIC;
+    icap_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    icap_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -129,7 +147,25 @@ your_instance_name : pcie_7x_0
     cfg_interrupt_stat => cfg_interrupt_stat,
     cfg_pciecap_interrupt_msgnum => cfg_pciecap_interrupt_msgnum,
     sys_clk => sys_clk,
-    sys_rst_n => sys_rst_n
+    sys_rst_n => sys_rst_n,
+    startup_cfgclk => startup_cfgclk,
+    startup_cfgmclk => startup_cfgmclk,
+    startup_eos => startup_eos,
+    startup_preq => startup_preq,
+    startup_clk => startup_clk,
+    startup_gsr => startup_gsr,
+    startup_gts => startup_gts,
+    startup_keyclearb => startup_keyclearb,
+    startup_pack => startup_pack,
+    startup_usrcclko => startup_usrcclko,
+    startup_usrcclkts => startup_usrcclkts,
+    startup_usrdoneo => startup_usrdoneo,
+    startup_usrdonets => startup_usrdonets,
+    icap_clk => icap_clk,
+    icap_csib => icap_csib,
+    icap_rdwrb => icap_rdwrb,
+    icap_i => icap_i,
+    icap_o => icap_o
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

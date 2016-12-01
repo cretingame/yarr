@@ -2,25 +2,22 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Nov 18 15:31:03 2016
-# Process ID: 21488
+# Start of session at: Mon Nov 21 09:56:03 2016
+# Process ID: 4184
 # Current directory: /home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/top_level.vds
 # Journal file: /home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source top_level.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2016.2/data/ip'.
 Command: synth_design -top top_level -part xc7k160tfbg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21493 
+INFO: Helper process launched with PID 4198 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1141.285 ; gain = 166.137 ; free physical = 11572 ; free virtual = 20854
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 11359 ; free virtual = 21069
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -31,32 +28,14 @@ INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-113] binding component instance 'CLK_IBUFDS' to cell 'IBUFDS' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:206]
-INFO: [Synth 8-3491] module 'design_1' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/hdl/design_1.vhd:14' bound to instance 'design_1_0' of component 'design_1' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:216]
-INFO: [Synth 8-638] synthesizing module 'design_1' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/hdl/design_1.vhd:26]
-INFO: [Synth 8-3491] module 'design_1_util_ds_buf_0_0' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:59' bound to instance 'util_ds_buf_0' of component 'design_1_util_ds_buf_0_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/hdl/design_1.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'design_1_util_ds_buf_0_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:68]
-	Parameter C_BUF_TYPE bound to: ibufdsgte2 - type: string 
-	Parameter C_SIZE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'util_ds_buf' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:71' bound to instance 'U0' of component 'util_ds_buf' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:118]
-INFO: [Synth 8-638] synthesizing module 'util_ds_buf' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:125]
-	Parameter C_BUF_TYPE bound to: ibufdsgte2 - type: string 
-	Parameter C_SIZE bound to: 1 - type: integer 
 	Parameter CLKCM_CFG bound to: 1 - type: bool 
 	Parameter CLKRCV_TRST bound to: 1 - type: bool 
 	Parameter CLKSWING_CFG bound to: 2'b11 
-INFO: [Synth 8-113] binding component instance 'IBUFDS_GTE2_I' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:167]
-WARNING: [Synth 8-3848] Net BUFG_O in module/entity util_ds_buf does not have driver. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:97]
-WARNING: [Synth 8-3848] Net BUFGCE_O in module/entity util_ds_buf does not have driver. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:102]
-WARNING: [Synth 8-3848] Net BUFH_O in module/entity util_ds_buf does not have driver. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:106]
-WARNING: [Synth 8-3848] Net BUFHCE_O in module/entity util_ds_buf does not have driver. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:111]
-WARNING: [Synth 8-3848] Net BUFG_GT_O in module/entity util_ds_buf does not have driver. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:120]
-INFO: [Synth 8-256] done synthesizing module 'util_ds_buf' (1#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ipshared/xilinx.com/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'design_1_util_ds_buf_0_0' (2#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/synth/design_1_util_ds_buf_0_0.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (3#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/hdl/design_1.vhd:26]
-INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-21488-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-21488-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
+INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:224]
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-4184-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-4184-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:34' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:273]
+INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:34' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:279]
 INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:83]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
 	Parameter axis_data_width_c bound to: 64 - type: integer 
@@ -67,7 +46,7 @@ INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_
 	Parameter address_mask_c bound to: 32'b00000000000000000000000011111111 
 INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'u1' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:203]
 INFO: [Synth 8-638] synthesizing module 'simple_counter' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'simple_counter' (4#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'simple_counter' (1#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 8 - type: integer 
 	Parameter wb_data_width_c bound to: 32 - type: integer 
@@ -81,16 +60,16 @@ INFO: [Synth 8-638] synthesizing module 'axis_rx' [/home/asautaux/yarr/project_p
 WARNING: [Synth 8-614] signal 'wb_we_s' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/axis_rx.vhd:268]
 WARNING: [Synth 8-614] signal 'data_s' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/axis_rx.vhd:268]
 WARNING: [Synth 8-614] signal 'address_s' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/axis_rx.vhd:268]
-INFO: [Synth 8-256] done synthesizing module 'axis_rx' (5#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/axis_rx.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'axis_rx' (2#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/axis_rx.vhd:42]
 	Parameter ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-3491] module 'bram_wbs' declared at '/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:27' bound to instance 'u3' of component 'bram_wbs' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:247]
 INFO: [Synth 8-638] synthesizing module 'bram_wbs' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:51]
 	Parameter ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'bram_wbs' (6#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'app' (7#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:83]
-INFO: [Synth 8-256] done synthesizing module 'top_level' (8#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'bram_wbs' (3#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'app' (4#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (5#1) [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 WARNING: [Synth 8-3331] design bram_wbs has unconnected port wb_lock_i
 WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[7]
 WARNING: [Synth 8-3331] design axis_rx has unconnected port s_axis_rx_tkeep_i[6]
@@ -139,30 +118,8 @@ WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_mmenable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msienable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixenable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixfm_i
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port OBUF_IN[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_T[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CEMASK[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLR[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLRMASK[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[2]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[1]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.730 ; gain = 220.582 ; free physical = 11517 ; free virtual = 20799
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 11302 ; free virtual = 21013
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -172,9 +129,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.730 ; gain = 220.582 ; free physical = 11516 ; free virtual = 20799
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 11302 ; free virtual = 21013
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:236]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7k160tfbg676-2
@@ -182,45 +139,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-21488-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-21488-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_0/util_ds_buf_0/U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_0/util_ds_buf_0/U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-4184-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/.Xil/Vivado-4184-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
 Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/constrs_1/imports/new/project_2.xdc]
 WARNING: [Constraints 18-633] Creating clock pcie_clk with 2 sources. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/constrs_1/imports/new/project_2.xdc:2]
 WARNING: [Constraints 18-633] Creating clock clk_200 with 2 sources. [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/constrs_1/imports/new/project_2.xdc:71]
 Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/constrs_1/imports/new/project_2.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/asautaux/yarr/project_pcie_4/project_pcie_4.srcs/constrs_1/imports/new/project_2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1557.832 ; gain = 0.004 ; free physical = 11315 ; free virtual = 20590
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1546.051 ; gain = 0.004 ; free physical = 11020 ; free virtual = 20725
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11314 ; free virtual = 20590
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11019 ; free virtual = 20724
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11314 ; free virtual = 20590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11019 ; free virtual = 20724
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for design_1_0/util_ds_buf_0/U0. (constraint file  /home/asautaux/yarr/project_pcie_4/project_pcie_4.runs/synth_1/dont_touch.xdc, line 13).
-Applied set_property DONT_TOUCH = true for design_1_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_0/util_ds_buf_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11314 ; free virtual = 20590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11019 ; free virtual = 20724
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_s_reg' in module 'axis_rx'
 INFO: [Synth 8-5546] ROM "wb_we_s" won't be mapped to RAM because it is too sparse
@@ -350,7 +297,7 @@ INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instan
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_s_reg' using encoding 'sequential' in module 'axis_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11311 ; free virtual = 20587
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11020 ; free virtual = 20725
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -412,38 +359,16 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11311 ; free virtual = 20587
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11020 ; free virtual = 20725
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3917] design top_level has port usr_led_o[3] driven by constant 1
 WARNING: [Synth 8-3331] design bram_wbs has unconnected port wb_lock_i
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_O[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port OBUF_IN[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_T[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_I[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CE[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CEMASK[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLR[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLRMASK[0]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[2]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[1]
-WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11311 ; free virtual = 20587
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11021 ; free virtual = 20726
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1557.832 ; gain = 582.684 ; free physical = 11311 ; free virtual = 20587
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1546.051 ; gain = 570.910 ; free physical = 11021 ; free virtual = 20726
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -515,9 +440,9 @@ WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[10]) is unuse
 WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[9]) is unused and will be removed from module top_level.
 WARNING: [Synth 8-3332] Sequential element (app_0/u2/address_s_reg[8]) is unused and will be removed from module top_level.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1557.836 ; gain = 582.688 ; free physical = 11247 ; free virtual = 20522
+Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1546.055 ; gain = 570.914 ; free physical = 11010 ; free virtual = 20716
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1557.836 ; gain = 582.688 ; free physical = 11247 ; free virtual = 20522
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1546.055 ; gain = 570.914 ; free physical = 11010 ; free virtual = 20716
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -533,10 +458,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'pcie_0/user_clk_out' to pin 'pcie_0/bbstub_user_clk_out/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1557.836 ; gain = 582.688 ; free physical = 11237 ; free virtual = 20512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1546.055 ; gain = 570.914 ; free physical = 11003 ; free virtual = 20716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1596.555 ; gain = 621.406 ; free physical = 11188 ; free virtual = 20462
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1586.773 ; gain = 611.633 ; free physical = 10964 ; free virtual = 20676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -548,16 +473,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20426
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10929 ; free virtual = 20641
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20426
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10929 ; free virtual = 20641
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20426
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10929 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -574,7 +499,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20426
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10929 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -587,7 +512,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20426
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10929 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -599,25 +524,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20425
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10928 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20425
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10928 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20425
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10928 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20425
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10928 ; free virtual = 20641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -653,24 +578,21 @@ Report Cell Usage:
 +------+---------------+------+
 
 Report Instance Areas: 
-+------+------------------+-------------------------+------+
-|      |Instance          |Module                   |Cells |
-+------+------------------+-------------------------+------+
-|1     |top               |                         | 13014|
-|2     |  design_1_0      |design_1                 |     1|
-|3     |    util_ds_buf_0 |design_1_util_ds_buf_0_0 |     1|
-|4     |      U0          |util_ds_buf              |     1|
-|5     |  app_0           |app                      | 12857|
-|6     |    u1            |simple_counter           |    66|
-|7     |    u2            |axis_rx                  |   757|
-|8     |    u3            |bram_wbs                 | 12034|
-+------+------------------+-------------------------+------+
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               | 13014|
+|2     |  app_0  |app            | 12857|
+|3     |    u1   |simple_counter |    66|
+|4     |    u2   |axis_rx        |   757|
+|5     |    u3   |bram_wbs       | 12034|
++------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.891 ; gain = 656.742 ; free physical = 11151 ; free virtual = 20425
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.109 ; gain = 646.969 ; free physical = 10928 ; free virtual = 20641
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1631.891 ; gain = 191.500 ; free physical = 11151 ; free virtual = 20425
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.898 ; gain = 656.750 ; free physical = 11152 ; free virtual = 20427
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1622.109 ; gain = 194.500 ; free physical = 10928 ; free virtual = 20641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.117 ; gain = 646.977 ; free physical = 10928 ; free virtual = 20641
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -681,8 +603,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-185 Infos, 145 Warnings, 0 Critical Warnings and 0 Errors encountered.
+171 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1631.898 ; gain = 570.195 ; free physical = 11153 ; free virtual = 20427
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1663.910 ; gain = 0.000 ; free physical = 11151 ; free virtual = 20427
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 18 15:31:46 2016...
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1622.117 ; gain = 568.422 ; free physical = 10930 ; free virtual = 20642
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1654.129 ; gain = 0.000 ; free physical = 10929 ; free virtual = 20642
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 21 09:56:46 2016...
