@@ -92,15 +92,6 @@
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>TYPE</spirit:name>
-            <spirit:value>PERIPHERAL</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default_prop"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
     </spirit:busInterfaces>
@@ -201,21 +192,21 @@
           <spirit:configurableElementValue spirit:referenceId="Bar0_64bit">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar0_Scale">Kilobytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar0_Size">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar1_Enabled">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar1_Type">Memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar1_Enabled">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar1_Type">N/A</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar1_Scale">Kilobytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar1_Size">4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar2_Enabled">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar2_Type">Memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar2_Enabled">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar2_Type">N/A</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar2_64bit">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar2_Scale">Kilobytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar2_Size">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar3_Enabled">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar3_Type">Memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar3_Enabled">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar3_Type">N/A</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar3_Scale">Kilobytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar3_Size">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar4_Enabled">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar4_Type">Memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar4_Enabled">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar4_Type">N/A</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar4_Scale">Kilobytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar4_Size">2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar5_Enabled">false</spirit:configurableElementValue>

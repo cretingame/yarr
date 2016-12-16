@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Dec  1 11:20:09 2016
-# Process ID: 8778
+# Start of session at: Thu Dec  1 15:22:02 2016
+# Process ID: 24290
 # Current directory: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/top_level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8787 
+INFO: Helper process launched with PID 24295 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 12142 ; free virtual = 21235
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.281 ; gain = 155.137 ; free physical = 12436 ; free virtual = 21775
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -32,8 +32,8 @@ INFO: [Synth 8-113] binding component instance 'CLK_IBUFDS' to cell 'IBUFDS' [/h
 	Parameter CLKRCV_TRST bound to: 1 - type: bool 
 	Parameter CLKSWING_CFG bound to: 2'b11 
 INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:224]
-INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:44]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
 INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:34' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:279]
 INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:83]
@@ -73,8 +73,8 @@ INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/proje
 INFO: [Synth 8-638] synthesizing module 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:100]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'l2p_arbiter' (4#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:100]
-INFO: [Synth 8-3491] module 'ila_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:5' bound to instance 'debug_comp' of component 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:409]
-INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'ila_0' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:5' bound to instance 'debug_comp' of component 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:409]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/realtime/ila_0_stub.vhdl:25]
 INFO: [Synth 8-256] done synthesizing module 'app' (5#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:83]
 INFO: [Synth 8-256] done synthesizing module 'top_level' (6#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 WARNING: [Synth 8-3331] design l2p_arbiter has unconnected port axis_tx_ready_i
@@ -127,7 +127,7 @@ WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msienable_
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixenable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixfm_i
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 12085 ; free virtual = 21178
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.727 ; gain = 209.582 ; free physical = 12379 ; free virtual = 21718
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -137,7 +137,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.723 ; gain = 209.582 ; free physical = 12085 ; free virtual = 21178
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.727 ; gain = 209.582 ; free physical = 12379 ; free virtual = 21718
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_0' instantiated as 'app_0/debug_comp' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/app.vhd:409]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:242]
@@ -148,10 +148,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-8778-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/synth_1/.Xil/Vivado-24290-spikepig.dhcp.lbl.gov/dcp_2/ila_0_in_context.xdc] for cell 'app_0/debug_comp'
 Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc]
 WARNING: [Constraints 18-633] Creating clock pcie_clk with 2 sources. [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc:2]
 WARNING: [Constraints 18-633] Creating clock clk_200 with 2 sources. [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/constrs_1/imports/new/project_2.xdc:71]
@@ -163,23 +163,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1548.051 ; gain = 0.004 ; free physical = 11877 ; free virtual = 20965
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1547.828 ; gain = 0.004 ; free physical = 12168 ; free virtual = 21508
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/debug_comp' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12167 ; free virtual = 21507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12167 ; free virtual = 21507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20964
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12167 ; free virtual = 21507
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_s_reg' in module 'axis_rx'
 INFO: [Synth 8-5546] ROM "wb_we_s" won't be mapped to RAM because it is too sparse
@@ -311,7 +311,7 @@ INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instan
 INFO: [Synth 8-3354] encoded FSM with state register 'state_s_reg' using encoding 'sequential' in module 'axis_rx'
 WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tx_tdata_o_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/axis_rx.vhd:288]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11874 ; free virtual = 20961
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12167 ; free virtual = 21499
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,7 +388,7 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11874 ; free virtual = 20961
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12167 ; free virtual = 21499
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -442,9 +442,9 @@ WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msienable_
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixenable_i
 WARNING: [Synth 8-3331] design app has unconnected port cfg_interrupt_msixfm_i
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20963
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12168 ; free virtual = 21500
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1548.051 ; gain = 572.910 ; free physical = 11876 ; free virtual = 20963
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1547.828 ; gain = 572.684 ; free physical = 12168 ; free virtual = 21500
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -561,9 +561,9 @@ WARNING: [Synth 8-3332] Sequential element (address_s_reg[10]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (address_s_reg[9]) is unused and will be removed from module axis_rx.
 WARNING: [Synth 8-3332] Sequential element (address_s_reg[8]) is unused and will be removed from module axis_rx.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11818 ; free virtual = 20904
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1547.832 ; gain = 572.688 ; free physical = 11819 ; free virtual = 21293
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11818 ; free virtual = 20904
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1547.832 ; gain = 572.688 ; free physical = 11819 ; free virtual = 21293
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -579,10 +579,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'pcie_0/user_clk_out' to pin 'pcie_0/bbstub_user_clk_out/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.055 ; gain = 572.914 ; free physical = 11799 ; free virtual = 20886
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1547.832 ; gain = 572.688 ; free physical = 11795 ; free virtual = 21261
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11643 ; free virtual = 20729
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11653 ; free virtual = 21119
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -594,16 +594,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11664 ; free virtual = 21124
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11664 ; free virtual = 21124
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11664 ; free virtual = 21124
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -620,7 +620,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -633,7 +633,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -645,25 +645,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -714,11 +714,11 @@ Report Instance Areas:
 |6     |    u3   |bram_wbs       | 12361|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.586 ; gain = 721.445 ; free physical = 11642 ; free virtual = 20729
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.441 ; gain = 721.297 ; free physical = 11663 ; free virtual = 21123
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 111 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1696.586 ; gain = 266.977 ; free physical = 11642 ; free virtual = 20729
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.594 ; gain = 721.453 ; free physical = 11643 ; free virtual = 20729
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1696.441 ; gain = 267.055 ; free physical = 11663 ; free virtual = 21123
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.449 ; gain = 721.305 ; free physical = 11663 ; free virtual = 21123
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -732,6 +732,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 198 Infos, 169 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.594 ; gain = 642.895 ; free physical = 11645 ; free virtual = 20731
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1728.605 ; gain = 0.000 ; free physical = 11642 ; free virtual = 20729
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  1 11:20:53 2016...
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1696.449 ; gain = 642.746 ; free physical = 11666 ; free virtual = 21126
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1728.461 ; gain = 0.000 ; free physical = 11665 ; free virtual = 21126
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  1 15:22:47 2016...

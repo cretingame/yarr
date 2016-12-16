@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 17 13:10:38 2016" VIVADOVERSION="2016.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 15 15:01:16 2016" VIVADOVERSION="2016.2">
 
   <SYSTEMINFO ARCH="kintex7" DEVICE="7k160t" NAME="design_1" PACKAGE="fbg676" SPEEDGRADE="-2"/>
 
@@ -391,7 +391,7 @@
         <PARAMETER NAME="C_S_AXI_HIGHADDR" VALUE="0x00001FFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pcie_7x_0" PORT="user_clk_out"/>
           </CONNECTIONS>
@@ -563,7 +563,7 @@
         <BUSINTERFACE BUSNAME="pcie_axi_lite_v1_0_0_M_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -4033,7 +4033,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pcie_7x_0" PORT="user_clk_out"/>
           </CONNECTIONS>
@@ -4117,10 +4117,10 @@
         <PARAMETER NAME="pci_exp_int_freq" VALUE="3"/>
         <PARAMETER NAME="c_pcie_fast_config" VALUE="0"/>
         <PARAMETER NAME="bar_0" VALUE="FFFF8000"/>
-        <PARAMETER NAME="bar_1" VALUE="FFFFF000"/>
-        <PARAMETER NAME="bar_2" VALUE="FFFF8000"/>
-        <PARAMETER NAME="bar_3" VALUE="FFFFF800"/>
-        <PARAMETER NAME="bar_4" VALUE="FFFFF800"/>
+        <PARAMETER NAME="bar_1" VALUE="00000000"/>
+        <PARAMETER NAME="bar_2" VALUE="00000000"/>
+        <PARAMETER NAME="bar_3" VALUE="00000000"/>
+        <PARAMETER NAME="bar_4" VALUE="00000000"/>
         <PARAMETER NAME="bar_5" VALUE="00000000"/>
         <PARAMETER NAME="xrom_bar" VALUE="00000000"/>
         <PARAMETER NAME="cost_table" VALUE="1"/>
@@ -4331,26 +4331,26 @@
         <PARAMETER NAME="Bar0_Prefetchable" VALUE="false"/>
         <PARAMETER NAME="Bar0_Scale" VALUE="Kilobytes"/>
         <PARAMETER NAME="Bar0_Size" VALUE="32"/>
-        <PARAMETER NAME="Bar1_Enabled" VALUE="true"/>
-        <PARAMETER NAME="Bar1_Type" VALUE="Memory"/>
+        <PARAMETER NAME="Bar1_Enabled" VALUE="false"/>
+        <PARAMETER NAME="Bar1_Type" VALUE="N/A"/>
         <PARAMETER NAME="Bar1_64bit" VALUE="false"/>
         <PARAMETER NAME="Bar1_Prefetchable" VALUE="false"/>
         <PARAMETER NAME="Bar1_Scale" VALUE="Kilobytes"/>
         <PARAMETER NAME="Bar1_Size" VALUE="4"/>
-        <PARAMETER NAME="Bar2_Enabled" VALUE="true"/>
-        <PARAMETER NAME="Bar2_Type" VALUE="Memory"/>
+        <PARAMETER NAME="Bar2_Enabled" VALUE="false"/>
+        <PARAMETER NAME="Bar2_Type" VALUE="N/A"/>
         <PARAMETER NAME="Bar2_64bit" VALUE="false"/>
         <PARAMETER NAME="Bar2_Prefetchable" VALUE="false"/>
         <PARAMETER NAME="Bar2_Scale" VALUE="Kilobytes"/>
         <PARAMETER NAME="Bar2_Size" VALUE="32"/>
-        <PARAMETER NAME="Bar3_Enabled" VALUE="true"/>
-        <PARAMETER NAME="Bar3_Type" VALUE="Memory"/>
+        <PARAMETER NAME="Bar3_Enabled" VALUE="false"/>
+        <PARAMETER NAME="Bar3_Type" VALUE="N/A"/>
         <PARAMETER NAME="Bar3_64bit" VALUE="false"/>
         <PARAMETER NAME="Bar3_Prefetchable" VALUE="false"/>
         <PARAMETER NAME="Bar3_Scale" VALUE="Kilobytes"/>
         <PARAMETER NAME="Bar3_Size" VALUE="2"/>
-        <PARAMETER NAME="Bar4_Enabled" VALUE="true"/>
-        <PARAMETER NAME="Bar4_Type" VALUE="Memory"/>
+        <PARAMETER NAME="Bar4_Enabled" VALUE="false"/>
+        <PARAMETER NAME="Bar4_Type" VALUE="N/A"/>
         <PARAMETER NAME="Bar4_64bit" VALUE="false"/>
         <PARAMETER NAME="Bar4_Prefetchable" VALUE="false"/>
         <PARAMETER NAME="Bar4_Scale" VALUE="Kilobytes"/>
@@ -4561,7 +4561,7 @@
         <PORT DIR="O" LEFT="3" NAME="pci_exp_txn" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="3" NAME="pci_exp_rxp" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="3" NAME="pci_exp_rxn" RIGHT="0" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="O" NAME="user_clk_out" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
+        <PORT CLKFREQUENCY="250000000" DIR="O" NAME="user_clk_out" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="pcie_axi_lite_v1_0_0" PORT="user_clk"/>
@@ -4687,7 +4687,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie_7x_0_0_user_clk_out"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -4709,7 +4709,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie_7x_0_0_user_clk_out"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -4769,7 +4769,7 @@
             <CONNECTION INSTANCE="pcie_7x_0" PORT="user_lnk_up"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="user_clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="user_clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pcie_7x_0" PORT="user_clk_out"/>
           </CONNECTIONS>
@@ -4943,7 +4943,7 @@
         <BUSINTERFACE BUSNAME="pcie_axi_lite_v1_0_0_M_AXI" DATAWIDTH="32" NAME="M_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -4996,7 +4996,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie_7x_0_0_user_clk_out"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -5018,7 +5018,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie_7x_0_0_user_clk_out"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -5060,7 +5060,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="pcie_7x_0_user_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pcie_7x_0" PORT="user_clk_out"/>
           </CONNECTIONS>

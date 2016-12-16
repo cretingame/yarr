@@ -96,7 +96,7 @@ architecture Behavioral of app is
             --address_width_c : integer := 256;
             wb_address_width_c : integer := 15; -- 32k
             wb_data_width_c : integer := 32;
-            address_mask_c : STD_LOGIC_VECTOR(32-1 downto 0) := X"000000FF"
+            address_mask_c : STD_LOGIC_VECTOR(32-1 downto 0) := X"7FFFFFFF"
             );
         Port (
             clk_i : in STD_LOGIC;

@@ -58,7 +58,7 @@
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_TREADY" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_tlast" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/pcie_7x_0_m_axis_rx_tvalid" gui_info=""/>
+    <Object name="design_1_i/pcie_7x_0_m_axis_rx_tvalid" gui_info="Trigger Setup=1"/>
     <Object name="design_1_i/pcie_7x_0_s_axis_tx_tready" gui_info=""/>
     <Object name="design_1_i/pcie_7x_0_user_app_rdy" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/pcie_7x_0_user_lnk_up" gui_info="Trigger Setup=3"/>
@@ -76,7 +76,7 @@
     <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TLAST" gui_info=""/>
     <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TREADY" gui_info=""/>
     <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_TVALID" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast" gui_info=""/>
+    <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tvalid" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/pcie_axi_lite_v1_0_0_s_axis_rx_tready" gui_info=""/>
     <Object name="design_1_i/proc_sys_reset_0_interconnect_aresetn" gui_info="Trigger Setup=0"/>

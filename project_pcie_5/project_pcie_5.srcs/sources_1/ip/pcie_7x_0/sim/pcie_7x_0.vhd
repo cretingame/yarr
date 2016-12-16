@@ -646,7 +646,7 @@ BEGIN
       c_gen1 => true,
       pci_exp_int_freq => 3,
       c_pcie_fast_config => 0,
-      bar_0 => "FFFFF800",
+      bar_0 => "80000000",
       bar_1 => "00000000",
       bar_2 => "00000000",
       bar_3 => "00000000",
