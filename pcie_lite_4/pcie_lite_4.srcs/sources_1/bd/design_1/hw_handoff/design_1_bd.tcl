@@ -208,9 +208,9 @@ CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
   # Create instance: pcie_7x_0, and set properties
   set pcie_7x_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:pcie_7x:3.3 pcie_7x_0 ]
   set_property -dict [ list \
-CONFIG.Bar0_64bit {false} \
-CONFIG.Bar0_Scale {Kilobytes} \
-CONFIG.Bar0_Size {32} \
+CONFIG.Bar0_64bit {true} \
+CONFIG.Bar0_Scale {Megabytes} \
+CONFIG.Bar0_Size {1} \
 CONFIG.Bar1_Enabled {false} \
 CONFIG.Bar1_Scale {Kilobytes} \
 CONFIG.Bar1_Size {4} \
@@ -238,8 +238,8 @@ CONFIG.En_route_unlock {false} \
 CONFIG.Enable_Slot_Clock_Cfg {true} \
 CONFIG.Interface_Width {64_bit} \
 CONFIG.Link_Speed {5.0_GT/s} \
-CONFIG.MSIx_PBA_BIR {BAR_0} \
-CONFIG.MSIx_Table_BIR {BAR_0} \
+CONFIG.MSIx_PBA_BIR {BAR_1:0} \
+CONFIG.MSIx_Table_BIR {BAR_1:0} \
 CONFIG.Max_Payload_Size {512_bytes} \
 CONFIG.Maximum_Link_Width {X4} \
 CONFIG.PCIe_Blk_Locn {X0Y0} \

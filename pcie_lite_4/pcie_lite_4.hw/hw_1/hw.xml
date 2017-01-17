@@ -14,6 +14,7 @@
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="design_1_i/ila_0" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="200"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="design_1_i/ila_1" gui_info="">

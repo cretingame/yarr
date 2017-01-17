@@ -10,18 +10,35 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="16922fs"></ZoomEndTime>
+      <Cursor1Time time="4000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="12" />
-   <wave_markers>
-   </wave_markers>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tdata">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tdata[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="label">axis_rx_tdata[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tvalid">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_tvalid</obj_property>
+      <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tvalid</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tlast">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_tlast</obj_property>
+      <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tlast</obj_property>
+      <obj_property name="label">axis_rx_tlast</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tkeep">
@@ -30,6 +47,8 @@
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tkeep[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="label">axis_rx_tkeep[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tuser">
@@ -38,27 +57,26 @@
       <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tuser[21:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="label">axis_rx_tuser[21:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_s_axis_rx_tready">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_s_axis_rx_tready</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_s_axis_rx_tready</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="label">axis_rx_tvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tlast">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_tlast</obj_property>
-      <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tlast</obj_property>
-      <obj_property name="label">axis_rx_tlast</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_m_axis_rx_tvalid">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_m_axis_rx_tvalid</obj_property>
-      <obj_property name="ObjectShortName">pcie_7x_0_m_axis_rx_tvalid</obj_property>
-      <obj_property name="label">axis_rx_tready</obj_property>
+   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_s_axis_tx_tready">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_s_axis_tx_tready</obj_property>
+      <obj_property name="ObjectShortName">pcie_7x_0_s_axis_tx_tready</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">axis_tx_tready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tdata">
@@ -66,7 +84,25 @@
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tdata[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="label">axis_tx_tdata[63:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tlast</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tvalid">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tvalid</obj_property>
+      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tvalid</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tkeep">
@@ -74,6 +110,8 @@
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tkeep[7:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tkeep[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="label">axis_tx_tkeep[7:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
@@ -82,28 +120,9 @@
       <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tuser[3:0]</obj_property>
       <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tuser[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="label">axis_tx_tuser[3:0]</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tvalid">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tvalid</obj_property>
-      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tvalid</obj_property>
-      <obj_property name="label">axis_tx_tvalid</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/pcie_axi_lite_v1_0_0_m_axis_tx_tlast</obj_property>
-      <obj_property name="ObjectShortName">pcie_axi_lite_v1_0_0_m_axis_tx_tlast</obj_property>
-      <obj_property name="label">axis_tx_tlast</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="design_1_i/pcie_7x_0_s_axis_tx_tready">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">design_1_i/pcie_7x_0_s_axis_tx_tready</obj_property>
-      <obj_property name="ObjectShortName">pcie_7x_0_s_axis_tx_tready</obj_property>
-      <obj_property name="label">axis_tx_tready</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

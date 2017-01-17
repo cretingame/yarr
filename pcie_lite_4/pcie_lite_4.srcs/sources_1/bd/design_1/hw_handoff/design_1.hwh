@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 15 15:01:16 2016" VIVADOVERSION="2016.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 16 11:10:03 2016" VIVADOVERSION="2016.2">
 
   <SYSTEMINFO ARCH="kintex7" DEVICE="7k160t" NAME="design_1" PACKAGE="fbg676" SPEEDGRADE="-2"/>
 
@@ -4116,8 +4116,8 @@
         <PARAMETER NAME="c_gen1" VALUE="true"/>
         <PARAMETER NAME="pci_exp_int_freq" VALUE="3"/>
         <PARAMETER NAME="c_pcie_fast_config" VALUE="0"/>
-        <PARAMETER NAME="bar_0" VALUE="FFFF8000"/>
-        <PARAMETER NAME="bar_1" VALUE="00000000"/>
+        <PARAMETER NAME="bar_0" VALUE="FFF00004"/>
+        <PARAMETER NAME="bar_1" VALUE="FFFFFFFF"/>
         <PARAMETER NAME="bar_2" VALUE="00000000"/>
         <PARAMETER NAME="bar_3" VALUE="00000000"/>
         <PARAMETER NAME="bar_4" VALUE="00000000"/>
@@ -4327,10 +4327,10 @@
         <PARAMETER NAME="User_Clk_Freq" VALUE="250"/>
         <PARAMETER NAME="Bar0_Enabled" VALUE="true"/>
         <PARAMETER NAME="Bar0_Type" VALUE="Memory"/>
-        <PARAMETER NAME="Bar0_64bit" VALUE="false"/>
+        <PARAMETER NAME="Bar0_64bit" VALUE="true"/>
         <PARAMETER NAME="Bar0_Prefetchable" VALUE="false"/>
-        <PARAMETER NAME="Bar0_Scale" VALUE="Kilobytes"/>
-        <PARAMETER NAME="Bar0_Size" VALUE="32"/>
+        <PARAMETER NAME="Bar0_Scale" VALUE="Megabytes"/>
+        <PARAMETER NAME="Bar0_Size" VALUE="1"/>
         <PARAMETER NAME="Bar1_Enabled" VALUE="false"/>
         <PARAMETER NAME="Bar1_Type" VALUE="N/A"/>
         <PARAMETER NAME="Bar1_64bit" VALUE="false"/>
@@ -4416,9 +4416,9 @@
         <PARAMETER NAME="MSIx_Enabled" VALUE="false"/>
         <PARAMETER NAME="MSIx_Table_Size" VALUE="1"/>
         <PARAMETER NAME="MSIx_Table_Offset" VALUE="0"/>
-        <PARAMETER NAME="MSIx_Table_BIR" VALUE="BAR_0"/>
+        <PARAMETER NAME="MSIx_Table_BIR" VALUE="BAR_1:0"/>
         <PARAMETER NAME="MSIx_PBA_Offset" VALUE="0"/>
-        <PARAMETER NAME="MSIx_PBA_BIR" VALUE="BAR_0"/>
+        <PARAMETER NAME="MSIx_PBA_BIR" VALUE="BAR_1:0"/>
         <PARAMETER NAME="Device_Specific_Initialization" VALUE="false"/>
         <PARAMETER NAME="D1_Support" VALUE="false"/>
         <PARAMETER NAME="D2_Support" VALUE="false"/>

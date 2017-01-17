@@ -3129,7 +3129,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>f61738bc</spirit:value>
+            <spirit:value>5bb5f0e1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3149,7 +3149,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 15 23:01:15 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 19:10:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3161,7 +3161,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>f61738bc</spirit:value>
+            <spirit:value>5bb5f0e1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3180,7 +3180,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 15 23:01:15 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 19:10:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3192,7 +3192,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>f61738bc</spirit:value>
+            <spirit:value>5bb5f0e1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3212,7 +3212,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 15 23:01:15 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 19:10:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3224,7 +3224,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>dcac6523</spirit:value>
+            <spirit:value>2c6b3bba</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3243,7 +3243,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 15 23:01:15 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 19:10:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3255,7 +3255,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>dcac6523</spirit:value>
+            <spirit:value>2c6b3bba</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -9765,11 +9765,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_0</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFFF8000</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFF00004</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_1</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_1">00000000</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_1">FFFFFFFF</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_2</spirit:name>
@@ -10696,6 +10696,16 @@
       <spirit:enumeration>3</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_ea588113</spirit:name>
+      <spirit:enumeration>Bytes</spirit:enumeration>
+      <spirit:enumeration>Kilobytes</spirit:enumeration>
+      <spirit:enumeration>Megabytes</spirit:enumeration>
+      <spirit:enumeration>Gigabytes</spirit:enumeration>
+      <spirit:enumeration>Terabytes</spirit:enumeration>
+      <spirit:enumeration>Petabytes</spirit:enumeration>
+      <spirit:enumeration>Exabytes</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_ec64e624</spirit:name>
       <spirit:enumeration>N/A</spirit:enumeration>
     </spirit:choice>
@@ -10781,15 +10791,15 @@
       <spirit:enumeration spirit:text="1024 bytes">1024_bytes</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_49d248fb</spirit:name>
-      <spirit:enumeration spirit:text="BAR 0">BAR_0</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_pairs_4da2f4f7</spirit:name>
       <spirit:enumeration spirit:text="No function number bits used">No_function_number_bits_used</spirit:enumeration>
       <spirit:enumeration spirit:text="First MSB of function number used">First_MSB_of_function_number_used</spirit:enumeration>
       <spirit:enumeration spirit:text="First 2 MSBs of function number used">First_2_MSBs_of_function_number_used</spirit:enumeration>
       <spirit:enumeration spirit:text="All 3 bits of function number used">All_3_bits_of_function_number_used</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_5402d0b0</spirit:name>
+      <spirit:enumeration spirit:text="BAR 1:0">BAR_1:0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_5a23eaa1</spirit:name>
@@ -11343,7 +11353,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_64bit</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_64bit" spirit:order="203">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_64bit" spirit:order="203">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Prefetchable</spirit:name>
@@ -11351,11 +11361,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Scale</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Scale" spirit:choiceRef="choice_list_52d29139" spirit:order="205">Kilobytes</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Scale" spirit:choiceRef="choice_list_ea588113" spirit:order="205">Megabytes</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Size</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="206">32</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="206">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar1_Enabled</spirit:name>
@@ -11699,7 +11709,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_Table_BIR</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_Table_BIR" spirit:choiceRef="choice_pairs_49d248fb" spirit:order="710">BAR_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_Table_BIR" spirit:choiceRef="choice_pairs_5402d0b0" spirit:order="710">BAR_1:0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_PBA_Offset</spirit:name>
@@ -11707,7 +11717,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_PBA_BIR</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_PBA_BIR" spirit:choiceRef="choice_pairs_49d248fb" spirit:order="712">BAR_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_PBA_BIR" spirit:choiceRef="choice_pairs_5402d0b0" spirit:order="712">BAR_1:0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Device_Specific_Initialization</spirit:name>

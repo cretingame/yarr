@@ -189,9 +189,9 @@
           <spirit:configurableElementValue spirit:referenceId="Link_Speed">5.0_GT/s</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Interface_Width">64_bit</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="User_Clk_Freq">250</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar0_64bit">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar0_Scale">Kilobytes</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Bar0_Size">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar0_64bit">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar0_Scale">Megabytes</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Bar0_Size">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar1_Enabled">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar1_Type">N/A</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Bar1_Scale">Kilobytes</spirit:configurableElementValue>
@@ -216,8 +216,8 @@
           <spirit:configurableElementValue spirit:referenceId="Max_Payload_Size">512_bytes</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Trgt_Link_Speed">4'h2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Enable_Slot_Clock_Cfg">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MSIx_Table_BIR">BAR_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MSIx_PBA_BIR">BAR_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MSIx_Table_BIR">BAR_1:0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MSIx_PBA_BIR">BAR_1:0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="DSN_Enabled">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCIe_Blk_Locn">X0Y0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Trans_Buf_Pipeline">None</spirit:configurableElementValue>

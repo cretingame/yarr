@@ -86,8 +86,8 @@ entity design_1_pcie_7x_0_0_core_top is
     AER_CAP_ON                                     : string     := "FALSE";
     AER_CAP_PERMIT_ROOTERR_UPDATE                  : string     := "FALSE";
 
-    BAR0                                           : bit_vector := X"FFFF8000";
-    BAR1                                           : bit_vector := X"00000000";
+    BAR0                                           : bit_vector := X"FFF00004";
+    BAR1                                           : bit_vector := X"FFFFFFFF";
     BAR2                                           : bit_vector := X"00000000";
     BAR3                                           : bit_vector := X"00000000";
     BAR4                                           : bit_vector := X"00000000";

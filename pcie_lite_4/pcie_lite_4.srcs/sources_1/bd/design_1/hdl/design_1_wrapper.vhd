@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
---Date        : Thu Dec 15 15:01:11 2016
+--Date        : Fri Dec 16 11:09:59 2016
 --Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
