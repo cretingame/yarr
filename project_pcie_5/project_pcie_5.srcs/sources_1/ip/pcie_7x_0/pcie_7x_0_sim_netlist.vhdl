@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
--- Date        : Thu Dec  1 15:21:41 2016
+-- Date        : Tue Jan 17 16:05:30 2017
 -- Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_sim_netlist.vhdl
@@ -72259,12 +72259,12 @@ pcie_block_i: unisim.vcomponents.PCIE_2_1
       AER_CAP_PERMIT_ROOTERR_UPDATE => "FALSE",
       AER_CAP_VERSION => X"1",
       ALLOW_X8_GEN2 => "FALSE",
-      BAR0 => X"80000000",
-      BAR1 => X"00000000",
-      BAR2 => X"00000000",
-      BAR3 => X"00000000",
-      BAR4 => X"00000000",
-      BAR5 => X"00000000",
+      BAR0 => X"FFF00000",
+      BAR1 => X"FFE00000",
+      BAR2 => X"FFE00000",
+      BAR3 => X"FFE00000",
+      BAR4 => X"FFE00000",
+      BAR5 => X"FFE00000",
       CAPABILITIES_PTR => X"40",
       CARDBUS_CIS_POINTER => X"00000000",
       CFG_ECRC_ERR_CPLSTAT => 0,
@@ -75750,17 +75750,17 @@ entity pcie_7x_0_pcie_7x_0_pcie2_top is
   attribute TRANSCEIVER_CTRL_STATUS_PORTS : string;
   attribute TRANSCEIVER_CTRL_STATUS_PORTS of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
   attribute bar_0 : string;
-  attribute bar_0 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "80000000";
+  attribute bar_0 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFF00000";
   attribute bar_1 : string;
-  attribute bar_1 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "00000000";
+  attribute bar_1 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFE00000";
   attribute bar_2 : string;
-  attribute bar_2 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "00000000";
+  attribute bar_2 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFE00000";
   attribute bar_3 : string;
-  attribute bar_3 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "00000000";
+  attribute bar_3 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFE00000";
   attribute bar_4 : string;
-  attribute bar_4 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "00000000";
+  attribute bar_4 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFE00000";
   attribute bar_5 : string;
-  attribute bar_5 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "00000000";
+  attribute bar_5 of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FFE00000";
   attribute bram_lat : string;
   attribute bram_lat of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "0";
   attribute c_aer_base_ptr : string;
@@ -77183,17 +77183,17 @@ architecture STRUCTURE of pcie_7x_0 is
   attribute TRANSCEIVER_CTRL_STATUS_PORTS : string;
   attribute TRANSCEIVER_CTRL_STATUS_PORTS of U0 : label is "FALSE";
   attribute bar_0 : string;
-  attribute bar_0 of U0 : label is "80000000";
+  attribute bar_0 of U0 : label is "FFF00000";
   attribute bar_1 : string;
-  attribute bar_1 of U0 : label is "00000000";
+  attribute bar_1 of U0 : label is "FFE00000";
   attribute bar_2 : string;
-  attribute bar_2 of U0 : label is "00000000";
+  attribute bar_2 of U0 : label is "FFE00000";
   attribute bar_3 : string;
-  attribute bar_3 of U0 : label is "00000000";
+  attribute bar_3 of U0 : label is "FFE00000";
   attribute bar_4 : string;
-  attribute bar_4 of U0 : label is "00000000";
+  attribute bar_4 of U0 : label is "FFE00000";
   attribute bar_5 : string;
-  attribute bar_5 of U0 : label is "00000000";
+  attribute bar_5 of U0 : label is "FFE00000";
   attribute bram_lat : string;
   attribute bram_lat of U0 : label is "0";
   attribute c_aer_base_ptr : string;

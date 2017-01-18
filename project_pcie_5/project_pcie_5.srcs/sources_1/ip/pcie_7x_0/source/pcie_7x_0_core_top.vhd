@@ -86,12 +86,12 @@ entity pcie_7x_0_core_top is
     AER_CAP_ON                                     : string     := "FALSE";
     AER_CAP_PERMIT_ROOTERR_UPDATE                  : string     := "FALSE";
 
-    BAR0                                           : bit_vector := X"80000000";
-    BAR1                                           : bit_vector := X"00000000";
-    BAR2                                           : bit_vector := X"00000000";
-    BAR3                                           : bit_vector := X"00000000";
-    BAR4                                           : bit_vector := X"00000000";
-    BAR5                                           : bit_vector := X"00000000";
+    BAR0                                           : bit_vector := X"FFF00000";
+    BAR1                                           : bit_vector := X"FFE00000";
+    BAR2                                           : bit_vector := X"FFE00000";
+    BAR3                                           : bit_vector := X"FFE00000";
+    BAR4                                           : bit_vector := X"FFE00000";
+    BAR5                                           : bit_vector := X"FFE00000";
 
     C_DATA_WIDTH                                   : integer    := 64;
     CARDBUS_CIS_POINTER                            : bit_vector := X"00000000";

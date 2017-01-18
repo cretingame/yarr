@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Thu Dec  1 15:21:40 2016
+// Date        : Tue Jan 17 16:05:30 2017
 // Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_sim_netlist.v
@@ -289,12 +289,12 @@ module pcie_7x_0
   (* RCV_MSG_IF = "FALSE" *) 
   (* SHARED_LOGIC_IN_CORE = "FALSE" *) 
   (* TRANSCEIVER_CTRL_STATUS_PORTS = "FALSE" *) 
-  (* bar_0 = "80000000" *) 
-  (* bar_1 = "00000000" *) 
-  (* bar_2 = "00000000" *) 
-  (* bar_3 = "00000000" *) 
-  (* bar_4 = "00000000" *) 
-  (* bar_5 = "00000000" *) 
+  (* bar_0 = "FFF00000" *) 
+  (* bar_1 = "FFE00000" *) 
+  (* bar_2 = "FFE00000" *) 
+  (* bar_3 = "FFE00000" *) 
+  (* bar_4 = "FFE00000" *) 
+  (* bar_5 = "FFE00000" *) 
   (* bram_lat = "0" *) 
   (* c_aer_base_ptr = "000" *) 
   (* c_aer_cap_ecrc_check_capable = "FALSE" *) 
@@ -12701,9 +12701,9 @@ endmodule
 (* KEEP_WIDTH = "8" *) (* LINK_CAP_MAX_LINK_WIDTH = "4" *) (* ORIG_REF_NAME = "pcie_7x_0_pcie2_top" *) 
 (* PCIE_ASYNC_EN = "FALSE" *) (* PCIE_EXT_CLK = "FALSE" *) (* PCIE_EXT_GT_COMMON = "FALSE" *) 
 (* PIPE_SIM = "FALSE" *) (* PL_INTERFACE = "FALSE" *) (* RCV_MSG_IF = "FALSE" *) 
-(* SHARED_LOGIC_IN_CORE = "FALSE" *) (* TRANSCEIVER_CTRL_STATUS_PORTS = "FALSE" *) (* bar_0 = "80000000" *) 
-(* bar_1 = "00000000" *) (* bar_2 = "00000000" *) (* bar_3 = "00000000" *) 
-(* bar_4 = "00000000" *) (* bar_5 = "00000000" *) (* bram_lat = "0" *) 
+(* SHARED_LOGIC_IN_CORE = "FALSE" *) (* TRANSCEIVER_CTRL_STATUS_PORTS = "FALSE" *) (* bar_0 = "FFF00000" *) 
+(* bar_1 = "FFE00000" *) (* bar_2 = "FFE00000" *) (* bar_3 = "FFE00000" *) 
+(* bar_4 = "FFE00000" *) (* bar_5 = "FFE00000" *) (* bram_lat = "0" *) 
 (* c_aer_base_ptr = "000" *) (* c_aer_cap_ecrc_check_capable = "FALSE" *) (* c_aer_cap_ecrc_gen_capable = "FALSE" *) 
 (* c_aer_cap_multiheader = "FALSE" *) (* c_aer_cap_nextptr = "000" *) (* c_aer_cap_on = "FALSE" *) 
 (* c_aer_cap_optional_err_support = "000000" *) (* c_aer_cap_permit_rooterr_update = "FALSE" *) (* c_buf_opt_bma = "TRUE" *) 
@@ -15468,12 +15468,12 @@ module pcie_7x_0_pcie_7x_0_pcie_7x
     .AER_CAP_PERMIT_ROOTERR_UPDATE("FALSE"),
     .AER_CAP_VERSION(4'h1),
     .ALLOW_X8_GEN2("FALSE"),
-    .BAR0(32'h80000000),
-    .BAR1(32'h00000000),
-    .BAR2(32'h00000000),
-    .BAR3(32'h00000000),
-    .BAR4(32'h00000000),
-    .BAR5(32'h00000000),
+    .BAR0(32'hFFF00000),
+    .BAR1(32'hFFE00000),
+    .BAR2(32'hFFE00000),
+    .BAR3(32'hFFE00000),
+    .BAR4(32'hFFE00000),
+    .BAR5(32'hFFE00000),
     .CAPABILITIES_PTR(8'h40),
     .CARDBUS_CIS_POINTER(32'h00000000),
     .CFG_ECRC_ERR_CPLSTAT(0),

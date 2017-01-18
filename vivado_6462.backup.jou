@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Dec  8 14:48:47 2016
+# Process ID: 6462
+# Current directory: /home/asautaux/yarr
+# Command line: vivado
+# Log file: /home/asautaux/yarr/vivado.log
+# Journal file: /home/asautaux/yarr/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/asautaux/yarr/project_pcie_5/project_pcie_5.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/000013b363cb01]
+set_property PARAM.FREQUENCY 6000000 [get_hw_targets */xilinx_tcf/Xilinx/000013b363cb01]
+open_hw_target
+set_property PROGRAM.FILE {/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/impl_1/top_level.bit} [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/impl_1/top_level.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/debug_comp"}]]

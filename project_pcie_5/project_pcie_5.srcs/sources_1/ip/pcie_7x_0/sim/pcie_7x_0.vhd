@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2016 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -646,12 +646,12 @@ BEGIN
       c_gen1 => true,
       pci_exp_int_freq => 3,
       c_pcie_fast_config => 0,
-      bar_0 => "80000000",
-      bar_1 => "00000000",
-      bar_2 => "00000000",
-      bar_3 => "00000000",
-      bar_4 => "00000000",
-      bar_5 => "00000000",
+      bar_0 => "FFF00000",
+      bar_1 => "FFE00000",
+      bar_2 => "FFE00000",
+      bar_3 => "FFE00000",
+      bar_4 => "FFE00000",
+      bar_5 => "FFE00000",
       xrom_bar => "00000000",
       cost_table => 1,
       ven_id => "10EE",
