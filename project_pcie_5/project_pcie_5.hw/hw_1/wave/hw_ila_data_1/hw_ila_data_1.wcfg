@@ -9,102 +9,288 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="494223fs"></ZoomStartTime>
+      <ZoomEndTime time="553324fs"></ZoomEndTime>
+      <Cursor1Time time="511000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="38" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="app_0/rst_n_s">
+   <wvobject type="array" fp_name="app_0/s_axis_rx_tdata_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tdata_s[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/rst_n_s</obj_property>
-      <obj_property name="ObjectShortName">rst_n_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/wbm_arb_tdata_s">
+   <wvobject type="array" fp_name="app_0/s_axis_rx_tkeep_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tkeep_s[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_tdata_s[63:0]</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_tdata_s[63:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/wbm_arb_tkeep_s">
+   <wvobject type="logic" fp_name="app_0/s_axis_rx_tlast_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_tkeep_s[7:0]</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tlast_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/wbm_arb_tlast_s">
+   <wvobject type="logic" fp_name="app_0/s_axis_rx_tvalid_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_tlast_s</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_tlast_s</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tvalid_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/wbm_arb_tvalid_s">
+   <wvobject type="logic" fp_name="app_0/s_axis_rx_tready_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_tvalid_s</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_tvalid_s</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tready_s</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tready_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="app_0/wbm_arb_req_s">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_req_s</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_req_s</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="app_0/wbm_arb_tready_s">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/wbm_arb_tready_s</obj_property>
-      <obj_property name="ObjectShortName">wbm_arb_tready_s</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/m_axis_tx_tdata_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">app_0/m_axis_tx_tdata_s[63:0]</obj_property>
       <obj_property name="ObjectShortName">m_axis_tx_tdata_s[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/m_axis_tx_tkeep_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">app_0/m_axis_tx_tkeep_s[7:0]</obj_property>
       <obj_property name="ObjectShortName">m_axis_tx_tkeep_s[7:0]</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="app_0/m_axis_tx_tlast_s">
-      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/m_axis_tx_tlast_s</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tx_tlast_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/m_axis_tx_tvalid_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">app_0/m_axis_tx_tvalid_s</obj_property>
       <obj_property name="ObjectShortName">m_axis_tx_tvalid_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="app_0/m_axis_tx_tlast_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/m_axis_tx_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tx_tlast_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="app_0/m_axis_tx_tready_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">app_0/m_axis_tx_tready_s</obj_property>
       <obj_property name="ObjectShortName">m_axis_tx_tready_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/eop_s">
+   <wvobject type="array" fp_name="app_0/dma_attrib_ds">
       <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_attrib_ds[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_attrib_ds[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">app_0/eop_s</obj_property>
-      <obj_property name="ObjectShortName">eop_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_abort_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_abort_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_abort_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_byte_swap_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_byte_swap_s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_byte_swap_s[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_carrier_addr_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_carrier_addr_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_carrier_addr_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_current_state_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_current_state_ds[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_current_state_ds[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_done_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_done_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_done_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_ds[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_ds[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_error_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_error_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_error_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_h_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_h_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_h_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_l_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_l_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_l_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_ctrl_len_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_len_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_len_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_l2p_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_l2p_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_next_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_next_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_next_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_p2l_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_p2l_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_p2l_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/dma_stat_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_stat_ds[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_stat_ds[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_address_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_address_ds[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_address_ds[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wbm_header_type_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_header_type_ds</obj_property>
+      <obj_property name="ObjectShortName">wbm_header_type_ds</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_op_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_op_ds[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_op_ds[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_payload_length_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_payload_length_ds[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_payload_length_ds[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wbm_states_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wbm_states_ds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_states_ds[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wb_adr_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_adr_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_adr_s[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wb_adr_s__0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_adr_s__0[31:8]</obj_property>
+      <obj_property name="ObjectShortName">wb_adr_s__0[31:8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wb_dat_o_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_dat_o_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_dat_o_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/wb_dat_i_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_dat_i_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_dat_i_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wb_cyc_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_cyc_s</obj_property>
+      <obj_property name="ObjectShortName">wb_cyc_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wb_stb_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_stb_s</obj_property>
+      <obj_property name="ObjectShortName">wb_stb_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wb_we_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_we_s</obj_property>
+      <obj_property name="ObjectShortName">wb_we_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/wb_ack_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/wb_ack_s</obj_property>
+      <obj_property name="ObjectShortName">wb_ack_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

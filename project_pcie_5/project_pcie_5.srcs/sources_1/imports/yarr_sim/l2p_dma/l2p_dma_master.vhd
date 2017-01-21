@@ -336,7 +336,7 @@ begin
                 ldm_arb_tkeep_o <= x"FF";
 			when L2P_DATA =>
 				if (l2p_64b_address_i = '1') then
-				    ldm_arb_data_l <= f_byte_swap(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap);
+				    ldm_arb_data_l <= f_byte_swap_64(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap);
 				else
 				    ldm_arb_data_l <= data_fifo_dout (31 downto 0) & data_fifo_dout_1 (63 downto 32);
 				end if;
@@ -345,7 +345,7 @@ begin
 				ldm_arb_tkeep_o <= x"FF";
 			when L2P_LAST_DATA =>
 			    if (l2p_64b_address_i = '1') then
-                    ldm_arb_data_l <= f_byte_swap(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap);
+                    ldm_arb_data_l <= f_byte_swap_64(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap);
                     ldm_arb_tkeep_o <= x"FF";
                 else
                     ldm_arb_data_l <= data_fifo_dout (31 downto 0) & data_fifo_dout_1 (63 downto 32);

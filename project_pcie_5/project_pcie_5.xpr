@@ -27,27 +27,27 @@
     <Option Name="IPUserFilesDir" Val="$PPRDIR/project_pcie_5.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/project_pcie_5.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="3"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="33"/>
-    <Option Name="WTModelSimExportSim" Val="33"/>
-    <Option Name="WTQuestaExportSim" Val="33"/>
-    <Option Name="WTIesExportSim" Val="33"/>
-    <Option Name="WTVcsExportSim" Val="33"/>
-    <Option Name="WTRivieraExportSim" Val="33"/>
-    <Option Name="WTActivehdlExportSim" Val="33"/>
+    <Option Name="WTXSimExportSim" Val="43"/>
+    <Option Name="WTModelSimExportSim" Val="43"/>
+    <Option Name="WTQuestaExportSim" Val="43"/>
+    <Option Name="WTIesExportSim" Val="43"/>
+    <Option Name="WTVcsExportSim" Val="43"/>
+    <Option Name="WTRivieraExportSim" Val="43"/>
+    <Option Name="WTActivehdlExportSim" Val="43"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/p2l_dma/fifo_32x512.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/common/gn4124_core_pkg.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/p2l_dma/fifo_32x512.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/common/gn4124_core_pkg.vhd"/>
           <Attr Name="ImportTime" Val="1484693380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -61,9 +61,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/common/gn4124_core_pkg.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/p2l_dma/fifo_32x512.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/common/gn4124_core_pkg.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/p2l_dma/fifo_32x512.vhd"/>
           <Attr Name="ImportTime" Val="1484693380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -101,18 +101,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/bcf_bram_wbs.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/wb_master64/wb_master64.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../pcie_lite_wb_2/pcie_lite_wb_2.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd"/>
-          <Attr Name="ImportTime" Val="1479259239"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/l2p_arbiter.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/l2p_arbiter.vhd"/>
-          <Attr Name="ImportTime" Val="1480535732"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/wb_master64/wb_master64.vhd"/>
+          <Attr Name="ImportTime" Val="1484693380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -125,17 +117,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/wb_master64/wb_master64.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/wb_master64/wb_master64.vhd"/>
-          <Attr Name="ImportTime" Val="1484693380"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/top/dma_controller.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/top/dma_controller.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/p2l_dma/p2l_dma_master.vhd"/>
           <Attr Name="ImportTime" Val="1484693380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -149,10 +133,26 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/Downloads/l2p_arbiter.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/p2l_dma/p2l_dma_master.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/l2p_arbiter.vhd"/>
+          <Attr Name="ImportTime" Val="1480535732"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/yarr_sim/top/dma_controller.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/top/dma_controller.vhd"/>
           <Attr Name="ImportTime" Val="1484693380"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Downloads/bcf_bram_wbs.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../pcie_lite_wb_2/pcie_lite_wb_2.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd"/>
+          <Attr Name="ImportTime" Val="1479259239"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -173,11 +173,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/app.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/wb_master64/wb_master64_bench.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_pcie_4/project_pcie_4.srcs/sources_1/new/app.vhd"/>
-          <Attr Name="ImportTime" Val="1479511769"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/wb_master64/wb_master64_bench.vhd"/>
+          <Attr Name="ImportTime" Val="1484693380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -205,11 +205,17 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/project_sim/wb_master64_bench_behav.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_sim/project_sim/wb_master64_bench_behav.wcfg"/>
+          <Attr Name="ImportTime" Val="1484693380"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="top_level"/>
+        <Option Name="TopModule" Val="wb_master64_bench"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
@@ -253,6 +259,58 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="fifo_92x512"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_axis" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_axis">
+      <File Path="$PSRCDIR/sources_1/ip/ila_axis/ila_axis.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_axis"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_dma_ctrl_reg" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_dma_ctrl_reg">
+      <File Path="$PSRCDIR/sources_1/ip/ila_dma_ctrl_reg/ila_dma_ctrl_reg.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_dma_ctrl_reg"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_wsh_pipe" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_wsh_pipe">
+      <File Path="$PSRCDIR/sources_1/ip/ila_wsh_pipe/ila_wsh_pipe.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_wsh_pipe"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_pd_pdm" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_pd_pdm">
+      <File Path="$PSRCDIR/sources_1/ip/ila_pd_pdm/ila_pd_pdm.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_pd_pdm"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -307,6 +365,34 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
+    <Run Id="ila_axis_synth_1" Type="Ft3:Synth" SrcSet="ila_axis" Part="xc7k160tfbg676-2" ConstrsSet="ila_axis" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_axis_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="ila_dma_ctrl_reg_synth_1" Type="Ft3:Synth" SrcSet="ila_dma_ctrl_reg" Part="xc7k160tfbg676-2" ConstrsSet="ila_dma_ctrl_reg" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_dma_ctrl_reg_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="ila_wsh_pipe_synth_1" Type="Ft3:Synth" SrcSet="ila_wsh_pipe" Part="xc7k160tfbg676-2" ConstrsSet="ila_wsh_pipe" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_wsh_pipe_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="ila_pd_pdm_synth_1" Type="Ft3:Synth" SrcSet="ila_pd_pdm" Part="xc7k160tfbg676-2" ConstrsSet="ila_pd_pdm" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_pd_pdm_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
@@ -353,6 +439,62 @@
       </Strategy>
     </Run>
     <Run Id="fifo_92x512_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="fifo_92x512" Description="Default settings for Implementation." SynthRun="fifo_92x512_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="ila_axis_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_axis" Description="Default settings for Implementation." SynthRun="ila_axis_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="ila_dma_ctrl_reg_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_dma_ctrl_reg" Description="Default settings for Implementation." SynthRun="ila_dma_ctrl_reg_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="ila_wsh_pipe_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_wsh_pipe" Description="Default settings for Implementation." SynthRun="ila_wsh_pipe_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="ila_pd_pdm_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_pd_pdm" Description="Default settings for Implementation." SynthRun="ila_pd_pdm_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>

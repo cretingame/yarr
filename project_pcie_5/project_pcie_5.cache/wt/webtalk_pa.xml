@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Jan 18 08:16:34 2017">
+<application name="pa" timeStamp="Fri Jan 20 18:01:51 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
-<property name="ProjectIteration" value="43" type="ProjectIteration"/>
+<property name="ProjectIteration" value="60" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,66 +18,81 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddCfgMem" value="4" type="JavaHandler"/>
-<property name="AddSources" value="6" type="JavaHandler"/>
+<property name="AddSources" value="8" type="JavaHandler"/>
 <property name="CopyIPHandler" value="1" type="JavaHandler"/>
-<property name="CoreView" value="8" type="JavaHandler"/>
+<property name="CoreView" value="10" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="3" type="JavaHandler"/>
-<property name="CustomizeCore" value="10" type="JavaHandler"/>
+<property name="CustomizeCore" value="15" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
 <property name="EditCopy" value="1" type="JavaHandler"/>
-<property name="EditDelete" value="17" type="JavaHandler"/>
-<property name="EditPaste" value="9" type="JavaHandler"/>
+<property name="EditDelete" value="18" type="JavaHandler"/>
+<property name="EditPaste" value="17" type="JavaHandler"/>
 <property name="EditRedo" value="5" type="JavaHandler"/>
 <property name="EditUndo" value="12" type="JavaHandler"/>
-<property name="FlipToViewTaskRTLAnalysis" value="1" type="JavaHandler"/>
+<property name="ExportILAData" value="2" type="JavaHandler"/>
+<property name="FlipToViewTaskRTLAnalysis" value="3" type="JavaHandler"/>
 <property name="GenerateOutputForBDFile" value="1" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="30" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="49" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="3" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="53" type="JavaHandler"/>
+<property name="OpenFile" value="1" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="98" type="JavaHandler"/>
 <property name="OpenProject" value="8" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="4" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="7" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="2" type="JavaHandler"/>
-<property name="ProgramDevice" value="18" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
-<property name="RecustomizeCore" value="53" type="JavaHandler"/>
+<property name="ProgramDevice" value="36" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="8" type="JavaHandler"/>
+<property name="RecustomizeCore" value="63" type="JavaHandler"/>
 <property name="RefreshDevice" value="3" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="31" type="JavaHandler"/>
-<property name="RunImplementation" value="11" type="JavaHandler"/>
+<property name="RunBitgen" value="46" type="JavaHandler"/>
+<property name="RunImplementation" value="13" type="JavaHandler"/>
 <property name="RunSchematic" value="16" type="JavaHandler"/>
-<property name="RunSynthesis" value="16" type="JavaHandler"/>
-<property name="RunTrigger" value="27" type="JavaHandler"/>
-<property name="RunTriggerImmediate" value="37" type="JavaHandler"/>
+<property name="RunSynthesis" value="24" type="JavaHandler"/>
+<property name="RunTrigger" value="91" type="JavaHandler"/>
+<property name="RunTriggerImmediate" value="64" type="JavaHandler"/>
 <property name="SaveDesign" value="3" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
 <property name="SaveProjectAs" value="3" type="JavaHandler"/>
 <property name="ShowProductWebPage" value="2" type="JavaHandler"/>
-<property name="ShowView" value="25" type="JavaHandler"/>
-<property name="StopTrigger" value="14" type="JavaHandler"/>
+<property name="ShowView" value="35" type="JavaHandler"/>
+<property name="SimulationClose" value="1" type="JavaHandler"/>
+<property name="SimulationRestart" value="1" type="JavaHandler"/>
+<property name="SimulationRun" value="3" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="4" type="JavaHandler"/>
+<property name="StopTrigger" value="42" type="JavaHandler"/>
 <property name="ToggleAutoFitSelection" value="2" type="JavaHandler"/>
 <property name="UpgradeIP" value="5" type="JavaHandler"/>
 <property name="ViewLayoutCmd" value="6" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="1" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="3" type="JavaHandler"/>
-<property name="ViewTaskProgramandDebug" value="4" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="42" type="JavaHandler"/>
-<property name="ViewTaskRTLAnalysis" value="25" type="JavaHandler"/>
-<property name="ViewTaskSynthesis" value="3" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="5" type="JavaHandler"/>
+<property name="ViewTaskProgramandDebug" value="17" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="75" type="JavaHandler"/>
+<property name="ViewTaskRTLAnalysis" value="36" type="JavaHandler"/>
+<property name="ViewTaskSynthesis" value="5" type="JavaHandler"/>
 <property name="XdcCreateClock" value="3" type="JavaHandler"/>
 <property name="XdcCreateGeneratedClock" value="5" type="JavaHandler"/>
 <property name="XdcSetOutputDelay" value="1" type="JavaHandler"/>
+<property name="ui.views.b.h.e" value="2" type="JavaHandler"/>
+<property name="ui.views.b.h.f" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, top_level - Behavioral (top_level.vhd" value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Open Hardware Manager], 26, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation], 9" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation], 9, true" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_pcie_5/project_pcie_5.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_OPEN_RECENTLY_OPENED_TARGET, Recent Targets" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, Open target" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@585b8887 ; eq1'bR ; probe24[0] ; 1 of 1, 1, ui.data.chipscope.v@585b8887, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, ILA_run_trigger" value="3" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 396, 146" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 429, 154" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="148" type="GuiMode"/>
+<property name="GuiMode" value="165" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="129" type="TclMode"/>
+<property name="TclMode" value="145" type="TclMode"/>
 </item>
 </section>
 </application>

@@ -87,7 +87,14 @@ entity dma_controller is
       wb_cyc_i : in  std_logic;                      -- Read or write cycle
       wb_stb_i : in  std_logic;                      -- Read or write strobe
       wb_we_i  : in  std_logic;                      -- Write
-      wb_ack_o : out std_logic                       -- Acknowledge
+      wb_ack_o : out std_logic;                       -- Acknowledge
+      
+      ---------------------------------------------------------
+      -- debug outputs
+      dma_ctrl_current_state_do : out std_logic_vector (2 downto 0);
+      dma_ctrl_do    : out std_logic_vector(31 downto 0);
+      dma_stat_do    : out std_logic_vector(31 downto 0);
+      dma_attrib_do  : out std_logic_vector(31 downto 0)
       );
 end dma_controller;
 
@@ -208,8 +215,19 @@ architecture behaviour of dma_controller is
 
 
 begin
-
-
+  
+  dma_ctrl_do <= dma_ctrl;
+  dma_stat_do <= dma_stat;
+  dma_attrib_do <= dma_attrib;
+  
+  with dma_ctrl_current_state select dma_ctrl_current_state_do <=
+    "000" when DMA_IDLE, 
+    "001" when DMA_START_TRANSFER, 
+    "010" when DMA_TRANSFER,
+    "011" when DMA_START_CHAIN,
+    "100" when DMA_CHAIN,
+    "101" when DMA_ERROR,
+    "110" when DMA_ABORT;
   ------------------------------------------------------------------------------
   -- Wishbone slave instanciation
   ------------------------------------------------------------------------------

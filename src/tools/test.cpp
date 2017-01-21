@@ -1,10 +1,7 @@
 #include <SpecController.h>
 #include <iostream>
-#include <iomanip>
 #include <stdint.h>
 #include <string.h>
-
-using namespace std;
 
 int main(int argc, char **argv) {
     int specNum = 0;
@@ -12,49 +9,28 @@ int main(int argc, char **argv) {
         specNum = atoi(argv[1]);
     SpecController mySpec(specNum);
     std::string tmp;
-    const size_t size = 0x800;
-    unsigned int err_count = 0;
-   
-    unsigned int address=0;
-    unsigned int offset = 0x00;
- 
+    const size_t size = 256*8;
+    unsigned err_count = 0;
+    
     uint32_t *data = new uint32_t[size];
+    for(unsigned i=0; i<size;i++)
+        data[i] = i;
+
     uint32_t *resp = new uint32_t[size];
 
-    cout << "Starting DMA write/read test ..." << std::endl;
-    memset(data,0x5A,size*4);
-    memset(resp,0xA5,size*4);
+    std::cout << "Starting DMA write/read test ..." << std::endl;
+    memset(resp, size*4, 0x5A);
     
-    cout << "memset Ok !" << endl;
-
-    //mySpec.write32(0xC,&data[0]);
-
-    for (unsigned int i=0; i<size; i++) {
-	address = offset + i;
-        data[i] = 0x5A000000 + i;
-	mySpec.write32(address,&data[i]);
-	//mySpec.read32(address,&resp[i]);
-	//mySpec.read32(address,&resp[i]);
-	//cout << "Addr: " << hex << address << endl;
-    }
-
-    for (unsigned int i=0; i<size; i++) {
-	address = offset + i;
-        //data[i] = 0x5A000000 + i;
-	//mySpec.write32(address,&data[i]);
-	//mySpec.read32(address,&resp[i]);
-	mySpec.read32(address,&resp[i]);
-	//cout << "Addr: " << hex << address << endl;
-    }
-
-    for (unsigned i=0; i<size; i=i+4) {
-        address = offset + i;
-        std::cout << "[" << dec << address << "] " << "[" << hex << address << "]   " 
-          << setfill('0') << setw(8) << hex << resp[i+0] << " "
-          << setfill('0') << setw(8) << hex << resp[i+1] << " "
-          << setfill('0') << setw(8) << hex << resp[i+2] << " "
-          << setfill('0') << setw(8) << hex << resp[i+3]
-          <<  endl;
+    mySpec.writeDma(0x0, data, size); 
+    std::cout << "... writing " << size * 4 << " byte." << std::endl;
+    mySpec.readDma(0x0, resp, size); 
+    std::cout << "... read " << size * 4 << " byte." << std::endl;
+    
+    for (unsigned i=0; i<size; i++) {
+        if (data[i] != resp[i]) {
+            std::cout << "[" << i << "] " << std::hex << data[i] << " \t " << resp[i] << std::endl << std::dec;
+            err_count++;
+        }
     }
 
     if (err_count == 0)

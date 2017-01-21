@@ -349,7 +349,7 @@ begin
 
         when P2L_ADDR_L =>
           -- send host address 32 lowest bits
-          pdm_arb_tdata_o        <= l2p_address_h & l2p_address_l;
+          pdm_arb_tdata_o        <= l2p_address_l & l2p_address_h; -- TODO 32 bit address
           -- clear dframe signal to indicate the end of packet
           pdm_arb_tlast_o <= '1';
           p2l_dma_current_state <= P2L_WAIT_READ_COMPLETION;

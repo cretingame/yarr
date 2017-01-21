@@ -38,8 +38,13 @@ int main(void) {
 	
 
 	//for (unsigned int i=0; i<32; i++) {
-		*((uint32_t*) bar0) = 0xA5A5A5A5;
-		*((uint32_t*) bar0+1) = 0x5A5A5A5A;
+		//*((uint32_t*) bar0) = 0xA5A5A5A5;
+		//*((uint32_t*) bar0+1) = 0x5A5A5A5A;
+		//*((uint32_t*) bar0) = 0x00000000;
+                //*((uint32_t*) bar0+1) = 0x00000000;
+		//*((uint32_t*) bar0+2) = 0x0000050A;
+		//*((uint32_t*) bar0+3) = 0x0000050A;
+		//*((uint32_t*) bar0+4) = 0x0000050A;
 		//std::cout << "[" << i << "] " << std::hex << (unsigned)spec->readConfigByte(i) << std::dec << std::endl;
 	//}
 	
