@@ -346,8 +346,9 @@ begin
 			end if;
 		end if;
 	end process p2l_data_delay_p;
-	
-	pd_pdm_data_o <= s_axis_rx_tdata_0_s(31 downto 0) & s_axis_rx_tdata_1_s(63 downto 32);
+
+	--pd_pdm_data_o <= s_axis_rx_tdata_0_s(31 downto 0) & s_axis_rx_tdata_1_s(63 downto 32);
+	pd_pdm_data_o <= f_byte_swap(true, s_axis_rx_tdata_0_s(31 downto 0), byte_swap_c) & f_byte_swap(true, s_axis_rx_tdata_0_s(63 downto 32), byte_swap_c);
 	
 	pd_pdm_data_valid_o <= s_axis_rx_tvalid_s when state_s = l2p_data_rx else '0';
 	pd_pdm_data_last_o <= s_axis_rx_tlast_s when state_s = l2p_data_rx else '0';

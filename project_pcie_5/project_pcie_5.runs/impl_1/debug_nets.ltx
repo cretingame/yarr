@@ -294,33 +294,28 @@
         <net name="app_0/s_axis_rx_tuser_i[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="11"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/wbm_states_ds[3]"/>
-        <net name="app_0/wbm_states_ds[2]"/>
-        <net name="app_0/wbm_states_ds[1]"/>
-        <net name="app_0/wbm_states_ds[0]"/>
+        <net name="app_0/dma_ctrl_start_l2p_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="12"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="3"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/wbm_op_ds[2]"/>
-        <net name="app_0/wbm_op_ds[1]"/>
-        <net name="app_0/wbm_op_ds[0]"/>
+        <net name="app_0/dma_ctrl_start_p2l_s_1"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -332,128 +327,55 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/wbm_header_type_ds"/>
+        <net name="app_0/dma_ctrl_start_next_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="14"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="10"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/wbm_payload_length_ds[9]"/>
-        <net name="app_0/wbm_payload_length_ds[8]"/>
-        <net name="app_0/wbm_payload_length_ds[7]"/>
-        <net name="app_0/wbm_payload_length_ds[6]"/>
-        <net name="app_0/wbm_payload_length_ds[5]"/>
-        <net name="app_0/wbm_payload_length_ds[4]"/>
-        <net name="app_0/wbm_payload_length_ds[3]"/>
-        <net name="app_0/wbm_payload_length_ds[2]"/>
-        <net name="app_0/wbm_payload_length_ds[1]"/>
-        <net name="app_0/wbm_payload_length_ds[0]"/>
+        <net name="app_0/dma_ctrl_abort_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="15"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/wbm_address_ds[31]"/>
-        <net name="app_0/wbm_address_ds[30]"/>
-        <net name="app_0/wbm_address_ds[29]"/>
-        <net name="app_0/wbm_address_ds[28]"/>
-        <net name="app_0/wbm_address_ds[27]"/>
-        <net name="app_0/wbm_address_ds[26]"/>
-        <net name="app_0/wbm_address_ds[25]"/>
-        <net name="app_0/wbm_address_ds[24]"/>
-        <net name="app_0/wbm_address_ds[23]"/>
-        <net name="app_0/wbm_address_ds[22]"/>
-        <net name="app_0/wbm_address_ds[21]"/>
-        <net name="app_0/wbm_address_ds[20]"/>
-        <net name="app_0/wbm_address_ds[19]"/>
-        <net name="app_0/wbm_address_ds[18]"/>
-        <net name="app_0/wbm_address_ds[17]"/>
-        <net name="app_0/wbm_address_ds[16]"/>
-        <net name="app_0/wbm_address_ds[15]"/>
-        <net name="app_0/wbm_address_ds[14]"/>
-        <net name="app_0/wbm_address_ds[13]"/>
-        <net name="app_0/wbm_address_ds[12]"/>
-        <net name="app_0/wbm_address_ds[11]"/>
-        <net name="app_0/wbm_address_ds[10]"/>
-        <net name="app_0/wbm_address_ds[9]"/>
-        <net name="app_0/wbm_address_ds[8]"/>
-        <net name="app_0/wbm_address_ds[7]"/>
-        <net name="app_0/wbm_address_ds[6]"/>
-        <net name="app_0/wbm_address_ds[5]"/>
-        <net name="app_0/wbm_address_ds[4]"/>
-        <net name="app_0/wbm_address_ds[3]"/>
-        <net name="app_0/wbm_address_ds[2]"/>
-        <net name="app_0/wbm_address_ds[1]"/>
-        <net name="app_0/wbm_address_ds[0]"/>
+        <net name="app_0/dma_ctrl_done_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="16"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="3"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/dma_ctrl_current_state_ds[2]"/>
-        <net name="app_0/dma_ctrl_current_state_ds[1]"/>
-        <net name="app_0/dma_ctrl_current_state_ds[0]"/>
+        <net name="app_0/dma_ctrl_error_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="17"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="app_0/dma_ctrl_ds[31]"/>
-        <net name="app_0/dma_ctrl_ds[30]"/>
-        <net name="app_0/dma_ctrl_ds[29]"/>
-        <net name="app_0/dma_ctrl_ds[28]"/>
-        <net name="app_0/dma_ctrl_ds[27]"/>
-        <net name="app_0/dma_ctrl_ds[26]"/>
-        <net name="app_0/dma_ctrl_ds[25]"/>
-        <net name="app_0/dma_ctrl_ds[24]"/>
-        <net name="app_0/dma_ctrl_ds[23]"/>
-        <net name="app_0/dma_ctrl_ds[22]"/>
-        <net name="app_0/dma_ctrl_ds[21]"/>
-        <net name="app_0/dma_ctrl_ds[20]"/>
-        <net name="app_0/dma_ctrl_ds[19]"/>
-        <net name="app_0/dma_ctrl_ds[18]"/>
-        <net name="app_0/dma_ctrl_ds[17]"/>
-        <net name="app_0/dma_ctrl_ds[16]"/>
-        <net name="app_0/dma_ctrl_ds[15]"/>
-        <net name="app_0/dma_ctrl_ds[14]"/>
-        <net name="app_0/dma_ctrl_ds[13]"/>
-        <net name="app_0/dma_ctrl_ds[12]"/>
-        <net name="app_0/dma_ctrl_ds[11]"/>
-        <net name="app_0/dma_ctrl_ds[10]"/>
-        <net name="app_0/dma_ctrl_ds[9]"/>
-        <net name="app_0/dma_ctrl_ds[8]"/>
-        <net name="app_0/dma_ctrl_ds[7]"/>
-        <net name="app_0/dma_ctrl_ds[6]"/>
-        <net name="app_0/dma_ctrl_ds[5]"/>
-        <net name="app_0/dma_ctrl_ds[4]"/>
-        <net name="app_0/dma_ctrl_ds[3]"/>
-        <net name="app_0/dma_ctrl_ds[2]"/>
-        <net name="app_0/dma_ctrl_ds[1]"/>
-        <net name="app_0/dma_ctrl_ds[0]"/>
+        <net name="app_0/user_lnk_up_i"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -462,91 +384,32 @@
         <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
         <Option Id="PROBE_PORT" value="18"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="16"/>
       </probeOptions>
       <nets>
-        <net name="app_0/dma_stat_ds[31]"/>
-        <net name="app_0/dma_stat_ds[30]"/>
-        <net name="app_0/dma_stat_ds[29]"/>
-        <net name="app_0/dma_stat_ds[28]"/>
-        <net name="app_0/dma_stat_ds[27]"/>
-        <net name="app_0/dma_stat_ds[26]"/>
-        <net name="app_0/dma_stat_ds[25]"/>
-        <net name="app_0/dma_stat_ds[24]"/>
-        <net name="app_0/dma_stat_ds[23]"/>
-        <net name="app_0/dma_stat_ds[22]"/>
-        <net name="app_0/dma_stat_ds[21]"/>
-        <net name="app_0/dma_stat_ds[20]"/>
-        <net name="app_0/dma_stat_ds[19]"/>
-        <net name="app_0/dma_stat_ds[18]"/>
-        <net name="app_0/dma_stat_ds[17]"/>
-        <net name="app_0/dma_stat_ds[16]"/>
-        <net name="app_0/dma_stat_ds[15]"/>
-        <net name="app_0/dma_stat_ds[14]"/>
-        <net name="app_0/dma_stat_ds[13]"/>
-        <net name="app_0/dma_stat_ds[12]"/>
-        <net name="app_0/dma_stat_ds[11]"/>
-        <net name="app_0/dma_stat_ds[10]"/>
-        <net name="app_0/dma_stat_ds[9]"/>
-        <net name="app_0/dma_stat_ds[8]"/>
-        <net name="app_0/dma_stat_ds[7]"/>
-        <net name="app_0/dma_stat_ds[6]"/>
-        <net name="app_0/dma_stat_ds[5]"/>
-        <net name="app_0/dma_stat_ds[4]"/>
-        <net name="app_0/dma_stat_ds[3]"/>
-        <net name="app_0/dma_stat_ds[2]"/>
-        <net name="app_0/dma_stat_ds[1]"/>
-        <net name="app_0/dma_stat_ds[0]"/>
+        <net name="app_0/cfg_dstatus_i[15]"/>
+        <net name="app_0/cfg_dstatus_i[14]"/>
+        <net name="app_0/cfg_dstatus_i[13]"/>
+        <net name="app_0/cfg_dstatus_i[12]"/>
+        <net name="app_0/cfg_dstatus_i[11]"/>
+        <net name="app_0/cfg_dstatus_i[10]"/>
+        <net name="app_0/cfg_dstatus_i[9]"/>
+        <net name="app_0/cfg_dstatus_i[8]"/>
+        <net name="app_0/cfg_dstatus_i[7]"/>
+        <net name="app_0/cfg_dstatus_i[6]"/>
+        <net name="app_0/cfg_dstatus_i[5]"/>
+        <net name="app_0/cfg_dstatus_i[4]"/>
+        <net name="app_0/cfg_dstatus_i[3]"/>
+        <net name="app_0/cfg_dstatus_i[2]"/>
+        <net name="app_0/cfg_dstatus_i[1]"/>
+        <net name="app_0/cfg_dstatus_i[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="19"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/dma_attrib_ds[31]"/>
-        <net name="app_0/dma_attrib_ds[30]"/>
-        <net name="app_0/dma_attrib_ds[29]"/>
-        <net name="app_0/dma_attrib_ds[28]"/>
-        <net name="app_0/dma_attrib_ds[27]"/>
-        <net name="app_0/dma_attrib_ds[26]"/>
-        <net name="app_0/dma_attrib_ds[25]"/>
-        <net name="app_0/dma_attrib_ds[24]"/>
-        <net name="app_0/dma_attrib_ds[23]"/>
-        <net name="app_0/dma_attrib_ds[22]"/>
-        <net name="app_0/dma_attrib_ds[21]"/>
-        <net name="app_0/dma_attrib_ds[20]"/>
-        <net name="app_0/dma_attrib_ds[19]"/>
-        <net name="app_0/dma_attrib_ds[18]"/>
-        <net name="app_0/dma_attrib_ds[17]"/>
-        <net name="app_0/dma_attrib_ds[16]"/>
-        <net name="app_0/dma_attrib_ds[15]"/>
-        <net name="app_0/dma_attrib_ds[14]"/>
-        <net name="app_0/dma_attrib_ds[13]"/>
-        <net name="app_0/dma_attrib_ds[12]"/>
-        <net name="app_0/dma_attrib_ds[11]"/>
-        <net name="app_0/dma_attrib_ds[10]"/>
-        <net name="app_0/dma_attrib_ds[9]"/>
-        <net name="app_0/dma_attrib_ds[8]"/>
-        <net name="app_0/dma_attrib_ds[7]"/>
-        <net name="app_0/dma_attrib_ds[6]"/>
-        <net name="app_0/dma_attrib_ds[5]"/>
-        <net name="app_0/dma_attrib_ds[4]"/>
-        <net name="app_0/dma_attrib_ds[3]"/>
-        <net name="app_0/dma_attrib_ds[2]"/>
-        <net name="app_0/dma_attrib_ds[1]"/>
-        <net name="app_0/dma_attrib_ds[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="20"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="0"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
@@ -587,9 +450,9 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="21"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
@@ -630,9 +493,9 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="22"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
@@ -673,9 +536,9 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="23"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="3"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
@@ -716,9 +579,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="24"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="4"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -728,9 +591,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="25"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="5"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -740,9 +603,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="26"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="6"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -752,9 +615,9 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="27"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="7"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
       </probeOptions>
@@ -765,9 +628,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="28"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="8"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -777,9 +640,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="29"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="9"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -789,9 +652,9 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="30"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="10"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -801,195 +664,21 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="31"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_adr_s[7]"/>
-        <net name="app_0/wb_adr_s[6]"/>
-        <net name="app_0/wb_adr_s[5]"/>
-        <net name="app_0/wb_adr_s[4]"/>
-        <net name="app_0/wb_adr_s[3]"/>
-        <net name="app_0/wb_adr_s[2]"/>
-        <net name="app_0/wb_adr_s[1]"/>
-        <net name="app_0/wb_adr_s[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="31"/>
-        <Option Id="PROBE_PORT_BITS" value="8"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="24"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_adr_s__0[31]"/>
-        <net name="app_0/wb_adr_s__0[30]"/>
-        <net name="app_0/wb_adr_s__0[29]"/>
-        <net name="app_0/wb_adr_s__0[28]"/>
-        <net name="app_0/wb_adr_s__0[27]"/>
-        <net name="app_0/wb_adr_s__0[26]"/>
-        <net name="app_0/wb_adr_s__0[25]"/>
-        <net name="app_0/wb_adr_s__0[24]"/>
-        <net name="app_0/wb_adr_s__0[23]"/>
-        <net name="app_0/wb_adr_s__0[22]"/>
-        <net name="app_0/wb_adr_s__0[21]"/>
-        <net name="app_0/wb_adr_s__0[20]"/>
-        <net name="app_0/wb_adr_s__0[19]"/>
-        <net name="app_0/wb_adr_s__0[18]"/>
-        <net name="app_0/wb_adr_s__0[17]"/>
-        <net name="app_0/wb_adr_s__0[16]"/>
-        <net name="app_0/wb_adr_s__0[15]"/>
-        <net name="app_0/wb_adr_s__0[14]"/>
-        <net name="app_0/wb_adr_s__0[13]"/>
-        <net name="app_0/wb_adr_s__0[12]"/>
-        <net name="app_0/wb_adr_s__0[11]"/>
-        <net name="app_0/wb_adr_s__0[10]"/>
-        <net name="app_0/wb_adr_s__0[9]"/>
-        <net name="app_0/wb_adr_s__0[8]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="32"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_dat_o_s[31]"/>
-        <net name="app_0/wb_dat_o_s[30]"/>
-        <net name="app_0/wb_dat_o_s[29]"/>
-        <net name="app_0/wb_dat_o_s[28]"/>
-        <net name="app_0/wb_dat_o_s[27]"/>
-        <net name="app_0/wb_dat_o_s[26]"/>
-        <net name="app_0/wb_dat_o_s[25]"/>
-        <net name="app_0/wb_dat_o_s[24]"/>
-        <net name="app_0/wb_dat_o_s[23]"/>
-        <net name="app_0/wb_dat_o_s[22]"/>
-        <net name="app_0/wb_dat_o_s[21]"/>
-        <net name="app_0/wb_dat_o_s[20]"/>
-        <net name="app_0/wb_dat_o_s[19]"/>
-        <net name="app_0/wb_dat_o_s[18]"/>
-        <net name="app_0/wb_dat_o_s[17]"/>
-        <net name="app_0/wb_dat_o_s[16]"/>
-        <net name="app_0/wb_dat_o_s[15]"/>
-        <net name="app_0/wb_dat_o_s[14]"/>
-        <net name="app_0/wb_dat_o_s[13]"/>
-        <net name="app_0/wb_dat_o_s[12]"/>
-        <net name="app_0/wb_dat_o_s[11]"/>
-        <net name="app_0/wb_dat_o_s[10]"/>
-        <net name="app_0/wb_dat_o_s[9]"/>
-        <net name="app_0/wb_dat_o_s[8]"/>
-        <net name="app_0/wb_dat_o_s[7]"/>
-        <net name="app_0/wb_dat_o_s[6]"/>
-        <net name="app_0/wb_dat_o_s[5]"/>
-        <net name="app_0/wb_dat_o_s[4]"/>
-        <net name="app_0/wb_dat_o_s[3]"/>
-        <net name="app_0/wb_dat_o_s[2]"/>
-        <net name="app_0/wb_dat_o_s[1]"/>
-        <net name="app_0/wb_dat_o_s[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="33"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_dat_i_s[31]"/>
-        <net name="app_0/wb_dat_i_s[30]"/>
-        <net name="app_0/wb_dat_i_s[29]"/>
-        <net name="app_0/wb_dat_i_s[28]"/>
-        <net name="app_0/wb_dat_i_s[27]"/>
-        <net name="app_0/wb_dat_i_s[26]"/>
-        <net name="app_0/wb_dat_i_s[25]"/>
-        <net name="app_0/wb_dat_i_s[24]"/>
-        <net name="app_0/wb_dat_i_s[23]"/>
-        <net name="app_0/wb_dat_i_s[22]"/>
-        <net name="app_0/wb_dat_i_s[21]"/>
-        <net name="app_0/wb_dat_i_s[20]"/>
-        <net name="app_0/wb_dat_i_s[19]"/>
-        <net name="app_0/wb_dat_i_s[18]"/>
-        <net name="app_0/wb_dat_i_s[17]"/>
-        <net name="app_0/wb_dat_i_s[16]"/>
-        <net name="app_0/wb_dat_i_s[15]"/>
-        <net name="app_0/wb_dat_i_s[14]"/>
-        <net name="app_0/wb_dat_i_s[13]"/>
-        <net name="app_0/wb_dat_i_s[12]"/>
-        <net name="app_0/wb_dat_i_s[11]"/>
-        <net name="app_0/wb_dat_i_s[10]"/>
-        <net name="app_0/wb_dat_i_s[9]"/>
-        <net name="app_0/wb_dat_i_s[8]"/>
-        <net name="app_0/wb_dat_i_s[7]"/>
-        <net name="app_0/wb_dat_i_s[6]"/>
-        <net name="app_0/wb_dat_i_s[5]"/>
-        <net name="app_0/wb_dat_i_s[4]"/>
-        <net name="app_0/wb_dat_i_s[3]"/>
-        <net name="app_0/wb_dat_i_s[2]"/>
-        <net name="app_0/wb_dat_i_s[1]"/>
-        <net name="app_0/wb_dat_i_s[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="34"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_cyc_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="35"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_stb_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="36"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_we_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="app_0/dbg_0.axis_debug"/>
-        <Option Id="PROBE_PORT" value="37"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/wb_ack_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_1.dma_ctrl_debug"/>
+        <Option Id="PROBE_PORT" value="11"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="3"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/dma_ctrl_current_state_ds[2]"/>
+        <net name="app_0/dma_ctrl_current_state_ds[1]"/>
+        <net name="app_0/dma_ctrl_current_state_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="0"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1032,7 +721,7 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1107,7 +796,7 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1182,7 +871,7 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="3"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1201,7 +890,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="4"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1213,7 +902,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="5"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1225,7 +914,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="6"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1237,7 +926,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="7"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1249,7 +938,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="8"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1261,7 +950,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="9"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1273,7 +962,7 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
         <Option Id="PROBE_PORT" value="10"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
@@ -1281,105 +970,6 @@
       </probeOptions>
       <nets>
         <net name="app_0/p2l_dma_cyc_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="HW_ILA" value="app_0/dbg_3.wbm_to_p2l_debug"/>
-        <Option Id="PROBE_PORT" value="0"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="64"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/pd_pdm_data_s[63]"/>
-        <net name="app_0/pd_pdm_data_s[62]"/>
-        <net name="app_0/pd_pdm_data_s[61]"/>
-        <net name="app_0/pd_pdm_data_s[60]"/>
-        <net name="app_0/pd_pdm_data_s[59]"/>
-        <net name="app_0/pd_pdm_data_s[58]"/>
-        <net name="app_0/pd_pdm_data_s[57]"/>
-        <net name="app_0/pd_pdm_data_s[56]"/>
-        <net name="app_0/pd_pdm_data_s[55]"/>
-        <net name="app_0/pd_pdm_data_s[54]"/>
-        <net name="app_0/pd_pdm_data_s[53]"/>
-        <net name="app_0/pd_pdm_data_s[52]"/>
-        <net name="app_0/pd_pdm_data_s[51]"/>
-        <net name="app_0/pd_pdm_data_s[50]"/>
-        <net name="app_0/pd_pdm_data_s[49]"/>
-        <net name="app_0/pd_pdm_data_s[48]"/>
-        <net name="app_0/pd_pdm_data_s[47]"/>
-        <net name="app_0/pd_pdm_data_s[46]"/>
-        <net name="app_0/pd_pdm_data_s[45]"/>
-        <net name="app_0/pd_pdm_data_s[44]"/>
-        <net name="app_0/pd_pdm_data_s[43]"/>
-        <net name="app_0/pd_pdm_data_s[42]"/>
-        <net name="app_0/pd_pdm_data_s[41]"/>
-        <net name="app_0/pd_pdm_data_s[40]"/>
-        <net name="app_0/pd_pdm_data_s[39]"/>
-        <net name="app_0/pd_pdm_data_s[38]"/>
-        <net name="app_0/pd_pdm_data_s[37]"/>
-        <net name="app_0/pd_pdm_data_s[36]"/>
-        <net name="app_0/pd_pdm_data_s[35]"/>
-        <net name="app_0/pd_pdm_data_s[34]"/>
-        <net name="app_0/pd_pdm_data_s[33]"/>
-        <net name="app_0/pd_pdm_data_s[32]"/>
-        <net name="app_0/pd_pdm_data_s[31]"/>
-        <net name="app_0/pd_pdm_data_s[30]"/>
-        <net name="app_0/pd_pdm_data_s[29]"/>
-        <net name="app_0/pd_pdm_data_s[28]"/>
-        <net name="app_0/pd_pdm_data_s[27]"/>
-        <net name="app_0/pd_pdm_data_s[26]"/>
-        <net name="app_0/pd_pdm_data_s[25]"/>
-        <net name="app_0/pd_pdm_data_s[24]"/>
-        <net name="app_0/pd_pdm_data_s[23]"/>
-        <net name="app_0/pd_pdm_data_s[22]"/>
-        <net name="app_0/pd_pdm_data_s[21]"/>
-        <net name="app_0/pd_pdm_data_s[20]"/>
-        <net name="app_0/pd_pdm_data_s[19]"/>
-        <net name="app_0/pd_pdm_data_s[18]"/>
-        <net name="app_0/pd_pdm_data_s[17]"/>
-        <net name="app_0/pd_pdm_data_s[16]"/>
-        <net name="app_0/pd_pdm_data_s[15]"/>
-        <net name="app_0/pd_pdm_data_s[14]"/>
-        <net name="app_0/pd_pdm_data_s[13]"/>
-        <net name="app_0/pd_pdm_data_s[12]"/>
-        <net name="app_0/pd_pdm_data_s[11]"/>
-        <net name="app_0/pd_pdm_data_s[10]"/>
-        <net name="app_0/pd_pdm_data_s[9]"/>
-        <net name="app_0/pd_pdm_data_s[8]"/>
-        <net name="app_0/pd_pdm_data_s[7]"/>
-        <net name="app_0/pd_pdm_data_s[6]"/>
-        <net name="app_0/pd_pdm_data_s[5]"/>
-        <net name="app_0/pd_pdm_data_s[4]"/>
-        <net name="app_0/pd_pdm_data_s[3]"/>
-        <net name="app_0/pd_pdm_data_s[2]"/>
-        <net name="app_0/pd_pdm_data_s[1]"/>
-        <net name="app_0/pd_pdm_data_s[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="HW_ILA" value="app_0/dbg_3.wbm_to_p2l_debug"/>
-        <Option Id="PROBE_PORT" value="1"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/pd_pdm_data_last_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="HW_ILA" value="app_0/dbg_3.wbm_to_p2l_debug"/>
-        <Option Id="PROBE_PORT" value="2"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/pd_pdm_data_valid_s"/>
       </nets>
     </probe>
   </probeset>

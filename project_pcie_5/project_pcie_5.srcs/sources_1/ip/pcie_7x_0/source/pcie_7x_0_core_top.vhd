@@ -311,8 +311,8 @@ entity pcie_7x_0_core_top is
     PL_INTERFACE                                   : string     := "FALSE";
     CFG_MGMT_IF                                    : string     := "FALSE";
     CFG_CTL_IF                                     : string     := "FALSE";
-    CFG_STATUS_IF                                  : string     := "FALSE";
-    RCV_MSG_IF                                     : string     := "FALSE";
+    CFG_STATUS_IF                                  : string     := "TRUE";
+    RCV_MSG_IF                                     : string     := "TRUE";
     CFG_FC_IF                                      : string     := "FALSE";
     SHARED_LOGIC_IN_CORE		           : string     := "FALSE";
     EXT_PIPE_INTERFACE                             : string     := "FALSE";

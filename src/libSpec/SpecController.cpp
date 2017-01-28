@@ -108,7 +108,8 @@ int SpecController::readDma(uint32_t off, uint32_t *data, size_t words) {
         struct dma_linked_list *llist = this->prepDmaList(um, km, off, 0);
         
         uint32_t *addr = (uint32_t*) bar0+DMACSTARTR;
-        memcpy(addr, &llist[0], sizeof(struct dma_linked_list));
+        //memcpy(addr, &llist[0], sizeof(struct dma_linked_list));
+        this->writeBlock(bar0, DMACSTARTR, (uint32_t*) &llist[0], sizeof(struct dma_linked_list)/sizeof(uint32_t));
         this->startDma();
 
         if (spec->waitForInterrupt(0) < 1) {
@@ -207,7 +208,7 @@ void SpecController::mask32(void *bar, uint32_t off, uint32_t mask, uint32_t val
 
 void SpecController::writeBlock(void *bar, uint32_t off, uint32_t *val, size_t words) {
     for (unsigned i=0; i<words; i++) {
-       uint32_t *addr = (uint32_t*) bar+off+(i);
+       volatile uint32_t *addr = (uint32_t*) bar+off+(i);
        *addr = val[i];
     }
     //memcpy(addr, val, words*4);

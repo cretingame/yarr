@@ -73,6 +73,9 @@ entity app is
            cfg_interrupt_stat_o : out STD_LOGIC;
            cfg_pciecap_interrupt_msgnum_o : out STD_LOGIC_VECTOR(4 DOWNTO 0);
            
+           -- PCIe debug
+           cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
+           
            --I/O
            usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0);
            usr_led_o : out STD_LOGIC_VECTOR (3 downto 0);
@@ -82,7 +85,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(3 downto 0) := "1101";
+    constant DEBUG_C : std_logic_vector(3 downto 0) := "0111";
     
     component simple_counter is
         Port ( 
@@ -330,6 +333,7 @@ architecture Behavioral of app is
 		  pdm_arb_tvalid_o  : out std_logic;  -- Read completion signals
 		  pdm_arb_tlast_o : out std_logic;  -- Toward the arbiter
 		  pdm_arb_tdata_o   : out std_logic_vector(63 downto 0);
+		  pdm_arb_tkeep_o   : out std_logic_vector(7 downto 0);
 		  pdm_arb_req_o    : out std_logic;
 		  arb_pdm_gnt_i    : in  std_logic;
 
@@ -397,7 +401,7 @@ architecture Behavioral of app is
 			-- L2P channel control
 			l2p_edb_o  : out std_logic;                    -- Asserted when transfer is aborted
 			l2p_rdy_i  : in  std_logic;                    -- De-asserted to pause transdert already in progress
-			l2p_64b_address_i : in std_logic;
+			--l2p_64b_address_i : in std_logic;
 			tx_error_i : in  std_logic;                    -- Asserted when unexpected or malformed paket received
 
 			-- DMA Interface (Pipelined Wishbone)
@@ -433,33 +437,14 @@ COMPONENT ila_axis
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe10 : IN STD_LOGIC_VECTOR(21 DOWNTO 0); 
-        probe11 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
-        probe12 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe14 : IN STD_LOGIC_VECTOR(9 DOWNTO 0); 
-        probe15 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe16 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
-        probe17 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe18 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe19 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe20 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe21 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe22 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe23 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe24 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe25 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe26 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe27 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
-        probe28 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe29 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe30 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe31 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe32 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe33 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-        probe34 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe35 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe36 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe37 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe18 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -480,7 +465,8 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe11 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -633,6 +619,7 @@ COMPONENT ila_axis
 	signal pdm_arb_tvalid_s  : std_logic;  -- Read completion signals
 	signal pdm_arb_tlast_s : std_logic;  -- Toward the arbiter
 	signal pdm_arb_tdata_s   : std_logic_vector(63 downto 0);
+	signal pdm_arb_tkeep_s : std_logic_vector(7 downto 0);
 	signal pdm_arb_req_s    : std_logic;
 	signal pdm_arb_tready_s    : std_logic;
 	
@@ -911,6 +898,7 @@ begin
 		  pdm_arb_tvalid_o  => pdm_arb_tvalid_s,  -- Read completion signals
 		  pdm_arb_tlast_o => pdm_arb_tlast_s,  -- Toward the arbiter
 		  pdm_arb_tdata_o   => pdm_arb_tdata_s,
+		  pdm_arb_tkeep_o   => pdm_arb_tkeep_s,
 		  pdm_arb_req_o    => pdm_arb_req_s,
 		  arb_pdm_gnt_i    => pdm_arb_tready_s,
 
@@ -972,7 +960,7 @@ begin
 		l2p_edb_o  => open,
 		ldm_arb_tready_i => ldm_arb_tready_s,
 		l2p_rdy_i  => '1',
-		l2p_64b_address_i => '0',
+		--l2p_64b_address_i => '0',
 		tx_error_i => '0',
 
 		l2p_dma_clk_i   => clk_i,
@@ -1011,7 +999,7 @@ begin
 		---------------------------------------------------------
 		-- From P2L DMA master (pdm) to arbiter (arb)
 		pdm_arb_tdata_i => pdm_arb_tdata_s,
-		pdm_arb_tkeep_i => X"FF", --TODO
+		pdm_arb_tkeep_i => pdm_arb_tkeep_s,
 		pdm_arb_tlast_i => pdm_arb_tlast_s,
 		pdm_arb_tvalid_i => pdm_arb_tvalid_s,
 		pdm_arb_req_i => pdm_arb_req_s,
@@ -1120,33 +1108,41 @@ begin
           probe8(0) => m_axis_tx_tvalid_s,
           probe9(0) => m_axis_tx_tready_s,
           probe10 => s_axis_rx_tuser_i, 
-          probe11 => wbm_states_ds, 
-          probe12 => wbm_op_ds, 
-          probe13(0) => wbm_header_type_ds, 
-          probe14 => wbm_payload_length_ds, 
-          probe15 => wbm_address_ds, 
-          probe16 => dma_ctrl_current_state_ds, 
-          probe17 => dma_ctrl_ds, 
-          probe18 => dma_stat_ds, 
-          probe19 => dma_attrib_ds, 
-          probe20 => dma_ctrl_carrier_addr_s, 
-          probe21 => dma_ctrl_host_addr_h_s, 
-          probe22 => dma_ctrl_host_addr_l_s, 
-          probe23 => dma_ctrl_len_s, 
-          probe24(0) => dma_ctrl_start_l2p_s, 
-          probe25(0) => dma_ctrl_start_p2l_s, 
-          probe26(0) => dma_ctrl_start_next_s, 
-          probe27 => dma_ctrl_byte_swap_s, 
-          probe28(0) => dma_ctrl_abort_s, 
-          probe29(0) => dma_ctrl_done_s,
-          probe30(0) => dma_ctrl_error_s, 
-          probe31 => wb_adr_s(31 downto 0), 
-          probe32 => wb_dat_o_s, 
-          probe33 => wb_dat_i_s, 
-          probe34(0) => wb_cyc_s, 
-          probe35(0) => wb_stb_s, 
-          probe36(0) => wb_we_s,
-          probe37(0) => wb_ack_s
+          probe11(0) => dma_ctrl_start_l2p_s, 
+          probe12(0) => dma_ctrl_start_p2l_s, 
+          probe13(0) => dma_ctrl_start_next_s,
+          probe14(0) => dma_ctrl_abort_s, 
+          probe15(0) => dma_ctrl_done_s,
+          probe16(0) => dma_ctrl_error_s,
+          probe17(0) => user_lnk_up_i,
+          probe18 => cfg_dstatus_i
+          --probe11 => wbm_states_ds, 
+          --probe12 => (others => '0'), --wbm_op_ds, 
+          --probe13(0) => '0', --wbm_header_type_ds, 
+          --probe14 => (others => '0'),--wbm_payload_length_ds, 
+          --probe15 => (others => '0'),--wbm_address_ds, 
+          --probe16 => dma_ctrl_current_state_ds, 
+          --probe17 => (others => '0'), --dma_ctrl_ds, 
+          --probe18 => (others => '0'), --dma_stat_ds, 
+          --probe19 => (others => '0'), --dma_attrib_ds, 
+          --probe20 => dma_ctrl_carrier_addr_s, 
+          --probe21 => dma_ctrl_host_addr_h_s, 
+          --probe22 => dma_ctrl_host_addr_l_s, 
+          --probe23 => dma_ctrl_len_s, 
+          --probe24(0) => dma_ctrl_start_l2p_s, 
+          --probe25(0) => dma_ctrl_start_p2l_s, 
+          --probe26(0) => dma_ctrl_start_next_s, 
+          --probe27 => (others => '0'), --dma_ctrl_byte_swap_s, 
+          --probe28(0) => dma_ctrl_abort_s, 
+          --probe29(0) => dma_ctrl_done_s,
+          --probe30(0) => dma_ctrl_error_s, 
+          --probe31 => (others => '0'), --wb_adr_s(31 downto 0), 
+          --probe32 => (others => '0'), --wb_dat_o_s, 
+          --probe33 => (others => '0'), --wb_dat_i_s, 
+          --probe34(0) => '0', --wb_cyc_s, 
+          --probe35(0) => '0', --wb_stb_s, 
+          --probe36(0) => wb_we_s,
+          --probe37(0) => '0' --wb_ack_s
           
           --s_axis_rx_tuser_i : in STD_LOGIC_VECTOR(21 DOWNTO 0);
 --          signal wbm_states_ds : STD_LOGIC_VECTOR(3 downto 0);
@@ -1198,7 +1194,8 @@ begin
           probe7 => dma_ctrl_byte_swap_s, 
           probe8(0) => dma_ctrl_abort_s, 
           probe9(0) => dma_ctrl_done_s, 
-          probe10(0) => dma_ctrl_error_s
+          probe10(0) => dma_ctrl_error_s,
+          probe11 => dma_ctrl_current_state_ds
       );
   end generate dbg_1;
   

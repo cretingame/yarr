@@ -1188,7 +1188,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie2_cfg_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie2_cfg_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -1551,7 +1551,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie2_cfg_msg_rcvd" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie2_cfg_msg_rcvd" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -2991,7 +2991,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2999,7 +2999,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3018,11 +3018,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:36 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:32 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3030,7 +3030,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3050,11 +3050,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:40 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:35 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3062,7 +3062,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3081,11 +3081,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:40 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:35 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3093,7 +3093,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3113,11 +3113,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:40 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:35 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3125,7 +3125,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>653a651d</spirit:value>
+            <spirit:value>9a1d47aa</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3144,11 +3144,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:40 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:35 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3156,7 +3156,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>653a651d</spirit:value>
+            <spirit:value>9a1d47aa</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3174,11 +3174,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:04:40 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:16:35 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3186,7 +3186,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3204,11 +3204,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 18 00:05:31 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 27 17:17:23 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>cc02bb05</spirit:value>
+            <spirit:value>c37eb200</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3216,7 +3216,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>bf489ff8</spirit:value>
+            <spirit:value>f33646b9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3904,7 +3904,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_buf_av" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_buf_av" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3924,7 +3924,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_cfg_req" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_cfg_req" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3944,7 +3944,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_err_drop" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.tx_err_drop" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4432,7 +4432,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4456,7 +4456,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_command" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_command" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4480,7 +4480,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4504,7 +4504,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dcommand" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dcommand" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4528,7 +4528,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_lstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_lstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4552,7 +4552,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_lcommand" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_lcommand" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4576,7 +4576,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dcommand2" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_dcommand2" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4600,7 +4600,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pcie_link_state" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pcie_link_state" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4620,7 +4620,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_pme_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_pme_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4644,7 +4644,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_powerstate" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_powerstate" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4664,7 +4664,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_pme_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_pmcsr_pme_status" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4684,7 +4684,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_received_func_lvl_rst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_received_func_lvl_rst" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5589,7 +5589,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_to_turnoff" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_to_turnoff" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5636,7 +5636,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_bus_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_bus_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5660,7 +5660,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_device_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_device_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5684,7 +5684,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_function_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_function_number" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5854,7 +5854,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5878,7 +5878,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_data" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_data" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5898,7 +5898,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_bridge_serr_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_bridge_serr_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5918,7 +5918,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_slot_control_electromech_il_ctl_pulse" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_slot_control_electromech_il_ctl_pulse" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5938,7 +5938,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_corr_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_corr_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5958,7 +5958,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_non_fatal_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_non_fatal_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5978,7 +5978,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_fatal_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_syserr_fatal_err_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5998,7 +5998,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_pme_int_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_root_control_pme_int_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6018,7 +6018,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_corr_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_corr_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6038,7 +6038,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_non_fatal_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_non_fatal_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6058,7 +6058,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_fatal_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_fatal_err_reporting_en" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6078,7 +6078,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_corr_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_corr_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6098,7 +6098,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_non_fatal_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_non_fatal_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6118,7 +6118,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_fatal_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_aer_rooterr_fatal_err_received" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6138,7 +6138,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_cor" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_cor" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6158,7 +6158,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_non_fatal" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_non_fatal" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6178,7 +6178,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_fatal" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_err_fatal" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6198,7 +6198,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pm_as_nak" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pm_as_nak" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6218,7 +6218,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pm_pme" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pm_pme" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6238,7 +6238,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pme_to_ack" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_pme_to_ack" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6258,7 +6258,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_a" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_a" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6278,7 +6278,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_b" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_b" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6298,7 +6298,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_c" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_c" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6318,7 +6318,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_d" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_assert_int_d" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6338,7 +6338,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_a" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_a" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6358,7 +6358,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_b" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_b" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6378,7 +6378,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_c" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_c" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6398,7 +6398,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_d" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_deassert_int_d" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -6418,7 +6418,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_setslotpowerlimit" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_msg_received_setslotpowerlimit" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.RCV_MSG_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -7009,7 +7009,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_vc_tcvc_map" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_vc_tcvc_map" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CFG_STATUS_IF&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -10504,11 +10504,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>CFG_STATUS_IF</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CFG_STATUS_IF">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CFG_STATUS_IF">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>RCV_MSG_IF</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RCV_MSG_IF">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RCV_MSG_IF">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>CFG_FC_IF</spirit:name>
@@ -12236,11 +12236,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>cfg_status_if</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.cfg_status_if" spirit:order="2054">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.cfg_status_if" spirit:order="2054">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>rcv_msg_if</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.rcv_msg_if" spirit:order="2055">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.rcv_msg_if" spirit:order="2055">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>cfg_fc_if</spirit:name>

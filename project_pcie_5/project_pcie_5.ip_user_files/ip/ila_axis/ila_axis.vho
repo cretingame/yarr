@@ -65,33 +65,14 @@ PORT (
 	probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
 	probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
 	probe10 : IN STD_LOGIC_VECTOR(21 DOWNTO 0); 
-	probe11 : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
-	probe12 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+	probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+	probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
 	probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe14 : IN STD_LOGIC_VECTOR(9 DOWNTO 0); 
-	probe15 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe16 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
-	probe17 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe18 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe19 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe20 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe21 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe22 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe23 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe24 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe25 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe26 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe27 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
-	probe28 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe29 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe30 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe31 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe32 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe33 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
-	probe34 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe35 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-	probe36 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-	probe37 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+	probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+	probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+	probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+	probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+	probe18 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
 );
 END COMPONENT  ;
 
@@ -126,27 +107,8 @@ PORT MAP (
 	probe14 => probe14, 
 	probe15 => probe15, 
 	probe16 => probe16, 
-	probe17 => probe17, 
-	probe18 => probe18, 
-	probe19 => probe19, 
-	probe20 => probe20, 
-	probe21 => probe21, 
-	probe22 => probe22, 
-	probe23 => probe23, 
-	probe24 => probe24, 
-	probe25 => probe25, 
-	probe26 => probe26, 
-	probe27 => probe27, 
-	probe28 => probe28, 
-	probe29 => probe29, 
-	probe30 => probe30, 
-	probe31 => probe31, 
-	probe32 => probe32, 
-	probe33 => probe33, 
-	probe34 => probe34, 
-	probe35 => probe35, 
-	probe36 => probe36,
-	probe37 => probe37
+	probe17 => probe17,
+	probe18 => probe18
 );
 
 

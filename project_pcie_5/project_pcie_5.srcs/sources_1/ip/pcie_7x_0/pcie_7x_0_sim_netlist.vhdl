@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
--- Date        : Tue Jan 17 16:05:30 2017
+-- Date        : Fri Jan 27 09:17:23 2017
 -- Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_sim_netlist.vhdl
@@ -75716,7 +75716,7 @@ entity pcie_7x_0_pcie_7x_0_pcie2_top is
   attribute CFG_MGMT_IF : string;
   attribute CFG_MGMT_IF of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
   attribute CFG_STATUS_IF : string;
-  attribute CFG_STATUS_IF of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
+  attribute CFG_STATUS_IF of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "TRUE";
   attribute C_DATA_WIDTH : integer;
   attribute C_DATA_WIDTH of pcie_7x_0_pcie_7x_0_pcie2_top : entity is 64;
   attribute ERR_REPORTING_IF : string;
@@ -75744,7 +75744,7 @@ entity pcie_7x_0_pcie_7x_0_pcie2_top is
   attribute PL_INTERFACE : string;
   attribute PL_INTERFACE of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
   attribute RCV_MSG_IF : string;
-  attribute RCV_MSG_IF of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
+  attribute RCV_MSG_IF of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "TRUE";
   attribute SHARED_LOGIC_IN_CORE : string;
   attribute SHARED_LOGIC_IN_CORE of pcie_7x_0_pcie_7x_0_pcie2_top : entity is "FALSE";
   attribute TRANSCEIVER_CTRL_STATUS_PORTS : string;
@@ -76952,6 +76952,9 @@ entity pcie_7x_0 is
     user_reset_out : out STD_LOGIC;
     user_lnk_up : out STD_LOGIC;
     user_app_rdy : out STD_LOGIC;
+    tx_buf_av : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    tx_cfg_req : out STD_LOGIC;
+    tx_err_drop : out STD_LOGIC;
     s_axis_tx_tready : out STD_LOGIC;
     s_axis_tx_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s_axis_tx_tkeep : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -76964,6 +76967,18 @@ entity pcie_7x_0 is
     m_axis_rx_tvalid : out STD_LOGIC;
     m_axis_rx_tready : in STD_LOGIC;
     m_axis_rx_tuser : out STD_LOGIC_VECTOR ( 21 downto 0 );
+    cfg_status : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_command : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_dstatus : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_dcommand : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_lstatus : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_lcommand : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_dcommand2 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_pcie_link_state : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    cfg_pmcsr_pme_en : out STD_LOGIC;
+    cfg_pmcsr_powerstate : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    cfg_pmcsr_pme_status : out STD_LOGIC;
+    cfg_received_func_lvl_rst : out STD_LOGIC;
     cfg_interrupt : in STD_LOGIC;
     cfg_interrupt_rdy : out STD_LOGIC;
     cfg_interrupt_assert : in STD_LOGIC;
@@ -76975,6 +76990,40 @@ entity pcie_7x_0 is
     cfg_interrupt_msixfm : out STD_LOGIC;
     cfg_interrupt_stat : in STD_LOGIC;
     cfg_pciecap_interrupt_msgnum : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    cfg_to_turnoff : out STD_LOGIC;
+    cfg_bus_number : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    cfg_device_number : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    cfg_function_number : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    cfg_msg_received : out STD_LOGIC;
+    cfg_msg_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    cfg_bridge_serr_en : out STD_LOGIC;
+    cfg_slot_control_electromech_il_ctl_pulse : out STD_LOGIC;
+    cfg_root_control_syserr_corr_err_en : out STD_LOGIC;
+    cfg_root_control_syserr_non_fatal_err_en : out STD_LOGIC;
+    cfg_root_control_syserr_fatal_err_en : out STD_LOGIC;
+    cfg_root_control_pme_int_en : out STD_LOGIC;
+    cfg_aer_rooterr_corr_err_reporting_en : out STD_LOGIC;
+    cfg_aer_rooterr_non_fatal_err_reporting_en : out STD_LOGIC;
+    cfg_aer_rooterr_fatal_err_reporting_en : out STD_LOGIC;
+    cfg_aer_rooterr_corr_err_received : out STD_LOGIC;
+    cfg_aer_rooterr_non_fatal_err_received : out STD_LOGIC;
+    cfg_aer_rooterr_fatal_err_received : out STD_LOGIC;
+    cfg_msg_received_err_cor : out STD_LOGIC;
+    cfg_msg_received_err_non_fatal : out STD_LOGIC;
+    cfg_msg_received_err_fatal : out STD_LOGIC;
+    cfg_msg_received_pm_as_nak : out STD_LOGIC;
+    cfg_msg_received_pm_pme : out STD_LOGIC;
+    cfg_msg_received_pme_to_ack : out STD_LOGIC;
+    cfg_msg_received_assert_int_a : out STD_LOGIC;
+    cfg_msg_received_assert_int_b : out STD_LOGIC;
+    cfg_msg_received_assert_int_c : out STD_LOGIC;
+    cfg_msg_received_assert_int_d : out STD_LOGIC;
+    cfg_msg_received_deassert_int_a : out STD_LOGIC;
+    cfg_msg_received_deassert_int_b : out STD_LOGIC;
+    cfg_msg_received_deassert_int_c : out STD_LOGIC;
+    cfg_msg_received_deassert_int_d : out STD_LOGIC;
+    cfg_msg_received_setslotpowerlimit : out STD_LOGIC;
+    cfg_vc_tcvc_map : out STD_LOGIC_VECTOR ( 6 downto 0 );
     sys_clk : in STD_LOGIC;
     sys_rst_n : in STD_LOGIC
   );
@@ -76991,41 +77040,9 @@ end pcie_7x_0;
 architecture STRUCTURE of pcie_7x_0 is
   signal NLW_U0_cfg_aer_ecrc_check_en_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_cfg_aer_ecrc_gen_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_corr_err_received_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_corr_err_reporting_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_fatal_err_received_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_fatal_err_reporting_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_non_fatal_err_received_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_aer_rooterr_non_fatal_err_reporting_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_bridge_serr_en_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_cfg_err_aer_headerlog_set_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_cfg_err_cpl_rdy_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_cfg_mgmt_rd_wr_done_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_assert_int_a_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_assert_int_b_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_assert_int_c_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_assert_int_d_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_deassert_int_a_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_deassert_int_b_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_deassert_int_c_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_deassert_int_d_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_err_cor_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_err_fatal_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_err_non_fatal_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_pm_as_nak_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_pm_pme_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_pme_to_ack_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_msg_received_setslotpowerlimit_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_pmcsr_pme_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_pmcsr_pme_status_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_received_func_lvl_rst_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_root_control_pme_int_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_root_control_syserr_corr_err_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_root_control_syserr_fatal_err_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_root_control_syserr_non_fatal_err_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_slot_control_electromech_il_ctl_pulse_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_to_turnoff_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_ext_ch_gt_drpclk_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_int_dclk_out_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_int_mmcm_lock_out_UNCONNECTED : STD_LOGIC;
@@ -77057,23 +77074,7 @@ architecture STRUCTURE of pcie_7x_0 is
   signal NLW_U0_startup_cfgmclk_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_startup_eos_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_startup_preq_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_tx_cfg_req_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_tx_err_drop_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfg_bus_number_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_U0_cfg_command_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_dcommand_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_dcommand2_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_device_number_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
-  signal NLW_U0_cfg_dstatus_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_function_number_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_U0_cfg_lcommand_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_lstatus_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_cfg_mgmt_do_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_U0_cfg_msg_data_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_pcie_link_state_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_U0_cfg_pmcsr_powerstate_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_U0_cfg_status_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_cfg_vc_tcvc_map_UNCONNECTED : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal NLW_U0_common_commands_out_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal NLW_U0_ext_ch_gt_drpdo_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal NLW_U0_ext_ch_gt_drprdy_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -77141,7 +77142,6 @@ architecture STRUCTURE of pcie_7x_0 is
   signal NLW_U0_pl_sel_lnk_width_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_pl_tx_pm_state_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_U0_qpll_qpllreset_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_U0_tx_buf_av_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute CFG_CTL_IF : string;
   attribute CFG_CTL_IF of U0 : label is "FALSE";
   attribute CFG_FC_IF : string;
@@ -77149,7 +77149,7 @@ architecture STRUCTURE of pcie_7x_0 is
   attribute CFG_MGMT_IF : string;
   attribute CFG_MGMT_IF of U0 : label is "FALSE";
   attribute CFG_STATUS_IF : string;
-  attribute CFG_STATUS_IF of U0 : label is "FALSE";
+  attribute CFG_STATUS_IF of U0 : label is "TRUE";
   attribute CLASS_CODE : string;
   attribute CLASS_CODE of U0 : label is "058000";
   attribute C_DATA_WIDTH : integer;
@@ -77177,7 +77177,7 @@ architecture STRUCTURE of pcie_7x_0 is
   attribute PL_INTERFACE : string;
   attribute PL_INTERFACE of U0 : label is "FALSE";
   attribute RCV_MSG_IF : string;
-  attribute RCV_MSG_IF of U0 : label is "FALSE";
+  attribute RCV_MSG_IF of U0 : label is "TRUE";
   attribute SHARED_LOGIC_IN_CORE : string;
   attribute SHARED_LOGIC_IN_CORE of U0 : label is "FALSE";
   attribute TRANSCEIVER_CTRL_STATUS_PORTS : string;
@@ -77581,23 +77581,23 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       cfg_aer_ecrc_check_en => NLW_U0_cfg_aer_ecrc_check_en_UNCONNECTED,
       cfg_aer_ecrc_gen_en => NLW_U0_cfg_aer_ecrc_gen_en_UNCONNECTED,
       cfg_aer_interrupt_msgnum(4 downto 0) => B"00000",
-      cfg_aer_rooterr_corr_err_received => NLW_U0_cfg_aer_rooterr_corr_err_received_UNCONNECTED,
-      cfg_aer_rooterr_corr_err_reporting_en => NLW_U0_cfg_aer_rooterr_corr_err_reporting_en_UNCONNECTED,
-      cfg_aer_rooterr_fatal_err_received => NLW_U0_cfg_aer_rooterr_fatal_err_received_UNCONNECTED,
-      cfg_aer_rooterr_fatal_err_reporting_en => NLW_U0_cfg_aer_rooterr_fatal_err_reporting_en_UNCONNECTED,
-      cfg_aer_rooterr_non_fatal_err_received => NLW_U0_cfg_aer_rooterr_non_fatal_err_received_UNCONNECTED,
-      cfg_aer_rooterr_non_fatal_err_reporting_en => NLW_U0_cfg_aer_rooterr_non_fatal_err_reporting_en_UNCONNECTED,
-      cfg_bridge_serr_en => NLW_U0_cfg_bridge_serr_en_UNCONNECTED,
-      cfg_bus_number(7 downto 0) => NLW_U0_cfg_bus_number_UNCONNECTED(7 downto 0),
-      cfg_command(15 downto 0) => NLW_U0_cfg_command_UNCONNECTED(15 downto 0),
-      cfg_dcommand(15 downto 0) => NLW_U0_cfg_dcommand_UNCONNECTED(15 downto 0),
-      cfg_dcommand2(15 downto 0) => NLW_U0_cfg_dcommand2_UNCONNECTED(15 downto 0),
-      cfg_device_number(4 downto 0) => NLW_U0_cfg_device_number_UNCONNECTED(4 downto 0),
+      cfg_aer_rooterr_corr_err_received => cfg_aer_rooterr_corr_err_received,
+      cfg_aer_rooterr_corr_err_reporting_en => cfg_aer_rooterr_corr_err_reporting_en,
+      cfg_aer_rooterr_fatal_err_received => cfg_aer_rooterr_fatal_err_received,
+      cfg_aer_rooterr_fatal_err_reporting_en => cfg_aer_rooterr_fatal_err_reporting_en,
+      cfg_aer_rooterr_non_fatal_err_received => cfg_aer_rooterr_non_fatal_err_received,
+      cfg_aer_rooterr_non_fatal_err_reporting_en => cfg_aer_rooterr_non_fatal_err_reporting_en,
+      cfg_bridge_serr_en => cfg_bridge_serr_en,
+      cfg_bus_number(7 downto 0) => cfg_bus_number(7 downto 0),
+      cfg_command(15 downto 0) => cfg_command(15 downto 0),
+      cfg_dcommand(15 downto 0) => cfg_dcommand(15 downto 0),
+      cfg_dcommand2(15 downto 0) => cfg_dcommand2(15 downto 0),
+      cfg_device_number(4 downto 0) => cfg_device_number(4 downto 0),
       cfg_ds_bus_number(7 downto 0) => B"00000000",
       cfg_ds_device_number(4 downto 0) => B"00000",
       cfg_ds_function_number(2 downto 0) => B"000",
       cfg_dsn(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      cfg_dstatus(15 downto 0) => NLW_U0_cfg_dstatus_UNCONNECTED(15 downto 0),
+      cfg_dstatus(15 downto 0) => cfg_dstatus(15 downto 0),
       cfg_err_acs => '0',
       cfg_err_aer_headerlog(127 downto 0) => B"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
       cfg_err_aer_headerlog_set => NLW_U0_cfg_err_aer_headerlog_set_UNCONNECTED,
@@ -77618,7 +77618,7 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       cfg_err_posted => '0',
       cfg_err_tlp_cpl_header(47 downto 0) => B"000000000000000000000000000000000000000000000000",
       cfg_err_ur => '0',
-      cfg_function_number(2 downto 0) => NLW_U0_cfg_function_number_UNCONNECTED(2 downto 0),
+      cfg_function_number(2 downto 0) => cfg_function_number(2 downto 0),
       cfg_interrupt => cfg_interrupt,
       cfg_interrupt_assert => cfg_interrupt_assert,
       cfg_interrupt_di(7 downto 0) => cfg_interrupt_di(7 downto 0),
@@ -77629,8 +77629,8 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       cfg_interrupt_msixfm => cfg_interrupt_msixfm,
       cfg_interrupt_rdy => cfg_interrupt_rdy,
       cfg_interrupt_stat => cfg_interrupt_stat,
-      cfg_lcommand(15 downto 0) => NLW_U0_cfg_lcommand_UNCONNECTED(15 downto 0),
-      cfg_lstatus(15 downto 0) => NLW_U0_cfg_lstatus_UNCONNECTED(15 downto 0),
+      cfg_lcommand(15 downto 0) => cfg_lcommand(15 downto 0),
+      cfg_lstatus(15 downto 0) => cfg_lstatus(15 downto 0),
       cfg_mgmt_byte_en(3 downto 0) => B"0000",
       cfg_mgmt_di(31 downto 0) => B"00000000000000000000000000000000",
       cfg_mgmt_do(31 downto 0) => NLW_U0_cfg_mgmt_do_UNCONNECTED(31 downto 0),
@@ -77640,24 +77640,24 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       cfg_mgmt_wr_en => '0',
       cfg_mgmt_wr_readonly => '0',
       cfg_mgmt_wr_rw1c_as_rw => '0',
-      cfg_msg_data(15 downto 0) => NLW_U0_cfg_msg_data_UNCONNECTED(15 downto 0),
-      cfg_msg_received => NLW_U0_cfg_msg_received_UNCONNECTED,
-      cfg_msg_received_assert_int_a => NLW_U0_cfg_msg_received_assert_int_a_UNCONNECTED,
-      cfg_msg_received_assert_int_b => NLW_U0_cfg_msg_received_assert_int_b_UNCONNECTED,
-      cfg_msg_received_assert_int_c => NLW_U0_cfg_msg_received_assert_int_c_UNCONNECTED,
-      cfg_msg_received_assert_int_d => NLW_U0_cfg_msg_received_assert_int_d_UNCONNECTED,
-      cfg_msg_received_deassert_int_a => NLW_U0_cfg_msg_received_deassert_int_a_UNCONNECTED,
-      cfg_msg_received_deassert_int_b => NLW_U0_cfg_msg_received_deassert_int_b_UNCONNECTED,
-      cfg_msg_received_deassert_int_c => NLW_U0_cfg_msg_received_deassert_int_c_UNCONNECTED,
-      cfg_msg_received_deassert_int_d => NLW_U0_cfg_msg_received_deassert_int_d_UNCONNECTED,
-      cfg_msg_received_err_cor => NLW_U0_cfg_msg_received_err_cor_UNCONNECTED,
-      cfg_msg_received_err_fatal => NLW_U0_cfg_msg_received_err_fatal_UNCONNECTED,
-      cfg_msg_received_err_non_fatal => NLW_U0_cfg_msg_received_err_non_fatal_UNCONNECTED,
-      cfg_msg_received_pm_as_nak => NLW_U0_cfg_msg_received_pm_as_nak_UNCONNECTED,
-      cfg_msg_received_pm_pme => NLW_U0_cfg_msg_received_pm_pme_UNCONNECTED,
-      cfg_msg_received_pme_to_ack => NLW_U0_cfg_msg_received_pme_to_ack_UNCONNECTED,
-      cfg_msg_received_setslotpowerlimit => NLW_U0_cfg_msg_received_setslotpowerlimit_UNCONNECTED,
-      cfg_pcie_link_state(2 downto 0) => NLW_U0_cfg_pcie_link_state_UNCONNECTED(2 downto 0),
+      cfg_msg_data(15 downto 0) => cfg_msg_data(15 downto 0),
+      cfg_msg_received => cfg_msg_received,
+      cfg_msg_received_assert_int_a => cfg_msg_received_assert_int_a,
+      cfg_msg_received_assert_int_b => cfg_msg_received_assert_int_b,
+      cfg_msg_received_assert_int_c => cfg_msg_received_assert_int_c,
+      cfg_msg_received_assert_int_d => cfg_msg_received_assert_int_d,
+      cfg_msg_received_deassert_int_a => cfg_msg_received_deassert_int_a,
+      cfg_msg_received_deassert_int_b => cfg_msg_received_deassert_int_b,
+      cfg_msg_received_deassert_int_c => cfg_msg_received_deassert_int_c,
+      cfg_msg_received_deassert_int_d => cfg_msg_received_deassert_int_d,
+      cfg_msg_received_err_cor => cfg_msg_received_err_cor,
+      cfg_msg_received_err_fatal => cfg_msg_received_err_fatal,
+      cfg_msg_received_err_non_fatal => cfg_msg_received_err_non_fatal,
+      cfg_msg_received_pm_as_nak => cfg_msg_received_pm_as_nak,
+      cfg_msg_received_pm_pme => cfg_msg_received_pm_pme,
+      cfg_msg_received_pme_to_ack => cfg_msg_received_pme_to_ack,
+      cfg_msg_received_setslotpowerlimit => cfg_msg_received_setslotpowerlimit,
+      cfg_pcie_link_state(2 downto 0) => cfg_pcie_link_state(2 downto 0),
       cfg_pciecap_interrupt_msgnum(4 downto 0) => cfg_pciecap_interrupt_msgnum(4 downto 0),
       cfg_pm_force_state(1 downto 0) => B"00",
       cfg_pm_force_state_en => '0',
@@ -77665,20 +77665,20 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       cfg_pm_halt_aspm_l1 => '0',
       cfg_pm_send_pme_to => '0',
       cfg_pm_wake => '0',
-      cfg_pmcsr_pme_en => NLW_U0_cfg_pmcsr_pme_en_UNCONNECTED,
-      cfg_pmcsr_pme_status => NLW_U0_cfg_pmcsr_pme_status_UNCONNECTED,
-      cfg_pmcsr_powerstate(1 downto 0) => NLW_U0_cfg_pmcsr_powerstate_UNCONNECTED(1 downto 0),
-      cfg_received_func_lvl_rst => NLW_U0_cfg_received_func_lvl_rst_UNCONNECTED,
-      cfg_root_control_pme_int_en => NLW_U0_cfg_root_control_pme_int_en_UNCONNECTED,
-      cfg_root_control_syserr_corr_err_en => NLW_U0_cfg_root_control_syserr_corr_err_en_UNCONNECTED,
-      cfg_root_control_syserr_fatal_err_en => NLW_U0_cfg_root_control_syserr_fatal_err_en_UNCONNECTED,
-      cfg_root_control_syserr_non_fatal_err_en => NLW_U0_cfg_root_control_syserr_non_fatal_err_en_UNCONNECTED,
-      cfg_slot_control_electromech_il_ctl_pulse => NLW_U0_cfg_slot_control_electromech_il_ctl_pulse_UNCONNECTED,
-      cfg_status(15 downto 0) => NLW_U0_cfg_status_UNCONNECTED(15 downto 0),
-      cfg_to_turnoff => NLW_U0_cfg_to_turnoff_UNCONNECTED,
+      cfg_pmcsr_pme_en => cfg_pmcsr_pme_en,
+      cfg_pmcsr_pme_status => cfg_pmcsr_pme_status,
+      cfg_pmcsr_powerstate(1 downto 0) => cfg_pmcsr_powerstate(1 downto 0),
+      cfg_received_func_lvl_rst => cfg_received_func_lvl_rst,
+      cfg_root_control_pme_int_en => cfg_root_control_pme_int_en,
+      cfg_root_control_syserr_corr_err_en => cfg_root_control_syserr_corr_err_en,
+      cfg_root_control_syserr_fatal_err_en => cfg_root_control_syserr_fatal_err_en,
+      cfg_root_control_syserr_non_fatal_err_en => cfg_root_control_syserr_non_fatal_err_en,
+      cfg_slot_control_electromech_il_ctl_pulse => cfg_slot_control_electromech_il_ctl_pulse,
+      cfg_status(15 downto 0) => cfg_status(15 downto 0),
+      cfg_to_turnoff => cfg_to_turnoff,
       cfg_trn_pending => '0',
       cfg_turnoff_ok => '0',
-      cfg_vc_tcvc_map(6 downto 0) => NLW_U0_cfg_vc_tcvc_map_UNCONNECTED(6 downto 0),
+      cfg_vc_tcvc_map(6 downto 0) => cfg_vc_tcvc_map(6 downto 0),
       common_commands_in(11 downto 0) => B"000000000000",
       common_commands_out(11 downto 0) => NLW_U0_common_commands_out_UNCONNECTED(11 downto 0),
       ext_ch_gt_drpaddr(35 downto 0) => B"000000000000000000000000000000000000",
@@ -77860,10 +77860,10 @@ U0: entity work.pcie_7x_0_pcie_7x_0_pcie2_top
       startup_usrdonets => '1',
       sys_clk => sys_clk,
       sys_rst_n => sys_rst_n,
-      tx_buf_av(5 downto 0) => NLW_U0_tx_buf_av_UNCONNECTED(5 downto 0),
+      tx_buf_av(5 downto 0) => tx_buf_av(5 downto 0),
       tx_cfg_gnt => '1',
-      tx_cfg_req => NLW_U0_tx_cfg_req_UNCONNECTED,
-      tx_err_drop => NLW_U0_tx_err_drop_UNCONNECTED,
+      tx_cfg_req => tx_cfg_req,
+      tx_err_drop => tx_err_drop,
       user_app_rdy => user_app_rdy,
       user_clk_out => user_clk_out,
       user_lnk_up => user_lnk_up,

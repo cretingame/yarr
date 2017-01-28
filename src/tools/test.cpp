@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
         specNum = atoi(argv[1]);
     SpecController mySpec(specNum);
     std::string tmp;
-    const size_t size = 256*8;
+    const size_t size = 128;
     unsigned err_count = 0;
     
     uint32_t *data = new uint32_t[size];
@@ -21,9 +21,9 @@ int main(int argc, char **argv) {
     std::cout << "Starting DMA write/read test ..." << std::endl;
     memset(resp, size*4, 0x5A);
     
-    mySpec.writeDma(0x0, data, size); 
+    mySpec.writeDma(0x10, data, size); 
     std::cout << "... writing " << size * 4 << " byte." << std::endl;
-    mySpec.readDma(0x0, resp, size); 
+    mySpec.readDma(0x10, resp, size); 
     std::cout << "... read " << size * 4 << " byte." << std::endl;
     
     for (unsigned i=0; i<size; i++) {

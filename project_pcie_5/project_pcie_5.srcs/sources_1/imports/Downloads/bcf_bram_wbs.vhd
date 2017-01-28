@@ -17,8 +17,10 @@
 -- 0x020 to 0x02F
 ----------------------------------------------------------------------------------
 
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 --library work;
@@ -65,7 +67,10 @@ begin
 		if (rst ='1') then
 			wb_ack_o <= '0';
 			for i in 0 to 2**ADDR_WIDTH-1 loop
-				RAM(i) <= (others => '0');
+				RAM(i) <= conv_std_logic_vector(i,RAM(i)'length); -- "DEAD0001BEEF0001"
+                RAM(i)(DATA_WIDTH-1 downto DATA_WIDTH/2) <= conv_std_logic_vector(i,RAM(i)'length/2);
+                RAM(i)(DATA_WIDTH-1 downto DATA_WIDTH-4*4) <= x"DEAD";
+                RAM(i)(DATA_WIDTH-1-DATA_WIDTH/2 downto DATA_WIDTH-4*4-DATA_WIDTH/2) <= x"BEEF";
 			end loop;
 		elsif (clk'event and clk = '1') then
 			if (wb_stb_i = '1' and wb_cyc_i = '1') then

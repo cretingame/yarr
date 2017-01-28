@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Tue Jan 17 16:05:30 2017
+// Date        : Fri Jan 27 09:17:23 2017
 // Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_sim_netlist.v
@@ -23,6 +23,9 @@ module pcie_7x_0
     user_reset_out,
     user_lnk_up,
     user_app_rdy,
+    tx_buf_av,
+    tx_cfg_req,
+    tx_err_drop,
     s_axis_tx_tready,
     s_axis_tx_tdata,
     s_axis_tx_tkeep,
@@ -35,6 +38,18 @@ module pcie_7x_0
     m_axis_rx_tvalid,
     m_axis_rx_tready,
     m_axis_rx_tuser,
+    cfg_status,
+    cfg_command,
+    cfg_dstatus,
+    cfg_dcommand,
+    cfg_lstatus,
+    cfg_lcommand,
+    cfg_dcommand2,
+    cfg_pcie_link_state,
+    cfg_pmcsr_pme_en,
+    cfg_pmcsr_powerstate,
+    cfg_pmcsr_pme_status,
+    cfg_received_func_lvl_rst,
     cfg_interrupt,
     cfg_interrupt_rdy,
     cfg_interrupt_assert,
@@ -46,6 +61,40 @@ module pcie_7x_0
     cfg_interrupt_msixfm,
     cfg_interrupt_stat,
     cfg_pciecap_interrupt_msgnum,
+    cfg_to_turnoff,
+    cfg_bus_number,
+    cfg_device_number,
+    cfg_function_number,
+    cfg_msg_received,
+    cfg_msg_data,
+    cfg_bridge_serr_en,
+    cfg_slot_control_electromech_il_ctl_pulse,
+    cfg_root_control_syserr_corr_err_en,
+    cfg_root_control_syserr_non_fatal_err_en,
+    cfg_root_control_syserr_fatal_err_en,
+    cfg_root_control_pme_int_en,
+    cfg_aer_rooterr_corr_err_reporting_en,
+    cfg_aer_rooterr_non_fatal_err_reporting_en,
+    cfg_aer_rooterr_fatal_err_reporting_en,
+    cfg_aer_rooterr_corr_err_received,
+    cfg_aer_rooterr_non_fatal_err_received,
+    cfg_aer_rooterr_fatal_err_received,
+    cfg_msg_received_err_cor,
+    cfg_msg_received_err_non_fatal,
+    cfg_msg_received_err_fatal,
+    cfg_msg_received_pm_as_nak,
+    cfg_msg_received_pm_pme,
+    cfg_msg_received_pme_to_ack,
+    cfg_msg_received_assert_int_a,
+    cfg_msg_received_assert_int_b,
+    cfg_msg_received_assert_int_c,
+    cfg_msg_received_assert_int_d,
+    cfg_msg_received_deassert_int_a,
+    cfg_msg_received_deassert_int_b,
+    cfg_msg_received_deassert_int_c,
+    cfg_msg_received_deassert_int_d,
+    cfg_msg_received_setslotpowerlimit,
+    cfg_vc_tcvc_map,
     sys_clk,
     sys_rst_n);
   (* x_interface_info = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt txp" *) output [3:0]pci_exp_txp;
@@ -56,6 +105,9 @@ module pcie_7x_0
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.user_reset_out RST" *) output user_reset_out;
   output user_lnk_up;
   output user_app_rdy;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status tx_buf_av" *) output [5:0]tx_buf_av;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status tx_cfg_req" *) output tx_cfg_req;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status tx_err_drop" *) output tx_err_drop;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_tx TREADY" *) output s_axis_tx_tready;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_tx TDATA" *) input [63:0]s_axis_tx_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_tx TKEEP" *) input [7:0]s_axis_tx_tkeep;
@@ -68,6 +120,18 @@ module pcie_7x_0
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_rx TVALID" *) output m_axis_rx_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_rx TREADY" *) input m_axis_rx_tready;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_rx TUSER" *) output [21:0]m_axis_rx_tuser;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status status" *) output [15:0]cfg_status;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status command" *) output [15:0]cfg_command;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status dstatus" *) output [15:0]cfg_dstatus;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status dcommand" *) output [15:0]cfg_dcommand;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status lstatus" *) output [15:0]cfg_lstatus;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status lcommand" *) output [15:0]cfg_lcommand;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status dcommand2" *) output [15:0]cfg_dcommand2;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status pcie_link_state" *) output [2:0]cfg_pcie_link_state;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status pmcsr_pme_en" *) output cfg_pmcsr_pme_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status pmcsr_powerstate" *) output [1:0]cfg_pmcsr_powerstate;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status pmcsr_pme_status" *) output cfg_pmcsr_pme_status;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status received_func_lvl_rst" *) output cfg_received_func_lvl_rst;
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt interrupt" *) input cfg_interrupt;
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt rdy" *) output cfg_interrupt_rdy;
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt assert" *) input cfg_interrupt_assert;
@@ -79,9 +143,57 @@ module pcie_7x_0
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt msixfm" *) output cfg_interrupt_msixfm;
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt stat" *) input cfg_interrupt_stat;
   (* x_interface_info = "xilinx.com:interface:pcie2_cfg_interrupt:1.0 pcie2_cfg_interrupt pciecap_interrupt_msgnum" *) input [4:0]cfg_pciecap_interrupt_msgnum;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status turnoff" *) output cfg_to_turnoff;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status bus_number" *) output [7:0]cfg_bus_number;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status device_number" *) output [4:0]cfg_device_number;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status function_number" *) output [2:0]cfg_function_number;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd received" *) output cfg_msg_received;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd data" *) output [15:0]cfg_msg_data;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status bridge_serr_en" *) output cfg_bridge_serr_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status slot_control_electromech_il_ctl_pulse" *) output cfg_slot_control_electromech_il_ctl_pulse;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status root_control_syserr_corr_err_en" *) output cfg_root_control_syserr_corr_err_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status root_control_syserr_non_fatal_err_en" *) output cfg_root_control_syserr_non_fatal_err_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status root_control_syserr_fatal_err_en" *) output cfg_root_control_syserr_fatal_err_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status root_control_pme_int_en" *) output cfg_root_control_pme_int_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_corr_err_reporting_en" *) output cfg_aer_rooterr_corr_err_reporting_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_non_fatal_err_reporting_en" *) output cfg_aer_rooterr_non_fatal_err_reporting_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_fatal_err_reporting_en" *) output cfg_aer_rooterr_fatal_err_reporting_en;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_corr_err_received" *) output cfg_aer_rooterr_corr_err_received;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_non_fatal_err_received" *) output cfg_aer_rooterr_non_fatal_err_received;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status aer_rooterr_fatal_err_received" *) output cfg_aer_rooterr_fatal_err_received;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd err_cor" *) output cfg_msg_received_err_cor;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd err_non_fatal" *) output cfg_msg_received_err_non_fatal;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd err_fatal" *) output cfg_msg_received_err_fatal;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd received_pm_as_nak" *) output cfg_msg_received_pm_as_nak;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd pm_pme" *) output cfg_msg_received_pm_pme;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd pme_to_ack" *) output cfg_msg_received_pme_to_ack;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd assert_int_a" *) output cfg_msg_received_assert_int_a;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd assert_int_b" *) output cfg_msg_received_assert_int_b;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd assert_int_c" *) output cfg_msg_received_assert_int_c;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd assert_int_d" *) output cfg_msg_received_assert_int_d;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd deassert_int_a" *) output cfg_msg_received_deassert_int_a;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd deassert_int_b" *) output cfg_msg_received_deassert_int_b;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd deassert_int_c" *) output cfg_msg_received_deassert_int_c;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd deassert_int_d" *) output cfg_msg_received_deassert_int_d;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_msg_rcvd:1.0 pcie2_cfg_msg_rcvd received_setslotpowerlimit" *) output cfg_msg_received_setslotpowerlimit;
+  (* x_interface_info = "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status vc_tcvc_map" *) output [6:0]cfg_vc_tcvc_map;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.sys_clk CLK" *) input sys_clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.sys_rst_n RST" *) input sys_rst_n;
 
+  wire cfg_aer_rooterr_corr_err_received;
+  wire cfg_aer_rooterr_corr_err_reporting_en;
+  wire cfg_aer_rooterr_fatal_err_received;
+  wire cfg_aer_rooterr_fatal_err_reporting_en;
+  wire cfg_aer_rooterr_non_fatal_err_received;
+  wire cfg_aer_rooterr_non_fatal_err_reporting_en;
+  wire cfg_bridge_serr_en;
+  wire [7:0]cfg_bus_number;
+  wire [15:0]cfg_command;
+  wire [15:0]cfg_dcommand;
+  wire [15:0]cfg_dcommand2;
+  wire [4:0]cfg_device_number;
+  wire [15:0]cfg_dstatus;
+  wire [2:0]cfg_function_number;
   wire cfg_interrupt;
   wire cfg_interrupt_assert;
   wire [7:0]cfg_interrupt_di;
@@ -92,7 +204,39 @@ module pcie_7x_0
   wire cfg_interrupt_msixfm;
   wire cfg_interrupt_rdy;
   wire cfg_interrupt_stat;
+  wire [15:0]cfg_lcommand;
+  wire [15:0]cfg_lstatus;
+  wire [15:0]cfg_msg_data;
+  wire cfg_msg_received;
+  wire cfg_msg_received_assert_int_a;
+  wire cfg_msg_received_assert_int_b;
+  wire cfg_msg_received_assert_int_c;
+  wire cfg_msg_received_assert_int_d;
+  wire cfg_msg_received_deassert_int_a;
+  wire cfg_msg_received_deassert_int_b;
+  wire cfg_msg_received_deassert_int_c;
+  wire cfg_msg_received_deassert_int_d;
+  wire cfg_msg_received_err_cor;
+  wire cfg_msg_received_err_fatal;
+  wire cfg_msg_received_err_non_fatal;
+  wire cfg_msg_received_pm_as_nak;
+  wire cfg_msg_received_pm_pme;
+  wire cfg_msg_received_pme_to_ack;
+  wire cfg_msg_received_setslotpowerlimit;
+  wire [2:0]cfg_pcie_link_state;
   wire [4:0]cfg_pciecap_interrupt_msgnum;
+  wire cfg_pmcsr_pme_en;
+  wire cfg_pmcsr_pme_status;
+  wire [1:0]cfg_pmcsr_powerstate;
+  wire cfg_received_func_lvl_rst;
+  wire cfg_root_control_pme_int_en;
+  wire cfg_root_control_syserr_corr_err_en;
+  wire cfg_root_control_syserr_fatal_err_en;
+  wire cfg_root_control_syserr_non_fatal_err_en;
+  wire cfg_slot_control_electromech_il_ctl_pulse;
+  wire [15:0]cfg_status;
+  wire cfg_to_turnoff;
+  wire [6:0]cfg_vc_tcvc_map;
   wire [63:0]m_axis_rx_tdata;
   wire [7:0]m_axis_rx_tkeep;
   wire m_axis_rx_tlast;
@@ -111,47 +255,18 @@ module pcie_7x_0
   wire s_axis_tx_tvalid;
   wire sys_clk;
   wire sys_rst_n;
+  wire [5:0]tx_buf_av;
+  wire tx_cfg_req;
+  wire tx_err_drop;
   wire user_app_rdy;
   wire user_clk_out;
   wire user_lnk_up;
   wire user_reset_out;
   wire NLW_U0_cfg_aer_ecrc_check_en_UNCONNECTED;
   wire NLW_U0_cfg_aer_ecrc_gen_en_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_corr_err_received_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_corr_err_reporting_en_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_fatal_err_received_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_fatal_err_reporting_en_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_non_fatal_err_received_UNCONNECTED;
-  wire NLW_U0_cfg_aer_rooterr_non_fatal_err_reporting_en_UNCONNECTED;
-  wire NLW_U0_cfg_bridge_serr_en_UNCONNECTED;
   wire NLW_U0_cfg_err_aer_headerlog_set_UNCONNECTED;
   wire NLW_U0_cfg_err_cpl_rdy_UNCONNECTED;
   wire NLW_U0_cfg_mgmt_rd_wr_done_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_assert_int_a_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_assert_int_b_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_assert_int_c_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_assert_int_d_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_deassert_int_a_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_deassert_int_b_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_deassert_int_c_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_deassert_int_d_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_err_cor_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_err_fatal_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_err_non_fatal_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_pm_as_nak_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_pm_pme_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_pme_to_ack_UNCONNECTED;
-  wire NLW_U0_cfg_msg_received_setslotpowerlimit_UNCONNECTED;
-  wire NLW_U0_cfg_pmcsr_pme_en_UNCONNECTED;
-  wire NLW_U0_cfg_pmcsr_pme_status_UNCONNECTED;
-  wire NLW_U0_cfg_received_func_lvl_rst_UNCONNECTED;
-  wire NLW_U0_cfg_root_control_pme_int_en_UNCONNECTED;
-  wire NLW_U0_cfg_root_control_syserr_corr_err_en_UNCONNECTED;
-  wire NLW_U0_cfg_root_control_syserr_fatal_err_en_UNCONNECTED;
-  wire NLW_U0_cfg_root_control_syserr_non_fatal_err_en_UNCONNECTED;
-  wire NLW_U0_cfg_slot_control_electromech_il_ctl_pulse_UNCONNECTED;
-  wire NLW_U0_cfg_to_turnoff_UNCONNECTED;
   wire NLW_U0_ext_ch_gt_drpclk_UNCONNECTED;
   wire NLW_U0_int_dclk_out_UNCONNECTED;
   wire NLW_U0_int_mmcm_lock_out_UNCONNECTED;
@@ -183,23 +298,7 @@ module pcie_7x_0
   wire NLW_U0_startup_cfgmclk_UNCONNECTED;
   wire NLW_U0_startup_eos_UNCONNECTED;
   wire NLW_U0_startup_preq_UNCONNECTED;
-  wire NLW_U0_tx_cfg_req_UNCONNECTED;
-  wire NLW_U0_tx_err_drop_UNCONNECTED;
-  wire [7:0]NLW_U0_cfg_bus_number_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_command_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_dcommand_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_dcommand2_UNCONNECTED;
-  wire [4:0]NLW_U0_cfg_device_number_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_dstatus_UNCONNECTED;
-  wire [2:0]NLW_U0_cfg_function_number_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_lcommand_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_lstatus_UNCONNECTED;
   wire [31:0]NLW_U0_cfg_mgmt_do_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_msg_data_UNCONNECTED;
-  wire [2:0]NLW_U0_cfg_pcie_link_state_UNCONNECTED;
-  wire [1:0]NLW_U0_cfg_pmcsr_powerstate_UNCONNECTED;
-  wire [15:0]NLW_U0_cfg_status_UNCONNECTED;
-  wire [6:0]NLW_U0_cfg_vc_tcvc_map_UNCONNECTED;
   wire [11:0]NLW_U0_common_commands_out_UNCONNECTED;
   wire [63:0]NLW_U0_ext_ch_gt_drpdo_UNCONNECTED;
   wire [3:0]NLW_U0_ext_ch_gt_drprdy_UNCONNECTED;
@@ -267,12 +366,11 @@ module pcie_7x_0
   wire [1:0]NLW_U0_pl_sel_lnk_width_UNCONNECTED;
   wire [2:0]NLW_U0_pl_tx_pm_state_UNCONNECTED;
   wire [1:0]NLW_U0_qpll_qpllreset_UNCONNECTED;
-  wire [5:0]NLW_U0_tx_buf_av_UNCONNECTED;
 
   (* CFG_CTL_IF = "FALSE" *) 
   (* CFG_FC_IF = "FALSE" *) 
   (* CFG_MGMT_IF = "FALSE" *) 
-  (* CFG_STATUS_IF = "FALSE" *) 
+  (* CFG_STATUS_IF = "TRUE" *) 
   (* CLASS_CODE = "058000" *) 
   (* C_DATA_WIDTH = "64" *) 
   (* ERR_REPORTING_IF = "FALSE" *) 
@@ -286,7 +384,7 @@ module pcie_7x_0
   (* PCIE_EXT_GT_COMMON = "FALSE" *) 
   (* PIPE_SIM = "FALSE" *) 
   (* PL_INTERFACE = "FALSE" *) 
-  (* RCV_MSG_IF = "FALSE" *) 
+  (* RCV_MSG_IF = "TRUE" *) 
   (* SHARED_LOGIC_IN_CORE = "FALSE" *) 
   (* TRANSCEIVER_CTRL_STATUS_PORTS = "FALSE" *) 
   (* bar_0 = "FFF00000" *) 
@@ -490,23 +588,23 @@ module pcie_7x_0
        (.cfg_aer_ecrc_check_en(NLW_U0_cfg_aer_ecrc_check_en_UNCONNECTED),
         .cfg_aer_ecrc_gen_en(NLW_U0_cfg_aer_ecrc_gen_en_UNCONNECTED),
         .cfg_aer_interrupt_msgnum({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .cfg_aer_rooterr_corr_err_received(NLW_U0_cfg_aer_rooterr_corr_err_received_UNCONNECTED),
-        .cfg_aer_rooterr_corr_err_reporting_en(NLW_U0_cfg_aer_rooterr_corr_err_reporting_en_UNCONNECTED),
-        .cfg_aer_rooterr_fatal_err_received(NLW_U0_cfg_aer_rooterr_fatal_err_received_UNCONNECTED),
-        .cfg_aer_rooterr_fatal_err_reporting_en(NLW_U0_cfg_aer_rooterr_fatal_err_reporting_en_UNCONNECTED),
-        .cfg_aer_rooterr_non_fatal_err_received(NLW_U0_cfg_aer_rooterr_non_fatal_err_received_UNCONNECTED),
-        .cfg_aer_rooterr_non_fatal_err_reporting_en(NLW_U0_cfg_aer_rooterr_non_fatal_err_reporting_en_UNCONNECTED),
-        .cfg_bridge_serr_en(NLW_U0_cfg_bridge_serr_en_UNCONNECTED),
-        .cfg_bus_number(NLW_U0_cfg_bus_number_UNCONNECTED[7:0]),
-        .cfg_command(NLW_U0_cfg_command_UNCONNECTED[15:0]),
-        .cfg_dcommand(NLW_U0_cfg_dcommand_UNCONNECTED[15:0]),
-        .cfg_dcommand2(NLW_U0_cfg_dcommand2_UNCONNECTED[15:0]),
-        .cfg_device_number(NLW_U0_cfg_device_number_UNCONNECTED[4:0]),
+        .cfg_aer_rooterr_corr_err_received(cfg_aer_rooterr_corr_err_received),
+        .cfg_aer_rooterr_corr_err_reporting_en(cfg_aer_rooterr_corr_err_reporting_en),
+        .cfg_aer_rooterr_fatal_err_received(cfg_aer_rooterr_fatal_err_received),
+        .cfg_aer_rooterr_fatal_err_reporting_en(cfg_aer_rooterr_fatal_err_reporting_en),
+        .cfg_aer_rooterr_non_fatal_err_received(cfg_aer_rooterr_non_fatal_err_received),
+        .cfg_aer_rooterr_non_fatal_err_reporting_en(cfg_aer_rooterr_non_fatal_err_reporting_en),
+        .cfg_bridge_serr_en(cfg_bridge_serr_en),
+        .cfg_bus_number(cfg_bus_number),
+        .cfg_command(cfg_command),
+        .cfg_dcommand(cfg_dcommand),
+        .cfg_dcommand2(cfg_dcommand2),
+        .cfg_device_number(cfg_device_number),
         .cfg_ds_bus_number({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_ds_device_number({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_ds_function_number({1'b0,1'b0,1'b0}),
         .cfg_dsn({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .cfg_dstatus(NLW_U0_cfg_dstatus_UNCONNECTED[15:0]),
+        .cfg_dstatus(cfg_dstatus),
         .cfg_err_acs(1'b0),
         .cfg_err_aer_headerlog({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_err_aer_headerlog_set(NLW_U0_cfg_err_aer_headerlog_set_UNCONNECTED),
@@ -527,7 +625,7 @@ module pcie_7x_0
         .cfg_err_posted(1'b0),
         .cfg_err_tlp_cpl_header({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_err_ur(1'b0),
-        .cfg_function_number(NLW_U0_cfg_function_number_UNCONNECTED[2:0]),
+        .cfg_function_number(cfg_function_number),
         .cfg_interrupt(cfg_interrupt),
         .cfg_interrupt_assert(cfg_interrupt_assert),
         .cfg_interrupt_di(cfg_interrupt_di),
@@ -538,8 +636,8 @@ module pcie_7x_0
         .cfg_interrupt_msixfm(cfg_interrupt_msixfm),
         .cfg_interrupt_rdy(cfg_interrupt_rdy),
         .cfg_interrupt_stat(cfg_interrupt_stat),
-        .cfg_lcommand(NLW_U0_cfg_lcommand_UNCONNECTED[15:0]),
-        .cfg_lstatus(NLW_U0_cfg_lstatus_UNCONNECTED[15:0]),
+        .cfg_lcommand(cfg_lcommand),
+        .cfg_lstatus(cfg_lstatus),
         .cfg_mgmt_byte_en({1'b0,1'b0,1'b0,1'b0}),
         .cfg_mgmt_di({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .cfg_mgmt_do(NLW_U0_cfg_mgmt_do_UNCONNECTED[31:0]),
@@ -549,24 +647,24 @@ module pcie_7x_0
         .cfg_mgmt_wr_en(1'b0),
         .cfg_mgmt_wr_readonly(1'b0),
         .cfg_mgmt_wr_rw1c_as_rw(1'b0),
-        .cfg_msg_data(NLW_U0_cfg_msg_data_UNCONNECTED[15:0]),
-        .cfg_msg_received(NLW_U0_cfg_msg_received_UNCONNECTED),
-        .cfg_msg_received_assert_int_a(NLW_U0_cfg_msg_received_assert_int_a_UNCONNECTED),
-        .cfg_msg_received_assert_int_b(NLW_U0_cfg_msg_received_assert_int_b_UNCONNECTED),
-        .cfg_msg_received_assert_int_c(NLW_U0_cfg_msg_received_assert_int_c_UNCONNECTED),
-        .cfg_msg_received_assert_int_d(NLW_U0_cfg_msg_received_assert_int_d_UNCONNECTED),
-        .cfg_msg_received_deassert_int_a(NLW_U0_cfg_msg_received_deassert_int_a_UNCONNECTED),
-        .cfg_msg_received_deassert_int_b(NLW_U0_cfg_msg_received_deassert_int_b_UNCONNECTED),
-        .cfg_msg_received_deassert_int_c(NLW_U0_cfg_msg_received_deassert_int_c_UNCONNECTED),
-        .cfg_msg_received_deassert_int_d(NLW_U0_cfg_msg_received_deassert_int_d_UNCONNECTED),
-        .cfg_msg_received_err_cor(NLW_U0_cfg_msg_received_err_cor_UNCONNECTED),
-        .cfg_msg_received_err_fatal(NLW_U0_cfg_msg_received_err_fatal_UNCONNECTED),
-        .cfg_msg_received_err_non_fatal(NLW_U0_cfg_msg_received_err_non_fatal_UNCONNECTED),
-        .cfg_msg_received_pm_as_nak(NLW_U0_cfg_msg_received_pm_as_nak_UNCONNECTED),
-        .cfg_msg_received_pm_pme(NLW_U0_cfg_msg_received_pm_pme_UNCONNECTED),
-        .cfg_msg_received_pme_to_ack(NLW_U0_cfg_msg_received_pme_to_ack_UNCONNECTED),
-        .cfg_msg_received_setslotpowerlimit(NLW_U0_cfg_msg_received_setslotpowerlimit_UNCONNECTED),
-        .cfg_pcie_link_state(NLW_U0_cfg_pcie_link_state_UNCONNECTED[2:0]),
+        .cfg_msg_data(cfg_msg_data),
+        .cfg_msg_received(cfg_msg_received),
+        .cfg_msg_received_assert_int_a(cfg_msg_received_assert_int_a),
+        .cfg_msg_received_assert_int_b(cfg_msg_received_assert_int_b),
+        .cfg_msg_received_assert_int_c(cfg_msg_received_assert_int_c),
+        .cfg_msg_received_assert_int_d(cfg_msg_received_assert_int_d),
+        .cfg_msg_received_deassert_int_a(cfg_msg_received_deassert_int_a),
+        .cfg_msg_received_deassert_int_b(cfg_msg_received_deassert_int_b),
+        .cfg_msg_received_deassert_int_c(cfg_msg_received_deassert_int_c),
+        .cfg_msg_received_deassert_int_d(cfg_msg_received_deassert_int_d),
+        .cfg_msg_received_err_cor(cfg_msg_received_err_cor),
+        .cfg_msg_received_err_fatal(cfg_msg_received_err_fatal),
+        .cfg_msg_received_err_non_fatal(cfg_msg_received_err_non_fatal),
+        .cfg_msg_received_pm_as_nak(cfg_msg_received_pm_as_nak),
+        .cfg_msg_received_pm_pme(cfg_msg_received_pm_pme),
+        .cfg_msg_received_pme_to_ack(cfg_msg_received_pme_to_ack),
+        .cfg_msg_received_setslotpowerlimit(cfg_msg_received_setslotpowerlimit),
+        .cfg_pcie_link_state(cfg_pcie_link_state),
         .cfg_pciecap_interrupt_msgnum(cfg_pciecap_interrupt_msgnum),
         .cfg_pm_force_state({1'b0,1'b0}),
         .cfg_pm_force_state_en(1'b0),
@@ -574,20 +672,20 @@ module pcie_7x_0
         .cfg_pm_halt_aspm_l1(1'b0),
         .cfg_pm_send_pme_to(1'b0),
         .cfg_pm_wake(1'b0),
-        .cfg_pmcsr_pme_en(NLW_U0_cfg_pmcsr_pme_en_UNCONNECTED),
-        .cfg_pmcsr_pme_status(NLW_U0_cfg_pmcsr_pme_status_UNCONNECTED),
-        .cfg_pmcsr_powerstate(NLW_U0_cfg_pmcsr_powerstate_UNCONNECTED[1:0]),
-        .cfg_received_func_lvl_rst(NLW_U0_cfg_received_func_lvl_rst_UNCONNECTED),
-        .cfg_root_control_pme_int_en(NLW_U0_cfg_root_control_pme_int_en_UNCONNECTED),
-        .cfg_root_control_syserr_corr_err_en(NLW_U0_cfg_root_control_syserr_corr_err_en_UNCONNECTED),
-        .cfg_root_control_syserr_fatal_err_en(NLW_U0_cfg_root_control_syserr_fatal_err_en_UNCONNECTED),
-        .cfg_root_control_syserr_non_fatal_err_en(NLW_U0_cfg_root_control_syserr_non_fatal_err_en_UNCONNECTED),
-        .cfg_slot_control_electromech_il_ctl_pulse(NLW_U0_cfg_slot_control_electromech_il_ctl_pulse_UNCONNECTED),
-        .cfg_status(NLW_U0_cfg_status_UNCONNECTED[15:0]),
-        .cfg_to_turnoff(NLW_U0_cfg_to_turnoff_UNCONNECTED),
+        .cfg_pmcsr_pme_en(cfg_pmcsr_pme_en),
+        .cfg_pmcsr_pme_status(cfg_pmcsr_pme_status),
+        .cfg_pmcsr_powerstate(cfg_pmcsr_powerstate),
+        .cfg_received_func_lvl_rst(cfg_received_func_lvl_rst),
+        .cfg_root_control_pme_int_en(cfg_root_control_pme_int_en),
+        .cfg_root_control_syserr_corr_err_en(cfg_root_control_syserr_corr_err_en),
+        .cfg_root_control_syserr_fatal_err_en(cfg_root_control_syserr_fatal_err_en),
+        .cfg_root_control_syserr_non_fatal_err_en(cfg_root_control_syserr_non_fatal_err_en),
+        .cfg_slot_control_electromech_il_ctl_pulse(cfg_slot_control_electromech_il_ctl_pulse),
+        .cfg_status(cfg_status),
+        .cfg_to_turnoff(cfg_to_turnoff),
         .cfg_trn_pending(1'b0),
         .cfg_turnoff_ok(1'b0),
-        .cfg_vc_tcvc_map(NLW_U0_cfg_vc_tcvc_map_UNCONNECTED[6:0]),
+        .cfg_vc_tcvc_map(cfg_vc_tcvc_map),
         .common_commands_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .common_commands_out(NLW_U0_common_commands_out_UNCONNECTED[11:0]),
         .ext_ch_gt_drpaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -769,10 +867,10 @@ module pcie_7x_0
         .startup_usrdonets(1'b1),
         .sys_clk(sys_clk),
         .sys_rst_n(sys_rst_n),
-        .tx_buf_av(NLW_U0_tx_buf_av_UNCONNECTED[5:0]),
+        .tx_buf_av(tx_buf_av),
         .tx_cfg_gnt(1'b1),
-        .tx_cfg_req(NLW_U0_tx_cfg_req_UNCONNECTED),
-        .tx_err_drop(NLW_U0_tx_err_drop_UNCONNECTED),
+        .tx_cfg_req(tx_cfg_req),
+        .tx_err_drop(tx_err_drop),
         .user_app_rdy(user_app_rdy),
         .user_clk_out(user_clk_out),
         .user_lnk_up(user_lnk_up),
@@ -12696,11 +12794,11 @@ module pcie_7x_0_pcie_7x_0_gtx_cpllpd_ovrd_44
 endmodule
 
 (* CFG_CTL_IF = "FALSE" *) (* CFG_FC_IF = "FALSE" *) (* CFG_MGMT_IF = "FALSE" *) 
-(* CFG_STATUS_IF = "FALSE" *) (* C_DATA_WIDTH = "64" *) (* ERR_REPORTING_IF = "FALSE" *) 
+(* CFG_STATUS_IF = "TRUE" *) (* C_DATA_WIDTH = "64" *) (* ERR_REPORTING_IF = "FALSE" *) 
 (* EXT_CH_GT_DRP = "FALSE" *) (* EXT_PIPE_INTERFACE = "FALSE" *) (* EXT_STARTUP_PRIMITIVE = "FALSE" *) 
 (* KEEP_WIDTH = "8" *) (* LINK_CAP_MAX_LINK_WIDTH = "4" *) (* ORIG_REF_NAME = "pcie_7x_0_pcie2_top" *) 
 (* PCIE_ASYNC_EN = "FALSE" *) (* PCIE_EXT_CLK = "FALSE" *) (* PCIE_EXT_GT_COMMON = "FALSE" *) 
-(* PIPE_SIM = "FALSE" *) (* PL_INTERFACE = "FALSE" *) (* RCV_MSG_IF = "FALSE" *) 
+(* PIPE_SIM = "FALSE" *) (* PL_INTERFACE = "FALSE" *) (* RCV_MSG_IF = "TRUE" *) 
 (* SHARED_LOGIC_IN_CORE = "FALSE" *) (* TRANSCEIVER_CTRL_STATUS_PORTS = "FALSE" *) (* bar_0 = "FFF00000" *) 
 (* bar_1 = "FFE00000" *) (* bar_2 = "FFE00000" *) (* bar_3 = "FFE00000" *) 
 (* bar_4 = "FFE00000" *) (* bar_5 = "FFE00000" *) (* bram_lat = "0" *) 

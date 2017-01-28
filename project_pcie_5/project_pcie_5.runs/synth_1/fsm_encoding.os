@@ -12,7 +12,7 @@
  add_fsm_encoding \
        {p2l_dma_master.p2l_dma_current_state} \
        { }  \
-       {{000 00} {001 01} {011 10} {100 11} }
+       {{000 000} {001 001} {010 010} {011 011} {100 100} }
 
  add_fsm_encoding \
        {l2p_dma_master.l2p_dma_current_state} \

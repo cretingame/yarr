@@ -69,39 +69,88 @@ architecture Behavioral of top_level is
     
     COMPONENT pcie_7x_0
       PORT (
-        pci_exp_txp : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        pci_exp_txn : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        pci_exp_rxp : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        pci_exp_rxn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        user_clk_out : OUT STD_LOGIC;
-        user_reset_out : OUT STD_LOGIC;
-        user_lnk_up : OUT STD_LOGIC;
-        user_app_rdy : OUT STD_LOGIC;
-        s_axis_tx_tready : OUT STD_LOGIC;
-        s_axis_tx_tdata : IN STD_LOGIC_VECTOR(AXI_BUS_WIDTH-1 DOWNTO 0);
-        s_axis_tx_tkeep : IN STD_LOGIC_VECTOR(AXI_BUS_WIDTH/8-1 DOWNTO 0);
-        s_axis_tx_tlast : IN STD_LOGIC;
-        s_axis_tx_tvalid : IN STD_LOGIC;
-        s_axis_tx_tuser : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        m_axis_rx_tdata : OUT STD_LOGIC_VECTOR(AXI_BUS_WIDTH-1 DOWNTO 0);
-        m_axis_rx_tkeep : OUT STD_LOGIC_VECTOR(AXI_BUS_WIDTH/8-1 DOWNTO 0);
-        m_axis_rx_tlast : OUT STD_LOGIC;
-        m_axis_rx_tvalid : OUT STD_LOGIC;
-        m_axis_rx_tready : IN STD_LOGIC;
-        m_axis_rx_tuser : OUT STD_LOGIC_VECTOR(21 DOWNTO 0);
-        cfg_interrupt : IN STD_LOGIC;
-        cfg_interrupt_rdy : OUT STD_LOGIC;
-        cfg_interrupt_assert : IN STD_LOGIC;
-        cfg_interrupt_di : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-        cfg_interrupt_do : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-        cfg_interrupt_mmenable : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-        cfg_interrupt_msienable : OUT STD_LOGIC;
-        cfg_interrupt_msixenable : OUT STD_LOGIC;
-        cfg_interrupt_msixfm : OUT STD_LOGIC;
-        cfg_interrupt_stat : IN STD_LOGIC;
-        cfg_pciecap_interrupt_msgnum : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-        sys_clk : IN STD_LOGIC;
-        sys_rst_n : IN STD_LOGIC
+          pci_exp_txp : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+          pci_exp_txn : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+          pci_exp_rxp : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+          pci_exp_rxn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+          user_clk_out : OUT STD_LOGIC;
+          user_reset_out : OUT STD_LOGIC;
+          user_lnk_up : OUT STD_LOGIC;
+          user_app_rdy : OUT STD_LOGIC;
+          tx_buf_av : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+          tx_cfg_req : OUT STD_LOGIC;
+          tx_err_drop : OUT STD_LOGIC;
+          s_axis_tx_tready : OUT STD_LOGIC;
+          s_axis_tx_tdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+          s_axis_tx_tkeep : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+          s_axis_tx_tlast : IN STD_LOGIC;
+          s_axis_tx_tvalid : IN STD_LOGIC;
+          s_axis_tx_tuser : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+          m_axis_rx_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+          m_axis_rx_tkeep : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+          m_axis_rx_tlast : OUT STD_LOGIC;
+          m_axis_rx_tvalid : OUT STD_LOGIC;
+          m_axis_rx_tready : IN STD_LOGIC;
+          m_axis_rx_tuser : OUT STD_LOGIC_VECTOR(21 DOWNTO 0);
+          cfg_status : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_command : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_dstatus : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_dcommand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_lstatus : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_lcommand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_dcommand2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_pcie_link_state : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+          cfg_pmcsr_pme_en : OUT STD_LOGIC;
+          cfg_pmcsr_powerstate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+          cfg_pmcsr_pme_status : OUT STD_LOGIC;
+          cfg_received_func_lvl_rst : OUT STD_LOGIC;
+          cfg_interrupt : IN STD_LOGIC;
+          cfg_interrupt_rdy : OUT STD_LOGIC;
+          cfg_interrupt_assert : IN STD_LOGIC;
+          cfg_interrupt_di : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+          cfg_interrupt_do : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+          cfg_interrupt_mmenable : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+          cfg_interrupt_msienable : OUT STD_LOGIC;
+          cfg_interrupt_msixenable : OUT STD_LOGIC;
+          cfg_interrupt_msixfm : OUT STD_LOGIC;
+          cfg_interrupt_stat : IN STD_LOGIC;
+          cfg_pciecap_interrupt_msgnum : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+          cfg_to_turnoff : OUT STD_LOGIC;
+          cfg_bus_number : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+          cfg_device_number : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+          cfg_function_number : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+          cfg_msg_received : OUT STD_LOGIC;
+          cfg_msg_data : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+          cfg_bridge_serr_en : OUT STD_LOGIC;
+          cfg_slot_control_electromech_il_ctl_pulse : OUT STD_LOGIC;
+          cfg_root_control_syserr_corr_err_en : OUT STD_LOGIC;
+          cfg_root_control_syserr_non_fatal_err_en : OUT STD_LOGIC;
+          cfg_root_control_syserr_fatal_err_en : OUT STD_LOGIC;
+          cfg_root_control_pme_int_en : OUT STD_LOGIC;
+          cfg_aer_rooterr_corr_err_reporting_en : OUT STD_LOGIC;
+          cfg_aer_rooterr_non_fatal_err_reporting_en : OUT STD_LOGIC;
+          cfg_aer_rooterr_fatal_err_reporting_en : OUT STD_LOGIC;
+          cfg_aer_rooterr_corr_err_received : OUT STD_LOGIC;
+          cfg_aer_rooterr_non_fatal_err_received : OUT STD_LOGIC;
+          cfg_aer_rooterr_fatal_err_received : OUT STD_LOGIC;
+          cfg_msg_received_err_cor : OUT STD_LOGIC;
+          cfg_msg_received_err_non_fatal : OUT STD_LOGIC;
+          cfg_msg_received_err_fatal : OUT STD_LOGIC;
+          cfg_msg_received_pm_as_nak : OUT STD_LOGIC;
+          cfg_msg_received_pm_pme : OUT STD_LOGIC;
+          cfg_msg_received_pme_to_ack : OUT STD_LOGIC;
+          cfg_msg_received_assert_int_a : OUT STD_LOGIC;
+          cfg_msg_received_assert_int_b : OUT STD_LOGIC;
+          cfg_msg_received_assert_int_c : OUT STD_LOGIC;
+          cfg_msg_received_assert_int_d : OUT STD_LOGIC;
+          cfg_msg_received_deassert_int_a : OUT STD_LOGIC;
+          cfg_msg_received_deassert_int_b : OUT STD_LOGIC;
+          cfg_msg_received_deassert_int_c : OUT STD_LOGIC;
+          cfg_msg_received_deassert_int_d : OUT STD_LOGIC;
+          cfg_msg_received_setslotpowerlimit : OUT STD_LOGIC;
+          cfg_vc_tcvc_map : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+          sys_clk : IN STD_LOGIC;
+          sys_rst_n : IN STD_LOGIC
       );
     END COMPONENT;
     
@@ -140,6 +189,9 @@ architecture Behavioral of top_level is
                cfg_interrupt_msixfm_i : in STD_LOGIC;
                cfg_interrupt_stat_o : out STD_LOGIC;
                cfg_pciecap_interrupt_msgnum_o : out STD_LOGIC_VECTOR(4 DOWNTO 0);
+               
+               -- PCIe debug
+               cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
                
                --I/O
                usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0);
@@ -199,6 +251,9 @@ architecture Behavioral of top_level is
     signal cfg_interrupt_msixfm_s : STD_LOGIC;
     signal cfg_interrupt_stat_s : STD_LOGIC;
     signal cfg_pciecap_interrupt_msgnum_s : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    
+    --PCIE debug
+    signal cfg_dstatus_s : STD_LOGIC_VECTOR(15 DOWNTO 0);
     
 begin
 
@@ -272,6 +327,8 @@ begin
         cfg_interrupt_msixfm => cfg_interrupt_msixfm_s,
         cfg_interrupt_stat => cfg_interrupt_stat_s,
         cfg_pciecap_interrupt_msgnum => cfg_pciecap_interrupt_msgnum_s,
+        cfg_dstatus => cfg_dstatus_s,
+        
         sys_clk => sys_clk,
         sys_rst_n => sys_rst_n_i
       );
@@ -312,6 +369,9 @@ begin
         cfg_interrupt_msixfm_i => cfg_interrupt_msixfm_s,
         cfg_interrupt_stat_o => cfg_interrupt_stat_s,
         cfg_pciecap_interrupt_msgnum_o => cfg_pciecap_interrupt_msgnum_s,
+        
+        -- PCIe debug
+        cfg_dstatus_i => cfg_dstatus_s,
         
         --I/O
         usr_sw_i => usr_sw_i,
