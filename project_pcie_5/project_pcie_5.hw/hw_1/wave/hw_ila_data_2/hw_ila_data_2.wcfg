@@ -9,17 +9,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="612924fs"></ZoomEndTime>
-      <Cursor1Time time="242000fs"></Cursor1Time>
+      <ZoomStartTime time="888240fs"></ZoomStartTime>
+      <ZoomEndTime time="897681fs"></ZoomEndTime>
+      <Cursor1Time time="900000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="21" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="app_0/dma_ctrl_abort_s">
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_abort_s_2">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_abort_s</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_abort_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_abort_s_2</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_abort_s_2</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/dma_ctrl_byte_swap_s">
@@ -29,17 +29,24 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_ctrl_carrier_addr_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_carrier_addr_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_carrier_addr_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_carrier_addr_s[31:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_carrier_addr_s_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_carrier_addr_s_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_ctrl_done_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_current_state_ds">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_done_s</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_done_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_current_state_ds[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_current_state_ds[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_done_s_3">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_done_s_3</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_done_s_3</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/dma_ctrl_error_s">
@@ -48,31 +55,38 @@
       <obj_property name="ObjectShortName">dma_ctrl_error_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_h_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_h_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_h_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_host_addr_h_s[31:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_h_s_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_h_s_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_l_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_host_addr_l_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_l_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_host_addr_l_s[31:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_host_addr_l_s_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_l_s_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_ctrl_len_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_irq_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_len_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_len_s[31:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_irq_s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_irq_s[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_l2p_s">
+   <wvobject type="array" fp_name="app_0/dma_ctrl_len_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_start_l2p_s</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_len_s_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_len_s_1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_l2p_s_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_l2p_s_2</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_s_2</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/dma_ctrl_start_next_s">
@@ -87,11 +101,59 @@
       <obj_property name="ObjectShortName">dma_ctrl_start_p2l_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_ctrl_current_state_ds">
+   <wvobject type="array" fp_name="app_0/next_item_attrib_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_current_state_ds[2:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_current_state_ds[2:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_attrib_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_attrib_s[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_carrier_addr_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_carrier_addr_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_carrier_addr_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_host_addr_h_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_host_addr_h_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_host_addr_h_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_host_addr_l_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_host_addr_l_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_host_addr_l_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_len_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_len_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_len_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_next_h_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_next_h_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_next_h_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/next_item_next_l_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_next_l_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_item_next_l_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/next_item_valid_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/next_item_valid_s</obj_property>
+      <obj_property name="ObjectShortName">next_item_valid_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

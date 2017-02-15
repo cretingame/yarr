@@ -65,7 +65,30 @@ entity l2p_dma_master is
         l2p_dma_we_o    : out std_logic;
         l2p_dma_ack_i   : in  std_logic;
         l2p_dma_stall_i : in  std_logic;
-        p2l_dma_cyc_i   : in  std_logic -- P2L dma WB cycle for bus arbitration
+        p2l_dma_cyc_i   : in  std_logic; -- P2L dma WB cycle for bus arbitration
+        
+        --DMA Debug
+        l2p_current_state_do : out std_logic_vector (2 downto 0);
+        l2p_data_cnt_do : out unsigned(12 downto 0);
+        l2p_len_cnt_do  : out unsigned(12 downto 0);
+        l2p_timeout_cnt_do : out unsigned(12 downto 0);
+        wb_timeout_cnt_do  : out unsigned(12 downto 0);
+        
+        -- Data FIFO
+        data_fifo_rd_do    : out std_logic;
+        data_fifo_wr_do    : out std_logic;
+        data_fifo_empty_do : out std_logic;
+        data_fifo_full_do  : out std_logic;
+        data_fifo_dout_do  : out std_logic_vector(axis_data_width_c-1 downto 0);
+        data_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0);
+        
+        -- Addr FIFO
+        addr_fifo_rd_do    : out std_logic;
+        addr_fifo_wr_do    : out std_logic;
+        addr_fifo_empty_do : out std_logic;
+        addr_fifo_full_do  : out std_logic;
+        addr_fifo_dout_do  : out std_logic_vector(wb_address_width_c-1 downto 0);
+        addr_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0)
     );
 end l2p_dma_master;
 
@@ -170,7 +193,39 @@ architecture behavioral of l2p_dma_master is
 	signal l2p_cyc_cnt     : unsigned(12 downto 0);
 	signal wb_cyc_cnt	   : unsigned(12 downto 0);
 
-begin
+begin    
+    --DEBUG
+    l2p_data_cnt_do <= l2p_data_cnt;
+    l2p_len_cnt_do  <= l2p_len_cnt;
+    l2p_timeout_cnt_do <= l2p_timeout_cnt;
+    wb_timeout_cnt_do  <= wb_timeout_cnt;
+    
+    with l2p_dma_current_state select l2p_current_state_do <=
+      "000" when L2P_IDLE, 
+      "001" when L2P_SETUP, 
+      "010" when L2P_HEADER_0,
+      "011" when L2P_HEADER_1,
+      "100" when L2P_SETUP_DATA,
+      "101" when L2P_DATA,
+      "110" when L2P_LAST_DATA,
+      "111" when L2P_ERROR;
+    
+    -- Data FIFO
+    data_fifo_rd_do <= data_fifo_rd;   
+    data_fifo_wr_do <= data_fifo_wr;
+    data_fifo_empty_do <= data_fifo_empty;
+    data_fifo_full_do <=  data_fifo_full;
+    data_fifo_dout_do <=  data_fifo_dout;
+    data_fifo_din_do  <=  data_fifo_din;
+    
+    -- Addr FIFO
+    addr_fifo_rd_do   <=  addr_fifo_rd;
+    addr_fifo_wr_do    <= addr_fifo_wr;
+    addr_fifo_empty_do  <= addr_fifo_empty;
+    addr_fifo_full_do   <= addr_fifo_full;
+    addr_fifo_dout_do   <= addr_fifo_dout;
+    addr_fifo_din_do    <= addr_fifo_din;
+    
     byte_swap_c <= "11";
     fifo_rst <= not rst_n_i or fifo_rst_t;
 
@@ -179,12 +234,8 @@ begin
     
     l2p_64b_address <= '0' when l2p_address_h = X"00000000" else '1';
     
---    ldm_arb_data_o <= f_byte_swap(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap) when (l2p_dma_current_state = L2P_DATA) 
---                      else f_byte_swap(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap) when (l2p_dma_current_state = L2P_LAST_DATA)
---                      else ldm_arb_data_l when (l2p_dma_current_state = L2P_HEADER)
---                      else ldm_arb_data_l when (l2p_dma_current_state = L2P_ADDR_L)
---                      else ldm_arb_data_l when (l2p_dma_current_state = L2P_ADDR_H)
---                      else x"DEADBEEF";
+
+
 	delay_p : process(clk_i)
 	begin
 		if rising_edge(clk_i) then
@@ -306,7 +357,7 @@ begin
             data_fifo_dout_1 <= (others => '0');
         elsif (clk_i'event and clk_i = '1') then
             if (l2p_dma_current_state = L2P_HEADER_1) then
-                data_fifo_dout_1(63 downto 32) <= l2p_address_l;--(31 downto 0);
+                data_fifo_dout_1(63 downto 32) <= f_byte_swap(true,l2p_address_l, byte_swap_c); -- for unswapping
             elsif (data_fifo_rd = '1') then
                 --data_0_s <= data_i;
                 --data_1_s <= data_0_s;
@@ -341,7 +392,7 @@ begin
 			when L2P_DATA =>
 				if (l2p_64b_address = '1') then
 				    --ldm_arb_data_l <= f_byte_swap_64(g_BYTE_SWAP, data_fifo_dout, l2p_byte_swap);
-				    ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout(31 downto 0), byte_swap_c) & f_byte_swap(true, data_fifo_dout(63 downto 32), byte_swap_c);
+				    ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout(63 downto 32), byte_swap_c) & f_byte_swap(true, data_fifo_dout(31 downto 0), byte_swap_c);
 				else
 				    ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout (31 downto 0), byte_swap_c) & f_byte_swap(true, data_fifo_dout_1 (63 downto 32), byte_swap_c);
 				    --ldm_arb_data_l <= data_fifo_dout (31 downto 0) & data_fifo_dout_1 (63 downto 32);
@@ -351,7 +402,7 @@ begin
 				ldm_arb_tkeep_o <= x"FF";
 			when L2P_LAST_DATA =>
 			    if (l2p_64b_address = '1') then
-                    ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout(31 downto 0), byte_swap_c) & f_byte_swap(true, data_fifo_dout(63 downto 32), byte_swap_c);
+                    ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout(63 downto 32), byte_swap_c) & f_byte_swap(true, data_fifo_dout(31 downto 0), byte_swap_c);
                     ldm_arb_tkeep_o <= x"FF";
                 else
                     ldm_arb_data_l <= f_byte_swap(true, data_fifo_dout (31 downto 0), byte_swap_c) & f_byte_swap(true, data_fifo_dout_1 (63 downto 32), byte_swap_c);
@@ -457,8 +508,8 @@ begin
             elsif (dma_ctrl_start_l2p_i = '1') then
                 if (l2p_dma_current_state = L2P_IDLE) then
                     -- dma target adrr is byte address, need 32bit address
-                    target_addr_cnt(31 downto 28) <= "0000";
-                    target_addr_cnt(27 downto 0) <= dma_ctrl_target_addr_i(31 downto 4);
+                    target_addr_cnt(31 downto 29) <= "000";
+                    target_addr_cnt(28 downto 0) <= dma_ctrl_target_addr_i(31 downto 3);
                     -- dma target length is in byte, need 32bit
                     dma_length_cnt <= unsigned(dma_ctrl_len_i(15 downto 3)); -- That's it
                     dma_ctrl_error_o <= '0';

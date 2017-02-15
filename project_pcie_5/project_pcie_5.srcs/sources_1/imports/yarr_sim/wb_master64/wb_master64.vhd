@@ -9,7 +9,7 @@ entity wb_master64 is
 		axis_data_width_c : integer := 64;
 		wb_address_width_c : integer := 64;
 		wb_data_width_c : integer := 32;
-		address_mask_c : STD_LOGIC_VECTOR(64-1 downto 0) := X"00000000" & X"000000FF" -- depends on pcie memory size
+		address_mask_c : STD_LOGIC_VECTOR(64-1 downto 0) := X"00000000" & X"000FFFFF" -- depends on pcie memory size
 		);
 	Port (
 		clk_i : in STD_LOGIC;
@@ -33,6 +33,7 @@ entity wb_master64 is
 		pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
         pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
         pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
+        pd_pdm_keep_o        : out std_logic_vector(7 downto 0);
 		-- Wishbone master
 		wb_adr_o : out STD_LOGIC_VECTOR (wb_address_width_c - 1 downto 0);
 		wb_dat_o : out STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
@@ -82,11 +83,13 @@ architecture Behavioral of wb_master64 is
 	signal s_axis_rx_tkeep_s : STD_LOGIC_VECTOR (axis_data_width_c/8 - 1 downto 0);
 	signal s_axis_rx_tuser_s : STD_LOGIC_VECTOR (21 downto 0);
 	signal m_axis_tx_tdata_s : STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
-	signal wb_dat_i_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+	signal wb_dat_i_s        : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
 	signal s_axis_rx_tvalid_s : STD_LOGIC;
 	signal s_axis_rx_tlast_s : STD_LOGIC;
 	signal s_axis_rx_tdata_0_s : STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
 	signal s_axis_rx_tdata_1_s : STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
+	signal pd_pdm_keep_0_s     : std_logic_vector(7 downto 0);
+	signal pd_pdm_keep_1_s     : std_logic_vector(7 downto 0);
 	
 	signal byte_swap_c : STD_LOGIC_VECTOR (1 downto 0);
 begin
@@ -343,12 +346,15 @@ begin
 			if (s_axis_rx_tvalid_i = '1') then
 				s_axis_rx_tdata_0_s <= s_axis_rx_tdata_i;
 				s_axis_rx_tdata_1_s <= s_axis_rx_tdata_0_s;
+				pd_pdm_keep_0_s <= s_axis_rx_tkeep_i;
+				pd_pdm_keep_1_s <= pd_pdm_keep_0_s;
 			end if;
 		end if;
 	end process p2l_data_delay_p;
 
 	--pd_pdm_data_o <= s_axis_rx_tdata_0_s(31 downto 0) & s_axis_rx_tdata_1_s(63 downto 32);
-	pd_pdm_data_o <= f_byte_swap(true, s_axis_rx_tdata_0_s(31 downto 0), byte_swap_c) & f_byte_swap(true, s_axis_rx_tdata_0_s(63 downto 32), byte_swap_c);
+	pd_pdm_data_o <= f_byte_swap(true, s_axis_rx_tdata_0_s(31 downto 0), byte_swap_c) & f_byte_swap(true, s_axis_rx_tdata_1_s(63 downto 32), byte_swap_c);
+	pd_pdm_keep_o <= pd_pdm_keep_0_s(3 downto 0) & pd_pdm_keep_1_s(7 downto 4);
 	
 	pd_pdm_data_valid_o <= s_axis_rx_tvalid_s when state_s = l2p_data_rx else '0';
 	pd_pdm_data_last_o <= s_axis_rx_tlast_s when state_s = l2p_data_rx else '0';
@@ -439,7 +445,12 @@ begin
 					wbm_arb_tdata_o <= data_s; -- TODO: endianness
 					wbm_arb_req_o <= '1';
 				when l2p_data_rx =>
-					s_axis_rx_tready_o <= '1';
+					--s_axis_rx_tready_o <= '1';
+					if s_axis_rx_tlast_s = '1' then
+                        s_axis_rx_tready_o <= '0';
+                    else
+                        s_axis_rx_tready_o <= '1';
+                    end if;
 					wbm_arb_tvalid_o <= '0';
 					wbm_arb_tlast_o <= '0';
 					wbm_arb_tdata_o <= (others => '0');

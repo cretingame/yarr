@@ -253,7 +253,7 @@ struct dma_linked_list* SpecController::prepDmaList(UserMemory *um, KernelMemory
             llist[j].host_next_l = (uint32_t)((uint64_t)next & 0xFFFFFFFF);
             llist[j].host_next_h = (uint32_t)((uint64_t)next >> 32);
             llist[j].attr = 0x1 + (write << 1); // L2P, not last
-#if 1
+#if 0
             std::cout << "Linked List Entry [" << std::dec << j << std::hex << "]:" << std::endl;
             std::cout << "  Carrier Start: 0x" << llist[j].carrier_start << std::endl;
             std::cout << "  Host Start H:  0x" << llist[j].host_start_h << std::endl;

@@ -21,10 +21,11 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -37,9 +38,9 @@ entity app is
         axis_data_width_c : integer := 64;
         axis_rx_tkeep_width_c : integer := 64/8;
         axis_rx_tuser_width_c : integer := 22;
-        wb_address_width_c : integer := 8;
+        wb_address_width_c : integer := 32;
         wb_data_width_c : integer := 32;
-        address_mask_c : STD_LOGIC_VECTOR(32-1 downto 0) := X"000000FF"
+        address_mask_c : STD_LOGIC_VECTOR(32-1 downto 0) := X"000FFFFF"
         );
     Port ( clk_i : in STD_LOGIC;
            rst_i : in STD_LOGIC;
@@ -85,7 +86,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(3 downto 0) := "0111";
+    constant DEBUG_C : std_logic_vector(4 downto 0) := "10011";
     
     component simple_counter is
         Port ( 
@@ -100,7 +101,7 @@ architecture Behavioral of app is
 			axis_data_width_c : integer := 64;
 			wb_address_width_c : integer := 64;
 			wb_data_width_c : integer := 32;
-			address_mask_c : STD_LOGIC_VECTOR(64-1 downto 0) := X"00000000" & X"000000FF" -- depends on pcie memory size
+			address_mask_c : STD_LOGIC_VECTOR(64-1 downto 0) := X"00000000" & X"000FFFFF" -- depends on pcie memory size
 		);
 		Port (
 			clk_i : in STD_LOGIC;
@@ -124,6 +125,7 @@ architecture Behavioral of app is
 			pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
 			pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
 			pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
+			pd_pdm_keep_o        : out std_logic_vector(7 downto 0);
 			-- Wishbone master
 			wb_adr_o : out STD_LOGIC_VECTOR (64 - 1 downto 0);
 			wb_dat_o : out STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
@@ -222,6 +224,80 @@ architecture Behavioral of app is
         wb_dat_o            : out std_logic_vector(64-1 downto 0);
         wb_ack_o            : out std_logic        
     );
+    end component;
+    
+    component bram_wbs32 is
+        generic (
+            constant ADDR_WIDTH : integer := 16;
+            constant DATA_WIDTH : integer := 32 
+        );
+        port (
+            -- SYS CON
+            clk            : in std_logic;
+            rst            : in std_logic;
+            
+            -- Wishbone Slave in
+            wb_adr_i            : in std_logic_vector(5-1 downto 0);
+            wb_dat_i            : in std_logic_vector(32-1 downto 0);
+            wb_we_i            : in std_logic;
+            wb_stb_i            : in std_logic;
+            wb_cyc_i            : in std_logic; 
+            wb_lock_i        : in std_logic; -- nyi
+            
+            -- Wishbone Slave out
+            wb_dat_o            : out std_logic_vector(32-1 downto 0);
+            wb_ack_o            : out std_logic        
+        );
+    end component;
+    
+    component k_bram is
+      generic (
+        constant ADDR_WIDTH : integer := 9+4;
+        constant DATA_WIDTH : integer := 32 
+      );
+      Port ( 
+          -- SYS CON
+          clk            : in std_logic;
+          rst            : in std_logic;
+          
+          -- Wishbone Slave in
+          wb_adr_i            : in std_logic_vector(9+4-1 downto 0);
+          wb_dat_i            : in std_logic_vector(64-1 downto 0);
+          wb_we_i            : in std_logic;
+          wb_stb_i            : in std_logic;
+          wb_cyc_i            : in std_logic; 
+          wb_lock_i        : in std_logic; -- nyi
+          
+          -- Wishbone Slave out
+          wb_dat_o            : out std_logic_vector(64-1 downto 0);
+          wb_ack_o            : out std_logic
+      
+      );
+    end component;
+    
+    component k2_bram is
+        generic (
+          constant ADDR_WIDTH : integer := 11;
+          constant DATA_WIDTH : integer := 64 
+        );
+        Port ( 
+            -- SYS CON
+            clk            : in std_logic;
+            rst            : in std_logic;
+            
+            -- Wishbone Slave in
+            wb_adr_i            : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+            wb_dat_i            : in std_logic_vector(DATA_WIDTH-1 downto 0);
+            wb_we_i            : in std_logic;
+            wb_stb_i            : in std_logic;
+            wb_cyc_i            : in std_logic; 
+            wb_lock_i        : in std_logic; -- nyi
+            
+            -- Wishbone Slave out
+            wb_dat_o            : out std_logic_vector(DATA_WIDTH-1 downto 0);
+            wb_ack_o            : out std_logic
+        
+        );
     end component;
 	
 	component l2p_arbiter is
@@ -415,7 +491,30 @@ architecture Behavioral of app is
 			l2p_dma_we_o    : out std_logic;
 			l2p_dma_ack_i   : in  std_logic;
 			l2p_dma_stall_i : in  std_logic;
-			p2l_dma_cyc_i   : in  std_logic -- P2L dma WB cycle for bus arbitration
+			p2l_dma_cyc_i   : in  std_logic; -- P2L dma WB cycle for bus arbitration
+			
+			--DMA Debug
+            l2p_current_state_do : out std_logic_vector (2 downto 0);
+            l2p_data_cnt_do : out unsigned(12 downto 0);
+            l2p_len_cnt_do  : out unsigned(12 downto 0);
+            l2p_timeout_cnt_do : out unsigned(12 downto 0);
+            wb_timeout_cnt_do  : out unsigned(12 downto 0);
+            
+            -- Data FIFO
+            data_fifo_rd_do    : out std_logic;
+            data_fifo_wr_do    : out std_logic;
+            data_fifo_empty_do : out std_logic;
+            data_fifo_full_do  : out std_logic;
+            data_fifo_dout_do  : out std_logic_vector(axis_data_width_c-1 downto 0);
+            data_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0);
+            
+            -- Addr FIFO
+            addr_fifo_rd_do    : out std_logic;
+            addr_fifo_wr_do    : out std_logic;
+            addr_fifo_empty_do : out std_logic;
+            addr_fifo_full_do  : out std_logic;
+            addr_fifo_dout_do  : out std_logic_vector(axis_data_width_c-1 downto 0);
+            addr_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0)
 		);
 	end component;
 	
@@ -444,7 +543,11 @@ COMPONENT ila_axis
         probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe18 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+        probe18 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe21 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+        
     );
     END COMPONENT  ;
     
@@ -455,7 +558,7 @@ COMPONENT ila_axis
     
     
     
-        probe0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+	    probe0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
         probe1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
         probe2 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
         probe3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
@@ -465,8 +568,17 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe11 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe14 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe16 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe18 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe20 : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -487,7 +599,8 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe11 : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -499,14 +612,89 @@ COMPONENT ila_axis
     
     
         probe0 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
-        probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(12 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(12 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe18 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe21 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe22 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe23 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+        probe24 : IN STD_LOGIC_VECTOR(63 DOWNTO 0)
+    );
+    END COMPONENT  ;
+    
+COMPONENT ila_l2p_dma
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe16 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe17 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe18 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe21 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe22 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe23 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe24 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe25 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe26 : IN STD_LOGIC_VECTOR(12 DOWNTO 0); 
+        probe27 : IN STD_LOGIC_VECTOR(12 DOWNTO 0); 
+        probe28 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe29 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe30 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe31 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe32 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe33 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe34 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe35 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe36 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe37 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe38 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe39 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+        probe40 : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+        probe41 : IN STD_LOGIC_VECTOR(12 DOWNTO 0)
     );
     END COMPONENT  ;
     
     signal rst_n_s : std_logic;
     signal count_s : STD_LOGIC_VECTOR (28 downto 0);
     signal eop_s : std_logic; -- Arbiter end of operation
+    signal cfg_interrupt_s : std_logic;
     
     ---------------------------------------------------------
     -- debug signals
@@ -574,6 +762,7 @@ COMPONENT ila_axis
 	signal pd_pdm_data_valid_s : STD_LOGIC;
 	signal pd_pdm_data_last_s : STD_LOGIC;
 	signal pd_pdm_data_s : STD_LOGIC_VECTOR(axis_data_width_c - 1 downto 0);
+	signal pd_pdm_keep_s : std_logic_vector(7 downto 0);
 	
     ---------------------------------------------------------
     -- From Wishbone master (wbm) to arbiter (arb)      
@@ -583,6 +772,8 @@ COMPONENT ila_axis
     signal wbm_arb_tvalid_s : std_logic;
     signal wbm_arb_req_s    : std_logic;
     signal wbm_arb_tready_s : std_logic;
+	
+	signal dma_ctrl_irq_s : std_logic_vector(1 downto 0);
 	
 	---------------------------------------------------------
 	-- To the L2P DMA master and P2L DMA master
@@ -653,6 +844,40 @@ COMPONENT ila_axis
 	signal dma_ack_s   :  std_logic;                      -- Acknowledge
 	signal dma_stall_s :  std_logic;                      -- for pipelined Wishbone	
 	
+	signal l2p_current_state_ds : std_logic_vector (2 downto 0);
+    signal l2p_data_cnt_ds : unsigned(12 downto 0);
+    signal l2p_len_cnt_ds  : unsigned(12 downto 0);
+    signal l2p_timeout_cnt_ds : unsigned(12 downto 0);
+    signal wb_timeout_cnt_ds  : unsigned(12 downto 0);
+        -- Data FIFO
+    signal data_fifo_rd_ds    : std_logic;
+    signal data_fifo_wr_ds    : std_logic;
+    signal data_fifo_empty_ds : std_logic;
+    signal data_fifo_full_ds  : std_logic;
+    signal data_fifo_dout_ds  : std_logic_vector(axis_data_width_c-1 downto 0);
+    signal data_fifo_din_ds   : std_logic_vector(axis_data_width_c-1 downto 0);
+    -- Addr FIFO
+    signal addr_fifo_rd_ds    : std_logic;
+    signal addr_fifo_wr_ds    : std_logic;
+    signal addr_fifo_empty_ds : std_logic;
+    signal addr_fifo_full_ds  : std_logic;
+    signal addr_fifo_dout_ds  : std_logic_vector(64-1 downto 0);
+    signal addr_fifo_din_ds   : std_logic_vector(axis_data_width_c-1 downto 0);
+	
+	constant cyc_nb_exp_c : integer := 2;
+	constant cyc_nb_c : integer := 2**cyc_nb_exp_c;
+	type ram_dma_data_bus is array (cyc_nb_c-1 downto 0) of std_logic_vector(64-1 downto 0);
+	
+    signal ram_dma_adr_s   :  std_logic_vector(32-1 downto 0);  -- Adress
+    signal ram_dma_dat_s2m_s   :  ram_dma_data_bus;  -- Data in
+    signal ram_dma_dat_m2s_s   :  std_logic_vector(64-1 downto 0);  -- Data out
+    signal ram_dma_sel_s   :  std_logic_vector(8-1 downto 0);   -- Byte select
+    signal ram_dma_cyc_s   :  std_logic_vector(cyc_nb_c-1 downto 0);  -- Read or write cycle
+    signal ram_dma_stb_s   :  std_logic;                      -- Read or write strobe
+    signal ram_dma_we_s    :  std_logic;                      -- Write
+    signal ram_dma_ack_s   :  std_logic_vector(cyc_nb_c-1 downto 0); -- Acknowledge
+    signal ram_dma_stall_s :  std_logic;                      -- for pipelined Wishbone    
+	
 	---------------------------------------------------------
 	-- From L2P DMA master (ldm) to arbiter (arb)
 	signal ldm_arb_tdata_s : std_logic_vector (axis_data_width_c - 1 downto 0);
@@ -667,11 +892,7 @@ begin
     
     rst_n_s <= not rst_i;
     
-    cfg_interrupt_o <= '0';
-    cfg_interrupt_assert_o <= '0';
-    cfg_interrupt_di_o <= (others => '0');
-    cfg_interrupt_stat_o <= '0';
-    cfg_pciecap_interrupt_msgnum_o <= (others => '0');
+
     
     s_axis_rx_tdata_s <= s_axis_rx_tdata_i;
     s_axis_rx_tkeep_s <= s_axis_rx_tkeep_i;
@@ -686,6 +907,29 @@ begin
     m_axis_tx_tlast_o <= m_axis_tx_tlast_s;
     m_axis_tx_tvalid_o <= m_axis_tx_tvalid_s;
     m_axis_tx_tready_s <= m_axis_tx_tready_i;
+    
+    
+    cfg_interrupt_assert_o <= '0';
+    cfg_interrupt_di_o <= (others => '0');
+    cfg_interrupt_stat_o <= '0';
+    cfg_pciecap_interrupt_msgnum_o <= (others => '0');
+    
+    cfg_interrupt_o <= cfg_interrupt_s;
+    
+    interrupt_p : process(rst_i,clk_i)
+    begin
+        if (rst_i = '1') then
+            cfg_interrupt_s <= '0';
+        elsif(clk_i'event and clk_i = '1') then
+            if (dma_ctrl_irq_s(1) = '1' or dma_ctrl_irq_s(0) = '1') then
+                cfg_interrupt_s <= '1';
+            elsif (cfg_interrupt_rdy_i = '1') then
+                cfg_interrupt_s <= '0';
+            else
+                cfg_interrupt_s <= cfg_interrupt_s;
+            end if;    
+        end if;
+    end process interrupt_p;
 
     cnt:simple_counter
     port map(
@@ -717,6 +961,7 @@ begin
 		pd_pdm_data_valid_o => pd_pdm_data_valid_s,
         pd_pdm_data_last_o => pd_pdm_data_last_s,
         pd_pdm_data_o => pd_pdm_data_s,
+        pd_pdm_keep_o => pd_pdm_keep_s,
 		-- Wishbone Master
 		wb_adr_o => wb_adr_s,
 		wb_dat_o => wb_dat_o_s,
@@ -762,10 +1007,10 @@ begin
         end if;
     end process;
     
-    csr_ram:bram_wbs
+    csr_ram:bram_wbs32
     generic map (
-      ADDR_WIDTH => wb_address_width_c,
-      DATA_WIDTH => 64 
+      ADDR_WIDTH => 5,
+      DATA_WIDTH => 32 
     )
     port map (
       -- SYS CON
@@ -773,17 +1018,17 @@ begin
       rst            => rst_i,
       
       -- Wishbone Slave in
-      wb_adr_i    => wb_mem_adr_s(wb_address_width_c - 1 downto 0),
-      wb_dat_i(63 downto 32)    => X"00000000",
-      wb_dat_i(31 downto 0)    => wb_mem_dat_m2s_s,
+      wb_adr_i    => wb_mem_adr_s(5 - 1 downto 0),
+      --wb_dat_i(63 downto 32)    => X"00000000",
+      wb_dat_i    => wb_mem_dat_m2s_s,
       wb_we_i        => wb_mem_we_s,
       wb_stb_i    => wb_mem_stb_s,
       wb_cyc_i    => wb_mem_cyc_s,
       wb_lock_i    => wb_mem_stb_s,
       
       -- Wishbone Slave out
-      wb_dat_o(63 downto 32) => open,
-      wb_dat_o(31 downto 0)    => wb_mem_dat_s2m_s,
+      --wb_dat_o(63 downto 32) => wb_null,--open,
+      wb_dat_o    => wb_mem_dat_s2m_s,
       wb_ack_o    => wb_mem_ack_s
     );
 	
@@ -797,7 +1042,7 @@ begin
 
 		  ---------------------------------------------------------
 		  -- Interrupt request
-		  dma_ctrl_irq_o => open,
+		  dma_ctrl_irq_o => dma_ctrl_irq_s,
 
 		  ---------------------------------------------------------
 		  -- To the L2P DMA master and P2L DMA master
@@ -886,7 +1131,7 @@ begin
 		  pd_pdm_data_valid_i  => pd_pdm_data_valid_s,                      -- Indicates Data is valid
 		  pd_pdm_data_last_i   => pd_pdm_data_last_s,                      -- Indicates end of the packet
 		  pd_pdm_data_i        => pd_pdm_data_s,  -- Data
-		  pd_pdm_be_i          => X"FF",   -- Byte Enable for data TODO
+		  pd_pdm_be_i          => pd_pdm_keep_s,   -- Byte Enable for data
 
 		  ---------------------------------------------------------
 		  -- P2L control
@@ -973,7 +1218,30 @@ begin
 		l2p_dma_we_o    => l2p_dma_we_s,
 		l2p_dma_ack_i   => l2p_dma_ack_s,
 		l2p_dma_stall_i => l2p_dma_stall_s,
-		p2l_dma_cyc_i   => p2l_dma_cyc_s
+		p2l_dma_cyc_i   => p2l_dma_cyc_s,
+		
+		--DMA Debug
+        l2p_current_state_do => l2p_current_state_ds,
+        l2p_data_cnt_do => l2p_data_cnt_ds,
+        l2p_len_cnt_do  => l2p_len_cnt_ds,
+        l2p_timeout_cnt_do => l2p_timeout_cnt_ds,
+        wb_timeout_cnt_do => wb_timeout_cnt_ds,
+        
+                -- Data FIFO
+        data_fifo_rd_do    => data_fifo_rd_ds,
+        data_fifo_wr_do    => data_fifo_wr_ds,
+        data_fifo_empty_do => data_fifo_empty_ds,
+        data_fifo_full_do  => data_fifo_full_ds,
+        data_fifo_dout_do  => data_fifo_dout_ds,
+        data_fifo_din_do   => data_fifo_din_ds,
+        
+        -- Addr FIFO
+        addr_fifo_rd_do    => addr_fifo_rd_ds,
+        addr_fifo_wr_do    => addr_fifo_wr_ds,
+        addr_fifo_empty_do => addr_fifo_empty_ds,
+        addr_fifo_full_do  => addr_fifo_full_ds,
+        addr_fifo_dout_do  => addr_fifo_dout_ds,
+        addr_fifo_din_do   => addr_fifo_din_ds
 	);
 	
 	
@@ -1028,28 +1296,30 @@ begin
 		eop_do => eop_s
 	);
   
-  	dma_ram:bram_wbs
-	generic map (
-		ADDR_WIDTH => wb_address_width_c,
-		DATA_WIDTH => 64 
-	)
-	port map (
-		-- SYS CON
-		clk			=> clk_i,
-		rst			=> rst_i,
-		
-		-- Wishbone Slave in
-		wb_adr_i	=> dma_adr_s(wb_address_width_c - 1 downto 0),
-		wb_dat_i	=> dma_dat_m2s_s,
-		wb_we_i		=> dma_we_s,
-		wb_stb_i	=> dma_stb_s,
-		wb_cyc_i	=> dma_cyc_s,
-		wb_lock_i	=> dma_stb_s,
-		
-		-- Wishbone Slave out
-		wb_dat_o	=> dma_dat_s2m_s,
-		wb_ack_o	=> dma_ack_s
-	);
+
+     dma_ram:k_bram
+     generic map (
+         ADDR_WIDTH => 9+4,
+         DATA_WIDTH => 64 
+     )
+     port map (
+         -- SYS CON
+         clk            => clk_i,
+         rst            => rst_i,
+         
+         -- Wishbone Slave in
+         wb_adr_i    => dma_adr_s(9+4 - 1 downto 0),
+         wb_dat_i    => dma_dat_m2s_s,
+         wb_we_i        => dma_we_s,
+         wb_stb_i    => dma_stb_s,
+         wb_cyc_i    => dma_cyc_s,
+         wb_lock_i    => dma_stb_s,
+         
+         -- Wishbone Slave out
+         wb_dat_o    => dma_dat_s2m_s,
+         wb_ack_o    => dma_ack_s
+     );
+
   
   dma_mux: process(
   l2p_dma_adr_s,l2p_dma_dat_m2s_s,l2p_dma_sel_s,l2p_dma_cyc_s,l2p_dma_stb_s,l2p_dma_we_s,
@@ -1115,65 +1385,10 @@ begin
           probe15(0) => dma_ctrl_done_s,
           probe16(0) => dma_ctrl_error_s,
           probe17(0) => user_lnk_up_i,
-          probe18 => cfg_dstatus_i
-          --probe11 => wbm_states_ds, 
-          --probe12 => (others => '0'), --wbm_op_ds, 
-          --probe13(0) => '0', --wbm_header_type_ds, 
-          --probe14 => (others => '0'),--wbm_payload_length_ds, 
-          --probe15 => (others => '0'),--wbm_address_ds, 
-          --probe16 => dma_ctrl_current_state_ds, 
-          --probe17 => (others => '0'), --dma_ctrl_ds, 
-          --probe18 => (others => '0'), --dma_stat_ds, 
-          --probe19 => (others => '0'), --dma_attrib_ds, 
-          --probe20 => dma_ctrl_carrier_addr_s, 
-          --probe21 => dma_ctrl_host_addr_h_s, 
-          --probe22 => dma_ctrl_host_addr_l_s, 
-          --probe23 => dma_ctrl_len_s, 
-          --probe24(0) => dma_ctrl_start_l2p_s, 
-          --probe25(0) => dma_ctrl_start_p2l_s, 
-          --probe26(0) => dma_ctrl_start_next_s, 
-          --probe27 => (others => '0'), --dma_ctrl_byte_swap_s, 
-          --probe28(0) => dma_ctrl_abort_s, 
-          --probe29(0) => dma_ctrl_done_s,
-          --probe30(0) => dma_ctrl_error_s, 
-          --probe31 => (others => '0'), --wb_adr_s(31 downto 0), 
-          --probe32 => (others => '0'), --wb_dat_o_s, 
-          --probe33 => (others => '0'), --wb_dat_i_s, 
-          --probe34(0) => '0', --wb_cyc_s, 
-          --probe35(0) => '0', --wb_stb_s, 
-          --probe36(0) => wb_we_s,
-          --probe37(0) => '0' --wb_ack_s
-          
-          --s_axis_rx_tuser_i : in STD_LOGIC_VECTOR(21 DOWNTO 0);
---          signal wbm_states_ds : STD_LOGIC_VECTOR(3 downto 0);
---          signal wbm_op_ds : STD_LOGIC_VECTOR(2 downto 0);
---          signal wbm_header_type_ds : STD_LOGIC;
---          signal wbm_payload_length_ds : STD_LOGIC_VECTOR(9 downto 0);
---          signal wbm_address_ds : STD_LOGIC_VECTOR(31 downto 0);
---          signal dma_ctrl_current_state_ds : std_logic_vector (2 downto 0);
---          signal dma_ctrl_ds    : std_logic_vector(31 downto 0);
---          signal dma_stat_ds    : std_logic_vector(31 downto 0);
---          signal dma_attrib_ds  : std_logic_vector(31 downto 0);
---          probe0 => dma_ctrl_carrier_addr_s, 
---probe1 => dma_ctrl_host_addr_h_s, 
---probe2 => dma_ctrl_host_addr_l_s, 
---probe3 => dma_ctrl_len_s, 
---probe4(0) => dma_ctrl_start_l2p_s, 
---probe5(0) => dma_ctrl_start_p2l_s, 
---probe6(0) => dma_ctrl_start_next_s, 
---probe7 => dma_ctrl_byte_swap_s, 
---probe8(0) => dma_ctrl_abort_s, 
---probe9(0) => dma_ctrl_done_s, 
---probe10(0) => dma_ctrl_error_s
-    -- CSR Wishbone bus
---signal wb_adr_s : STD_LOGIC_VECTOR (64 - 1 downto 0);
---signal wb_dat_o_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---signal wb_dat_i_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---signal wb_cyc_s : STD_LOGIC;
---signal wb_sel_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---signal wb_stb_s : STD_LOGIC;
---signal wb_we_s : STD_LOGIC;
---signal wb_ack_s : STD_LOGIC;
+          probe18(0) => cfg_interrupt_s,
+          probe19(0) => cfg_interrupt_rdy_i,
+          probe20(0) => dma_ctrl_done_s,
+          probe21 => dma_ctrl_current_state_ds
       );
   end generate dbg_0;
   
@@ -1195,7 +1410,16 @@ begin
           probe8(0) => dma_ctrl_abort_s, 
           probe9(0) => dma_ctrl_done_s, 
           probe10(0) => dma_ctrl_error_s,
-          probe11 => dma_ctrl_current_state_ds
+          probe11 => dma_ctrl_current_state_ds,
+          probe12 => next_item_carrier_addr_s,
+          probe13  => next_item_host_addr_h_s,
+          probe14  => next_item_host_addr_l_s,
+          probe15          => next_item_len_s,
+          probe16       => next_item_next_l_s,
+          probe17       => next_item_next_h_s,
+          probe18       => next_item_attrib_s,
+          probe19(0)        => next_item_valid_s,
+          probe20 => dma_ctrl_irq_s
       );
   end generate dbg_1;
   
@@ -1217,7 +1441,8 @@ begin
           probe7(0) => dma_ack_s,
           probe8(0) => dma_stall_s, 
           probe9(0) => l2p_dma_cyc_s,
-          probe10(0) => p2l_dma_cyc_s
+          probe10(0) => p2l_dma_cyc_s,
+          probe11 => (others => '0')--ram_dma_cyc_s--(15 downto 0) -- DO NOT FORGET FOR THE OTHER VERSION OF RAM
       );
   end generate dbg_2;
   
@@ -1230,9 +1455,82 @@ begin
       
           probe0 => pd_pdm_data_s, 
           probe1(0) => pd_pdm_data_last_s,
-          probe2(0) => pd_pdm_data_valid_s
+          probe2(0) => pd_pdm_data_valid_s,
+          probe3 => s_axis_rx_tdata_s,  
+          probe4 => s_axis_rx_tkeep_s,
+          probe5(0) => s_axis_rx_tlast_s, 
+          probe6(0) => s_axis_rx_tvalid_s,
+          probe7(0) => '0', 
+          probe8(0) => ldm_arb_tready_s, 
+          probe9(0) => '0', 
+          probe10 => l2p_current_state_ds, 
+          probe11 => std_logic_vector(l2p_data_cnt_ds), 
+          probe12 => std_logic_vector(l2p_len_cnt_ds), 
+          probe13(0) => data_fifo_rd_ds, 
+          probe14(0) => data_fifo_wr_ds, 
+          probe15(0) => data_fifo_empty_ds, 
+          probe16(0) => data_fifo_full_ds, 
+          probe17 => data_fifo_dout_ds, 
+          probe18 => data_fifo_din_ds, 
+          probe19(0) => addr_fifo_rd_ds, 
+          probe20(0) => addr_fifo_wr_ds, 
+          probe21(0) => addr_fifo_empty_ds, 
+          probe22(0) => addr_fifo_full_ds, 
+          probe23 => addr_fifo_dout_ds,
+          probe24 => addr_fifo_din_ds 
       );
   end generate dbg_3;
   
+  dbg_4 : if DEBUG_C(4) = '1' generate
+      l2p_debug : ila_l2p_dma
+      PORT MAP (
+          clk => clk_i,
+      
+      
+      
+          probe0 => dma_ctrl_carrier_addr_s, 
+          probe1 => dma_ctrl_host_addr_h_s, 
+          probe2 => dma_ctrl_host_addr_l_s, 
+          probe3 => dma_ctrl_len_s, 
+          probe4(0) => dma_ctrl_start_l2p_s, 
+          probe5(0) => dma_ctrl_done_s , 
+          probe6(0) => dma_ctrl_l2p_error_s , 
+          probe7(0) => dma_ctrl_abort_s, 
+          probe8(0) => ldm_arb_tvalid_s, 
+          probe9(0) => ldm_arb_tlast_s, 
+          probe10 => ldm_arb_tdata_s, 
+          probe11 => ldm_arb_tkeep_s, 
+          probe12(0) => ldm_arb_tready_s, 
+          probe13(0) => ldm_arb_req_s, 
+          probe14(0) => pdm_arb_tready_s, 
+          probe15(0) => '0', 
+          probe16 => l2p_dma_adr_s(31 downto 0), 
+          probe17 => l2p_dma_dat_m2s_s, 
+          probe18 => l2p_dma_dat_s2m_s, 
+          probe19(0) => l2p_dma_cyc_s, 
+          probe20(0) => l2p_dma_stb_s, 
+          probe21(0) => l2p_dma_we_s, 
+          probe22(0) => l2p_dma_ack_s, 
+          probe23(0) => l2p_dma_stall_s, 
+          probe24(0) => p2l_dma_cyc_s, 
+          probe25 => l2p_current_state_ds, 
+          probe26 => std_logic_vector(l2p_data_cnt_ds), 
+          probe27 => std_logic_vector(l2p_len_cnt_ds), 
+          probe28(0) => data_fifo_rd_ds, 
+          probe29(0) => data_fifo_wr_ds, 
+          probe30(0) => data_fifo_empty_ds, 
+          probe31(0) => data_fifo_full_ds, 
+          probe32 => data_fifo_dout_ds, 
+          probe33 => data_fifo_din_ds, 
+          probe34(0) => addr_fifo_rd_ds, 
+          probe35(0) => addr_fifo_wr_ds, 
+          probe36(0) => addr_fifo_empty_ds, 
+          probe37(0) => addr_fifo_full_ds, 
+          probe38 => addr_fifo_dout_ds, 
+          probe39 => addr_fifo_din_ds,
+          probe40 => std_logic_vector(wb_timeout_cnt_ds),
+          probe41 => std_logic_vector(l2p_timeout_cnt_ds)
+      );
+  end generate dbg_4;
   
 end Behavioral;

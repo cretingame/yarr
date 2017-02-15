@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Jan 17 14:20:25 2017">
+<application name="pa" timeStamp="Tue Feb 14 12:46:28 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="d77e6f57acee419cbf91b1b471e4a1f9" type="ProjectID"/>
 <property name="ProjectIteration" value="46" type="ProjectIteration"/>
@@ -22,7 +22,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AutoAssignAddress" value="1" type="JavaHandler"/>
 <property name="AutoConnectPort" value="2" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="5" type="JavaHandler"/>
-<property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="CloseProject" value="3" type="JavaHandler"/>
 <property name="ConfigureBitstream" value="2" type="JavaHandler"/>
 <property name="CoreView" value="4" type="JavaHandler"/>
 <property name="CreateTopHDL" value="3" type="JavaHandler"/>
@@ -83,46 +83,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ZoomOut" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager], 26, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Open Hardware Manager], 26, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/pcie_lite_4/pcie_lite_4.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.HardwareDashboardOptionsPanel_CLOSE_DASHBOARD_OPTIONS, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.HardwareDashboardView_SHOW_DASHBOARD_OPTIONS, Dashboard Options" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_DASHBOARD, hw_ila_1" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramDebugTab_OPEN_RECENTLY_OPENED_TARGET, Recent Targets" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, Open target" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, ILA_run_trigger" value="2" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 228, -49" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 256, -70, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 277, -28" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 283, -45" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 284, 33" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 287, -27" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 287, 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 292, 6" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 302, -76" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 304, -27" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 34, -81" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 341, 68" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 445, 63" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 485, -48" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 50, -73" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 82, 73" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 904, -101" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, axis_rx_tvalid], 5, false" value="4" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, axis_tx_tready], 6, false" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, design_1_i/pcie_7x_0_m_axis_rx_tdata[63:0]], 0, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, design_1_i/pcie_7x_0_m_axis_rx_tkeep[7:0]], 3, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, design_1_i/pcie_7x_0_m_axis_rx_tlast], 2, false" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, design_1_i/pcie_7x_0_m_axis_rx_tuser[21:0]], 4, true" value="1" type="GuiResourceData"/>
-<property name="[0 - 1023], 200, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="145" type="GuiMode"/>
+<property name="GuiMode" value="253" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="126" type="TclMode"/>
+<property name="TclMode" value="226" type="TclMode"/>
 </item>
 </section>
 </application>

@@ -61,5 +61,3 @@ set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
-connect_debug_port dbg_hub/clk [get_nets clk200]

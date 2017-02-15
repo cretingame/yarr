@@ -29,21 +29,24 @@ add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_
 set_property used_in_implementation false [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_pd_pdm/ila_pd_pdm.dcp]
 add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/fifo_96x512_1/fifo_96x512.dcp
 set_property used_in_implementation false [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/fifo_96x512_1/fifo_96x512.dcp]
+add_files -quiet /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_l2p_dma/ila_l2p_dma.dcp
+set_property used_in_implementation false [get_files /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_l2p_dma/ila_l2p_dma.dcp]
 read_vhdl -library xil_defaultlib {
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/common/gn4124_core_pkg.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/fifo_64x512.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/fifo_32x512.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/common/gn4124_core_pkg.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/top/dma_controller_wb_slave.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/common/common_pkg.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/wb_master64/wb_master64.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd
-  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/bcf_bram_wbs.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/bcf_bram32.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/new/k_bram.vhd
+  /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/yarr_sim/top/app.vhd
   /home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd
 }

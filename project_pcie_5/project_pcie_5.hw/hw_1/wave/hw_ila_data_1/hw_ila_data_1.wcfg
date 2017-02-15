@@ -9,11 +9,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="116080fs"></ZoomStartTime>
-      <ZoomEndTime time="244081fs"></ZoomEndTime>
-      <Cursor1Time time="168000fs"></Cursor1Time>
+      <ZoomStartTime time="744069fs"></ZoomStartTime>
+      <ZoomEndTime time="823270fs"></ZoomEndTime>
+      <Cursor1Time time="795000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="14" />
    <wave_markers>
    </wave_markers>
    <wvobject type="array" fp_name="app_0/s_axis_rx_tdata_s">
@@ -25,27 +25,27 @@
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/s_axis_rx_tkeep_s">
+   <wvobject type="array" fp_name="app_0/s_axis_rx_tkeep_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/s_axis_rx_tkeep_s[7:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_rx_tkeep_s[7:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tkeep_s_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tkeep_s_1[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/s_axis_rx_tvalid_s_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/s_axis_rx_tvalid_s_1</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tvalid_s_1</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/s_axis_rx_tlast_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/s_axis_rx_tlast_s</obj_property>
       <obj_property name="ObjectShortName">s_axis_rx_tlast_s</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="app_0/s_axis_rx_tvalid_s">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/s_axis_rx_tvalid_s</obj_property>
-      <obj_property name="ObjectShortName">s_axis_rx_tvalid_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -100,17 +100,28 @@
       <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/cfg_dstatus_i">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/cfg_dstatus_i[15:0]</obj_property>
-      <obj_property name="ObjectShortName">cfg_dstatus_i[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="app_0/user_lnk_up_i">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/user_lnk_up_i</obj_property>
       <obj_property name="ObjectShortName">user_lnk_up_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/cfg_interrupt_rdy_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/cfg_interrupt_rdy_i</obj_property>
+      <obj_property name="ObjectShortName">cfg_interrupt_rdy_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/cfg_interrupt_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/cfg_interrupt_s</obj_property>
+      <obj_property name="ObjectShortName">cfg_interrupt_s</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_next_s_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_next_s_1</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_next_s_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

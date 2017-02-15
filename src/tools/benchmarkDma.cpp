@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
         double time = (end.tv_sec - start.tv_sec) * 1000.0; //msecs
         time += (end.tv_usec - start.tv_usec) / 1000.0; //usecs
         overall_time += time;
-        std::cout << "Transferred " << total_data << "MB in " << time << " ms: " << total_data/time*1000.0 << " MB/s" << std::endl;
+        std::cout << "Cycle: " << cycles <<  "  Transferred " << total_data << "MB in " << time << " ms: " << total_data/time*1000.0 << " MB/s" << std::endl;
         file_write << size << "\t" << total_data << "\t" << time << "\t" << total_data/time*1000.0 << std::endl;
     }
     std::cout << "===========================================" << std::endl;
