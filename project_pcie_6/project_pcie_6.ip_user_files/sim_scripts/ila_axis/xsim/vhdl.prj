@@ -1,0 +1,4 @@
+vhdl xpm "/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" 
+vhdl xil_defaultlib "../../../../project_pcie_5.srcs/sources_1/ip/ila_axis/sim/ila_axis.vhd" 
+
+nosort

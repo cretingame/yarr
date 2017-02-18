@@ -53,6 +53,10 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="hw_ila_5" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/pcie_7x_0_m_axis_rx_TLAST" gui_info=""/>

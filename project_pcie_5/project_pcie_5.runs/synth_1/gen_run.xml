@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1487182447">
-  <File Type="PA-TCL" Name="top_level.tcl"/>
-  <File Type="RDS-RDS" Name="top_level.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_level_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="top_level_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="top_level.vds"/>
+  <File Type="PA-TCL" Name="top_level.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_level.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_level_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="top_level_utilization_synth.rpt"/>
@@ -208,10 +208,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="pcie_7x_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="l2p_fifo64"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_96x512"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_l2p_dma"/>
+  <BlockFileSet Type="BlockSrcs" Name="l2p_fifo64"/>
+  <BlockFileSet Type="BlockSrcs" Name="pcie_7x_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_96x512"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_pd_pdm"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_wsh_pipe"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_dma_ctrl_reg"/>

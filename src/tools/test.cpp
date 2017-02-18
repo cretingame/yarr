@@ -10,6 +10,7 @@ int main(int argc, char **argv) {
     SpecController mySpec(specNum);
     std::string tmp;
     const size_t size = 8550;
+    //const size_t size = 128;
     unsigned err_count = 0;
     
     uint32_t *data = new uint32_t[size];

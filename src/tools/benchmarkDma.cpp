@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     std::fstream file_write("benchmarkDma_write.out", std::ios::out);
     std::fstream file_read("benchmarkDma_read.out", std::ios::out);
 
-    int maxCycles = 400;
+    int maxCycles = 32;
     int maxLoops = 100;
 
     double overall_time = 0;

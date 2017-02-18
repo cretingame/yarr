@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Feb 16 15:32:05 2017
+# Process ID: 4276
+# Current directory: /home/asautaux/yarr/src
+# Command line: vivado
+# Log file: /home/asautaux/yarr/src/vivado.log
+# Journal file: /home/asautaux/yarr/src/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/asautaux/yarr/project_pcie_6/project_pcie_6.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/000013b363cb01]
+set_property PARAM.FREQUENCY 6000000 [get_hw_targets */xilinx_tcf/Xilinx/000013b363cb01]
+open_hw_target
+set_property PROGRAM.FILE {/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/impl_1/top_level.bit} [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_1.dma_ctrl_debug"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_2.pipelined_wishbone_debug"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_3.wbm_to_p2l_debug"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes app_0/s_axis_rx_tvalid_s_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]]
+set_property CONTROL.TRIGGER_POSITION 900 [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]
+set_property TRIGGER_COMPARE_VALUE eq3'h5 [get_hw_probes app_0/dma_ctrl_current_state_ds_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes app_0/dma_adr_s -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_2.pipelined_wishbone_debug"}]]
+set_property TRIGGER_COMPARE_VALUE eq3'h5 [get_hw_probes app_0/l2p_current_state_ds_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_3.wbm_to_p2l_debug"}]]
+add_wave -into {hw_ila_data_4.wcfg} -radix hex { {app_0/pd_pdm_data_last_s} {app_0/pd_pdm_data_s} {app_0/pd_pdm_data_valid_s} }
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes app_0/l2p_dma_cyc_s -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]]
+set_property TRIGGER_COMPARE_VALUE eq3'h5 [get_hw_probes app_0/l2p_current_state_ds -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]]
+set_property CONTROL.TRIGGER_POSITION 900 [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]\
+   [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_1.dma_ctrl_debug"}]\
+   [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_2.pipelined_wishbone_debug"}]\
+   [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_3.wbm_to_p2l_debug"}]\
+   [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_2.pipelined_wishbone_debug"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_2.pipelined_wishbone_debug"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_1.dma_ctrl_debug"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_3.wbm_to_p2l_debug"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_0.axis_debug"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_1.dma_ctrl_debug"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_3.wbm_to_p2l_debug"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k160t_1] -filter {CELL_NAME=~"app_0/dbg_4.l2p_debug"}]]
+add_wave -into {hw_ila_data_4.wcfg} -radix hex { {app_0/l2p_current_state_ds_1} }
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/impl_1/top_level.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+save_wave_config {/home/asautaux/yarr/project_pcie_6/project_pcie_6.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {/home/asautaux/yarr/project_pcie_6/project_pcie_6.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
