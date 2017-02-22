@@ -25,6 +25,7 @@ entity p2l_decoder is
         pd_payload_length_o : out STD_LOGIC_VECTOR(9 downto 0);
 		-- L2P DMA
 		pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
+		pd_pdm_data_valid_w_o  : out std_logic_vector(1 downto 0);
         pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
 		pd_pdm_keep_o		 : out std_logic_vector(7 downto 0);
         pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
@@ -47,7 +48,7 @@ architecture Behavioral of p2l_decoder is
 	constant tlp_type_Mr_c : STD_LOGIC_VECTOR (5 - 1 downto 0):= "00000";
 	constant tlp_type_Cpl_c : STD_LOGIC_VECTOR (5 - 1 downto 0):= "01010";
 	
-	type state_t is (hd0_rx, hd1_rx, lastdata_rx, data_rx);
+	type state_t is (idle,hd0_rx, hd1_rx, lastdata_rx, data_rx);
 	signal state_s : state_t;
 	signal previous_state_s : state_t;
 	signal payload_length_s : STD_LOGIC_VECTOR(9 downto 0);
@@ -82,9 +83,13 @@ begin
 	state_p:process(rst_i,clk_i) 
 	begin
 		if rst_i = '1' then
-			state_s <= hd0_rx;
+			if s_axis_rx_tvalid_i = '1' then
+			     state_s <= idle;
+			end if;
 		elsif clk_i = '1' and clk_i'event then
 			case state_s is
+				when idle =>
+				    state_s <= hd0_rx;
 				when hd0_rx =>
 					if s_axis_rx_tvalid_s = '1' then
 							state_s <= hd1_rx; -- 
@@ -138,8 +143,14 @@ begin
 			address_s <= (others => '0');
 			tlp_type_s <= unknown;
 			header_type_s <= H4DW;
+			data_s <= (others => '0');
 		elsif clk_i = '1' and clk_i'event then
 			case state_s is
+				when idle =>
+				    address_s <= (others => '0');
+                    tlp_type_s <= unknown;
+                    header_type_s <= H4DW;
+                    data_s <= (others => '0');
 				when hd0_rx =>
 
 					bar_hit_s <= s_axis_rx_tuser_s(8 downto 2);
@@ -270,22 +281,37 @@ begin
 	pd_pdm_data_o <= 
 	   f_byte_swap(true,data_s, byte_swap_c) & f_byte_swap(true,data_s, byte_swap_c) when payload_length_s = "0000000001" else 
 	   f_byte_swap(true, s_axis_rx_tdata_0_s(31 downto 0), byte_swap_c) & f_byte_swap(true, s_axis_rx_tdata_1_s(63 downto 32), byte_swap_c);
-	pd_pdm_data_valid_o <= s_axis_rx_tvalid_s when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011"  
+	pd_pdm_data_valid_o <= s_axis_rx_tvalid_s when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011"
 	                       else '0';
 	pd_pdm_data_last_o <= 
-	   s_axis_rx_tlast_s when ( state_s = lastdata_rx and s_axis_rx_tkeep_i = X"0F" and pd_op_s = "011") else
-	   '1' when s_axis_rx_tkeep_1_s = X"FF" and s_axis_rx_tlast_1_s = '1'and pd_op_s = "011" else 
+        s_axis_rx_tlast_s when ( state_s = lastdata_rx and s_axis_rx_tkeep_i = X"0F" and pd_op_s = "011") else
+        '1' when s_axis_rx_tkeep_1_s = X"FF" and s_axis_rx_tlast_1_s = '1'and pd_op_s = "011" else
+        '0';
+	
+	pd_pdm_data_valid_w_o(1) <= 
+	   s_axis_rx_tvalid_s when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011" and pd_pdm_keep_0_s(3 downto 0) = X"F" else
 	   '0';
+	   
+	pd_pdm_data_valid_w_o(0) <= 
+       s_axis_rx_tvalid_s when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011" and pd_pdm_keep_1_s(7 downto 4) = X"F" else
+       '1' when pd_op_s = "011" and s_axis_rx_tlast_s = '1' and  state_s = hd0_rx else
+       '1' when s_axis_rx_tkeep_1_s = X"FF" and s_axis_rx_tlast_1_s = '1'and pd_op_s = "011" else 
+       '0';
+	
+	--   s_axis_rx_tlast_s when ( state_s = lastdata_rx and s_axis_rx_tkeep_i = X"0F" and pd_op_s = "011") else
+	--   '1' when s_axis_rx_tkeep_1_s = X"FF" and s_axis_rx_tlast_1_s = '1'and pd_op_s = "011" else 
+	--   '0';
 	pd_pdm_keep_o <= pd_pdm_keep_0_s(3 downto 0) & pd_pdm_keep_1_s(7 downto 4);
 	
 	pd_wbm_valid_o <= '1' when previous_state_s = hd1_rx and s_axis_rx_tlast_1_s = '1' else '0';
 	
-	output_p:process (state_s,header_type_s,tlp_type_s,s_axis_rx_tlast_s,payload_length_s,data_s,address_s,wbm_pd_ready_i)
+	output_p:process (state_s,header_type_s,tlp_type_s,s_axis_rx_tlast_s,payload_length_s,data_s,address_s,wbm_pd_ready_i,s_axis_rx_tlast_1_s)
 	begin
 		case state_s is
-                    
+                when idle =>    
+				    s_axis_rx_tready_o <= '1';
 				when hd0_rx =>
-					if s_axis_rx_tlast_1_s = '1' then
+					if s_axis_rx_tlast_1_s = '1' and (tlp_type_s = MRd or tlp_type_s = MWr) then
 					   s_axis_rx_tready_o <= '0';
 					elsif tlp_type_s = MRd or tlp_type_s = MWr then
 					   s_axis_rx_tready_o <= wbm_pd_ready_i;
@@ -295,7 +321,7 @@ begin
 					
 
                 when hd1_rx =>
-                    if s_axis_rx_tlast_s = '1' then
+                    if s_axis_rx_tlast_s = '1' and (tlp_type_s = MRd or tlp_type_s = MWr) then
                        s_axis_rx_tready_o <= '0';
                    else
                        s_axis_rx_tready_o <= '1';
@@ -328,14 +354,16 @@ begin
                 pd_op_s <= "000";
         end case;
         case state_s is
-            when hd0_rx =>
+            when idle =>
                 states_do <= "0000";
-            when hd1_rx =>
+            when hd0_rx =>
                 states_do <= "0001";
-            when data_rx =>
+            when hd1_rx =>
                 states_do <= "0010";
-            when lastdata_rx => 
+            when data_rx =>
                 states_do <= "0011";
+            when lastdata_rx => 
+                states_do <= "0100";
 
          end case;
     end process debug_output_p;

@@ -75,12 +75,13 @@ entity p2l_dma_master is
       -- Header
       --pd_pdm_hdr_start_i   : in std_logic;                      -- Header strobe
       --pd_pdm_hdr_length_i  : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
-      --pd_pdm_op_i     : in std_logic_vector(2 downto 0);        -- Completion ID
+      --pd_pdm_hdr_cid_i     : in std_logic_vector(1 downto 0);   -- Completion ID
       pd_pdm_master_cpld_i : in std_logic;                      -- Master read completion with data
       pd_pdm_master_cpln_i : in std_logic;                      -- Master read completion without data
       --
       -- Data
-      pd_pdm_data_valid_i  : in std_logic;                      -- Indicates Data is valid
+      pd_pdm_data_valid_i  : in std_logic;  
+      pd_pdm_data_valid_w_i: in std_logic_vector(1 downto 0);  -- Indicates Data is valid
       pd_pdm_data_last_i   : in std_logic;                      -- Indicates end of the packet
       pd_pdm_data_i        : in std_logic_vector(63 downto 0);  -- Data
       pd_pdm_be_i          : in std_logic_vector(7 downto 0);   -- Byte Enable for data
@@ -442,12 +443,12 @@ begin
           p2l_data_cnt <= "0" & l2p_len_header(9 downto 0);
         end if;
       elsif (p2l_dma_current_state = P2L_WAIT_READ_COMPLETION
-             and pd_pdm_data_valid_i = '1'
+             and pd_pdm_data_valid_w_i = "11"
              and pd_pdm_master_cpld_i = '1') then
         -- decrement number of data to be received
         p2l_data_cnt <= p2l_data_cnt - 2;
       elsif (p2l_dma_current_state = P2L_WAIT_READ_COMPLETION
-             and pd_pdm_data_last_i = '1'
+             and (pd_pdm_data_valid_w_i = "01" or pd_pdm_data_valid_w_i = "10")
              and pd_pdm_master_cpld_i = '1') then
         p2l_data_cnt <= p2l_data_cnt - 1;
       end if;
@@ -471,7 +472,7 @@ begin
       --p2l_data_cnt_1 <= p2l_data_cnt;
       
       if (p2l_dma_current_state = P2L_WAIT_READ_COMPLETION
-          and is_next_item = '1' and (pd_pdm_data_valid_i = '1' or pd_pdm_data_last_i = '1')) then
+          and is_next_item = '1' and (pd_pdm_data_valid_w_i(0) = '1' or pd_pdm_data_valid_w_i(1) = '1')) then
         -- next item data are supposed to be received in the rigth order !!
         case p2l_data_cnt(3 downto 0) is
           when "1000" =>
@@ -526,7 +527,7 @@ begin
           dma_busy_error <= '1';
         end if;
       elsif (p2l_dma_current_state = P2L_WAIT_READ_COMPLETION
-             and is_next_item = '0' and pd_pdm_data_valid_i = '1') then
+             and is_next_item = '0' and (pd_pdm_data_valid_w_i(0) = '1' or pd_pdm_data_valid_w_i(1) = '1')) then
         -- increment target address counter
         target_addr_cnt              <= target_addr_cnt + 1;
         -- write target address and data to the sync fifo

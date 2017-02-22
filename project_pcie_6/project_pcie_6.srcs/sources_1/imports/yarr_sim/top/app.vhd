@@ -86,7 +86,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(4 downto 0) := "00011";
+    constant DEBUG_C : std_logic_vector(4 downto 0) := "01111";
     
     component simple_counter is
         Port ( 
@@ -165,6 +165,7 @@ architecture Behavioral of app is
             pd_payload_length_o : out STD_LOGIC_VECTOR(9 downto 0);
             -- L2P DMA
             pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
+            pd_pdm_data_valid_w_o  : out std_logic_vector(1 downto 0);
             pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
             pd_pdm_keep_o        : out std_logic_vector(7 downto 0);
             pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
@@ -456,6 +457,7 @@ architecture Behavioral of app is
 		  --
 		  -- Data
 		  pd_pdm_data_valid_i  : in std_logic;                      -- Indicates Data is valid
+		  pd_pdm_data_valid_w_i: in std_logic_vector(1 downto 0);
 		  pd_pdm_data_last_i   : in std_logic;                      -- Indicates end of the packet
 		  pd_pdm_data_i        : in std_logic_vector(63 downto 0);  -- Data
 		  pd_pdm_be_i          : in std_logic_vector(7 downto 0);   -- Byte Enable for data
@@ -660,8 +662,7 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe11 : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -681,7 +682,8 @@ COMPONENT ila_axis
         probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe8 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-        probe9 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+        probe9 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+        probe10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -807,6 +809,7 @@ COMPONENT ila_l2p_dma
     -- From Wishbone master (wbm) to L2P DMA    
     signal pd_wbm_address_s : STD_LOGIC_VECTOR(63 downto 0);
     signal pd_wbm_data_s : STD_LOGIC_VECTOR(31 downto 0);
+    signal pd_pdm_data_valid_w_s : std_logic_vector(1 downto 0);
     signal pd_wbm_valid_s : std_logic;
     signal wbm_pd_ready_s : std_logic;
     signal pd_op_s : STD_LOGIC_VECTOR(2 downto 0);
@@ -1017,6 +1020,7 @@ begin
  
         -- L2P DMA
         pd_pdm_data_valid_o => pd_pdm_data_valid_s,
+        pd_pdm_data_valid_w_o => pd_pdm_data_valid_w_s,
         pd_pdm_data_last_o => pd_pdm_data_last_s,
         pd_pdm_keep_o => pd_pdm_keep_s,
         pd_pdm_data_o => pd_pdm_data_s
@@ -1203,6 +1207,7 @@ begin
 		  --
 		  -- Data
 		  pd_pdm_data_valid_i  => pd_pdm_data_valid_s,                      -- Indicates Data is valid
+		  pd_pdm_data_valid_w_i => pd_pdm_data_valid_w_s,
 		  pd_pdm_data_last_i   => pd_pdm_data_last_s,                      -- Indicates end of the packet
 		  pd_pdm_data_i        => pd_pdm_data_s,  -- Data
 		  pd_pdm_be_i          => pd_pdm_keep_s,   -- Byte Enable for data
@@ -1301,7 +1306,7 @@ begin
         l2p_timeout_cnt_do => l2p_timeout_cnt_ds,
         wb_timeout_cnt_do => wb_timeout_cnt_ds,
         
-                -- Data FIFO
+        -- Data FIFO
         data_fifo_rd_do    => data_fifo_rd_ds,
         data_fifo_wr_do    => data_fifo_wr_ds,
         data_fifo_empty_do => data_fifo_empty_ds,
@@ -1515,8 +1520,7 @@ begin
           probe7(0) => dma_ack_s,
           probe8(0) => dma_stall_s, 
           probe9(0) => l2p_dma_cyc_s,
-          probe10(0) => p2l_dma_cyc_s,
-          probe11 => (others => '0')--ram_dma_cyc_s--(15 downto 0) -- DO NOT FORGET FOR THE OTHER VERSION OF RAM
+          probe10(0) => p2l_dma_cyc_s
       );
   end generate dbg_2;
   
@@ -1536,7 +1540,8 @@ begin
           probe6(0) => s_axis_rx_tvalid_s,
           probe7(0) => ldm_arb_tready_s, 
           probe8 => l2p_current_state_ds, 
-          probe9 => dma_ctrl_current_state_ds
+          probe9 => dma_ctrl_current_state_ds,
+          probe10 => pd_pdm_data_valid_w_s
  
       );
   end generate dbg_3;

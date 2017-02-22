@@ -1,5 +1,10 @@
 
  add_fsm_encoding \
+       {p2l_decoder.state_s} \
+       { }  \
+       {{000 000} {001 001} {010 010} {011 011} {100 100} }
+
+ add_fsm_encoding \
        {wb_master.state_s} \
        { }  \
        {{000 000} {001 001} {010 010} {011 011} {100 100} }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="ila_wb_synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1486591269">
-  <File Type="VDS-TIMINGSUMMARY" Name="ila_wb_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ila_wb_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="ila_wb.vds"/>
   <File Type="PA-TCL" Name="ila_wb.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ila_wb_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="ila_wb.dcp"/>
   <File Type="RDS-UTIL-PB" Name="ila_wb_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="ila_wb_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="ila_wb_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ila_wb.vds"/>
-  <File Type="VDS-TIMING-PB" Name="ila_wb_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_wb">
     <File Path="$PSRCDIR/sources_1/ip/ila_wb/ila_wb.xci">
       <FileInfo>

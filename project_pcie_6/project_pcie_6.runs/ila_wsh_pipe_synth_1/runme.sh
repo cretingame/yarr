@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/ila_wsh_pipe_synth_1'
+HD_PWD='/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/ila_wsh_pipe_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
