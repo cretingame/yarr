@@ -55,8 +55,10 @@ architecture Behavioral of bram_wbs is
 	
    type ram_type is array (2**ADDR_WIDTH-1 downto 0) of std_logic_vector (DATA_WIDTH-1 downto 0);
    signal RAM: ram_type;
-	
-	signal ADDR : std_logic_vector(ADDR_WIDTH-1 downto 0);
+   signal ADDR : std_logic_vector(ADDR_WIDTH-1 downto 0);
+   signal wb_ack_s : std_logic;
+   signal wb_stb_s : std_logic;
+   signal wb_cyc_s : std_logic;
 	 
 begin
 	
@@ -84,6 +86,7 @@ begin
 			end if;
 		end if;
 	end process bram;
+	
 
 end Behavioral;
 

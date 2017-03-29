@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wbmaster32_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common_pkg" />
+            <top_module name="glbl" />
+            <top_module name="gn4124_core_pkg" />
+            <top_module name="wbmaster32_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2070000002fs"></ZoomEndTime>
+      <Cursor1Time time="2400000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="0" />
+</wave_config>

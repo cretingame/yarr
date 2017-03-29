@@ -13,6 +13,7 @@ entity wb_master is
 		pd_wbm_data_i : in STD_LOGIC_VECTOR(31 downto 0);
 		pd_wbm_valid_i : in std_logic;
 		wbm_pd_ready_o : out std_logic;
+		wbm_pd_done_o : out std_logic;
 		pd_op_i : in STD_LOGIC_VECTOR(2 downto 0);
 		-- Master AXI-Stream
 		wbm_arb_tdata_o : out STD_LOGIC_VECTOR (64 - 1 downto 0);
@@ -38,6 +39,7 @@ architecture Behavioral of wb_master is
 	
 	type state_t is (idle,  wb_write,  wb_read, hd0_tx, hd1_tx);
 	signal state_s : state_t;
+	signal previous_state_s : state_t;
 	--signal wb_dat_o_s : STD_LOGIC_VECTOR (32 - 1 downto 0);
 	--signal wb_we_s : STD_LOGIC;
 	constant payload_length_c : STD_LOGIC_VECTOR(9 downto 0) := "0000000001";
@@ -47,6 +49,8 @@ architecture Behavioral of wb_master is
 	signal address_s : STD_LOGIC_VECTOR(64-1 downto 0); 
 	signal data_s : STD_LOGIC_VECTOR(32-1 downto 0);
 	signal op_s : STD_LOGIC_VECTOR(2 downto 0);
+	signal done_s : std_logic;
+	signal wb_ack_s : std_logic;
 	
 	signal m_axis_tx_tdata_s : STD_LOGIC_VECTOR (64 - 1 downto 0);
 	--signal wb_dat_i_s : STD_LOGIC_VECTOR (32 - 1 downto 0);
@@ -66,7 +70,9 @@ begin
 	begin
 		if rst_i = '1' then
 			state_s <= idle;
+			previous_state_s <= idle;
 		elsif clk_i = '1' and clk_i'event then
+		    previous_state_s <= state_s;
 			case state_s is
 				when idle =>
                     if pd_wbm_valid_i = '1' and (pd_op_i = MRd_c or pd_op_i = MWr_c) then
@@ -76,7 +82,7 @@ begin
 					state_s <= wb_read;
 
 				when wb_read =>
-					if wb_ack_i = '1' then
+					if wb_ack_s = '1' then
 						if op_s = MWr_c then
 							state_s <= idle;
 						--elsif wb_we_s = '0' then
@@ -109,11 +115,13 @@ begin
 	reg_p: process(rst_i,clk_i)
 	begin
 		if rst_i = '1' then
+		    wb_ack_s <= '0';
 			wb_dat_o <= (others => '0');
 			address_s <= (others => '0');
 			op_s <= (others => '0');
 			header_type_s <= H3DW;
 		elsif clk_i = '1' and clk_i'event then
+			wb_ack_s <= wb_ack_i;
 			case state_s is
                 when idle => 
                     wb_dat_o <= pd_wbm_data_i;
@@ -137,7 +145,7 @@ begin
 	wb_output_p:process (state_s,op_s)
 	begin
 		case state_s is
-			when wb_write =>
+			when wb_write|wb_read =>
 				wb_cyc_o <= '1';
 				wb_stb_o <= '1';
 				if op_s = MWr_c then
@@ -152,6 +160,20 @@ begin
 		end case;
 	end process wb_output_p;
 	
+	done_p:process (rst_i,clk_i)
+    begin
+        if rst_i = '1' then
+            done_s <= '0';
+        elsif clk_i = '1' and clk_i'event then
+            if state_s = idle and previous_state_s /= idle then
+                done_s <= '1';
+            else
+                done_s <= '0';
+            end if;
+        end if;
+    end process done_p;
+    
+    wbm_pd_done_o <= done_s;	
 
 
 	

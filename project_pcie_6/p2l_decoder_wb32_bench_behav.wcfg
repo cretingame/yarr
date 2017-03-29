@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="p2l_decoder_wb32_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common_pkg" />
+            <top_module name="glbl" />
+            <top_module name="gn4124_core_pkg" />
+            <top_module name="p2l_decoder_wb32_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1893800000fs"></ZoomStartTime>
+      <ZoomEndTime time="5893800002fs"></ZoomEndTime>
+      <Cursor1Time time="3300000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="47" />
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/clk_tbs">
+      <obj_property name="ElementShortName">clk_tbs</obj_property>
+      <obj_property name="ObjectShortName">clk_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/rst_tbs">
+      <obj_property name="ElementShortName">rst_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/rst_n_tbs">
+      <obj_property name="ElementShortName">rst_n_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_n_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_tdata_tbs">
+      <obj_property name="ElementShortName">s_axis_rx_tdata_tbs[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tdata_tbs[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_tkeep_tbs">
+      <obj_property name="ElementShortName">s_axis_rx_tkeep_tbs[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tkeep_tbs[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_tlast_tbs">
+      <obj_property name="ElementShortName">s_axis_rx_tlast_tbs</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tlast_tbs</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_ready_s">
+      <obj_property name="ElementShortName">s_axis_rx_ready_s</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_ready_s</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_tuser_tbs">
+      <obj_property name="ElementShortName">s_axis_rx_tuser_tbs[21:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tuser_tbs[21:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/s_axis_rx_tvalid_tbs">
+      <obj_property name="ElementShortName">s_axis_rx_tvalid_tbs</obj_property>
+      <obj_property name="ObjectShortName">s_axis_rx_tvalid_tbs</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_wbm_address_s">
+      <obj_property name="ElementShortName">pd_wbm_address_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_address_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_wbm_data_s">
+      <obj_property name="ElementShortName">pd_wbm_data_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_data_s[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_wbm_valid_s">
+      <obj_property name="ElementShortName">pd_wbm_valid_s</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_valid_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wbm_pd_ready_s">
+      <obj_property name="ElementShortName">wbm_pd_ready_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_pd_ready_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_op_s">
+      <obj_property name="ElementShortName">pd_op_s[2:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_op_s[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_header_type_s">
+      <obj_property name="ElementShortName">pd_header_type_s</obj_property>
+      <obj_property name="ObjectShortName">pd_header_type_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_payload_length_s">
+      <obj_property name="ElementShortName">pd_payload_length_s[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_payload_length_s[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_wbm_hdr_rid_s">
+      <obj_property name="ElementShortName">pd_wbm_hdr_rid_s[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_hdr_rid_s[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_wbm_hdr_cid_s">
+      <obj_property name="ElementShortName">pd_wbm_hdr_cid_s[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_hdr_cid_s[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_wbm_hdr_tag_s">
+      <obj_property name="ElementShortName">pd_wbm_hdr_tag_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_hdr_tag_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_wbm_target_mrd_s">
+      <obj_property name="ElementShortName">pd_wbm_target_mrd_s</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_target_mrd_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_wbm_target_mwr_s">
+      <obj_property name="ElementShortName">pd_wbm_target_mwr_s</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_target_mwr_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_pdm_data_valid_s">
+      <obj_property name="ElementShortName">pd_pdm_data_valid_s</obj_property>
+      <obj_property name="ObjectShortName">pd_pdm_data_valid_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/pd_pdm_data_last_s">
+      <obj_property name="ElementShortName">pd_pdm_data_last_s</obj_property>
+      <obj_property name="ObjectShortName">pd_pdm_data_last_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_pdm_data_s">
+      <obj_property name="ElementShortName">pd_pdm_data_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_pdm_data_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/pd_pdm_keep_s">
+      <obj_property name="ElementShortName">pd_pdm_keep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_pdm_keep_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tdata_s">
+      <obj_property name="ElementShortName">wbm_arb_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tdata_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tkeep_s">
+      <obj_property name="ElementShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tuser_s">
+      <obj_property name="ElementShortName">wbm_arb_tuser_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tuser_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tlast_s">
+      <obj_property name="ElementShortName">wbm_arb_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tlast_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tvalid_s">
+      <obj_property name="ElementShortName">wbm_arb_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tvalid_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wbm_arb_tready_tbs">
+      <obj_property name="ElementShortName">wbm_arb_tready_tbs</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tready_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wbm_arb_req_s">
+      <obj_property name="ElementShortName">wbm_arb_req_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_req_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wb_adr_s">
+      <obj_property name="ElementShortName">wb_adr_s[30:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_adr_s[30:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wb_dat_ms_s">
+      <obj_property name="ElementShortName">wb_dat_ms_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_dat_ms_s[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wb_sel_s">
+      <obj_property name="ElementShortName">wb_sel_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_sel_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_stb_s">
+      <obj_property name="ElementShortName">wb_stb_s</obj_property>
+      <obj_property name="ObjectShortName">wb_stb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_we_s">
+      <obj_property name="ElementShortName">wb_we_s</obj_property>
+      <obj_property name="ObjectShortName">wb_we_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_cyc_s">
+      <obj_property name="ElementShortName">wb_cyc_s</obj_property>
+      <obj_property name="ObjectShortName">wb_cyc_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/wb_dat_sm_s">
+      <obj_property name="ElementShortName">wb_dat_sm_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_dat_sm_s[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_ack_s">
+      <obj_property name="ElementShortName">wb_ack_s</obj_property>
+      <obj_property name="ObjectShortName">wb_ack_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_stall_tbs">
+      <obj_property name="ElementShortName">wb_stall_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_stall_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_err_tbs">
+      <obj_property name="ElementShortName">wb_err_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_err_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_rty_tbs">
+      <obj_property name="ElementShortName">wb_rty_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_rty_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/p2l_decoder_wb32_bench/wb_int_tbs">
+      <obj_property name="ElementShortName">wb_int_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_int_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/byte_swap_c">
+      <obj_property name="ElementShortName">byte_swap_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_swap_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/p2l_decoder_wb32_bench/step">
+      <obj_property name="ElementShortName">step</obj_property>
+      <obj_property name="ObjectShortName">step</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/p2l_decoder_wb32_bench/dut3/RAM">
+      <obj_property name="ElementShortName">RAM[63:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM[63:0][31:0]</obj_property>
+   </wvobject>
+</wave_config>

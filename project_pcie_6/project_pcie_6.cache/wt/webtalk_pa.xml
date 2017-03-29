@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Feb 21 18:11:01 2017">
+<application name="pa" timeStamp="Wed Mar 29 14:00:25 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
-<property name="ProjectIteration" value="212" type="ProjectIteration"/>
+<property name="ProjectIteration" value="226" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,56 +18,59 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddCfgMem" value="5" type="JavaHandler"/>
-<property name="AddSources" value="14" type="JavaHandler"/>
-<property name="CopyIPHandler" value="3" type="JavaHandler"/>
+<property name="AddSources" value="24" type="JavaHandler"/>
+<property name="CloseProject" value="2" type="JavaHandler"/>
+<property name="CopyIPHandler" value="5" type="JavaHandler"/>
 <property name="CoreView" value="16" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="5" type="JavaHandler"/>
 <property name="CustomizeCore" value="19" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
+<property name="EditConstraintSets" value="1" type="JavaHandler"/>
 <property name="EditCopy" value="1" type="JavaHandler"/>
-<property name="EditDelete" value="25" type="JavaHandler"/>
+<property name="EditDelete" value="29" type="JavaHandler"/>
 <property name="EditPaste" value="34" type="JavaHandler"/>
-<property name="EditProbeEnums" value="8" type="JavaHandler"/>
+<property name="EditProbeEnums" value="15" type="JavaHandler"/>
 <property name="EditProperties" value="2" type="JavaHandler"/>
 <property name="EditRedo" value="6" type="JavaHandler"/>
-<property name="EditUndo" value="15" type="JavaHandler"/>
-<property name="ExportILAData" value="2" type="JavaHandler"/>
+<property name="EditUndo" value="17" type="JavaHandler"/>
+<property name="ExportILAData" value="3" type="JavaHandler"/>
+<property name="FileExit" value="1" type="JavaHandler"/>
 <property name="FlipToViewTaskRTLAnalysis" value="16" type="JavaHandler"/>
 <property name="GenerateOutputForBDFile" value="1" type="JavaHandler"/>
 <property name="HelpAbout" value="1" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="170" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="188" type="JavaHandler"/>
 <property name="LeaveFeedback" value="1" type="JavaHandler"/>
 <property name="ManageCompositeTargets" value="5" type="JavaHandler"/>
 <property name="NewFile" value="1" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="3" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
 <property name="OpenFile" value="1" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="348" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="381" type="JavaHandler"/>
 <property name="OpenProject" value="8" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="12" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="2" type="JavaHandler"/>
-<property name="ProgramDevice" value="154" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="19" type="JavaHandler"/>
-<property name="RecustomizeCore" value="135" type="JavaHandler"/>
-<property name="RefreshDevice" value="6" type="JavaHandler"/>
+<property name="ProgramDevice" value="168" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="36" type="JavaHandler"/>
+<property name="RecustomizeCore" value="153" type="JavaHandler"/>
+<property name="RefreshDevice" value="7" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="198" type="JavaHandler"/>
+<property name="RunBitgen" value="214" type="JavaHandler"/>
 <property name="RunImplementation" value="17" type="JavaHandler"/>
 <property name="RunSchematic" value="18" type="JavaHandler"/>
-<property name="RunSynthesis" value="36" type="JavaHandler"/>
-<property name="RunTrigger" value="338" type="JavaHandler"/>
-<property name="RunTriggerImmediate" value="82" type="JavaHandler"/>
+<property name="RunSynthesis" value="40" type="JavaHandler"/>
+<property name="RunTrigger" value="406" type="JavaHandler"/>
+<property name="RunTriggerImmediate" value="89" type="JavaHandler"/>
 <property name="SaveDesign" value="3" type="JavaHandler"/>
-<property name="SaveFileProxyHandler" value="3" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="10" type="JavaHandler"/>
 <property name="SaveProjectAs" value="4" type="JavaHandler"/>
 <property name="ShowProductWebPage" value="2" type="JavaHandler"/>
-<property name="ShowView" value="97" type="JavaHandler"/>
-<property name="SimulationClose" value="2" type="JavaHandler"/>
-<property name="SimulationRestart" value="4" type="JavaHandler"/>
-<property name="SimulationRun" value="18" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="10" type="JavaHandler"/>
-<property name="StopTrigger" value="92" type="JavaHandler"/>
+<property name="ShowView" value="116" type="JavaHandler"/>
+<property name="SimulationClose" value="93" type="JavaHandler"/>
+<property name="SimulationRestart" value="29" type="JavaHandler"/>
+<property name="SimulationRun" value="147" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="61" type="JavaHandler"/>
+<property name="StopTrigger" value="130" type="JavaHandler"/>
 <property name="ToggleAutoFitSelection" value="2" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="2" type="JavaHandler"/>
 <property name="ToolsTemplates" value="2" type="JavaHandler"/>
@@ -75,13 +78,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewLayoutCmd" value="6" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="1" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="8" type="JavaHandler"/>
-<property name="ViewTaskProgramandDebug" value="99" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="258" type="JavaHandler"/>
-<property name="ViewTaskRTLAnalysis" value="62" type="JavaHandler"/>
-<property name="ViewTaskSimulation" value="6" type="JavaHandler"/>
+<property name="ViewTaskProgramandDebug" value="130" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="450" type="JavaHandler"/>
+<property name="ViewTaskRTLAnalysis" value="63" type="JavaHandler"/>
+<property name="ViewTaskSimulation" value="70" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="5" type="JavaHandler"/>
-<property name="WaveformSaveConfiguration" value="10" type="JavaHandler"/>
-<property name="WaveformSaveConfigurationAs" value="1" type="JavaHandler"/>
+<property name="WaveformNewConfiguration" value="5" type="JavaHandler"/>
+<property name="WaveformOpenConfiguration" value="2" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="14" type="JavaHandler"/>
+<property name="WaveformSaveConfigurationAs" value="3" type="JavaHandler"/>
 <property name="XdcCreateClock" value="3" type="JavaHandler"/>
 <property name="XdcCreateGeneratedClock" value="5" type="JavaHandler"/>
 <property name="XdcSetOutputDelay" value="1" type="JavaHandler"/>
@@ -89,172 +94,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ui.views.b.h.f" value="2" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceAtoD.AddIlaProbesPopup_CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.AddIlaProbesPopup_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CompareValuePanel_SCALAR_VALUES, 1 (logical one" value="7" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_RUN_TRIGGER, Hardware_run_trigger" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Open Hardware Manager], 26, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_pcie_6/project_pcie_6.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, hw_ila_1 ; Idle, 5, hw_ila_1, 0, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, hw_ila_4 ; Idle, 8, hw_ila_4, 0, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.IlaProbeTablePanel_ADD_PROBE, IlaProbeTablePanel_new" value="6" type="GuiResourceData"/>
-<property name="PAResourceItoN.IlaProbeTablePanel_REMOVE_SELECTED_PROBE, IlaProbeTablePanel_remove" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/dma_ctrl_start_l2p_s], 0, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/dma_ctrl_start_l2p_s_1], 7, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/dma_ctrl_start_p2l_s], 0, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/dma_ctrl_start_p2l_s_1], 0, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/pd_pdm_data_last_s], 3, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/pd_pdm_data_valid_w_s[1:0]], 6, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/s_axis_rx_tdata_s_1[63:0]], 7, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProbesView_PROBES_TREE, [root, app_0/s_axis_rx_tvalid_s], 10, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
 <property name="PAResourceOtoP.ProgramDebugTab_OPEN_RECENTLY_OPENED_TARGET, Recent Targets" value="1" type="GuiResourceData"/>
 <property name="PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, Open target" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, eq1'bX, 0, Compare Value, 1" value="4" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, eq1'bX, 1, Compare Value, 1" value="4" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@1253abe8 ; eq1'bX ; probe5[0] ; , 1, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@29789b81 ; eq1'bX ; probe11[0] ; , 1, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@3a37b3dc ; eq1'bR ; probe2[0] ; 1 of 1, 1, ui.data.chipscope.v@3a37b3dc, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@3e24cffb ; eq1'bX ; probe4[0] ; , 0, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@422bb1ce ; eq1'bX ; probe10[0] ; , 1, eq1'bX, 1" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@42fec85 ; eq1'bX ; probe12[0] ; , 0, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@44d07b92 ; eq3'h5 ; probe21[2:0] ; 1 of 1, 1, ui.data.chipscope.v@44d07b92, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@589535d ; eq32'h0000_10B8 ; probe0[31:0] ; 1 of 1, 2, ui.data.chipscope.v@589535d, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@5bcde2a2 ; eq3'eDMA_ERROR ; probe9[2:0] ; 1 of 1, 0, ui.data.chipscope.v@5bcde2a2, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@6034dd79 ; eq3'h5 ; probe11[2:0] ; 1 of 1, 0, ui.data.chipscope.v@6034dd79, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@64c121d5 ; eq64'hXXXX_XXXX_4A00_0008 ; probe0[63:0] ; 1 of 1, 0, eq64'hXXXX_XXXX_4A00_0008, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@66552c2f ; eq1'bX ; probe9[0] ; , 0, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerSetupPanel_TABLE, ui.data.chipscope.v@7cc3705f ; eq1'bX ; probe1[0] ; , 0, eq1'bX, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, ILA_run_trigger" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TriggerStatusPanel_STOP_TRIGGER_FOR_THIS_ILA_CORE, ILA_stop_trigger" value="4" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 101, 153" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 102, 140" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 105, 138" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 111, -31" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 114, 137" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 115, -23" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 115, -27" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 116, -23" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 125, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 127, 52" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 127, 53" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 128, 47" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 136, 49" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 136, 51" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 137, 53" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 137, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 140, 318" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 145, 5" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 145, 56" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 146, 137" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 146, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 148, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 150, 50" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 156, 135" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 156, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 156, 56" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 157, 141" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 157, 49" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 164, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 166, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 166, 57" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 167, 53" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 171, 139" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 171, 51, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 177, -20" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 180, 133" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 198, -27, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 21, 73" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 218, 117" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 222, 116, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 241, -28" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 245, 88" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 248, 76" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 248, 80" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 253, 77" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 260, 104" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 265, 327" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 268, -29, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 287, 15" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 288, 111" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 310, 80" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 314, 111" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 318, -23" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 319, 52" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 320, 112, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 320, 53" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 326, -27, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 339, 114" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 340, 79, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 343, 50" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 353, 133" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 359, 117" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 364, 50" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 365, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 368, 51" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 370, 116, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 374, 76" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 381, -27" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 386, 52" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 393, 161" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 40, 54" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 401, 22" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 409, 135" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 413, 96" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 438, 87" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 444, 79" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 445, 107" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 445, 22" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 453, 133" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 46, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 47, -29" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 471, 156" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 481, 40" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 508, 119" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 525, 342" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 57, 79" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 576, 96" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 648, 44" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 656, 105" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 675, 254" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 72, 48" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 74, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 75, 53" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 755, 45" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 83, 55" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 87, 52" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 91, 140" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 92, 50" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 92, 57" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 98, 138, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/dma_sel_s[7:0]], 2, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_last_s], 10, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_s[63:0]], 11, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_s[63:0]], 4, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_s[63:0]], 4, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_valid_s], 12, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/pd_pdm_data_valid_s], 9, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/s_axis_rx_tdata_s_1[63:0]], 10, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, app_0/s_axis_rx_tvalid_s], 13, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, pd_pdm_data_valid_w_s[1:0], [0]], 8, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, pd_pdm_data_valid_w_s[1:0]], 14, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, pd_pdm_data_valid_w_s[1:0]], 6" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, s_axis_rx_tdata_s_1[63:0]], 10, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, s_axis_rx_tkeep_s[7:0]], 1, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, s_axis_rx_tvalid_s], 13, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, s_axis_rx_tvalid_s], 13, false, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformView_ADD, Waveform Viewer_new" value="2" type="GuiResourceData"/>
-<property name="Window data depth:, 32, 5" value="1" type="GuiResourceData"/>
-<property name="[0 - 1023], 16" value="1" type="GuiResourceData"/>
-<property name="[0 - 1023], 32" value="3" type="GuiResourceData"/>
-<property name="[0 - 1023], 8" value="1" type="GuiResourceData"/>
-<property name="[1 - 1024], 16" value="2" type="GuiResourceData"/>
-<property name="[1 - 1024], 32" value="1" type="GuiResourceData"/>
-<property name="[1 - 1024], 64" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, Program device" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="288" type="GuiMode"/>
+<property name="GuiMode" value="323" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="250" type="TclMode"/>
+<property name="TclMode" value="278" type="TclMode"/>
 </item>
 </section>
 </application>

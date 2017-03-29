@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wbmaster32_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common_pkg" />
+            <top_module name="glbl" />
+            <top_module name="gn4124_core_pkg" />
+            <top_module name="wbmaster32_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4000000002fs"></ZoomEndTime>
+      <Cursor1Time time="3000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="72" />
+   <wvobject type="logic" fp_name="/wbmaster32_bench/clk_tbs">
+      <obj_property name="ElementShortName">clk_tbs</obj_property>
+      <obj_property name="ObjectShortName">clk_tbs</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/wbmaster32_bench/step">
+      <obj_property name="ElementShortName">step</obj_property>
+      <obj_property name="ObjectShortName">step</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/rst_tbs">
+      <obj_property name="ElementShortName">rst_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/rst_n_tbs">
+      <obj_property name="ElementShortName">rst_n_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_n_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/pd_wbm_hdr_start_tbs">
+      <obj_property name="ElementShortName">pd_wbm_hdr_start_tbs</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_hdr_start_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/pd_wbm_hdr_cid_tbs">
+      <obj_property name="ElementShortName">pd_wbm_hdr_cid_tbs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_hdr_cid_tbs[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/pd_wbm_target_mrd_tbs">
+      <obj_property name="ElementShortName">pd_wbm_target_mrd_tbs</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_target_mrd_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/pd_wbm_target_mwr_tbs">
+      <obj_property name="ElementShortName">pd_wbm_target_mwr_tbs</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_target_mwr_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/pd_wbm_addr_start_tbs">
+      <obj_property name="ElementShortName">pd_wbm_addr_start_tbs</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_addr_start_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/pd_wbm_addr_tbs">
+      <obj_property name="ElementShortName">pd_wbm_addr_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_addr_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/pd_wbm_data_valid_tbs">
+      <obj_property name="ElementShortName">pd_wbm_data_valid_tbs</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_data_valid_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/pd_wbm_data_tbs">
+      <obj_property name="ElementShortName">pd_wbm_data_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pd_wbm_data_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/p_wr_rdy_s">
+      <obj_property name="ElementShortName">p_wr_rdy_s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">p_wr_rdy_s[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/p2l_rdy_s">
+      <obj_property name="ElementShortName">p2l_rdy_s</obj_property>
+      <obj_property name="ObjectShortName">p2l_rdy_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/p_rd_d_rdy_tbs">
+      <obj_property name="ElementShortName">p_rd_d_rdy_tbs[1:0]</obj_property>
+      <obj_property name="ObjectShortName">p_rd_d_rdy_tbs[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wbm_arb_req_s">
+      <obj_property name="ElementShortName">wbm_arb_req_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_req_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/wb_adr_s">
+      <obj_property name="ElementShortName">wb_adr_s[30:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_adr_s[30:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/wb_sel_s">
+      <obj_property name="ElementShortName">wb_sel_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_sel_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_stb_s">
+      <obj_property name="ElementShortName">wb_stb_s</obj_property>
+      <obj_property name="ObjectShortName">wb_stb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_we_s">
+      <obj_property name="ElementShortName">wb_we_s</obj_property>
+      <obj_property name="ObjectShortName">wb_we_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_cyc_s">
+      <obj_property name="ElementShortName">wb_cyc_s</obj_property>
+      <obj_property name="ObjectShortName">wb_cyc_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_ack_s">
+      <obj_property name="ElementShortName">wb_ack_s</obj_property>
+      <obj_property name="ObjectShortName">wb_ack_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_stall_tbs">
+      <obj_property name="ElementShortName">wb_stall_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_stall_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_err_tbs">
+      <obj_property name="ElementShortName">wb_err_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_err_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_rty_tbs">
+      <obj_property name="ElementShortName">wb_rty_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_rty_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wb_int_tbs">
+      <obj_property name="ElementShortName">wb_int_tbs</obj_property>
+      <obj_property name="ObjectShortName">wb_int_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/wbm_arb_tdata_s">
+      <obj_property name="ElementShortName">wbm_arb_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tdata_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/wbm_arb_tkeep_s">
+      <obj_property name="ElementShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tkeep_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/wbm_arb_tuser_s">
+      <obj_property name="ElementShortName">wbm_arb_tuser_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tuser_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wbm_arb_tlast_s">
+      <obj_property name="ElementShortName">wbm_arb_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tlast_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wbm_arb_tvalid_s">
+      <obj_property name="ElementShortName">wbm_arb_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tvalid_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wbm_arb_tready_tbs">
+      <obj_property name="ElementShortName">wbm_arb_tready_tbs</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_tready_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/wbm_arb_req_s">
+      <obj_property name="ElementShortName">wbm_arb_req_s</obj_property>
+      <obj_property name="ObjectShortName">wbm_arb_req_s</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/wbmaster32_bench/step">
+      <obj_property name="ElementShortName">step</obj_property>
+      <obj_property name="ObjectShortName">step</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/wbmaster32_bench/dut1/wishbone_current_state">
+      <obj_property name="ElementShortName">wishbone_current_state</obj_property>
+      <obj_property name="ObjectShortName">wishbone_current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/wbmaster32_bench/dut1/l2p_read_cpl_current_state">
+      <obj_property name="ElementShortName">l2p_read_cpl_current_state</obj_property>
+      <obj_property name="ObjectShortName">l2p_read_cpl_current_state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/to_wb_fifo_wr">
+      <obj_property name="ElementShortName">to_wb_fifo_wr</obj_property>
+      <obj_property name="ObjectShortName">to_wb_fifo_wr</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/from_wb_fifo_wr">
+      <obj_property name="ElementShortName">from_wb_fifo_wr</obj_property>
+      <obj_property name="ObjectShortName">from_wb_fifo_wr</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/to_wb_fifo_empty">
+      <obj_property name="ElementShortName">to_wb_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">to_wb_fifo_empty</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/from_wb_fifo_empty">
+      <obj_property name="ElementShortName">from_wb_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">from_wb_fifo_empty</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/to_wb_fifo_rw">
+      <obj_property name="ElementShortName">to_wb_fifo_rw</obj_property>
+      <obj_property name="ObjectShortName">to_wb_fifo_rw</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/d_i">
+      <obj_property name="ElementShortName">d_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">d_i[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/we_i">
+      <obj_property name="ElementShortName">we_i</obj_property>
+      <obj_property name="ObjectShortName">we_i</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/wr_empty_o">
+      <obj_property name="ElementShortName">wr_empty_o</obj_property>
+      <obj_property name="ObjectShortName">wr_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/wr_full_o">
+      <obj_property name="ElementShortName">wr_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/wr_almost_empty_o">
+      <obj_property name="ElementShortName">wr_almost_empty_o</obj_property>
+      <obj_property name="ObjectShortName">wr_almost_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/wr_almost_full_o">
+      <obj_property name="ElementShortName">wr_almost_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_almost_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/wr_count_o">
+      <obj_property name="ElementShortName">wr_count_o[8:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_count_o[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/q_o">
+      <obj_property name="ElementShortName">q_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">q_o[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_i">
+      <obj_property name="ElementShortName">rd_i</obj_property>
+      <obj_property name="ObjectShortName">rd_i</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_empty_o">
+      <obj_property name="ElementShortName">rd_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_full_o">
+      <obj_property name="ElementShortName">rd_full_o</obj_property>
+      <obj_property name="ObjectShortName">rd_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_almost_empty_o">
+      <obj_property name="ElementShortName">rd_almost_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_almost_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_almost_full_o">
+      <obj_property name="ElementShortName">rd_almost_full_o</obj_property>
+      <obj_property name="ObjectShortName">rd_almost_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_fifo_to_wb/rd_count_o">
+      <obj_property name="ElementShortName">rd_count_o[8:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_count_o[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/d_i">
+      <obj_property name="ElementShortName">d_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">d_i[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/we_i">
+      <obj_property name="ElementShortName">we_i</obj_property>
+      <obj_property name="ObjectShortName">we_i</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/wr_empty_o">
+      <obj_property name="ElementShortName">wr_empty_o</obj_property>
+      <obj_property name="ObjectShortName">wr_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/wr_full_o">
+      <obj_property name="ElementShortName">wr_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/wr_almost_empty_o">
+      <obj_property name="ElementShortName">wr_almost_empty_o</obj_property>
+      <obj_property name="ObjectShortName">wr_almost_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/wr_almost_full_o">
+      <obj_property name="ElementShortName">wr_almost_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_almost_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/wr_count_o">
+      <obj_property name="ElementShortName">wr_count_o[8:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_count_o[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/q_o">
+      <obj_property name="ElementShortName">q_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">q_o[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_i">
+      <obj_property name="ElementShortName">rd_i</obj_property>
+      <obj_property name="ObjectShortName">rd_i</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_empty_o">
+      <obj_property name="ElementShortName">rd_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_full_o">
+      <obj_property name="ElementShortName">rd_full_o</obj_property>
+      <obj_property name="ObjectShortName">rd_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_almost_empty_o">
+      <obj_property name="ElementShortName">rd_almost_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_almost_empty_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_almost_full_o">
+      <obj_property name="ElementShortName">rd_almost_full_o</obj_property>
+      <obj_property name="ObjectShortName">rd_almost_full_o</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/cmp_from_wb_fifo/rd_count_o">
+      <obj_property name="ElementShortName">rd_count_o[8:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_count_o[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/p2l_cid">
+      <obj_property name="ElementShortName">p2l_cid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">p2l_cid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/p2l_rid">
+      <obj_property name="ElementShortName">p2l_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">p2l_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/wbmaster32_bench/dut1/p2l_tag">
+      <obj_property name="ElementShortName">p2l_tag[7:0]</obj_property>
+      <obj_property name="ObjectShortName">p2l_tag[7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     std::fstream file_write("benchmarkDma_write.out", std::ios::out);
     std::fstream file_read("benchmarkDma_read.out", std::ios::out);
 
-    int maxCycles = 32;
+    int maxCycles = 400;
     int maxLoops = 100;
 
     double overall_time = 0;
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
         double time = (end.tv_sec - start.tv_sec) * 1000.0; //msecs
         time += (end.tv_usec - start.tv_usec) / 1000.0; //usecs
         overall_time += time;
-        std::cout << "Transferred " << total_data << "MB in " << time << " ms: " << total_data/time*1000.0 << " MB/s" << std::endl;
+        std::cout << "Cycle: " << cycles << "  Transferred " << total_data << "MB in " << time << " ms: " << total_data/time*1000.0 << " MB/s" << std::endl;
         file_read << size << "\t" << total_data << "\t" << time << "\t" << total_data/time*1000.0 << std::endl;
     }
     std::cout << "===========================================" << std::endl;

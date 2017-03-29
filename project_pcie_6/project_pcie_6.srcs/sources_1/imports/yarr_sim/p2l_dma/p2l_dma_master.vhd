@@ -470,33 +470,30 @@ begin
       next_item_attrib_o       <= (others => '0');
     elsif rising_edge(clk_i) then
       --p2l_data_cnt_1 <= p2l_data_cnt;
-      
       if (p2l_dma_current_state = P2L_WAIT_READ_COMPLETION
           and is_next_item = '1' and (pd_pdm_data_valid_w_i(0) = '1' or pd_pdm_data_valid_w_i(1) = '1')) then
         -- next item data are supposed to be received in the rigth order !!
         case p2l_data_cnt(3 downto 0) is
-          when "1000" =>
-            next_item_host_addr_l_o <= pd_pdm_data_i(63 downto 32); -- 1
-            next_item_carrier_addr_o <= pd_pdm_data_i(31 downto 0); -- 0
           when "0111" =>
-            next_item_host_addr_h_o <= pd_pdm_data_i(63 downto 32); -- 2
-            next_item_host_addr_l_o <= pd_pdm_data_i(31 downto 0); -- 1
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_host_addr_l_o <= pd_pdm_data_i(63 downto 32); end if; -- 1
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_carrier_addr_o <= pd_pdm_data_i(31 downto 0); end if; -- 0
           when "0110" =>
-            next_item_len_o <= pd_pdm_data_i(63 downto 32); -- 3
-            next_item_host_addr_h_o <= pd_pdm_data_i(31 downto 0); -- 2
-          when "0101" =>  
-            next_item_next_l_o <= pd_pdm_data_i(63 downto 32); -- 4
-            next_item_len_o <= pd_pdm_data_i(31 downto 0); -- 3
-          when "0100" =>
-            next_item_next_h_o <= pd_pdm_data_i(63 downto 32); -- 5
-            next_item_next_l_o <= pd_pdm_data_i(31 downto 0); -- 4
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_host_addr_h_o <= pd_pdm_data_i(63 downto 32); end if; -- 2
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_host_addr_l_o <= pd_pdm_data_i(31 downto 0); end if; -- 1
+          when "0101" =>
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_len_o <= pd_pdm_data_i(63 downto 32); end if; -- 3
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_host_addr_h_o <= pd_pdm_data_i(31 downto 0); end if; -- 2
+          when "0100" =>  
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_next_l_o <= pd_pdm_data_i(63 downto 32); end if; -- 4
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_len_o <= pd_pdm_data_i(31 downto 0); end if; -- 3
           when "0011" =>
-            next_item_attrib_o <= pd_pdm_data_i(63 downto 32); -- 6
-            next_item_next_h_o <= pd_pdm_data_i(31 downto 0); -- 5
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_next_h_o <= pd_pdm_data_i(63 downto 32); end if; -- 5
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_next_l_o <= pd_pdm_data_i(31 downto 0); end if; -- 4
           when "0010" =>
-            next_item_attrib_o <= pd_pdm_data_i(31 downto 0); -- 6
+            if pd_pdm_data_valid_w_i(1) = '1' then next_item_attrib_o <= pd_pdm_data_i(63 downto 32); end if; -- 6
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_next_h_o <= pd_pdm_data_i(31 downto 0); end if; -- 5
           when "0001" =>
-          
+            if pd_pdm_data_valid_w_i(0) = '1' then next_item_attrib_o <= pd_pdm_data_i(31 downto 0); end if; -- 6
           when others =>
             null;
         end case;

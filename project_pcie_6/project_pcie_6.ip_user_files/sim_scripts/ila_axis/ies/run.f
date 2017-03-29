@@ -12,7 +12,7 @@
   "/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../../project_pcie_5.srcs/sources_1/ip/ila_axis/sim/ila_axis.vhd" \
+  "../../../../project_pcie_6.srcs/sources_1/ip/ila_axis/sim/ila_axis.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

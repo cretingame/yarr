@@ -9,38 +9,44 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="906218fs"></ZoomStartTime>
-      <ZoomEndTime time="923739fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="69033fs"></ZoomEndTime>
       <Cursor1Time time="914000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="8" />
-   <wave_markers>
-   </wave_markers>
    <wvobject type="array" fp_name="app_0/s_axis_rx_tdata_s_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/s_axis_rx_tdata_s_1[63:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_rx_tdata_s_1[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/s_axis_rx_tkeep_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/s_axis_rx_tkeep_s[7:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_rx_tkeep_s[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/s_axis_rx_tlast_s_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/s_axis_rx_tlast_s_1</obj_property>
       <obj_property name="ObjectShortName">s_axis_rx_tlast_s_1</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/s_axis_rx_tvalid_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/s_axis_rx_tvalid_s</obj_property>
       <obj_property name="ObjectShortName">s_axis_rx_tvalid_s</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/pd_pdm_data_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -61,12 +67,14 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/pd_pdm_data_valid_w_s">
+      <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">app_0/pd_pdm_data_valid_w_s[1:0]</obj_property>
       <obj_property name="ObjectShortName">pd_pdm_data_valid_w_s[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
       <wvobject type="logic" fp_name="app_0/pd_pdm_data_valid_w_s[1]">
          <obj_property name="ElementShortName">[1]</obj_property>
          <obj_property name="ObjectShortName">[1]</obj_property>
@@ -78,6 +86,14 @@
          <obj_property name="ObjectShortName">[0]</obj_property>
          <obj_property name="CustomSignalColor">#FF00FF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="app_0/pd_pdm_data_valid_w_s[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="app_0/pd_pdm_data_valid_w_s[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/pd_pdm_data_valid_s">

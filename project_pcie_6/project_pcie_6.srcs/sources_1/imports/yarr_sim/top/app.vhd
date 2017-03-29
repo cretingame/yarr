@@ -86,7 +86,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(4 downto 0) := "01111";
+    constant DEBUG_C : std_logic_vector(4 downto 0) := "00111";
     
     component simple_counter is
         Port ( 
@@ -96,59 +96,12 @@ architecture Behavioral of app is
                 );
     end component;
     
---	Component wb_master64 is
---		Generic (
---			axis_data_width_c : integer := 64;
---			wb_address_width_c : integer := 64;
---			wb_data_width_c : integer := 32;
---			address_mask_c : STD_LOGIC_VECTOR(64-1 downto 0) := X"00000000" & X"000FFFFF" -- depends on pcie memory size
---		);
---		Port (
---			clk_i : in STD_LOGIC;
---			rst_i : in STD_LOGIC;
---			-- Slave AXI-Stream
---			s_axis_rx_tdata_i : in STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
---			s_axis_rx_tkeep_i : in STD_LOGIC_VECTOR (axis_data_width_c/8 - 1 downto 0);
---			s_axis_rx_tuser_i : in STD_LOGIC_VECTOR (21 downto 0);
---			s_axis_rx_tlast_i : in STD_LOGIC;
---			s_axis_rx_tvalid_i : in STD_LOGIC;
---			s_axis_rx_tready_o : out STD_LOGIC;
---			-- Master AXI-Stream
---			wbm_arb_tdata_o : out STD_LOGIC_VECTOR (axis_data_width_c - 1 downto 0);
---			wbm_arb_tkeep_o : out STD_LOGIC_VECTOR (axis_data_width_c/8 - 1 downto 0);
---			wbm_arb_tuser_o : out STD_LOGIC_VECTOR (3 downto 0);
---			wbm_arb_tlast_o : out STD_LOGIC;
---			wbm_arb_tvalid_o : out STD_LOGIC;
---			wbm_arb_tready_i : in STD_LOGIC;
---			wbm_arb_req_o    : out  std_logic;
---			-- L2P DMA
---			pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
---			pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
---			pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
---			pd_pdm_keep_o        : out std_logic_vector(7 downto 0);
---			-- Wishbone master
---			wb_adr_o : out STD_LOGIC_VECTOR (64 - 1 downto 0);
---			wb_dat_o : out STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---			wb_dat_i : in STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---			wb_cyc_o : out STD_LOGIC;
---			--wb_sel_o : out STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
---			wb_stb_o : out STD_LOGIC;
---			wb_we_o : out STD_LOGIC;
---			wb_ack_i : in STD_LOGIC;
---            --debug outputs
---            states_do : out STD_LOGIC_VECTOR(3 downto 0);
---            op_do : out STD_LOGIC_VECTOR(2 downto 0);
---            header_type_do : out STD_LOGIC;
---            payload_length_do : out STD_LOGIC_VECTOR(9 downto 0);
---            address_do : out STD_LOGIC_VECTOR(31 downto 0)
---		);
---	end component;
 
         Component p2l_decoder is
         Port (
             clk_i : in STD_LOGIC;
             rst_i : in STD_LOGIC;
-            -- Slave AXI-Stream
+            -- From Slave AXI-Stream
             s_axis_rx_tdata_i : in STD_LOGIC_VECTOR (64 - 1 downto 0);
             s_axis_rx_tkeep_i : in STD_LOGIC_VECTOR (64/8 - 1 downto 0);
             s_axis_rx_tuser_i : in STD_LOGIC_VECTOR (21 downto 0);
@@ -159,51 +112,94 @@ architecture Behavioral of app is
             pd_wbm_address_o : out STD_LOGIC_VECTOR(63 downto 0);
             pd_wbm_data_o : out STD_LOGIC_VECTOR(31 downto 0);
             pd_wbm_valid_o : out std_logic;
+            pd_wbm_hdr_rid_o    : out std_logic_vector(15 downto 0);  -- Requester ID
+            pd_wbm_hdr_tag_o    : out std_logic_vector(7 downto 0);
+            pd_wbm_target_mrd_o : out std_logic;                      -- Target memory read
+            pd_wbm_target_mwr_o : out std_logic;                      -- Target memory write
             wbm_pd_ready_i : in std_logic;
-            pd_op_o : out STD_LOGIC_VECTOR(2 downto 0);
-            pd_header_type_o : out STD_LOGIC;
-            pd_payload_length_o : out STD_LOGIC_VECTOR(9 downto 0);
-            -- L2P DMA
+            -- to L2P DMA
             pd_pdm_data_valid_o  : out std_logic;                      -- Indicates Data is valid
             pd_pdm_data_valid_w_o  : out std_logic_vector(1 downto 0);
             pd_pdm_data_last_o   : out std_logic;                      -- Indicates end of the packet
-            pd_pdm_keep_o        : out std_logic_vector(7 downto 0);
+            pd_pdm_keep_o         : out std_logic_vector(7 downto 0);
             pd_pdm_data_o        : out std_logic_vector(63 downto 0);  -- Data
- 
             --debug outputs
-            states_do : out STD_LOGIC_VECTOR(3 downto 0)
+            states_do : out STD_LOGIC_VECTOR(3 downto 0);
+            pd_op_o : out STD_LOGIC_VECTOR(2 downto 0);
+            pd_header_type_o : out STD_LOGIC;
+            pd_payload_length_o : out STD_LOGIC_VECTOR(9 downto 0)
         );
         end component;
-       
-        component wb_master is
-            Port (
-                clk_i : in STD_LOGIC;
-                rst_i : in STD_LOGIC;
-                -- From packet decoder
-                pd_wbm_address_i : in STD_LOGIC_VECTOR(63 downto 0);
-                pd_wbm_data_i : in STD_LOGIC_VECTOR(31 downto 0);
-                pd_wbm_valid_i : in std_logic;
-                wbm_pd_ready_o : out std_logic;
-                pd_op_i : in STD_LOGIC_VECTOR(2 downto 0);
-                -- Master AXI-Stream
-                wbm_arb_tdata_o : out STD_LOGIC_VECTOR (64 - 1 downto 0);
-                wbm_arb_tkeep_o : out STD_LOGIC_VECTOR (64/8 - 1 downto 0);
-                wbm_arb_tuser_o : out STD_LOGIC_VECTOR (3 downto 0);
-                wbm_arb_tlast_o : out STD_LOGIC;
-                wbm_arb_tvalid_o : out STD_LOGIC;
-                wbm_arb_tready_i : in STD_LOGIC;
-                wbm_arb_req_o    : out  std_logic;
-       
-                -- Wishbone master
-                wb_adr_o : out STD_LOGIC_VECTOR (32 - 1 downto 0);
-                wb_dat_o : out STD_LOGIC_VECTOR (32 - 1 downto 0);
-                wb_dat_i : in STD_LOGIC_VECTOR (32 - 1 downto 0);
-                wb_cyc_o : out STD_LOGIC;
-                wb_stb_o : out STD_LOGIC;
-                wb_we_o : out STD_LOGIC;
-                wb_ack_i : in STD_LOGIC
+        
+        component wbmaster32 is
+          generic (
+            g_ACK_TIMEOUT : positive := 100     -- Wishbone ACK timeout (in wb_clk cycles)
             );
+          port
+            (
+              ---------------------------------------------------------
+              -- GN4124 core clock and reset
+              clk_i   : in std_logic;
+              rst_n_i : in std_logic;
+        
+              ---------------------------------------------------------
+              -- From P2L packet decoder
+              --
+              -- Header
+              pd_wbm_hdr_start_i  : in std_logic;                      -- Header strobe
+              --pd_wbm_hdr_length_i : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
+              pd_wbm_hdr_rid_i    : in std_logic_vector(15 downto 0);  -- Requester ID
+              pd_wbm_hdr_cid_i    : in std_logic_vector(15 downto 0);  -- Completer ID
+              pd_wbm_hdr_tag_i    : in std_logic_vector(7 downto 0);   -- Completion ID
+              pd_wbm_target_mrd_i : in std_logic;                      -- Target memory read
+              pd_wbm_target_mwr_i : in std_logic;                      -- Target memory write
+              --
+              -- Address
+              pd_wbm_addr_start_i : in std_logic;                      -- Address strobe
+              pd_wbm_addr_i       : in std_logic_vector(31 downto 0);  -- Target address (in byte) that will increment with data
+                                                                       -- increment = 4 bytes
+              --
+              -- Data
+              pd_wbm_data_valid_i : in std_logic;                      -- Indicates Data is valid
+              --pd_wbm_data_last_i  : in std_logic;                      -- Indicates end of the packet
+              pd_wbm_data_i       : in std_logic_vector(31 downto 0);  -- Data
+              --pd_wbm_be_i         : in std_logic_vector(3 downto 0);   -- Byte Enable for data
+        
+              ---------------------------------------------------------
+              -- P2L channel control
+              p_wr_rdy_o   : out std_logic_vector(1 downto 0);  -- Ready to accept target write
+              p2l_rdy_o    : out std_logic;                     -- De-asserted to pause transfer already in progress
+              p_rd_d_rdy_i : in  std_logic_vector(1 downto 0);  -- Asserted when GN4124 ready to accept read completion with data
+        
+              ---------------------------------------------------------
+              -- To the arbiter (L2P data)
+              
+              wbm_arb_tdata_o : out STD_LOGIC_VECTOR (64 - 1 downto 0);
+              wbm_arb_tkeep_o : out STD_LOGIC_VECTOR (64/8 - 1 downto 0);
+              --wbm_arb_tuser_o : out STD_LOGIC_VECTOR (3 downto 0);
+              wbm_arb_tlast_o : out STD_LOGIC;
+              wbm_arb_tvalid_o : out STD_LOGIC;
+              wbm_arb_tready_i : in STD_LOGIC;
+              wbm_arb_req_o    : out  std_logic;
+        
+              ---------------------------------------------------------
+              -- CSR wishbone interface
+              wb_clk_i   : in  std_logic;                      -- Wishbone bus clock
+              wb_adr_o   : out std_logic_vector(30 downto 0);  -- Address
+              wb_dat_o   : out std_logic_vector(31 downto 0);  -- Data out
+              wb_sel_o   : out std_logic_vector(3 downto 0);   -- Byte select
+              wb_stb_o   : out std_logic;                      -- Strobe
+              wb_we_o    : out std_logic;                      -- Write
+              wb_cyc_o   : out std_logic;                      -- Cycle
+              wb_dat_i   : in  std_logic_vector(31 downto 0);  -- Data in
+              wb_ack_i   : in  std_logic;                      -- Acknowledge
+              wb_stall_i : in  std_logic;                      -- Stall
+              wb_err_i   : in  std_logic;                      -- Error
+              wb_rty_i   : in  std_logic;                      -- Retry
+              wb_int_i   : in  std_logic                       -- Interrupt
+              );
         end component;
+       
  
 	component dma_controller is
 	  port
@@ -447,11 +443,7 @@ architecture Behavioral of app is
 		  ---------------------------------------------------------
 		  -- From P2L Decoder (receive the read completion)
 		  --
-		  -- Header
-		  --pd_pdm_hdr_start_i   : in std_logic;                      -- Header strobe
-		  --pd_pdm_hdr_length_i  : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
-		  --pd_pdm_hdr_cid_i     : in std_logic_vector(1 downto 0);   -- Completion ID
-		  --pd_pdm_op_i     : in std_logic_vector(2 downto 0);        
+		  -- Header       
 		  pd_pdm_master_cpld_i : in std_logic;                      -- Master read completion with data
 		  pd_pdm_master_cpln_i : in std_logic;                      -- Master read completion without data
 		  --
@@ -609,7 +601,8 @@ COMPONENT ila_axis
         probe18 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe21 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+        probe21 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+        probe22 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
         
     );
     END COMPONENT  ;
@@ -662,7 +655,10 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
     END COMPONENT  ;
     
@@ -683,7 +679,8 @@ COMPONENT ila_axis
         probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe8 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
         probe9 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-        probe10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
+        probe10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+        probe11 : IN STD_LOGIC_VECTOR(1 DOWNTO 1)
     );
     END COMPONENT  ;
     
@@ -759,13 +756,17 @@ COMPONENT ila_l2p_dma
 	---------------------------------------------------------
     -- CSR Wishbone bus
     signal wb_adr_s : STD_LOGIC_VECTOR (32 - 1 downto 0);
-    signal wb_dat_o_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
-    signal wb_dat_i_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    signal wb_dat_m2s_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    signal wb_dat_s2m_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
     signal wb_cyc_s : STD_LOGIC;
-    signal wb_sel_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    signal wb_sel_s : STD_LOGIC_VECTOR (4 - 1 downto 0);
     signal wb_stb_s : STD_LOGIC;
     signal wb_we_s : STD_LOGIC;
     signal wb_ack_s : STD_LOGIC;
+    signal wb_stall_s : std_logic;                      -- Stall
+    signal wb_err_s   : std_logic;                      -- Error
+    signal wb_rty_s   : std_logic;                      -- Retry
+    signal wb_int_s   : std_logic;                       -- Interrupt
     
     signal wb_dma_ctrl_adr_s : STD_LOGIC_VECTOR (32 - 1 downto 0);
     signal wb_dma_ctrl_dat_m2s_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
@@ -809,8 +810,13 @@ COMPONENT ila_l2p_dma
     -- From Wishbone master (wbm) to L2P DMA    
     signal pd_wbm_address_s : STD_LOGIC_VECTOR(63 downto 0);
     signal pd_wbm_data_s : STD_LOGIC_VECTOR(31 downto 0);
+    signal p2l_wbm_rdy_s : std_logic;
     signal pd_pdm_data_valid_w_s : std_logic_vector(1 downto 0);
     signal pd_wbm_valid_s : std_logic;
+    signal pd_wbm_hdr_rid_s      : std_logic_vector(15 downto 0);  -- Requester ID
+    signal pd_wbm_hdr_tag_s      : std_logic_vector(7 downto 0);
+    signal pd_wbm_target_mrd_s : std_logic;                      -- Target memory read
+    signal pd_wbm_target_mwr_s : std_logic; 
     signal wbm_pd_ready_s : std_logic;
     signal pd_op_s : STD_LOGIC_VECTOR(2 downto 0);
     signal pd_header_type_s : STD_LOGIC;
@@ -822,6 +828,7 @@ COMPONENT ila_l2p_dma
 	signal pd_pdm_data_last_s : STD_LOGIC;
 	signal pd_pdm_data_s : STD_LOGIC_VECTOR(axis_data_width_c - 1 downto 0);
 	signal pd_pdm_keep_s : std_logic_vector(7 downto 0);
+	signal p2l_dma_rdy_s : std_logic;
 	
     ---------------------------------------------------------
     -- From Wishbone master (wbm) to arbiter (arb)      
@@ -975,6 +982,8 @@ begin
     
     cfg_interrupt_o <= cfg_interrupt_s;
     
+    wbm_pd_ready_s <= p2l_wbm_rdy_s and p2l_dma_rdy_s;
+    
     interrupt_p : process(rst_i,clk_i)
     begin
         if (rst_i = '1') then
@@ -1013,6 +1022,10 @@ begin
         pd_wbm_address_o => pd_wbm_address_s,
         pd_wbm_data_o => pd_wbm_data_s,
         pd_wbm_valid_o => pd_wbm_valid_s,
+        pd_wbm_hdr_rid_o    => pd_wbm_hdr_rid_s,
+        pd_wbm_hdr_tag_o    => pd_wbm_hdr_tag_s,
+        pd_wbm_target_mrd_o => pd_wbm_target_mrd_s,
+        pd_wbm_target_mwr_o => pd_wbm_target_mwr_s,
         wbm_pd_ready_i => wbm_pd_ready_s,
         pd_op_o => pd_op_s,
         pd_header_type_o => pd_header_type_s,
@@ -1026,43 +1039,117 @@ begin
         pd_pdm_data_o => pd_pdm_data_s
     );
    
-    wb_master_comp:wb_master
-    port map(
-        clk_i => clk_i,
-        rst_i => rst_i,
-       
-        -- From packet decoder
-        pd_wbm_address_i => pd_wbm_address_s,
-        pd_wbm_data_i => pd_wbm_data_s,
-        pd_wbm_valid_i => pd_wbm_valid_s,
-        wbm_pd_ready_o => wbm_pd_ready_s,
-        pd_op_i => pd_op_s,
-       
-        -- Master AXI-Stream
+    wb32:wbmaster32
+    generic map (
+        g_ACK_TIMEOUT => 100     -- Wishbone ACK timeout (in wb_clk cycles)
+    )
+    port map
+    (
+        ---------------------------------------------------------
+        -- GN4124 core clock and reset
+        clk_i   => clk_i,
+        rst_n_i => rst_n_s,
+        
+        ---------------------------------------------------------
+        -- From P2L packet decoder
+        --
+        -- Header
+        pd_wbm_hdr_start_i  => pd_wbm_valid_s,                     -- Header strobe
+        --pd_wbm_hdr_length_i : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
+        pd_wbm_hdr_rid_i => pd_wbm_hdr_rid_s,  -- Requester ID
+        pd_wbm_hdr_cid_i => X"0100",  -- Completer ID
+        pd_wbm_hdr_tag_i => pd_wbm_hdr_tag_s,
+        pd_wbm_target_mrd_i => pd_wbm_target_mrd_s,                     -- Target memory read
+        pd_wbm_target_mwr_i => pd_wbm_target_mwr_s,                     -- Target memory write
+        --
+        -- Address
+        pd_wbm_addr_start_i =>  pd_wbm_valid_s,                    -- Address strobe
+        pd_wbm_addr_i       =>  pd_wbm_address_s(31 downto 0),-- Target address (in byte) that will increment with data
+                                                               -- increment = 4 bytes
+        --
+        -- Data
+        pd_wbm_data_valid_i => pd_wbm_valid_s,                     -- Indicates Data is valid
+        --pd_wbm_data_last_i  : in std_logic;                      -- Indicates end of the packet
+        pd_wbm_data_i       => pd_wbm_data_s, -- Data
+        --pd_wbm_be_i         : in std_logic_vector(3 downto 0);   -- Byte Enable for data
+        
+        ---------------------------------------------------------
+        -- P2L channel control
+        p_wr_rdy_o   =>  open,-- Ready to accept target write
+        p2l_rdy_o    =>  p2l_wbm_rdy_s,--wbm_pd_ready_s,                   -- De-asserted to pause transfer already in progress
+        p_rd_d_rdy_i =>  "11",-- Asserted when GN4124 ready to accept read completion with data
+        
+        ---------------------------------------------------------
+        -- To the arbiter (L2P data)
         wbm_arb_tdata_o => wbm_arb_tdata_s,
         wbm_arb_tkeep_o => wbm_arb_tkeep_s,
+        --wbm_arb_tuser_o => wbm_arb_tuser_s,
         wbm_arb_tlast_o => wbm_arb_tlast_s,
         wbm_arb_tvalid_o => wbm_arb_tvalid_s,
         wbm_arb_tready_i => wbm_arb_tready_s,
-        wbm_arb_req_o => wbm_arb_req_s,
- 
-        -- Wishbone Master
-        wb_adr_o => wb_adr_s,
-        wb_dat_o => wb_dat_o_s,
-        wb_dat_i => wb_dat_i_s,
-        wb_cyc_o => wb_cyc_s,
-        wb_stb_o => wb_stb_s,
-        wb_we_o => wb_we_s,
-        wb_ack_i => wb_ack_s
+        wbm_arb_req_o    => wbm_arb_req_s,
+        
+        ---------------------------------------------------------
+        -- CSR wishbone interface
+        wb_clk_i   =>  clk_i,                     -- Wishbone bus clock
+        wb_adr_o   =>  wb_adr_s(30 downto 0),-- Address
+        wb_dat_o   =>  wb_dat_m2s_s,-- Data out
+        wb_sel_o   =>  wb_sel_s, -- Byte select
+        wb_stb_o   =>  wb_stb_s,                    -- Strobe
+        wb_we_o    =>  wb_we_s,                    -- Write
+        wb_cyc_o   =>  wb_cyc_s,                    -- Cycle
+        wb_dat_i   =>  wb_dat_s2m_s,-- Data in
+        wb_ack_i   =>  wb_ack_s,                    -- Acknowledge
+        wb_stall_i =>  wb_stall_s,                    -- Stall
+        wb_err_i   =>  wb_err_s,                    -- Error
+        wb_rty_i   =>  wb_rty_s,                    -- Retry
+        wb_int_i   =>  wb_int_s                     -- Interrupt
     );
     
+    wb_stall_s <= '0';
+    wb_err_s <= '0';
+    wb_rty_s <= '0';
+    wb_int_s <= '0';
+    
+   
+--    wb_master_comp:wb_master
+--    port map(
+--        clk_i => clk_i,
+--        rst_i => rst_i,
+       
+--        -- From packet decoder
+--        pd_wbm_address_i => pd_wbm_address_s,
+--        pd_wbm_data_i => pd_wbm_data_s,
+--        pd_wbm_valid_i => pd_wbm_valid_s,
+--        wbm_pd_ready_o => wbm_pd_ready_s,
+--        wbm_pd_done_o => wbm_pd_done_s,
+--        pd_op_i => pd_op_s,
+       
+--        -- Master AXI-Stream
+--        wbm_arb_tdata_o => wbm_arb_tdata_s,
+--        wbm_arb_tkeep_o => wbm_arb_tkeep_s,
+--        wbm_arb_tlast_o => wbm_arb_tlast_s,
+--        wbm_arb_tvalid_o => wbm_arb_tvalid_s,
+--        wbm_arb_tready_i => wbm_arb_tready_s,
+--        wbm_arb_req_o => wbm_arb_req_s,
+ 
+--        -- Wishbone Master
+--        wb_adr_o => wb_adr_s,
+--        wb_dat_o => wb_dat_o_s,
+--        wb_dat_i => wb_dat_i_s,
+--        wb_cyc_o => wb_cyc_s,
+--        wb_stb_o => wb_stb_s,
+--        wb_we_o => wb_we_s,
+--        wb_ack_i => wb_ack_s
+--    );
+    
     wb_mem_adr_s <= wb_adr_s(31 downto 0);
-    wb_mem_dat_m2s_s <= wb_dat_o_s;
+    wb_mem_dat_m2s_s <= wb_dat_m2s_s;
     wb_mem_stb_s <= wb_stb_s;
     wb_mem_we_s <= wb_we_s;
     
     wb_dma_ctrl_adr_s <= wb_adr_s(31 downto 0);
-    wb_dma_ctrl_dat_m2s_s <= wb_dat_o_s;
+    wb_dma_ctrl_dat_m2s_s <= wb_dat_m2s_s;
     wb_dma_ctrl_stb_s <= wb_stb_s;
     wb_dma_ctrl_we_s <= wb_we_s;   
     
@@ -1074,12 +1161,12 @@ begin
         if wb_adr_s(31 downto 4) = X"0000000" then
             wb_dma_ctrl_cyc_s <= wb_cyc_s;
             wb_mem_cyc_s <= '0';
-            wb_dat_i_s <= wb_dma_ctrl_dat_s2m_s;
+            wb_dat_s2m_s <= wb_dma_ctrl_dat_s2m_s;
             wb_ack_s <= wb_dma_ctrl_ack_s;
         else
             wb_dma_ctrl_cyc_s <= '0';
             wb_mem_cyc_s <= wb_cyc_s;
-            wb_dat_i_s <= wb_mem_dat_s2m_s;
+            wb_dat_s2m_s <= wb_mem_dat_s2m_s;
             wb_ack_s <= wb_mem_ack_s;
         end if;
     end process;
@@ -1198,10 +1285,6 @@ begin
 		  -- From P2L Decoder (receive the read completion)
 		  --
 		  -- Header
-		  --pd_pdm_hdr_start_i   : in std_logic;                      -- Header strobe
-		  --pd_pdm_hdr_length_i  : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
-		  --pd_pdm_hdr_cid_i     : in std_logic_vector(1 downto 0);   -- Completion ID
-		  --pd_pdm_op_i     => pd_op_s,
 		  pd_pdm_master_cpld_i => '1',                      -- Master read completion with data
 		  pd_pdm_master_cpln_i => '0',                      -- Master read completion without data
 		  --
@@ -1214,7 +1297,7 @@ begin
 
 		  ---------------------------------------------------------
 		  -- P2L control
-		  p2l_rdy_o  => open,      -- De-asserted to pause transfer already in progress
+		  p2l_rdy_o  => p2l_dma_rdy_s,      -- De-asserted to pause transfer already in progress
 		  rx_error_o => open,       -- Asserted when transfer is aborted
 
 		  ---------------------------------------------------------
@@ -1467,7 +1550,8 @@ begin
           probe18(0) => cfg_interrupt_s,
           probe19(0) => cfg_interrupt_rdy_i,
           probe20(0) => dma_ctrl_done_s,
-          probe21 => dma_ctrl_current_state_ds
+          probe21 => dma_ctrl_current_state_ds,
+          probe22(0) => next_item_valid_s
       );
   end generate dbg_0;
   
@@ -1520,7 +1604,10 @@ begin
           probe7(0) => dma_ack_s,
           probe8(0) => dma_stall_s, 
           probe9(0) => l2p_dma_cyc_s,
-          probe10(0) => p2l_dma_cyc_s
+          probe10(0) => p2l_dma_cyc_s,
+          probe11(0) => dma_ctrl_start_l2p_s, 
+          probe12(0) => dma_ctrl_start_p2l_s, 
+          probe13(0) => dma_ctrl_start_next_s
       );
   end generate dbg_2;
   
@@ -1541,7 +1628,8 @@ begin
           probe7(0) => ldm_arb_tready_s, 
           probe8 => l2p_current_state_ds, 
           probe9 => dma_ctrl_current_state_ds,
-          probe10 => pd_pdm_data_valid_w_s
+          probe10 => pd_pdm_data_valid_w_s,
+          probe11(1) => next_item_valid_s
  
       );
   end generate dbg_3;
