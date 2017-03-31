@@ -1,4 +1,0 @@
-vhdl xpm "/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" 
-vhdl xil_defaultlib "../../../ip/ila_2/sim/ila_2.vhd" 
-
-nosort

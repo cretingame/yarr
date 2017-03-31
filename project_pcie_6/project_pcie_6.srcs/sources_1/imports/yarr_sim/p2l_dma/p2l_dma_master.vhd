@@ -55,6 +55,9 @@ entity p2l_dma_master is
       -- GN4124 core clock and reset
       clk_i   : in std_logic;
       rst_n_i : in std_logic;
+      
+      -- From PCIe IP core
+      l2p_rid_i : in std_logic_vector(16-1 downto 0);
 
       ---------------------------------------------------------
       -- From the DMA controller
@@ -273,7 +276,7 @@ begin
   -- Last Byte Enable must be "0000" when length = 1
   l2p_lbe_header <= "0000" when l2p_len_header = 1 else "1111";
 
-  s_l2p_header(63 downto 48) <= X"0100"; --> H1 Requester ID
+  s_l2p_header(63 downto 48) <= l2p_rid_i; --X"0100"; --> H1 Requester ID
   s_l2p_header(47 downto 40) <= X"00"; --> H1 Tag
   s_l2p_header(39 downto 36) <= l2p_lbe_header; -->  LBE (Last Byte Enable)
   s_l2p_header(35 downto 32) <= X"f"; --> FBE (First Byte Enable)

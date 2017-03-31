@@ -190,6 +190,11 @@ architecture Behavioral of top_level is
                cfg_interrupt_stat_o : out STD_LOGIC;
                cfg_pciecap_interrupt_msgnum_o : out STD_LOGIC_VECTOR(4 DOWNTO 0);
                
+               -- PCIe ID
+               cfg_bus_number_i : in STD_LOGIC_VECTOR(7 DOWNTO 0);
+               cfg_device_number_i : in STD_LOGIC_VECTOR(4 DOWNTO 0);
+               cfg_function_number_i : in STD_LOGIC_VECTOR(2 DOWNTO 0);
+               
                -- PCIe debug
                cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
                
@@ -251,6 +256,11 @@ architecture Behavioral of top_level is
     signal cfg_interrupt_msixfm_s : STD_LOGIC;
     signal cfg_interrupt_stat_s : STD_LOGIC;
     signal cfg_pciecap_interrupt_msgnum_s : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    
+    -- PCIE ID
+    signal cfg_bus_number_s : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    signal cfg_device_number_s : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    signal cfg_function_number_s : STD_LOGIC_VECTOR(2 DOWNTO 0);
     
     --PCIE debug
     signal cfg_dstatus_s : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -329,6 +339,10 @@ begin
         cfg_pciecap_interrupt_msgnum => cfg_pciecap_interrupt_msgnum_s,
         cfg_dstatus => cfg_dstatus_s,
         
+        cfg_bus_number => cfg_bus_number_s,
+        cfg_device_number => cfg_device_number_s,
+        cfg_function_number => cfg_function_number_s,
+        
         sys_clk => sys_clk,
         sys_rst_n => sys_rst_n_i
       );
@@ -369,6 +383,11 @@ begin
         cfg_interrupt_msixfm_i => cfg_interrupt_msixfm_s,
         cfg_interrupt_stat_o => cfg_interrupt_stat_s,
         cfg_pciecap_interrupt_msgnum_o => cfg_pciecap_interrupt_msgnum_s,
+        
+        -- PCIe ID
+        cfg_bus_number_i => cfg_bus_number_s,
+        cfg_device_number_i =>  cfg_device_number_s,
+        cfg_function_number_i => cfg_function_number_s,
         
         -- PCIe debug
         cfg_dstatus_i => cfg_dstatus_s,

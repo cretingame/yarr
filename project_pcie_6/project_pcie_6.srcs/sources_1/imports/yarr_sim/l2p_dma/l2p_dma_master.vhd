@@ -26,6 +26,9 @@ entity l2p_dma_master is
         -- GN4124 core clk and reset
         clk_i   : in std_logic;
         rst_n_i : in std_logic;
+        
+        -- From PCIe IP core
+        l2p_rid_i : in std_logic_vector(16-1 downto 0);
 
         -- From the DMA controller
         dma_ctrl_target_addr_i : in  std_logic_vector(32-1 downto 0);
@@ -40,7 +43,6 @@ entity l2p_dma_master is
 
         -- To the arbiter (L2P data)
         ldm_arb_tvalid_o  : out std_logic;
-        --ldm_arb_dframe_o : out std_logic;
         ldm_arb_tlast_o   : out std_logic;
         ldm_arb_tdata_o   : out std_logic_vector(axis_data_width_c-1 downto 0);
         ldm_arb_tkeep_o   : out std_logic_vector(axis_data_width_c/8-1 downto 0);
@@ -424,7 +426,7 @@ begin
     --- Paket Generator
     ---------------------
     -- 01:00.0 Memory controller: Xilinx Corporation Device 7024
-    s_l2p_header(63 downto 48) <= X"0100"; --H1 Requester ID
+    s_l2p_header(63 downto 48) <= l2p_rid_i;--X"0100"; --H1 Requester ID
     s_l2p_header(47 downto 40) <= X"00"; --H1 Tag 
     s_l2p_header(39 downto 32) <= X"0f" when l2p_len_header = 1 else X"ff"; -- LBE (Last Byte Enable) & FBE (First Byte Enable)
     s_l2p_header(31 downto 29) <= "011" when l2p_64b_address = '1' else "010"; -- H0 FMT

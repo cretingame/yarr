@@ -95,9 +95,9 @@ begin
 	state_p:process(rst_i,clk_i) 
 	begin
 		if rst_i = '1' then
-			if s_axis_rx_tvalid_i = '1' then
+			--if s_axis_rx_tvalid_i = '1' then
 			     state_s <= idle;
-			end if;
+			--end if;
 		elsif clk_i = '1' and clk_i'event then
 			case state_s is
 				when idle =>
@@ -345,17 +345,7 @@ begin
 			--end if;
 		end if;
 	end process p2l_data_delay_p;
-
---	pd_pdm_data_o <= f_byte_swap(true,s_axis_rx_tdata_s(63 downto 32), byte_swap_c) & f_byte_swap(true,s_axis_rx_tdata_s(31 downto 0), byte_swap_c);
---	pd_pdm_data_last_o <= s_axis_rx_tlast_s when pd_op_s = "011" else
---	                      '0';
-	
---	pd_pdm_data_valid_w_o(1) <= '1' when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011" and s_axis_rx_tkeep_s(7 downto 4) = X"F" else
---	                            '1' when state_s = hd1_rx and pd_op_s = "011"  else
---	                            '0';
-
---	pd_pdm_data_valid_w_o(0) <= '1' when (state_s = data_rx or state_s = lastdata_rx) and pd_op_s = "011" and s_axis_rx_tkeep_s(3 downto 0) = X"F" else
---	                            '0';	   
+  
 	
 	pd_pdm_data_o <= 
           f_byte_swap(true,data_s, byte_swap_c) & f_byte_swap(true,data_s, byte_swap_c) when payload_length_s = "0000000001" else 
@@ -381,49 +371,6 @@ begin
 	
 	pd_wbm_valid_o <= '1' when previous_state_s = hd1_rx and s_axis_rx_tlast_1_s = '1' and (pd_op_s = "001" or pd_op_s = "010") else '0';
 	
---	output_p:process (state_s,header_type_s,tlp_type_s,s_axis_rx_tlast_s,payload_length_s,data_s,address_s,wbm_pd_ready_i,s_axis_rx_tlast_1_s)
---	begin
---		case state_s is
---                when idle =>    
---				    s_axis_rx_tready_s <= '1';
---				when hd0_rx =>
---					if s_axis_rx_tlast_1_s = '1' and (tlp_type_s = MRd or tlp_type_s = MWr) then
---					   s_axis_rx_tready_s <= '0';
---					elsif tlp_type_s = MRd or tlp_type_s = MWr then
---					   s_axis_rx_tready_s <= wbm_pd_ready_i;
---					else
---					   s_axis_rx_tready_s <= '1';
---					end if;
-					
-
---                when hd1_rx =>
---                    if s_axis_rx_tlast_s = '1' and (tlp_type_s = MRd or tlp_type_s = MWr) then
---                       s_axis_rx_tready_s <= '0';
---                   else
---                       s_axis_rx_tready_s <= '1';
---                   end if;
---                when data_rx =>
---                    s_axis_rx_tready_s <= '1';
---				when lastdata_rx => 
---					s_axis_rx_tready_s <= '1';
-
---			end case;
---	end process output_p;
-	
---	output_p:process (rst_i,clk_i)
---    begin
---        if (rst_i = '1') then
---            s_axis_rx_tready_s <= '1';
---        elsif (clk_i'event and clk_i = '1') then
---            if(wbm_pd_done_i = '1') then
---                s_axis_rx_tready_s <= '1';
---            end if;
-            
---            if(tlp_type_s = MRd or tlp_type_s = MWr)  and s_axis_rx_tlast_s = '1' then
---                s_axis_rx_tready_s <= '0';    
---            end if;
---        end if;
---    end process output_p;
 	
 	s_axis_rx_tready_s <= wbm_pd_ready_i;
 	s_axis_rx_tready_o <= s_axis_rx_tready_s;

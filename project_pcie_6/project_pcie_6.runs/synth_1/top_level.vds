@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Mar 29 13:47:26 2017
-# Process ID: 5965
+# Start of session at: Fri Mar 31 10:58:09 2017
+# Process ID: 6295
 # Current directory: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/top_level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5970 
+INFO: Helper process launched with PID 6300 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1130.281 ; gain = 155.137 ; free physical = 12865 ; free virtual = 21896
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 12357 ; free virtual = 21604
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -27,16 +27,16 @@ INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'CLK_IBUFDS' to cell 'IBUFDS' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:261]
+INFO: [Synth 8-113] binding component instance 'CLK_IBUFDS' to cell 'IBUFDS' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:271]
 	Parameter CLKCM_CFG bound to: 1 - type: bool 
 	Parameter CLKRCV_TRST bound to: 1 - type: bool 
 	Parameter CLKSWING_CFG bound to: 2'b11 
-INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:279]
-INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:297]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:93]
+INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:289]
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:93]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:35' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:336]
-INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:87]
+INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:35' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:350]
+INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:92]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter axis_rx_tkeep_width_c bound to: 8 - type: integer 
@@ -44,12 +44,11 @@ INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_
 	Parameter wb_address_width_c bound to: 32 - type: integer 
 	Parameter wb_data_width_c bound to: 32 - type: integer 
 	Parameter address_mask_c bound to: 32'b00000000000011111111111111111111 
-INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'cnt' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1002]
+INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'cnt' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1015]
 INFO: [Synth 8-638] synthesizing module 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'simple_counter' (1#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
-INFO: [Synth 8-3491] module 'p2l_decoder' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:7' bound to instance 'p2l_dec_comp' of component 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1010]
+INFO: [Synth 8-3491] module 'p2l_decoder' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:7' bound to instance 'p2l_dec_comp' of component 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1023]
 INFO: [Synth 8-638] synthesizing module 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:41]
-WARNING: [Synth 8-614] signal 's_axis_rx_tvalid_i' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:95]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
@@ -57,7 +56,7 @@ INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pci
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-256] done synthesizing module 'p2l_decoder' (2#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:41]
 	Parameter g_ACK_TIMEOUT bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'wbmaster32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:51' bound to instance 'wb32' of component 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1042]
+INFO: [Synth 8-3491] module 'wbmaster32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:51' bound to instance 'wb32' of component 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1055]
 INFO: [Synth 8-638] synthesizing module 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:127]
 	Parameter g_ACK_TIMEOUT bound to: 100 - type: integer 
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
@@ -93,8 +92,8 @@ INFO: [Synth 8-638] synthesizing module 'generic_async_fifo' [/home/asautaux/yar
 	Parameter g_with_wr_count bound to: 0 - type: bool 
 	Parameter g_almost_empty_threshold bound to: 0 - type: integer 
 	Parameter g_almost_full_threshold bound to: 500 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_64x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:5' bound to instance 'cmp_fifo_64x512' of component 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
-INFO: [Synth 8-638] synthesizing module 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'fifo_64x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:5' bound to instance 'cmp_fifo_64x512' of component 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:24]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:203]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:204]
 INFO: [Synth 8-256] done synthesizing module 'generic_async_fifo' (3#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:87]
@@ -118,12 +117,12 @@ INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pci
 INFO: [Synth 8-256] done synthesizing module 'wbmaster32' (4#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:127]
 	Parameter ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'bram_wbs32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:29' bound to instance 'csr_ram' of component 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1174]
+INFO: [Synth 8-3491] module 'bram_wbs32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:29' bound to instance 'csr_ram' of component 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1158]
 INFO: [Synth 8-638] synthesizing module 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:53]
 	Parameter ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'bram_wbs32' (5#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:53]
-INFO: [Synth 8-3491] module 'dma_controller' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:43' bound to instance 'dma_ctrl' of component 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1199]
+INFO: [Synth 8-3491] module 'dma_controller' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:43' bound to instance 'dma_ctrl' of component 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1183]
 INFO: [Synth 8-638] synthesizing module 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:102]
 INFO: [Synth 8-3491] module 'dma_controller_wb_slave' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller_wb_slave.vhd:17' bound to instance 'dma_controller_wb_slave_0' of component 'dma_controller_wb_slave' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:234]
 INFO: [Synth 8-638] synthesizing module 'dma_controller_wb_slave' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller_wb_slave.vhd:69]
@@ -131,8 +130,8 @@ INFO: [Synth 8-256] done synthesizing module 'dma_controller_wb_slave' (6#1) [/h
 WARNING: [Synth 8-3848] Net dma_stat in module/entity dma_controller does not have driver. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:176]
 INFO: [Synth 8-256] done synthesizing module 'dma_controller' (7#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:102]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'p2l_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:47' bound to instance 'p2l_dma' of component 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1259]
-INFO: [Synth 8-638] synthesizing module 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:131]
+INFO: [Synth 8-3491] module 'p2l_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:47' bound to instance 'p2l_dma' of component 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1243]
+INFO: [Synth 8-638] synthesizing module 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:134]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
 	Parameter g_data_width bound to: 96 - type: integer 
 	Parameter g_size bound to: 512 - type: integer 
@@ -149,7 +148,7 @@ INFO: [Synth 8-638] synthesizing module 'p2l_dma_master' [/home/asautaux/yarr/pr
 	Parameter g_with_wr_count bound to: 0 - type: bool 
 	Parameter g_almost_empty_threshold bound to: 0 - type: integer 
 	Parameter g_almost_full_threshold bound to: 500 - type: integer 
-INFO: [Synth 8-3491] module 'generic_async_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:34' bound to instance 'cmp_to_wb_fifo' of component 'generic_async_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:544]
+INFO: [Synth 8-3491] module 'generic_async_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:34' bound to instance 'cmp_to_wb_fifo' of component 'generic_async_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:547]
 INFO: [Synth 8-638] synthesizing module 'generic_async_fifo__parameterized2' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:87]
 	Parameter g_data_width bound to: 96 - type: integer 
 	Parameter g_size bound to: 512 - type: integer 
@@ -166,18 +165,18 @@ INFO: [Synth 8-638] synthesizing module 'generic_async_fifo__parameterized2' [/h
 	Parameter g_with_wr_count bound to: 0 - type: bool 
 	Parameter g_almost_empty_threshold bound to: 0 - type: integer 
 	Parameter g_almost_full_threshold bound to: 500 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_96x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:5' bound to instance 'cmp_fifo_96x512' of component 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
-INFO: [Synth 8-638] synthesizing module 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'fifo_96x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:5' bound to instance 'cmp_fifo_96x512' of component 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:23]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:221]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:222]
 INFO: [Synth 8-256] done synthesizing module 'generic_async_fifo__parameterized2' (7#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:87]
-INFO: [Synth 8-256] done synthesizing module 'p2l_dma_master' (8#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:131]
+INFO: [Synth 8-256] done synthesizing module 'p2l_dma_master' (8#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:134]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 64 - type: integer 
 	Parameter wb_data_width_c bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'l2p_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:18' bound to instance 'l2p_dma' of component 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1344]
-INFO: [Synth 8-638] synthesizing module 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:95]
+INFO: [Synth 8-3491] module 'l2p_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:18' bound to instance 'l2p_dma' of component 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1330]
+INFO: [Synth 8-638] synthesizing module 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:97]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 64 - type: integer 
@@ -191,28 +190,28 @@ INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pci
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
-WARNING: [Synth 8-614] signal 'l2p_64b_address' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:370]
-WARNING: [Synth 8-614] signal 'byte_swap_c' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:370]
-WARNING: [Synth 8-614] signal 'data_fifo_dout_1' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:370]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:457]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:461]
-INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_addr_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:616]
+WARNING: [Synth 8-614] signal 'l2p_64b_address' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:372]
+WARNING: [Synth 8-614] signal 'byte_swap_c' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:372]
+WARNING: [Synth 8-614] signal 'data_fifo_dout_1' is read in the process but is not in the sensitivity list [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:372]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:459]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:463]
+INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_addr_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:618]
 INFO: [Synth 8-638] synthesizing module 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:23]
-INFO: [Synth 8-3491] module 'l2p_fifo64' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:5' bound to instance 'U0' of component 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'l2p_fifo64' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:5' bound to instance 'U0' of component 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:24]
 INFO: [Synth 8-256] done synthesizing module 'l2p_fifo' (9#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:23]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:624]
-INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_data_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:633]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:641]
-INFO: [Synth 8-256] done synthesizing module 'l2p_dma_master' (10#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:95]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:626]
+INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_data_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:635]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:643]
+INFO: [Synth 8-256] done synthesizing module 'l2p_dma_master' (10#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:97]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:46' bound to instance 'arbiter' of component 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1410]
+INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:46' bound to instance 'arbiter' of component 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1398]
 INFO: [Synth 8-638] synthesizing module 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:103]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'l2p_arbiter' (11#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:103]
 	Parameter ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter DATA_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'k_bram' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/k_bram.vhd:43' bound to instance 'dma_ram' of component 'k_bram' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1462]
+INFO: [Synth 8-3491] module 'k_bram' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/k_bram.vhd:43' bound to instance 'dma_ram' of component 'k_bram' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1450]
 INFO: [Synth 8-638] synthesizing module 'k_bram' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/k_bram.vhd:68]
 	Parameter ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter DATA_WIDTH bound to: 64 - type: integer 
@@ -3077,13 +3076,9 @@ WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/proje
 	Parameter WRITE_WIDTH bound to: 64 - type: integer 
 INFO: [Synth 8-3491] module 'BRAM_SINGLE_MACRO' declared at '/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:39' bound to instance 'BRAM_SINGLE_MACRO_inst' of component 'BRAM_SINGLE_MACRO' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/k_bram.vhd:148]
 INFO: [Synth 8-256] done synthesizing module 'k_bram' (13#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/k_bram.vhd:68]
-INFO: [Synth 8-3491] module 'ila_axis' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:5' bound to instance 'axis_debug' of component 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1526]
-INFO: [Synth 8-638] synthesizing module 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:35]
-INFO: [Synth 8-3491] module 'ila_dma_ctrl_reg' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_dma_ctrl_reg_stub.vhdl:5' bound to instance 'dma_ctrl_debug' of component 'ila_dma_ctrl_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1559]
-INFO: [Synth 8-638] synthesizing module 'ila_dma_ctrl_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_dma_ctrl_reg_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'ila_wsh_pipe' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:5' bound to instance 'pipelined_wishbone_debug' of component 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1591]
-INFO: [Synth 8-638] synthesizing module 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:26]
-INFO: [Synth 8-256] done synthesizing module 'app' (14#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:87]
+INFO: [Synth 8-3491] module 'ila_axis' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:5' bound to instance 'axis_debug' of component 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1514]
+INFO: [Synth 8-638] synthesizing module 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:35]
+INFO: [Synth 8-256] done synthesizing module 'app' (14#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:92]
 INFO: [Synth 8-256] done synthesizing module 'top_level' (15#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:57]
 WARNING: [Synth 8-3331] design k_bram has unconnected port wb_lock_i
 WARNING: [Synth 8-3331] design l2p_dma_master has unconnected port dma_ctrl_target_addr_i[2]
@@ -3187,7 +3182,7 @@ WARNING: [Synth 8-3331] design p2l_dma_master has unconnected port p2l_dma_dat_i
 WARNING: [Synth 8-3331] design p2l_dma_master has unconnected port p2l_dma_dat_i[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.727 ; gain = 218.582 ; free physical = 12795 ; free virtual = 21832
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.723 ; gain = 217.582 ; free physical = 12289 ; free virtual = 21541
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3197,15 +3192,13 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.727 ; gain = 218.582 ; free physical = 12802 ; free virtual = 21832
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.723 ; gain = 217.582 ; free physical = 12289 ; free virtual = 21541
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'fifo_64x512' instantiated as 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'. 2 instances of this cell are unresolved black boxes. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_96x512' instantiated as 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_axis' instantiated as 'app_0/dbg_0.axis_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1526]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_dma_ctrl_reg' instantiated as 'app_0/dbg_1.dma_ctrl_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1559]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_wsh_pipe' instantiated as 'app_0/dbg_2.pipelined_wishbone_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1591]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_axis' instantiated as 'app_0/dbg_0.axis_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1514]
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'l2p_fifo64' instantiated as 'app_0/l2p_dma/cmp_addr_fifo/U0'. 2 instances of this cell are unresolved black boxes. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:297]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:307]
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7k160tfbg676-2
@@ -3213,24 +3206,20 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_4/ila_dma_ctrl_reg_in_context.xdc] for cell 'app_0/dbg_1.dma_ctrl_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_4/ila_dma_ctrl_reg_in_context.xdc] for cell 'app_0/dbg_1.dma_ctrl_debug'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5965-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-6295-spikepig.dhcp.lbl.gov/dcp_11/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
 Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc]
 WARNING: [Constraints 18-633] Creating clock pcie_clk with 2 sources. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc:2]
 WARNING: [Constraints 18-633] Creating clock clk_200 with 2 sources. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc:71]
@@ -3242,30 +3231,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1550.844 ; gain = 0.004 ; free physical = 12505 ; free virtual = 21582
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1550.066 ; gain = 0.004 ; free physical = 11979 ; free virtual = 21272
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_0.axis_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_1.dma_ctrl_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_2.pipelined_wishbone_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/l2p_dma/cmp_addr_fifo/U0' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/l2p_dma/cmp_data_fifo/U0' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12508 ; free virtual = 21583
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11979 ; free virtual = 21273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12508 ; free virtual = 21583
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11979 ; free virtual = 21273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12508 ; free virtual = 21583
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11979 ; free virtual = 21273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_s_reg' in module 'p2l_decoder'
 INFO: [Synth 8-5546] ROM "pd_op_s" won't be mapped to RAM because it is too sparse
@@ -3337,8 +3324,8 @@ INFO: [Synth 8-5544] ROM "pdm_arb_tdata_o" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "l2p_len_header" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "dma_busy_error" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "target_addr_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'fifo_rst_t_reg' into 'l2p_edb_o_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:230]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:575]
+INFO: [Synth 8-4471] merging register 'fifo_rst_t_reg' into 'l2p_edb_o_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:232]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:577]
 INFO: [Synth 8-802] inferred FSM for state register 'l2p_dma_current_state_reg' in module 'l2p_dma_master'
 INFO: [Synth 8-5545] ROM "l2p_64b_address" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "s_l2p_header" won't be mapped to RAM because it is too sparse
@@ -3396,7 +3383,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'p2l_dma_current_state_reg'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'l2p_dma_current_state_reg' using encoding 'sequential' in module 'l2p_dma_master'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12501 ; free virtual = 21577
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11977 ; free virtual = 21271
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3439,19 +3426,19 @@ Detailed RTL Component Info :
 	   6 Input     64 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 1     
 	  10 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 20    
+	   2 Input     32 Bit        Muxes := 18    
 	   7 Input     32 Bit        Muxes := 4     
 	   8 Input     32 Bit        Muxes := 6     
 	   2 Input     29 Bit        Muxes := 3     
 	   5 Input     16 Bit        Muxes := 1     
-	   2 Input     13 Bit        Muxes := 11    
+	   2 Input     13 Bit        Muxes := 13    
 	   7 Input     13 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 4     
 	  10 Input     10 Bit        Muxes := 1     
 	   5 Input      8 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      7 Bit        Muxes := 1     
 	   4 Input      5 Bit        Muxes := 1     
 	  16 Input      5 Bit        Muxes := 1     
@@ -3468,9 +3455,9 @@ Detailed RTL Component Info :
 	  19 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 143   
 	   4 Input      1 Bit        Muxes := 22    
 	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 142   
 	  19 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 27    
 	  10 Input      1 Bit        Muxes := 18    
@@ -3511,9 +3498,9 @@ Detailed RTL Component Info :
 	  19 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	  19 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 9     
 Module wbmaster32 
@@ -3650,8 +3637,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -3665,7 +3652,7 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12501 ; free virtual = 21577
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11977 ; free virtual = 21271
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -3679,9 +3666,9 @@ INFO: [Synth 8-5546] ROM "l2p_lbe_header" won't be mapped to RAM because it is t
 INFO: [Synth 8-5545] ROM "l2p_64b_address" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "s_l2p_header" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12501 ; free virtual = 21577
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11977 ; free virtual = 21271
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1550.844 ; gain = 575.699 ; free physical = 12501 ; free virtual = 21577
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1550.066 ; gain = 574.926 ; free physical = 11977 ; free virtual = 21271
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -3693,36 +3680,6 @@ Start Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3886] merging instance 'app_0/wb32/from_wb_fifo_din_reg[0]' (FDCE) to 'app_0/wb32/from_wb_fifo_din_reg[7]'
 INFO: [Synth 8-3886] merging instance 'app_0/wb32/from_wb_fifo_din_reg[1]' (FDCE) to 'app_0/wb32/from_wb_fifo_din_reg[7]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[0]' (FDCE) to 'app_0/wb32/p2l_cid_reg[1]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[1]' (FDCE) to 'app_0/wb32/p2l_cid_reg[2]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[2]' (FDCE) to 'app_0/wb32/p2l_cid_reg[3]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[3]' (FDCE) to 'app_0/wb32/p2l_cid_reg[4]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[4]' (FDCE) to 'app_0/wb32/p2l_cid_reg[5]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[5]' (FDCE) to 'app_0/wb32/p2l_cid_reg[6]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[6]' (FDCE) to 'app_0/wb32/p2l_cid_reg[7]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[7]' (FDCE) to 'app_0/wb32/p2l_cid_reg[9]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[9]' (FDCE) to 'app_0/wb32/p2l_cid_reg[10]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[10]' (FDCE) to 'app_0/wb32/p2l_cid_reg[11]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[11]' (FDCE) to 'app_0/wb32/p2l_cid_reg[12]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[12]' (FDCE) to 'app_0/wb32/p2l_cid_reg[13]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[13]' (FDCE) to 'app_0/wb32/p2l_cid_reg[14]'
-INFO: [Synth 8-3886] merging instance 'app_0/wb32/p2l_cid_reg[14]' (FDCE) to 'app_0/wb32/p2l_cid_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/\wb32/p2l_cid_reg[15] )
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[15]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[14]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[13]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[12]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[11]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[10]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[9]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[7]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[6]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[5]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[4]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[3]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[2]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[1]) is unused and will be removed from module app.
-WARNING: [Synth 8-3332] Sequential element (wb32/p2l_cid_reg[0]) is unused and will be removed from module app.
 WARNING: [Synth 8-3332] Sequential element (wb32/wb_sel_t_reg[3]) is unused and will be removed from module app.
 WARNING: [Synth 8-3332] Sequential element (wb32/wb_sel_t_reg[2]) is unused and will be removed from module app.
 WARNING: [Synth 8-3332] Sequential element (wb32/wb_sel_t_reg[1]) is unused and will be removed from module app.
@@ -3862,6 +3819,21 @@ WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[18]) is unus
 WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[17]) is unused and will be removed from module p2l_decoder.
 WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[16]) is unused and will be removed from module p2l_decoder.
 WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[15]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[14]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[13]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[12]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[11]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[10]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[9]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[8]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[7]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[6]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[5]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[4]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[3]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[2]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[1]) is unused and will be removed from module p2l_decoder.
+WARNING: [Synth 8-3332] Sequential element (s_axis_rx_tdata_1_s_reg[0]) is unused and will be removed from module p2l_decoder.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/dma_ctrl/\dma_controller_wb_slave_0/ack_sreg_reg[9] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/dma_ctrl/\dma_stat_reg_reg[3] )
@@ -3928,14 +3900,28 @@ INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_stb_t_reg' (FDC) to
 INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[0]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[1]'
 INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[1]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[2]'
 INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[2]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[3]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[4]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[4]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[5]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/p2l_dma_sel_o_reg[6]' (FDC) to 'app_0/p2l_dma/p2l_dma_sel_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[0]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[1]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[2]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[4]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[5]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[6]' (FDPE) to 'app_0/p2l_dma/pdm_arb_tkeep_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'app_0/l2p_dma/addr_fifo_din_reg[32]' (FDCE) to 'app_0/l2p_dma/addr_fifo_din_reg[33]'
+INFO: [Synth 8-3886] merging instance 'app_0/l2p_dma/addr_fifo_din_reg[33]' (FDCE) to 'app_0/l2p_dma/addr_fifo_din_reg[34]'
+INFO: [Synth 8-3886] merging instance 'app_0/l2p_dma/addr_fifo_din_reg[34]' (FDCE) to 'app_0/l2p_dma/addr_fifo_din_reg[35]'
+INFO: [Synth 8-3886] merging instance 'app_0/l2p_dma/addr_fifo_din_reg[35]' (FDCE) to 'app_0/l2p_dma/addr_fifo_din_reg[36]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/l2p_dma/\addr_fifo_din_reg[63] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/l2p_dma/\l2p_len_header_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/l2p_dma/\l2p_len_header_reg[9] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1550.848 ; gain = 575.703 ; free physical = 12484 ; free virtual = 21562
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1550.070 ; gain = 574.930 ; free physical = 11968 ; free virtual = 21262
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1550.848 ; gain = 575.703 ; free physical = 12484 ; free virtual = 21562
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1550.070 ; gain = 574.930 ; free physical = 11968 ; free virtual = 21262
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -3951,10 +3937,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'pcie_0/user_clk_out' to pin 'pcie_0/bbstub_user_clk_out/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1553.840 ; gain = 578.695 ; free physical = 12448 ; free virtual = 21532
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1555.062 ; gain = 579.922 ; free physical = 11941 ; free virtual = 21242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1574.855 ; gain = 599.711 ; free physical = 12428 ; free virtual = 21512
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1575.078 ; gain = 599.938 ; free physical = 11920 ; free virtual = 21222
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3966,16 +3952,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21491
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11896 ; free virtual = 21197
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21491
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11896 ; free virtual = 21197
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21491
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11896 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -3992,7 +3978,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21196
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4005,7 +3991,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4017,25 +4003,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4056,57 +4042,53 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-----------------+----------+
-|      |BlackBox name    |Instances |
-+------+-----------------+----------+
-|1     |pcie_7x_0        |         1|
-|2     |fifo_96x512      |         1|
-|3     |l2p_fifo64       |         2|
-|4     |ila_axis         |         1|
-|5     |ila_dma_ctrl_reg |         1|
-|6     |ila_wsh_pipe     |         1|
-|7     |fifo_64x512      |         2|
-+------+-----------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pcie_7x_0     |         1|
+|2     |fifo_96x512   |         1|
+|3     |l2p_fifo64    |         2|
+|4     |ila_axis      |         1|
+|5     |fifo_64x512   |         2|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+----------------------+------+
-|      |Cell                  |Count |
-+------+----------------------+------+
-|1     |fifo_64x512_bbox      |     1|
-|2     |fifo_64x512_bbox__2   |     1|
-|3     |fifo_96x512_bbox      |     1|
-|4     |ila_axis_bbox         |     1|
-|5     |ila_dma_ctrl_reg_bbox |     1|
-|6     |ila_wsh_pipe_bbox     |     1|
-|7     |l2p_fifo64_bbox       |     1|
-|8     |l2p_fifo64_bbox__2    |     1|
-|9     |pcie_7x_0_bbox        |     1|
-|10    |CARRY4                |    79|
-|11    |IBUFDS_GTE2           |     1|
-|12    |LUT1                  |   268|
-|13    |LUT2                  |   184|
-|14    |LUT3                  |   601|
-|15    |LUT4                  |   341|
-|16    |LUT5                  |   238|
-|17    |LUT6                  |  1182|
-|18    |MUXF7                 |   261|
-|19    |MUXF8                 |    64|
-|20    |RAMB36E1              |    16|
-|21    |SRL16E                |     1|
-|22    |FDCE                  |  3193|
-|23    |FDPE                  |   825|
-|24    |FDRE                  |   179|
-|25    |IBUF                  |    15|
-|26    |IBUFDS                |     1|
-|27    |OBUF                  |    16|
-+------+----------------------+------+
++------+--------------------+------+
+|      |Cell                |Count |
++------+--------------------+------+
+|1     |fifo_64x512_bbox    |     1|
+|2     |fifo_64x512_bbox__2 |     1|
+|3     |fifo_96x512_bbox    |     1|
+|4     |ila_axis_bbox       |     1|
+|5     |l2p_fifo64_bbox     |     1|
+|6     |l2p_fifo64_bbox__2  |     1|
+|7     |pcie_7x_0_bbox      |     1|
+|8     |CARRY4              |    79|
+|9     |IBUFDS_GTE2         |     1|
+|10    |LUT1                |   267|
+|11    |LUT2                |   182|
+|12    |LUT3                |   570|
+|13    |LUT4                |   333|
+|14    |LUT5                |   235|
+|15    |LUT6                |  1202|
+|16    |MUXF7               |   261|
+|17    |MUXF8               |    64|
+|18    |RAMB36E1            |    16|
+|19    |SRL16E              |     1|
+|20    |FDCE                |  3208|
+|21    |FDPE                |   825|
+|22    |FDRE                |   179|
+|23    |IBUF                |    15|
+|24    |IBUFDS              |     1|
+|25    |OBUF                |    16|
++------+--------------------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------------+-----------------------------------+------+
 |      |Instance                                    |Module                             |Cells |
 +------+--------------------------------------------+-----------------------------------+------+
-|1     |top                                         |                                   |  8156|
-|2     |  app_0                                     |app                                |  7802|
+|1     |top                                         |                                   |  8146|
+|2     |  app_0                                     |app                                |  7792|
 |3     |    p2l_dec_comp                            |p2l_decoder                        |   477|
 |4     |    dma_ctrl                                |dma_controller                     |  1920|
 |5     |      dma_controller_wb_slave_0             |dma_controller_wb_slave            |  1348|
@@ -4116,35 +4098,35 @@ Report Instance Areas:
 |9     |      cmp_addr_fifo                         |l2p_fifo                           |    75|
 |10    |      cmp_data_fifo                         |l2p_fifo_16                        |   189|
 |11    |    arbiter                                 |l2p_arbiter                        |   235|
-|12    |    dma_ram                                 |k_bram                             |   488|
-|13    |      \gen_bram[0].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO         |     2|
-|14    |      \gen_bram[10].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_1       |     2|
-|15    |      \gen_bram[11].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_2       |   130|
-|16    |      \gen_bram[12].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_3       |     2|
-|17    |      \gen_bram[13].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_4       |     2|
-|18    |      \gen_bram[14].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_5       |     2|
-|19    |      \gen_bram[15].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_6       |    66|
-|20    |      \gen_bram[1].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_7       |     2|
-|21    |      \gen_bram[2].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_8       |     2|
-|22    |      \gen_bram[3].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_9       |   194|
-|23    |      \gen_bram[4].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_10      |     2|
-|24    |      \gen_bram[5].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_11      |     2|
-|25    |      \gen_bram[6].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_12      |     2|
-|26    |      \gen_bram[7].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_13      |    66|
-|27    |      \gen_bram[8].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_14      |     2|
-|28    |      \gen_bram[9].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_15      |     2|
-|29    |    cnt                                     |simple_counter                     |    66|
-|30    |    csr_ram                                 |bram_wbs32                         |  1505|
-|31    |    wb32                                    |wbmaster32                         |   630|
+|12    |    cnt                                     |simple_counter                     |    66|
+|13    |    csr_ram                                 |bram_wbs32                         |  1505|
+|14    |    dma_ram                                 |k_bram                             |   571|
+|15    |      \gen_bram[0].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO         |     4|
+|16    |      \gen_bram[10].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_1       |     2|
+|17    |      \gen_bram[11].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_2       |     3|
+|18    |      \gen_bram[12].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_3       |     2|
+|19    |      \gen_bram[13].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_4       |     2|
+|20    |      \gen_bram[14].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_5       |     3|
+|21    |      \gen_bram[15].BRAM_SINGLE_MACRO_inst  |unimacro_BRAM_SINGLE_MACRO_6       |    76|
+|22    |      \gen_bram[1].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_7       |     2|
+|23    |      \gen_bram[2].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_8       |     2|
+|24    |      \gen_bram[3].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_9       |     3|
+|25    |      \gen_bram[4].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_10      |     2|
+|26    |      \gen_bram[5].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_11      |     2|
+|27    |      \gen_bram[6].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_12      |     2|
+|28    |      \gen_bram[7].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_13      |     3|
+|29    |      \gen_bram[8].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_14      |     2|
+|30    |      \gen_bram[9].BRAM_SINGLE_MACRO_inst   |unimacro_BRAM_SINGLE_MACRO_15      |     5|
+|31    |    wb32                                    |wbmaster32                         |   645|
 |32    |      cmp_fifo_to_wb                        |generic_async_fifo                 |    71|
-|33    |      cmp_from_wb_fifo                      |generic_async_fifo_0               |    86|
+|33    |      cmp_from_wb_fifo                      |generic_async_fifo_0               |    71|
 +------+--------------------------------------------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.027 ; gain = 620.883 ; free physical = 12406 ; free virtual = 21490
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.258 ; gain = 624.117 ; free physical = 11895 ; free virtual = 21197
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 535 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.027 ; gain = 172.625 ; free physical = 12406 ; free virtual = 21490
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.035 ; gain = 620.891 ; free physical = 12406 ; free virtual = 21490
+Synthesis finished with 0 errors, 0 critical warnings and 520 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1599.258 ; gain = 175.633 ; free physical = 11895 ; free virtual = 21197
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.266 ; gain = 624.125 ; free physical = 11895 ; free virtual = 21196
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4154,8 +4136,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-352 Infos, 278 Warnings, 0 Critical Warnings and 0 Errors encountered.
+347 Infos, 273 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.035 ; gain = 542.332 ; free physical = 12405 ; free virtual = 21493
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1628.047 ; gain = 0.000 ; free physical = 12402 ; free virtual = 21491
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 13:48:09 2017...
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1599.266 ; gain = 545.566 ; free physical = 11894 ; free virtual = 21198
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1631.277 ; gain = 0.000 ; free physical = 11893 ; free virtual = 21198
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 10:58:51 2017...

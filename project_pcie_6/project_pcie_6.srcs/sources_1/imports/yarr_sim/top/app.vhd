@@ -74,6 +74,11 @@ entity app is
            cfg_interrupt_stat_o : out STD_LOGIC;
            cfg_pciecap_interrupt_msgnum_o : out STD_LOGIC_VECTOR(4 DOWNTO 0);
            
+           -- PCIe ID
+           cfg_bus_number_i : in STD_LOGIC_VECTOR(7 DOWNTO 0);
+           cfg_device_number_i : in STD_LOGIC_VECTOR(4 DOWNTO 0);
+           cfg_function_number_i : in STD_LOGIC_VECTOR(2 DOWNTO 0);
+           
            -- PCIe debug
            cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
            
@@ -86,7 +91,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(4 downto 0) := "00111";
+    constant DEBUG_C : std_logic_vector(4 downto 0) := "00001";
     
     component simple_counter is
         Port ( 
@@ -310,7 +315,7 @@ architecture Behavioral of app is
     component k_bram is
       generic (
         constant ADDR_WIDTH : integer := 9+4;
-        constant DATA_WIDTH : integer := 32 
+        constant DATA_WIDTH : integer := 64 
       );
       Port ( 
           -- SYS CON
@@ -426,6 +431,9 @@ architecture Behavioral of app is
 		  -- GN4124 core clock and reset
 		  clk_i   : in std_logic;
 		  rst_n_i : in std_logic;
+		  
+		  -- From PCIe IP core
+          l2p_rid_i : in std_logic_vector(16-1 downto 0);
 
 		  ---------------------------------------------------------
 		  -- From the DMA controller
@@ -506,6 +514,9 @@ architecture Behavioral of app is
 			-- GN4124 core clk and reset
 			clk_i   : in std_logic;
 			rst_n_i : in std_logic;
+			
+			-- From PCIe IP core
+            l2p_rid_i : in std_logic_vector(16-1 downto 0);
 
 			-- From the DMA controller
 			dma_ctrl_target_addr_i : in  std_logic_vector(32-1 downto 0);
@@ -532,7 +543,6 @@ architecture Behavioral of app is
 			-- L2P channel control
 			l2p_edb_o  : out std_logic;                    -- Asserted when transfer is aborted
 			l2p_rdy_i  : in  std_logic;                    -- De-asserted to pause transdert already in progress
-			--l2p_64b_address_i : in std_logic;
 			tx_error_i : in  std_logic;                    -- Asserted when unexpected or malformed paket received
 
 			-- DMA Interface (Pipelined Wishbone)
@@ -740,6 +750,7 @@ COMPONENT ila_l2p_dma
     signal count_s : STD_LOGIC_VECTOR (28 downto 0);
     signal eop_s : std_logic; -- Arbiter end of operation
     signal cfg_interrupt_s : std_logic;
+    signal pcie_id_s : std_logic_vector (15 downto 0); -- Completer/Requester ID
     
     ---------------------------------------------------------
     -- debug signals
@@ -982,6 +993,8 @@ begin
     
     cfg_interrupt_o <= cfg_interrupt_s;
     
+    pcie_id_s <= cfg_bus_number_i & cfg_device_number_i & cfg_function_number_i;
+    
     wbm_pd_ready_s <= p2l_wbm_rdy_s and p2l_dma_rdy_s;
     
     interrupt_p : process(rst_i,clk_i)
@@ -1057,7 +1070,8 @@ begin
         pd_wbm_hdr_start_i  => pd_wbm_valid_s,                     -- Header strobe
         --pd_wbm_hdr_length_i : in std_logic_vector(9 downto 0);   -- Packet length in 32-bit words multiples
         pd_wbm_hdr_rid_i => pd_wbm_hdr_rid_s,  -- Requester ID
-        pd_wbm_hdr_cid_i => X"0100",  -- Completer ID
+        pd_wbm_hdr_cid_i => pcie_id_s, --X"0100",  -- Completer ID
+        
         pd_wbm_hdr_tag_i => pd_wbm_hdr_tag_s,
         pd_wbm_target_mrd_i => pd_wbm_target_mrd_s,                     -- Target memory read
         pd_wbm_target_mwr_i => pd_wbm_target_mwr_s,                     -- Target memory write
@@ -1112,36 +1126,6 @@ begin
     wb_int_s <= '0';
     
    
---    wb_master_comp:wb_master
---    port map(
---        clk_i => clk_i,
---        rst_i => rst_i,
-       
---        -- From packet decoder
---        pd_wbm_address_i => pd_wbm_address_s,
---        pd_wbm_data_i => pd_wbm_data_s,
---        pd_wbm_valid_i => pd_wbm_valid_s,
---        wbm_pd_ready_o => wbm_pd_ready_s,
---        wbm_pd_done_o => wbm_pd_done_s,
---        pd_op_i => pd_op_s,
-       
---        -- Master AXI-Stream
---        wbm_arb_tdata_o => wbm_arb_tdata_s,
---        wbm_arb_tkeep_o => wbm_arb_tkeep_s,
---        wbm_arb_tlast_o => wbm_arb_tlast_s,
---        wbm_arb_tvalid_o => wbm_arb_tvalid_s,
---        wbm_arb_tready_i => wbm_arb_tready_s,
---        wbm_arb_req_o => wbm_arb_req_s,
- 
---        -- Wishbone Master
---        wb_adr_o => wb_adr_s,
---        wb_dat_o => wb_dat_o_s,
---        wb_dat_i => wb_dat_i_s,
---        wb_cyc_o => wb_cyc_s,
---        wb_stb_o => wb_stb_s,
---        wb_we_o => wb_we_s,
---        wb_ack_i => wb_ack_s
---    );
     
     wb_mem_adr_s <= wb_adr_s(31 downto 0);
     wb_mem_dat_m2s_s <= wb_dat_m2s_s;
@@ -1267,6 +1251,8 @@ begin
 		  -- GN4124 core clock and reset
 		  clk_i   => clk_i,
 		  rst_n_i => rst_n_s,
+		  
+		  l2p_rid_i => pcie_id_s,
 
 		  ---------------------------------------------------------
 		  -- From the DMA controller
@@ -1346,6 +1332,8 @@ begin
 	(
 		clk_i   => clk_i,
 		rst_n_i => rst_n_s,
+		
+        l2p_rid_i => pcie_id_s,
 
 		dma_ctrl_target_addr_i => dma_ctrl_carrier_addr_s,
 		dma_ctrl_host_addr_h_i => dma_ctrl_host_addr_h_s,

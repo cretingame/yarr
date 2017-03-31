@@ -1,3 +1,0 @@
-util_ds_buf.vhd,vhdl,util_ds_buf_v2_01_a,../../../ipstatic/util_ds_buf_v2_1/hdl/vhdl/util_ds_buf.vhd,
-design_1_util_ds_buf_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_util_ds_buf_0_0/sim/design_1_util_ds_buf_0_0.vhd,
-design_1.vhd,vhdl,xil_defaultlib,../../../bd/design_1/hdl/design_1.vhd,

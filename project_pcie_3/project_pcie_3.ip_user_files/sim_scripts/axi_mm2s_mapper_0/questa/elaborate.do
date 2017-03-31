@@ -1,1 +1,0 @@
-vopt -64 +acc -l elaborate.log -L unisims_ver -L unimacro_ver -L secureip -L xil_defaultlib -L xpm -L axis_infrastructure_v1_1_0 -L axis_register_slice_v1_1_9 -L axis_switch_v1_1_9 -L axis_dwidth_converter_v1_1_8 -L axi_infrastructure_v1_1_0 -L axi_mm2s_mapper_v1_1_8 -work xil_defaultlib xil_defaultlib.axi_mm2s_mapper_0 xil_defaultlib.glbl -o axi_mm2s_mapper_0_opt

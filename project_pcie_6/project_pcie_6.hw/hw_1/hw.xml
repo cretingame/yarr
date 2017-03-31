@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7k160t_1" gui_info="dashboard1=hw_ila_1[xc7k160t_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_1/Status=ILA_STATUS_1;],dashboard2=hw_ila_2[xc7k160t_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_2/Status=ILA_STATUS_1;xc7k160t_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;],dashboard3=hw_ila_3[xc7k160t_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_3/Status=ILA_STATUS_1;]"/>
+  <device name="xc7k160t_1" gui_info="dashboard1=hw_ila_1[xc7k160t_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_1/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7k160t_1" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
@@ -17,10 +17,10 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_0.axis_debug" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
-      <Properties Property="CONTROL.TRIGGER_POSITION" value="128"/>
-      <Properties Property="CONTROL.WINDOW_COUNT" value="2"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="64"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_1.dma_ctrl_debug" gui_info="">
@@ -199,19 +199,19 @@
     <Object name="app_0/dma_ack_s" gui_info=""/>
     <Object name="app_0/dma_adr_s[31:0]" gui_info=""/>
     <Object name="app_0/dma_ctrl_abort_s_1" gui_info=""/>
-    <Object name="app_0/dma_ctrl_current_state_ds[2:0]" gui_info="Trigger Setup=3"/>
+    <Object name="app_0/dma_ctrl_current_state_ds[2:0]" gui_info=""/>
     <Object name="app_0/dma_ctrl_current_state_ds_1[2:0]" gui_info=""/>
     <Object name="app_0/dma_ctrl_current_state_ds_2[2:0]" gui_info="Trigger Setup=1"/>
     <Object name="app_0/dma_ctrl_done_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s_1" gui_info=""/>
-    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info="Trigger Setup=1"/>
+    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_l2p_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_l2p_s_2" gui_info="Trigger Setup=0"/>
-    <Object name="app_0/dma_ctrl_start_next_s" gui_info="Trigger Setup=2"/>
+    <Object name="app_0/dma_ctrl_start_next_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_next_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_next_s_2" gui_info="Trigger Setup=1"/>
-    <Object name="app_0/dma_ctrl_start_p2l_s" gui_info="Trigger Setup=0"/>
+    <Object name="app_0/dma_ctrl_start_p2l_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_p2l_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_p2l_s_2" gui_info="Trigger Setup=2"/>
     <Object name="app_0/dma_cyc_s" gui_info=""/>
@@ -222,7 +222,7 @@
     <Object name="app_0/l2p_dma_cyc_s" gui_info=""/>
     <Object name="app_0/l2p_dma_dat_s2m_s[63:0]" gui_info="Trigger Setup=3"/>
     <Object name="app_0/m_axis_tx_tdata_s[63:0]" gui_info=""/>
-    <Object name="app_0/m_axis_tx_tlast_s" gui_info=""/>
+    <Object name="app_0/m_axis_tx_tlast_s" gui_info="Trigger Setup=0"/>
     <Object name="app_0/m_axis_tx_tvalid_s" gui_info=""/>
     <Object name="app_0/next_item_valid_s" gui_info=""/>
     <Object name="app_0/next_item_valid_s_1" gui_info=""/>
@@ -255,7 +255,7 @@
     <Object name="app_0/ram_dma_stb_s_3" gui_info=""/>
     <Object name="app_0/ram_dma_we_s_3" gui_info=""/>
     <Object name="app_0/s_axis_rx_tdata_s[63:0]" gui_info=""/>
-    <Object name="app_0/s_axis_rx_tlast_s" gui_info="Trigger Setup=0"/>
+    <Object name="app_0/s_axis_rx_tlast_s" gui_info=""/>
     <Object name="app_0/s_axis_rx_tvalid_s" gui_info=""/>
     <Object name="app_0/s_axis_rx_tvalid_s_1" gui_info=""/>
     <Object name="app_0/wb_adr_s[7:0]" gui_info=""/>
@@ -5723,7 +5723,7 @@
         <net name="app_0/dma_ctrl_error_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -5819,7 +5819,7 @@
         <net name="app_0/dma_ctrl_host_addr_h_s_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -5915,7 +5915,7 @@
         <net name="app_0/dma_ctrl_host_addr_l_s_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
@@ -6216,7 +6216,7 @@
         <net name="app_0/dma_cyc_s"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -6456,7 +6456,7 @@
         <net name="app_0/dma_dat_s2m_s_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -7397,7 +7397,7 @@
         <net name="app_0/ldm_arb_tvalid_s"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -7477,7 +7477,7 @@
         <net name="app_0/m_axis_tx_tdata_s[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -7504,7 +7504,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
@@ -7512,7 +7512,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
       </probeOptions>
       <nets>
         <net name="app_0/m_axis_tx_tlast_s"/>
@@ -7552,7 +7552,7 @@
         <net name="app_0/m_axis_tx_tvalid_s"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -7600,7 +7600,7 @@
         <net name="app_0/next_item_attrib_s[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -7792,7 +7792,7 @@
         <net name="app_0/next_item_len_s[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -7840,7 +7840,7 @@
         <net name="app_0/next_item_next_h_s[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -7894,8 +7894,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="MAP" value="probe19[0]"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe22[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -13286,7 +13286,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
@@ -13294,7 +13294,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>
       <nets>
         <net name="app_0/s_axis_rx_tlast_s"/>

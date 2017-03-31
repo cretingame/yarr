@@ -42,7 +42,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity k_bram is
   generic (
-    constant ADDR_WIDTH : integer := 9+4;
+    constant ADDR_WIDTH : integer := 9+4;--9+4
     constant DATA_WIDTH : integer := 64 
   );
   Port ( 
@@ -66,7 +66,7 @@ entity k_bram is
 end k_bram;
 
 architecture Behavioral of k_bram is
-    constant bram_col_exp_c : integer := 4;
+    constant bram_col_exp_c : integer := 4; --4
     constant bram_col_c : integer := 2**bram_col_exp_c;
     --constant bram_row_c : integer := 4;
     

@@ -25,7 +25,7 @@ int main (void) {
     int overall_errors = 0;
     uint32_t off = 0;
 
-    const size_t size = 256*100; // 1kB
+    const size_t size = 64*256;// 256*100 // 1kB
     
     srand(time(NULL));
 
@@ -81,7 +81,7 @@ int main (void) {
         overall_errors += counter;
         //if (counter != 0) return 0;
         off += size;
-        off = off%0x10000000;
+        off = off%0x10000000; //0x10000000
 
         delete sample;
         delete readBack;
