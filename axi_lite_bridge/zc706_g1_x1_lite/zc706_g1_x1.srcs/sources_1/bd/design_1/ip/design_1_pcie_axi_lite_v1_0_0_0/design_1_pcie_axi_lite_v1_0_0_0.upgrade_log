@@ -1,0 +1,16 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Mon Apr  4 17:39:32 2016
+| Host         : xcordevl38 running 64-bit Red Hat Enterprise Linux Workstation release 6.5 (Santiago)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+-------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_pcie_axi_lite_v1_0_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_pcie_axi_lite_v1_0_0_0 (xilinx.com:user:pcie_axi_lite_v1_0:1.0) from (Rev. 7) to (Rev. 2)
+

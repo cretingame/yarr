@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Mar 31 10:58:09 2017">
+<application name="pa" timeStamp="Tue Apr  4 16:27:14 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
-<property name="ProjectIteration" value="234" type="ProjectIteration"/>
+<property name="ProjectIteration" value="235" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,12 +18,12 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddCfgMem" value="7" type="JavaHandler"/>
-<property name="AddSources" value="24" type="JavaHandler"/>
+<property name="AddSources" value="26" type="JavaHandler"/>
 <property name="CloseProject" value="2" type="JavaHandler"/>
 <property name="CopyIPHandler" value="5" type="JavaHandler"/>
-<property name="CoreView" value="18" type="JavaHandler"/>
+<property name="CoreView" value="20" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="5" type="JavaHandler"/>
-<property name="CustomizeCore" value="23" type="JavaHandler"/>
+<property name="CustomizeCore" value="24" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
 <property name="EditConstraintSets" value="1" type="JavaHandler"/>
 <property name="EditCopy" value="1" type="JavaHandler"/>
@@ -44,18 +44,19 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="NewFile" value="1" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="3" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
+<property name="OpenExample" value="1" type="JavaHandler"/>
 <property name="OpenFile" value="1" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="393" type="JavaHandler"/>
-<property name="OpenProject" value="8" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="394" type="JavaHandler"/>
+<property name="OpenProject" value="9" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="13" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="4" type="JavaHandler"/>
 <property name="ProgramDevice" value="175" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="37" type="JavaHandler"/>
-<property name="RecustomizeCore" value="153" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="38" type="JavaHandler"/>
+<property name="RecustomizeCore" value="168" type="JavaHandler"/>
 <property name="RefreshDevice" value="9" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="222" type="JavaHandler"/>
+<property name="RunBitgen" value="223" type="JavaHandler"/>
 <property name="RunImplementation" value="17" type="JavaHandler"/>
 <property name="RunSchematic" value="18" type="JavaHandler"/>
 <property name="RunSynthesis" value="40" type="JavaHandler"/>
@@ -64,7 +65,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SaveDesign" value="3" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="10" type="JavaHandler"/>
 <property name="SaveProjectAs" value="4" type="JavaHandler"/>
-<property name="ShowProductWebPage" value="2" type="JavaHandler"/>
+<property name="ShowProductWebPage" value="3" type="JavaHandler"/>
+<property name="ShowPropertyEditor" value="1" type="JavaHandler"/>
 <property name="ShowView" value="119" type="JavaHandler"/>
 <property name="SimulationClose" value="93" type="JavaHandler"/>
 <property name="SimulationRestart" value="29" type="JavaHandler"/>
@@ -79,10 +81,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewTaskIPIntegrator" value="1" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="8" type="JavaHandler"/>
 <property name="ViewTaskProgramandDebug" value="131" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="453" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="455" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="63" type="JavaHandler"/>
 <property name="ViewTaskSimulation" value="70" type="JavaHandler"/>
-<property name="ViewTaskSynthesis" value="5" type="JavaHandler"/>
+<property name="ViewTaskSynthesis" value="6" type="JavaHandler"/>
 <property name="WaveformNewConfiguration" value="5" type="JavaHandler"/>
 <property name="WaveformOpenConfiguration" value="2" type="JavaHandler"/>
 <property name="WaveformSaveConfiguration" value="14" type="JavaHandler"/>
@@ -93,6 +95,26 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="XdcSetOutputDelay" value="1" type="JavaHandler"/>
 <property name="ui.views.b.h.e" value="2" type="JavaHandler"/>
 <property name="ui.views.b.h.f" value="2" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
+<property name="NEXT, Next " value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AbstractFileView_RELOAD, Reload" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_ADD_SOURCES, Sources_add_sources" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, ddr3_ctrl_wb - behavioral (ddr3_ctrl_wb.vhd" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, IP, mig_7series_0, Instantiation Template, mig_7series_0.vho], 13, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, IP, mig_7series_0, Instantiation Template, mig_7series_0.vho], 13, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, IP, mig_7series_0, Instantiation Template], 12" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, IP, mig_7series_0], 11" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files..." value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, Add" value="1" type="GuiResourceData"/>
+<property name="ddr3_ctrl_wb.vhd, 331, 384" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="342" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="294" type="TclMode"/>
 </item>
 </section>
 </application>

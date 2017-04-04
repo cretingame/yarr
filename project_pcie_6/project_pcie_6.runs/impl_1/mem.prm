@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          BPIX16
+Size               128M
+Start Address      0x00000000
+End Address        0x07FFFFFF
+Checksum           0x9428E39A
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                                        Checksum
+0x00000000    0x00661EDB    Mar 30 10:19:25 2017    /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/impl_1/top_level.bit    0x01E1A0BE
+File Checksum Total                                                                                                                0x01E1A0BE

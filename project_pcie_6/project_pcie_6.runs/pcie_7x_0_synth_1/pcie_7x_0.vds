@@ -2,12 +2,12 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Jan 27 09:16:36 2017
-# Process ID: 31267
-# Current directory: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/pcie_7x_0_synth_1
+# Start of session at: Fri Mar 31 11:15:37 2017
+# Process ID: 9841
+# Current directory: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/pcie_7x_0_synth_1
 # Command line: vivado -log pcie_7x_0.vds -mode batch -messageDb vivado.pb -notrace -source pcie_7x_0.tcl
-# Log file: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/pcie_7x_0_synth_1/pcie_7x_0.vds
-# Journal file: /home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/pcie_7x_0_synth_1/vivado.jou
+# Log file: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/pcie_7x_0_synth_1/pcie_7x_0.vds
+# Journal file: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/pcie_7x_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source pcie_7x_0.tcl -notrace
 Command: synth_design -top pcie_7x_0 -part xc7k160tfbg676-2 -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 31303 
+INFO: Helper process launched with PID 9866 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1150.289 ; gain = 175.145 ; free physical = 11959 ; free virtual = 21397
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1150.285 ; gain = 175.145 ; free physical = 11168 ; free virtual = 21165
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:143]
 	Parameter c_component_name bound to: pcie_7x_0 - type: string 
 	Parameter dev_port_type bound to: 0000 - type: string 
 	Parameter c_dev_port_type bound to: 0 - type: string 
@@ -231,8 +231,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project
 	Parameter EXT_STARTUP_PRIMITIVE bound to: FALSE - type: string 
 	Parameter KEEP_WIDTH bound to: 8 - type: integer 
 	Parameter PCIE_ASYNC_EN bound to: FALSE - type: string 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie2_top' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:63' bound to instance 'U0' of component 'pcie_7x_0_pcie2_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:750]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie2_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:636]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie2_top' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:63' bound to instance 'U0' of component 'pcie_7x_0_pcie2_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:750]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie2_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:636]
 	Parameter c_component_name bound to: pcie_7x_0 - type: string 
 	Parameter dev_port_type bound to: 0000 - type: string 
 	Parameter c_dev_port_type bound to: 0 - type: string 
@@ -451,8 +451,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie2_top' [/home/asautaux/ya
 	Parameter PCIE_ASYNC_EN bound to: FALSE - type: string 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_core_top' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:68' bound to instance 'inst' of component 'pcie_7x_0_core_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:978]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_core_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:816]
+INFO: [Synth 8-3491] module 'pcie_7x_0_core_top' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:68' bound to instance 'inst' of component 'pcie_7x_0_core_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:978]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_core_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:816]
 	Parameter CFG_VEND_ID bound to: 16'b0001000011101110 
 	Parameter CFG_DEV_ID bound to: 16'b0111000000100100 
 	Parameter CFG_REV_ID bound to: 8'b00000000 
@@ -767,21 +767,21 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_core_top' [/home/asautaux/yar
 	Parameter PCIE_PLL_SEL bound to: CPLL - type: string 
 	Parameter PCIE_ASYNC_EN bound to: FALSE - type: string 
 	Parameter PCIE_TXBUF_EN bound to: FALSE - type: string 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1895]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1895]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1896]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1896]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1897]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1897]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1982]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1982]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1983]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1983]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1985]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1895]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1895]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1896]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1896]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1897]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1897]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1982]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1982]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1983]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1983]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:1985]
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:98' bound to instance 'pl_phy_lnk_up_cdc' of component 'xpm_cdc_single' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2038]
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:98' bound to instance 'pl_phy_lnk_up_cdc' of component 'xpm_cdc_single' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2038]
 INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:98]
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
@@ -792,7 +792,7 @@ INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (1#1) [/opt/Xilinx
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:98' bound to instance 'pl_received_hot_rst_cdc' of component 'xpm_cdc_single' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2049]
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:98' bound to instance 'pl_received_hot_rst_cdc' of component 'xpm_cdc_single' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2049]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter REM_WIDTH bound to: 1 - type: integer 
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
@@ -1079,8 +1079,8 @@ INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/Vivado/201
 	Parameter VSEC_CAP_NEXTPTR bound to: 12'b000000000000 
 	Parameter VSEC_CAP_ON bound to: FALSE - type: string 
 	Parameter VSEC_CAP_VERSION bound to: 4'b0001 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_top' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:67' bound to instance 'pcie_top_i' of component 'pcie_7x_0_pcie_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2152]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:739]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_top' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:67' bound to instance 'pcie_top_i' of component 'pcie_7x_0_pcie_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2152]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:739]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter REM_WIDTH bound to: 1 - type: integer 
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
@@ -1374,8 +1374,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_top' [/home/asautaux/yar
 	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_top' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:71' bound to instance 'axi_basic_top_i' of component 'pcie_7x_0_axi_basic_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:2249]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:172]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_top' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:71' bound to instance 'axi_basic_top_i' of component 'pcie_7x_0_axi_basic_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:2249]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:172]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter C_ROOT_PORT bound to: 0 - type: bool 
@@ -1388,8 +1388,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_top' [/home/asautau
 	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:72' bound to instance 'rx_inst' of component 'pcie_7x_0_axi_basic_rx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:291]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:125]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:72' bound to instance 'rx_inst' of component 'pcie_7x_0_axi_basic_rx' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:125]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter C_ROOT_PORT bound to: 0 - type: bool 
@@ -1400,64 +1400,64 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx' [/home/asautaux
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx_pipeline' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:74' bound to instance 'rx_pipeline_inst' of component 'pcie_7x_0_axi_basic_rx_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:220]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:122]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx_pipeline' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:74' bound to instance 'rx_pipeline_inst' of component 'pcie_7x_0_axi_basic_rx_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:122]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx_pipeline' (2#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx_pipeline' (2#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.vhd:122]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx_null_gen' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:71' bound to instance 'rx_null_gen_inst' of component 'pcie_7x_0_axi_basic_rx_null_gen' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:272]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx_null_gen' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:106]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_rx_null_gen' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:71' bound to instance 'rx_null_gen_inst' of component 'pcie_7x_0_axi_basic_rx_null_gen' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_rx_null_gen' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:106]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:139]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:140]
-INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:245]
-INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:317]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx_null_gen' (3#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx' (4#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:125]
-	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
-	Parameter C_FAMILY bound to: X7 - type: string 
-	Parameter C_ROOT_PORT bound to: 0 - type: bool 
-	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
-	Parameter TCQ bound to: 1 - type: integer 
-	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:74' bound to instance 'tx_inst' of component 'pcie_7x_0_axi_basic_tx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:323]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:151]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:139]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:140]
+INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:245]
+INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:317]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx_null_gen' (3#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_rx' (4#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.vhd:125]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter C_ROOT_PORT bound to: 0 - type: bool 
 	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:74' bound to instance 'tx_inst' of component 'pcie_7x_0_axi_basic_tx' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:323]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:151]
+	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_FAMILY bound to: X7 - type: string 
+	Parameter C_ROOT_PORT bound to: 0 - type: bool 
+	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter C_REM_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx_pipeline' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:74' bound to instance 'tx_pipeline_inst' of component 'pcie_7x_0_axi_basic_tx_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:264]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:123]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx_pipeline' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:74' bound to instance 'tx_pipeline_inst' of component 'pcie_7x_0_axi_basic_tx_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:264]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:123]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_PM_PRIORITY bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_REM_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx_pipeline' (5#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx_pipeline' (5#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.vhd:123]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter C_ROOT_PORT bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:74' bound to instance 'tx_thrl_ctl_inst' of component 'pcie_7x_0_axi_basic_tx_thrtl_ctl' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:129]
+INFO: [Synth 8-3491] module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:74' bound to instance 'tx_thrl_ctl_inst' of component 'pcie_7x_0_axi_basic_tx_thrtl_ctl' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:129]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: X7 - type: string 
 	Parameter C_ROOT_PORT bound to: 0 - type: bool 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:618]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' (6#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:129]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx' (7#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:151]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_top' (8#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:172]
+INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:618]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx_thrtl_ctl' (6#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_tx' (7#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.vhd:151]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_top' (8#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.vhd:172]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter REM_WIDTH bound to: 1 - type: integer 
 	Parameter AER_BASE_PTR bound to: 12'b000000000000 
@@ -1744,8 +1744,8 @@ INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_axi_basic_top' (8#1) [/h
 	Parameter VSEC_CAP_NEXTPTR bound to: 12'b000000000000 
 	Parameter VSEC_CAP_ON bound to: FALSE - type: string 
 	Parameter VSEC_CAP_VERSION bound to: 4'b0001 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:70' bound to instance 'pcie_7x_i' of component 'pcie_7x_0_pcie_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:2353]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:791]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:70' bound to instance 'pcie_7x_i' of component 'pcie_7x_0_pcie_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:2353]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:791]
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter REM_WIDTH bound to: 1 - type: integer 
 	Parameter AER_BASE_PTR bound to: 12'b000000000000 
@@ -2032,10 +2032,10 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_7x' [/home/asautaux/yarr
 	Parameter VSEC_CAP_NEXTPTR bound to: 12'b000000000000 
 	Parameter VSEC_CAP_ON bound to: FALSE - type: string 
 	Parameter VSEC_CAP_VERSION bound to: 4'b0001 
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:868]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:868]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:869]
-WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:869]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:868]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:868]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:869]
+WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:869]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter DEV_CAP_MAX_PAYLOAD_SUPPORTED bound to: 2 - type: integer 
@@ -2047,8 +2047,8 @@ WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/proje
 	Parameter TL_RX_RAM_RADDR_LATENCY bound to: 0 - type: integer 
 	Parameter TL_RX_RAM_RDATA_LATENCY bound to: 2 - type: integer 
 	Parameter TL_RX_RAM_WRITE_LATENCY bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_top_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:74' bound to instance 'pcie_bram_top' of component 'pcie_7x_0_pcie_bram_top_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:897]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_top_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:116]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_top_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:74' bound to instance 'pcie_bram_top' of component 'pcie_7x_0_pcie_bram_top_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:897]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_top_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:116]
 	Parameter IMPL_TARGET bound to: HARD - type: string 
 	Parameter DEV_CAP_MAX_PAYLOAD_SUPPORTED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
@@ -2069,8 +2069,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_top_7x' [/home/asau
 	Parameter RAM_RADDR_LATENCY bound to: 0 - type: integer 
 	Parameter RAM_RDATA_LATENCY bound to: 2 - type: integer 
 	Parameter RAM_WRITE_LATENCY bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_brams_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:67' bound to instance 'pcie_brams_tx' of component 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:221]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:117]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_brams_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:67' bound to instance 'pcie_brams_tx' of component 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:117]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
@@ -2083,8 +2083,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_brams_7x' [/home/asautau
 	Parameter IMPL_TARGET bound to: HARD - type: string 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter WIDTH bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:95]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:95]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
@@ -2251,7 +2251,7 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_bram_7x' [/home/asautaux
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 18 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'BRAM_TDP_MACRO' declared at '/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:37' bound to instance 'ramb36' of component 'BRAM_TDP_MACRO' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:327]
+INFO: [Synth 8-3491] module 'BRAM_TDP_MACRO' declared at '/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:37' bound to instance 'ramb36' of component 'BRAM_TDP_MACRO' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:327]
 INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_TDP_MACRO' [/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:225]
 	Parameter BRAM_SIZE bound to: 36Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
@@ -2591,26 +2591,26 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_TDP_MACRO' [/opt/Xilinx/V
 	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
 INFO: [Synth 8-113] binding component instance 'ram36_bl' to cell 'RAMB36E1' [/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:2261]
 INFO: [Synth 8-256] done synthesizing module 'unimacro_BRAM_TDP_MACRO' (9#1) [/opt/Xilinx/Vivado/2016.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:225]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_bram_7x' (10#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_bram_7x' (10#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:95]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter WIDTH bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter WIDTH bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter WIDTH bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_brams_7x' (11#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:117]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_bram_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.vhd:71' bound to instance 'ram' of component 'pcie_7x_0_pcie_bram_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:307]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_brams_7x' (11#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:117]
 	Parameter LINK_CAP_MAX_LINK_SPEED bound to: 2 - type: integer 
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter IMPL_TARGET bound to: HARD - type: string 
@@ -2618,8 +2618,8 @@ INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_brams_7x' (11#1) [/
 	Parameter RAM_RADDR_LATENCY bound to: 0 - type: integer 
 	Parameter RAM_RDATA_LATENCY bound to: 2 - type: integer 
 	Parameter RAM_WRITE_LATENCY bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_brams_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:67' bound to instance 'pcie_brams_rx' of component 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:243]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_bram_top_7x' (12#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:116]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_brams_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.vhd:67' bound to instance 'pcie_brams_rx' of component 'pcie_7x_0_pcie_brams_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:243]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_bram_top_7x' (12#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.vhd:116]
 	Parameter AER_BASE_PTR bound to: 12'b000000000000 
 	Parameter AER_CAP_ECRC_CHECK_CAPABLE bound to: FALSE - type: string 
 	Parameter AER_CAP_ECRC_GEN_CAPABLE bound to: FALSE - type: string 
@@ -2904,32 +2904,32 @@ INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_bram_top_7x' (12#1)
 	Parameter VSEC_CAP_NEXTPTR bound to: 12'b000000000000 
 	Parameter VSEC_CAP_ON bound to: FALSE - type: string 
 	Parameter VSEC_CAP_VERSION bound to: 4'b0001 
-INFO: [Synth 8-113] binding component instance 'pcie_block_i' to cell 'PCIE_2_1' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:936]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_7x' (13#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:791]
+INFO: [Synth 8-113] binding component instance 'pcie_block_i' to cell 'PCIE_2_1' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:936]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_7x' (13#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.vhd:791]
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_pipeline' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:62' bound to instance 'pcie_pipe_pipeline_i' of component 'pcie_7x_0_pcie_pipe_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:3087]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_pipeline' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:338]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_pipeline' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:62' bound to instance 'pcie_pipe_pipeline_i' of component 'pcie_7x_0_pcie_pipe_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:3087]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_pipeline' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:338]
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_misc' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:62' bound to instance 'pipe_misc_i' of component 'pcie_7x_0_pcie_pipe_misc' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:414]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_misc' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:84]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_misc' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:62' bound to instance 'pipe_misc_i' of component 'pcie_7x_0_pcie_pipe_misc' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:414]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_misc' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:84]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_misc' (14#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_misc' (14#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.vhd:84]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_0_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:438]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:104]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_0_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:438]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:104]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_lane' (15#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_lane' (15#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:104]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_1_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:473]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_1_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:473]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_2_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:530]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_2_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:530]
 	Parameter PIPE_PIPELINE_STAGES bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_3_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:563]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_pipeline' (16#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:338]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_top' (17#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:739]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pcie_pipe_lane' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.vhd:63' bound to instance 'pipe_lane_3_i' of component 'pcie_7x_0_pcie_pipe_lane' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:563]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_pipe_pipeline' (16#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.vhd:338]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_top' (17#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.vhd:739]
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter REF_CLK_FREQ bound to: 0 - type: integer 
 	Parameter USER_CLK2_DIV2 bound to: FALSE - type: string 
@@ -2943,8 +2943,8 @@ INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie_top' (17#1) [/home/
 	Parameter PCIE_EXT_GT_COMMON bound to: FALSE - type: string 
 	Parameter EXT_CH_GT_DRP bound to: FALSE - type: string 
 	Parameter PCIE_CHAN_BOND bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_gt_top' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:64' bound to instance 'gt_top_i' of component 'pcie_7x_0_gt_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2835]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_top' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:334]
+INFO: [Synth 8-3491] module 'pcie_7x_0_gt_top' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:64' bound to instance 'gt_top_i' of component 'pcie_7x_0_gt_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2835]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_top' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:334]
 	Parameter LINK_CAP_MAX_LINK_WIDTH bound to: 4 - type: integer 
 	Parameter REF_CLK_FREQ bound to: 0 - type: integer 
 	Parameter USER_CLK2_DIV2 bound to: FALSE - type: string 
@@ -2961,20 +2961,20 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_top' [/home/asautaux/yarr/
 	Parameter PCIE_CHAN_BOND bound to: 0 - type: integer 
 	Parameter CLK_COR_MIN_LAT bound to: 28 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:92]
+INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:92]
 	Parameter CLK_COR_MIN_LAT bound to: 28 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_rx_valid_filter_7x' (18#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_rx_valid_filter_7x' (18#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:92]
 	Parameter CLK_COR_MIN_LAT bound to: 28 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
+INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
 	Parameter CLK_COR_MIN_LAT bound to: 28 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
+INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
 	Parameter CLK_COR_MIN_LAT bound to: 28 - type: integer 
 	Parameter TCQ bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
+INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.vhd:64' bound to instance 'GT_RX_VALID_FILTER_7x_inst' of component 'pcie_7x_0_gt_rx_valid_filter_7x' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:756]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_SIM_TX_EIDLE_DRIVE_LEVEL bound to: 1 - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
@@ -3014,8 +3014,8 @@ INFO: [Synth 8-3491] module 'pcie_7x_0_gt_rx_valid_filter_7x' declared at '/home
 	Parameter PCIE_OOBCLK_MODE bound to: 1 - type: integer 
 	Parameter PCIE_JTAG_MODE bound to: 0 - type: integer 
 	Parameter PCIE_DEBUG_MODE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'pcie_7x_0_pipe_wrapper' declared at '/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156' bound to instance 'pipe_wrapper_i' of component 'pcie_7x_0_pipe_wrapper' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:785]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_wrapper' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156]
+INFO: [Synth 8-3491] module 'pcie_7x_0_pipe_wrapper' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156' bound to instance 'pipe_wrapper_i' of component 'pcie_7x_0_pipe_wrapper' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:785]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_wrapper' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_SIM_SPEEDUP bound to: FALSE - type: string 
 	Parameter PCIE_SIM_TX_EIDLE_DRIVE_LEVEL bound to: 1 - type: string 
@@ -3059,9 +3059,9 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_wrapper' [/home/asautaux
 	Parameter TXEQ_FS bound to: 6'b101000 
 	Parameter TXEQ_LF bound to: 6'b001111 
 	Parameter GC_XSDB_SLAVE_TYPE bound to: 16'b0000000001000110 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:407]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:408]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_clock' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:67]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:407]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:408]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_clock' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:67]
 	Parameter PCIE_ASYNC_EN bound to: FALSE - type: string 
 	Parameter PCIE_TXBUF_EN bound to: FALSE - type: string 
 	Parameter PCIE_CLK_SHARING_EN bound to: FALSE - type: string 
@@ -3081,12 +3081,12 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_clock' [/home/asautaux/y
 	Parameter CLKOUT3_DIVIDE bound to: 4 - type: integer 
 	Parameter CLKOUT4_DIVIDE bound to: 20 - type: integer 
 	Parameter PCIE_GEN1_MODE bound to: 1'b0 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:137]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:138]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:139]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:141]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:142]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:143]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:137]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:138]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:139]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:141]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:142]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:143]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (19#1) [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-638] synthesizing module 'BUFGCTRL' [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:661]
@@ -3152,8 +3152,8 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/opt/Xilinx/Vivado/2016.2/
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (21#1) [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:20396]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_clock' (22#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_reset' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:67]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_clock' (22#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_reset' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:67]
 	Parameter PCIE_SIM_SPEEDUP bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_PLL_SEL bound to: CPLL - type: string 
@@ -3179,32 +3179,32 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_reset' [/home/asautaux/y
 	Parameter FSM_CPLL_PD bound to: 5'b01110 
 	Parameter FSM_TXSYNC_START bound to: 5'b01111 
 	Parameter FSM_TXSYNC_DONE bound to: 5'b10000 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:118]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:119]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:120]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:121]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:122]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:123]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:124]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:125]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:126]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:127]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:129]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:130]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:131]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:132]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:133]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:134]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:135]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:136]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:137]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:138]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:146]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:147]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:149]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:150]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_reset' (23#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_reset' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:66]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:118]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:119]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:120]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:121]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:122]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:123]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:124]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:125]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:126]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:127]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:129]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:130]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:131]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:132]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:133]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:134]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:135]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:136]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:137]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:138]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:146]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:147]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:149]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:150]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_reset' (23#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_reset' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:66]
 	Parameter PCIE_PLL_SEL bound to: CPLL - type: string 
 	Parameter PCIE_POWER_SAVING bound to: TRUE - type: string 
 	Parameter PCIE_LANE bound to: 4 - type: integer 
@@ -3221,22 +3221,22 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_reset' [/home/asautaux/y
 	Parameter FSM_QPLLLOCK2 bound to: 10 - type: integer 
 	Parameter FSM_QPLL_PDRESET bound to: 11 - type: integer 
 	Parameter FSM_QPLL_PD bound to: 12 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:101]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:102]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:103]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:104]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:105]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:106]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:107]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:109]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:110]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:111]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:112]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:113]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:114]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:115]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_reset' (24#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:66]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_rate' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:67]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:101]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:102]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:103]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:104]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:105]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:106]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:107]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:109]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:110]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:111]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:112]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:113]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:114]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:115]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_reset' (24#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v:66]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_rate' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:67]
 	Parameter PCIE_SIM_SPEEDUP bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
@@ -3277,38 +3277,38 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_rate' [/home/asautaux/ya
 	Parameter FSM_DONE bound to: 28 - type: integer 
 	Parameter FSM_RXSYNC_START bound to: 29 - type: integer 
 	Parameter FSM_RXSYNC_DONE bound to: 30 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:129]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:130]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:131]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:132]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:133]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:134]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:135]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:136]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:137]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:138]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:139]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:140]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:141]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:142]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:143]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:145]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:146]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:147]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:148]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:149]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:150]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:151]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:152]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:153]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:154]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:155]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:156]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:157]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:158]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:159]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_rate' (25#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_drp' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:66]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:129]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:130]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:131]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:132]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:133]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:134]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:135]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:136]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:137]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:138]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:139]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:140]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:141]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:142]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:143]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:145]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:146]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:147]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:148]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:149]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:150]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:151]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:152]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:153]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:154]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:155]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:156]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:157]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:158]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:159]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_rate' (25#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_drp' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:66]
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
 	Parameter PCIE_ASYNC_EN bound to: FALSE - type: string 
@@ -3447,23 +3447,23 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_drp' [/home/asautaux/yar
 	Parameter FSM_WRITE bound to: 4 - type: integer 
 	Parameter FSM_WRDY bound to: 5 - type: integer 
 	Parameter FSM_DONE bound to: 6 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:107]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:108]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:109]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:110]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:111]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:112]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:113]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:115]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:116]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:117]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:118]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:119]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:120]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:121]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:107]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:108]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:109]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:110]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:111]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:112]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:113]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:115]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:116]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:117]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:118]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:119]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:120]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:121]
 INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_drp' (26#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:66]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_eq' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:67]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_drp' (26#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v:66]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_eq' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:67]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_RXEQ_MODE_GEN3 bound to: 1 - type: integer 
@@ -3512,8 +3512,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_eq' [/home/asautaux/yarr
 	Parameter TXPRECURSOR_10 bound to: 6'b000000 
 	Parameter TXMAINCURSOR_10 bound to: 7'b0111000 
 	Parameter TXPOSTCURSOR_10 bound to: 6'b011001 
-INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:401]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_rxeq_scan' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_rxeq_scan.v:66]
+INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:401]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_rxeq_scan' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_rxeq_scan.v:66]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_RXEQ_MODE_GEN3 bound to: 1 - type: integer 
@@ -3525,15 +3525,15 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_rxeq_scan' [/home/asautaux/ya
 	Parameter FSM_NEW_TXCOEFF_REQ bound to: 4'b1000 
 	Parameter converge_max_cnt bound to: 22'b1011111010111100001000 
 	Parameter converge_max_bypass_cnt bound to: 22'b0111111100101000000101 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_rxeq_scan' (27#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_rxeq_scan.v:66]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_eq' (28#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_common' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_common.v:56]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_rxeq_scan' (27#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_rxeq_scan.v:66]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_eq' (28#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_common' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_common.v:56]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
 	Parameter PCIE_PLL_SEL bound to: CPLL - type: string 
 	Parameter PCIE_REFCLK_FREQ bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_drp' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_drp.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_drp' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_drp.v:67]
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
 	Parameter PCIE_PLL_SEL bound to: CPLL - type: string 
@@ -3575,8 +3575,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_drp' [/home/asautaux/yar
 	Parameter FSM_DONE bound to: 9'b001000000 
 	Parameter FSM_QPLLRESET bound to: 9'b010000000 
 	Parameter FSM_QPLLLOCK bound to: 9'b100000000 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_drp' (29#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_drp.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_wrapper' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_wrapper.v:67]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_drp' (29#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_drp.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_qpll_wrapper' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_wrapper.v:67]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
@@ -3609,11 +3609,11 @@ INFO: [Synth 8-638] synthesizing module 'GTXE2_COMMON' [/opt/Xilinx/Vivado/2016.
 	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
 	Parameter SIM_VERSION bound to: 3.0 - type: string 
 INFO: [Synth 8-256] done synthesizing module 'GTXE2_COMMON' (30#1) [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:11198]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gtp_cpllpd_ovrd' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_cpllpd_ovrd.v:54]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gtp_cpllpd_ovrd' (31#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_cpllpd_ovrd.v:54]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_wrapper' (32#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_wrapper.v:67]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_common' (33#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_common.v:56]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_user' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_user.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gtp_cpllpd_ovrd' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_cpllpd_ovrd.v:54]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gtp_cpllpd_ovrd' (31#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_cpllpd_ovrd.v:54]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_qpll_wrapper' (32#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_wrapper.v:67]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_common' (33#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_common.v:56]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_user' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_user.v:67]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_USE_MODE bound to: 3.0 - type: string 
 	Parameter PCIE_OOBCLK_MODE bound to: 1 - type: integer 
@@ -3625,8 +3625,8 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_user' [/home/asautaux/ya
 	Parameter FSM_RESET_INIT bound to: 2'b10 
 	Parameter FSM_RESET bound to: 2'b11 
 	Parameter converge_max_cnt bound to: 22'b1011111010111100001000 
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_user' (34#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_user.v:67]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_sync' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:71]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_user' (34#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_user.v:67]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_sync' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:71]
 	Parameter PCIE_GT_DEVICE bound to: GTX - type: string 
 	Parameter PCIE_TXBUF_EN bound to: FALSE - type: string 
 	Parameter PCIE_RXBUF_EN bound to: TRUE - type: string 
@@ -3649,9 +3649,9 @@ INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_pipe_sync' [/home/asautaux/ya
 	Parameter FSM_RXSYNC_DONE2 bound to: 7'b0010000 
 	Parameter FSM_RXSYNC_DONES bound to: 7'b0100000 
 	Parameter FSM_RXSYNC_DONEM bound to: 7'b1000000 
-INFO: [Synth 8-4471] merging register 'rxsync_fsm_disable.rxsync_done_reg' into 'rxsync_fsm_disable.rxdlyen_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:612]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_sync' (35#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:71]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_wrapper' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_wrapper.v:67]
+INFO: [Synth 8-4471] merging register 'rxsync_fsm_disable.rxsync_done_reg' into 'rxsync_fsm_disable.rxdlyen_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:612]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_sync' (35#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v:71]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gt_wrapper' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_wrapper.v:67]
 	Parameter PCIE_SIM_MODE bound to: FALSE - type: string 
 	Parameter PCIE_SIM_SPEEDUP bound to: FALSE - type: string 
 	Parameter PCIE_SIM_TX_EIDLE_DRIVE_LEVEL bound to: 1 - type: string 
@@ -3912,14 +3912,14 @@ INFO: [Synth 8-638] synthesizing module 'GTXE2_CHANNEL' [/opt/Xilinx/Vivado/2016
 	Parameter TX_XCLK_SEL bound to: TXUSR - type: string 
 	Parameter UCODEER_CLR bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'GTXE2_CHANNEL' (36#1) [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:10525]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gtx_cpllpd_ovrd' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtx_cpllpd_ovrd.v:54]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gtx_cpllpd_ovrd' (37#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtx_cpllpd_ovrd.v:54]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_wrapper' (38#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_wrapper.v:67]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_wrapper' (39#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_top' (40#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:334]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_core_top' (41#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:816]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie2_top' (42#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:636]
-INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0' (43#1) [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0_gtx_cpllpd_ovrd' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtx_cpllpd_ovrd.v:54]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gtx_cpllpd_ovrd' (37#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtx_cpllpd_ovrd.v:54]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_wrapper' (38#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_wrapper.v:67]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pipe_wrapper' (39#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v:156]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_gt_top' (40#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.vhd:334]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_core_top' (41#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0_pcie2_top' (42#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.vhd:636]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0' (43#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.vhd:143]
 WARNING: [Synth 8-3331] design pcie_7x_0_gt_rx_valid_filter_7x has unconnected port PLM_IN_RS
 WARNING: [Synth 8-3331] design pcie_7x_0_gt_wrapper has unconnected port GT_TXPHDLYRESET
 WARNING: [Synth 8-3331] design pcie_7x_0_gt_wrapper has unconnected port GT_TXSYNCMODE
@@ -4022,7 +4022,7 @@ WARNING: [Synth 8-3331] design pcie_7x_0_gt_top has unconnected port pipe_tx5_da
 WARNING: [Synth 8-3331] design pcie_7x_0_gt_top has unconnected port pipe_tx5_data[13]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1229.734 ; gain = 254.590 ; free physical = 11873 ; free virtual = 21314
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1229.730 ; gain = 254.590 ; free physical = 11084 ; free virtual = 21082
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4032,7 +4032,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1229.734 ; gain = 254.590 ; free physical = 11873 ; free virtual = 21313
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1229.730 ; gain = 254.590 ; free physical = 11084 ; free virtual = 21083
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4041,15 +4041,15 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
-INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pcie_7x_0_propImpl.xdc].
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pcie_7x_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/pcie_7x_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/pcie_7x_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.runs/pcie_7x_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/pcie_7x_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/pcie_7x_0_synth_1/dont_touch.xdc]
 Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_phy_lnk_up_cdc'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_phy_lnk_up_cdc'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_received_hot_rst_cdc'
@@ -4059,16 +4059,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1582.617 ; gain = 0.004 ; free physical = 11646 ; free virtual = 21086
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1582.613 ; gain = 0.004 ; free physical = 10841 ; free virtual = 20836
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11645 ; free virtual = 21085
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10840 ; free virtual = 20834
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11645 ; free virtual = 21085
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10840 ; free virtual = 20834
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -4078,7 +4078,7 @@ Applied set_property DONT_TOUCH = true for U0/inst/pl_phy_lnk_up_cdc. (constrain
 Applied set_property DONT_TOUCH = true for U0/inst/pl_received_hot_rst_cdc. (constraint file  auto generated constraint, line ).
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11645 ; free virtual = 21085
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10840 ; free virtual = 20834
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'fsm_reg' in module 'pcie_7x_0_pipe_reset'
 INFO: [Synth 8-5546] ROM "userrdy" won't be mapped to RAM because it is too sparse
@@ -4111,7 +4111,7 @@ INFO: [Synth 8-5544] ROM "fsm0" won't be mapped to Block RAM because address siz
 INFO: [Synth 8-5544] ROM "fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "fsm0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "fsm0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'rxpmareset_reg' into 'txpmareset_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:416]
+INFO: [Synth 8-4471] merging register 'rxpmareset_reg' into 'txpmareset_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v:416]
 INFO: [Synth 8-5544] ROM "fsm0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sysclksel0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rate" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -4171,8 +4171,8 @@ INFO: [Synth 8-5544] ROM "reg_state_eios_det" won't be mapped to Block RAM becau
 INFO: [Synth 8-5544] ROM "reg_state_eios_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "reg_state_eios_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "reg_state_eios_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'bridge_reset_int_reg' into 'user_reset_int_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2128]
-INFO: [Synth 8-4471] merging register 'bridge_reset_d_reg' into 'user_reset_out_reg' [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2139]
+INFO: [Synth 8-4471] merging register 'bridge_reset_int_reg' into 'user_reset_int_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2128]
+INFO: [Synth 8-4471] merging register 'bridge_reset_d_reg' into 'user_reset_out_reg' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.vhd:2139]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -4265,7 +4265,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'txsync_fsm.fsm_tx_reg' usi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'reg_state_eios_det_reg' using encoding 'sequential' in module 'pcie_7x_0_gt_rx_valid_filter_7x'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11642 ; free virtual = 21082
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10838 ; free virtual = 20832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4672,7 +4672,7 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11642 ; free virtual = 21082
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10838 ; free virtual = 20832
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -4711,9 +4711,9 @@ INFO: [Synth 8-5544] ROM "data_rxcdr_cfg_c" won't be mapped to Block RAM because
 INFO: [Synth 8-5544] ROM "data_txout_div" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11649 ; free virtual = 21081
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10838 ; free virtual = 20832
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1582.617 ; gain = 607.473 ; free physical = 11649 ; free virtual = 21081
+Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1582.613 ; gain = 607.473 ; free physical = 10838 ; free virtual = 20832
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -4887,9 +4887,9 @@ WARNING: [Synth 8-3332] Sequential element (txsync_fsm.txdlyen_reg) is unused an
 WARNING: [Synth 8-3332] Sequential element (txsync_fsm.txdlyen_reg) is unused and will be removed from module pcie_7x_0_pipe_sync__3.
 WARNING: [Synth 8-3332] Sequential element (txsync_fsm.txdlyen_reg) is unused and will be removed from module pcie_7x_0_pipe_sync.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1582.621 ; gain = 607.477 ; free physical = 11642 ; free virtual = 21074
+Finished Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1582.617 ; gain = 607.477 ; free physical = 10835 ; free virtual = 20829
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1582.621 ; gain = 607.477 ; free physical = 11642 ; free virtual = 21074
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1582.617 ; gain = 607.477 ; free physical = 10835 ; free virtual = 20829
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -4904,10 +4904,10 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 info: SDC command 'set_propagated_clock' ignored 2 time(s)
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1651.613 ; gain = 676.469 ; free physical = 11523 ; free virtual = 20955
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1650.609 ; gain = 675.469 ; free physical = 10730 ; free virtual = 20723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1681.629 ; gain = 706.484 ; free physical = 11492 ; free virtual = 20925
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1680.625 ; gain = 705.484 ; free physical = 10699 ; free virtual = 20693
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4927,16 +4927,16 @@ INFO: [Synth 8-3332] Sequential element (inst/gt_top_i/pipe_wrapper_i/pipe_lane[
 INFO: [Synth 8-3332] Sequential element (inst/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_drp.pipe_drp_i/load_cnt_reg[1]) is unused and will be removed from module pcie_7x_0_pcie2_top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10666 ; free virtual = 20659
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10666 ; free virtual = 20659
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10666 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -4953,7 +4953,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4966,7 +4966,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4978,25 +4978,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -5141,21 +5141,21 @@ Report Instance Areas:
 |83    |          pipe_misc_i                                                          |pcie_7x_0_pcie_pipe_misc           |     6|
 +------+-------------------------------------------------------------------------------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1715.301 ; gain = 740.156 ; free physical = 11458 ; free virtual = 20891
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.297 ; gain = 739.156 ; free physical = 10665 ; free virtual = 20659
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 343 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1715.301 ; gain = 285.125 ; free physical = 11459 ; free virtual = 20892
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1715.309 ; gain = 740.164 ; free physical = 11461 ; free virtual = 20893
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1714.297 ; gain = 284.125 ; free physical = 10665 ; free virtual = 20659
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1714.305 ; gain = 739.164 ; free physical = 10666 ; free virtual = 20660
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
-INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_5/project_pcie_5.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
+INFO: [Timing 38-2] Deriving generated clocks [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:118]
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'U0'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_phy_lnk_up_cdc'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_phy_lnk_up_cdc'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst/pl_received_hot_rst_cdc'
@@ -5167,7 +5167,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 539 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2103.512 ; gain = 1038.805 ; free physical = 11155 ; free virtual = 20588
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2103.508 ; gain = 1038.805 ; free physical = 10375 ; free virtual = 20371
 INFO: [Coretcl 2-1174] Renamed 82 cell refs.
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2135.531 ; gain = 0.000 ; free physical = 11150 ; free virtual = 20584
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 27 09:17:23 2017...
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2135.527 ; gain = 0.000 ; free physical = 10372 ; free virtual = 20369
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 11:16:25 2017...
