@@ -40,7 +40,7 @@ Controller Options :
    Equivalent Part(s)            : MT41J64M16JT-125
    Data Width                    : 64
    ECC                           : Disabled
-   Data Mask                     : disabled
+   Data Mask                     : enabled
    ORDERING                      : Normal
 
 AXI Parameters :

@@ -259,13 +259,15 @@ module sim_tb_top;
   wire                               tg_compare_error;
   wire [(CS_WIDTH*1)-1:0] ddr3_cs_n_fpga;
     
-  
+  wire [DM_WIDTH-1:0]                ddr3_dm_fpga;
+    
   wire [ODT_WIDTH-1:0]               ddr3_odt_fpga;
     
   
   reg [(CS_WIDTH*1)-1:0] ddr3_cs_n_sdram_tmp;
     
-  
+  reg [DM_WIDTH-1:0]                 ddr3_dm_sdram_tmp;
+    
   reg [ODT_WIDTH-1:0]                ddr3_odt_sdram_tmp;
     
 
@@ -347,7 +349,9 @@ module sim_tb_top;
   assign ddr3_cs_n_sdram =  ddr3_cs_n_sdram_tmp;
     
 
-  assign ddr3_dm_sdram =  {DM_WIDTH{1'b0}};//DM signal generation
+  always @( * )
+    ddr3_dm_sdram_tmp <=  #(TPROP_PCB_DATA) ddr3_dm_fpga;//DM signal generation
+  assign ddr3_dm_sdram = ddr3_dm_sdram_tmp;
     
 
   always @( * )
@@ -446,6 +450,8 @@ module sim_tb_top;
 
      .COL_WIDTH                 (COL_WIDTH),
      .CS_WIDTH                  (CS_WIDTH),
+     .DM_WIDTH                  (DM_WIDTH),
+    
      .DQ_WIDTH                  (DQ_WIDTH),
      .DQS_CNT_WIDTH             (DQS_CNT_WIDTH),
      .DRAM_WIDTH                (DRAM_WIDTH),
@@ -484,6 +490,8 @@ module sim_tb_top;
      .ddr3_ck_n            (ddr3_ck_n_fpga),
      .ddr3_cke             (ddr3_cke_fpga),
      .ddr3_cs_n            (ddr3_cs_n_fpga),
+    
+     .ddr3_dm              (ddr3_dm_fpga),
     
      .ddr3_odt             (ddr3_odt_fpga),
     

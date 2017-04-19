@@ -85,12 +85,14 @@ component mig_7series_0
       ddr3_ck_n     : out   std_logic_vector(0 downto 0);
       ddr3_cke      : out   std_logic_vector(0 downto 0);
 	  ddr3_cs_n     : out   std_logic_vector(0 downto 0);
+      ddr3_dm       : out   std_logic_vector(7 downto 0);
       ddr3_odt      : out   std_logic_vector(0 downto 0);
       app_addr                  : in    std_logic_vector(26 downto 0);
       app_cmd                   : in    std_logic_vector(2 downto 0);
       app_en                    : in    std_logic;
       app_wdf_data              : in    std_logic_vector(255 downto 0);
       app_wdf_end               : in    std_logic;
+      app_wdf_mask         : in    std_logic_vector(31 downto 0);
       app_wdf_wren              : in    std_logic;
       app_rd_data               : out   std_logic_vector(255 downto 0);
       app_rd_data_end           : out   std_logic;
@@ -135,6 +137,7 @@ end component mig_7series_0;
        ddr3_dqs_p                     => ddr3_dqs_p,
        init_calib_complete            => init_calib_complete,
 	   ddr3_cs_n                      => ddr3_cs_n,
+       ddr3_dm                        => ddr3_dm,
        ddr3_odt                       => ddr3_odt,
        -- Application interface ports
        app_addr                       => app_addr,
@@ -156,6 +159,7 @@ end component mig_7series_0;
        app_zq_ack                     => app_zq_ack,
        ui_clk                         => ui_clk,
        ui_clk_sync_rst                => ui_clk_sync_rst,
+       app_wdf_mask                   => app_wdf_mask,
        -- System Clock Ports
        sys_clk_i                       => sys_clk_i,
        -- Reference Clock Ports

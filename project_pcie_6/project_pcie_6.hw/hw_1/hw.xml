@@ -205,13 +205,13 @@
     <Object name="app_0/dma_ctrl_done_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s_1" gui_info=""/>
-    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info=""/>
+    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info="Trigger Setup=0"/>
     <Object name="app_0/dma_ctrl_start_l2p_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_l2p_s_2" gui_info="Trigger Setup=0"/>
     <Object name="app_0/dma_ctrl_start_next_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_next_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_next_s_2" gui_info="Trigger Setup=1"/>
-    <Object name="app_0/dma_ctrl_start_p2l_s" gui_info=""/>
+    <Object name="app_0/dma_ctrl_start_p2l_s" gui_info="Trigger Setup=1"/>
     <Object name="app_0/dma_ctrl_start_p2l_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_start_p2l_s_2" gui_info="Trigger Setup=2"/>
     <Object name="app_0/dma_cyc_s" gui_info=""/>
@@ -222,7 +222,7 @@
     <Object name="app_0/l2p_dma_cyc_s" gui_info=""/>
     <Object name="app_0/l2p_dma_dat_s2m_s[63:0]" gui_info="Trigger Setup=3"/>
     <Object name="app_0/m_axis_tx_tdata_s[63:0]" gui_info=""/>
-    <Object name="app_0/m_axis_tx_tlast_s" gui_info="Trigger Setup=0"/>
+    <Object name="app_0/m_axis_tx_tlast_s" gui_info=""/>
     <Object name="app_0/m_axis_tx_tvalid_s" gui_info=""/>
     <Object name="app_0/next_item_valid_s" gui_info=""/>
     <Object name="app_0/next_item_valid_s_1" gui_info=""/>
@@ -7504,15 +7504,15 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe7[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>
       <nets>
         <net name="app_0/m_axis_tx_tlast_s"/>
@@ -7527,7 +7527,7 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe9[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>
@@ -7544,7 +7544,7 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>
@@ -13083,8 +13083,8 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe0[63:0]"/>
-        <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.CUSTOM" value="s_axis_rx_tdata_s[63:0]"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
       </probeOptions>
@@ -13291,8 +13291,8 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe2[0]"/>
-        <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.CUSTOM" value="s_axis_rx_tlast_s"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>
@@ -13343,7 +13343,7 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe10[21:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq22&apos;hXX_XXXX"/>
       </probeOptions>
@@ -13415,7 +13415,7 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="MAP" value="probe17[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
       </probeOptions>

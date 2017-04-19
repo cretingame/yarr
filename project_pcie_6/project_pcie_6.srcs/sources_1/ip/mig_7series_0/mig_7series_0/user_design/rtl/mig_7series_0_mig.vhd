@@ -95,6 +95,8 @@ entity mig_7series_0_mig is
    DQ_CNT_WIDTH          : integer := 6;
                                      -- = ceil(log2(DQ_WIDTH))
    DQ_PER_DM             : integer := 8;
+   DM_WIDTH              : integer := 8;
+                                     -- # of DM (data mask)
    DQ_WIDTH              : integer := 64;
                                      -- # of DQ (data)
    DQS_WIDTH             : integer := 8;
@@ -131,7 +133,7 @@ entity mig_7series_0_mig is
                                      --   = 0, When Chip Select (CS#) output is disabled
                                      -- If CS_N disabled, user must connect
                                      -- DRAM CS_N input(s) to ground
-   USE_DM_PORT           : integer := 0;
+   USE_DM_PORT           : integer := 1;
                                      -- # = 1, When Data Mask option is enabled
                                      --   = 0, When Data Mask option is disbaled
                                      -- When Data Mask option is disabled in
@@ -327,9 +329,9 @@ entity mig_7series_0_mig is
                                      -- or control Byte lane. '1' in a bit
                                      -- position indicates a data byte lane and
                                      -- a '0' indicates a control byte lane
-   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"2FE27F37E2EF";
+   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"3FE37F3FE2FF";
    PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000F3FD15372";
-   PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"3F62BF1FD2F7";
+   PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"3FE2FF3FD2FF";
 
    -- control/address/data pin mapping parameters
    CK_BYTE_MAP
@@ -365,7 +367,7 @@ entity mig_7series_0_mig is
    DATA15_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA16_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA17_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
-   MASK0_MAP  : std_logic_vector(107 downto 0) := X"000000000000000000000000000";
+   MASK0_MAP  : std_logic_vector(107 downto 0) := X"000038028017004233226219203";
    MASK1_MAP  : std_logic_vector(107 downto 0) := X"000000000000000000000000000";
 
    SLOT_0_CONFIG         : std_logic_vector(7 downto 0) := "00000001";
@@ -497,6 +499,7 @@ entity mig_7series_0_mig is
    ddr3_ck_n                      : out   std_logic_vector(CK_WIDTH-1 downto 0);
    ddr3_cke                       : out   std_logic_vector(CKE_WIDTH-1 downto 0);
    ddr3_cs_n                      : out   std_logic_vector((CS_WIDTH*nCS_PER_RANK)-1 downto 0);
+   ddr3_dm                        : out   std_logic_vector(DM_WIDTH-1 downto 0);
    ddr3_odt                       : out   std_logic_vector(ODT_WIDTH-1 downto 0);
 
    -- Inputs
@@ -510,6 +513,7 @@ entity mig_7series_0_mig is
    app_en               : in    std_logic;
    app_wdf_data         : in    std_logic_vector((nCK_PER_CLK*2*PAYLOAD_WIDTH)-1 downto 0);
    app_wdf_end          : in    std_logic;
+   app_wdf_mask         : in    std_logic_vector(((nCK_PER_CLK*2*PAYLOAD_WIDTH)/8)-1 downto 0)  ;
    app_wdf_wren         : in    std_logic;
    app_rd_data          : out   std_logic_vector((nCK_PER_CLK*2*PAYLOAD_WIDTH)-1 downto 0);
    app_rd_data_end      : out   std_logic;
@@ -1056,8 +1060,6 @@ architecture arch_mig_7series_0_mig of mig_7series_0_mig is
   
   signal app_ecc_multiple_err        : std_logic_vector((2*nCK_PER_CLK)-1 downto 0);
   signal app_ecc_single_err          : std_logic_vector((2*nCK_PER_CLK)-1 downto 0);
-  signal app_wdf_mask                : std_logic_vector(APP_MASK_WIDTH-1 downto 0);
-      
   signal ddr3_parity          : std_logic;
       
   signal init_calib_complete_i       : std_logic;
@@ -1166,7 +1168,6 @@ begin
   ui_clk <= clk;
   ui_clk_sync_rst <= rst;
   
-  app_wdf_mask <= (others => '0');
   sys_clk_p <= '0';
   sys_clk_n <= '0';
   clk_ref_p <= '0';
@@ -1323,7 +1324,7 @@ begin
       CKE_WIDTH                        => CKE_WIDTH,
       DATA_WIDTH                       => DATA_WIDTH,
       DATA_BUF_ADDR_WIDTH              => DATA_BUF_ADDR_WIDTH,
-      DM_WIDTH                         => 8,
+      DM_WIDTH                         => DM_WIDTH,
       DQ_CNT_WIDTH                     => DQ_CNT_WIDTH,
       DQ_WIDTH                         => DQ_WIDTH,
       DQS_CNT_WIDTH                    => DQS_CNT_WIDTH,
@@ -1471,7 +1472,7 @@ begin
         ddr_ck                           => ddr3_ck_p,
         ddr_cke                          => ddr3_cke,
         ddr_cs_n                         => ddr3_cs_n,
-        ddr_dm                           => open,
+        ddr_dm                           => ddr3_dm,
         ddr_odt                          => ddr3_odt,
         ddr_ras_n                        => ddr3_ras_n,
         ddr_reset_n                      => ddr3_reset_n,
