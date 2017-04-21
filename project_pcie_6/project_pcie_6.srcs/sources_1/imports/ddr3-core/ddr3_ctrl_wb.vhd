@@ -95,6 +95,20 @@ architecture behavioral of ddr3_ctrl_wb is
       );
     END COMPONENT;
     
+    COMPONENT fifo_4x16
+      PORT (
+        rst : IN STD_LOGIC;
+        wr_clk : IN STD_LOGIC;
+        rd_clk : IN STD_LOGIC;
+        din : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        wr_en : IN STD_LOGIC;
+        rd_en : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+        full : OUT STD_LOGIC;
+        empty : OUT STD_LOGIC
+      );
+    END COMPONENT;
+    
     COMPONENT fifo_256x16
       PORT (
         rst : IN STD_LOGIC;
@@ -158,6 +172,17 @@ architecture behavioral of ddr3_ctrl_wb is
     signal fifo_wb_rd_addr_dout_s : std_logic_vector(26 downto 0);
     signal fifo_wb_rd_addr_full_s : std_logic;
     signal fifo_wb_rd_addr_empty_s : std_logic;
+    
+    --signal fifo_wb_rd_mask_din_a : mask_array;
+    --signal wb_rd_mask_din_s : std_logic_vector(3 downto 0);
+    signal fifo_wb_rd_mask_din_s : std_logic_vector(3 downto 0);
+    signal fifo_wb_rd_mask_wr_s : std_logic;
+    signal fifo_wb_rd_mask_rd_s : std_logic;
+    --signal fifo_wb_rd_addr_rd_d : std_logic;
+    signal fifo_wb_rd_mask_dout_s : std_logic_vector(3 downto 0);
+    signal fifo_wb_rd_mask_full_s : std_logic;
+    signal fifo_wb_rd_mask_empty_s : std_logic;
+    
     signal fifo_wb_rd_data_din_s : std_logic_vector(255 downto 0);
     signal fifo_wb_rd_data_wr_s : std_logic;
     signal fifo_wb_rd_data_rd_s : std_logic;
@@ -167,7 +192,7 @@ architecture behavioral of ddr3_ctrl_wb is
     signal fifo_wb_rd_data_full_s : std_logic;
     signal fifo_wb_rd_data_empty_s : std_logic;
     
-    signal wb_rd_read_req_nb_s : unsigned(1 downto 0);
+    signal wb_rd_read_addr_rec_nb_s : unsigned(1 downto 0); -- received addresses number
 
     signal wb_stall_s   : std_logic;
     signal wb_stall_d : std_logic;
@@ -191,11 +216,10 @@ architecture behavioral of ddr3_ctrl_wb is
 begin
     rst_s <= not rst_n_i;
     
-    --------------------------------------
-    -- Wishbone control
-    --------------------------------------
     
     wb_ack_o <= wb_wr_ack_s or wb_rd_ack_s;
+    
+
     
     --------------------------------------
     -- Wishbone write
@@ -221,12 +245,12 @@ begin
                 fifo_wb_wr_mask_din_a(wb_write_cnt) <= wb_sel_i;
                 wb_wr_ack_s <= '1';
                 if(wb_write_cnt >= 3) then
-                    wb_write_cnt <= 0;
+                    wb_write_cnt <= 0; -- Counter
                     fifo_wb_wr_wr_s <= '1';
                     fifo_wb_wr_addr_din_s <= wb_addr_i(26 downto 0);
                 else
-                    wb_write_cnt <= wb_write_cnt + 1;
-                    wb_write_wait_cnt <= c_write_wait_time;
+                    wb_write_cnt <= wb_write_cnt + 1; -- Counter
+                    wb_write_wait_cnt <= c_write_wait_time; -- Counter
                     fifo_wb_wr_wr_s <= '0';
                 end if;
             else
@@ -234,11 +258,11 @@ begin
                  fifo_wb_wr_wr_s <= '0';
                  wb_wr_ack_s <= '0';
                  if(wb_write_cnt /= 0) then
-                     wb_write_wait_cnt <= wb_write_wait_cnt - 1;
+                     wb_write_wait_cnt <= wb_write_wait_cnt - 1; -- Counter
                      if (wb_write_wait_cnt = 0) then
                          wb_write_cnt <= 0;
                          fifo_wb_wr_wr_s <= '1';
-                         wb_write_wait_cnt <= c_write_wait_time;
+                         wb_write_wait_cnt <= c_write_wait_time; -- Counter
                          if (wb_write_cnt = 3) then
                              fifo_wb_wr_addr_din_s <= std_logic_vector(UNSIGNED(wb_wr_addr_s) + 1);
                              fifo_wb_wr_mask_din_a(3) <= X"00";
@@ -288,8 +312,7 @@ begin
         empty => fifo_wb_wr_empty_s
     );
     
-    ddr_addr_o <= fifo_wb_wr_dout_s(314 downto 288) when fifo_wb_wr_rd_d = '1' else
-                  fifo_wb_rd_addr_dout_s;
+
     ddr_wdf_data_o <= fifo_wb_wr_dout_s(255 downto 0);
     ddr_wdf_wren_o <= fifo_wb_wr_rd_d;
     ddr_wdf_end_o  <= fifo_wb_wr_rd_d;
@@ -310,35 +333,43 @@ begin
         wb_read_cnt <= 0;
         wb_read_wait_cnt <= c_read_wait_time;
         fifo_wb_rd_addr_wr_s <= '0';
+        fifo_wb_rd_mask_wr_s <= '0';
+        wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(0,2);
         for i in 0 to 3 loop
             fifo_wb_rd_addr_din_a(i) <= (others => '0');
+            --fifo_wb_rd_mask_din_a(i) <= (others => '0');
         end loop;
     elsif rising_edge(wb_clk_i) then
         if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '0') then
             wb_read_test <= 1;
             fifo_wb_rd_addr_din_a(wb_read_cnt) <= wb_addr_i(26 downto 0);
+            --fifo_wb_rd_mask_din_a(wb_read_cnt) <= wb_sel_i;
             if (wb_read_cnt >= 3) then
                 wb_read_test <= 2;
-                wb_read_cnt <= 0;
-                wb_rd_read_req_nb_s <= TO_UNSIGNED(3,2);
+                wb_read_cnt <= 0; -- Counter
+                wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(3,2);
                 fifo_wb_rd_addr_wr_s <= '1';
+                fifo_wb_rd_mask_wr_s <= '1';
             else
                 wb_read_test <= 3;
-                wb_read_cnt <= wb_read_cnt + 1; -- ICI
-                wb_read_wait_cnt <= c_read_wait_time;
+                wb_read_cnt <= wb_read_cnt + 1; -- Counter
+                wb_read_wait_cnt <= c_read_wait_time; -- Counter
                 fifo_wb_rd_addr_wr_s <= '0';
+                fifo_wb_rd_mask_wr_s <= '0';
             end if;
         else
              wb_read_test <= 4;
              fifo_wb_rd_addr_wr_s <= '0';
+             fifo_wb_rd_mask_wr_s <= '0';
              if wb_read_cnt /= 0 then
-                wb_read_wait_cnt <= wb_read_wait_cnt - 1;
+                wb_read_wait_cnt <= wb_read_wait_cnt - 1; -- Counter
                 wb_read_test <= 5;
                 if wb_read_wait_cnt = 0 then
                     wb_read_test <= 6;
-                    wb_rd_read_req_nb_s <= TO_UNSIGNED(wb_read_cnt,2);
-                    wb_read_cnt <= 0;
-                    fifo_wb_rd_addr_wr_s <= '1';       
+                    wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(wb_read_cnt-1,2);
+                    wb_read_cnt <= 0; -- Counter
+                    fifo_wb_rd_addr_wr_s <= '1'; 
+                    fifo_wb_rd_mask_wr_s <= '1';      
                 end if;   
              end if;
         end if;
@@ -353,22 +384,28 @@ begin
         elsif rising_edge(wb_clk_i) then
             wb_read_data_cnt_d <= wb_read_data_cnt;
             if fifo_wb_rd_data_rd_s = '1' then
-                wb_read_data_cnt <= 0;
+                wb_read_data_cnt <= 0; -- Counter
             end if;
             
             if wb_read_data_cnt /= 3 then
-                wb_read_data_cnt <= wb_read_data_cnt + 1;
+                wb_read_data_cnt <= wb_read_data_cnt + 1; -- Counter
             end if;
         end if;
     end process p_wb_read_data;
     
     
     
-    fifo_wb_rd_addr_din_s <= fifo_wb_rd_addr_din_a(wb_read_cnt);
+    fifo_wb_rd_addr_din_s <= std_logic_vector(unsigned(fifo_wb_rd_addr_din_a(TO_INTEGER(wb_rd_read_addr_rec_nb_s))) + 3 - wb_rd_read_addr_rec_nb_s);
+    fifo_wb_rd_mask_din_s <= "1111" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(3,2) else
+                             "0111" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(2,2) else
+                             "0011" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(1,2) else
+                             "0001" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(0,2);
+    --- TODO fifo_wb_rd_mask_din_s <= fifo_wb_rd_mask_din_a(TO_INTEGER(wb_rd_read_addr_rec_nb_s));
     
-    fifo_wb_rd_data_rd_s <= not fifo_wb_rd_data_empty_s;
+    fifo_wb_rd_data_rd_s <= not fifo_wb_rd_data_empty_s and not fifo_wb_rd_mask_empty_s;
+    fifo_wb_rd_mask_rd_s <= not fifo_wb_rd_mask_empty_s and not fifo_wb_rd_data_empty_s;
     
-    wb_rd_ack_s <= '1' when wb_read_data_cnt /= 3 or wb_read_data_cnt_d /=3 else
+    wb_rd_ack_s <= fifo_wb_rd_mask_dout_s(wb_read_data_cnt) when wb_read_data_cnt /= 3 or wb_read_data_cnt_d /=3 else 
                    '0'; 
     
     fifo_wb_rd_data_dout_g: for i in 0 to 3 generate
@@ -390,6 +427,19 @@ begin
         empty => fifo_wb_rd_addr_empty_s
       );
     
+    fifo_wb_read_mask : fifo_4x16
+        PORT MAP (
+          rst => rst_s,
+          wr_clk => wb_clk_i,
+          rd_clk => wb_clk_i,
+          din => fifo_wb_rd_mask_din_s,
+          wr_en => fifo_wb_rd_mask_wr_s,
+          rd_en => fifo_wb_rd_mask_rd_s,
+          dout => fifo_wb_rd_mask_dout_s,
+          full => fifo_wb_rd_mask_full_s,
+          empty => fifo_wb_rd_mask_empty_s
+        );
+    
     fifo_wb_read_data : fifo_256x16
         PORT MAP (
           rst => rst_s,
@@ -404,11 +454,21 @@ begin
         );    
     
     --------------------------------------
+    -- Arbiter
+    --------------------------------------
+    
+    ddr_addr_o <= fifo_wb_wr_dout_s(314 downto 288) when fifo_wb_wr_rd_d = '1' else
+                  fifo_wb_rd_addr_dout_s;
+                  
+    ddr_cmd_o <= "001" when  fifo_wb_wr_rd_d = '1' else
+                               "000";
+                               
+    ddr_cmd_en_o <= fifo_wb_wr_rd_d or fifo_wb_rd_addr_rd_d;
+    
+    --------------------------------------
     -- DDR Control
     --------------------------------------
-    ddr_cmd_o <= "001" when  fifo_wb_wr_rd_d = '1' else
-                 "000";
-    ddr_cmd_en_o <= fifo_wb_wr_rd_d or fifo_wb_rd_addr_rd_d;
+
     
     
     fifo_wb_wr_rd_s <= ddr_wdf_rdy_i and not fifo_wb_wr_empty_s;
@@ -432,7 +492,7 @@ begin
     --------------------------------------
     -- Stall proc
     --------------------------------------
-	wb_stall_s <= fifo_wb_wr_full_s or (not ddr_wdf_rdy_i) or (not ddr_rdy_i);
+	wb_stall_s <= fifo_wb_wr_full_s or fifo_wb_rd_addr_full_s or (not ddr_wdf_rdy_i) or (not ddr_rdy_i);
 	wb_stall_o <= wb_stall_s;
     p_wb_stall : process (wb_clk_i, rst_n_i)
     begin

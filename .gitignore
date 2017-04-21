@@ -1,3 +1,7 @@
 *.log
-/simple_pcie/simple_pcie.srcs/sources_1/imports/quickpcie-expert_gen2_v156_b085_xilinx_eval/
 /.Xil
+*.jou
+*.wdb
+*.sdb
+*.btree
+

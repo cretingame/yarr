@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -149,6 +149,8 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   constant g_DATA_PORT_SIZE  : integer := 64;
   
   constant c_pause : std_logic := '0';
+  constant c_write : std_logic := '1';
+  constant c_read : std_logic := '1';
   
   signal clk_tbs : STD_LOGIC;
   signal rst_tbs : STD_LOGIC;
@@ -247,45 +249,40 @@ begin
         
         wait for 5*period;
         
+        ---------------------------
+        -- WRITE
+        ---------------------------
+        if c_write = '1' then
+        
+        for I in 0 to 8 loop
         step <= 2;
-        wb_addr_tbs <= X"00000000";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE0";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 3;
-        wb_addr_tbs <= X"00000000";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 2;
-        wb_addr_tbs <= X"00000001";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE1";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 3;
-        wb_addr_tbs <= X"00000001";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for period;      
 
+        wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
+        wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32));
+        wb_cyc_tbs <= '1';
+        wb_sel_tbs <= "11111111";
+        wb_stb_tbs <= '1';
+        wb_we_tbs <= '1';
+        wait for period;
+        
+        end loop;
+        
+        
+        step <= 3;
+        wb_addr_tbs <= X"00000000";
+        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+        wb_cyc_tbs <= '1';
+        wb_sel_tbs <= "11111111";
+        wb_stb_tbs <= '0';
+        wb_we_tbs <= '0';
+        wait for period;
+        
+        
+        for I in 0 to 15 loop
         step <= 4;
-        wb_addr_tbs <= X"00000002";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE2";
+
+        wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
+        wb_dat_m2s_tbs <= X"DEADBABE" & std_logic_vector(to_unsigned(I,32));
         wb_cyc_tbs <= '1';
         wb_sel_tbs <= "11111111";
         wb_stb_tbs <= '1';
@@ -293,272 +290,81 @@ begin
         wait for period;
         
         step <= 5;
-        wb_addr_tbs <= X"00000002";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+        wb_addr_tbs <= X"DEADCACA";
+        wb_dat_m2s_tbs <= X"DEADCACA" & X"DEADCACA";
         wb_cyc_tbs <= '1';
         wb_sel_tbs <= "11111111";
         wb_stb_tbs <= '0';
         wb_we_tbs <= '1';
         wait for period;
+        
+        end loop;
         
         step <= 6;
-        wb_addr_tbs <= X"00000003";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE3";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 7;
-        wb_addr_tbs <= X"00000003";
+        wb_addr_tbs <= X"00000000";
         wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
         wb_cyc_tbs <= '1';
         wb_sel_tbs <= "11111111";
         wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 10;
-        wb_addr_tbs <= X"00000004";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE10";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 11;
-        wb_addr_tbs <= X"00000005";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE11";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 12;
-        wb_addr_tbs <= X"00000006";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE12";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 13;
-        wb_addr_tbs <= X"00000007";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE13";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
+        wb_we_tbs <= '0';
         wait for period;        
         
-        step <= 14;
-        wb_addr_tbs <= X"00000000";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for period;
+        end if;
         
+        wait for 5*period;
         
-        step <= 20;
-        wb_addr_tbs <= X"00000008";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE14";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
+        ---------------------------
+        -- READ
+        ---------------------------
+        if c_read = '1' then
         
-        step <= 21;
-        wb_addr_tbs <= X"00000000";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for 10*period;
-        
-        step <= 22;
-        wb_addr_tbs <= X"00000009";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE15";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period; 
-        
-        step <= 23;
-        wb_addr_tbs <= X"0000000A";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE16";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;         
-        
-        step <= 30;
+        -- First loop
+        for J in 0 to 3 loop
+            for I in 0 to J loop
+            
+                step <= 100 + J*10 + I;
+                wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
+                wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+                wb_cyc_tbs <= '1';
+                wb_sel_tbs <= "11111111";
+                wb_stb_tbs <= '1';
+                wb_we_tbs <= '0';
+                wait for period;
+            
+            end loop;
+            
+            step <= 200 + J*10;
+            wb_addr_tbs <= X"00000000";
+            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '0';
+            wb_we_tbs <= '0';
+            wait for 8*period;
+            
+        end loop;
+        step <= 8;
         wb_addr_tbs <= X"000000FA";
         wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
         wb_cyc_tbs <= '0';
         wb_sel_tbs <= "11111111";
         wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        
-        wait for 5*period;
-        
-        for I in 0 to 3 loop
-        
-        step <= 50;
-        wb_addr_tbs <= X"000000F0";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE0";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
         wb_we_tbs <= '0';
-        wait for period;
+        wait for 10*period;        
         
         
-        if c_pause = '1' then
-        step <= 51;
-        wb_addr_tbs <= X"000000E0";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '0';
-        wait for period;
-        end if;
+        -- Second loop with break
         
-        step <= 52;
-        wb_addr_tbs <= X"000000F1";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE1";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
+        for I in 0 to 31 loop
         
-        if c_pause = '1' then
-        step <= 53;
-        wb_addr_tbs <= X"000000E1";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '0';
-        wait for period;
-        end if;    
-
-        step <= 54;
-        wb_addr_tbs <= X"000000F2";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE2";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        if c_pause = '1' then
---        step <= 55;
---        wb_addr_tbs <= X"000000F2";
---        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
---        wb_cyc_tbs <= '1';
---        wb_sel_tbs <= "11111111";
---        wb_stb_tbs <= '0';
---        wb_we_tbs <= '0';
---        wait for period;
-        end if;
-        
-        step <= 56;
-        wb_addr_tbs <= X"000000F3";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE3";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        if c_pause = '1' then
-        step <= 57;
-        wb_addr_tbs <= X"000000F3";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '0';
-        wait for period;
-        end if; 
-                
-        step <= 60;
-        wb_addr_tbs <= X"000000A0";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE0";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-
-
-        
-        step <= 62;
-        wb_addr_tbs <= X"000000A1";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE1";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        --        step <= 53;
-        --        wb_addr_tbs <= X"000000E1";
-        --        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        --        wb_cyc_tbs <= '1';
-        --        wb_sel_tbs <= "11111111";
-        --        wb_stb_tbs <= '0';
-        --        wb_we_tbs <= '0';
-        --        wait for period;      
-        
-        step <= 64;
-        wb_addr_tbs <= X"000000A2";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE2";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        --        step <= 55;
-        --        wb_addr_tbs <= X"000000F2";
-        --        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        --        wb_cyc_tbs <= '1';
-        --        wb_sel_tbs <= "11111111";
-        --        wb_stb_tbs <= '0';
-        --        wb_we_tbs <= '0';
-        --        wait for period;
-        
-        step <= 66;
-        wb_addr_tbs <= X"000000A3";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE3";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        --        step <= 57;
-        --        wb_addr_tbs <= X"000000F3";
-        --        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        --        wb_cyc_tbs <= '1';
-        --        wb_sel_tbs <= "11111111";
-        --        wb_stb_tbs <= '0';
-        --        wb_we_tbs <= '0';
-        --        wait for period;
+            step <= 300+I;
+            wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
+            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEE0";
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '1';
+            wb_we_tbs <= '0';
+            wait for period;
         
         end loop;
         
@@ -571,47 +377,7 @@ begin
         wb_we_tbs <= '0';
         wait for period;
         
-        wait until wb_ack_s = '0' and wb_ack_s'event;
-        
-        step <= 101;
-        wb_addr_tbs <= X"000000FA";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '0';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        
-        
-        step <= 102;
-        wb_addr_tbs <= X"000000FB";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE10";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-
-        
-        step <= 103;
-        wb_addr_tbs <= X"000000FC";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBE11";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '0';
-        wait for period;
-        
-        step <= 200;
-        wb_addr_tbs <= X"000000FA";
-        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
-        wb_cyc_tbs <= '0';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '0';
-        wait for period;
+        end if;
         
         wait;
         
