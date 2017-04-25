@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fifo_32x16_synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1492721220">
-  <File Type="RDS-UTIL" Name="fifo_32x16_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="fifo_32x16_drc_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="fifo_32x16_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="fifo_32x16.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="fifo_32x16_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="fifo_32x16_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fifo_32x16_timing_summary_synth.rpt"/>
   <File Type="RDS-RDS" Name="fifo_32x16.vds"/>
   <File Type="PA-TCL" Name="fifo_32x16.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fifo_32x16_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="fifo_32x16_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fifo_32x16_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fifo_32x16.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_32x16">
     <File Path="$PSRCDIR/sources_1/ip/fifo_32x16/fifo_32x16.xci">
       <FileInfo>
