@@ -12,11 +12,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1168700000fs"></ZoomStartTime>
-      <ZoomEndTime time="4678700001fs"></ZoomEndTime>
-      <Cursor1Time time="1600000000fs"></Cursor1Time>
+      <ZoomStartTime time="1811599999fs"></ZoomStartTime>
+      <ZoomEndTime time="5321600000fs"></ZoomEndTime>
+      <Cursor1Time time="3200000000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="43" />
+   <WVObjectSize size="47" />
    <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/clk_tbs">
       <obj_property name="ElementShortName">clk_tbs</obj_property>
       <obj_property name="ObjectShortName">clk_tbs</obj_property>
@@ -131,9 +131,28 @@
       <obj_property name="ElementShortName">wb_read_data_cnt_d</obj_property>
       <obj_property name="ObjectShortName">wb_read_data_cnt_d</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_write_row_test">
+      <obj_property name="ElementShortName">wb_write_row_test</obj_property>
+      <obj_property name="ObjectShortName">wb_write_row_test</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_wr_addr_row_s">
+      <obj_property name="ElementShortName">wb_wr_addr_row_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_wr_addr_row_s[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_addr_din_a">
+      <obj_property name="ElementShortName">fifo_wb_wr_addr_din_a[0:3][26:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_wb_wr_addr_din_a[0:3][26:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_addr_din_s">
+      <obj_property name="ElementShortName">fifo_wb_wr_addr_din_s[26:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_wb_wr_addr_din_s[26:0]</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group2867">
       <obj_property name="label">fifo_wb_write</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_din_s">
          <obj_property name="ElementShortName">fifo_wb_wr_din_s[314:0]</obj_property>
          <obj_property name="ObjectShortName">fifo_wb_wr_din_s[314:0]</obj_property>

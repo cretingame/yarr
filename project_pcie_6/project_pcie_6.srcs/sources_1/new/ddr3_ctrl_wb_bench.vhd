@@ -254,19 +254,65 @@ begin
         ---------------------------
         if c_write = '1' then
         
-        for I in 0 to 8 loop
-        step <= 2;
-
-        wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
-        wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32));
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
         
+        for J in 0 to 3 loop
+            for I in 0 to J loop
+            
+                step <= 100 + J*10 + I;
+                wb_addr_tbs <= std_logic_vector(to_unsigned(I,32)+J*16);
+                wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32)+J*16);
+                wb_cyc_tbs <= '1';
+                wb_sel_tbs <= "11111111";
+                wb_stb_tbs <= '1';
+                wb_we_tbs <= '1';
+                wait for period;
+            
+            end loop;
+            
+            step <= 200 + J*10;
+            wb_addr_tbs <= X"00000000";
+            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '0';
+            wb_we_tbs <= '1';
+            wait for 8*period;
+            
         end loop;
         
+        step <= 2;
+        wb_addr_tbs <= X"00000000";
+        wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+        wb_cyc_tbs <= '1';
+        wb_sel_tbs <= "11111111";
+        wb_stb_tbs <= '0';
+        wb_we_tbs <= '0';
+        wait for 10*period;
+        
+        for J in 0 to 3 loop
+            for I in 0 to J loop
+            
+                step <= 300 + J*10 + I;
+                wb_addr_tbs <= std_logic_vector(to_unsigned(I*32,32)+J*16);
+                wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32)+J*16);
+                wb_cyc_tbs <= '1';
+                wb_sel_tbs <= "11111111";
+                wb_stb_tbs <= '1';
+                wb_we_tbs <= '1';
+                wait for period;
+            
+            end loop;
+            
+            step <= 400 + J*10;
+            wb_addr_tbs <= X"00000000";
+            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '0';
+            wb_we_tbs <= '1';
+            wait for 8*period;
+            
+        end loop;
         
         step <= 3;
         wb_addr_tbs <= X"00000000";
@@ -275,30 +321,22 @@ begin
         wb_sel_tbs <= "11111111";
         wb_stb_tbs <= '0';
         wb_we_tbs <= '0';
-        wait for period;
+        wait for 10*period;
         
         
         for I in 0 to 15 loop
-        step <= 4;
-
-        wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
-        wb_dat_m2s_tbs <= X"DEADBABE" & std_logic_vector(to_unsigned(I,32));
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '1';
-        wb_we_tbs <= '1';
-        wait for period;
-        
-        step <= 5;
-        wb_addr_tbs <= X"DEADCACA";
-        wb_dat_m2s_tbs <= X"DEADCACA" & X"DEADCACA";
-        wb_cyc_tbs <= '1';
-        wb_sel_tbs <= "11111111";
-        wb_stb_tbs <= '0';
-        wb_we_tbs <= '1';
-        wait for period;
+            step <= 500+I;
+    
+            wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
+            wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32));
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '1';
+            wb_we_tbs <= '1';
+            wait for period;
         
         end loop;
+        
         
         step <= 6;
         wb_addr_tbs <= X"00000000";
@@ -353,7 +391,6 @@ begin
         wait for 10*period;        
         
         
-        -- Second loop with break
         
         for I in 0 to 31 loop
         

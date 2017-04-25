@@ -123,6 +123,7 @@ architecture behavioral of ddr3_ctrl_wb is
       );
     END COMPONENT;
     
+    
     --------------------------------------
     -- Constants
     --------------------------------------
@@ -145,12 +146,20 @@ architecture behavioral of ddr3_ctrl_wb is
     signal write_s : std_logic;
     
     signal wb_wr_addr_s : std_logic_vector(26 downto 0);
-    signal wb_rd_addr_s : std_logic_vector(26 downto 0);
+    signal wb_wr_addr_d : std_logic_vector(26 downto 0);
+    signal wb_wr_addr_row_current_s : std_logic;
+    signal wb_wr_addr_row_s : std_logic_vector(3 downto 0);
+    signal wb_wr_addr_row_a_s : std_logic_vector(2 downto 0);
+    signal wb_wr_addr_row_b_s : std_logic_vector(2 downto 0);
+    
+    --signal wb_rd_addr_s : std_logic_vector(26 downto 0);
     
     type data_array is array (0 to 3) of std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
     signal fifo_wb_wr_data_din_a : data_array;
     type mask_array is array (0 to 3) of std_logic_vector(g_MASK_SIZE - 1 downto 0);
     signal fifo_wb_wr_mask_din_a : mask_array;
+    type addr_array is array (0 to 3) of std_logic_vector(g_BYTE_ADDR_WIDTH - 1 downto 0);
+    signal fifo_wb_wr_addr_din_a : addr_array;
     signal fifo_wb_wr_mask_din_s : std_logic_vector(32 downto 0);
     signal fifo_wb_wr_addr_din_s : std_logic_vector(26 downto 0);
     signal fifo_wb_wr_din_s : std_logic_vector(314 downto 0);
@@ -162,7 +171,7 @@ architecture behavioral of ddr3_ctrl_wb is
     signal fifo_wb_wr_empty_s : std_logic;
     
     
-    type addr_array is array (0 to 3) of std_logic_vector(g_BYTE_ADDR_WIDTH - 1 downto 0);
+    
     signal fifo_wb_rd_addr_din_a : addr_array;
     
     signal fifo_wb_rd_addr_din_s : std_logic_vector(26 downto 0);
@@ -204,6 +213,7 @@ architecture behavioral of ddr3_ctrl_wb is
     -- Counter
     --------------------------------------
     signal wb_write_cnt : integer range 0 to 3;
+    signal wb_write_cnt_d : integer range 0 to 3;
     signal wb_write_wait_cnt : unsigned(3 downto 0);
     
     signal wb_read_cnt : integer range 0 to 3;
@@ -212,6 +222,33 @@ architecture behavioral of ddr3_ctrl_wb is
     signal wb_read_data_cnt_d : integer range 0 to 3;
     
     signal wb_read_test : integer;
+    
+    
+    --------------------------------------
+    -- Function
+    --------------------------------------
+    
+    function inarow_f(addr_a : addr_array) return std_logic_vector is
+        constant input_number_c : integer := 4;
+        variable inarow_v : std_logic_vector(input_number_c-1 downto 0);
+        variable inarow_a_v : std_logic_vector(2 downto 0);
+        variable inarow_b_v : std_logic_vector(2 downto 0);
+    begin
+        for i in 0 to input_number_c-2 loop
+            if unsigned(addr_a(i)) = unsigned(addr_a(i+1)) - 1 then
+                inarow_a_v(i) := '1';
+            else
+                inarow_a_v(i) := '0';
+            end if;
+        end loop;
+        
+        for i in 0 to input_number_c-3 loop
+                inarow_b_v(i+1) := inarow_b_v(i) and inarow_a_v(i+1);
+        end loop;
+        
+        return inarow_v;
+    
+    end function inarow_f;
     
 begin
     rst_s <= not rst_n_i;
@@ -228,10 +265,12 @@ begin
     begin
         if (rst_n_i = '0') then
             wb_write_cnt <= 0;
+            wb_write_cnt_d <= 0;
             wb_write_wait_cnt <= c_write_wait_time;
             fifo_wb_wr_addr_din_s <= (others => '0');
             wb_wr_addr_s <= (others => '0');
             for i in 0 to 3 loop
+                fifo_wb_wr_addr_din_a(i) <= (others => '1');
                 fifo_wb_wr_data_din_a(i) <= (others => '0');
                 fifo_wb_wr_mask_din_a(i) <= (others => '0');
             end loop;
@@ -239,30 +278,34 @@ begin
             fifo_wb_wr_wr_s <= '0';
             wb_wr_ack_s <= '0';
         elsif rising_edge(wb_clk_i) then
+            wb_write_cnt_d <= wb_write_cnt;
             if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '1') then
                 wb_wr_addr_s <= wb_addr_i(26 downto 0);
+                fifo_wb_wr_addr_din_a(wb_write_cnt) <= wb_addr_i(26 downto 0);
                 fifo_wb_wr_data_din_a(wb_write_cnt) <= wb_data_i;
                 fifo_wb_wr_mask_din_a(wb_write_cnt) <= wb_sel_i;
                 wb_wr_ack_s <= '1';
+
                 if(wb_write_cnt >= 3) then
-                    wb_write_cnt <= 0; -- Counter
+                    wb_write_cnt <= 0;
                     fifo_wb_wr_wr_s <= '1';
                     fifo_wb_wr_addr_din_s <= wb_addr_i(26 downto 0);
                 else
-                    wb_write_cnt <= wb_write_cnt + 1; -- Counter
-                    wb_write_wait_cnt <= c_write_wait_time; -- Counter
+                    wb_write_cnt <= wb_write_cnt + 1;
+                    wb_write_wait_cnt <= c_write_wait_time;
                     fifo_wb_wr_wr_s <= '0';
                 end if;
+
             else
                  
                  fifo_wb_wr_wr_s <= '0';
                  wb_wr_ack_s <= '0';
                  if(wb_write_cnt /= 0) then
-                     wb_write_wait_cnt <= wb_write_wait_cnt - 1; -- Counter
+                     wb_write_wait_cnt <= wb_write_wait_cnt - 1;
                      if (wb_write_wait_cnt = 0) then
                          wb_write_cnt <= 0;
                          fifo_wb_wr_wr_s <= '1';
-                         wb_write_wait_cnt <= c_write_wait_time; -- Counter
+                         wb_write_wait_cnt <= c_write_wait_time; 
                          if (wb_write_cnt = 3) then
                              fifo_wb_wr_addr_din_s <= std_logic_vector(UNSIGNED(wb_wr_addr_s) + 1);
                              fifo_wb_wr_mask_din_a(3) <= X"00";
@@ -288,6 +331,33 @@ begin
             end if;
         end if;
     end process p_wb_write;
+    
+    p_wb_write_address_row : process(fifo_wb_wr_addr_din_a,wb_wr_addr_row_a_s,wb_wr_addr_row_b_s)
+    begin
+        wb_wr_addr_row_b_s(0) <= wb_wr_addr_row_a_s(0);
+        for i in 0 to 2 loop
+            if unsigned(fifo_wb_wr_addr_din_a(i)) = unsigned(fifo_wb_wr_addr_din_a(i+1)) - 1 then
+                wb_wr_addr_row_a_s(i) <= '1';
+            else
+                wb_wr_addr_row_a_s(i) <= '0';
+            end if;
+            
+            
+        end loop;
+        
+        for i in 0 to 1 loop
+            wb_wr_addr_row_b_s(i+1) <= wb_wr_addr_row_b_s(i) and wb_wr_addr_row_a_s(i+1);
+        end loop;
+        
+        --wb_wr_addr_row_s <= wb_wr_addr_row_b_s(2);
+        wb_wr_addr_row_s(0) <= '1';
+        for i in 1 to 3 loop
+            wb_wr_addr_row_s(i) <= wb_wr_addr_row_b_s(i-1);
+        end loop;
+        
+    end process p_wb_write_address_row;
+    
+    wb_wr_addr_row_current_s <= wb_wr_addr_row_s(wb_write_cnt_d);
     
     fifo_wb_wr_din_s <= fifo_wb_wr_addr_din_s &
                         fifo_wb_wr_mask_din_a(3) & 
@@ -352,8 +422,8 @@ begin
                 fifo_wb_rd_mask_wr_s <= '1';
             else
                 wb_read_test <= 3;
-                wb_read_cnt <= wb_read_cnt + 1; -- Counter
-                wb_read_wait_cnt <= c_read_wait_time; -- Counter
+                wb_read_cnt <= wb_read_cnt + 1;
+                wb_read_wait_cnt <= c_read_wait_time;
                 fifo_wb_rd_addr_wr_s <= '0';
                 fifo_wb_rd_mask_wr_s <= '0';
             end if;
@@ -362,12 +432,12 @@ begin
              fifo_wb_rd_addr_wr_s <= '0';
              fifo_wb_rd_mask_wr_s <= '0';
              if wb_read_cnt /= 0 then
-                wb_read_wait_cnt <= wb_read_wait_cnt - 1; -- Counter
+                wb_read_wait_cnt <= wb_read_wait_cnt - 1;
                 wb_read_test <= 5;
                 if wb_read_wait_cnt = 0 then
                     wb_read_test <= 6;
                     wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(wb_read_cnt-1,2);
-                    wb_read_cnt <= 0; -- Counter
+                    wb_read_cnt <= 0;
                     fifo_wb_rd_addr_wr_s <= '1'; 
                     fifo_wb_rd_mask_wr_s <= '1';      
                 end if;   
@@ -384,7 +454,7 @@ begin
         elsif rising_edge(wb_clk_i) then
             wb_read_data_cnt_d <= wb_read_data_cnt;
             if fifo_wb_rd_data_rd_s = '1' then
-                wb_read_data_cnt <= 0; -- Counter
+                wb_read_data_cnt <= 0;
             end if;
             
             if wb_read_data_cnt /= 3 then
