@@ -143,28 +143,29 @@ architecture behavioral of ddr3_ctrl_wb is
     --------------------------------------
     signal rst_s : std_logic;
     
-    --signal read_s : std_logic;
-    --signal write_s : std_logic;
-    
-    --signal wb_wr_addr_s : std_logic_vector(26 downto 0);
-    --signal wb_wr_addr_d : std_logic_vector(26 downto 0);
-    --signal wb_wr_addr_row_current_s : std_logic;
+
     signal wb_wr_addr_row_s : std_logic_vector(3 downto 0);
-    --signal wb_wr_addr_row_a_s : std_logic_vector(2 downto 0);
-    --signal wb_wr_addr_row_b_s : std_logic_vector(2 downto 0);
     signal wb_wr_row_size_s : integer;
+    signal wb_wr_addr_row_next_s : std_logic_vector(3 downto 0);
+    signal wb_wr_row_size_next_s : integer;    
     
-    --signal wb_rd_addr_s : std_logic_vector(26 downto 0);
+    
+
     
     type data_array is array (0 to 3) of std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
-    signal wb_wr_data_shift_a : data_array;
     type mask_array is array (0 to 3) of std_logic_vector(g_MASK_SIZE - 1 downto 0);
+    type addr_array is array (0 to 3) of std_logic_vector(g_BYTE_ADDR_WIDTH - 1 downto 0);
+    
+    signal wb_wr_data_shift_a : data_array;
     signal wb_wr_mask_shift_a : mask_array;
     signal wb_wr_qmask_shift_s : std_logic_vector(c_register_shift_size-1 downto 0);
-    type addr_array is array (0 to 3) of std_logic_vector(g_BYTE_ADDR_WIDTH - 1 downto 0);
     signal wb_wr_addr_shift_a : addr_array;
+    
+
+    
     signal wb_wr_addr_ref_a : addr_array;
-    signal wb_wr_single_s : std_logic;
+    signal wb_wr_addr_ref_next_a : addr_array;
+
     
     signal fifo_wb_wr_mask_din_s : std_logic_vector(31 downto 0);
     signal fifo_wb_wr_addr_din_s : std_logic_vector(26 downto 0);
@@ -176,9 +177,15 @@ architecture behavioral of ddr3_ctrl_wb is
     signal fifo_wb_wr_full_s : std_logic;
     signal fifo_wb_wr_empty_s : std_logic;
     
+    signal wb_rd_row_size_s : integer;
+    signal wb_rd_addr_row_s : std_logic_vector(3 downto 0);
+    signal wb_rd_qmask_shift_s : std_logic_vector(c_register_shift_size-1 downto 0);
+    signal wb_rd_data_shift_a : data_array;
+    signal wb_rd_ack_shift_s : std_logic_vector(c_register_shift_size-1 downto 0);
+    signal wb_rd_addr_shift_a : addr_array;
+    signal wb_rd_addr_ref_a : addr_array;
     
-    
-    signal fifo_wb_rd_addr_din_a : addr_array;
+    --signal fifo_wb_rd_addr_din_a : addr_array;
     
     signal fifo_wb_rd_addr_din_s : std_logic_vector(26 downto 0);
     signal fifo_wb_rd_addr_wr_s : std_logic;
@@ -201,7 +208,7 @@ architecture behavioral of ddr3_ctrl_wb is
     signal fifo_wb_rd_data_din_s : std_logic_vector(255 downto 0);
     signal fifo_wb_rd_data_wr_s : std_logic;
     signal fifo_wb_rd_data_rd_s : std_logic;
-    --signal fifo_wb_rd_data_rd_d : std_logic;
+    signal fifo_wb_rd_data_rd_d : std_logic;
     signal fifo_wb_rd_data_dout_s : std_logic_vector(255 downto 0);
     signal fifo_wb_rd_data_dout_a : data_array;
     signal fifo_wb_rd_data_full_s : std_logic;
@@ -268,39 +275,9 @@ begin
                     wb_wr_data_shift_a(i) <= wb_wr_data_shift_a(i+1);
                     wb_wr_mask_shift_a(i) <= wb_wr_mask_shift_a(i+1);
                     wb_wr_qmask_shift_s(i) <= wb_wr_qmask_shift_s(i+1);
-                end loop;            
-            end if;
-            
-            -- Erase the data sent
-            if(wb_wr_qmask_shift_s(0) = '1') then
-                --wb_write_cnt <= 1;
-                wb_write_wait_cnt <= c_write_wait_time;
-                for i in 0 to (wb_wr_row_size_s-1) loop
-                    wb_wr_addr_shift_a(i) <= (others => '1');
-                    wb_wr_data_shift_a(i) <= (others => '1');
-                    wb_wr_mask_shift_a(i) <= (others => '0');
-                    wb_wr_qmask_shift_s(i) <= '0';
-                end loop;
-            end if;
-            
-            
-            -- Input data going in the shift register
-            if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '1') then
-               
-               
-                --wb_wr_addr_s <= wb_addr_i(26 downto 0);
-                wb_wr_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(26 downto 0);
-                wb_wr_data_shift_a(c_register_shift_size-1) <= wb_data_i;
-                wb_wr_mask_shift_a(c_register_shift_size-1) <= wb_sel_i;
-                wb_wr_qmask_shift_s(c_register_shift_size-1) <= '1';
-                
-                wb_wr_ack_s <= '1';
- 
-                --wb_write_cnt <= wb_write_cnt + 1;
-                wb_write_wait_cnt <= c_write_wait_time;
-                
+                end loop;   
             else
-
+    
                  wb_wr_ack_s <= '0';
                  if(wb_wr_qmask_shift_s /= (wb_wr_qmask_shift_s'range => '0')) then
                      
@@ -317,21 +294,47 @@ begin
                          wb_wr_data_shift_a(c_register_shift_size-1) <= (others => '1');
                          wb_wr_mask_shift_a(c_register_shift_size-1) <= (others => '0');
                          wb_wr_qmask_shift_s(c_register_shift_size-1) <= '0';
-                            
+                         
                      else
                         wb_write_wait_cnt <= wb_write_wait_cnt - 1;
                      end if;
-                 end if;
-
+                 end if;         
             end if;
-
+            
+            -- Erase the data sent to the FIFO
+            if(wb_wr_qmask_shift_s(0) = '1') then
+                --wb_write_cnt <= 1;
+                wb_write_wait_cnt <= c_write_wait_time;
+                for i in 0 to (wb_wr_row_size_s-1) loop
+                    wb_wr_addr_shift_a(i) <= (others => '1');
+                    wb_wr_data_shift_a(i) <= (others => '1');
+                    wb_wr_mask_shift_a(i) <= (others => '0');
+                    wb_wr_qmask_shift_s(i) <= '0';
+                end loop;
+            end if;
+            
+            
+            -- Input data going in the shift register
+            if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '1') then
+                wb_wr_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(26 downto 0);
+                wb_wr_data_shift_a(c_register_shift_size-1) <= wb_data_i;
+                wb_wr_mask_shift_a(c_register_shift_size-1) <= wb_sel_i;
+                wb_wr_qmask_shift_s(c_register_shift_size-1) <= '1';
+                
+                wb_wr_ack_s <= '1';
+                wb_write_wait_cnt <= c_write_wait_time;
+            end if;
+            
+            
         end if;
         
         
         
     end process p_wb_write;
     
-    p_wb_write_rtl : process (wb_write_wait_cnt,wb_wr_addr_shift_a,wb_wr_qmask_shift_s,wb_wr_single_s,wb_wr_addr_row_s)
+    
+    
+    p_wb_write_rtl : process (wb_write_wait_cnt,wb_wr_addr_shift_a,wb_wr_qmask_shift_s,wb_wr_addr_row_s)
     begin
         if (wb_wr_qmask_shift_s(0) = '1') then
             fifo_wb_wr_wr_s <= '1';
@@ -341,13 +344,7 @@ begin
         
         for i in 0 to (c_register_shift_size-1) loop
             wb_wr_addr_ref_a(i) <= std_logic_vector(unsigned(wb_wr_addr_shift_a(i)) + (c_register_shift_size-1) - i);
-        end loop;
-        
-        wb_wr_single_s <= '0';
-        for i in 0 to (c_register_shift_size-1) loop
-            if(wb_wr_qmask_shift_s(i) = '1' and wb_wr_addr_row_s(i) = '0') then
-                wb_wr_single_s <= '1';
-            end if;
+          
         end loop;
         
     end process p_wb_write_rtl;
@@ -356,13 +353,15 @@ begin
     
     p_wb_write_address_row : process(wb_wr_addr_ref_a)
     begin
+        wb_wr_addr_row_next_s(0) <= '1';
         wb_wr_addr_row_s(0) <= '1';
         for i in 1 to 3 loop
-            if wb_wr_addr_ref_a(i) = wb_wr_addr_ref_a(0) then
+            if wb_wr_addr_ref_a(i) = wb_wr_addr_ref_a(0) and wb_wr_qmask_shift_s(i) = '1' then
                 wb_wr_addr_row_s(i) <= '1';
             else
                 wb_wr_addr_row_s(i) <= '0';
             end if;
+          
             
         end loop;
         
@@ -374,9 +373,7 @@ begin
         2 when "0011",
         1 when "0001",
         0 when others;
-    
-    --fifo_wb_wr_addr_din_s <= wb_wr_addr_ref_a(c_register_shift_size-1) when wb_wr_single_s = '0' else
-    --                         wb_wr_addr_ref_a(c_register_shift_size-2);
+   
     
     fifo_wb_wr_addr_din_s <= wb_wr_addr_ref_a(0);
     
@@ -425,87 +422,142 @@ begin
         wb_read_test <= 0;
         wb_read_cnt <= 0;
         wb_read_wait_cnt <= c_read_wait_time;
-        fifo_wb_rd_addr_wr_s <= '0';
-        fifo_wb_rd_mask_wr_s <= '0';
-        wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(0,2);
-        for i in 0 to 3 loop
-            fifo_wb_rd_addr_din_a(i) <= (others => '0');
-            --fifo_wb_rd_mask_din_a(i) <= (others => '0');
+        
+        wb_rd_qmask_shift_s <= (others => '0');
+        
+        for i in 0 to c_register_shift_size-1 loop
+            wb_rd_addr_shift_a(i) <= (others => '1');
         end loop;
+        
     elsif rising_edge(wb_clk_i) then
+        -- Register Shift
         if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '0') then
-            wb_read_test <= 1;
-            fifo_wb_rd_addr_din_a(wb_read_cnt) <= wb_addr_i(26 downto 0);
-            --fifo_wb_rd_mask_din_a(wb_read_cnt) <= wb_sel_i;
-            if (wb_read_cnt >= 3) then
-                wb_read_test <= 2;
-                wb_read_cnt <= 0; -- Counter
-                wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(3,2);
-                fifo_wb_rd_addr_wr_s <= '1';
-                fifo_wb_rd_mask_wr_s <= '1';
-            else
-                wb_read_test <= 3;
-                wb_read_cnt <= wb_read_cnt + 1;
-                wb_read_wait_cnt <= c_read_wait_time;
-                fifo_wb_rd_addr_wr_s <= '0';
-                fifo_wb_rd_mask_wr_s <= '0';
-            end if;
+            for i in 0 to c_register_shift_size-2 loop
+                wb_rd_addr_shift_a(i) <= wb_rd_addr_shift_a(i+1);
+                wb_rd_qmask_shift_s(i) <= wb_rd_qmask_shift_s(i+1);
+            end loop; 
         else
-             wb_read_test <= 4;
-             fifo_wb_rd_addr_wr_s <= '0';
-             fifo_wb_rd_mask_wr_s <= '0';
-             if wb_read_cnt /= 0 then
-                wb_read_wait_cnt <= wb_read_wait_cnt - 1;
-                wb_read_test <= 5;
-                if wb_read_wait_cnt = 0 then
-                    wb_read_test <= 6;
-                    wb_rd_read_addr_rec_nb_s <= TO_UNSIGNED(wb_read_cnt-1,2);
-                    wb_read_cnt <= 0;
-                    fifo_wb_rd_addr_wr_s <= '1'; 
-                    fifo_wb_rd_mask_wr_s <= '1';      
-                end if;   
-             end if;
+          if(wb_rd_qmask_shift_s /= (wb_rd_qmask_shift_s'range => '0')) then
+                             
+                if (wb_read_wait_cnt = 0) then
+                
+                    for i in 0 to c_register_shift_size-2 loop
+                        wb_rd_addr_shift_a(i) <= wb_rd_addr_shift_a(i+1);
+                        wb_rd_qmask_shift_s(i) <= wb_rd_qmask_shift_s(i+1);
+                    end loop;
+                    
+                    wb_rd_addr_shift_a(c_register_shift_size-1) <= (others => '1');
+                    wb_rd_qmask_shift_s(c_register_shift_size-1) <= '0';
+                
+                else
+                    wb_read_wait_cnt <= wb_read_wait_cnt - 1;
+                end if;
+            end if;
+        end if;
+        
+        
+        -- Erase the data sent to the FIFO
+        if(wb_rd_qmask_shift_s(0) = '1') then
+
+            wb_read_wait_cnt <= c_read_wait_time;
+            for i in 0 to (wb_rd_row_size_s-1) loop
+                wb_rd_addr_shift_a(i) <= (others => '1');
+
+                wb_rd_qmask_shift_s(i) <= '0';
+            end loop;
+        end if;
+        
+        -- Input data going in the shift register
+        if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '0') then
+            wb_rd_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(26 downto 0);
+            wb_rd_qmask_shift_s(c_register_shift_size-1) <= '1';
+            
+            wb_read_wait_cnt <= c_read_wait_time;
+        else
+
         end if;
     end if;
     end process p_wb_read;
     
+    p_wb_read_rtl : process (wb_read_wait_cnt,wb_rd_addr_shift_a,wb_rd_qmask_shift_s,wb_rd_addr_row_s)
+    begin
+        if (wb_rd_qmask_shift_s(0) = '1') then
+            fifo_wb_rd_addr_wr_s <= '1';
+            fifo_wb_rd_mask_wr_s <= '1';
+        else
+            fifo_wb_rd_addr_wr_s <= '0';
+            fifo_wb_rd_mask_wr_s <= '0';
+        end if;
+        
+        for i in 0 to (c_register_shift_size-1) loop
+            wb_rd_addr_ref_a(i) <= std_logic_vector(unsigned(wb_rd_addr_shift_a(i)) + (c_register_shift_size-1) - i);
+        end loop;
+        
+    end process p_wb_read_rtl;
+    
+    
+    
+    p_wb_read_address_row : process(wb_rd_addr_ref_a)
+    begin
+        wb_rd_addr_row_s(0) <= '1';
+        for i in 1 to 3 loop
+            if wb_rd_addr_ref_a(i) = wb_rd_addr_ref_a(0) then
+                wb_rd_addr_row_s(i) <= '1';
+            else
+                wb_rd_addr_row_s(i) <= '0';
+            end if;
+            
+        end loop;
+        
+    end process p_wb_read_address_row;
+    
+    with wb_rd_addr_row_s select wb_rd_row_size_s <=
+        4 when "1111",
+        3 when "0111",
+        2 when "0011",
+        1 when "0001",
+        0 when others;
+    
+    
     p_wb_read_data : process(wb_clk_i, rst_n_i)
     begin
         if (rst_n_i = '0') then
-            wb_read_data_cnt <= 3;
-            wb_read_data_cnt_d <= 3;
+            for i in 0 to c_register_shift_size-1 loop
+                wb_rd_data_shift_a(i) <= (others => '0');
+                wb_rd_ack_shift_s(i) <= '0';
+                fifo_wb_rd_data_rd_d <= '0';
+            end loop;
         elsif rising_edge(wb_clk_i) then
-            wb_read_data_cnt_d <= wb_read_data_cnt;
-            if fifo_wb_rd_data_rd_s = '1' then
-                wb_read_data_cnt <= 0;
-            end if;
-            
-            if wb_read_data_cnt /= 3 then
-                wb_read_data_cnt <= wb_read_data_cnt + 1; -- Counter
+            fifo_wb_rd_data_rd_d <= fifo_wb_rd_data_rd_s;
+            if(fifo_wb_rd_data_rd_s = '1') then
+                for i in 0 to c_register_shift_size-1 loop
+                    wb_rd_data_shift_a(i) <= fifo_wb_rd_data_dout_s(63+i*64 downto 0+i*64);
+                    wb_rd_ack_shift_s(i) <= fifo_wb_rd_mask_dout_s(i);
+                end loop;
+            else
+                wb_rd_data_shift_a(c_register_shift_size-1) <= (others => '0');
+                wb_rd_ack_shift_s(c_register_shift_size-1) <= '0';
+                for i in 0 to c_register_shift_size-2 loop
+                    wb_rd_data_shift_a(i) <= wb_rd_data_shift_a(i+1);
+                    wb_rd_ack_shift_s(i) <= wb_rd_ack_shift_s(i+1);
+                end loop;                
             end if;
         end if;
     end process p_wb_read_data;
     
+ 
+    
+    fifo_wb_rd_addr_din_s <= wb_rd_addr_ref_a(0);
+    fifo_wb_rd_mask_din_s <= wb_rd_qmask_shift_s;
     
     
-    fifo_wb_rd_addr_din_s <= std_logic_vector(unsigned(fifo_wb_rd_addr_din_a(TO_INTEGER(wb_rd_read_addr_rec_nb_s))) + 3 - wb_rd_read_addr_rec_nb_s);
-    fifo_wb_rd_mask_din_s <= "1111" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(3,2) else
-                             "0111" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(2,2) else
-                             "0011" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(1,2) else
-                             "0001" when wb_rd_read_addr_rec_nb_s = TO_UNSIGNED(0,2);
-    --- TODO fifo_wb_rd_mask_din_s <= fifo_wb_rd_mask_din_a(TO_INTEGER(wb_rd_read_addr_rec_nb_s));
+    fifo_wb_rd_data_rd_s <= (not fifo_wb_rd_data_empty_s) and (not fifo_wb_rd_mask_empty_s) and (not (wb_rd_ack_shift_s(1) or wb_rd_ack_shift_s(2) or wb_rd_ack_shift_s(3)));
+    fifo_wb_rd_mask_rd_s <= (not fifo_wb_rd_mask_empty_s) and (not fifo_wb_rd_data_empty_s) and (not (wb_rd_ack_shift_s(1) or wb_rd_ack_shift_s(2) or wb_rd_ack_shift_s(3)));
     
-    fifo_wb_rd_data_rd_s <= not fifo_wb_rd_data_empty_s and not fifo_wb_rd_mask_empty_s;
-    fifo_wb_rd_mask_rd_s <= not fifo_wb_rd_mask_empty_s and not fifo_wb_rd_data_empty_s;
+    wb_data_o <= wb_rd_data_shift_a(0);
+    wb_rd_ack_s <= wb_rd_ack_shift_s(0);
     
-    wb_rd_ack_s <= fifo_wb_rd_mask_dout_s(wb_read_data_cnt) when wb_read_data_cnt /= 3 or wb_read_data_cnt_d /=3 else 
-                   '0'; 
-    
-    fifo_wb_rd_data_dout_g: for i in 0 to 3 generate
-    begin
-        fifo_wb_rd_data_dout_a(i) <= fifo_wb_rd_data_dout_s(63+i*64 downto 0+i*64);
-    end generate;
-    wb_data_o <= fifo_wb_rd_data_dout_a(wb_read_data_cnt);
+
     
     fifo_wb_read_addr : fifo_27x16
       PORT MAP (

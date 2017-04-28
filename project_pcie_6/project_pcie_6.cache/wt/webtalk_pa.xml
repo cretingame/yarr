@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Apr 26 18:02:10 2017">
+<application name="pa" timeStamp="Fri Apr 28 10:00:20 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
 <property name="ProjectIteration" value="235" type="ProjectIteration"/>
@@ -20,14 +20,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddCfgMem" value="7" type="JavaHandler"/>
 <property name="AddSources" value="31" type="JavaHandler"/>
 <property name="CloseProject" value="2" type="JavaHandler"/>
-<property name="CopyIPHandler" value="15" type="JavaHandler"/>
+<property name="CopyIPHandler" value="16" type="JavaHandler"/>
 <property name="CoreView" value="24" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="5" type="JavaHandler"/>
 <property name="CustomizeCore" value="29" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
 <property name="EditConstraintSets" value="1" type="JavaHandler"/>
 <property name="EditCopy" value="1" type="JavaHandler"/>
-<property name="EditDelete" value="41" type="JavaHandler"/>
+<property name="EditDelete" value="42" type="JavaHandler"/>
 <property name="EditPaste" value="54" type="JavaHandler"/>
 <property name="EditProbeEnums" value="15" type="JavaHandler"/>
 <property name="EditProperties" value="3" type="JavaHandler"/>
@@ -52,7 +52,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProgramCfgMem" value="4" type="JavaHandler"/>
 <property name="ProgramDevice" value="175" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="43" type="JavaHandler"/>
-<property name="RecustomizeCore" value="191" type="JavaHandler"/>
+<property name="RecustomizeCore" value="200" type="JavaHandler"/>
 <property name="RefreshDevice" value="9" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="1" type="JavaHandler"/>
@@ -68,11 +68,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SaveProjectAs" value="4" type="JavaHandler"/>
 <property name="ShowProductWebPage" value="3" type="JavaHandler"/>
 <property name="ShowPropertyEditor" value="1" type="JavaHandler"/>
-<property name="ShowView" value="143" type="JavaHandler"/>
-<property name="SimulationClose" value="294" type="JavaHandler"/>
-<property name="SimulationRestart" value="62" type="JavaHandler"/>
-<property name="SimulationRun" value="396" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="292" type="JavaHandler"/>
+<property name="ShowView" value="144" type="JavaHandler"/>
+<property name="SimulationClose" value="334" type="JavaHandler"/>
+<property name="SimulationRestart" value="66" type="JavaHandler"/>
+<property name="SimulationRun" value="439" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="337" type="JavaHandler"/>
 <property name="StopTrigger" value="130" type="JavaHandler"/>
 <property name="ToggleAutoFitSelection" value="2" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="3" type="JavaHandler"/>
@@ -82,14 +82,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewTaskIPIntegrator" value="1" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="9" type="JavaHandler"/>
 <property name="ViewTaskProgramandDebug" value="131" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="832" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="896" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="63" type="JavaHandler"/>
-<property name="ViewTaskSimulation" value="246" type="JavaHandler"/>
+<property name="ViewTaskSimulation" value="268" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="6" type="JavaHandler"/>
 <property name="WaveformNewConfiguration" value="6" type="JavaHandler"/>
 <property name="WaveformOpenConfiguration" value="2" type="JavaHandler"/>
 <property name="WaveformRenameObject" value="2" type="JavaHandler"/>
-<property name="WaveformSaveConfiguration" value="18" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="19" type="JavaHandler"/>
 <property name="WaveformSaveConfigurationAs" value="3" type="JavaHandler"/>
 <property name="WriteCfgMemFile" value="3" type="JavaHandler"/>
 <property name="XdcCreateClock" value="3" type="JavaHandler"/>
@@ -99,591 +99,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ui.views.b.h.f" value="2" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, Open Messages View" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, simulation_live_restart" value="3" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="30" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="30" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, ddr3_ctrl_wb_bench - Behavioral (ddr3_ctrl_wb_bench.vhd" value="7" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="45" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="31" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation], 9, true" value="21" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_pcie_6/project_pcie_6.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Simulation, sim_1, [VRFC 10-664] expression has 32 elements ; expected 33 [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:368]. ], 7, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Simulation, sim_1], 6" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Simulation], 5" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, wb_wr_qmask_shift_s[3:0] ; 0 ; Array, 0, wb_wr_qmask_shift_s[3:0], 0, true" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, wb_wr_row_size_s ; 1 ; Integer, 1, wb_wr_row_size_s, 0, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, wb_wr_single_s ; 0 ; Logic, 0, wb_wr_single_s, 0, false" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, cmp_ddr3_ctrl_wb ; ddr3_ctrl_wb(behavioral" value="4" type="GuiResourceData"/>
-<property name="RDIResource.AbstractSearchablePanel_SHOW_SEARCH, Objects_search" value="4" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="32" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, fifo_wb_wr_mask_din_s" value="2" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, qmask" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, wb_wr_single_s" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, write_cnt" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, Toggle Line Comments" value="5" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 1004, 288" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 101, 268" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 101, 345" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 104, 432" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 105, 124" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 105, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 107, 480" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 108, 96" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 113, 130" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 114, 242" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 114, 320" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 117, 122" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 124, 270" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 126, 489" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 126, 533" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 127, 130" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 127, 415" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 128, 177" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 132, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 132, 266" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 133, 324" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 134, 317" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 136, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 137, 535" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 137, 587" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 139, 285" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 140, 326" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 140, 382" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 140, 536" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 152, 393" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 152, 699" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 153, 264" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 153, 607" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 154, 607" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 155, 270" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 157, 513" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 158, 149" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 161, 35" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 161, 485" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 162, 36" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 168, 604" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 171, 47" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 154" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 329" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 40" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 418" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 175, 627" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 177, 246" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 178, 122" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 178, 339" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 180, 313" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 181, 306" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 184, 270" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 184, 492" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 187, 153" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 187, 37" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 187, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 190, 267" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 190, 346" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 191, 493" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 193, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 193, 344" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 193, 555" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 194, 124" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 197, 734" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 198, 483" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 199, 228" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 199, 30" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 200, 153" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 200, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 203, 42" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 206, 125" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 211, 147" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 211, 357" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 212, 267" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 216, 150" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 216, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 216, 549" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 22, 482" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 221, 578" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 223, 413" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 226, 441" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 228, 438" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 228, 442" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 229, 611" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 236, 311" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 241, 630" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 246, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 250, 515" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 254, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 254, 445" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 254, 447" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 256, 562" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 257, 270" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 258, 429" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 259, 388" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 26, 163" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 260, 413" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 262, 433" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 262, 652" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 269, 429" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 269, 523" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 270, 429" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 270, 674" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 271, 124" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 271, 363" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 271, 616" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 271, 617" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 276, 254" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 276, 255" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 282, 125" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 283, 615" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 283, 619" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 286, 255" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 288, 263" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 290, 444" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 296, 401" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 297, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 299, 316" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 308, 891" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 311, 119" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 311, 445" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 313, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 315, 683" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 317, 441" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 324, 407" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 325, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 325, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 332, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 333, 338" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 341, 530" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 343, 442" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 344, 451" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 352, 311" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 354, 646" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 357, 409" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 371, 759" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 377, 345" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 382, 220" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 384, 78" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 385, 391" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 385, 707" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 386, 407" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 387, 387" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 392, 389" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 396, 383" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 397, 82" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 408, 143" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 410, 649" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 413, 314" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 424, 677" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 429, 448" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 429, 630" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 436, 447" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 438, 394" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 449, 676" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 455, 460" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 467, 310" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 474, 341" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 474, 655" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 485, 707" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 49, 278" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 492, 613" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 493, 81" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 494, 76" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 497, 701" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 499, 81" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 518, 523" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 52, 327" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 520, 82" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 523, 78" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 524, 11" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 527, 81" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 53, 331" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 53, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 566, 691" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 58, 125" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 600, 117" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 601, 429" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 604, 431" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 605, 106" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 62, 709" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 63, 127" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 63, 382" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 630, 121" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 632, 435" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 634, 431" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 634, 437" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 659, 437" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 659, 438" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 666, 434" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 681, 435" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 689, 432" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 693, 432" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 696, 434" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 70, 344" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 717, 435" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 720, 432" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 721, 432" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 73, 321" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 73, 39" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 73, 99" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 748, 434" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 76, 350" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 77, 124" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 77, 276" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 775, 435" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 795, 14" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 799, 14" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 806, 434" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 81, 482" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 82, 329" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 821, 12" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 823, 18" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 83, 159" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 85, 331" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 852, -13" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 852, 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 86, 345" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 87, 174" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 92, 118" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 95, 125" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 96, 614" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 982, 24" value="1" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 999, 661" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, ddr_app_wdf_data_s[255:0]], 16" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifo_wb_rd_addr], 7" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifo_wb_rd_data], 16" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifo_wb_rd_mask], 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifo_wb_wr_addr_din_s[26:0]], 28, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 12" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 18" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 19" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 20, true" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 22" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_ref_a[0:3][26:0]], 22, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_a_s[2:0]], 19" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_a_s[2:0]], 19, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_b_s[2:0]], 20, true, true, false, false, false, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_current_s], 14, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_s[3:0]], 14" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_s[3:0]], 15" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_row_s[3:0]], 6" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_shift_a[0:3][26:0]], 13" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_shift_a[0:3][26:0]], 15" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_addr_shift_a[0:3][26:0]], 16" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_data_shift_a[0:3][63:0]], 14" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_data_shift_a[0:3][63:0]], 17" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_data_shift_a[0:3][63:0]], 9" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_mask_shift_a[0:3][7:0]], 10" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_mask_shift_a[0:3][7:0]], 12" value="5" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_mask_shift_a[0:3][7:0]], 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_mask_shift_a[0:3][7:0]], 18" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_mask_shift_a[0:3][7:0]], 9" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_qmask_shift_s[3:0]], 14" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_qmask_shift_s[3:0]], 19" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_qmask_shift_s[3:0]], 19, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_qmask_shift_s[3:0]], 20" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_row_size_s], 24, false" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_single_s], 15, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_single_s], 20, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wb_wr_single_s], 23, false" value="2" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 104, 350" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 106, 381" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 106, 474" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 106, 490" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 106, 499" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 106, 499, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 108, 25" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 109, 489" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 112, 304" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 112, 348" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 112, 366" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 114, 530" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 116, 346, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 118, 471" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 119, 383" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 119, 383, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 129, 294" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 129, 294, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 132, 369" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 133, 367" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 134, 307" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 134, 378" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 135, 379, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 137, 287, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 137, 410" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 139, 444" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 141, 353" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 141, 353, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 145, 276" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 145, 359" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 145, 437" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 146, 262" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 146, 427" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 149, 292" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 149, 292, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 151, 218" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 151, 218, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 151, 397" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 152, 155" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 152, 362" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 154, 453" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 157, 275" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 157, 275, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 157, 454" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 158, 289" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 158, 289, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 158, 430" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 160, 157" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 160, 157, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 160, 417" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 163, 170" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 163, 170, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 165, 276" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 166, 142" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 166, 142, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 166, 265" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 166, 265, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 169, 484" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 170, 121" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 170, 121, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 170, 334" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 172, 346" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 174, 489" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 175, 442" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 175, 461" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 177, 458" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 179, 354" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 179, 491" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 180, 366" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 181, 249" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 181, 277" value="2" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 181, 280" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 181, 351" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 182, 191" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 182, 371" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 184, 101" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 184, 292" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 184, 432" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 185, 334" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 186, 374" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 189, 380" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 190, 371" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 191, 381" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 192, 369" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 192, 369, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 193, 456" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 195, 368" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 195, 368, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 195, 413" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 196, 153" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 196, 266" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 196, 426" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 198, 428" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 199, 264" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 199, 440" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 201, 235" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 201, 235, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 201, 447" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 203, 381" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 204, 324" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 204, 452" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 204, 578" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 205, 443" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 207, 536" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 209, 218" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 209, 310" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 210, 475" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 210, 475, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 211, 216" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 211, 216, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 213, 141" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 213, 350" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 213, 397" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 216, 412" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 216, 443" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 218, 471" value="2" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 219, 475" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 220, 252" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 220, 252, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 220, 352" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 222, 440" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 224, 412" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 226, 424" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 227, 127" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 227, 340" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 229, 338" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 232, 463" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 240, 309" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 240, 336" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 240, 456" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 241, 354" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 241, 513, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 242, 514" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 245, 487" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 246, 384" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 250, 470" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 251, 429" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 253, 444" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 255, 251" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 255, 459" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 258, 414" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 258, 502" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 258, 502, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 26, 278" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 260, 428, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 261, 428" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 265, 411" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 268, 580" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 269, 350" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 269, 350, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 27, 23" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 270, 429" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 274, 443" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 275, 165" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 275, 165, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 28, 456" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 280, 411" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 281, 263" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 285, 429" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 285, 429, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 285, 92" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 288, 348" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 288, 348, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 29, 412" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 291, 174" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 291, 277" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 294, 185" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 294, 185, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 295, 277" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 296, 429" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 296, 445" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 297, 414" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 3, 157" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 30, 307" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 309, 276" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 309, 427" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 310, 199" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 310, 259" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 312, 346, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 313, 472" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 315, 232" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 316, 504" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 320, 131" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 320, 247" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 320, 426" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 320, 469" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 327, 217" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 327, 217, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 330, 294" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 331, 190" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 344, 398" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 344, 441" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 354, 309" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 361, 350" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 362, 350" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 368, 293" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 368, 324" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 371, 158" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 375, 202" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 383, 391" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 384, 386" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 384, 386, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 384, 486" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 394, 396" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 396, 415" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 396, 434" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 40, 384" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 415, 488" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 429, 469" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 440, 551" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 441, 274" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 445, 398" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 449, 356" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 450, 363" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 450, 400" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 453, 385" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 453, 427" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 454, 189" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 454, 251" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 456, 247" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 463, 444" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 463, 454" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 464, 185" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 469, 428" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 469, 460" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 472, 461" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 477, 217" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 478, 188" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 492, 563" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 494, 521" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 501, 444" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 505, 291" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 507, 233" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 524, 399" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 531, 565" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 548, 171" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 548, 171, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 573, 189" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 585, 535" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 585, 536" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 60, 131" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 605, 423" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 606, 175" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 637, 401" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 639, 366" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 640, 382" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 66, 280, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 674, 178" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 674, 178, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 70, 285" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 70, 285, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 708, 173" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 72, 332" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 74, 448" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 78, 412" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 78, 412, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 81, 217" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 818, 356" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 82, 337" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 82, 460" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 83, 215" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 83, 414" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 83, 431" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 84, 333" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 86, 217" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 86, 232" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 86, 258" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 92, 432" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 93, 248" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 93, 248, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb.vhd, 93, 262" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 127, 474" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 146, 504" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 157, 486" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 158, 549" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 171, 113" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 185, 259" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 188, 85" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 217, 311, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 226, 520" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 230, 397" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 239, 173" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 270, 345" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 318, 510" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 464, 143" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 471, 128" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 497, 308" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 498, 425" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 505, 125" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 522, 127" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 54, 513" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 588, 146" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 612, 445" value="1" type="GuiResourceData"/>
-<property name="ddr3_ctrl_wb_bench.vhd, 87, 338" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="367" type="GuiMode"/>
+<property name="GuiMode" value="369" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="316" type="TclMode"/>
+<property name="TclMode" value="318" type="TclMode"/>
 </item>
 </section>
 </application>

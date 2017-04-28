@@ -149,8 +149,8 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   constant g_DATA_PORT_SIZE  : integer := 64;
   
   constant c_pause : std_logic := '0';
-  constant c_write : std_logic := '1';
-  constant c_read : std_logic := '0';
+  constant c_write : std_logic := '0';
+  constant c_read : std_logic := '1';
   
   signal clk_tbs : STD_LOGIC;
   signal rst_tbs : STD_LOGIC;
@@ -255,30 +255,30 @@ begin
         if c_write = '1' then
         
         
---        for J in 0 to 3 loop
---            for I in 0 to J loop
+        for J in 0 to 3 loop
+            for I in 0 to J loop
             
---                step <= 100 + J*10 + I;
---                wb_addr_tbs <= std_logic_vector(to_unsigned(I,32)+J*16);
---                wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32)+J*16);
---                wb_cyc_tbs <= '1';
---                wb_sel_tbs <= "11111111";
---                wb_stb_tbs <= '1';
---                wb_we_tbs <= '1';
---                wait for period;
+                step <= 100 + J*10 + I;
+                wb_addr_tbs <= std_logic_vector(to_unsigned(I,32)+J*16);
+                wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32)+J*16);
+                wb_cyc_tbs <= '1';
+                wb_sel_tbs <= "11111111";
+                wb_stb_tbs <= '1';
+                wb_we_tbs <= '1';
+                wait for period;
             
---            end loop;
+            end loop;
             
---            step <= 200 + J*10;
---            wb_addr_tbs <= X"00000000";
---            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
---            wb_cyc_tbs <= '1';
---            wb_sel_tbs <= "11111111";
---            wb_stb_tbs <= '0';
---            wb_we_tbs <= '1';
---            wait for 8*period;
+            step <= 200 + J*10;
+            wb_addr_tbs <= X"00000000";
+            wb_dat_m2s_tbs <= X"DEADBEEFDEADBEEF";
+            wb_cyc_tbs <= '1';
+            wb_sel_tbs <= "11111111";
+            wb_stb_tbs <= '0';
+            wb_we_tbs <= '1';
+            wait for 10*period;
             
---        end loop;
+        end loop;
         
         step <= 2;
         wb_addr_tbs <= X"00000000";
@@ -324,7 +324,7 @@ begin
             wb_sel_tbs <= "11111111";
             wb_stb_tbs <= '0';
             wb_we_tbs <= '1';
-            wait for 8*period;
+            wait for 10*period;
             
         end loop;
         

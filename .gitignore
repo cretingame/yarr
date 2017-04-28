@@ -4,4 +4,6 @@
 *.wdb
 *.sdb
 *.btree
-
+*.veo
+*.vho
+*.udo
