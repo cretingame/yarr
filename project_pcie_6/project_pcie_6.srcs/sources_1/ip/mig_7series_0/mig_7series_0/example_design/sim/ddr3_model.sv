@@ -98,7 +98,7 @@
 //Memory Details
 `define x1Gb
 `define sg125
-`define x16
+`define x8
 module ddr3_model (
     rst_n,
     ck,

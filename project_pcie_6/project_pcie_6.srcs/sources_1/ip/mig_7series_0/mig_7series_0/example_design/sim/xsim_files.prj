@@ -151,6 +151,6 @@ verilog  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl
 vhdl  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd
 vhdl  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd
 verilog  work  $XILINX_VIVADO/data/verilog/src/glbl.v
-sv  work ddr3_model.sv -d x1Gb -d sg125 -d x16 
+sv  work ddr3_model.sv -d x1Gb -d sg125 -d x8 
 verilog  work  wiredly.v
 verilog  work  sim_tb_top.v

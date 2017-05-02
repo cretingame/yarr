@@ -39,7 +39,7 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
 
   component ddr3_ctrl_wb
     generic(
-      g_BYTE_ADDR_WIDTH : integer := 27;
+      g_BYTE_ADDR_WIDTH : integer := 29;
       g_MASK_SIZE       : integer := 8;
       g_DATA_PORT_SIZE  : integer := 64
       );
@@ -57,7 +57,7 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
         -- DDR controller port
         ----------------------------------------------------------------------------
         
-        ddr_addr_o                  : out    std_logic_vector(26 downto 0);
+        ddr_addr_o                  : out    std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
         ddr_cmd_o                   : out    std_logic_vector(2 downto 0);
         ddr_cmd_en_o                : out    std_logic;
         ddr_wdf_data_o              : out    std_logic_vector(255 downto 0);
@@ -69,15 +69,15 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
         ddr_rd_data_valid_i         : in   std_logic;
         ddr_rdy_i                   : in   std_logic;
         ddr_wdf_rdy_i               : in   std_logic;
-        --ddr_sr_req_o                : out    std_logic;
-        --ddr_ref_req_o               : out    std_logic;
-        --ddr_zq_req_o                : out    std_logic;
-        --ddr_sr_active_i             : in   std_logic;
-        --ddr_ref_ack_i               : in   std_logic;
-        --ddr_zq_ack_i                : in   std_logic;
+        ddr_sr_req_o                : out    std_logic;
+        ddr_ref_req_o               : out    std_logic;
+        ddr_zq_req_o                : out    std_logic;
+        ddr_sr_active_i             : in   std_logic;
+        ddr_ref_ack_i               : in   std_logic;
+        ddr_zq_ack_i                : in   std_logic;
         ddr_ui_clk_i                  : in   std_logic;
-        ddr_ui_clk_sync_rst           : in   std_logic;
-        --ddr_init_calib_complete       : in   std_logic;
+        ddr_ui_clk_sync_rst_i           : in   std_logic;
+        ddr_init_calib_complete_i       : in   std_logic;
     
         ----------------------------------------------------------------------------
         -- Wishbone bus port
@@ -144,12 +144,12 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   
   constant period : time := 100 ns;
   constant period_ddr : time := 200 ns;
-  constant g_BYTE_ADDR_WIDTH : integer := 27;
+  constant g_BYTE_ADDR_WIDTH : integer := 29;
   constant g_MASK_SIZE       : integer := 8;
   constant g_DATA_PORT_SIZE  : integer := 64;
   
   constant c_pause : std_logic := '0';
-  constant c_write : std_logic := '0';
+  constant c_write : std_logic := '1';
   constant c_read : std_logic := '1';
   
   signal clk_tbs : STD_LOGIC;
@@ -177,7 +177,7 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   signal ddr3_dm_s       : std_logic_vector(7 downto 0);
   signal ddr3_odt_s      : std_logic_vector(0 downto 0);
   
-  signal ddr_app_addr_s                  :     std_logic_vector(26 downto 0);
+  signal ddr_app_addr_s                  :     std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
   signal ddr_app_cmd_s                   :     std_logic_vector(2 downto 0);
   signal ddr_app_cmd_en_s                :     std_logic;
   signal ddr_app_wdf_data_s              :     std_logic_vector(255 downto 0);
@@ -253,6 +253,9 @@ begin
         -- WRITE
         ---------------------------
         if c_write = '1' then
+        
+        
+        
         
         
         for J in 0 to 3 loop
@@ -499,7 +502,14 @@ begin
       ddr_rdy_i           => ddr_app_rdy_s,
       ddr_wdf_rdy_i       => ddr_app_wdf_rdy_s,
       ddr_ui_clk_i        => ddr_app_ui_clk_s,
-      ddr_ui_clk_sync_rst => ddr_app_ui_clk_sync_rst_s,
+      ddr_ui_clk_sync_rst_i => ddr_app_ui_clk_sync_rst_s,
+      ddr_sr_req_o        => open,
+      ddr_ref_req_o       => open,
+      ddr_zq_req_o        => open,
+      ddr_sr_active_i     => '1',
+      ddr_ref_ack_i       => '1',
+      ddr_zq_ack_i        => '1',
+      ddr_init_calib_complete_i => '1',
       
       wb_clk_i            => clk_tbs,
       wb_sel_i            => wb_sel_tbs,

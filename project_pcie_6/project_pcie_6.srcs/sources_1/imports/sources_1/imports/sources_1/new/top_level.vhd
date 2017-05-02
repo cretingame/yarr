@@ -40,18 +40,38 @@ entity top_level is
             --  . Clock and Resets
             pcie_clk_p : in std_logic;
             pcie_clk_n : in std_logic;
+            clk200_n : in STD_LOGIC;
+            clk200_p : in STD_LOGIC;
+            rst_n_i : in STD_LOGIC;
+            sys_rst_n_i : in STD_LOGIC;
             --  . Serial I/F
             pci_exp_txn : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] pci_exp_txn           ,
             pci_exp_txp : out std_logic_vector(4-1 downto 0);--output wire [4                                -1:0] pci_exp_txp           ,
             pci_exp_rxn : in std_logic_vector(4-1 downto 0);--input  wire [4                                -1:0] pci_exp_rxn           ,
             pci_exp_rxp : in std_logic_vector(4-1 downto 0);
-            clk200_n : in STD_LOGIC;
-            clk200_p : in STD_LOGIC;
-            rst_n_i : in STD_LOGIC;
-            sys_rst_n_i : in STD_LOGIC;
+            -- . IO
             usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0);
-            usr_led_o : out STD_LOGIC_VECTOR (3 downto 0);
-            front_led_o : out STD_LOGIC_VECTOR (3 downto 0));
+            usr_led_o : out STD_LOGIC_VECTOR (2 downto 0);
+            --front_led_o : out STD_LOGIC_VECTOR (3 downto 0);
+            -- . DDR3
+            ddr3_dq       : inout std_logic_vector(63 downto 0);
+            ddr3_dqs_p    : inout std_logic_vector(7 downto 0);
+            ddr3_dqs_n    : inout std_logic_vector(7 downto 0);
+            --init_calib_complete : out std_logic;
+      
+            ddr3_addr     : out   std_logic_vector(14 downto 0);
+            ddr3_ba       : out   std_logic_vector(2 downto 0);
+            ddr3_ras_n    : out   std_logic;
+            ddr3_cas_n    : out   std_logic;
+            ddr3_we_n     : out   std_logic;
+            ddr3_reset_n  : out   std_logic;
+            ddr3_ck_p     : out   std_logic_vector(0 downto 0);
+            ddr3_ck_n     : out   std_logic_vector(0 downto 0);
+            ddr3_cke      : out   std_logic_vector(0 downto 0);
+            ddr3_cs_n     : out   std_logic_vector(0 downto 0);
+            ddr3_dm       : out   std_logic_vector(7 downto 0);
+            ddr3_odt      : out   std_logic_vector(0 downto 0)
+            );
 end top_level;
 
 architecture Behavioral of top_level is
@@ -159,7 +179,12 @@ architecture Behavioral of top_level is
             AXI_BUS_WIDTH : integer := 64
             );
         Port ( clk_i : in STD_LOGIC;
+               sys_clk_n_i : IN STD_LOGIC;
+               sys_clk_p_i : IN STD_LOGIC;
                rst_i : in STD_LOGIC;
+               
+               
+               
                user_lnk_up_i : in STD_LOGIC;
                user_app_rdy_i : in STD_LOGIC;
                
@@ -198,6 +223,26 @@ architecture Behavioral of top_level is
                -- PCIe debug
                cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
                
+               --DDR3
+               ddr3_dq_io       : inout std_logic_vector(63 downto 0);
+               ddr3_dqs_p_io    : inout std_logic_vector(7 downto 0);
+               ddr3_dqs_n_io    : inout std_logic_vector(7 downto 0);
+               
+               --init_calib_complete_o : out std_logic;
+         
+               ddr3_addr_o     : out   std_logic_vector(14 downto 0);
+               ddr3_ba_o       : out   std_logic_vector(2 downto 0);
+               ddr3_ras_n_o    : out   std_logic;
+               ddr3_cas_n_o    : out   std_logic;
+               ddr3_we_n_o     : out   std_logic;
+               ddr3_reset_n_o  : out   std_logic;
+               ddr3_ck_p_o     : out   std_logic_vector(0 downto 0);
+               ddr3_ck_n_o    : out   std_logic_vector(0 downto 0);
+               ddr3_cke_o      : out   std_logic_vector(0 downto 0);
+               ddr3_cs_n_o     : out   std_logic_vector(0 downto 0);
+               ddr3_dm_o       : out   std_logic_vector(7 downto 0);
+               ddr3_odt_o      : out   std_logic_vector(0 downto 0);
+               
                --I/O
                usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0);
                usr_led_o : out STD_LOGIC_VECTOR (3 downto 0);
@@ -206,25 +251,21 @@ architecture Behavioral of top_level is
     end component;
     
     
-      component design_1 is
-        port (
-          CLK_IN_D_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 );
-          CLK_IN_D_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
-          IBUF_OUT : out STD_LOGIC_VECTOR ( 0 to 0 )
-        );
-        end component;
+
+    
+
     
     --Clocks
     signal sys_clk : STD_LOGIC;
-    signal clk200 : STD_LOGIC;
+    --signal clk200 : STD_LOGIC;
     signal aclk : STD_LOGIC;
     
     signal arstn_s : STD_LOGIC;
     signal rst_s : STD_LOGIC;
     
     --Wishbone bus
-
     
+    signal usr_led_s : std_logic_vector(3 downto 0);
     --signal count_s : STD_LOGIC_VECTOR (28 downto 0);
     
     
@@ -268,15 +309,15 @@ architecture Behavioral of top_level is
 begin
 
 -- LVDS input to internal single
-  CLK_IBUFDS : IBUFDS
-  generic map(
-    IOSTANDARD => "DEFAULT"
-  )
-  port map(
-    I  => clk200_p,
-    IB => clk200_n,
-    O  => clk200
-  );
+--  CLK_IBUFDS : IBUFDS
+--  generic map(
+--    IOSTANDARD => "DEFAULT"
+--  )
+--  port map(
+--    I  => clk200_p,
+--    IB => clk200_n,
+--    O  => clk200
+--  );
 
 --    design_1_0: component design_1
 --     port map (
@@ -353,6 +394,8 @@ begin
       )
       port map(
         clk_i => aclk,
+        sys_clk_n_i => clk200_n,
+        sys_clk_p_i => clk200_p,
         rst_i => rst_s,
         user_lnk_up_i => user_lnk_up_s,
         user_app_rdy_i => user_app_rdy_s,
@@ -392,12 +435,34 @@ begin
         -- PCIe debug
         cfg_dstatus_i => cfg_dstatus_s,
         
+        --DDR3
+        ddr3_dq_io       => ddr3_dq,
+        ddr3_dqs_p_io    => ddr3_dqs_p,
+        ddr3_dqs_n_io    => ddr3_dqs_n,
+        
+        --init_calib_complete_o => init_calib_complete,
+    
+        ddr3_addr_o     => ddr3_addr,
+        ddr3_ba_o       => ddr3_ba,
+        ddr3_ras_n_o    => ddr3_ras_n,
+        ddr3_cas_n_o    => ddr3_cas_n,
+        ddr3_we_n_o     => ddr3_we_n,
+        ddr3_reset_n_o  => ddr3_reset_n,
+        ddr3_ck_p_o     => ddr3_ck_p,
+        ddr3_ck_n_o     => ddr3_ck_n,
+        ddr3_cke_o      => ddr3_cke,
+        ddr3_cs_n_o     => ddr3_cs_n,
+        ddr3_dm_o       => ddr3_dm,
+        ddr3_odt_o      => ddr3_odt,
+        
         --I/O
         usr_sw_i => usr_sw_i,
-        usr_led_o => usr_led_o,
-        front_led_o => front_led_o
+        usr_led_o => usr_led_s,
+        front_led_o => open--front_led_o
       );
       
+      usr_led_o <= usr_led_s(2 downto 0);
+
       
       --m_axis_rx_tready_s <= '1';
   

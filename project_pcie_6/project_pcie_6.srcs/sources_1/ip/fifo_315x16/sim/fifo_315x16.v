@@ -71,13 +71,13 @@ input wire wr_clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 read_clk CLK" *)
 input wire rd_clk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *)
-input wire [314 : 0] din;
+input wire [316 : 0] din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *)
 input wire wr_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *)
 input wire rd_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *)
-output wire [314 : 0] dout;
+output wire [316 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
@@ -89,9 +89,9 @@ output wire empty;
     .C_COUNT_TYPE(0),
     .C_DATA_COUNT_WIDTH(4),
     .C_DEFAULT_VALUE("BlankString"),
-    .C_DIN_WIDTH(315),
+    .C_DIN_WIDTH(317),
     .C_DOUT_RST_VAL("0"),
-    .C_DOUT_WIDTH(315),
+    .C_DOUT_WIDTH(317),
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("kintex7"),
     .C_FULL_FLAGS_RST_VAL(1),
@@ -117,14 +117,14 @@ output wire empty;
     .C_MIF_FILE_NAME("BlankString"),
     .C_OPTIMIZATION_MODE(0),
     .C_OVERFLOW_LOW(0),
-    .C_PRELOAD_LATENCY(1),
-    .C_PRELOAD_REGS(0),
+    .C_PRELOAD_LATENCY(0),
+    .C_PRELOAD_REGS(1),
     .C_PRIM_FIFO_TYPE("512x72"),
-    .C_PROG_EMPTY_THRESH_ASSERT_VAL(2),
-    .C_PROG_EMPTY_THRESH_NEGATE_VAL(3),
+    .C_PROG_EMPTY_THRESH_ASSERT_VAL(4),
+    .C_PROG_EMPTY_THRESH_NEGATE_VAL(5),
     .C_PROG_EMPTY_TYPE(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(13),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(12),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(15),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(14),
     .C_PROG_FULL_TYPE(0),
     .C_RD_DATA_COUNT_WIDTH(4),
     .C_RD_DEPTH(16),

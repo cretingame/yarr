@@ -12,8 +12,8 @@ MIG Output Options:
    Selected Compatible Device(s)   : xc7k160ti-fbg676
 
 FPGA Options:
-   System Clock Type               : No Buffer
-   Reference Clock Type            : No Buffer
+   System Clock Type               : Differential
+   Reference Clock Type            : Use System Clock
    Debug Port                      : OFF
    Internal Vref                   : disabled
    IO Power Reduction              : OFF
@@ -36,8 +36,8 @@ Controller Options :
    DIVCLK_DIVIDE (PLL)           : 3
    VCC_AUX IO                    : 1.8V
    Memory Type                   : Components
-   Memory Part                   : MT41J64M16XX-125
-   Equivalent Part(s)            : MT41J64M16JT-125
+   Memory Part                   : K4B2G0846F
+   Equivalent Part(s)            : --
    Data Width                    : 64
    ECC                           : Disabled
    Data Mask                     : enabled
@@ -61,6 +61,10 @@ Memory Options:
 
 
 Bank Selections:
+
+System_Clock: 
+	SignalName: sys_clk_p/n
+		PadLocation: AA10/AB10(CC_P/N)  Bank: 33
 
 System_Control: 
 	SignalName: sys_rst

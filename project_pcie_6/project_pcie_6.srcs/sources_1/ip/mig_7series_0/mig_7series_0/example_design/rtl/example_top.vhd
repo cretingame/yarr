@@ -121,9 +121,9 @@ entity example_top is
    ECC_TEST              : string  := "OFF";
    RANKS                 : integer := 1;
                                      -- # of Ranks.
-   ROW_WIDTH             : integer := 13;
+   ROW_WIDTH             : integer := 15;
                                      -- # of memory Row Address bits.
-   ADDR_WIDTH            : integer := 27;
+   ADDR_WIDTH            : integer := 29;
                                      -- # = RANK_WIDTH + BANK_WIDTH
                                      --     + ROW_WIDTH + COL_WIDTH;
                                      -- Chip Select is always tied to low for
@@ -173,7 +173,7 @@ entity example_top is
    TEMP_MON_CONTROL         : string  := "INTERNAL";
                                      -- # = "INTERNAL", "EXTERNAL"
       
-   RST_ACT_LOW           : integer := 1
+   RST_ACT_LOW           : integer := 0
                                      -- =1 for active low reset,
                                      -- =0 for active high.
    );
@@ -185,7 +185,7 @@ entity example_top is
    ddr3_dqs_n                     : inout std_logic_vector(7 downto 0);
 
    -- Outputs
-   ddr3_addr                      : out   std_logic_vector(12 downto 0);
+   ddr3_addr                      : out   std_logic_vector(14 downto 0);
    ddr3_ba                        : out   std_logic_vector(2 downto 0);
    ddr3_ras_n                     : out   std_logic;
    ddr3_cas_n                     : out   std_logic;
@@ -199,10 +199,10 @@ entity example_top is
    ddr3_odt                       : out   std_logic_vector(0 downto 0);
 
    -- Inputs
-   -- Single-ended system clock
-   sys_clk_i                      : in    std_logic;
-   -- Single-ended iodelayctrl clk (reference clock)
-   clk_ref_i                                : in    std_logic;
+   -- Differential system clocks
+   sys_clk_p                      : in    std_logic;
+   sys_clk_n                      : in    std_logic;
+   
    
    tg_compare_error              : out std_logic;
    init_calib_complete           : out std_logic;
@@ -282,7 +282,7 @@ architecture arch_example_top of example_top is
       ddr3_dqs_p    : inout std_logic_vector(7 downto 0);
       ddr3_dqs_n    : inout std_logic_vector(7 downto 0);
 
-      ddr3_addr     : out   std_logic_vector(12 downto 0);
+      ddr3_addr     : out   std_logic_vector(14 downto 0);
       ddr3_ba       : out   std_logic_vector(2 downto 0);
       ddr3_ras_n    : out   std_logic;
       ddr3_cas_n    : out   std_logic;
@@ -294,7 +294,7 @@ architecture arch_example_top of example_top is
       ddr3_cs_n     : out   std_logic_vector(0 downto 0);
       ddr3_dm       : out   std_logic_vector(7 downto 0);
       ddr3_odt      : out   std_logic_vector(0 downto 0);
-      app_addr                  : in    std_logic_vector(26 downto 0);
+      app_addr                  : in    std_logic_vector(28 downto 0);
       app_cmd                   : in    std_logic_vector(2 downto 0);
       app_en                    : in    std_logic;
       app_wdf_data              : in    std_logic_vector(255 downto 0);
@@ -316,9 +316,8 @@ architecture arch_example_top of example_top is
       ui_clk_sync_rst           : out   std_logic;
       init_calib_complete       : out   std_logic;
       -- System Clock Ports
-      sys_clk_i                      : in    std_logic;
-      -- Reference Clock Ports
-      clk_ref_i                                : in    std_logic;
+      sys_clk_p                      : in    std_logic;
+      sys_clk_n                      : in    std_logic;
       device_temp_o     : out std_logic_vector(11 downto 0);
       sys_rst             : in std_logic
       );
@@ -569,9 +568,8 @@ begin
        ui_clk_sync_rst                => rst,
        app_wdf_mask                   => app_wdf_mask,
 -- System Clock Ports
-       sys_clk_i                       => sys_clk_i,
--- Reference Clock Ports
-       clk_ref_i                      => clk_ref_i,
+       sys_clk_p                       => sys_clk_p,
+       sys_clk_n                       => sys_clk_n,
         sys_rst                        => sys_rst
         );
 -- End of User Design top instance

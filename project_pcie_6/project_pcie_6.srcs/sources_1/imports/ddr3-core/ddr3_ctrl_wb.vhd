@@ -8,7 +8,7 @@ use work.ddr3_ctrl_pkg.all;
 
 entity ddr3_ctrl_wb is
     generic (
-        g_BYTE_ADDR_WIDTH : integer := 27;
+        g_BYTE_ADDR_WIDTH : integer := 29;
         g_MASK_SIZE       : integer := 8;
         g_DATA_PORT_SIZE  : integer := 64
     );
@@ -26,7 +26,7 @@ entity ddr3_ctrl_wb is
         -- DDR controller port
         ----------------------------------------------------------------------------
         
-        ddr_addr_o                  : out    std_logic_vector(26 downto 0);
+        ddr_addr_o                  : out    std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
         ddr_cmd_o                   : out    std_logic_vector(2 downto 0);
         ddr_cmd_en_o                : out    std_logic;
         ddr_wdf_data_o              : out    std_logic_vector(255 downto 0);
@@ -38,15 +38,15 @@ entity ddr3_ctrl_wb is
         ddr_rd_data_valid_i         : in   std_logic;
         ddr_rdy_i                   : in   std_logic;
         ddr_wdf_rdy_i               : in   std_logic;
-        --ddr_sr_req_o                : out    std_logic;
-        --ddr_ref_req_o               : out    std_logic;
-        --ddr_zq_req_o                : out    std_logic;
-        --ddr_sr_active_i             : in   std_logic;
-        --ddr_ref_ack_i               : in   std_logic;
-        --ddr_zq_ack_i                : in   std_logic;
+        ddr_sr_req_o                : out    std_logic;
+        ddr_ref_req_o               : out    std_logic;
+        ddr_zq_req_o                : out    std_logic;
+        ddr_sr_active_i             : in   std_logic;
+        ddr_ref_ack_i               : in   std_logic;
+        ddr_zq_ack_i                : in   std_logic;
         ddr_ui_clk_i                  : in   std_logic;
-        ddr_ui_clk_sync_rst           : in   std_logic;
-        --ddr_init_calib_complete       : in   std_logic;
+        ddr_ui_clk_sync_rst_i           : in   std_logic;
+        ddr_init_calib_complete_i       : in   std_logic;
 
         ----------------------------------------------------------------------------
         -- Wishbone bus port
@@ -72,10 +72,10 @@ architecture behavioral of ddr3_ctrl_wb is
         rst : IN STD_LOGIC;
         wr_clk : IN STD_LOGIC;
         rd_clk : IN STD_LOGIC;
-        din : IN STD_LOGIC_VECTOR(314 DOWNTO 0);
+        din : IN STD_LOGIC_VECTOR(316 DOWNTO 0);
         wr_en : IN STD_LOGIC;
         rd_en : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR(314 DOWNTO 0);
+        dout : OUT STD_LOGIC_VECTOR(316 DOWNTO 0);
         full : OUT STD_LOGIC;
         empty : OUT STD_LOGIC
       );
@@ -86,10 +86,10 @@ architecture behavioral of ddr3_ctrl_wb is
         rst : IN STD_LOGIC;
         wr_clk : IN STD_LOGIC;
         rd_clk : IN STD_LOGIC;
-        din : IN STD_LOGIC_VECTOR(26 DOWNTO 0);
+        din : IN STD_LOGIC_VECTOR(g_BYTE_ADDR_WIDTH-1 DOWNTO 0);
         wr_en : IN STD_LOGIC;
         rd_en : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR(26 DOWNTO 0);
+        dout : OUT STD_LOGIC_VECTOR(g_BYTE_ADDR_WIDTH-1 DOWNTO 0);
         full : OUT STD_LOGIC;
         empty : OUT STD_LOGIC
       );
@@ -168,12 +168,12 @@ architecture behavioral of ddr3_ctrl_wb is
 
     
     signal fifo_wb_wr_mask_din_s : std_logic_vector(31 downto 0);
-    signal fifo_wb_wr_addr_din_s : std_logic_vector(26 downto 0);
-    signal fifo_wb_wr_din_s : std_logic_vector(314 downto 0);
+    signal fifo_wb_wr_addr_din_s : std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
+    signal fifo_wb_wr_din_s : std_logic_vector(316 downto 0);
     signal fifo_wb_wr_wr_s : std_logic;
     signal fifo_wb_wr_rd_s : std_logic;
     signal fifo_wb_wr_rd_d : std_logic;
-    signal fifo_wb_wr_dout_s : std_logic_vector(314 downto 0);
+    signal fifo_wb_wr_dout_s : std_logic_vector(316 downto 0);
     signal fifo_wb_wr_full_s : std_logic;
     signal fifo_wb_wr_empty_s : std_logic;
     
@@ -187,11 +187,11 @@ architecture behavioral of ddr3_ctrl_wb is
     
     --signal fifo_wb_rd_addr_din_a : addr_array;
     
-    signal fifo_wb_rd_addr_din_s : std_logic_vector(26 downto 0);
+    signal fifo_wb_rd_addr_din_s : std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
     signal fifo_wb_rd_addr_wr_s : std_logic;
     signal fifo_wb_rd_addr_rd_s : std_logic;
     signal fifo_wb_rd_addr_rd_d : std_logic;
-    signal fifo_wb_rd_addr_dout_s : std_logic_vector(26 downto 0);
+    signal fifo_wb_rd_addr_dout_s : std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
     signal fifo_wb_rd_addr_full_s : std_logic;
     signal fifo_wb_rd_addr_empty_s : std_logic;
     
@@ -240,6 +240,11 @@ architecture behavioral of ddr3_ctrl_wb is
     
 begin
     rst_s <= not rst_n_i;
+    
+    ddr_sr_req_o                <= '0';
+    ddr_ref_req_o               <= '0';
+    ddr_zq_req_o                <= '0';
+
     
     
     wb_ack_o <= wb_wr_ack_s or wb_rd_ack_s;
@@ -305,18 +310,21 @@ begin
             if(wb_wr_qmask_shift_s(0) = '1') then
                 --wb_write_cnt <= 1;
                 wb_write_wait_cnt <= c_write_wait_time;
-                for i in 0 to (wb_wr_row_size_s-1) loop
-                    wb_wr_addr_shift_a(i) <= (others => '1');
-                    wb_wr_data_shift_a(i) <= (others => '1');
-                    wb_wr_mask_shift_a(i) <= (others => '0');
-                    wb_wr_qmask_shift_s(i) <= '0';
+                --for i in 0 to (wb_wr_row_size_s-1) loop
+                for i in 0 to (4-1) loop
+                    if i <= (wb_wr_row_size_s-1) then
+                        wb_wr_addr_shift_a(i) <= (others => '1');
+                        wb_wr_data_shift_a(i) <= (others => '1');
+                        wb_wr_mask_shift_a(i) <= (others => '0');
+                        wb_wr_qmask_shift_s(i) <= '0';
+                    end if;
                 end loop;
             end if;
             
             
             -- Input data going in the shift register
             if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '1') then
-                wb_wr_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(26 downto 0);
+                wb_wr_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(g_BYTE_ADDR_WIDTH-1 downto 0);
                 wb_wr_data_shift_a(c_register_shift_size-1) <= wb_data_i;
                 wb_wr_mask_shift_a(c_register_shift_size-1) <= wb_sel_i;
                 wb_wr_qmask_shift_s(c_register_shift_size-1) <= '1';
@@ -460,16 +468,17 @@ begin
         if(wb_rd_qmask_shift_s(0) = '1') then
 
             wb_read_wait_cnt <= c_read_wait_time;
-            for i in 0 to (wb_rd_row_size_s-1) loop
-                wb_rd_addr_shift_a(i) <= (others => '1');
-
-                wb_rd_qmask_shift_s(i) <= '0';
+            for i in 0 to (4-1) loop
+                if i <= (wb_rd_row_size_s-1) then
+                    wb_rd_addr_shift_a(i) <= (others => '1');
+                    wb_rd_qmask_shift_s(i) <= '0';
+                end if;
             end loop;
         end if;
         
         -- Input data going in the shift register
         if (wb_cyc_i = '1' and wb_stb_i = '1' and wb_we_i = '0') then
-            wb_rd_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(26 downto 0);
+            wb_rd_addr_shift_a(c_register_shift_size-1) <= wb_addr_i(g_BYTE_ADDR_WIDTH-1 downto 0);
             wb_rd_qmask_shift_s(c_register_shift_size-1) <= '1';
             
             wb_read_wait_cnt <= c_read_wait_time;
@@ -602,7 +611,7 @@ begin
     -- Arbiter
     --------------------------------------
     
-    ddr_addr_o <= fifo_wb_wr_dout_s(314 downto 288) when fifo_wb_wr_rd_d = '1' else
+    ddr_addr_o <= fifo_wb_wr_dout_s(316 downto 288) when fifo_wb_wr_rd_d = '1' else
                   fifo_wb_rd_addr_dout_s;
                   
     ddr_cmd_o <= "001" when  fifo_wb_wr_rd_d = '1' else
@@ -616,7 +625,7 @@ begin
 
     
     
-    fifo_wb_wr_rd_s <= ddr_wdf_rdy_i and not fifo_wb_wr_empty_s;
+    fifo_wb_wr_rd_s <= ddr_wdf_rdy_i and ddr_rdy_i and not fifo_wb_wr_empty_s;
     fifo_wb_rd_addr_rd_s <= ddr_rdy_i and not fifo_wb_rd_addr_empty_s;
     fifo_wb_rd_data_wr_s <= ddr_rd_data_valid_i;
     fifo_wb_rd_data_din_s <= ddr_rd_data_i;
@@ -637,7 +646,7 @@ begin
     --------------------------------------
     -- Stall proc
     --------------------------------------
-	wb_stall_s <= fifo_wb_wr_full_s or fifo_wb_rd_addr_full_s or (not ddr_wdf_rdy_i) or (not ddr_rdy_i);
+	wb_stall_s <= fifo_wb_wr_full_s or fifo_wb_rd_addr_full_s; --or (not ddr_wdf_rdy_i) or (not ddr_rdy_i);
 	wb_stall_o <= wb_stall_s;
     p_wb_stall : process (wb_clk_i, rst_n_i)
     begin

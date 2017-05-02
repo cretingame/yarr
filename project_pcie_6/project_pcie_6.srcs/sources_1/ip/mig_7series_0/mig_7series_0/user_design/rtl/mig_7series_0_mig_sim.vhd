@@ -121,9 +121,9 @@ entity mig_7series_0_mig is
                                      -- # of Ranks.
    ODT_WIDTH             : integer := 1;
                                      -- # of ODT outputs to memory.
-   ROW_WIDTH             : integer := 13;
+   ROW_WIDTH             : integer := 15;
                                      -- # of memory Row Address bits.
-   ADDR_WIDTH            : integer := 27;
+   ADDR_WIDTH            : integer := 29;
                                      -- # = RANK_WIDTH + BANK_WIDTH
                                      --     + ROW_WIDTH + COL_WIDTH;
                                      -- Chip Select is always tied to low for
@@ -156,7 +156,7 @@ entity mig_7series_0_mig is
    MEM_SPEEDGRADE          : string  := "125";
                                      -- Indicates the Speed grade of Memory Part
                                      -- Added for the sake of Vivado simulations
-   MEM_DEVICE_WIDTH        : integer := 16;
+   MEM_DEVICE_WIDTH        : integer := 8;
                                      -- Indicates the device width of the Memory Part
                                      -- Added for the sake of Vivado simulations
 
@@ -250,21 +250,21 @@ entity mig_7series_0_mig is
    --***************************************************************************
    tCKE                  : integer := 5000;
                                      -- memory tCKE paramter in pS
-   tFAW                  : integer := 40000;
+   tFAW                  : integer := 37500;
                                      -- memory tRAW paramter in pS.
    tPRDI                 : integer := 1000000;
                                      -- memory tPRDI paramter in pS.
-   tRAS                  : integer := 35000;
+   tRAS                  : integer := 37500;
                                      -- memory tRAS paramter in pS.
-   tRCD                  : integer := 13750;
+   tRCD                  : integer := 13125;
                                      -- memory tRCD paramter in pS.
    tREFI                 : integer := 7800000;
                                      -- memory tREFI paramter in pS.
-   tRFC                  : integer := 110000;
+   tRFC                  : integer := 161350;
                                      -- memory tRFC paramter in pS.
-   tRP                   : integer := 13750;
+   tRP                   : integer := 13125;
                                      -- memory tRP paramter in pS.
-   tRRD                  : integer := 7500;
+   tRRD                  : integer := 5000;
                                      -- memory tRRD paramter in pS.
    tRTP                  : integer := 7500;
                                      -- memory tRTP paramter in pS.
@@ -330,14 +330,14 @@ entity mig_7series_0_mig is
                                      -- position indicates a data byte lane and
                                      -- a '0' indicates a control byte lane
    PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"3FE37F3FE2FF";
-   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000F3FD15372";
+   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000F7FD153F2";
    PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"3FE2FF3FD2FF";
 
    -- control/address/data pin mapping parameters
    CK_BYTE_MAP
      : std_logic_vector(143 downto 0) := X"000000000000000000000000000000000010";
    ADDR_MAP
-     : std_logic_vector(191 downto 0) := X"00000000010112112510612310510412212A120128129124";
+     : std_logic_vector(191 downto 0) := X"00010712610112112510612310510412212A120128129124";
    BANK_MAP   : std_logic_vector(35 downto 0) := X"11211A11B";
    CAS_MAP    : std_logic_vector(11 downto 0) := X"110";
    CKE_ODT_BYTE_MAP : std_logic_vector(7 downto 0) := X"00";
@@ -415,10 +415,10 @@ entity mig_7series_0_mig is
                                      -- It is associated to a set of IODELAYs with
                                      -- an IDELAYCTRL that have same IODELAY CONTROLLER
                                      -- clock frequency (300MHz/400MHz).
-   SYSCLK_TYPE           : string  := "NO_BUFFER";
+   SYSCLK_TYPE           : string  := "DIFFERENTIAL";
                                      -- System clock type DIFFERENTIAL, SINGLE_ENDED,
                                      -- NO_BUFFER
-   REFCLK_TYPE           : string  := "NO_BUFFER";
+   REFCLK_TYPE           : string  := "USE_SYSTEM_CLOCK";
                                      -- Reference clock type DIFFERENTIAL, SINGLE_ENDED
                                      -- NO_BUFFER, USE_SYSTEM_CLOCK
    SYS_RST_PORT          : string  := "FALSE";
@@ -454,7 +454,7 @@ entity mig_7series_0_mig is
                                      -- # = Clock Period in pS.
    nCK_PER_CLK           : integer := 2;
                                      -- # of memory CKs per fabric CLK
-   DIFF_TERM_SYSCLK      : string  := "TRUE";
+   DIFF_TERM_SYSCLK      : string  := "FALSE";
                                      -- Differential Termination for System
                                      -- clock input pins
 
@@ -477,7 +477,7 @@ entity mig_7series_0_mig is
                                      -- # = "L", "N". When FPGA VccINT is 0.9v,
                                      -- the value is "L", else it is "N"
       
-   RST_ACT_LOW           : integer := 1
+   RST_ACT_LOW           : integer := 0
                                      -- =1 for active low reset,
                                      -- =0 for active high.
    );
@@ -503,10 +503,10 @@ entity mig_7series_0_mig is
    ddr3_odt                       : out   std_logic_vector(ODT_WIDTH-1 downto 0);
 
    -- Inputs
-   -- Single-ended system clock
-   sys_clk_i                      : in    std_logic;
-   -- Single-ended iodelayctrl clk (reference clock)
-   clk_ref_i                                : in    std_logic;
+   -- Differential system clocks
+   sys_clk_p                      : in    std_logic;
+   sys_clk_n                      : in    std_logic;
+   
    -- user interface signals
    app_addr             : in    std_logic_vector(ADDR_WIDTH-1 downto 0);
    app_cmd              : in    std_logic_vector(2 downto 0);
@@ -1064,11 +1064,11 @@ architecture arch_mig_7series_0_mig of mig_7series_0_mig is
       
   signal init_calib_complete_i       : std_logic;
 
-  signal sys_clk_p       : std_logic;
-  signal sys_clk_n          : std_logic;
+  signal sys_clk_i      : std_logic;
   signal mmcm_clk           : std_logic;
   signal clk_ref_p               : std_logic;
   signal clk_ref_n               : std_logic;
+  signal clk_ref_i               : std_logic;
   signal device_temp           : std_logic_vector(11 downto 0);
   signal device_temp_i           : std_logic_vector(11 downto 0);
 
@@ -1168,10 +1168,8 @@ begin
   ui_clk <= clk;
   ui_clk_sync_rst <= rst;
   
-  sys_clk_p <= '0';
-  sys_clk_n <= '0';
-  clk_ref_p <= '0';
-  clk_ref_n <= '0';
+  sys_clk_i <= '0';
+  clk_ref_i <= '0';
   init_calib_complete         <= init_calib_complete_i;
   device_temp_o <= device_temp;
       

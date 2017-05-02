@@ -43,6 +43,8 @@ entity app is
         address_mask_c : STD_LOGIC_VECTOR(32-1 downto 0) := X"000FFFFF"
         );
     Port ( clk_i : in STD_LOGIC;
+           sys_clk_n_i : IN STD_LOGIC;
+           sys_clk_p_i : IN STD_LOGIC;
            rst_i : in STD_LOGIC;
            user_lnk_up_i : in STD_LOGIC;
            user_app_rdy_i : in STD_LOGIC;
@@ -82,6 +84,25 @@ entity app is
            -- PCIe debug
            cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
            
+           --DDR3
+           ddr3_dq_io       : inout std_logic_vector(63 downto 0);
+           ddr3_dqs_p_io    : inout std_logic_vector(7 downto 0);
+           ddr3_dqs_n_io    : inout std_logic_vector(7 downto 0);
+           --init_calib_complete_o : out std_logic;
+     
+           ddr3_addr_o     : out   std_logic_vector(14 downto 0);
+           ddr3_ba_o       : out   std_logic_vector(2 downto 0);
+           ddr3_ras_n_o    : out   std_logic;
+           ddr3_cas_n_o    : out   std_logic;
+           ddr3_we_n_o     : out   std_logic;
+           ddr3_reset_n_o  : out   std_logic;
+           ddr3_ck_p_o     : out   std_logic_vector(0 downto 0);
+           ddr3_ck_n_o    : out   std_logic_vector(0 downto 0);
+           ddr3_cke_o      : out   std_logic_vector(0 downto 0);
+           ddr3_cs_n_o     : out   std_logic_vector(0 downto 0);
+           ddr3_dm_o       : out   std_logic_vector(7 downto 0);
+           ddr3_odt_o      : out   std_logic_vector(0 downto 0);
+           
            --I/O
            usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0);
            usr_led_o : out STD_LOGIC_VECTOR (3 downto 0);
@@ -91,7 +112,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(4 downto 0) := "00001";
+    constant DEBUG_C : std_logic_vector(5 downto 0) := "100101";
     
     component simple_counter is
         Port ( 
@@ -264,29 +285,6 @@ architecture Behavioral of app is
 		  );
 	end component;
  
-    component bram_wbs is
-    generic (
-        constant ADDR_WIDTH : integer := 16;
-        constant DATA_WIDTH : integer := 64 
-    );
-    port (
-        -- SYS CON
-        clk            : in std_logic;
-        rst            : in std_logic;
-        
-        -- Wishbone Slave in
-        wb_adr_i            : in std_logic_vector(wb_address_width_c-1 downto 0);
-        wb_dat_i            : in std_logic_vector(64-1 downto 0);
-        wb_we_i            : in std_logic;
-        wb_stb_i            : in std_logic;
-        wb_cyc_i            : in std_logic; 
-        wb_lock_i        : in std_logic; -- nyi
-        
-        -- Wishbone Slave out
-        wb_dat_o            : out std_logic_vector(64-1 downto 0);
-        wb_ack_o            : out std_logic        
-    );
-    end component;
     
     component bram_wbs32 is
         generic (
@@ -337,30 +335,6 @@ architecture Behavioral of app is
       );
     end component;
     
-    component k2_bram is
-        generic (
-          constant ADDR_WIDTH : integer := 11;
-          constant DATA_WIDTH : integer := 64 
-        );
-        Port ( 
-            -- SYS CON
-            clk            : in std_logic;
-            rst            : in std_logic;
-            
-            -- Wishbone Slave in
-            wb_adr_i            : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-            wb_dat_i            : in std_logic_vector(DATA_WIDTH-1 downto 0);
-            wb_we_i            : in std_logic;
-            wb_stb_i            : in std_logic;
-            wb_cyc_i            : in std_logic; 
-            wb_lock_i        : in std_logic; -- nyi
-            
-            -- Wishbone Slave out
-            wb_dat_o            : out std_logic_vector(DATA_WIDTH-1 downto 0);
-            wb_ack_o            : out std_logic
-        
-        );
-    end component;
 	
 	component l2p_arbiter is
 	  generic(
@@ -582,39 +556,178 @@ architecture Behavioral of app is
             addr_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0)
 		);
 	end component;
+
+
+    component mig_7series_0
+      port (
+          ddr3_dq       : inout std_logic_vector(63 downto 0);
+          ddr3_dqs_p    : inout std_logic_vector(7 downto 0);
+          ddr3_dqs_n    : inout std_logic_vector(7 downto 0);
+    
+          ddr3_addr     : out   std_logic_vector(14 downto 0);
+          ddr3_ba       : out   std_logic_vector(2 downto 0);
+          ddr3_ras_n    : out   std_logic;
+          ddr3_cas_n    : out   std_logic;
+          ddr3_we_n     : out   std_logic;
+          ddr3_reset_n  : out   std_logic;
+          ddr3_ck_p     : out   std_logic_vector(0 downto 0);
+          ddr3_ck_n     : out   std_logic_vector(0 downto 0);
+          ddr3_cke      : out   std_logic_vector(0 downto 0);
+          ddr3_cs_n     : out   std_logic_vector(0 downto 0);
+          ddr3_dm       : out   std_logic_vector(7 downto 0);
+          ddr3_odt      : out   std_logic_vector(0 downto 0);
+          app_addr                  : in    std_logic_vector(28 downto 0);
+          app_cmd                   : in    std_logic_vector(2 downto 0);
+          app_en                    : in    std_logic;
+          app_wdf_data              : in    std_logic_vector(255 downto 0);
+          app_wdf_end               : in    std_logic;
+          app_wdf_mask         : in    std_logic_vector(31 downto 0);
+          app_wdf_wren              : in    std_logic;
+          app_rd_data               : out   std_logic_vector(255 downto 0);
+          app_rd_data_end           : out   std_logic;
+          app_rd_data_valid         : out   std_logic;
+          app_rdy                   : out   std_logic;
+          app_wdf_rdy               : out   std_logic;
+          app_sr_req                : in    std_logic;
+          app_ref_req               : in    std_logic;
+          app_zq_req                : in    std_logic;
+          app_sr_active             : out   std_logic;
+          app_ref_ack               : out   std_logic;
+          app_zq_ack                : out   std_logic;
+          ui_clk                    : out   std_logic;
+          ui_clk_sync_rst           : out   std_logic;
+          init_calib_complete       : out   std_logic;
+          -- System Clock Ports
+          sys_clk_p                      : in    std_logic;
+          sys_clk_n                      : in    std_logic;
+        sys_rst                     : in    std_logic
+      );
+    end component mig_7series_0;
 	
-COMPONENT ila_axis
+    component ddr3_ctrl_wb
+      generic(
+        g_BYTE_ADDR_WIDTH : integer := 29;
+        g_MASK_SIZE       : integer := 8;
+        g_DATA_PORT_SIZE  : integer := 64
+        );
+      port(
+          ----------------------------------------------------------------------------
+          -- Reset input (active low)
+          ----------------------------------------------------------------------------
+          rst_n_i : in std_logic;
+      
+          ----------------------------------------------------------------------------
+          -- Status
+          ----------------------------------------------------------------------------
+      
+          ----------------------------------------------------------------------------
+          -- DDR controller port
+          ----------------------------------------------------------------------------
+          
+          ddr_addr_o                  : out    std_logic_vector(28 downto 0);
+          ddr_cmd_o                   : out    std_logic_vector(2 downto 0);
+          ddr_cmd_en_o                : out    std_logic;
+          ddr_wdf_data_o              : out    std_logic_vector(255 downto 0);
+          ddr_wdf_end_o               : out    std_logic;
+          ddr_wdf_mask_o              : out    std_logic_vector(31 downto 0);
+          ddr_wdf_wren_o              : out    std_logic;
+          ddr_rd_data_i               : in   std_logic_vector(255 downto 0);
+          ddr_rd_data_end_i           : in   std_logic;
+          ddr_rd_data_valid_i         : in   std_logic;
+          ddr_rdy_i                   : in   std_logic;
+          ddr_wdf_rdy_i               : in   std_logic;
+          ddr_sr_req_o                : out    std_logic;
+          ddr_ref_req_o               : out    std_logic;
+          ddr_zq_req_o                : out    std_logic;
+          ddr_sr_active_i             : in   std_logic;
+          ddr_ref_ack_i               : in   std_logic;
+          ddr_zq_ack_i                : in   std_logic;
+          ddr_ui_clk_i                  : in   std_logic;
+          ddr_ui_clk_sync_rst_i           : in   std_logic;
+          ddr_init_calib_complete_i       : in   std_logic;
+      
+          ----------------------------------------------------------------------------
+          -- Wishbone bus port
+          ----------------------------------------------------------------------------
+          wb_clk_i   : in  std_logic;
+          wb_sel_i   : in  std_logic_vector(g_MASK_SIZE - 1 downto 0);
+          wb_cyc_i   : in  std_logic;
+          wb_stb_i   : in  std_logic;
+          wb_we_i    : in  std_logic;
+          wb_addr_i  : in  std_logic_vector(31 downto 0);
+          wb_data_i  : in  std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
+          wb_data_o  : out std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
+          wb_ack_o   : out std_logic;
+          wb_stall_o : out std_logic
+        );
+    end component ddr3_ctrl_wb;
     
-    PORT (
-        clk : IN STD_LOGIC;
-    
-    
-    
-        probe0 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
-        probe1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
-        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe5 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
-        probe6 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
-        probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe10 : IN STD_LOGIC_VECTOR(21 DOWNTO 0); 
-        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe18 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe21 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-        probe22 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    component debugregisters is
+        generic (
+            constant ADDR_WIDTH : integer := 4;
+            constant DATA_WIDTH : integer := 32
+        );
+        Port ( 
+        -- SYS CON
+        clk            : in std_logic;
+        rst            : in std_logic;
         
-    );
+        -- Wishbone Slave in
+        wb_adr_i            : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+        wb_dat_i            : in std_logic_vector(DATA_WIDTH-1 downto 0);
+        wb_we_i            : in std_logic;
+        wb_stb_i            : in std_logic;
+        wb_cyc_i            : in std_logic; 
+        
+        -- Wishbone Slave out
+        wb_dat_o            : out std_logic_vector(DATA_WIDTH-1 downto 0);
+        wb_ack_o            : out std_logic  ;
+        
+        -- input/ouput  
+        dummyram_sel_o      : out std_logic;
+        ddr3ram_sel_o       : out std_logic;
+        dummyaddress_sel_o      : out std_logic;
+        dummydeadbeef_sel_o     : out std_logic;
+        
+        usr_led_o : out STD_LOGIC_VECTOR (3 downto 0);
+        usr_sw_i : in STD_LOGIC_VECTOR (2 downto 0)--;
+        
+        --ddr_init_calib_complete_i : in std_logic
+        );
+    end component;
+	
+    COMPONENT ila_axis
+    
+        PORT (
+            clk : IN STD_LOGIC;
+        
+        
+        
+            probe0 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+            probe1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+            probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe5 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
+            probe6 : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+            probe7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe10 : IN STD_LOGIC_VECTOR(21 DOWNTO 0); 
+            probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+            probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            probe18 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            probe19 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            probe20 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            probe21 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+            probe22 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+            
+        );
     END COMPONENT  ;
     
     COMPONENT ila_dma_ctrl_reg
@@ -746,6 +859,32 @@ COMPONENT ila_l2p_dma
     );
     END COMPONENT  ;
     
+    COMPONENT ila_ddr
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(28 DOWNTO 0); 
+        probe1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
+        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(255 DOWNTO 0); 
+        probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(255 DOWNTO 0); 
+        probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    );
+    END COMPONENT  ;
+
+    
     signal rst_n_s : std_logic;
     signal count_s : STD_LOGIC_VECTOR (28 downto 0);
     signal eop_s : std_logic; -- Arbiter end of operation
@@ -783,7 +922,7 @@ COMPONENT ila_l2p_dma
     signal wb_dma_ctrl_dat_m2s_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
     signal wb_dma_ctrl_dat_s2m_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
     signal wb_dma_ctrl_cyc_s : STD_LOGIC;
-    signal wb_dma_ctrl_sel_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    --signal wb_dma_ctrl_sel_s : STD_LOGIC_VECTOR (wb_data_width_c/8 - 1 downto 0);
     signal wb_dma_ctrl_stb_s : STD_LOGIC;
     signal wb_dma_ctrl_we_s : STD_LOGIC;
     signal wb_dma_ctrl_ack_s : STD_LOGIC;    
@@ -792,10 +931,20 @@ COMPONENT ila_l2p_dma
     signal wb_mem_dat_m2s_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
     signal wb_mem_dat_s2m_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
     signal wb_mem_cyc_s : STD_LOGIC;
-    signal wb_mem_sel_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    --signal wb_mem_sel_s : STD_LOGIC_VECTOR (wb_data_width_c/8 - 1 downto 0);
     signal wb_mem_stb_s : STD_LOGIC;
     signal wb_mem_we_s : STD_LOGIC;
     signal wb_mem_ack_s : STD_LOGIC;
+    
+    
+    signal wb_dbg_adr_s : STD_LOGIC_VECTOR (32 - 1 downto 0);
+    signal wb_dbg_dat_m2s_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    signal wb_dbg_dat_s2m_s : STD_LOGIC_VECTOR (wb_data_width_c - 1 downto 0);
+    signal wb_dbg_cyc_s : std_logic;
+    signal wb_dbg_sel_s : STD_LOGIC_VECTOR (wb_data_width_c/8 - 1 downto 0);
+    signal wb_dbg_stb_s : STD_LOGIC;
+    signal wb_dbg_we_s : STD_LOGIC;
+    signal wb_dbg_ack_s : STD_LOGIC;
     
 
     
@@ -922,10 +1071,10 @@ COMPONENT ila_l2p_dma
 	signal dma_stall_s :  std_logic;                      -- for pipelined Wishbone	
 	
 	signal l2p_current_state_ds : std_logic_vector (2 downto 0);
-    signal l2p_data_cnt_ds : unsigned(12 downto 0);
-    signal l2p_len_cnt_ds  : unsigned(12 downto 0);
-    signal l2p_timeout_cnt_ds : unsigned(12 downto 0);
-    signal wb_timeout_cnt_ds  : unsigned(12 downto 0);
+    signal l2p_data_cnt_ds      : unsigned(12 downto 0);
+    signal l2p_len_cnt_ds       : unsigned(12 downto 0);
+    signal l2p_timeout_cnt_ds   : unsigned(12 downto 0);
+    signal wb_timeout_cnt_ds    : unsigned(12 downto 0);
         -- Data FIFO
     signal data_fifo_rd_ds    : std_logic;
     signal data_fifo_wr_ds    : std_logic;
@@ -941,19 +1090,81 @@ COMPONENT ila_l2p_dma
     signal addr_fifo_dout_ds  : std_logic_vector(64-1 downto 0);
     signal addr_fifo_din_ds   : std_logic_vector(axis_data_width_c-1 downto 0);
 	
-	constant cyc_nb_exp_c : integer := 2;
-	constant cyc_nb_c : integer := 2**cyc_nb_exp_c;
-	type ram_dma_data_bus is array (cyc_nb_c-1 downto 0) of std_logic_vector(64-1 downto 0);
+	--constant cyc_nb_exp_c : integer := 2;
+	--constant cyc_nb_c : integer := 2**cyc_nb_exp_c;
+	--type ram_dma_data_bus is array (cyc_nb_c-1 downto 0) of std_logic_vector(64-1 downto 0);
 	
-    signal ram_dma_adr_s   :  std_logic_vector(32-1 downto 0);  -- Adress
-    signal ram_dma_dat_s2m_s   :  ram_dma_data_bus;  -- Data in
-    signal ram_dma_dat_m2s_s   :  std_logic_vector(64-1 downto 0);  -- Data out
-    signal ram_dma_sel_s   :  std_logic_vector(8-1 downto 0);   -- Byte select
-    signal ram_dma_cyc_s   :  std_logic_vector(cyc_nb_c-1 downto 0);  -- Read or write cycle
-    signal ram_dma_stb_s   :  std_logic;                      -- Read or write strobe
-    signal ram_dma_we_s    :  std_logic;                      -- Write
-    signal ram_dma_ack_s   :  std_logic_vector(cyc_nb_c-1 downto 0); -- Acknowledge
-    signal ram_dma_stall_s :  std_logic;                      -- for pipelined Wishbone    
+	
+	signal dummyram_sel_s      : std_logic;
+    signal ddr3ram_sel_s       : std_logic;
+    signal dummyaddress_sel_s      : std_logic;
+    signal dummydeadbeef_sel_s     : std_logic;
+	
+	---------------------------------------------------------
+    -- From DMA master to Dummy RAM
+    signal dma_bram_adr_s   :  std_logic_vector(32-1 downto 0);       -- Adress
+    signal dma_bram_dat_s2m_s   :  std_logic_vector(64-1 downto 0);   -- Data in
+    signal dma_bram_dat_m2s_s   :  std_logic_vector(64-1 downto 0);   -- Data out
+    signal dma_bram_sel_s   :  std_logic_vector(8-1 downto 0);        -- Byte select
+    signal dma_bram_cyc_s   :  std_logic;                             -- Read or write cycle
+    signal dma_bram_stb_s   :  std_logic;                             -- Read or write strobe
+    signal dma_bram_we_s    :  std_logic;                             -- Write
+    signal dma_bram_ack_s   :  std_logic;                             -- Acknowledge
+    signal dma_bram_stall_s :  std_logic;                             -- for pipelined Wishbone  
+    
+    
+    ---------------------------------------------------------
+    -- From DMA master to DDR3 control
+    signal dma_ddr_addr_s   :  std_logic_vector(32-1 downto 0);  -- Adress
+    signal dma_ddr_dat_s2m_s   :  std_logic_vector(64-1 downto 0);  -- Data in
+    signal dma_ddr_dat_m2s_s   :  std_logic_vector(64-1 downto 0);  -- Data out
+    signal dma_ddr_sel_s   :  std_logic_vector(8-1 downto 0);   -- Byte select
+    signal dma_ddr_cyc_s   :  std_logic;  -- Read or write cycle
+    signal dma_ddr_stb_s   :  std_logic;                      -- Read or write strobe
+    signal dma_ddr_we_s    :  std_logic;                      -- Write
+    signal dma_ddr_ack_s   :  std_logic; -- Acknowledge
+    signal dma_ddr_stall_s :  std_logic;                      -- for pipelined Wishbone      
+	
+	
+	---------------------------------------------------------
+	-- DDR3 control to output	
+	signal ddr3_dq_s       : std_logic_vector(63 downto 0);
+    signal ddr3_dqs_p_s    : std_logic_vector(7 downto 0);
+    signal ddr3_dqs_n_s    : std_logic_vector(7 downto 0);
+    
+    signal init_calib_complete_s  : std_logic;
+  
+    signal ddr3_addr_s     : std_logic_vector(14 downto 0);
+    signal ddr3_ba_s       : std_logic_vector(2 downto 0);
+    signal ddr3_ras_n_s    : std_logic;
+    signal ddr3_cas_n_s    : std_logic;
+    signal ddr3_we_n_s     : std_logic;
+    signal ddr3_reset_n_s  : std_logic;
+    signal ddr3_ck_p_s     : std_logic_vector(0 downto 0);
+    signal ddr3_ck_n_s     : std_logic_vector(0 downto 0);
+    signal ddr3_cke_s      : std_logic_vector(0 downto 0);
+    signal ddr3_cs_n_s     : std_logic_vector(0 downto 0);
+    signal ddr3_dm_s       : std_logic_vector(7 downto 0);
+    signal ddr3_odt_s      : std_logic_vector(0 downto 0);
+
+
+	---------------------------------------------------------
+	-- DDR3 control to MIG    
+    signal ddr_app_addr_s                  :     std_logic_vector(28 downto 0);
+    signal ddr_app_cmd_s                   :     std_logic_vector(2 downto 0);
+    signal ddr_app_cmd_en_s                :     std_logic;
+    signal ddr_app_wdf_data_s              :     std_logic_vector(255 downto 0);
+    signal ddr_app_wdf_end_s               :     std_logic;
+    signal ddr_app_wdf_mask_s              :     std_logic_vector(31 downto 0);
+    signal ddr_app_wdf_wren_s              :     std_logic;
+    signal ddr_app_rd_data_s               :     std_logic_vector(255 downto 0);
+    signal ddr_app_rd_data_end_s           :     std_logic;
+    signal ddr_app_rd_data_valid_s         :     std_logic;
+    signal ddr_app_rdy_s                   :     std_logic;
+    signal ddr_app_wdf_rdy_s               :     std_logic;
+    signal ddr_app_ui_clk_s                :     std_logic;
+    signal ddr_app_ui_clk_sync_rst_s       :     std_logic;
+   
 	
 	---------------------------------------------------------
 	-- From L2P DMA master (ldm) to arbiter (arb)
@@ -1127,28 +1338,42 @@ begin
     
    
     
-    wb_mem_adr_s <= wb_adr_s(31 downto 0);
-    wb_mem_dat_m2s_s <= wb_dat_m2s_s;
-    wb_mem_stb_s <= wb_stb_s;
-    wb_mem_we_s <= wb_we_s;
+
     
     wb_dma_ctrl_adr_s <= wb_adr_s(31 downto 0);
     wb_dma_ctrl_dat_m2s_s <= wb_dat_m2s_s;
     wb_dma_ctrl_stb_s <= wb_stb_s;
     wb_dma_ctrl_we_s <= wb_we_s;   
     
-    --wb_dma_ctrl_cyc_s <= wb_cyc_s when wb_adr_s(31 downto 4) = X"0000000" else '0';
-    --wb_mem_cyc_s <= '0' when wb_adr_s(31 downto 4) = X"0000000"
+    wb_dbg_adr_s <= wb_adr_s(31 downto 0);
+    wb_dbg_dat_m2s_s <= wb_dat_m2s_s;
+    wb_dbg_stb_s <= wb_stb_s;
+    wb_dbg_we_s <= wb_we_s;
+    wb_dbg_sel_s <= (others => '1');
     
-	process(wb_adr_s,wb_cyc_s,wb_mem_cyc_s,wb_cyc_s,wb_dma_ctrl_dat_s2m_s,wb_dma_ctrl_ack_s,wb_mem_dat_s2m_s,wb_mem_ack_s)
+    wb_mem_adr_s <= wb_adr_s(31 downto 0);
+    wb_mem_dat_m2s_s <= wb_dat_m2s_s;
+    wb_mem_stb_s <= wb_stb_s;
+    wb_mem_we_s <= wb_we_s;    
+    
+    -- CSR Wishbone adress demux
+	process(wb_adr_s,wb_cyc_s,wb_mem_cyc_s,wb_cyc_s,wb_dma_ctrl_dat_s2m_s,wb_dma_ctrl_ack_s,wb_mem_dat_s2m_s,wb_mem_ack_s,wb_dbg_dat_s2m_s,wb_dbg_ack_s)
     begin
         if wb_adr_s(31 downto 4) = X"0000000" then
             wb_dma_ctrl_cyc_s <= wb_cyc_s;
+            wb_dbg_cyc_s <= '0';
             wb_mem_cyc_s <= '0';
             wb_dat_s2m_s <= wb_dma_ctrl_dat_s2m_s;
             wb_ack_s <= wb_dma_ctrl_ack_s;
+        elsif wb_adr_s(31 downto 4) = X"0000001" then
+            wb_dma_ctrl_cyc_s <= '0';
+            wb_dbg_cyc_s <= wb_cyc_s;
+            wb_mem_cyc_s <= '0';
+            wb_dat_s2m_s <= wb_dbg_dat_s2m_s;
+            wb_ack_s <= wb_dbg_ack_s;
         else
             wb_dma_ctrl_cyc_s <= '0';
+            wb_dbg_cyc_s <= '0';
             wb_mem_cyc_s <= wb_cyc_s;
             wb_dat_s2m_s <= wb_mem_dat_s2m_s;
             wb_ack_s <= wb_mem_ack_s;
@@ -1239,6 +1464,34 @@ begin
 	dma_ctrl_done_s  <= dma_ctrl_l2p_done_s or dma_ctrl_p2l_done_s;
 	dma_ctrl_error_s <= dma_ctrl_l2p_error_s or dma_ctrl_p2l_error_s;
     
+    dbg_reg_comp:debugregisters
+        Port map( 
+          -- SYS CON
+            clk            => clk_i,
+            rst            => rst_i,
+            
+            -- Wishbone Slave in
+            wb_adr_i       => wb_dbg_adr_s(3 downto 0),
+            wb_dat_i       => wb_dbg_dat_m2s_s,
+            wb_we_i        => wb_dbg_we_s,
+            wb_stb_i       => wb_dbg_stb_s,
+            wb_cyc_i       => wb_dbg_cyc_s, 
+            
+            -- Wishbone Slave out
+            wb_dat_o       => wb_dbg_dat_s2m_s,
+            wb_ack_o       => wb_dbg_ack_s,
+            
+            -- input/ouput  
+            dummyram_sel_o      => dummyram_sel_s,
+            ddr3ram_sel_o       => ddr3ram_sel_s,
+            dummyaddress_sel_o  => dummyaddress_sel_s,
+            dummydeadbeef_sel_o => dummydeadbeef_sel_s,
+            
+            usr_led_o => usr_led_o,
+            usr_sw_i => usr_sw_i--,
+            
+            --ddr_init_calib_complete_i => init_calib_complete_s
+        );
 	
 	p2l_dma:p2l_dma_master
 	  generic map (
@@ -1355,7 +1608,6 @@ begin
 		l2p_edb_o  => open,
 		ldm_arb_tready_i => ldm_arb_tready_s,
 		l2p_rdy_i  => '1',
-		--l2p_64b_address_i => '0',
 		tx_error_i => '0',
 
 		l2p_dma_clk_i   => clk_i,
@@ -1458,25 +1710,175 @@ begin
          rst            => rst_i,
          
          -- Wishbone Slave in
-         wb_adr_i    => dma_adr_s(9+4 - 1 downto 0),
-         wb_dat_i    => dma_dat_m2s_s,
-         wb_we_i        => dma_we_s,
-         wb_stb_i    => dma_stb_s,
-         wb_cyc_i    => dma_cyc_s,
-         wb_lock_i    => dma_stb_s,
+         wb_adr_i    => dma_bram_adr_s(9+4 - 1 downto 0),
+         wb_dat_i    => dma_bram_dat_m2s_s,
+         wb_we_i        => dma_bram_we_s,
+         wb_stb_i    => dma_bram_stb_s,
+         wb_cyc_i    => dma_bram_cyc_s,
+         wb_lock_i    => dma_bram_stb_s,
          
          -- Wishbone Slave out
-         wb_dat_o    => dma_dat_s2m_s,
-         wb_ack_o    => dma_ack_s
+         wb_dat_o    => dma_bram_dat_s2m_s,
+         wb_ack_o    => dma_bram_ack_s
      );
 
+  cmp_ddr3_ctrl_wb : ddr3_ctrl_wb
+    port map(
+      rst_n_i             => rst_n_s,
+      
+      ddr_addr_o          => ddr_app_addr_s,
+      ddr_cmd_o           => ddr_app_cmd_s,
+      ddr_cmd_en_o        => ddr_app_cmd_en_s,
+      ddr_wdf_data_o      => ddr_app_wdf_data_s,
+      ddr_wdf_end_o       => ddr_app_wdf_end_s,
+      ddr_wdf_mask_o      => ddr_app_wdf_mask_s,
+      ddr_wdf_wren_o      => ddr_app_wdf_wren_s,
+      ddr_rd_data_i       => ddr_app_rd_data_s,
+      ddr_rd_data_end_i   => ddr_app_rd_data_end_s,
+      ddr_rd_data_valid_i => ddr_app_rd_data_valid_s,
+      ddr_rdy_i           => ddr_app_rdy_s,
+      ddr_wdf_rdy_i       => ddr_app_wdf_rdy_s,
+      ddr_ui_clk_i        => ddr_app_ui_clk_s,
+      ddr_ui_clk_sync_rst_i => ddr_app_ui_clk_sync_rst_s,
+      ddr_sr_req_o        => open,
+      ddr_ref_req_o       => open,
+      ddr_zq_req_o        => open,
+      ddr_sr_active_i     => '1',
+      ddr_ref_ack_i       => '1',
+      ddr_zq_ack_i        => '1',
+      ddr_init_calib_complete_i => '1',
+      
+      wb_clk_i            => clk_i,
+      wb_sel_i            => dma_ddr_sel_s,
+      wb_cyc_i            => dma_ddr_cyc_s,
+      wb_stb_i            => dma_ddr_stb_s,
+      wb_we_i             => dma_ddr_we_s,
+      wb_addr_i           => dma_ddr_addr_s,
+      wb_data_i           => dma_ddr_dat_m2s_s,
+      wb_data_o           => dma_ddr_dat_s2m_s,
+      wb_ack_o            => dma_ddr_ack_s,
+      wb_stall_o          => dma_ddr_stall_s
+      );
+      dma_ddr_sel_s <= (others => '1');
+      
+        u_mig_7series_0 : mig_7series_0
+        port map (
+            -- Memory interface ports
+            ddr3_addr                      => ddr3_addr_s,
+            ddr3_ba                        => ddr3_ba_s,
+            ddr3_cas_n                     => ddr3_cas_n_s,
+            ddr3_ck_n                      => ddr3_ck_n_s,
+            ddr3_ck_p                      => ddr3_ck_p_s,
+            ddr3_cke                       => ddr3_cke_s,
+            ddr3_ras_n                     => ddr3_ras_n_s,
+            ddr3_reset_n                   => ddr3_reset_n_s,
+            ddr3_we_n                      => ddr3_we_n_s,
+            ddr3_dq                        => ddr3_dq_s,
+            ddr3_dqs_n                     => ddr3_dqs_n_s,
+            ddr3_dqs_p                     => ddr3_dqs_p_s,
+            init_calib_complete            => init_calib_complete_s,
+            ddr3_cs_n                      => ddr3_cs_n_s,
+            ddr3_dm                        => ddr3_dm_s,
+            ddr3_odt                       => ddr3_odt_s,
+            -- Application interface ports
+            app_addr                       => ddr_app_addr_s,
+            app_cmd                        => ddr_app_cmd_s,
+            app_en                         => ddr_app_cmd_en_s,
+            app_wdf_data                   => ddr_app_wdf_data_s,
+            app_wdf_end                    => ddr_app_wdf_end_s,
+            app_wdf_wren                   => ddr_app_wdf_wren_s,
+            app_rd_data                    => ddr_app_rd_data_s,
+            app_rd_data_end                => ddr_app_rd_data_end_s,
+            app_rd_data_valid              => ddr_app_rd_data_valid_s,
+            app_rdy                        => ddr_app_rdy_s,
+            app_wdf_rdy                    => ddr_app_wdf_rdy_s,
+            app_sr_req                     => '0',
+            app_ref_req                    => '0',
+            app_zq_req                     => '0',
+            app_sr_active                  => open,
+            app_ref_ack                    => open,
+            app_zq_ack                     => open,
+            ui_clk                         => ddr_app_ui_clk_s,
+            ui_clk_sync_rst                => ddr_app_ui_clk_sync_rst_s,
+            app_wdf_mask                   => ddr_app_wdf_mask_s,
+            -- System Clock Ports
+            sys_clk_p                       => sys_clk_p_i,
+            sys_clk_n                       => sys_clk_n_i,
+            sys_rst                        => rst_i
+        );
+     
+    --DDR3
+    ddr3_dq_io <= ddr3_dq_s;
+    ddr3_dqs_p_io <= ddr3_dqs_p_s;
+    ddr3_dqs_n_io <= ddr3_dqs_n_s;
+    --init_calib_complete_o <= init_calib_complete_s;
+    
+    ddr3_addr_o <= ddr3_addr_s;
+    ddr3_ba_o <= ddr3_ba_s;
+    ddr3_ras_n_o <= ddr3_ras_n_s;
+    ddr3_cas_n_o <= ddr3_cas_n_s;
+    ddr3_we_n_o <= ddr3_we_n_s;
+    ddr3_reset_n_o <= ddr3_reset_n_s;
+    ddr3_ck_p_o <= ddr3_ck_p_s;
+    ddr3_ck_n_o <= ddr3_ck_n_s;
+    ddr3_cke_o <= ddr3_cke_s;
+    ddr3_cs_n_o <= ddr3_cs_n_s;
+    ddr3_dm_o <= ddr3_dm_s;
+    ddr3_odt_o <= ddr3_odt_s;
+  
+     -- BRAM Wishbone Slave in
+     dma_bram_adr_s <= dma_adr_s;
+     dma_bram_dat_m2s_s <= dma_dat_m2s_s;
+     dma_bram_we_s <= dma_we_s;
+     dma_bram_stb_s <= dma_stb_s;
+     
+     -- DDR CTRL Wishbone Slave in
+     dma_ddr_addr_s <= dma_adr_s;
+     dma_ddr_dat_m2s_s <= dma_dat_m2s_s;
+     dma_ddr_we_s <= dma_we_s;
+     dma_ddr_stb_s <= dma_stb_s;
+     
+  
+  dma_sel : process(clk_i,dummyram_sel_s, ddr3ram_sel_s, dummyaddress_sel_s, dummydeadbeef_sel_s)
+  begin
+  
+
+  
+    dma_dat_s2m_s <= (others => '0');
+    dma_ack_s  <=  '0';
+    dma_bram_cyc_s <= '0';
+    dma_ddr_cyc_s <= '0';
+    
+    
+    if(dummyram_sel_s = '1') then
+        dma_dat_s2m_s <= dma_bram_dat_s2m_s;
+        dma_ack_s  <=  dma_bram_ack_s;
+        dma_bram_cyc_s <= dma_cyc_s;
+    end if;
+    
+    if (ddr3ram_sel_s = '1') then
+        dma_dat_s2m_s <= dma_ddr_dat_s2m_s;
+        dma_ack_s  <=  dma_ddr_ack_s;
+        dma_ddr_cyc_s <= dma_cyc_s;
+    end if;
+    
+    if(dummyaddress_sel_s = '1') then
+    
+    end if;
+    
+    if(dummyaddress_sel_s = '1') then
+    
+    end if;
+    
+  end process dma_sel;
+  
   
   dma_mux: process(
   l2p_dma_adr_s,l2p_dma_dat_m2s_s,l2p_dma_sel_s,l2p_dma_cyc_s,l2p_dma_stb_s,l2p_dma_we_s,
   p2l_dma_adr_s,p2l_dma_dat_m2s_s,p2l_dma_sel_s,p2l_dma_cyc_s,p2l_dma_stb_s,p2l_dma_we_s)
   begin
 	if l2p_dma_cyc_s = '1' then
-		dma_adr_s      <= l2p_dma_adr_s(31 downto 0); --TODO
+		dma_adr_s      <= l2p_dma_adr_s(31 downto 0);
 		dma_dat_m2s_s  <= l2p_dma_dat_m2s_s;
 		dma_sel_s      <= l2p_dma_sel_s & l2p_dma_sel_s;
 		dma_cyc_s      <= l2p_dma_cyc_s;
@@ -1508,7 +1910,7 @@ begin
   dma_stall_s <= '0';
   
   front_led_o <= count_s(28 downto 25);
-  usr_led_o <= '1' & usr_sw_i;
+  --usr_led_o <= '1' & usr_sw_i;
   
   dbg_0 : if DEBUG_C(0) = '1' generate
       axis_debug : ila_axis
@@ -1673,5 +2075,30 @@ begin
           probe41 => std_logic_vector(l2p_timeout_cnt_ds)
       );
   end generate dbg_4;
+  
+  dbg_5 : if DEBUG_C(5) = '1' generate
+    ddr_debug : ila_ddr
+      PORT MAP (
+          clk => ddr_app_ui_clk_s,
+      
+      
+      
+          probe0 => ddr_app_addr_s, 
+          probe1 => ddr_app_cmd_s, 
+          probe2(0) => ddr_app_cmd_en_s, 
+          probe3 => ddr_app_wdf_data_s, 
+          probe4(0) => ddr_app_wdf_end_s, 
+          probe5 => ddr_app_wdf_mask_s, 
+          probe6(0) => ddr_app_wdf_wren_s, 
+          probe7 => ddr_app_rd_data_s, 
+          probe8(0) => ddr_app_rd_data_end_s, 
+          probe9(0) => ddr_app_rd_data_valid_s, 
+          probe10(0) => ddr_app_rdy_s, 
+          probe11(0) => ddr_app_ui_clk_sync_rst_s,
+          probe12(0) => ddr_app_ui_clk_sync_rst_s, 
+          probe13(0) => init_calib_complete_s, 
+          probe14(0) => dma_cyc_s
+      );
+   end generate dbg_5;
   
 end Behavioral;

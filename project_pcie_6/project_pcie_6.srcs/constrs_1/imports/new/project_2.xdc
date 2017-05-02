@@ -32,11 +32,11 @@ set_property IOSTANDARD LVCMOS15 [get_ports rst_n_i]
 set_property PACKAGE_PIN W10 [get_ports {usr_led_o[0]}]
 set_property PACKAGE_PIN V11 [get_ports {usr_led_o[1]}]
 set_property PACKAGE_PIN Y10 [get_ports {usr_led_o[2]}]
-set_property PACKAGE_PIN W13 [get_ports {usr_led_o[3]}]
+#set_property PACKAGE_PIN W13 [get_ports {usr_led_o[3]}]
 set_property IOSTANDARD LVCMOS15 [get_ports {usr_led_o[0]}]
 set_property IOSTANDARD LVCMOS15 [get_ports {usr_led_o[1]}]
 set_property IOSTANDARD LVCMOS15 [get_ports {usr_led_o[2]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {usr_led_o[3]}]
+#set_property IOSTANDARD LVCMOS15 [get_ports {usr_led_o[3]}]
 
 # On-board Switches
 set_property PACKAGE_PIN AA15 [get_ports {usr_sw_i[0]}]
@@ -47,17 +47,14 @@ set_property IOSTANDARD LVCMOS15 [get_ports {usr_sw_i[1]}]
 set_property IOSTANDARD LVCMOS15 [get_ports {usr_sw_i[2]}]
 
 
-set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[3]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[2]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[1]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[0]}]
-set_property PACKAGE_PIN T7 [get_ports {front_led_o[3]}]
-set_property PACKAGE_PIN V7 [get_ports {front_led_o[2]}]
-set_property PACKAGE_PIN U4 [get_ports {front_led_o[1]}]
-set_property PACKAGE_PIN V2 [get_ports {front_led_o[0]}]
-
-
-
+#set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[3]}]
+#set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[2]}]
+#set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[1]}]
+#set_property IOSTANDARD LVCMOS15 [get_ports {front_led_o[0]}]
+#set_property PACKAGE_PIN T7 [get_ports {front_led_o[3]}]
+#set_property PACKAGE_PIN V7 [get_ports {front_led_o[2]}]
+#set_property PACKAGE_PIN U4 [get_ports {front_led_o[1]}]
+#set_property PACKAGE_PIN V2 [get_ports {front_led_o[0]}]
 
 
 
@@ -68,7 +65,7 @@ set_property PACKAGE_PIN U16 [get_ports sys_rst_n_i]
 #create_clock -period 8.000 -name user_clk_out -waveform {0.000 4.000} [get_nets user_clk_out]
 
 
-create_clock -period 5.000 -name clk_200 -waveform {0.000 2.500} [get_ports *clk200*]
+#create_clock -period 5.000 -name clk_200 -waveform {0.000 2.500} [get_ports *clk200*]
 
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]

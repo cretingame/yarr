@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Fri Mar 31 11:17:19 2017
+| Date         : Tue May  2 13:54:18 2017
 | Host         : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command      : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
 | Design       : top_level
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2536 |     0 |    101400 |  2.50 |
-|   LUT as Logic             | 2535 |     0 |    101400 |  2.50 |
+| Slice LUTs*                | 3722 |     0 |    101400 |  3.67 |
+|   LUT as Logic             | 3721 |     0 |    101400 |  3.67 |
 |   LUT as Memory            |    1 |     0 |     35000 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            | 4212 |     0 |    202800 |  2.08 |
-|   Register as Flip Flop    | 4212 |     0 |    202800 |  2.08 |
+| Slice Registers            | 5560 |     0 |    202800 |  2.74 |
+|   Register as Flip Flop    | 5560 |     0 |    202800 |  2.74 |
 |   Register as Latch        |    0 |     0 |    202800 |  0.00 |
-| F7 Muxes                   |  261 |     0 |     50700 |  0.51 |
-| F8 Muxes                   |   64 |     0 |     25350 |  0.25 |
+| F7 Muxes                   |  325 |     0 |     50700 |  0.64 |
+| F8 Muxes                   |   96 |     0 |     25350 |  0.38 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 825   |          Yes |           - |          Set |
-| 3208  |          Yes |           - |        Reset |
+| 1061  |          Yes |           - |          Set |
+| 4288  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 179   |          Yes |       Reset |            - |
+| 211   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   31 |     0 |       400 |  7.75 |
+| Bonded IOB                  |   24 |     0 |       400 |  6.00 |
 | Bonded IPADs                |    2 |     0 |        26 |  7.69 |
 | Bonded OPADs                |    0 |     0 |        16 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         8 |  0.00 |
@@ -101,7 +101,7 @@ Table of Contents
 | OUT_FIFO                    |    0 |     0 |        32 |  0.00 |
 | IN_FIFO                     |    0 |     0 |        32 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |         8 |  0.00 |
-| IBUFDS                      |    1 |     0 |       384 |  0.26 |
+| IBUFDS                      |    0 |     0 |       384 |  0.00 |
 | GTXE2_COMMON                |    0 |     0 |         2 |  0.00 |
 | GTXE2_CHANNEL               |    0 |     0 |         8 |  0.00 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        32 |  0.00 |
@@ -154,39 +154,45 @@ Table of Contents
 +-------------+------+---------------------+
 |   Ref Name  | Used | Functional Category |
 +-------------+------+---------------------+
-| FDCE        | 3208 |        Flop & Latch |
-| LUT6        | 1202 |                 LUT |
-| FDPE        |  825 |        Flop & Latch |
-| LUT3        |  570 |                 LUT |
-| LUT4        |  333 |                 LUT |
-| MUXF7       |  261 |               MuxFx |
-| LUT5        |  235 |                 LUT |
-| LUT2        |  182 |                 LUT |
-| FDRE        |  179 |        Flop & Latch |
-| LUT1        |   95 |                 LUT |
-| CARRY4      |   79 |          CarryLogic |
-| MUXF8       |   64 |               MuxFx |
+| FDCE        | 4288 |        Flop & Latch |
+| LUT6        | 1545 |                 LUT |
+| LUT3        | 1352 |                 LUT |
+| FDPE        | 1061 |        Flop & Latch |
+| LUT4        |  439 |                 LUT |
+| MUXF7       |  325 |               MuxFx |
+| LUT5        |  320 |                 LUT |
+| LUT2        |  280 |                 LUT |
+| FDRE        |  211 |        Flop & Latch |
+| CARRY4      |  173 |          CarryLogic |
+| LUT1        |  110 |                 LUT |
+| MUXF8       |   96 |               MuxFx |
 | RAMB36E1    |   16 |        Block Memory |
-| OBUF        |   16 |                  IO |
 | IBUF        |   15 |                  IO |
+| OBUF        |   11 |                  IO |
 | SRL16E      |    1 |  Distributed Memory |
 | IBUFDS_GTE2 |    1 |                  IO |
-| IBUFDS      |    1 |                  IO |
 +-------------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-------------+------+
-|   Ref Name  | Used |
-+-------------+------+
-| l2p_fifo64  |    2 |
-| fifo_64x512 |    2 |
-| pcie_7x_0   |    1 |
-| ila_axis    |    1 |
-| fifo_96x512 |    1 |
-+-------------+------+
++---------------+------+
+|    Ref Name   | Used |
++---------------+------+
+| l2p_fifo64    |    2 |
+| fifo_64x512   |    2 |
+| pcie_7x_0     |    1 |
+| mig_7series_0 |    1 |
+| ila_wsh_pipe  |    1 |
+| ila_ddr       |    1 |
+| ila_axis      |    1 |
+| fifo_96x512   |    1 |
+| fifo_4x16     |    1 |
+| fifo_315x16   |    1 |
+| fifo_27x16    |    1 |
+| fifo_256x16   |    1 |
++---------------+------+
 
 
 9. Instantiated Netlists
