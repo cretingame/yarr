@@ -352,7 +352,7 @@ begin
         pci_exp_rxp => pci_exp_rxp,
         pci_exp_rxn => pci_exp_rxn,
         user_clk_out => aclk,
-        user_reset_out => open,
+        user_reset_out => open, -- TODO
         user_lnk_up => user_lnk_up_s,
         user_app_rdy => user_app_rdy_s,
         s_axis_tx_tready => s_axis_tx_tready_s,

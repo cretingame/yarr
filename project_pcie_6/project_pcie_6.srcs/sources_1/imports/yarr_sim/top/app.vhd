@@ -658,7 +658,14 @@ architecture Behavioral of app is
           wb_data_i  : in  std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
           wb_data_o  : out std_logic_vector(g_DATA_PORT_SIZE - 1 downto 0);
           wb_ack_o   : out std_logic;
-          wb_stall_o : out std_logic
+          wb_stall_o : out std_logic;
+          
+          ----------------------------------------------------------------------------
+          -- Debug ports
+          ----------------------------------------------------------------------------
+          --ddr_rd_fifo_full_do : out std_logic_vector(1 downto 0);
+          ddr_rd_fifo_empty_do : out std_logic_vector(1 downto 0);
+          ddr_rd_fifo_rd_do : out std_logic_vector(1 downto 0)
         );
     end component ddr3_ctrl_wb;
     
@@ -879,8 +886,7 @@ COMPONENT ila_l2p_dma
         probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        probe14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
     END COMPONENT  ;
 
@@ -1164,6 +1170,12 @@ COMPONENT ila_l2p_dma
     signal ddr_app_wdf_rdy_s               :     std_logic;
     signal ddr_app_ui_clk_s                :     std_logic;
     signal ddr_app_ui_clk_sync_rst_s       :     std_logic;
+    
+    ----------------------------------------------------------------------------
+    -- DDR3 Debug signalss
+    signal ddr_rd_fifo_full_ds : std_logic_vector(1 downto 0);
+    signal ddr_rd_fifo_empty_ds : std_logic_vector(1 downto 0);
+    signal ddr_rd_fifo_rd_ds : std_logic_vector(1 downto 0);
    
 	
 	---------------------------------------------------------
@@ -1757,7 +1769,12 @@ begin
       wb_data_i           => dma_ddr_dat_m2s_s,
       wb_data_o           => dma_ddr_dat_s2m_s,
       wb_ack_o            => dma_ddr_ack_s,
-      wb_stall_o          => dma_ddr_stall_s
+      wb_stall_o          => dma_ddr_stall_s,
+      
+      --ddr_rd_fifo_full_do => ddr_rd_fifo_full_ds,
+      ddr_rd_fifo_empty_do => ddr_rd_fifo_empty_ds,
+      ddr_rd_fifo_rd_do => ddr_rd_fifo_rd_ds
+      
       );
       dma_ddr_sel_s <= (others => '1');
       
@@ -2094,10 +2111,9 @@ begin
           probe8(0) => ddr_app_rd_data_end_s, 
           probe9(0) => ddr_app_rd_data_valid_s, 
           probe10(0) => ddr_app_rdy_s, 
-          probe11(0) => ddr_app_ui_clk_sync_rst_s,
+          probe11(0) => ddr_app_wdf_rdy_s,
           probe12(0) => ddr_app_ui_clk_sync_rst_s, 
-          probe13(0) => init_calib_complete_s, 
-          probe14(0) => dma_cyc_s
+          probe13(0) => init_calib_complete_s
       );
    end generate dbg_5;
   

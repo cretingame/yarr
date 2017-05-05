@@ -91,7 +91,7 @@ entity mig_7series_0_mig is
                                      -- # of unique CS outputs per rank for phy
    CKE_WIDTH             : integer := 1;
                                      -- # of CKE outputs to memory.
-   DATA_BUF_ADDR_WIDTH   : integer := 4;
+   DATA_BUF_ADDR_WIDTH   : integer := 5;
    DQ_CNT_WIDTH          : integer := 6;
                                      -- = ceil(log2(DQ_WIDTH))
    DQ_PER_DM             : integer := 8;
@@ -150,7 +150,7 @@ entity mig_7series_0_mig is
    PHY_CONTROL_MASTER_BANK : integer := 1;
                                      -- The bank index where master PHY_CONTROL resides,
                                      -- equal to the PLL residing bank
-   MEM_DENSITY             : string  := "1Gb";
+   MEM_DENSITY             : string  := "2Gb";
                                      -- Indicates the density of the Memory part
                                      -- Added for the sake of Vivado simulations
    MEM_SPEEDGRADE          : string  := "125";
@@ -179,7 +179,7 @@ entity mig_7series_0_mig is
                                      -- DDR2 SDRAM:
                                      -- Burst Length (Mode Register).
                                      -- # = "8", "4".
-   BURST_TYPE            : string  := "SEQ";
+   BURST_TYPE            : string  := "INT";
                                      -- DDR3 SDRAM: Burst Type (Mode Register 0).
                                      -- DDR2 SDRAM: Burst Type (Mode Register).
                                      -- # = "SEQ" - (Sequential),
@@ -235,11 +235,11 @@ entity mig_7series_0_mig is
                                      -- VCO output divisor for PLL output clock (CLKOUT1)
    CLKOUT2_DIVIDE        : integer := 32;
                                      -- VCO output divisor for PLL output clock (CLKOUT2)
-   CLKOUT3_DIVIDE        : integer := 4;
+   CLKOUT3_DIVIDE        : integer := 8;
                                      -- VCO output divisor for PLL output clock (CLKOUT3)
    MMCM_VCO              : integer := 1066;
                                      -- Max Freq (MHz) of MMCM VCO
-   MMCM_MULT_F           : integer := 4;
+   MMCM_MULT_F           : integer := 8;
                                      -- write MMCM VCO multiplier
    MMCM_DIVCLK_DIVIDE    : integer := 1;
                                      -- write MMCM VCO divisor
@@ -250,21 +250,21 @@ entity mig_7series_0_mig is
    --***************************************************************************
    tCKE                  : integer := 5000;
                                      -- memory tCKE paramter in pS
-   tFAW                  : integer := 37500;
+   tFAW                  : integer := 30000;
                                      -- memory tRAW paramter in pS.
    tPRDI                 : integer := 1000000;
                                      -- memory tPRDI paramter in pS.
-   tRAS                  : integer := 37500;
+   tRAS                  : integer := 35000;
                                      -- memory tRAS paramter in pS.
-   tRCD                  : integer := 13125;
+   tRCD                  : integer := 13750;
                                      -- memory tRCD paramter in pS.
    tREFI                 : integer := 7800000;
                                      -- memory tREFI paramter in pS.
-   tRFC                  : integer := 161350;
+   tRFC                  : integer := 160000;
                                      -- memory tRFC paramter in pS.
-   tRP                   : integer := 13125;
+   tRP                   : integer := 13750;
                                      -- memory tRP paramter in pS.
-   tRRD                  : integer := 5000;
+   tRRD                  : integer := 6000;
                                      -- memory tRRD paramter in pS.
    tRTP                  : integer := 7500;
                                      -- memory tRTP paramter in pS.
@@ -452,7 +452,7 @@ entity mig_7series_0_mig is
    tCK                   : integer := 1875;
                                      -- memory tCK paramter.
                                      -- # = Clock Period in pS.
-   nCK_PER_CLK           : integer := 2;
+   nCK_PER_CLK           : integer := 4;
                                      -- # of memory CKs per fabric CLK
    DIFF_TERM_SYSCLK      : string  := "FALSE";
                                      -- Differential Termination for System

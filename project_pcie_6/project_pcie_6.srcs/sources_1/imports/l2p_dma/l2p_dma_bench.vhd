@@ -72,6 +72,9 @@ architecture Behavioral of l2p_dma_bench is
             -- GN4124 core clk and reset
             clk_i   : in std_logic;
             rst_n_i : in std_logic;
+            
+            -- From PCIe IP core
+            l2p_rid_i : in std_logic_vector(16-1 downto 0);
     
             -- From the DMA controller
             dma_ctrl_target_addr_i : in  std_logic_vector(32-1 downto 0);
@@ -86,7 +89,6 @@ architecture Behavioral of l2p_dma_bench is
     
             -- To the arbiter (L2P data)
             ldm_arb_tvalid_o  : out std_logic;
-            --ldm_arb_dframe_o : out std_logic;
             ldm_arb_tlast_o   : out std_logic;
             ldm_arb_tdata_o   : out std_logic_vector(axis_data_width_c-1 downto 0);
             ldm_arb_tkeep_o   : out std_logic_vector(axis_data_width_c/8-1 downto 0);
@@ -98,12 +100,11 @@ architecture Behavioral of l2p_dma_bench is
             -- L2P channel control
             l2p_edb_o  : out std_logic;                    -- Asserted when transfer is aborted
             l2p_rdy_i  : in  std_logic;                    -- De-asserted to pause transdert already in progress
-            --l2p_64b_address_i : in std_logic;
             tx_error_i : in  std_logic;                    -- Asserted when unexpected or malformed paket received
     
             -- DMA Interface (Pipelined Wishbone)
             l2p_dma_clk_i   : in  std_logic;
-            l2p_dma_adr_o   : out std_logic_vector(wb_data_width_c-1 downto 0);
+            l2p_dma_adr_o   : out std_logic_vector(wb_address_width_c-1 downto 0);
             l2p_dma_dat_i   : in  std_logic_vector(wb_data_width_c-1 downto 0);
             l2p_dma_dat_o   : out std_logic_vector(wb_data_width_c-1 downto 0);
             l2p_dma_sel_o   : out std_logic_vector(3 downto 0);
@@ -112,7 +113,30 @@ architecture Behavioral of l2p_dma_bench is
             l2p_dma_we_o    : out std_logic;
             l2p_dma_ack_i   : in  std_logic;
             l2p_dma_stall_i : in  std_logic;
-            p2l_dma_cyc_i   : in  std_logic -- P2L dma WB cycle for bus arbitration
+            p2l_dma_cyc_i   : in  std_logic; -- P2L dma WB cycle for bus arbitration
+            
+            --DMA Debug
+            l2p_current_state_do : out std_logic_vector (2 downto 0);
+            l2p_data_cnt_do : out unsigned(12 downto 0);
+            l2p_len_cnt_do  : out unsigned(12 downto 0);
+            l2p_timeout_cnt_do : out unsigned(12 downto 0);
+            wb_timeout_cnt_do  : out unsigned(12 downto 0);
+            
+            -- Data FIFO
+            data_fifo_rd_do    : out std_logic;
+            data_fifo_wr_do    : out std_logic;
+            data_fifo_empty_do : out std_logic;
+            data_fifo_full_do  : out std_logic;
+            data_fifo_dout_do  : out std_logic_vector(axis_data_width_c-1 downto 0);
+            data_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0);
+            
+            -- Addr FIFO
+            addr_fifo_rd_do    : out std_logic;
+            addr_fifo_wr_do    : out std_logic;
+            addr_fifo_empty_do : out std_logic;
+            addr_fifo_full_do  : out std_logic;
+            addr_fifo_dout_do  : out std_logic_vector(wb_address_width_c-1 downto 0);
+            addr_fifo_din_do   : out std_logic_vector(axis_data_width_c-1 downto 0)
         );
 	end component;
 		
@@ -187,7 +211,7 @@ begin
 		dma_ctrl_target_addr_tbs <= X"00000010";
 		dma_ctrl_host_addr_h_tbs <= X"00000000";
 		dma_ctrl_host_addr_l_tbs <= X"c57334d0";
-		dma_ctrl_len_tbs         <= X"00000800";
+		dma_ctrl_len_tbs         <= X"00000020";
 		dma_ctrl_start_l2p_tbs   <= '1';
 		dma_ctrl_byte_swap_tbs   <= "000";
 		dma_ctrl_abort_tbs       <= '0';
@@ -244,7 +268,9 @@ begin
     (
       clk_i   => clk_tbs,
       rst_n_i => rst_n_tbs,
-
+      
+      l2p_rid_i => X"0010",
+      
       dma_ctrl_target_addr_i => dma_ctrl_target_addr_tbs,
       dma_ctrl_host_addr_h_i => dma_ctrl_host_addr_h_tbs,
       dma_ctrl_host_addr_l_i => dma_ctrl_host_addr_l_tbs,

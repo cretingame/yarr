@@ -123,9 +123,9 @@ module sim_tb_top;
                                      // # of Ranks.
    parameter ODT_WIDTH             = 1;
                                      // # of ODT outputs to memory.
-   parameter ROW_WIDTH             = 13;
+   parameter ROW_WIDTH             = 15;
                                      // # of memory Row Address bits.
-   parameter ADDR_WIDTH            = 27;
+   parameter ADDR_WIDTH            = 29;
                                      // # = RANK_WIDTH + BANK_WIDTH
                                      //     + ROW_WIDTH + COL_WIDTH;
                                      // Chip Select is always tied to low for
@@ -169,7 +169,7 @@ module sim_tb_top;
    //***************************************************************************
    // IODELAY and PHY related parameters
    //***************************************************************************
-   parameter RST_ACT_LOW           = 1;
+   parameter RST_ACT_LOW           = 0;
                                      // =1 for active low reset,
                                      // =0 for active high.
 
@@ -217,7 +217,7 @@ module sim_tb_top;
   localparam real TPROP_PCB_DATA_RD  = 0.00;
                        // Delay for data signal during Read operation
 
-  localparam MEMORY_WIDTH            = 16;
+  localparam MEMORY_WIDTH            = 8;
   localparam NUM_COMP                = DQ_WIDTH/MEMORY_WIDTH;
   localparam ECC_TEST 		   	= "OFF" ;
   localparam ERR_INSERT = (ECC_TEST == "ON") ? "OFF" : ECC ;
@@ -237,6 +237,9 @@ module sim_tb_top;
 
 
   reg                     sys_clk_i;
+  wire                               sys_clk_p;
+  wire                               sys_clk_n;
+    
 
   reg clk_ref_i;
 
@@ -259,13 +262,15 @@ module sim_tb_top;
   wire                               tg_compare_error;
   wire [(CS_WIDTH*1)-1:0] ddr3_cs_n_fpga;
     
-  
+  wire [DM_WIDTH-1:0]                ddr3_dm_fpga;
+    
   wire [ODT_WIDTH-1:0]               ddr3_odt_fpga;
     
   
   reg [(CS_WIDTH*1)-1:0] ddr3_cs_n_sdram_tmp;
     
-  
+  reg [DM_WIDTH-1:0]                 ddr3_dm_sdram_tmp;
+    
   reg [ODT_WIDTH-1:0]                ddr3_odt_sdram_tmp;
     
 
@@ -309,6 +314,8 @@ module sim_tb_top;
   always
     sys_clk_i = #(CLKIN_PERIOD/2.0) ~sys_clk_i;
 
+  assign sys_clk_p = sys_clk_i;
+  assign sys_clk_n = ~sys_clk_i;
 
   initial
     clk_ref_i = 1'b0;
@@ -347,7 +354,9 @@ module sim_tb_top;
   assign ddr3_cs_n_sdram =  ddr3_cs_n_sdram_tmp;
     
 
-  assign ddr3_dm_sdram =  {DM_WIDTH{1'b0}};//DM signal generation
+  always @( * )
+    ddr3_dm_sdram_tmp <=  #(TPROP_PCB_DATA) ddr3_dm_fpga;//DM signal generation
+  assign ddr3_dm_sdram = ddr3_dm_sdram_tmp;
     
 
   always @( * )
@@ -446,6 +455,8 @@ module sim_tb_top;
 
      .COL_WIDTH                 (COL_WIDTH),
      .CS_WIDTH                  (CS_WIDTH),
+     .DM_WIDTH                  (DM_WIDTH),
+    
      .DQ_WIDTH                  (DQ_WIDTH),
      .DQS_CNT_WIDTH             (DQS_CNT_WIDTH),
      .DRAM_WIDTH                (DRAM_WIDTH),
@@ -485,12 +496,13 @@ module sim_tb_top;
      .ddr3_cke             (ddr3_cke_fpga),
      .ddr3_cs_n            (ddr3_cs_n_fpga),
     
+     .ddr3_dm              (ddr3_dm_fpga),
+    
      .ddr3_odt             (ddr3_odt_fpga),
     
      
-     .sys_clk_i            (sys_clk_i),
-    
-     .clk_ref_i            (clk_ref_i),
+     .sys_clk_p            (sys_clk_p),
+     .sys_clk_n            (sys_clk_n),
     
       .init_calib_complete (init_calib_complete),
       .tg_compare_error    (tg_compare_error),
@@ -504,30 +516,7 @@ module sim_tb_top;
   genvar r,i;
   generate
     for (r = 0; r < CS_WIDTH; r = r + 1) begin: mem_rnk
-      if(DQ_WIDTH/16) begin: mem
-        for (i = 0; i < NUM_COMP; i = i + 1) begin: gen_mem
-          ddr3_model u_comp_ddr3
-            (
-             .rst_n   (ddr3_reset_n),
-             .ck      (ddr3_ck_p_sdram),
-             .ck_n    (ddr3_ck_n_sdram),
-             .cke     (ddr3_cke_sdram[r]),
-             .cs_n    (ddr3_cs_n_sdram[r]),
-             .ras_n   (ddr3_ras_n_sdram),
-             .cas_n   (ddr3_cas_n_sdram),
-             .we_n    (ddr3_we_n_sdram),
-             .dm_tdqs (ddr3_dm_sdram[(2*(i+1)-1):(2*i)]),
-             .ba      (ddr3_ba_sdram[r]),
-             .addr    (ddr3_addr_sdram[r]),
-             .dq      (ddr3_dq_sdram[16*(i+1)-1:16*(i)]),
-             .dqs     (ddr3_dqs_p_sdram[(2*(i+1)-1):(2*i)]),
-             .dqs_n   (ddr3_dqs_n_sdram[(2*(i+1)-1):(2*i)]),
-             .tdqs_n  (),
-             .odt     (ddr3_odt_sdram[r])
-             );
-        end
-      end
-      if (DQ_WIDTH%16) begin: gen_mem_extrabits
+      for (i = 0; i < NUM_COMP; i = i + 1) begin: gen_mem
         ddr3_model u_comp_ddr3
           (
            .rst_n   (ddr3_reset_n),
@@ -538,15 +527,12 @@ module sim_tb_top;
            .ras_n   (ddr3_ras_n_sdram),
            .cas_n   (ddr3_cas_n_sdram),
            .we_n    (ddr3_we_n_sdram),
-           .dm_tdqs ({ddr3_dm_sdram[DM_WIDTH-1],ddr3_dm_sdram[DM_WIDTH-1]}),
+           .dm_tdqs (ddr3_dm_sdram[i]),
            .ba      (ddr3_ba_sdram[r]),
            .addr    (ddr3_addr_sdram[r]),
-           .dq      ({ddr3_dq_sdram[DQ_WIDTH-1:(DQ_WIDTH-8)],
-                      ddr3_dq_sdram[DQ_WIDTH-1:(DQ_WIDTH-8)]}),
-           .dqs     ({ddr3_dqs_p_sdram[DQS_WIDTH-1],
-                      ddr3_dqs_p_sdram[DQS_WIDTH-1]}),
-           .dqs_n   ({ddr3_dqs_n_sdram[DQS_WIDTH-1],
-                      ddr3_dqs_n_sdram[DQS_WIDTH-1]}),
+           .dq      (ddr3_dq_sdram[MEMORY_WIDTH*(i+1)-1:MEMORY_WIDTH*(i)]),
+           .dqs     (ddr3_dqs_p_sdram[i]),
+           .dqs_n   (ddr3_dqs_n_sdram[i]),
            .tdqs_n  (),
            .odt     (ddr3_odt_sdram[r])
            );

@@ -95,6 +95,8 @@ entity mig_7series_0_mig is
    DQ_CNT_WIDTH          : integer := 6;
                                      -- = ceil(log2(DQ_WIDTH))
    DQ_PER_DM             : integer := 8;
+   DM_WIDTH              : integer := 8;
+                                     -- # of DM (data mask)
    DQ_WIDTH              : integer := 64;
                                      -- # of DQ (data)
    DQS_WIDTH             : integer := 8;
@@ -119,9 +121,9 @@ entity mig_7series_0_mig is
                                      -- # of Ranks.
    ODT_WIDTH             : integer := 1;
                                      -- # of ODT outputs to memory.
-   ROW_WIDTH             : integer := 13;
+   ROW_WIDTH             : integer := 15;
                                      -- # of memory Row Address bits.
-   ADDR_WIDTH            : integer := 27;
+   ADDR_WIDTH            : integer := 29;
                                      -- # = RANK_WIDTH + BANK_WIDTH
                                      --     + ROW_WIDTH + COL_WIDTH;
                                      -- Chip Select is always tied to low for
@@ -131,7 +133,7 @@ entity mig_7series_0_mig is
                                      --   = 0, When Chip Select (CS#) output is disabled
                                      -- If CS_N disabled, user must connect
                                      -- DRAM CS_N input(s) to ground
-   USE_DM_PORT           : integer := 0;
+   USE_DM_PORT           : integer := 1;
                                      -- # = 1, When Data Mask option is enabled
                                      --   = 0, When Data Mask option is disbaled
                                      -- When Data Mask option is disabled in
@@ -148,13 +150,13 @@ entity mig_7series_0_mig is
    PHY_CONTROL_MASTER_BANK : integer := 1;
                                      -- The bank index where master PHY_CONTROL resides,
                                      -- equal to the PLL residing bank
-   MEM_DENSITY             : string  := "1Gb";
+   MEM_DENSITY             : string  := "2Gb";
                                      -- Indicates the density of the Memory part
                                      -- Added for the sake of Vivado simulations
    MEM_SPEEDGRADE          : string  := "125";
                                      -- Indicates the Speed grade of Memory Part
                                      -- Added for the sake of Vivado simulations
-   MEM_DEVICE_WIDTH        : integer := 16;
+   MEM_DEVICE_WIDTH        : integer := 8;
                                      -- Indicates the device width of the Memory Part
                                      -- Added for the sake of Vivado simulations
 
@@ -248,7 +250,7 @@ entity mig_7series_0_mig is
    --***************************************************************************
    tCKE                  : integer := 5000;
                                      -- memory tCKE paramter in pS
-   tFAW                  : integer := 40000;
+   tFAW                  : integer := 30000;
                                      -- memory tRAW paramter in pS.
    tPRDI                 : integer := 1000000;
                                      -- memory tPRDI paramter in pS.
@@ -258,11 +260,11 @@ entity mig_7series_0_mig is
                                      -- memory tRCD paramter in pS.
    tREFI                 : integer := 7800000;
                                      -- memory tREFI paramter in pS.
-   tRFC                  : integer := 110000;
+   tRFC                  : integer := 160000;
                                      -- memory tRFC paramter in pS.
    tRP                   : integer := 13750;
                                      -- memory tRP paramter in pS.
-   tRRD                  : integer := 7500;
+   tRRD                  : integer := 6000;
                                      -- memory tRRD paramter in pS.
    tRTP                  : integer := 7500;
                                      -- memory tRTP paramter in pS.
@@ -327,15 +329,15 @@ entity mig_7series_0_mig is
                                      -- or control Byte lane. '1' in a bit
                                      -- position indicates a data byte lane and
                                      -- a '0' indicates a control byte lane
-   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"2FE27F37E2EF";
-   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000F3FD15372";
-   PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"3F62BF1FD2F7";
+   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"3FE37F3FE2FF";
+   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000F7FD153F2";
+   PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"3FE2FF3FD2FF";
 
    -- control/address/data pin mapping parameters
    CK_BYTE_MAP
      : std_logic_vector(143 downto 0) := X"000000000000000000000000000000000010";
    ADDR_MAP
-     : std_logic_vector(191 downto 0) := X"00000000010112112510612310510412212A120128129124";
+     : std_logic_vector(191 downto 0) := X"00010712610112112510612310510412212A120128129124";
    BANK_MAP   : std_logic_vector(35 downto 0) := X"11211A11B";
    CAS_MAP    : std_logic_vector(11 downto 0) := X"110";
    CKE_ODT_BYTE_MAP : std_logic_vector(7 downto 0) := X"00";
@@ -365,7 +367,7 @@ entity mig_7series_0_mig is
    DATA15_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA16_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA17_MAP : std_logic_vector(95 downto 0) := X"000000000000000000000000";
-   MASK0_MAP  : std_logic_vector(107 downto 0) := X"000000000000000000000000000";
+   MASK0_MAP  : std_logic_vector(107 downto 0) := X"000038028017004233226219203";
    MASK1_MAP  : std_logic_vector(107 downto 0) := X"000000000000000000000000000";
 
    SLOT_0_CONFIG         : std_logic_vector(7 downto 0) := "00000001";
@@ -413,10 +415,10 @@ entity mig_7series_0_mig is
                                      -- It is associated to a set of IODELAYs with
                                      -- an IDELAYCTRL that have same IODELAY CONTROLLER
                                      -- clock frequency (300MHz/400MHz).
-   SYSCLK_TYPE           : string  := "NO_BUFFER";
+   SYSCLK_TYPE           : string  := "DIFFERENTIAL";
                                      -- System clock type DIFFERENTIAL, SINGLE_ENDED,
                                      -- NO_BUFFER
-   REFCLK_TYPE           : string  := "NO_BUFFER";
+   REFCLK_TYPE           : string  := "USE_SYSTEM_CLOCK";
                                      -- Reference clock type DIFFERENTIAL, SINGLE_ENDED
                                      -- NO_BUFFER, USE_SYSTEM_CLOCK
    SYS_RST_PORT          : string  := "FALSE";
@@ -452,14 +454,14 @@ entity mig_7series_0_mig is
                                      -- # = Clock Period in pS.
    nCK_PER_CLK           : integer := 2;
                                      -- # of memory CKs per fabric CLK
-   DIFF_TERM_SYSCLK      : string  := "TRUE";
+   DIFF_TERM_SYSCLK      : string  := "FALSE";
                                      -- Differential Termination for System
                                      -- clock input pins
 
    --***************************************************************************
    -- Debug parameters
    --***************************************************************************
-   DEBUG_PORT            : string  := "OFF";
+   DEBUG_PORT            : string  := "ON";
                                      -- # = "ON" Enable debug signals/controls.
                                      --   = "OFF" Disable debug signals/controls.
 
@@ -475,7 +477,7 @@ entity mig_7series_0_mig is
                                      -- # = "L", "N". When FPGA VccINT is 0.9v,
                                      -- the value is "L", else it is "N"
       
-   RST_ACT_LOW           : integer := 1
+   RST_ACT_LOW           : integer := 0
                                      -- =1 for active low reset,
                                      -- =0 for active high.
    );
@@ -497,19 +499,21 @@ entity mig_7series_0_mig is
    ddr3_ck_n                      : out   std_logic_vector(CK_WIDTH-1 downto 0);
    ddr3_cke                       : out   std_logic_vector(CKE_WIDTH-1 downto 0);
    ddr3_cs_n                      : out   std_logic_vector((CS_WIDTH*nCS_PER_RANK)-1 downto 0);
+   ddr3_dm                        : out   std_logic_vector(DM_WIDTH-1 downto 0);
    ddr3_odt                       : out   std_logic_vector(ODT_WIDTH-1 downto 0);
 
    -- Inputs
-   -- Single-ended system clock
-   sys_clk_i                      : in    std_logic;
-   -- Single-ended iodelayctrl clk (reference clock)
-   clk_ref_i                                : in    std_logic;
+   -- Differential system clocks
+   sys_clk_p                      : in    std_logic;
+   sys_clk_n                      : in    std_logic;
+   
    -- user interface signals
    app_addr             : in    std_logic_vector(ADDR_WIDTH-1 downto 0);
    app_cmd              : in    std_logic_vector(2 downto 0);
    app_en               : in    std_logic;
    app_wdf_data         : in    std_logic_vector((nCK_PER_CLK*2*PAYLOAD_WIDTH)-1 downto 0);
    app_wdf_end          : in    std_logic;
+   app_wdf_mask         : in    std_logic_vector(((nCK_PER_CLK*2*PAYLOAD_WIDTH)/8)-1 downto 0)  ;
    app_wdf_wren         : in    std_logic;
    app_rd_data          : out   std_logic_vector((nCK_PER_CLK*2*PAYLOAD_WIDTH)-1 downto 0);
    app_rd_data_end      : out   std_logic;
@@ -525,6 +529,25 @@ entity mig_7series_0_mig is
    ui_clk               : out   std_logic;
    ui_clk_sync_rst      : out   std_logic;
    
+   -- debug signals
+   ddr3_ila_wrpath                : out   std_logic_vector(390 downto 0);
+   ddr3_ila_rdpath                : out   std_logic_vector(1023 downto 0);
+   ddr3_ila_basic                 : out   std_logic_vector(119 downto 0);
+   ddr3_vio_sync_out              : in    std_logic_vector(13 downto 0); -- input from VIO
+
+   dbg_byte_sel                 : in    std_logic_vector(DQS_CNT_WIDTH downto 0);
+   dbg_sel_pi_incdec            : in    std_logic;
+   dbg_pi_f_inc                 : in    std_logic;
+   dbg_pi_f_dec                 : in    std_logic;
+   dbg_sel_po_incdec            : in    std_logic;
+   dbg_po_f_inc                 : in    std_logic;
+   dbg_po_f_stg23_sel           : in    std_logic;
+   dbg_po_f_dec                 : in    std_logic;
+   dbg_pi_counter_read_val      : out   std_logic_vector(5 downto 0);
+   dbg_po_counter_read_val      : out   std_logic_vector(8 downto 0);
+   dbg_prbs_final_dqs_tap_cnt_r : out   std_logic_vector(107 downto 0);
+   dbg_prbs_first_edge_taps     : out   std_logic_vector(107 downto 0);
+   dbg_prbs_second_edge_taps    : out   std_logic_vector(107 downto 0);
       
    init_calib_complete  : out std_logic;
    
@@ -537,6 +560,9 @@ entity mig_7series_0_mig is
       sys_rst                     : in    std_logic
    );
 
+  attribute use_dsp48 : string;
+  attribute use_dsp48 of mig_7series_0_mig : entity is "no";
+      
 end entity mig_7series_0_mig;
 
 architecture arch_mig_7series_0_mig of mig_7series_0_mig is
@@ -1056,17 +1082,15 @@ architecture arch_mig_7series_0_mig of mig_7series_0_mig is
   
   signal app_ecc_multiple_err        : std_logic_vector((2*nCK_PER_CLK)-1 downto 0);
   signal app_ecc_single_err          : std_logic_vector((2*nCK_PER_CLK)-1 downto 0);
-  signal app_wdf_mask                : std_logic_vector(APP_MASK_WIDTH-1 downto 0);
-      
   signal ddr3_parity          : std_logic;
       
   signal init_calib_complete_i       : std_logic;
 
-  signal sys_clk_p       : std_logic;
-  signal sys_clk_n          : std_logic;
+  signal sys_clk_i      : std_logic;
   signal mmcm_clk           : std_logic;
   signal clk_ref_p               : std_logic;
   signal clk_ref_n               : std_logic;
+  signal clk_ref_i               : std_logic;
   signal device_temp           : std_logic_vector(11 downto 0);
   signal device_temp_i           : std_logic_vector(11 downto 0);
 
@@ -1077,19 +1101,6 @@ architecture arch_mig_7series_0_mig of mig_7series_0_mig is
   signal dbg_idel_up_cpt             : std_logic;
   signal dbg_sel_all_idel_cpt        : std_logic;
   signal dbg_sel_idel_cpt            : std_logic_vector(DQS_CNT_WIDTH-1 downto 0);
-  signal dbg_po_f_stg23_sel          : std_logic;
-  signal dbg_sel_pi_incdec           : std_logic;
-  signal dbg_sel_po_incdec           : std_logic;
-  signal dbg_byte_sel                : std_logic_vector(DQS_CNT_WIDTH downto 0);
-  signal dbg_pi_f_inc                : std_logic;
-  signal dbg_po_f_inc                : std_logic;
-  signal dbg_pi_f_dec                : std_logic;
-  signal dbg_po_f_dec                : std_logic;
-  signal dbg_pi_counter_read_val     : std_logic_vector(5 downto 0);
-  signal dbg_po_counter_read_val     : std_logic_vector(8 downto 0);
-  signal dbg_prbs_final_dqs_tap_cnt_r : std_logic_vector(47 downto 0);
-  signal dbg_prbs_first_edge_taps     : std_logic_vector(47 downto 0);
-  signal dbg_prbs_second_edge_taps    : std_logic_vector(47 downto 0);
   signal dbg_cpt_tap_cnt             : std_logic_vector((6*DQS_WIDTH*RANKS)-1 downto 0);
   signal dbg_dq_idelay_tap_cnt       : std_logic_vector((5*DQS_WIDTH*RANKS)-1 downto 0);
   signal dbg_calib_top               : std_logic_vector(255 downto 0);
@@ -1166,11 +1177,8 @@ begin
   ui_clk <= clk;
   ui_clk_sync_rst <= rst;
   
-  app_wdf_mask <= (others => '0');
-  sys_clk_p <= '0';
-  sys_clk_n <= '0';
-  clk_ref_p <= '0';
-  clk_ref_n <= '0';
+  sys_clk_i <= '0';
+  clk_ref_i <= '0';
   init_calib_complete         <= init_calib_complete_i;
   device_temp_o <= device_temp;
       
@@ -1323,7 +1331,7 @@ begin
       CKE_WIDTH                        => CKE_WIDTH,
       DATA_WIDTH                       => DATA_WIDTH,
       DATA_BUF_ADDR_WIDTH              => DATA_BUF_ADDR_WIDTH,
-      DM_WIDTH                         => 8,
+      DM_WIDTH                         => DM_WIDTH,
       DQ_CNT_WIDTH                     => DQ_CNT_WIDTH,
       DQ_WIDTH                         => DQ_WIDTH,
       DQS_CNT_WIDTH                    => DQS_CNT_WIDTH,
@@ -1471,7 +1479,7 @@ begin
         ddr_ck                           => ddr3_ck_p,
         ddr_cke                          => ddr3_cke,
         ddr_cs_n                         => ddr3_cs_n,
-        ddr_dm                           => open,
+        ddr_dm                           => ddr3_dm,
         ddr_odt                          => ddr3_odt,
         ddr_ras_n                        => ddr3_ras_n,
         ddr_reset_n                      => ddr3_reset_n,
@@ -1593,23 +1601,252 @@ begin
 
 
 
-  --*********************************************************************
-  -- Resetting all RTL debug inputs as the debug ports are not enabled
-  --*********************************************************************
+  --*****************************************************************
+  -- PHY Debug Port Example:
+  --  * This provides a limited Chipscope Interface for observing
+  --    PHY signals (outputs of read and write timing calibration,
+  --    general status, synchronized read data), and a mechanism for
+  --    dynamically changing some of the IODELAY elements used to
+  --    adjust timing in the read data path.
+  --  * This logic supports up to the first 72 DQ and 18 DQS groups.
+  --    Larger interfaces will require manual modification and
+  --    additional Chipscope blocks to support monitoring of the
+  --    additional DQS groups. Smaller interfaces can also obviously
+  --    use smaller ILA cores (user will have to generate these
+  --    themselves) if resources or timing is a concern
+  --*****************************************************************
+
+  -- Connect these to VIO if changing output IODELAY taps desired
+  -- IODELAY taps desired
   dbg_idel_down_all    <= '0';
   dbg_idel_down_cpt    <= '0';
   dbg_idel_up_all      <= '0';
   dbg_idel_up_cpt      <= '0';
   dbg_sel_all_idel_cpt <= '0';
   dbg_sel_idel_cpt     <= (others => '0');
-  dbg_byte_sel         <= (others => '0');
-  dbg_sel_pi_incdec    <= '0';
-  dbg_pi_f_inc         <= '0';
-  dbg_pi_f_dec         <= '0';
-  dbg_po_f_inc         <= '0';
-  dbg_po_f_dec         <= '0';
-  dbg_po_f_stg23_sel   <= '0';
-  dbg_sel_po_incdec    <= '0';
+
+   --*******************************************************
+   --     - ILA for monitoring basic set of phy signals,
+   --       and synchronized read data
+   --*******************************************************
+   dbg_bit              <= ddr3_vio_sync_out(8 downto 0);
+   dbg_dqs              <= ddr3_vio_sync_out(13 downto 9);
+
+   ddr3_ila_basic_int(0)              <= init_calib_complete_i;
+
+   ddr3_ila_basic_int(1)              <= dbg_wrlvl_start;
+   ddr3_ila_basic_int(2)              <= dbg_wrlvl_done;
+   ddr3_ila_basic_int(3)              <= dbg_wrlvl_err;
+
+   ddr3_ila_basic_int(4)              <= dbg_pi_phaselock_start;
+   ddr3_ila_basic_int(5)              <= dbg_pi_phaselocked_done;
+   ddr3_ila_basic_int(6)              <= dbg_pi_phaselock_err;
+
+   ddr3_ila_basic_int(7)              <= dbg_pi_dqsfound_start;
+   ddr3_ila_basic_int(8)              <= dbg_pi_dqsfound_done;
+   ddr3_ila_basic_int(9)              <= dbg_pi_dqsfound_err;
+
+   ddr3_ila_basic_int(11 downto 10)   <= dbg_rdlvl_start;
+   ddr3_ila_basic_int(13 downto 12)   <= dbg_rdlvl_done;
+   ddr3_ila_basic_int(15 downto 14)   <= dbg_rdlvl_err;
+
+   ddr3_ila_basic_int(16)             <= dbg_oclkdelay_calib_start;
+   ddr3_ila_basic_int(17)             <= dbg_oclkdelay_calib_done;
+   ddr3_ila_basic_int(18)             <= '0';
+
+   ddr3_ila_basic_int(19)             <= dbg_wrcal_start;
+   ddr3_ila_basic_int(20)             <= dbg_wrcal_done;
+   ddr3_ila_basic_int(21)             <= dbg_wrcal_err;
+
+   ddr3_ila_basic_int(27 downto 22)   <= dbg_phy_init(5 downto 0);
+
+   ddr3_ila_basic_int(28)             <= dbg_rddata_valid_r;
+   ddr3_ila_basic_int(92 downto 29)   <= dbg_rddata_r;
+
+   -- additional signals required for debug
+   ddr3_ila_basic_int(93)             <= dbg_dqs_found_cal(14); -- fine_adjust_done_r
+   ddr3_ila_basic_int(119 downto 94)  <= (others => '0');
+
+   process(clk)
+   begin
+     if (clk'event and clk='1') then
+       dbg_rddata_valid_r  <= dbg_rddata_valid;
+     end if;
+   end process;
+
+   dbg_rd_data_nck2 : if (nCK_PER_CLK = 2) generate
+     process(clk)
+     begin
+       if (clk'event and clk='1') then
+         dbg_rddata_r(7 downto 0)   <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+7 downto 8*to_integer(unsigned(dbg_dqs))) after (TCQ) * 1 ps;
+         dbg_rddata_r(15 downto 8)  <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(23 downto 16) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+2*DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+2*DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(31 downto 24) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+3*DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+3*DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(39 downto 32) <= (others => '0') after (TCQ) * 1 ps;
+         dbg_rddata_r(47 downto 40) <= (others => '0') after (TCQ) * 1 ps;
+         dbg_rddata_r(55 downto 48) <= (others => '0') after (TCQ) * 1 ps;
+         dbg_rddata_r(63 downto 56) <= (others => '0') after (TCQ) * 1 ps;
+       end if;
+     end process;
+   end generate;
+
+   dbg_rd_data_other : if (nCK_PER_CLK /= 2) generate
+     process(clk)
+     begin
+       if (clk'event and clk='1') then
+         dbg_rddata_r(7 downto 0)   <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+7 downto 8*to_integer(unsigned(dbg_dqs))) after (TCQ) * 1 ps;
+         dbg_rddata_r(15 downto 8)  <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(23 downto 16) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+2*DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+2*DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(31 downto 24) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+3*DQ_WIDTH+7 downto ((8*to_integer(unsigned(dbg_dqs)))+3*DQ_WIDTH)) after (TCQ) * 1 ps;
+         dbg_rddata_r(39 downto 32) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+4*DQ_WIDTH+7 downto (8*to_integer(unsigned(dbg_dqs)))+4*DQ_WIDTH) after (TCQ) * 1 ps;
+         dbg_rddata_r(47 downto 40) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+5*DQ_WIDTH+7 downto (8*to_integer(unsigned(dbg_dqs)))+5*DQ_WIDTH) after (TCQ) * 1 ps;
+         dbg_rddata_r(55 downto 48) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+6*DQ_WIDTH+7 downto (8*to_integer(unsigned(dbg_dqs)))+6*DQ_WIDTH) after (TCQ) * 1 ps;
+         dbg_rddata_r(63 downto 56) <= dbg_rddata((8*to_integer(unsigned(dbg_dqs)))+7*DQ_WIDTH+7 downto (8*to_integer(unsigned(dbg_dqs)))+7*DQ_WIDTH) after (TCQ) * 1 ps;
+       end if;
+     end process;
+   end generate;
+
+   --*******************************************************
+   --     - ILA for monitoring write path signals,
+   --       and synchronized read data
+   --*******************************************************
+
+   rd_data_edge_detect_r  <= dbg_phy_wrlvl(75 downto 67);
+   wl_po_fine_cnt         <= dbg_phy_wrlvl(129 downto 76);
+   wl_po_coarse_cnt       <= dbg_phy_wrlvl(156 downto 130);
+
+   -- write-leveling calibration debug data
+   ddr3_ila_wrpath_int(4 downto 0)   <= dbg_phy_wrlvl(31 downto 27); -- wl_state_r
+   ddr3_ila_wrpath_int(9 downto 6)   <= dbg_phy_wrlvl(35 downto 32); -- dqs_cnt_r
+   ddr3_ila_wrpath_int(10)           <= dbg_phy_wrlvl(60); -- wl_edge_detect_valid_r
+   ddr3_ila_wrpath_int(11)           <= rd_data_edge_detect_r(to_integer(unsigned(dbg_dqs)));
+   ddr3_ila_wrpath_int(17 downto 12) <= wl_po_fine_cnt((to_integer(unsigned(dbg_dqs))*6)+5 downto (to_integer(unsigned(dbg_dqs))*6));
+   ddr3_ila_wrpath_int(20 downto 18) <= wl_po_coarse_cnt((to_integer(unsigned(dbg_dqs))*3)+2 downto (to_integer(unsigned(dbg_dqs))*3));
+   ddr3_ila_wrpath_int(26 downto 21) <= dbg_phy_wrlvl(66 downto 61); --wl_tap_count_r;
+   ddr3_ila_wrpath_int(29 downto 27) <= (others => '0'); -- reserved
+   ddr3_ila_wrpath_int((310+(DQS_WIDTH*3 -1)) downto 310)   <= dbg_final_po_coarse_tap_cnt(((DQS_WIDTH*3)-1) downto 0);
+   ddr3_ila_wrpath_int((337+(DQS_WIDTH*6 -1)) downto 337)   <= dbg_final_po_fine_tap_cnt(((DQS_WIDTH*6)-1) downto 0);
+
+   -- oclk delay calibration debug data
+   ocal_tap_cnt  <= dbg_phy_oclkdelay_cal(53 downto 0);
+   ddr3_ila_wrpath_int(33 downto 30)     <= dbg_phy_oclkdelay_cal(3 downto 0);         -- ocal flag info for edges
+   ddr3_ila_wrpath_int(39 downto 34)     <= dbg_phy_oclkdelay_cal(9 downto 4);         -- fuzz2oneeighty
+   ddr3_ila_wrpath_int(45 downto 40)     <= dbg_phy_oclkdelay_cal(15 downto 10);       -- fuzz2zero
+   ddr3_ila_wrpath_int(51 downto 46)     <= dbg_phy_oclkdelay_cal(21 downto 16);       -- oneeighty2fuzz
+   ddr3_ila_wrpath_int(57 downto 52)     <= dbg_phy_oclkdelay_cal(27 downto 22);       -- zero2fuzz
+   ddr3_ila_wrpath_int(60 downto 58)     <= dbg_phy_oclkdelay_cal(30 downto 28);       -- oclkdelay_calib_cnt
+   ddr3_ila_wrpath_int(61)               <= dbg_phy_oclkdelay_cal(107);                -- ocal_scan_win_not_found
+   ddr3_ila_wrpath_int(62)               <= dbg_phy_oclkdelay_cal(32);                 -- lim_done
+   ddr3_ila_wrpath_int(246 downto 241)   <= dbg_phy_oclkdelay_cal(38 downto 33);       -- lim2ocal_stg3_left_lim
+   ddr3_ila_wrpath_int(252 downto 247)   <= dbg_phy_oclkdelay_cal(44 downto 39);       -- lim2ocal_stg3_right_lim
+   ddr3_ila_wrpath_int(253)              <= dbg_phy_oclkdelay_cal(108);                -- oclkdelay_center_calib_start
+   ddr3_ila_wrpath_int(254)              <= dbg_phy_oclkdelay_cal(109);                -- oclkdelay_center_calib_done
+   ddr3_ila_wrpath_int(308 downto 255)   <= dbg_phy_oclkdelay_cal(106 downto 53);      -- final_stg3_tap_count
+   ddr3_ila_wrpath_int(92 downto 87)     <= dbg_phy_oclkdelay_cal(115 downto 110);     -- oclkdelay_calib_stg3
+   ddr3_ila_wrpath_int(309)              <= '0'; -- reserved
+
+   -- write calibration stage debug signals
+   ddr3_ila_wrpath_int(64)            <= dbg_phy_wrcal(0); -- pat_data_match_r
+   ddr3_ila_wrpath_int(65)            <= dbg_phy_wrcal(8); -- pat_data_match_valid_r
+   ddr3_ila_wrpath_int(DQS_CNT_WIDTH+65 downto 66)  <= dbg_phy_wrcal(DQS_CNT_WIDTH+12 downto 13); -- wrcal_dqs_cnt_r
+   ddr3_ila_wrpath_int(74 downto 70)  <= dbg_phy_wrcal(5 downto 1); -- cal2_state_r
+   ddr3_ila_wrpath_int(79 downto 75)  <= dbg_phy_wrcal(21 downto 17); -- not_empty_wait_cnt
+   ddr3_ila_wrpath_int(80)            <= dbg_phy_wrcal(22); -- early1_data
+   ddr3_ila_wrpath_int(81)            <= dbg_phy_wrcal(23); -- early2_data
+   ddr3_ila_wrpath_int(82)            <= dbg_phy_wrcal(88); -- early1_data_match_r
+   ddr3_ila_wrpath_int(83)            <= dbg_phy_wrcal(89); -- early2_data_match_r
+   ddr3_ila_wrpath_int(84)            <= dbg_phy_wrcal(90); -- wrcal_sanity_chk_r and pat_data_match_valid_r
+   ddr3_ila_wrpath_int(85)            <= dbg_phy_wrcal(91); -- wrcal_sanity_chk_r
+   ddr3_ila_wrpath_int(86)            <= dbg_phy_wrcal(92); -- wrcal_sanity_chk_done
+   ddr3_ila_wrpath_int(95 downto 93)  <= (others => '0'); -- reserved
+
+   ddr3_ila_wrpath_int(149 downto 96)  <= dbg_phy_wrlvl(129 downto 76);
+   ddr3_ila_wrpath_int(176 downto 150) <= dbg_phy_wrlvl(156 downto 130);
+   ddr3_ila_wrpath_int(184 downto 177) <= dbg_phy_rdlvl(177 downto 170); -- mux_rd_rise0_r
+   ddr3_ila_wrpath_int(192 downto 185) <= dbg_phy_rdlvl(185 downto 178); -- mux_rd_fall0_r
+   ddr3_ila_wrpath_int(200 downto 193) <= dbg_phy_rdlvl(193 downto 186); -- mux_rd_rise1_r
+   ddr3_ila_wrpath_int(208 downto 201) <= dbg_phy_rdlvl(201 downto 194); -- mux_rd_fall1_r
+   ddr3_ila_wrpath_int(216 downto 209) <= dbg_phy_rdlvl(209 downto 202); -- mux_rd_rise2_r
+   ddr3_ila_wrpath_int(224 downto 217) <= dbg_phy_rdlvl(217 downto 210); -- mux_rd_fall2_r
+   ddr3_ila_wrpath_int(232 downto 225) <= dbg_phy_rdlvl(225 downto 218); -- mux_rd_rise3_r
+   ddr3_ila_wrpath_int(240 downto 233) <= dbg_phy_rdlvl(233 downto 226); -- mux_rd_fall3_r
+
+
+   --*******************************************************
+   --     - ILA for monitoring read path signals,
+   --       and synchronized read data
+   --*******************************************************
+
+   -- PHASER_IN debug signals
+   ddr3_ila_rdpath_int(11 downto 0)  <= dbg_pi_phase_locked_phy4lanes;
+   ddr3_ila_rdpath_int(23 downto 12) <= dbg_pi_dqs_found_lanes_phy4lanes;
+   ddr3_ila_rdpath_int(24+(6*RANKS)-1 downto 24) <= dbg_rd_data_offset;
+   ddr3_ila_rdpath_int(39 downto 24+(6*RANKS)) <= (others => '0'); --reserved
+
+   -- read-leveling calibration debug data
+   ddr3_ila_rdpath_int(45 downto 40)   <= dbg_phy_rdlvl(14 downto 9); -- cal1_state_r
+   ddr3_ila_rdpath_int(49 downto 46)   <= dbg_phy_rdlvl(64 downto 61); -- cal1_cnt_cpt_r
+   ddr3_ila_rdpath_int(57 downto 50)   <= dbg_phy_rdlvl(177 downto 170); -- mux_rd_rise0_r
+   ddr3_ila_rdpath_int(65 downto 58)   <= dbg_phy_rdlvl(185 downto 178); -- mux_rd_fall0_r
+   ddr3_ila_rdpath_int(73 downto 66)   <= dbg_phy_rdlvl(193 downto 186); -- mux_rd_rise1_r
+   ddr3_ila_rdpath_int(81 downto 74)   <= dbg_phy_rdlvl(201 downto 194); -- mux_rd_fall1_r
+   ddr3_ila_rdpath_int(89 downto 82)   <= dbg_phy_rdlvl(209 downto 202); -- mux_rd_rise2_r
+   ddr3_ila_rdpath_int(97 downto 90)   <= dbg_phy_rdlvl(217 downto 210); -- mux_rd_fall2_r
+   ddr3_ila_rdpath_int(105 downto 98)  <= dbg_phy_rdlvl(225 downto 218); -- mux_rd_rise3_r
+   ddr3_ila_rdpath_int(113 downto 106) <= dbg_phy_rdlvl(233 downto 226); -- mux_rd_fall3_r
+   ddr3_ila_rdpath_int(114)            <= dbg_phy_rdlvl(1); -- pat_data_match_r
+   ddr3_ila_rdpath_int(115)            <= dbg_phy_rdlvl(2); -- mux_rd_valid_r
+   ddr3_ila_rdpath_int(121 downto 116) <= dbg_cpt_first_edge_cnt((to_integer(unsigned(dbg_dqs))*6)+5 downto (to_integer(unsigned(dbg_dqs))*6));
+   ddr3_ila_rdpath_int(127 downto 122) <= dbg_cpt_second_edge_cnt((to_integer(unsigned(dbg_dqs))*6)+5 downto (to_integer(unsigned(dbg_dqs))*6));
+   ddr3_ila_rdpath_int(133 downto 128) <= dbg_cpt_tap_cnt((to_integer(unsigned(dbg_dqs))*6)+5 downto (to_integer(unsigned(dbg_dqs))*6));
+   ddr3_ila_rdpath_int(138 downto 134) <= dbg_dq_idelay_tap_cnt((to_integer(unsigned(dbg_dqs))*5)+4 downto (to_integer(unsigned(dbg_dqs))*5));
+   ddr3_ila_rdpath_int(163 downto 139) <= (others => '0');
+
+   -- data offset values for PHASER_IN
+   ddr3_ila_rdpath_int(164+(6*RANKS)-1 downto 164) <= dbg_calib_rd_data_offset_1;
+   ddr3_ila_rdpath_int(176+(6*RANKS)-1 downto 176) <= dbg_calib_rd_data_offset_2;
+   ddr3_ila_rdpath_int(193 downto 188) <= dbg_data_offset;
+   ddr3_ila_rdpath_int(199 downto 194) <= dbg_data_offset_1;
+   ddr3_ila_rdpath_int(205 downto 200) <= dbg_data_offset_2;
+   ddr3_ila_rdpath_int(206+(6*DQS_WIDTH*RANKS)-1 downto 206) <= dbg_cpt_first_edge_cnt;
+   ddr3_ila_rdpath_int(314+(6*DQS_WIDTH*RANKS)-1 downto 314) <= dbg_cpt_second_edge_cnt;
+   ddr3_ila_rdpath_int(422+(6*DQS_WIDTH*RANKS)-1 downto 422) <= dbg_cpt_tap_cnt;
+   ddr3_ila_rdpath_int(530+(5*DQS_WIDTH*RANKS)-1 downto 530) <= dbg_dq_idelay_tap_cnt;
+   ddr3_ila_rdpath_int(875 downto 620) <= dbg_prbs_rdlvl;
+   ddr3_ila_rdpath_int(1023 downto 876) <= (others => '0');
+
+   process (ddr3_ila_basic_int)
+   begin
+      ddr3_ila_basic    <= (others => '0');
+      ddr3_ila_basic    <= ddr3_ila_basic_int;
+   end process;
+
+   process (ddr3_ila_wrpath_int)
+   begin
+      ddr3_ila_wrpath   <= (others => '0');
+      ddr3_ila_wrpath   <= ddr3_ila_wrpath_int;
+   end process;
+
+   process (ddr3_ila_rdpath_int)
+   begin
+      ddr3_ila_rdpath   <= (others => '0');
+      ddr3_ila_rdpath   <= ddr3_ila_rdpath_int;
+   end process;
+
+   process (dbg_prbs_final_dqs_tap_cnt_r_int) begin
+     dbg_prbs_final_dqs_tap_cnt_r <= (others => '0');
+     dbg_prbs_final_dqs_tap_cnt_r((6*DQS_WIDTH*RANKS)-1 downto 0) <= dbg_prbs_final_dqs_tap_cnt_r_int;
+   end process;
+
+   process (dbg_prbs_first_edge_taps_int) begin
+     dbg_prbs_first_edge_taps <= (others => '0');
+     dbg_prbs_first_edge_taps((6*DQS_WIDTH*RANKS)-1 downto 0) <= dbg_prbs_first_edge_taps_int;
+   end process;
+
+   process (dbg_prbs_second_edge_taps_int) begin
+     dbg_prbs_second_edge_taps <= (others => '0');
+     dbg_prbs_second_edge_taps((6*DQS_WIDTH*RANKS)-1 downto 0) <= dbg_prbs_second_edge_taps_int;
+   end process;
 
       
 

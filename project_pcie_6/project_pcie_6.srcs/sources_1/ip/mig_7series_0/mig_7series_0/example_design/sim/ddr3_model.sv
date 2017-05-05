@@ -96,7 +96,7 @@
 // model flags
 // `define MODEL_PASR
 //Memory Details
-`define x1Gb
+`define x2Gb
 `define sg125
 `define x8
 module ddr3_model (

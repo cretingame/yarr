@@ -82,6 +82,8 @@ verilog  work  ../../../sources_1/imports/rtl/traffic_gen/mig_7series_v4_0_traff
 verilog  work  ../../../sources_1/imports/rtl/traffic_gen/mig_7series_v4_0_vio_init_pattern_bram.v
 verilog  work  ../../../sources_1/imports/rtl/traffic_gen/mig_7series_v4_0_wr_data_gen.v
 verilog  work  ../../../sources_1/imports/rtl/traffic_gen/mig_7series_v4_0_write_data_path.v
+vhdl  work  ../../../sources_1/imports/rtl/ddr2_ddr3_chipscope.vhd
+verilog  work  ../../../sources_1/imports/rtl/mig_7series_v4_0_chk_win.v
 vhdl  work  ../../../sources_1/imports/rtl/example_top.vhd
 verilog  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_0_clk_ibuf.v
 verilog  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_0_infrastructure.v
@@ -151,6 +153,6 @@ verilog  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl
 vhdl  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd
 vhdl  work  ../../../sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.vhd
 verilog  work  $XILINX_VIVADO/data/verilog/src/glbl.v
-sv  work ddr3_model.sv -d x1Gb -d sg125 -d x16 
+sv  work ddr3_model.sv -d x2Gb -d sg125 -d x8 
 verilog  work  wiredly.v
 verilog  work  sim_tb_top.v

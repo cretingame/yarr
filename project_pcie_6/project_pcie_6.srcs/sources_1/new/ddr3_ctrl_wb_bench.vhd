@@ -148,16 +148,17 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   constant g_MASK_SIZE       : integer := 8;
   constant g_DATA_PORT_SIZE  : integer := 64;
   
-  constant c_pause : std_logic := '0';
+  constant c_outoforder : std_logic := '0';
   constant c_write : std_logic := '1';
   constant c_read : std_logic := '1';
+  
   
   signal clk_tbs : STD_LOGIC;
   signal rst_tbs : STD_LOGIC;
   signal rst_n_tbs : std_logic;
   
-  signal step : integer;
-  signal step_ddr : integer;
+  signal step : integer := 0;
+  signal step_ddr : integer := 0;
   
   
   signal ddr3_dq_s       : std_logic_vector(63 downto 0);
@@ -254,7 +255,7 @@ begin
         ---------------------------
         if c_write = '1' then
         
-        
+        if c_outoforder = '1' then
         
         
         
@@ -291,6 +292,8 @@ begin
         wb_stb_tbs <= '0';
         wb_we_tbs <= '0';
         wait for 10*period;
+        
+        end if;
         
         for J in 0 to 2 loop
             
@@ -373,6 +376,8 @@ begin
         ---------------------------
         if c_read = '1' then
         
+        if c_outoforder = '1' then
+        
         -- First loop
         for J in 0 to 3 loop
             for I in 0 to J loop
@@ -407,7 +412,7 @@ begin
         wb_we_tbs <= '0';
         wait for 10*period;        
         
-        
+        end if;
         
         for I in 0 to 31 loop
         
@@ -437,12 +442,31 @@ begin
         
     end process wb_stimuli_p;
     
-    ddr_stimuli_p : process
+    ddr_step_p : process
     begin
     
-    step_ddr <= 0;
-    ddr_app_rdy_s <= '1';
-    ddr_app_wdf_rdy_s <= '1';
+    wait for period_ddr;
+    
+    step_ddr <= step_ddr + 1;
+    
+    end process ddr_step_p;
+    
+    with step_ddr select ddr_app_rdy_s <=
+        '0' when 26,
+        '1' when others;
+    
+    with step_ddr select ddr_app_wdf_rdy_s <= 
+        '0' when 19,
+        '1' when others;
+    
+    ddr_stimuli_p : process
+        variable counter : unsigned (31 downto 0);
+        variable data_end : std_logic;
+    begin
+    
+    
+    counter := to_unsigned(0,32);
+    data_end := '0';
     
     ddr_app_rd_data_s <= (others => '0');
     ddr_app_rd_data_end_s <= '0';
@@ -450,22 +474,42 @@ begin
     
     --wait until ddr_app_cmd_en_s = '1' and ddr_app_cmd_s = "000";
     
-    step_ddr <= 1;
+    --step_ddr <= 1;
     
     --wait for period_ddr;
     loop
-    
-    if ddr_app_cmd_en_s = '1' and ddr_app_cmd_s = "000" then
-        step_ddr <= 2;
+    if ddr_app_cmd_en_s = '1' and ddr_app_cmd_s = "001" then
+        --step_ddr <= 2;
+        ddr_app_rd_data_valid_s         <= '1';
+        ddr_app_rd_data_end_s           <= '0';
         
-        ddr_app_rd_data_s               <= X"deadbeefdeadbee3deadbeefdeadbee2deadbeefdeadbee1deadbeefdeadbee0";
+        if data_end = '0' then
+            ddr_app_rd_data_s               <= X"deadbeef" & std_logic_vector(counter+3) & 
+                                               X"deadbeef" & std_logic_vector(counter+2) & 
+                                               X"deadbeef" & std_logic_vector(counter+1) & 
+                                               X"deadbeef" & std_logic_vector(counter);
+        else
+            ddr_app_rd_data_s               <= (others => '0');        
+        end if;
+        wait for period_ddr;
+        
+        --step_ddr <= 3;
+        if data_end = '1' then
+            ddr_app_rd_data_s               <= X"deadbeef" & std_logic_vector(counter+3) & 
+                                               X"deadbeef" & std_logic_vector(counter+2) & 
+                                               X"deadbeef" & std_logic_vector(counter+1) & 
+                                               X"deadbeef" & std_logic_vector(counter);
+        else
+            ddr_app_rd_data_s               <= (others => '0');        
+        end if;
         ddr_app_rd_data_end_s           <= '1';
         ddr_app_rd_data_valid_s         <= '1';
-        
+        counter := counter + 4;
+        data_end := not data_end;
         wait for period_ddr;
     else
         
-        step_ddr <= 3;
+        --step_ddr <= 5;
         
         ddr_app_rd_data_s               <= X"0000000000000000000000000000000000000000000000000000000000000000";
         ddr_app_rd_data_end_s           <= '0';

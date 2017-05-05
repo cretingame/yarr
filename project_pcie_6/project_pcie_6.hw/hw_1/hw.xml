@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7k160t_1" gui_info="dashboard1=hw_ila_1[xc7k160t_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_1/Status=ILA_STATUS_1;]"/>
+  <device name="xc7k160t_1" gui_info="dashboard1=hw_ila_1[xc7k160t_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_1/Status=ILA_STATUS_1;],dashboard2=hw_ila_2[xc7k160t_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_2/Status=ILA_STATUS_1;xc7k160t_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;],dashboard3=hw_ila_3[xc7k160t_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7k160t_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;xc7k160t_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7k160t_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7k160t_1/hw_ila_3/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7k160t_1" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
@@ -17,10 +17,10 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_0.axis_debug" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="64"/>
-      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="2"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_1.dma_ctrl_debug" gui_info="">
@@ -31,10 +31,10 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_2.pipelined_wishbone_debug" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="64"/>
-      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="2"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_3.wbm_to_p2l_debug" gui_info="">
@@ -50,8 +50,10 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/dbg_5.ddr_debug" gui_info="">
+      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="64"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="2"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="app_0/debug_comp" gui_info="">
@@ -202,7 +204,7 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="app_0/cfg_interrupt_s" gui_info=""/>
     <Object name="app_0/ddr_app_addr_s[28:0]" gui_info=""/>
-    <Object name="app_0/ddr_app_cmd_en_s" gui_info=""/>
+    <Object name="app_0/ddr_app_cmd_en_s" gui_info="Trigger Setup=0"/>
     <Object name="app_0/ddr_app_cmd_s[2:0]" gui_info=""/>
     <Object name="app_0/ddr_app_rd_data_end_s" gui_info=""/>
     <Object name="app_0/ddr_app_rd_data_s[255:0]" gui_info=""/>
@@ -223,8 +225,8 @@
     <Object name="app_0/dma_ctrl_done_s_1" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s" gui_info=""/>
     <Object name="app_0/dma_ctrl_error_s_1" gui_info=""/>
-    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info="Trigger Setup=0"/>
-    <Object name="app_0/dma_ctrl_start_l2p_s_1" gui_info=""/>
+    <Object name="app_0/dma_ctrl_start_l2p_s" gui_info="Trigger Setup=3"/>
+    <Object name="app_0/dma_ctrl_start_l2p_s_1" gui_info="Trigger Setup=1"/>
     <Object name="app_0/dma_ctrl_start_l2p_s_2" gui_info="Trigger Setup=0"/>
     <Object name="app_0/dma_ctrl_start_next_s" gui_info="Trigger Setup=2"/>
     <Object name="app_0/dma_ctrl_start_next_s_1" gui_info=""/>
@@ -5282,7 +5284,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_3"/>
@@ -5290,7 +5292,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
       </probeOptions>
       <nets>
         <net name="app_0/ddr_app_cmd_en_s"/>
@@ -6016,6 +6018,23 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_app_wdf_rdy_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -6024,6 +6043,118 @@
       </probeOptions>
       <nets>
         <net name="app_0/ddr_app_wdf_wren_s"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe14[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_empty_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_empty_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe15[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_empty_ds[2]"/>
+        <net name="app_0/ddr_rd_fifo_empty_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_empty_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe14[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_full_ds[2]"/>
+        <net name="app_0/ddr_rd_fifo_full_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_full_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe15[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_rd_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_rd_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe16[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_rd_ds[2]"/>
+        <net name="app_0/ddr_rd_fifo_rd_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_rd_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe17[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_fifo_wr_ds[2]"/>
+        <net name="app_0/ddr_rd_fifo_wr_ds[1]"/>
+        <net name="app_0/ddr_rd_fifo_wr_ds[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -6060,7 +6191,7 @@
         <net name="app_0/dma_ack_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -6321,7 +6452,7 @@
         <net name="app_0/dma_ctrl_carrier_addr_s_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -6864,7 +6995,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="MAP" value="probe11[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -6878,7 +7009,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
@@ -6886,7 +7017,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
       </probeOptions>
       <nets>
         <net name="app_0/dma_ctrl_start_l2p_s_1"/>
@@ -7017,8 +7148,8 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
-        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -7045,7 +7176,7 @@
         <net name="app_0/dma_cyc_s_1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -7285,7 +7416,7 @@
         <net name="app_0/dma_dat_s2m_s_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -13921,7 +14052,7 @@
         <net name="app_0/rst_n_s"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -14180,7 +14311,7 @@
         <net name="app_0/s_axis_rx_tready_s"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq22&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq22&apos;hXX_XXXX"/>

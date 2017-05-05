@@ -317,7 +317,7 @@ begin
                     end if;
 					
                     -- Error condition, abort transfer
-                    if (tx_error_i = '1' or l2p_timeout_cnt > c_TIMEOUT or dma_ctrl_abort_i = '1') then
+                    if (tx_error_i = '1' or l2p_timeout_cnt > c_TIMEOUT or wb_timeout_cnt > c_TIMEOUT or dma_ctrl_abort_i = '1') then
                         l2p_dma_current_state <= L2P_ERROR;
                     end if;
                      
@@ -557,6 +557,7 @@ begin
             wb_read_cnt <= (others => '0');
             wb_ack_cnt <= (others => '0');
             l2p_dma_adr_o <= (others => '0');
+            wb_timeout_cnt <= (others => '0');
             
         elsif rising_edge(l2p_dma_clk_i) then
 			l2p_dma_sel_o <= (others => '1');
@@ -588,7 +589,7 @@ begin
 
 			      
             -- Timeout counter
-            if (l2p_dma_ack_i = '0') then
+            if (l2p_dma_current_state = L2P_DATA and l2p_dma_ack_i = '0') then
                wb_timeout_cnt <= wb_timeout_cnt + 1;
             else
                wb_timeout_cnt <= (others => '0');

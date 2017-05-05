@@ -30,28 +30,28 @@ Controller Options :
    Memory                        : DDR3_SDRAM
    Interface                     : NATIVE
    Design Clock Frequency        : 1875 ps (  0.00 MHz)
-   Phy to Controller Clock Ratio : 2:1
+   Phy to Controller Clock Ratio : 4:1
    Input Clock Period            : 5000 ps
    CLKFBOUT_MULT (PLL)           : 16
    DIVCLK_DIVIDE (PLL)           : 3
    VCC_AUX IO                    : 1.8V
    Memory Type                   : Components
-   Memory Part                   : K4B2G0846F
-   Equivalent Part(s)            : --
+   Memory Part                   : MT41K256M8XX-125
+   Equivalent Part(s)            : MT41K256M8DA-125
    Data Width                    : 64
    ECC                           : Disabled
    Data Mask                     : enabled
    ORDERING                      : Normal
 
 AXI Parameters :
-   Data Width                    : 256
+   Data Width                    : 512
    Arbitration Scheme            : RD_PRI_REG
    Narrow Burst Support          : 0
    ID Width                      : 4
 
 Memory Options:
    Burst Length (MR0[1:0])          : 8 - Fixed
-   Read Burst Type (MR0[3])         : Sequential
+   Read Burst Type (MR0[3])         : Interleaved
    CAS Latency (MR0[6:4])           : 7
    Output Drive Strength (MR1[5,1]) : RZQ/7
    Controller CS option             : Enable

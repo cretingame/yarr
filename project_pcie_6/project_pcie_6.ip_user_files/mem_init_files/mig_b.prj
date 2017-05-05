@@ -16,12 +16,12 @@
     <BankSelectionFlag>FALSE</BankSelectionFlag>
     <InternalVref>0</InternalVref>
     <dci_hr_inouts_inputs>40 Ohms</dci_hr_inouts_inputs>
-    <dci_cascade>1</dci_cascade>
+    <dci_cascade>0</dci_cascade>
     <FPGADevice>
         <selected>7k/xc7k160ti-fbg676</selected>
     </FPGADevice>
     <Controller number="0" >
-        <MemoryDevice>DDR3_SDRAM/Components/MT41J128M8XX-125</MemoryDevice>
+        <MemoryDevice>DDR3_SDRAM/Components/MT41K256M8XX-125</MemoryDevice>
         <TimePeriod>1875</TimePeriod>
         <VccAuxIO>1.8V</VccAuxIO>
         <PHYRatio>2:1</PHYRatio>
@@ -38,8 +38,8 @@
         <DataMask>1</DataMask>
         <ECC>Disabled</ECC>
         <Ordering>Normal</Ordering>
-        <CustomPart>TRUE</CustomPart>
-        <NewPartName>K4B2G0846F</NewPartName>
+        <CustomPart>FALSE</CustomPart>
+        <NewPartName></NewPartName>
         <RowAddress>15</RowAddress>
         <ColAddress>10</ColAddress>
         <BankAddress>3</BankAddress>
@@ -171,10 +171,10 @@
             <Pin PADName="No connect" Bank="Select Bank" name="tg_compare_error" />
         </System_Control>
         <TimingParameters>
-            <Parameters twtr="7.5" trrd="5" trefi="7.8" tfaw="37.5" trtp="7.5" tcke="5" trfc="161.35" trp="13.125" tras="37.5" trcd="13.125" />
+            <Parameters twtr="7.5" trrd="6" trefi="7.8" tfaw="30" trtp="7.5" tcke="5" trfc="160" trp="13.75" tras="35" trcd="13.75" />
         </TimingParameters>
         <mrBurstLength name="Burst Length" >8 - Fixed</mrBurstLength>
-        <mrBurstType name="Read Burst Type and Length" >Sequential</mrBurstType>
+        <mrBurstType name="Read Burst Type and Length" >Interleaved</mrBurstType>
         <mrCasLatency name="CAS Latency" >7</mrCasLatency>
         <mrMode name="Mode" >Normal</mrMode>
         <mrDllReset name="DLL Reset" >No</mrDllReset>

@@ -12,9 +12,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8540000000fs"></ZoomStartTime>
-      <ZoomEndTime time="10295000001fs"></ZoomEndTime>
-      <Cursor1Time time="9200000000fs"></Cursor1Time>
+      <ZoomStartTime time="1800000000fs"></ZoomStartTime>
+      <ZoomEndTime time="8820000001fs"></ZoomEndTime>
+      <Cursor1Time time="6200000000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="55" />
    <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/clk_tbs">
@@ -100,13 +100,13 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_wr_addr_ref_a">
-      <obj_property name="ElementShortName">wb_wr_addr_ref_a[0:3][26:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_wr_addr_ref_a[0:3][26:0]</obj_property>
+      <obj_property name="ElementShortName">wb_wr_addr_ref_a[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_wr_addr_ref_a[0:3][28:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_wr_addr_shift_a">
-      <obj_property name="ElementShortName">wb_wr_addr_shift_a[0:3][26:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_wr_addr_shift_a[0:3][26:0]</obj_property>
+      <obj_property name="ElementShortName">wb_wr_addr_shift_a[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_wr_addr_shift_a[0:3][28:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_wr_data_shift_a">
       <obj_property name="ElementShortName">wb_wr_data_shift_a[0:3][63:0]</obj_property>
@@ -139,15 +139,15 @@
       <obj_property name="ObjectShortName">wb_wr_addr_row_s[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_addr_din_s">
-      <obj_property name="ElementShortName">fifo_wb_wr_addr_din_s[26:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_wb_wr_addr_din_s[26:0]</obj_property>
+      <obj_property name="ElementShortName">fifo_wb_wr_addr_din_s[28:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_wb_wr_addr_din_s[28:0]</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group2867">
       <obj_property name="label">fifo_wb_write</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_din_s">
-         <obj_property name="ElementShortName">fifo_wb_wr_din_s[314:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_wr_din_s[314:0]</obj_property>
+         <obj_property name="ElementShortName">fifo_wb_wr_din_s[316:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_wr_din_s[316:0]</obj_property>
          <obj_property name="CustomSignalColor">#00FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -164,8 +164,8 @@
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_wr_dout_s">
-         <obj_property name="ElementShortName">fifo_wb_wr_dout_s[314:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_wr_dout_s[314:0]</obj_property>
+         <obj_property name="ElementShortName">fifo_wb_wr_dout_s[316:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_wr_dout_s[316:0]</obj_property>
          <obj_property name="CustomSignalColor">#00FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -211,8 +211,8 @@
       <obj_property name="ObjectShortName">wb_rd_addr_row_s[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_rd_addr_shift_a">
-      <obj_property name="ElementShortName">wb_rd_addr_shift_a[0:3][26:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_rd_addr_shift_a[0:3][26:0]</obj_property>
+      <obj_property name="ElementShortName">wb_rd_addr_shift_a[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rd_addr_shift_a[0:3][28:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_rd_qmask_shift_s">
@@ -225,15 +225,15 @@
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_rd_addr_ref_a">
-      <obj_property name="ElementShortName">wb_rd_addr_ref_a[0:3][26:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_rd_addr_ref_a[0:3][26:0]</obj_property>
+      <obj_property name="ElementShortName">wb_rd_addr_ref_a[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rd_addr_ref_a[0:3][28:0]</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group1521">
       <obj_property name="label">fifo_wb_rd_addr</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_addr_din_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_addr_din_s[26:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_addr_din_s[26:0]</obj_property>
+         <obj_property name="ElementShortName">fifo_wb_rd_addr_din_s[28:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_addr_din_s[28:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_addr_wr_s">
          <obj_property name="ElementShortName">fifo_wb_rd_addr_wr_s</obj_property>
@@ -246,8 +246,8 @@
          <obj_property name="ObjectShortName">fifo_wb_rd_addr_rd_s</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_addr_dout_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_addr_dout_s[26:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_addr_dout_s[26:0]</obj_property>
+         <obj_property name="ElementShortName">fifo_wb_rd_addr_dout_s[28:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_addr_dout_s[28:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_addr_full_s">
          <obj_property name="ElementShortName">fifo_wb_rd_addr_full_s</obj_property>
@@ -262,37 +262,6 @@
       <obj_property name="ElementShortName">wb_rd_ack_shift_s[3:0]</obj_property>
       <obj_property name="ObjectShortName">wb_rd_ack_shift_s[3:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject type="group" fp_name="group1522">
-      <obj_property name="label">fifo_wb_rd_data</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_din_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_din_s[255:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_din_s[255:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_wr_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_wr_s</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_wr_s</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_rd_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_rd_s</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_rd_s</obj_property>
-         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_dout_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_dout_s[255:0]</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_dout_s[255:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_full_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_full_s</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_full_s</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_empty_s">
-         <obj_property name="ElementShortName">fifo_wb_rd_data_empty_s</obj_property>
-         <obj_property name="ObjectShortName">fifo_wb_rd_data_empty_s</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group9637">
       <obj_property name="label">fifo_wb_rd_mask</obj_property>
@@ -327,8 +296,8 @@
       </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/ddr_app_addr_s">
-      <obj_property name="ElementShortName">ddr_app_addr_s[26:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_app_addr_s[26:0]</obj_property>
+      <obj_property name="ElementShortName">ddr_app_addr_s[28:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_app_addr_s[28:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/ddr_app_cmd_s">
       <obj_property name="ElementShortName">ddr_app_cmd_s[2:0]</obj_property>
@@ -389,5 +358,36 @@
    <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/ddr_app_ui_clk_sync_rst_s">
       <obj_property name="ElementShortName">ddr_app_ui_clk_sync_rst_s</obj_property>
       <obj_property name="ObjectShortName">ddr_app_ui_clk_sync_rst_s</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1522">
+      <obj_property name="label">fifo_wb_rd_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_din_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_din_s[255:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_din_s[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_wr_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_wr_s</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_wr_s</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_rd_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_rd_s</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_rd_s</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_dout_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_dout_s[255:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_dout_s[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_full_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_full_s</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_full_s</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/fifo_wb_rd_data_empty_s">
+         <obj_property name="ElementShortName">fifo_wb_rd_data_empty_s</obj_property>
+         <obj_property name="ObjectShortName">fifo_wb_rd_data_empty_s</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

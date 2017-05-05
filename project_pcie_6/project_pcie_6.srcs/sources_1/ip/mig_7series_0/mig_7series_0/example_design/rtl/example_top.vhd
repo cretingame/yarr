@@ -157,7 +157,7 @@ entity example_top is
    --***************************************************************************
    -- System clock frequency parameters
    --***************************************************************************
-   nCK_PER_CLK           : integer := 2;
+   nCK_PER_CLK           : integer := 4;
                                      -- # of memory CKs per fabric CLK
 
    --***************************************************************************
@@ -297,11 +297,11 @@ architecture arch_example_top of example_top is
       app_addr                  : in    std_logic_vector(28 downto 0);
       app_cmd                   : in    std_logic_vector(2 downto 0);
       app_en                    : in    std_logic;
-      app_wdf_data              : in    std_logic_vector(255 downto 0);
+      app_wdf_data              : in    std_logic_vector(511 downto 0);
       app_wdf_end               : in    std_logic;
-      app_wdf_mask         : in    std_logic_vector(31 downto 0);
+      app_wdf_mask         : in    std_logic_vector(63 downto 0);
       app_wdf_wren              : in    std_logic;
-      app_rd_data               : out   std_logic_vector(255 downto 0);
+      app_rd_data               : out   std_logic_vector(511 downto 0);
       app_rd_data_end           : out   std_logic;
       app_rd_data_valid         : out   std_logic;
       app_rdy                   : out   std_logic;
