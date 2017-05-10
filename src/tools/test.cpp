@@ -12,9 +12,11 @@ int main(int argc, char **argv) {
     std::string tmp;
     //const size_t size = 8550;
     //const size_t size = 8548;
-    //const size_t size = 2048;
-    const size_t size = 32;
+    const size_t size = 512;
+    //const size_t size = 256;
+    //const size_t size = 128;
     unsigned err_count = 0;
+    uint32_t address = 0x00000000;
     
     std::cout << "Read Write test program" << std::endl;
 	 
@@ -30,9 +32,9 @@ int main(int argc, char **argv) {
     std::cout << "Starting DMA write/read test ..." << std::endl;
     memset(resp, size*4, 0x5A);
     
-    mySpec.writeDma(0x00, data, size); 
+    mySpec.writeDma(address, data, size); 
     std::cout << "... writing " << size * 4 << " byte." << std::endl;
-    mySpec.readDma(0x00, resp, size); 
+    mySpec.readDma(address, resp, size); 
     std::cout << "... read " << size * 4 << " byte." << std::endl;
     
     char * respColorString;
@@ -45,9 +47,9 @@ int main(int argc, char **argv) {
             //if(err_count%4 == 0) std::cout << std::endl; //error only
         }
 	else {
-	   respColorString = "\e[0m ";
+	   respColorString = "\e[0m";
 	}
-	std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m " << std::setw(8) << respColorString << resp[i] << "\e[0m ";
+	std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m" << respColorString << std::setw(8)  << resp[i] << "\e[0m ";
         if((i+1)%4 == 0) std::cout << std::endl; // all the data
     }
 

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Tue May  2 13:39:51 2017
+| Date         : Mon May  8 11:29:51 2017
 | Host         : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 | Command      : report_utilization -file fifo_315x16_utilization_synth.rpt -pb fifo_315x16_utilization_synth.pb
 | Design       : fifo_315x16
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |   31 |     0 |    101400 |  0.03 |
 |   LUT as Logic          |   31 |     0 |    101400 |  0.03 |
 |   LUT as Memory         |    0 |     0 |     35000 |  0.00 |
-| Slice Registers         |  394 |     0 |    202800 |  0.19 |
-|   Register as Flip Flop |  394 |     0 |    202800 |  0.19 |
+| Slice Registers         |   74 |     0 |    202800 |  0.04 |
+|   Register as Flip Flop |   74 |     0 |    202800 |  0.04 |
 |   Register as Latch     |    0 |     0 |    202800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     50700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     25350 |  0.00 |
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 22    |          Yes |           - |          Set |
-| 51    |          Yes |           - |        Reset |
+| 21    |          Yes |           - |          Set |
+| 49    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 321   |          Yes |       Reset |            - |
+| 4     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,9 +67,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  4.5 |     0 |       325 |  1.38 |
-|   RAMB36/FIFO*    |    4 |     0 |       325 |  1.23 |
-|     RAMB36E1 only |    4 |       |           |       |
+| Block RAM Tile    |  8.5 |     0 |       325 |  2.62 |
+|   RAMB36/FIFO*    |    8 |     0 |       325 |  2.46 |
+|     RAMB36E1 only |    8 |       |           |       |
 |   RAMB18          |    1 |     0 |       650 |  0.15 |
 |     RAMB18E1 only |    1 |       |           |       |
 +-------------------+------+-------+-----------+-------+
@@ -153,17 +153,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  321 |        Flop & Latch |
-| FDCE     |   51 |        Flop & Latch |
-| FDPE     |   22 |        Flop & Latch |
-| LUT2     |   15 |                 LUT |
-| LUT4     |   11 |                 LUT |
-| LUT3     |    6 |                 LUT |
-| LUT6     |    5 |                 LUT |
-| RAMB36E1 |    4 |        Block Memory |
+| FDCE     |   49 |        Flop & Latch |
+| FDPE     |   21 |        Flop & Latch |
+| LUT2     |   18 |                 LUT |
+| LUT4     |    9 |                 LUT |
+| RAMB36E1 |    8 |        Block Memory |
+| LUT3     |    5 |                 LUT |
+| LUT6     |    4 |                 LUT |
+| FDRE     |    4 |        Flop & Latch |
 | LUT1     |    2 |                 LUT |
 | RAMB18E1 |    1 |        Block Memory |
-| LUT5     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

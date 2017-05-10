@@ -9,11 +9,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="602950fs"></ZoomStartTime>
-      <ZoomEndTime time="622351fs"></ZoomEndTime>
-      <Cursor1Time time="618000fs"></Cursor1Time>
+      <ZoomStartTime time="601920fs"></ZoomStartTime>
+      <ZoomEndTime time="613121fs"></ZoomEndTime>
+      <Cursor1Time time="602000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wave_markers>
    </wave_markers>
    <wvobject type="logic" fp_name="app_0/ddr_app_cmd_en_s">
@@ -38,8 +38,8 @@
    </wvobject>
    <wvobject type="array" fp_name="app_0/ddr_app_rd_data_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/ddr_app_rd_data_s[255:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_app_rd_data_s[255:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_app_rd_data_s[511:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_app_rd_data_s[511:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
@@ -69,8 +69,8 @@
    </wvobject>
    <wvobject type="array" fp_name="app_0/ddr_app_wdf_data_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/ddr_app_wdf_data_s[255:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_app_wdf_data_s[255:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_app_wdf_data_s[511:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_app_wdf_data_s[511:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
@@ -88,8 +88,8 @@
    </wvobject>
    <wvobject type="array" fp_name="app_0/ddr_app_wdf_mask_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/ddr_app_wdf_mask_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_app_wdf_mask_s[31:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_app_wdf_mask_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_app_wdf_mask_s[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
@@ -98,6 +98,14 @@
       <obj_property name="ElementShortName">app_0/ddr_app_wdf_rdy_s</obj_property>
       <obj_property name="ObjectShortName">ddr_app_wdf_rdy_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_0/ddr_rd_fifo_full_ds">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_rd_fifo_full_ds[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_fifo_full_ds[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/init_calib_complete_s">
       <obj_property name="DisplayName">FullPathName</obj_property>

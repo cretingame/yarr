@@ -579,11 +579,11 @@ architecture Behavioral of app is
           app_addr                  : in    std_logic_vector(28 downto 0);
           app_cmd                   : in    std_logic_vector(2 downto 0);
           app_en                    : in    std_logic;
-          app_wdf_data              : in    std_logic_vector(255 downto 0);
+          app_wdf_data              : in    std_logic_vector(511 downto 0);
           app_wdf_end               : in    std_logic;
-          app_wdf_mask         : in    std_logic_vector(31 downto 0);
+          app_wdf_mask         : in    std_logic_vector(63 downto 0);
           app_wdf_wren              : in    std_logic;
-          app_rd_data               : out   std_logic_vector(255 downto 0);
+          app_rd_data               : out   std_logic_vector(511 downto 0);
           app_rd_data_end           : out   std_logic;
           app_rd_data_valid         : out   std_logic;
           app_rdy                   : out   std_logic;
@@ -600,7 +600,7 @@ architecture Behavioral of app is
           -- System Clock Ports
           sys_clk_p                      : in    std_logic;
           sys_clk_n                      : in    std_logic;
-        sys_rst                     : in    std_logic
+          sys_rst                     : in    std_logic
       );
     end component mig_7series_0;
 	
@@ -624,27 +624,27 @@ architecture Behavioral of app is
           -- DDR controller port
           ----------------------------------------------------------------------------
           
-          ddr_addr_o                  : out    std_logic_vector(28 downto 0);
-          ddr_cmd_o                   : out    std_logic_vector(2 downto 0);
-          ddr_cmd_en_o                : out    std_logic;
-          ddr_wdf_data_o              : out    std_logic_vector(255 downto 0);
-          ddr_wdf_end_o               : out    std_logic;
-          ddr_wdf_mask_o              : out    std_logic_vector(31 downto 0);
-          ddr_wdf_wren_o              : out    std_logic;
-          ddr_rd_data_i               : in   std_logic_vector(255 downto 0);
+          ddr_addr_o                  : out  std_logic_vector(28 downto 0);
+          ddr_cmd_o                   : out  std_logic_vector(2 downto 0);
+          ddr_cmd_en_o                : out  std_logic;
+          ddr_wdf_data_o              : out  std_logic_vector(511 downto 0);
+          ddr_wdf_end_o               : out  std_logic;
+          ddr_wdf_mask_o              : out  std_logic_vector(63 downto 0);
+          ddr_wdf_wren_o              : out  std_logic;
+          ddr_rd_data_i               : in   std_logic_vector(511 downto 0);
           ddr_rd_data_end_i           : in   std_logic;
           ddr_rd_data_valid_i         : in   std_logic;
           ddr_rdy_i                   : in   std_logic;
           ddr_wdf_rdy_i               : in   std_logic;
-          ddr_sr_req_o                : out    std_logic;
-          ddr_ref_req_o               : out    std_logic;
-          ddr_zq_req_o                : out    std_logic;
+          ddr_sr_req_o                : out  std_logic;
+          ddr_ref_req_o               : out  std_logic;
+          ddr_zq_req_o                : out  std_logic;
           ddr_sr_active_i             : in   std_logic;
           ddr_ref_ack_i               : in   std_logic;
           ddr_zq_ack_i                : in   std_logic;
-          ddr_ui_clk_i                  : in   std_logic;
-          ddr_ui_clk_sync_rst_i           : in   std_logic;
-          ddr_init_calib_complete_i       : in   std_logic;
+          ddr_ui_clk_i                : in   std_logic;
+          ddr_ui_clk_sync_rst_i       : in   std_logic;
+          ddr_init_calib_complete_i   : in   std_logic;
       
           ----------------------------------------------------------------------------
           -- Wishbone bus port
@@ -663,7 +663,7 @@ architecture Behavioral of app is
           ----------------------------------------------------------------------------
           -- Debug ports
           ----------------------------------------------------------------------------
-          --ddr_rd_fifo_full_do : out std_logic_vector(1 downto 0);
+          ddr_rd_fifo_full_do : out std_logic_vector(1 downto 0);
           ddr_rd_fifo_empty_do : out std_logic_vector(1 downto 0);
           ddr_rd_fifo_rd_do : out std_logic_vector(1 downto 0)
         );
@@ -876,17 +876,18 @@ COMPONENT ila_l2p_dma
         probe0 : IN STD_LOGIC_VECTOR(28 DOWNTO 0); 
         probe1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0); 
         probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe3 : IN STD_LOGIC_VECTOR(255 DOWNTO 0); 
+        probe3 : IN STD_LOGIC_VECTOR(511 DOWNTO 0); 
         probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe5 : IN STD_LOGIC_VECTOR(31 DOWNTO 0); 
+        probe5 : IN STD_LOGIC_VECTOR(63 DOWNTO 0); 
         probe6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe7 : IN STD_LOGIC_VECTOR(255 DOWNTO 0); 
+        probe7 : IN STD_LOGIC_VECTOR(511 DOWNTO 0); 
         probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
         probe12 : IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
-        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+        probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe14 : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
     );
     END COMPONENT  ;
 
@@ -1159,11 +1160,11 @@ COMPONENT ila_l2p_dma
     signal ddr_app_addr_s                  :     std_logic_vector(28 downto 0);
     signal ddr_app_cmd_s                   :     std_logic_vector(2 downto 0);
     signal ddr_app_cmd_en_s                :     std_logic;
-    signal ddr_app_wdf_data_s              :     std_logic_vector(255 downto 0);
+    signal ddr_app_wdf_data_s              :     std_logic_vector(511 downto 0);
     signal ddr_app_wdf_end_s               :     std_logic;
-    signal ddr_app_wdf_mask_s              :     std_logic_vector(31 downto 0);
+    signal ddr_app_wdf_mask_s              :     std_logic_vector(63 downto 0);
     signal ddr_app_wdf_wren_s              :     std_logic;
-    signal ddr_app_rd_data_s               :     std_logic_vector(255 downto 0);
+    signal ddr_app_rd_data_s               :     std_logic_vector(511 downto 0);
     signal ddr_app_rd_data_end_s           :     std_logic;
     signal ddr_app_rd_data_valid_s         :     std_logic;
     signal ddr_app_rdy_s                   :     std_logic;
@@ -1771,7 +1772,7 @@ begin
       wb_ack_o            => dma_ddr_ack_s,
       wb_stall_o          => dma_ddr_stall_s,
       
-      --ddr_rd_fifo_full_do => ddr_rd_fifo_full_ds,
+      ddr_rd_fifo_full_do => ddr_rd_fifo_full_ds,
       ddr_rd_fifo_empty_do => ddr_rd_fifo_empty_ds,
       ddr_rd_fifo_rd_do => ddr_rd_fifo_rd_ds
       
@@ -2113,7 +2114,8 @@ begin
           probe10(0) => ddr_app_rdy_s, 
           probe11(0) => ddr_app_wdf_rdy_s,
           probe12(0) => ddr_app_ui_clk_sync_rst_s, 
-          probe13(0) => init_calib_complete_s
+          probe13(0) => init_calib_complete_s,
+          probe14 => (others => '0')--ddr_rd_fifo_full_ds
       );
    end generate dbg_5;
   

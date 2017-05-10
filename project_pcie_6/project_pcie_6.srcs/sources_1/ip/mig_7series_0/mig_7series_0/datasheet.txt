@@ -51,7 +51,7 @@ AXI Parameters :
 
 Memory Options:
    Burst Length (MR0[1:0])          : 8 - Fixed
-   Read Burst Type (MR0[3])         : Interleaved
+   Read Burst Type (MR0[3])         : Sequential
    CAS Latency (MR0[6:4])           : 7
    Output Drive Strength (MR1[5,1]) : RZQ/7
    Controller CS option             : Enable

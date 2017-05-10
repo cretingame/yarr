@@ -179,7 +179,7 @@ entity mig_7series_0_mig is
                                      -- DDR2 SDRAM:
                                      -- Burst Length (Mode Register).
                                      -- # = "8", "4".
-   BURST_TYPE            : string  := "INT";
+   BURST_TYPE            : string  := "SEQ";
                                      -- DDR3 SDRAM: Burst Type (Mode Register 0).
                                      -- DDR2 SDRAM: Burst Type (Mode Register).
                                      -- # = "SEQ" - (Sequential),

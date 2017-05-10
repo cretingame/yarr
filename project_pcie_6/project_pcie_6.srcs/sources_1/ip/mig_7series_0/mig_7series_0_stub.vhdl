@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
--- Date        : Fri May  5 14:12:29 2017
+-- Date        : Wed May 10 11:29:12 2017
 -- Host        : spikepig.dhcp.lbl.gov running 64-bit CentOS Linux release 7.2.1511 (Core)
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/mig_7series_0/mig_7series_0_stub.vhdl

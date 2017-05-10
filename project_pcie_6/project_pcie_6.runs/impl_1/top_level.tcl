@@ -48,6 +48,7 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /home/asautaux/yarr/project_pcie_6/project_pcie_6.cache/wt [current_project]
@@ -90,6 +91,8 @@ set rc [catch {
   set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_4x16/fifo_4x16.dcp]
   add_files -quiet /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/ila_ddr/ila_ddr.dcp
   set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/ila_ddr/ila_ddr.dcp]
+  add_files -quiet /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr.dcp
+  set_property netlist_only true [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr.dcp]
   read_xdc -mode out_of_context -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
   read_xdc -ref pcie_7x_0 -cells U0 /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc
@@ -158,6 +161,10 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/ila_ddr/ila_ddr_ooc.xdc]
   read_xdc -ref ila_ddr -cells U0 /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/ila_ddr/ila_v6_1/constraints/ila.xdc
   set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/ila_ddr/ila_v6_1/constraints/ila.xdc]
+  read_xdc -mode out_of_context -ref vio_ddr /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr_ooc.xdc
+  set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr_ooc.xdc]
+  read_xdc -ref vio_ddr /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr.xdc
+  set_property processing_order EARLY [get_files /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/vio_ddr/vio_ddr.xdc]
   read_xdc /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc
   read_xdc /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/Documents/ddr3.xdc
   read_xdc -ref l2p_fifo64 -cells U0 /home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/l2p_fifo64/l2p_fifo64/l2p_fifo64_clocks.xdc

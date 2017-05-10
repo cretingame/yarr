@@ -146,9 +146,9 @@ package body gn4124_core_pkg is
   begin
     if (enable = true) then
       if byte_swap(2) = '0' then
-        dout := f_byte_swap(true, din(63 downto 0), byte_swap(1 downto 0)) & f_byte_swap(true, din(31 downto 0), byte_swap(1 downto 0));
+        dout := f_byte_swap(true, din(63 downto 32), byte_swap(1 downto 0)) & f_byte_swap(true, din(31 downto 0), byte_swap(1 downto 0));
       else
-        dout := f_byte_swap(true, din(31 downto 0), byte_swap(1 downto 0)) & f_byte_swap(true, din(63 downto 0), byte_swap(1 downto 0));
+        dout := f_byte_swap(true, din(31 downto 0), byte_swap(1 downto 0)) & f_byte_swap(true, din(63 downto 32), byte_swap(1 downto 0));
       end if;
       
     else

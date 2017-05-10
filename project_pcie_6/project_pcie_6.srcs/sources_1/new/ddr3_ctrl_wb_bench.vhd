@@ -60,11 +60,11 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
         ddr_addr_o                  : out    std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
         ddr_cmd_o                   : out    std_logic_vector(2 downto 0);
         ddr_cmd_en_o                : out    std_logic;
-        ddr_wdf_data_o              : out    std_logic_vector(255 downto 0);
+        ddr_wdf_data_o              : out    std_logic_vector(511 downto 0);
         ddr_wdf_end_o               : out    std_logic;
-        ddr_wdf_mask_o              : out    std_logic_vector(31 downto 0);
+        ddr_wdf_mask_o              : out    std_logic_vector(63 downto 0);
         ddr_wdf_wren_o              : out    std_logic;
-        ddr_rd_data_i               : in   std_logic_vector(255 downto 0);
+        ddr_rd_data_i               : in   std_logic_vector(511 downto 0);
         ddr_rd_data_end_i           : in   std_logic;
         ddr_rd_data_valid_i         : in   std_logic;
         ddr_rdy_i                   : in   std_logic;
@@ -142,8 +142,8 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
     );
   end component mig_7series_0;
   
-  constant period : time := 100 ns;
-  constant period_ddr : time := 200 ns;
+  constant period : time := 4 ns; -- 250MHz
+  constant period_ddr : time := 15 ns; -- 533 Mhz/8
   constant g_BYTE_ADDR_WIDTH : integer := 29;
   constant g_MASK_SIZE       : integer := 8;
   constant g_DATA_PORT_SIZE  : integer := 64;
@@ -181,11 +181,11 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   signal ddr_app_addr_s                  :     std_logic_vector(g_BYTE_ADDR_WIDTH-1 downto 0);
   signal ddr_app_cmd_s                   :     std_logic_vector(2 downto 0);
   signal ddr_app_cmd_en_s                :     std_logic;
-  signal ddr_app_wdf_data_s              :     std_logic_vector(255 downto 0);
+  signal ddr_app_wdf_data_s              :     std_logic_vector(511 downto 0);
   signal ddr_app_wdf_end_s               :     std_logic;
-  signal ddr_app_wdf_mask_s              :     std_logic_vector(31 downto 0);
+  signal ddr_app_wdf_mask_s              :     std_logic_vector(63 downto 0);
   signal ddr_app_wdf_wren_s              :     std_logic;
-  signal ddr_app_rd_data_s               :     std_logic_vector(255 downto 0);
+  signal ddr_app_rd_data_s               :     std_logic_vector(511 downto 0);
   signal ddr_app_rd_data_end_s           :     std_logic;
   signal ddr_app_rd_data_valid_s         :     std_logic;
   signal ddr_app_rdy_s                   :     std_logic;
@@ -202,6 +202,9 @@ architecture Behavioral of ddr3_ctrl_wb_bench is
   signal wb_we_tbs : STD_LOGIC;
   signal wb_ack_s : STD_LOGIC;
   signal wb_stall_s : STD_LOGIC;
+  
+  signal wb_dat_s2m_tbs : STD_LOGIC_VECTOR (64 - 1 downto 0);
+  signal wb_s2m_msg_tbs : STRING(1 to 2);
 
 begin
     
@@ -293,7 +296,7 @@ begin
         wb_we_tbs <= '0';
         wait for 10*period;
         
-        end if;
+        
         
         for J in 0 to 2 loop
             
@@ -343,9 +346,10 @@ begin
         wb_we_tbs <= '0';
         wait for 10*period;
         
+        end if;
         
-        for I in 0 to 15 loop
-            step <= 500+I;
+        for I in 0 to 31 loop
+            step <= 63+I;
     
             wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
             wb_dat_m2s_tbs <= X"DEADBEEF" & std_logic_vector(to_unsigned(I,32));
@@ -414,7 +418,7 @@ begin
         
         end if;
         
-        for I in 0 to 31 loop
+        for I in 0 to 64 loop
         
             step <= 300+I;
             wb_addr_tbs <= std_logic_vector(to_unsigned(I,32));
@@ -442,6 +446,39 @@ begin
         
     end process wb_stimuli_p;
     
+    s2m_wb_check_p : process
+        variable counter_v : unsigned (31 downto 0);
+    begin
+    
+    wb_dat_s2m_tbs <= (others => '0');
+    counter_v := (others => '1'); --to_unsigned(0,32);
+    wb_s2m_msg_tbs <= "NO";
+    --wait for period;
+    wait until wb_ack_s = '1';
+        
+    loop
+        if(wb_ack_s = '1') then
+            counter_v := counter_v + 1;
+            if (wb_dat_s2m_tbs = wb_dat_s2m_s) then
+                wb_s2m_msg_tbs <= "OK";
+            else
+                wb_s2m_msg_tbs <= "KO";
+            end if;
+        end if;
+        
+        wb_dat_s2m_tbs <= X"deadbeef" & std_logic_vector(counter_v);
+        
+    
+    
+    
+    wait for period;
+    
+    end loop;
+    
+    wait;
+    
+    end process s2m_wb_check_p;
+    
     ddr_step_p : process
     begin
     
@@ -452,11 +489,11 @@ begin
     end process ddr_step_p;
     
     with step_ddr select ddr_app_rdy_s <=
-        '0' when 26,
+        --'0' when 19 to 30 | 47 to 60,
         '1' when others;
     
     with step_ddr select ddr_app_wdf_rdy_s <= 
-        '0' when 19,
+        --'0' when 150,
         '1' when others;
     
     ddr_stimuli_p : process
@@ -479,39 +516,27 @@ begin
     --wait for period_ddr;
     loop
     if ddr_app_cmd_en_s = '1' and ddr_app_cmd_s = "001" then
-        --step_ddr <= 2;
-        ddr_app_rd_data_valid_s         <= '1';
-        ddr_app_rd_data_end_s           <= '0';
-        
-        if data_end = '0' then
-            ddr_app_rd_data_s               <= X"deadbeef" & std_logic_vector(counter+3) & 
-                                               X"deadbeef" & std_logic_vector(counter+2) & 
-                                               X"deadbeef" & std_logic_vector(counter+1) & 
-                                               X"deadbeef" & std_logic_vector(counter);
-        else
-            ddr_app_rd_data_s               <= (others => '0');        
-        end if;
-        wait for period_ddr;
         
         --step_ddr <= 3;
-        if data_end = '1' then
-            ddr_app_rd_data_s               <= X"deadbeef" & std_logic_vector(counter+3) & 
-                                               X"deadbeef" & std_logic_vector(counter+2) & 
-                                               X"deadbeef" & std_logic_vector(counter+1) & 
-                                               X"deadbeef" & std_logic_vector(counter);
-        else
-            ddr_app_rd_data_s               <= (others => '0');        
-        end if;
+
+        ddr_app_rd_data_s               <= X"deadbeef" & std_logic_vector(counter+0) &
+                                           X"deadbeef" & std_logic_vector(counter+1) &
+                                           X"deadbeef" & std_logic_vector(counter+2) &
+                                           X"deadbeef" & std_logic_vector(counter+3) &
+                                           X"deadbeef" & std_logic_vector(counter+4) & 
+                                           X"deadbeef" & std_logic_vector(counter+5) & 
+                                           X"deadbeef" & std_logic_vector(counter+6) & 
+                                           X"deadbeef" & std_logic_vector(counter+7);
         ddr_app_rd_data_end_s           <= '1';
         ddr_app_rd_data_valid_s         <= '1';
-        counter := counter + 4;
+        counter := counter + 8;
         data_end := not data_end;
         wait for period_ddr;
     else
         
         --step_ddr <= 5;
         
-        ddr_app_rd_data_s               <= X"0000000000000000000000000000000000000000000000000000000000000000";
+        ddr_app_rd_data_s               <= (others => '0');
         ddr_app_rd_data_end_s           <= '0';
         ddr_app_rd_data_valid_s         <= '0';
         

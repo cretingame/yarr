@@ -10,37 +10,22 @@ int main(int argc, char **argv) {
     SpecController mySpec(specNum);
     std::string tmp;
     //const size_t size = 8550;
-    const size_t size = 128;
-    //unsigned err_count = 0;
+    const size_t size = 64;
     
     uint32_t *data = new uint32_t[size];
     for(unsigned i=0; i<size;i++)
-        data[i] = i;
+        data[i] = 0xCACA0000 + i/2;
 
-    //uint32_t *resp = new uint32_t[size];
 
     std::cout << "Starting DMA write test ..." << std::endl;
-    //memset(resp, size*4, 0x5A);
     
-    mySpec.writeDma(0x10, data, size); 
+    mySpec.writeDma(0x0, data, size); 
     std::cout << "... writing " << size * 4 << " byte." << std::endl;
-    //mySpec.readDma(0x10, resp, size); 
-    //std::cout << "... read " << size * 4 << " byte." << std::endl;
     
     for (unsigned i=0; i<size; i++) {
-        //if (data[i] != resp[i]) {
             std::cout << "[" << i << "] " << std::hex << data[i]  << std::endl << std::dec;
-            //err_count++;
-        //}
     }
-    /*
-    if (err_count == 0)
-        std::cout << "Success! No errors." << std::endl;
-    else
-	std::cout << err_count << " errors." << std::endl;
-    */
     delete[] data;
-    //delete[] resp;
 
     return 0;
 }
