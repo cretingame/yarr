@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri May  5 15:02:54 2017
-# Process ID: 28134
+# Start of session at: Thu May 11 13:35:12 2017
+# Process ID: 8575
 # Current directory: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/fifo_256x16_synth_1
 # Command line: vivado -log fifo_256x16.vds -mode batch -messageDb vivado.pb -notrace -source fifo_256x16.tcl
 # Log file: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/fifo_256x16_synth_1/fifo_256x16.vds
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28155 
+INFO: Helper process launched with PID 8590 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1144.277 ; gain = 169.137 ; free physical = 11756 ; free virtual = 21554
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1145.277 ; gain = 170.137 ; free physical = 12138 ; free virtual = 21395
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:74]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -38,7 +38,7 @@ INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/proje
 	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
 	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
 	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
@@ -222,7 +222,7 @@ INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/proje
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/fifo_generator_v13_1_1/hdl/fifo_generator_v13_1.vhd:75' bound to instance 'U0' of component 'fifo_generator_v13_1_1' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:540]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/fifo_generator_v13_1_1/hdl/fifo_generator_v13_1.vhd:75' bound to instance 'U0' of component 'fifo_generator_v13_1_1' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:541]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -241,7 +241,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
 	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
 	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
@@ -443,7 +443,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
 	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
 	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
@@ -673,7 +673,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
 	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
@@ -740,7 +740,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
 	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
@@ -3451,7 +3451,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_WIDTH bound to: 4 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
@@ -3482,13 +3482,16 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
 	Parameter C_WIDTH bound to: 4 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
 	Parameter C_VALID_LOW bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
 	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
 	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
@@ -3530,7 +3533,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
 	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
-	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 1 - type: integer 
 	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
 	Parameter C_HAS_VALID bound to: 0 - type: integer 
 	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
@@ -3546,7 +3549,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/asautaux
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
 	Parameter C_BYTE_STRB_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_256x16' (27#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'fifo_256x16' (28#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/ip/fifo_256x16/synth/fifo_256x16.vhd:74]
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
@@ -3649,7 +3652,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized6 has unco
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized6 has unconnected port DINB[26]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1357.621 ; gain = 382.480 ; free physical = 11523 ; free virtual = 21323
+Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1359.621 ; gain = 384.480 ; free physical = 12334 ; free virtual = 21592
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3659,7 +3662,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1357.621 ; gain = 382.480 ; free physical = 11522 ; free virtual = 21322
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 1359.621 ; gain = 384.480 ; free physical = 12334 ; free virtual = 21592
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3683,27 +3686,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1534.992 ; gain = 1.000 ; free physical = 11478 ; free virtual = 21278
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1534.996 ; gain = 0.004 ; free physical = 12283 ; free virtual = 21541
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11477 ; free virtual = 21277
+Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12281 ; free virtual = 21540
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11477 ; free virtual = 21277
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12281 ; free virtual = 21540
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11477 ; free virtual = 21277
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12281 ; free virtual = 21540
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11470 ; free virtual = 21271
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12280 ; free virtual = 21539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3717,6 +3720,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      4 Bit       Adders := 2     
+	   3 Input      4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 22    
 +---XORs : 
@@ -3725,7 +3729,7 @@ Detailed RTL Component Info :
 	                2 Bit    Wide XORs := 2     
 +---Registers : 
 	              512 Bit    Registers := 1     
-	                4 Bit    Registers := 13    
+	                4 Bit    Registers := 14    
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 22    
@@ -3779,6 +3783,12 @@ Module rd_status_flags_as
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 2     
+Module rd_dc_as 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
 Module rd_fwft 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -3812,14 +3822,14 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11470 ; free virtual = 21271
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12280 ; free virtual = 21539
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11463 ; free virtual = 21263
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12273 ; free virtual = 21532
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 11463 ; free virtual = 21263
+Finished Parallel Reinference  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1534.996 ; gain = 559.855 ; free physical = 12273 ; free virtual = 21532
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -3832,9 +3842,9 @@ Start Area Optimization
 WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]) is unused and will be removed from module fifo_generator_v13_1_1.
 WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_reg) is unused and will be removed from module fifo_generator_v13_1_1.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11447 ; free virtual = 21247
+Finished Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12257 ; free virtual = 21516
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11447 ; free virtual = 21247
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12257 ; free virtual = 21516
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -3848,10 +3858,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11435 ; free virtual = 21235
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12247 ; free virtual = 21505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11434 ; free virtual = 21234
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12246 ; free virtual = 21504
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3863,16 +3873,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -3889,7 +3899,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3902,7 +3912,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3914,25 +3924,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3949,14 +3959,14 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |LUT1     |     2|
-|2     |LUT2     |    17|
+|2     |LUT2     |    18|
 |3     |LUT3     |     6|
-|4     |LUT4     |    11|
-|5     |LUT5     |     1|
-|6     |LUT6     |     5|
+|4     |LUT4     |    14|
+|5     |LUT5     |     3|
+|6     |LUT6     |     4|
 |7     |RAMB18E1 |     1|
 |8     |RAMB36E1 |     7|
-|9     |FDCE     |    51|
+|9     |FDCE     |    55|
 |10    |FDPE     |    22|
 |11    |FDRE     |   516|
 +------+---------+------+
@@ -3965,52 +3975,53 @@ Report Instance Areas:
 +------+-------------------------------------------------------+-----------------------------------------+------+
 |      |Instance                                               |Module                                   |Cells |
 +------+-------------------------------------------------------+-----------------------------------------+------+
-|1     |top                                                    |                                         |   639|
-|2     |  U0                                                   |fifo_generator_v13_1_1                   |   639|
-|3     |    inst_fifo_gen                                      |fifo_generator_v13_1_1_synth             |   639|
-|4     |      \gconvfifo.rf                                    |fifo_generator_top                       |   639|
-|5     |        \grf.rf                                        |fifo_generator_ramfifo                   |   639|
-|6     |          \gntv_or_sync_fifo.gcx.clkx                  |clk_x_pntrs                              |    45|
+|1     |top                                                    |                                         |   648|
+|2     |  U0                                                   |fifo_generator_v13_1_1                   |   648|
+|3     |    inst_fifo_gen                                      |fifo_generator_v13_1_1_synth             |   648|
+|4     |      \gconvfifo.rf                                    |fifo_generator_top                       |   648|
+|5     |        \grf.rf                                        |fifo_generator_ramfifo                   |   648|
+|6     |          \gntv_or_sync_fifo.gcx.clkx                  |clk_x_pntrs                              |    51|
 |7     |            \gsync_stage[1].rd_stg_inst                |synchronizer_ff                          |     4|
 |8     |            \gsync_stage[1].wr_stg_inst                |synchronizer_ff_0                        |     4|
 |9     |            \gsync_stage[2].rd_stg_inst                |synchronizer_ff_1                        |     5|
 |10    |            \gsync_stage[2].wr_stg_inst                |synchronizer_ff_2                        |     5|
-|11    |          \gntv_or_sync_fifo.gl0.rd                    |rd_logic                                 |    30|
-|12    |            \gr1.gr1_int.rfwft                         |rd_fwft                                  |    11|
-|13    |            \gras.rsts                                 |rd_status_flags_as                       |     1|
-|14    |            rpntr                                      |rd_bin_cntr                              |    18|
-|15    |          \gntv_or_sync_fifo.gl0.wr                    |wr_logic                                 |    22|
-|16    |            \gwas.wsts                                 |wr_status_flags_as                       |     6|
-|17    |            wpntr                                      |wr_bin_cntr                              |    16|
-|18    |          \gntv_or_sync_fifo.mem                       |memory                                   |   520|
-|19    |            \gbm.gbmg.gbmga.ngecc.bmg                  |blk_mem_gen_v8_3_3                       |     8|
-|20    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_3_synth                 |     8|
-|21    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                          |     8|
-|22    |                  \valid.cstr                          |blk_mem_gen_generic_cstr                 |     8|
-|23    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width                   |     1|
-|24    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper                 |     1|
-|25    |                    \ramloop[1].ram.r                  |blk_mem_gen_prim_width__parameterized0   |     1|
-|26    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized0 |     1|
-|27    |                    \ramloop[2].ram.r                  |blk_mem_gen_prim_width__parameterized1   |     1|
-|28    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized1 |     1|
-|29    |                    \ramloop[3].ram.r                  |blk_mem_gen_prim_width__parameterized2   |     1|
-|30    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized2 |     1|
-|31    |                    \ramloop[4].ram.r                  |blk_mem_gen_prim_width__parameterized3   |     1|
-|32    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized3 |     1|
-|33    |                    \ramloop[5].ram.r                  |blk_mem_gen_prim_width__parameterized4   |     1|
-|34    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized4 |     1|
-|35    |                    \ramloop[6].ram.r                  |blk_mem_gen_prim_width__parameterized5   |     1|
-|36    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5 |     1|
-|37    |                    \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6   |     1|
-|38    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6 |     1|
-|39    |          rstblk                                       |reset_blk_ramfifo                        |    22|
+|11    |          \gntv_or_sync_fifo.gl0.rd                    |rd_logic                                 |    33|
+|12    |            \gr1.gr1_int.rfwft                         |rd_fwft                                  |    10|
+|13    |            \gras.grdc1.rdc                            |rd_dc_as                                 |     4|
+|14    |            \gras.rsts                                 |rd_status_flags_as                       |     1|
+|15    |            rpntr                                      |rd_bin_cntr                              |    18|
+|16    |          \gntv_or_sync_fifo.gl0.wr                    |wr_logic                                 |    22|
+|17    |            \gwas.wsts                                 |wr_status_flags_as                       |     6|
+|18    |            wpntr                                      |wr_bin_cntr                              |    16|
+|19    |          \gntv_or_sync_fifo.mem                       |memory                                   |   520|
+|20    |            \gbm.gbmg.gbmga.ngecc.bmg                  |blk_mem_gen_v8_3_3                       |     8|
+|21    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_3_synth                 |     8|
+|22    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                          |     8|
+|23    |                  \valid.cstr                          |blk_mem_gen_generic_cstr                 |     8|
+|24    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width                   |     1|
+|25    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper                 |     1|
+|26    |                    \ramloop[1].ram.r                  |blk_mem_gen_prim_width__parameterized0   |     1|
+|27    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized0 |     1|
+|28    |                    \ramloop[2].ram.r                  |blk_mem_gen_prim_width__parameterized1   |     1|
+|29    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized1 |     1|
+|30    |                    \ramloop[3].ram.r                  |blk_mem_gen_prim_width__parameterized2   |     1|
+|31    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized2 |     1|
+|32    |                    \ramloop[4].ram.r                  |blk_mem_gen_prim_width__parameterized3   |     1|
+|33    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized3 |     1|
+|34    |                    \ramloop[5].ram.r                  |blk_mem_gen_prim_width__parameterized4   |     1|
+|35    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized4 |     1|
+|36    |                    \ramloop[6].ram.r                  |blk_mem_gen_prim_width__parameterized5   |     1|
+|37    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5 |     1|
+|38    |                    \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6   |     1|
+|39    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6 |     1|
+|40    |          rstblk                                       |reset_blk_ramfifo                        |    22|
 +------+-------------------------------------------------------+-----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11413 ; free virtual = 21213
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12225 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 440 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1535.000 ; gain = 284.344 ; free physical = 11412 ; free virtual = 21212
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 11412 ; free virtual = 21212
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1535.000 ; gain = 285.344 ; free physical = 12224 ; free virtual = 21483
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.000 ; gain = 559.859 ; free physical = 12226 ; free virtual = 21484
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4029,7 +4040,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 20 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:57 . Memory (MB): peak = 1918.203 ; gain = 857.508 ; free physical = 11117 ; free virtual = 20917
-INFO: [Coretcl 2-1174] Renamed 38 cell refs.
-report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1950.223 ; gain = 0.000 ; free physical = 11116 ; free virtual = 20916
-INFO: [Common 17-206] Exiting Vivado at Fri May  5 15:03:58 2017...
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1920.203 ; gain = 858.508 ; free physical = 11930 ; free virtual = 21189
+INFO: [Coretcl 2-1174] Renamed 39 cell refs.
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1952.223 ; gain = 0.000 ; free physical = 11928 ; free virtual = 21187
+INFO: [Common 17-206] Exiting Vivado at Thu May 11 13:36:17 2017...

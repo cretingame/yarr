@@ -104,7 +104,8 @@ package ddr3_ctrl_pkg is
         rd_en : IN STD_LOGIC;
         dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
         full : OUT STD_LOGIC;
-        empty : OUT STD_LOGIC
+        empty : OUT STD_LOGIC;
+        rd_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
       );
     END COMPONENT;
     
@@ -118,7 +119,8 @@ package ddr3_ctrl_pkg is
         rd_en : IN STD_LOGIC;
         dout : OUT STD_LOGIC_VECTOR(511 DOWNTO 0);
         full : OUT STD_LOGIC;
-        empty : OUT STD_LOGIC
+        empty : OUT STD_LOGIC;
+        rd_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
       );
     END COMPONENT;
     

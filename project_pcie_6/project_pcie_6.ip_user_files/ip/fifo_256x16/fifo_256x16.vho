@@ -62,7 +62,8 @@ COMPONENT fifo_256x16
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(511 DOWNTO 0);
     full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC
+    empty : OUT STD_LOGIC;
+    rd_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -81,7 +82,8 @@ your_instance_name : fifo_256x16
     rd_en => rd_en,
     dout => dout,
     full => full,
-    empty => empty
+    empty => empty,
+    rd_data_count => rd_data_count
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

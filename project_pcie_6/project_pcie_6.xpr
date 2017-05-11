@@ -28,20 +28,20 @@
     <Option Name="IPUserFilesDir" Val="$PPRDIR/project_pcie_6.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/project_pcie_6.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="608"/>
+    <Option Name="WTXSimLaunchSim" Val="628"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="172"/>
-    <Option Name="WTModelSimExportSim" Val="172"/>
-    <Option Name="WTQuestaExportSim" Val="172"/>
-    <Option Name="WTIesExportSim" Val="172"/>
-    <Option Name="WTVcsExportSim" Val="172"/>
-    <Option Name="WTRivieraExportSim" Val="172"/>
-    <Option Name="WTActivehdlExportSim" Val="172"/>
+    <Option Name="WTXSimExportSim" Val="180"/>
+    <Option Name="WTModelSimExportSim" Val="180"/>
+    <Option Name="WTQuestaExportSim" Val="180"/>
+    <Option Name="WTIesExportSim" Val="180"/>
+    <Option Name="WTVcsExportSim" Val="180"/>
+    <Option Name="WTRivieraExportSim" Val="180"/>
+    <Option Name="WTActivehdlExportSim" Val="180"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -58,6 +58,12 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../yarr_orig/hdl/ddr3-core/ddr3_ctrl_pkg.vhd"/>
           <Attr Name="ImportTime" Val="1484756918"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/app_package.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -382,7 +388,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="l2p_dma_bench"/>
+        <Option Name="TopModule" Val="ddr3_ctrl_wb_bench"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -500,21 +506,6 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="fifo_96x512"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ila_wb" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_wb">
-      <File Path="$PSRCDIR/sources_1/ip/ila_wb/ila_wb.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_pcie_5/project_pcie_5.srcs/sources_1/ip/ila_wb/ila_wb.xci"/>
-          <Attr Name="ImportTime" Val="1486591266"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="ila_wb"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -637,19 +628,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vio_ddr" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vio_ddr">
-      <File Path="$PSRCDIR/sources_1/ip/vio_ddr/vio_ddr.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="vio_ddr"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -729,13 +707,6 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="ila_wb_synth_1" Type="Ft3:Synth" SrcSet="ila_wb" Part="xc7k160tfbg676-2" ConstrsSet="ila_wb" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_wb_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
     <Run Id="ila_l2p_dma_synth_1" Type="Ft3:Synth" SrcSet="ila_l2p_dma" Part="xc7k160tfbg676-2" ConstrsSet="ila_l2p_dma" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_l2p_dma_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
@@ -793,13 +764,6 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="ila_ddr_synth_1" Type="Ft3:Synth" SrcSet="ila_ddr" Part="xc7k160tfbg676-2" ConstrsSet="ila_ddr" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_ddr_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="vio_ddr_synth_1" Type="Ft3:Synth" SrcSet="vio_ddr" Part="xc7k160tfbg676-2" ConstrsSet="vio_ddr" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/vio_ddr_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -908,20 +872,6 @@
       </Strategy>
     </Run>
     <Run Id="fifo_96x512_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="fifo_96x512" Description="Default settings for Implementation." SynthRun="fifo_96x512_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="ila_wb_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_wb" Description="Default settings for Implementation." SynthRun="ila_wb_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -1048,20 +998,6 @@
       </Strategy>
     </Run>
     <Run Id="ila_ddr_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="ila_ddr" Description="Default settings for Implementation." SynthRun="ila_ddr_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="vio_ddr_impl_1" Type="Ft2:EntireDesign" Part="xc7k160tfbg676-2" ConstrsSet="vio_ddr" Description="Default settings for Implementation." SynthRun="vio_ddr_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>

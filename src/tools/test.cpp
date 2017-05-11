@@ -15,6 +15,8 @@ int main(int argc, char **argv) {
     const size_t size = 512;
     //const size_t size = 256;
     //const size_t size = 128;
+    const bool errorOnly = true;    
+
     unsigned err_count = 0;
     uint32_t address = 0x00000000;
     
@@ -41,16 +43,20 @@ int main(int argc, char **argv) {
 
     for (unsigned i=0; i<size; i++) {
         if (data[i] != resp[i]) {
-            //std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m " << std::setw(8) << resp[i] << " "; // error only
             err_count++;
 	    respColorString = "\e[31m";
-            //if(err_count%4 == 0) std::cout << std::endl; //error only
+            if(errorOnly) {
+		std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m " << std::setw(8) << resp[i] << " "; // error only
+                if(err_count%4 == 0) std::cout << std::endl; //error only
+            }
         }
 	else {
 	   respColorString = "\e[0m";
 	}
-	std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m" << respColorString << std::setw(8)  << resp[i] << "\e[0m ";
-        if((i+1)%4 == 0) std::cout << std::endl; // all the data
+	if(!errorOnly) {
+           std::cout << "\e[7m[" << std::setw(4)  << i << "]\e[2m " << std::setw(8) << std::hex << data[i] << " \e[0m" << respColorString << std::setw(8)  << resp[i] << "\e[0m ";
+           if((i+1)%4 == 0) std::cout << std::endl; // all the data
+        }
     }
 
     if (err_count == 0)

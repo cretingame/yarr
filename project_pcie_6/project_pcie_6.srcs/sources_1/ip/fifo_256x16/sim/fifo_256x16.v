@@ -62,7 +62,8 @@ module fifo_256x16 (
   rd_en,
   dout,
   full,
-  empty
+  empty,
+  rd_data_count
 );
 
 input wire rst;
@@ -82,6 +83,7 @@ output wire [511 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
+output wire [3 : 0] rd_data_count;
 
   fifo_generator_v13_1_1 #(
     .C_COMMON_CLOCK(0),
@@ -102,7 +104,7 @@ output wire empty;
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
-    .C_HAS_RD_DATA_COUNT(0),
+    .C_HAS_RD_DATA_COUNT(1),
     .C_HAS_RD_RST(0),
     .C_HAS_RST(1),
     .C_HAS_SRST(0),
@@ -319,7 +321,7 @@ output wire empty;
     .valid(),
     .underflow(),
     .data_count(),
-    .rd_data_count(),
+    .rd_data_count(rd_data_count),
     .wr_data_count(),
     .prog_full(),
     .prog_empty(),

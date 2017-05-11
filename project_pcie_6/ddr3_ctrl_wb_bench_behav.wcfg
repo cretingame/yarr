@@ -12,9 +12,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="9166667fs"></ZoomStartTime>
-      <ZoomEndTime time="842166668fs"></ZoomEndTime>
-      <Cursor1Time time="48000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="351000001fs"></ZoomEndTime>
+      <Cursor1Time time="20057000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="53" />
    <wvobject type="logic" fp_name="/ddr3_ctrl_wb_bench/clk_tbs">
@@ -102,8 +102,8 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_write_wait_cnt">
-      <obj_property name="ElementShortName">wb_write_wait_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_write_wait_cnt[3:0]</obj_property>
+      <obj_property name="ElementShortName">wb_write_wait_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_write_wait_cnt[9:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFA500</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
@@ -191,8 +191,8 @@
       </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_read_wait_cnt">
-      <obj_property name="ElementShortName">wb_read_wait_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_read_wait_cnt[3:0]</obj_property>
+      <obj_property name="ElementShortName">wb_read_wait_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_read_wait_cnt[9:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ddr3_ctrl_wb_bench/cmp_ddr3_ctrl_wb/wb_rd_addr_row_s">
       <obj_property name="ElementShortName">wb_rd_addr_row_s[7:0]</obj_property>

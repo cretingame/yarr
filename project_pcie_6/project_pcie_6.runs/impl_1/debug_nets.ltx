@@ -774,6 +774,36 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
+        <Option Id="PROBE_PORT" value="14"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_mask_rd_data_count_ds[3]"/>
+        <net name="app_0/ddr_rd_mask_rd_data_count_ds[2]"/>
+        <net name="app_0/ddr_rd_mask_rd_data_count_ds[1]"/>
+        <net name="app_0/ddr_rd_mask_rd_data_count_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="app_0/dbg_2.pipelined_wishbone_debug"/>
+        <Option Id="PROBE_PORT" value="15"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+      </probeOptions>
+      <nets>
+        <net name="app_0/ddr_rd_data_rd_data_count_ds[3]"/>
+        <net name="app_0/ddr_rd_data_rd_data_count_ds[2]"/>
+        <net name="app_0/ddr_rd_data_rd_data_count_ds[1]"/>
+        <net name="app_0/ddr_rd_data_rd_data_count_ds[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:2"/>
         <Option Id="HW_ILA" value="app_0/dbg_5.ddr_debug"/>
         <Option Id="PROBE_PORT" value="0"/>
@@ -2053,30 +2083,6 @@
       </probeOptions>
       <nets>
         <net name="app_0/init_calib_complete_s"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="HW_ILA" value="app_0/dbg_5.ddr_debug"/>
-        <Option Id="PROBE_PORT" value="14"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/&lt;const0>_1"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="HW_ILA" value="app_0/dbg_5.ddr_debug"/>
-        <Option Id="PROBE_PORT" value="14"/>
-        <Option Id="PROBE_PORT_BITS" value="1"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="app_0/&lt;const0>"/>
       </nets>
     </probe>
   </probeset>
