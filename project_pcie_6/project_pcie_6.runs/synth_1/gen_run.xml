@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1494537216">
-  <File Type="PA-TCL" Name="top_level.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7k160tfbg676-2" LaunchTime="1494614338">
+  <File Type="RDS-PROPCONSTRS" Name="top_level_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="top_level_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="top_level.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_level_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="top_level_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="top_level.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_level.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_level_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_level_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_level_drc_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/common/gn4124_core_pkg.vhd">
@@ -303,20 +303,20 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_96x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_l2p_dma"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_32x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_256x16"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_4x16"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_27x16"/>
   <BlockFileSet Type="BlockSrcs" Name="pcie_7x_0"/>
   <BlockFileSet Type="BlockSrcs" Name="l2p_fifo64"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_315x16"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_axis"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_dma_ctrl_reg"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_wsh_pipe"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_pd_pdm"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_64x512"/>
-  <BlockFileSet Type="BlockSrcs" Name="mig_7series_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_ddr"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_27x16"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_4x16"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_256x16"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_32x512"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_l2p_dma"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_96x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="mig_7series_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_64x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_pd_pdm"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_wsh_pipe"/>
 </GenRun>

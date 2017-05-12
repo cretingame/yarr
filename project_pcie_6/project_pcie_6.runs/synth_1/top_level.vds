@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu May 11 14:14:50 2017
-# Process ID: 5074
+# Start of session at: Fri May 12 11:38:58 2017
+# Process ID: 2701
 # Current directory: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1
 # Command line: vivado -log top_level.vds -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/top_level.vds
@@ -15,17 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5080 
+INFO: Helper process launched with PID 2704 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 11491 ; free virtual = 20659
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1130.277 ; gain = 155.137 ; free physical = 12044 ; free virtual = 21349
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:77]
 	Parameter CLKCM_CFG bound to: 1 - type: bool 
 	Parameter CLKRCV_TRST bound to: 1 - type: bool 
 	Parameter CLKSWING_CFG bound to: 2'b11 
 INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:330]
-INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:348]
-INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:93]
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'pcie_0' of component 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:348]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/pcie_7x_0_stub.vhdl:93]
 	Parameter AXI_BUS_WIDTH bound to: 64 - type: integer 
 INFO: [Synth 8-3491] module 'app' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:38' bound to instance 'app_0' of component 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:391]
 INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:116]
@@ -36,10 +36,10 @@ INFO: [Synth 8-638] synthesizing module 'app' [/home/asautaux/yarr/project_pcie_
 	Parameter wb_address_width_c bound to: 32 - type: integer 
 	Parameter wb_data_width_c bound to: 32 - type: integer 
 	Parameter address_mask_c bound to: 32'b00000000000011111111111111111111 
-INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'cnt' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:469]
+INFO: [Synth 8-3491] module 'simple_counter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:36' bound to instance 'cnt' of component 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:471]
 INFO: [Synth 8-638] synthesizing module 'simple_counter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'simple_counter' (1#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/imports/new/simple_counter.vhd:44]
-INFO: [Synth 8-3491] module 'p2l_decoder' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:7' bound to instance 'p2l_dec_comp' of component 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:477]
+INFO: [Synth 8-3491] module 'p2l_decoder' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:7' bound to instance 'p2l_dec_comp' of component 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:479]
 INFO: [Synth 8-638] synthesizing module 'p2l_decoder' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:41]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
@@ -48,7 +48,7 @@ INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pci
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
 INFO: [Synth 8-256] done synthesizing module 'p2l_decoder' (2#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/p2l_decoder.vhd:41]
 	Parameter g_ACK_TIMEOUT bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'wbmaster32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:51' bound to instance 'wb32' of component 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:509]
+INFO: [Synth 8-3491] module 'wbmaster32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:51' bound to instance 'wb32' of component 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:511]
 INFO: [Synth 8-638] synthesizing module 'wbmaster32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:127]
 	Parameter g_ACK_TIMEOUT bound to: 100 - type: integer 
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/common/gn4124_core_pkg.vhd:101]
@@ -84,8 +84,8 @@ INFO: [Synth 8-638] synthesizing module 'generic_async_fifo' [/home/asautaux/yar
 	Parameter g_with_wr_count bound to: 0 - type: bool 
 	Parameter g_almost_empty_threshold bound to: 0 - type: integer 
 	Parameter g_almost_full_threshold bound to: 500 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_64x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:5' bound to instance 'cmp_fifo_64x512' of component 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
-INFO: [Synth 8-638] synthesizing module 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'fifo_64x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:5' bound to instance 'cmp_fifo_64x512' of component 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'fifo_64x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_64x512_stub.vhdl:24]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:203]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:204]
 INFO: [Synth 8-256] done synthesizing module 'generic_async_fifo' (3#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:87]
@@ -109,12 +109,12 @@ INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pci
 INFO: [Synth 8-256] done synthesizing module 'wbmaster32' (4#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/wbmaster32.vhd:127]
 	Parameter ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'bram_wbs32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:29' bound to instance 'csr_ram' of component 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:626]
+INFO: [Synth 8-3491] module 'bram_wbs32' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:29' bound to instance 'csr_ram' of component 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:628]
 INFO: [Synth 8-638] synthesizing module 'bram_wbs32' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:53]
 	Parameter ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'bram_wbs32' (5#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/bcf_bram32.vhd:53]
-INFO: [Synth 8-3491] module 'dma_controller' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:43' bound to instance 'dma_ctrl' of component 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:651]
+INFO: [Synth 8-3491] module 'dma_controller' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:43' bound to instance 'dma_ctrl' of component 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:653]
 INFO: [Synth 8-638] synthesizing module 'dma_controller' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:102]
 INFO: [Synth 8-3491] module 'dma_controller_wb_slave' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller_wb_slave.vhd:17' bound to instance 'dma_controller_wb_slave_0' of component 'dma_controller_wb_slave' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:234]
 INFO: [Synth 8-638] synthesizing module 'dma_controller_wb_slave' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller_wb_slave.vhd:69]
@@ -123,13 +123,13 @@ WARNING: [Synth 8-3848] Net dma_stat in module/entity dma_controller does not ha
 INFO: [Synth 8-256] done synthesizing module 'dma_controller' (7#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/dma_controller.vhd:102]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'debugregisters' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/debugregisters.vhd:36' bound to instance 'dbg_reg_comp' of component 'debugregisters' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:710]
+INFO: [Synth 8-3491] module 'debugregisters' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/debugregisters.vhd:36' bound to instance 'dbg_reg_comp' of component 'debugregisters' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:712]
 INFO: [Synth 8-638] synthesizing module 'debugregisters' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/debugregisters.vhd:70]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'debugregisters' (8#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/debugregisters.vhd:70]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'p2l_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:47' bound to instance 'p2l_dma' of component 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:739]
+INFO: [Synth 8-3491] module 'p2l_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:47' bound to instance 'p2l_dma' of component 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:741]
 INFO: [Synth 8-638] synthesizing module 'p2l_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/p2l_dma_master.vhd:134]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
 	Parameter g_data_width bound to: 96 - type: integer 
@@ -164,8 +164,8 @@ INFO: [Synth 8-638] synthesizing module 'generic_async_fifo__parameterized2' [/h
 	Parameter g_with_wr_count bound to: 0 - type: bool 
 	Parameter g_almost_empty_threshold bound to: 0 - type: integer 
 	Parameter g_almost_full_threshold bound to: 500 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_96x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:5' bound to instance 'cmp_fifo_96x512' of component 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
-INFO: [Synth 8-638] synthesizing module 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'fifo_96x512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:5' bound to instance 'cmp_fifo_96x512' of component 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_96x512_stub.vhdl:23]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:221]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:222]
 INFO: [Synth 8-256] done synthesizing module 'generic_async_fifo__parameterized2' (8#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:87]
@@ -174,7 +174,7 @@ INFO: [Synth 8-256] done synthesizing module 'p2l_dma_master' (9#1) [/home/asaut
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 	Parameter wb_address_width_c bound to: 64 - type: integer 
 	Parameter wb_data_width_c bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'l2p_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:18' bound to instance 'l2p_dma' of component 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:826]
+INFO: [Synth 8-3491] module 'l2p_dma_master' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:18' bound to instance 'l2p_dma' of component 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:828]
 INFO: [Synth 8-638] synthesizing module 'l2p_dma_master' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:97]
 	Parameter g_BYTE_SWAP bound to: 0 - type: bool 
 	Parameter axis_data_width_c bound to: 64 - type: integer 
@@ -196,48 +196,50 @@ WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/proje
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:463]
 INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_addr_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:619]
 INFO: [Synth 8-638] synthesizing module 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:23]
-INFO: [Synth 8-3491] module 'l2p_fifo64' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:5' bound to instance 'U0' of component 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'l2p_fifo64' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:5' bound to instance 'U0' of component 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'l2p_fifo64' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/l2p_fifo64_stub.vhdl:24]
 INFO: [Synth 8-256] done synthesizing module 'l2p_fifo' (10#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:23]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:627]
 INFO: [Synth 8-3491] module 'l2p_fifo' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:5' bound to instance 'cmp_data_fifo' of component 'l2p_fifo' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:636]
 WARNING: [Synth 8-5827] expecting unsigned expression [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:644]
 INFO: [Synth 8-256] done synthesizing module 'l2p_dma_master' (11#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_dma_master.vhd:97]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:46' bound to instance 'arbiter' of component 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:893]
+INFO: [Synth 8-3491] module 'l2p_arbiter' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:46' bound to instance 'arbiter' of component 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:895]
 INFO: [Synth 8-638] synthesizing module 'l2p_arbiter' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:103]
 	Parameter axis_data_width_c bound to: 64 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'l2p_arbiter' (12#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/Downloads/l2p_arbiter.vhd:103]
 	Parameter g_BYTE_ADDR_WIDTH bound to: 29 - type: integer 
 	Parameter g_MASK_SIZE bound to: 8 - type: integer 
 	Parameter g_DATA_PORT_SIZE bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'ddr3_ctrl_wb' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:9' bound to instance 'cmp_ddr3_ctrl_wb' of component 'ddr3_ctrl_wb' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:971]
+INFO: [Synth 8-3491] module 'ddr3_ctrl_wb' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:9' bound to instance 'cmp_ddr3_ctrl_wb' of component 'ddr3_ctrl_wb' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:973]
 INFO: [Synth 8-638] synthesizing module 'ddr3_ctrl_wb' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:76]
 	Parameter g_BYTE_ADDR_WIDTH bound to: 29 - type: integer 
 	Parameter g_MASK_SIZE bound to: 8 - type: integer 
 	Parameter g_DATA_PORT_SIZE bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_315x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_315x16_stub.vhdl:5' bound to instance 'fifo_wb_write' of component 'fifo_315x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:438]
-INFO: [Synth 8-638] synthesizing module 'fifo_315x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_315x16_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'fifo_27x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_27x16_stub.vhdl:5' bound to instance 'fifo_wb_read_addr' of component 'fifo_27x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:630]
-INFO: [Synth 8-638] synthesizing module 'fifo_27x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_27x16_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'fifo_4x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_4x16_stub.vhdl:5' bound to instance 'fifo_wb_read_mask' of component 'fifo_4x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:643]
-INFO: [Synth 8-638] synthesizing module 'fifo_4x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_4x16_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'fifo_256x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_256x16_stub.vhdl:5' bound to instance 'fifo_wb_read_data' of component 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:657]
-INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/fifo_256x16_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'fifo_315x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_315x16_stub.vhdl:5' bound to instance 'fifo_wb_write' of component 'fifo_315x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:438]
+INFO: [Synth 8-638] synthesizing module 'fifo_315x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_315x16_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'fifo_27x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_27x16_stub.vhdl:5' bound to instance 'fifo_wb_read_addr' of component 'fifo_27x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:630]
+INFO: [Synth 8-638] synthesizing module 'fifo_27x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_27x16_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'fifo_4x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_4x16_stub.vhdl:5' bound to instance 'fifo_wb_read_mask' of component 'fifo_4x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:643]
+INFO: [Synth 8-638] synthesizing module 'fifo_4x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_4x16_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'fifo_256x16' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_256x16_stub.vhdl:5' bound to instance 'fifo_wb_read_data' of component 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:657]
+INFO: [Synth 8-638] synthesizing module 'fifo_256x16' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/fifo_256x16_stub.vhdl:21]
 INFO: [Synth 8-3491] module 'qword_swap_512' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/qword_swap_512.vhd:34' bound to instance 'qword_rd_swap_comp' of component 'qword_swap_512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:743]
 INFO: [Synth 8-638] synthesizing module 'qword_swap_512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/qword_swap_512.vhd:40]
 INFO: [Synth 8-226] default block is never used [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/qword_swap_512.vhd:64]
 INFO: [Synth 8-256] done synthesizing module 'qword_swap_512' (13#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/qword_swap_512.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'ddr3_ctrl_wb' (14#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:76]
 WARNING: [Synth 8-5640] Port 'device_temp_o' is missing in component declaration [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/new/app_package.vhd:480]
-INFO: [Synth 8-3491] module 'mig_7series_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/mig_7series_0_stub.vhdl:5' bound to instance 'u_mig_7series_0' of component 'mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1017]
-INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/mig_7series_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'ila_axis' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:5' bound to instance 'axis_debug' of component 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1187]
-INFO: [Synth 8-638] synthesizing module 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:35]
-INFO: [Synth 8-3491] module 'ila_wsh_pipe' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:5' bound to instance 'pipelined_wishbone_debug' of component 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1252]
-INFO: [Synth 8-638] synthesizing module 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'ila_ddr' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_ddr_stub.vhdl:5' bound to instance 'ddr_debug' of component 'ila_ddr' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1353]
-INFO: [Synth 8-638] synthesizing module 'ila_ddr' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/realtime/ila_ddr_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/mig_7series_0_stub.vhdl:5' bound to instance 'u_mig_7series_0' of component 'mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1019]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/mig_7series_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'ila_axis' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:5' bound to instance 'axis_debug' of component 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1189]
+INFO: [Synth 8-638] synthesizing module 'ila_axis' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_axis_stub.vhdl:35]
+INFO: [Synth 8-3491] module 'ila_wsh_pipe' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:5' bound to instance 'pipelined_wishbone_debug' of component 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1254]
+INFO: [Synth 8-638] synthesizing module 'ila_wsh_pipe' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_wsh_pipe_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'ila_l2p_dma' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_l2p_dma_stub.vhdl:5' bound to instance 'l2p_debug' of component 'ila_l2p_dma' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1303]
+INFO: [Synth 8-638] synthesizing module 'ila_l2p_dma' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_l2p_dma_stub.vhdl:54]
+INFO: [Synth 8-3491] module 'ila_ddr' declared at '/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_ddr_stub.vhdl:5' bound to instance 'ddr_debug' of component 'ila_ddr' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1355]
+INFO: [Synth 8-638] synthesizing module 'ila_ddr' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/realtime/ila_ddr_stub.vhdl:26]
 INFO: [Synth 8-256] done synthesizing module 'app' (15#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:116]
 INFO: [Synth 8-256] done synthesizing module 'top_level' (16#1) [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:77]
 WARNING: [Synth 8-3331] design ddr3_ctrl_wb has unconnected port ddr_sr_active_i
@@ -342,7 +344,7 @@ WARNING: [Synth 8-3331] design p2l_dma_master has unconnected port p2l_dma_dat_i
 WARNING: [Synth 8-3331] design p2l_dma_master has unconnected port p2l_dma_dat_i[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1201.723 ; gain = 226.582 ; free physical = 11416 ; free virtual = 20584
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1202.723 ; gain = 227.582 ; free physical = 11969 ; free virtual = 21276
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -352,7 +354,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1201.723 ; gain = 226.582 ; free physical = 11415 ; free virtual = 20584
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1202.723 ; gain = 227.582 ; free physical = 11968 ; free virtual = 21275
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_256x16' instantiated as 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:657]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_27x16' instantiated as 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:630]
@@ -360,45 +362,48 @@ WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_31
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_4x16' instantiated as 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_mask' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/ddr3-core/ddr3_ctrl_wb.vhd:643]
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'fifo_64x512' instantiated as 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'. 2 instances of this cell are unresolved black boxes. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:195]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fifo_96x512' instantiated as 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/p2l_dma/generic_async_fifo_wrapper.vhd:213]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_axis' instantiated as 'app_0/dbg_0.axis_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1187]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_ddr' instantiated as 'app_0/dbg_5.ddr_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1353]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_wsh_pipe' instantiated as 'app_0/dbg_2.pipelined_wishbone_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1252]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_axis' instantiated as 'app_0/dbg_0.axis_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1189]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_ddr' instantiated as 'app_0/dbg_5.ddr_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1355]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_l2p_dma' instantiated as 'app_0/dbg_4.l2p_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1303]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_wsh_pipe' instantiated as 'app_0/dbg_2.pipelined_wishbone_debug' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1254]
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'l2p_fifo64' instantiated as 'app_0/l2p_dma/cmp_addr_fifo/U0'. 2 instances of this cell are unresolved black boxes. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/l2p_dma/l2p_fifo.vhd:48]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'mig_7series_0' instantiated as 'app_0/dma_ddr3_gen.u_mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1017]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'mig_7series_0' instantiated as 'app_0/dma_ddr3_gen.u_mig_7series_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/yarr_sim/top/app.vhd:1019]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_0' [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/sources_1/imports/sources_1/imports/sources_1/new/top_level.vhd:348]
 INFO: [Device 21-403] Loading part xc7k160tfbg676-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc] for cell 'app_0/dma_ddr3_gen.u_mig_7series_0'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc] for cell 'app_0/dma_ddr3_gen.u_mig_7series_0'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_12/fifo_256x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_12/fifo_256x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_13/fifo_315x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_write'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_13/fifo_315x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_write'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_14/fifo_27x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_14/fifo_27x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_15/fifo_4x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_mask'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_15/fifo_4x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_mask'
-Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_16/ila_ddr_in_context.xdc] for cell 'app_0/dbg_5.ddr_debug'
-Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_16/ila_ddr_in_context.xdc] for cell 'app_0/dbg_5.ddr_debug'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_addr_fifo/U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_2/l2p_fifo64_in_context.xdc] for cell 'app_0/l2p_dma/cmp_data_fifo/U0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_3/ila_axis_in_context.xdc] for cell 'app_0/dbg_0.axis_debug'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_5/ila_wsh_pipe_in_context.xdc] for cell 'app_0/dbg_2.pipelined_wishbone_debug'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_7/fifo_96x512_in_context.xdc] for cell 'app_0/p2l_dma/cmp_to_wb_fifo/gen_fifo_96bit.cmp_fifo_96x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_8/ila_l2p_dma_in_context.xdc] for cell 'app_0/dbg_4.l2p_debug'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_8/ila_l2p_dma_in_context.xdc] for cell 'app_0/dbg_4.l2p_debug'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_10/fifo_64x512_in_context.xdc] for cell 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc] for cell 'app_0/dma_ddr3_gen.u_mig_7series_0'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc] for cell 'app_0/dma_ddr3_gen.u_mig_7series_0'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_12/fifo_256x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_12/fifo_256x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_13/fifo_315x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_write'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_13/fifo_315x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_write'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_14/fifo_27x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_14/fifo_27x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_15/fifo_4x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_mask'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_15/fifo_4x16_in_context.xdc] for cell 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_mask'
+Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_16/ila_ddr_in_context.xdc] for cell 'app_0/dbg_5.ddr_debug'
+Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_16/ila_ddr_in_context.xdc] for cell 'app_0/dbg_5.ddr_debug'
 Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc]
 WARNING: [Constraints 18-633] Creating clock pcie_clk with 2 sources. [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc:2]
 Finished Parsing XDC File [/home/asautaux/yarr/project_pcie_6/project_pcie_6.srcs/constrs_1/imports/new/project_2.xdc]
@@ -413,9 +418,10 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1565.840 ; gain = 0.004 ; free physical = 11203 ; free virtual = 20372
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1566.832 ; gain = 0.004 ; free physical = 11694 ; free virtual = 21001
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_0.axis_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_2.pipelined_wishbone_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_4.l2p_debug' at clock pin 'clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dbg_5.ddr_debug' at clock pin 'clk' is different from the actual clock period '7.500', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_addr' at clock pin 'rd_clk' is different from the actual clock period '7.500', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/dma_ddr3_gen.cmp_ddr3_ctrl_wb/fifo_wb_read_data' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
@@ -427,254 +433,254 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/wb32/cmp_fifo_to_wb/gen_fifo_64bit.cmp_fifo_64x512' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'app_0/wb32/cmp_from_wb_fifo/gen_fifo_64bit.cmp_fifo_64x512' at clock pin 'rd_clk' is different from the actual clock period '4.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11203 ; free virtual = 20372
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11693 ; free virtual = 21000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11203 ; free virtual = 20372
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11693 ; free virtual = 21000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 9).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 11).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 12).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 13).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 14).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 15).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 16).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 17).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 18).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 19).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 20).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 21).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 22).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 23).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 24).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 25).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 26).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 27).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 28).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 29).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 30).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 31).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 32).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 33).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 34).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 35).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 36).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 37).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 38).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 39).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 40).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 41).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 42).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 43).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 44).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 45).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 46).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 47).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 48).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 49).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 50).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 51).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 52).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 53).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 54).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 55).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 56).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 57).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 58).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 59).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 60).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 61).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 62).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 63).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 64).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 65).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 66).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 67).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 68).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 69).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 70).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 71).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 72).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 73).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 74).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 75).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 76).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 77).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 78).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 79).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 80).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 81).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 82).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 83).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 84).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 85).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 86).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 87).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 88).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 89).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 90).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 91).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 92).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 93).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 94).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 95).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 96).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 97).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 98).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 99).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 100).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 101).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 102).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 103).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 104).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 105).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 106).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 107).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 108).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 109).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 110).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 111).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 112).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 113).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 114).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[32]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 115).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[32]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 116).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[33]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 117).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[33]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 118).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[34]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 119).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[34]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 120).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[35]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 121).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[35]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 122).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[36]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 123).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[36]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 124).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[37]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 125).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[37]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 126).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[38]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 127).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[38]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 128).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[39]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 129).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[39]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 130).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 131).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 132).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[40]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 133).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[40]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 134).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[41]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 135).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[41]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 136).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[42]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 137).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[42]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 138).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[43]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 139).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[43]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 140).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[44]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 141).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[44]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 142).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[45]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 143).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[45]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 144).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[46]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 145).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[46]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 146).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[47]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 147).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[47]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 148).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[48]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 149).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[48]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 150).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[49]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 151).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[49]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 152).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 153).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 154).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[50]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 155).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[50]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 156).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[51]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 157).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[51]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 158).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[52]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 159).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[52]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 160).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[53]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 161).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[53]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 162).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[54]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 163).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[54]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 164).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[55]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 165).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[55]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 166).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[56]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 167).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[56]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 168).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[57]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 169).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[57]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 170).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[58]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 171).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[58]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 172).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[59]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 173).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[59]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 174).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 175).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 176).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[60]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 177).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[60]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 178).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[61]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 179).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[61]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 180).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[62]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 181).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[62]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 182).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[63]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 183).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[63]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 184).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 185).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 186).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 187).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 188).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 189).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 190).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 191).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 192).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 193).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 194).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 195).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 196).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 197).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 198).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 199).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 200).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 201).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 202).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 203).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 204).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 205).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 206).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 207).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 208).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 209).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 210).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 211).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 212).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 213).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 214).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 215).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 216).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 217).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 218).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 219).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 220).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 221).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 222).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 223).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 224).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 225).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 226).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 227).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 228).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 229).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 230).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 231).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 232).
-Applied set_property IO_BUFFER_TYPE = NONE for clk200_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 233).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk200_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 234).
-Applied set_property IO_BUFFER_TYPE = NONE for clk200_p. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 235).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk200_p. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-5074-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 236).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 99).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 101).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 103).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 105).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 107).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 109).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 111).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 113).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[32]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 115).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[32]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[33]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 117).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[33]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[34]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 119).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[34]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[35]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 121).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[35]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[36]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 123).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[36]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[37]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 125).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[37]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[38]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 127).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[38]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[39]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 129).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[39]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 131).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 132).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[40]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 133).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[40]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 134).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[41]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 135).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[41]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 136).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[42]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 137).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[42]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 138).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[43]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 139).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[43]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 140).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[44]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 141).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[44]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 142).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[45]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 143).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[45]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 144).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[46]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 145).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[46]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 146).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[47]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 147).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[47]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 148).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[48]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 149).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[48]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 150).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[49]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 151).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[49]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 152).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 153).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 154).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[50]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 155).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[50]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 156).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[51]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 157).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[51]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 158).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[52]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 159).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[52]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 160).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[53]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 161).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[53]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 162).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[54]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 163).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[54]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 164).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[55]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 165).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[55]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 166).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[56]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 167).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[56]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 168).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[57]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 169).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[57]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 170).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[58]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 171).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[58]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 172).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[59]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 173).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[59]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 174).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 175).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 176).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[60]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 177).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[60]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 178).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[61]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 179).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[61]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 180).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[62]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 181).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[62]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 182).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[63]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 183).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[63]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 184).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 185).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 186).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 187).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 188).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 189).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 190).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 191).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 192).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 193).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 194).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 195).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 196).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 197).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 198).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 199).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 200).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 201).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 202).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 203).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 204).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 205).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 206).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 207).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 208).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 209).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 210).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 211).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 212).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 213).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 214).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 215).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 216).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 217).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[4]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 218).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 219).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[5]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 220).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 221).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[6]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 222).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 223).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[7]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 224).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 225).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 226).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 227).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 228).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 229).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 230).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 231).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 232).
+Applied set_property IO_BUFFER_TYPE = NONE for clk200_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 233).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk200_n. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 234).
+Applied set_property IO_BUFFER_TYPE = NONE for clk200_p. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 235).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk200_p. (constraint file  /home/asautaux/yarr/project_pcie_6/project_pcie_6.runs/synth_1/.Xil/Vivado-2701-spikepig.dhcp.lbl.gov/dcp_11/mig_7series_0_in_context.xdc, line 236).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11203 ; free virtual = 20372
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11693 ; free virtual = 21000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_s_reg' in module 'p2l_decoder'
 INFO: [Synth 8-5546] ROM "pd_op_s" won't be mapped to RAM because it is too sparse
@@ -834,7 +840,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'p2l_dma_current_state_reg'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'l2p_dma_current_state_reg' using encoding 'sequential' in module 'l2p_dma_master'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11198 ; free virtual = 20367
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11690 ; free virtual = 20998
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1128,7 +1134,7 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11198 ; free virtual = 20367
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11690 ; free virtual = 20998
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1146,9 +1152,9 @@ INFO: [Synth 8-5546] ROM "wb_rd_addr_shift_a[0]" won't be mapped to RAM because 
 INFO: [Synth 8-5546] ROM "wb_wr_addr_shift_a[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wb_write_wait_cnt" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11198 ; free virtual = 20367
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11690 ; free virtual = 20997
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1565.840 ; gain = 590.699 ; free physical = 11198 ; free virtual = 20367
+Finished Parallel Reinference  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1566.832 ; gain = 591.691 ; free physical = 11690 ; free virtual = 20997
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1400,9 +1406,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/l2p
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/\dma_ddr3_gen.cmp_ddr3_ctrl_wb /\ddr_cmd_o_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (app_0/l2p_dma/\l2p_len_header_reg[9] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1565.844 ; gain = 590.703 ; free physical = 11153 ; free virtual = 20323
+Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1566.836 ; gain = 591.695 ; free physical = 11669 ; free virtual = 20976
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1565.844 ; gain = 590.703 ; free physical = 11153 ; free virtual = 20323
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1566.836 ; gain = 591.695 ; free physical = 11669 ; free virtual = 20976
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1419,10 +1425,10 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'pcie_0/user_clk_out' to p
 INFO: [Synth 8-5578] Moved timing constraint from pin 'app_0/dma_ddr3_gen.u_mig_7series_0/ui_clk' to pin 'app_0/dma_ddr3_gen.u_mig_7series_0/bbstub_ui_clk/O'
 INFO: [Synth 8-5820] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1580.840 ; gain = 605.699 ; free physical = 11100 ; free virtual = 20269
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1580.832 ; gain = 605.691 ; free physical = 11653 ; free virtual = 20960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1603.852 ; gain = 628.711 ; free physical = 11077 ; free virtual = 20247
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1603.844 ; gain = 628.703 ; free physical = 11630 ; free virtual = 20937
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1434,16 +1440,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1460,7 +1466,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1473,7 +1479,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1485,25 +1491,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1537,8 +1543,9 @@ Report BlackBoxes:
 |8     |mig_7series_0 |         1|
 |9     |ila_axis      |         1|
 |10    |ila_wsh_pipe  |         1|
-|11    |ila_ddr       |         1|
-|12    |fifo_64x512   |         2|
+|11    |ila_l2p_dma   |         1|
+|12    |ila_ddr       |         1|
+|13    |fifo_64x512   |         2|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -1554,43 +1561,44 @@ Report Cell Usage:
 |7     |fifo_96x512_bbox    |     1|
 |8     |ila_axis_bbox       |     1|
 |9     |ila_ddr_bbox        |     1|
-|10    |ila_wsh_pipe_bbox   |     1|
-|11    |l2p_fifo64_bbox     |     1|
-|12    |l2p_fifo64_bbox__2  |     1|
-|13    |mig_7series_0_bbox  |     1|
-|14    |pcie_7x_0_bbox      |     1|
-|15    |CARRY4              |   181|
-|16    |IBUFDS_GTE2         |     1|
-|17    |LUT1                |   730|
-|18    |LUT2                |  1238|
-|19    |LUT3                |  1057|
-|20    |LUT4                |   393|
-|21    |LUT5                |   580|
-|22    |LUT6                |  1171|
-|23    |MUXF7               |   197|
-|24    |MUXF8               |    32|
-|25    |SRL16E              |     1|
-|26    |FDCE                |  4861|
-|27    |FDPE                |  1297|
-|28    |FDRE                |   193|
-|29    |IBUF                |    15|
-|30    |OBUF                |    11|
+|10    |ila_l2p_dma_bbox    |     1|
+|11    |ila_wsh_pipe_bbox   |     1|
+|12    |l2p_fifo64_bbox     |     1|
+|13    |l2p_fifo64_bbox__2  |     1|
+|14    |mig_7series_0_bbox  |     1|
+|15    |pcie_7x_0_bbox      |     1|
+|16    |CARRY4              |   181|
+|17    |IBUFDS_GTE2         |     1|
+|18    |LUT1                |   730|
+|19    |LUT2                |  1238|
+|20    |LUT3                |  1057|
+|21    |LUT4                |   393|
+|22    |LUT5                |   578|
+|23    |LUT6                |  1172|
+|24    |MUXF7               |   197|
+|25    |MUXF8               |    32|
+|26    |SRL16E              |     1|
+|27    |FDCE                |  4861|
+|28    |FDPE                |  1297|
+|29    |FDRE                |   193|
+|30    |IBUF                |    15|
+|31    |OBUF                |    11|
 +------+--------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------------+-----------------------------------+------+
 |      |Instance                            |Module                             |Cells |
 +------+------------------------------------+-----------------------------------+------+
-|1     |top                                 |                                   | 14388|
-|2     |  app_0                             |app                                | 14040|
+|1     |top                                 |                                   | 14387|
+|2     |  app_0                             |app                                | 14039|
 |3     |    p2l_dec_comp                    |p2l_decoder                        |   477|
 |4     |    dma_ctrl                        |dma_controller                     |  1920|
 |5     |      dma_controller_wb_slave_0     |dma_controller_wb_slave            |  1349|
 |6     |    p2l_dma                         |p2l_dma_master                     |  1252|
 |7     |      cmp_to_wb_fifo                |generic_async_fifo__parameterized2 |   103|
-|8     |    l2p_dma                         |l2p_dma_master                     |  1121|
-|9     |      cmp_addr_fifo                 |l2p_fifo                           |    75|
-|10    |      cmp_data_fifo                 |l2p_fifo_1                         |   190|
+|8     |    l2p_dma                         |l2p_dma_master                     |  1120|
+|9     |      cmp_addr_fifo                 |l2p_fifo                           |    74|
+|10    |      cmp_data_fifo                 |l2p_fifo_1                         |   191|
 |11    |    arbiter                         |l2p_arbiter                        |   235|
 |12    |    \dma_ddr3_gen.cmp_ddr3_ctrl_wb  |ddr3_ctrl_wb                       |  5309|
 |13    |    cnt                             |simple_counter                     |    66|
@@ -1601,11 +1609,11 @@ Report Instance Areas:
 |18    |      cmp_from_wb_fifo              |generic_async_fifo_0               |    71|
 +------+------------------------------------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.055 ; gain = 658.914 ; free physical = 11046 ; free virtual = 20216
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.398 ; gain = 659.258 ; free physical = 11599 ; free virtual = 20906
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 529 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1634.055 ; gain = 203.656 ; free physical = 11046 ; free virtual = 20216
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.062 ; gain = 658.922 ; free physical = 11048 ; free virtual = 20217
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1634.398 ; gain = 204.008 ; free physical = 11599 ; free virtual = 20906
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.406 ; gain = 659.266 ; free physical = 11600 ; free virtual = 20907
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1615,8 +1623,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-382 Infos, 238 Warnings, 0 Critical Warnings and 0 Errors encountered.
+384 Infos, 240 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.062 ; gain = 580.363 ; free physical = 11058 ; free virtual = 20228
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1666.074 ; gain = 0.000 ; free physical = 11056 ; free virtual = 20227
-INFO: [Common 17-206] Exiting Vivado at Thu May 11 14:15:41 2017...
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1634.406 ; gain = 580.707 ; free physical = 11600 ; free virtual = 20907
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1666.418 ; gain = 0.000 ; free physical = 11599 ; free virtual = 20908
+INFO: [Common 17-206] Exiting Vivado at Fri May 12 11:39:49 2017...

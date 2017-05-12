@@ -21,6 +21,7 @@ architecture Behavioral of l2p_dma_bench is
 		signal rst_n_tbs : STD_LOGIC;
 		-- Test bench specific signals
 		signal step : integer range 1 to 10;
+		signal debug_time : integer;
 		
 		-- From the DMA controller
 		signal dma_ctrl_target_addr_tbs : std_logic_vector(32-1 downto 0);
@@ -52,12 +53,14 @@ architecture Behavioral of l2p_dma_bench is
 		-- DMA Interface (Pipelined Wishbone)
 		signal l2p_dma_adr_s   : std_logic_vector(wb_data_width_c-1 downto 0);
 		signal l2p_dma_dat_s2m_s   : std_logic_vector(wb_data_width_c-1 downto 0);
+		signal l2p_dma_dat_s2m_tbs   : std_logic_vector(wb_data_width_c-1 downto 0);
 		signal l2p_dma_dat_m2s_s   : std_logic_vector(wb_data_width_c-1 downto 0);
 		signal l2p_dma_sel_s   : std_logic_vector(3 downto 0);
 		signal l2p_dma_cyc_s   : std_logic;
 		signal l2p_dma_stb_s   : std_logic;
 		signal l2p_dma_we_s    : std_logic;
 		signal l2p_dma_ack_s   : std_logic;
+		signal l2p_dma_ack_tbs   : std_logic;
 		signal l2p_dma_stall_tbs : std_logic;
 		signal p2l_dma_cyc_tbs   : std_logic; -- P2L dma WB cycle for bus arbitration
 		
@@ -183,6 +186,54 @@ begin
 	   wait;
 	end process reset_p;
 	
+	time_p: process
+    begin
+        debug_time <= 0;
+        wait for period;
+        
+        loop
+        debug_time <= debug_time + 1;
+        wait for period;
+        end loop;
+        
+    end process time_p;
+    
+    wb_stimuli_p : process
+        variable counter : unsigned (15 downto 0);
+    begin
+    
+    
+    counter := to_unsigned(0,16);
+
+    
+    l2p_dma_dat_s2m_tbs              <= (others => '0');
+    l2p_dma_ack_tbs                   <= '0';
+    
+    while counter <= to_unsigned(32,16) loop
+    if l2p_dma_cyc_s = '1' and (debug_time < 20 or debug_time > 25) then
+        wait for period;
+        --step_ddr <= 3;
+
+        l2p_dma_dat_s2m_tbs               <=   X"dead" & std_logic_vector(counter) & X"beef" & std_logic_vector(counter);
+        l2p_dma_ack_tbs                   <= '1';
+        counter := counter + 1;
+
+        
+    else
+        wait for period;
+        
+        l2p_dma_dat_s2m_tbs              <= (others => '0');
+        l2p_dma_ack_tbs                   <= '0';
+        
+    end if;
+    end loop;
+        l2p_dma_dat_s2m_tbs              <= (others => '0');
+        l2p_dma_ack_tbs                   <= '0';
+    wait;
+    
+    
+    end process wb_stimuli_p;
+	
 	stimuli_p: process
 	begin
 		step <= 1;
@@ -211,7 +262,7 @@ begin
 		dma_ctrl_target_addr_tbs <= X"00000000";
 		dma_ctrl_host_addr_h_tbs <= X"00000000";
 		dma_ctrl_host_addr_l_tbs <= X"c57334d0";
-		dma_ctrl_len_tbs         <= X"00000400";
+		dma_ctrl_len_tbs         <= X"00000100";
 		dma_ctrl_start_l2p_tbs   <= '1';
 		dma_ctrl_byte_swap_tbs   <= "000";
 		dma_ctrl_abort_tbs       <= '0';
@@ -259,6 +310,8 @@ begin
 		
 		
 	end process stimuli_p;
+
+
 	
   -----------------------------------------------------------------------------
   -- L2P DMA master
@@ -296,13 +349,13 @@ begin
 
       l2p_dma_clk_i   => clk_tbs,
       l2p_dma_adr_o   => l2p_dma_adr_s,
-      l2p_dma_dat_i   => l2p_dma_dat_s2m_s,
+      l2p_dma_dat_i   => l2p_dma_dat_s2m_tbs,--l2p_dma_dat_s2m_s,
       l2p_dma_dat_o   => l2p_dma_dat_m2s_s,
       l2p_dma_sel_o   => l2p_dma_sel_s,
       l2p_dma_cyc_o   => l2p_dma_cyc_s,
       l2p_dma_stb_o   => l2p_dma_stb_s,
       l2p_dma_we_o    => l2p_dma_we_s,
-      l2p_dma_ack_i   => l2p_dma_ack_s,
+      l2p_dma_ack_i   => l2p_dma_ack_tbs,--l2p_dma_ack_s,
       l2p_dma_stall_i => l2p_dma_stall_tbs,
       p2l_dma_cyc_i   => p2l_dma_cyc_tbs
     );

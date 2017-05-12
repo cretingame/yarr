@@ -115,7 +115,7 @@ end app;
 
 architecture Behavioral of app is
     
-    constant DEBUG_C : std_logic_vector(5 downto 0) := "100101";
+    constant DEBUG_C : std_logic_vector(5 downto 0) := "110101";
     constant DMA_MEMORY_SELECTED : string := "DDR3"; -- DDR3, BRAM, DEMUX
     
 
@@ -456,13 +456,15 @@ begin
         if (rst_i = '1') then
             cfg_interrupt_s <= '0';
         elsif(clk_i'event and clk_i = '1') then
-            if (dma_ctrl_irq_s(1) = '1' or dma_ctrl_irq_s(0) = '1') then
-                cfg_interrupt_s <= '1';
-            elsif (cfg_interrupt_rdy_i = '1') then
+            cfg_interrupt_s <= cfg_interrupt_s;
+            if (cfg_interrupt_rdy_i = '1') then
                 cfg_interrupt_s <= '0';
-            else
-                cfg_interrupt_s <= cfg_interrupt_s;
-            end if;    
+            end if;
+            if (dma_ctrl_irq_s /= "00") then
+                cfg_interrupt_s <= '1';
+            end if;
+            
+    
         end if;
     end process interrupt_p;
 

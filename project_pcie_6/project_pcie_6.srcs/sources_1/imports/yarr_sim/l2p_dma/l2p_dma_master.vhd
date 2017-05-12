@@ -369,7 +369,7 @@ begin
 	
 	end process data_reorder;
 	
-	to_arbiter : process(l2p_dma_current_state,l2p_byte_swap,data_fifo_dout,s_l2p_header,l2p_address_h,l2p_address_l,data_fifo_rd)
+	to_arbiter : process(l2p_dma_current_state,l2p_byte_swap,data_fifo_dout,s_l2p_header,l2p_address_h,l2p_address_l,data_fifo_rd,data_fifo_empty)
 	begin
 		case l2p_dma_current_state is
 			when L2P_IDLE|L2P_SETUP =>
@@ -400,7 +400,7 @@ begin
 				    --ldm_arb_data_l <= data_fifo_dout (31 downto 0) & data_fifo_dout_1 (63 downto 32);
 				end if;
 				ldm_arb_tlast_o <= '0';
-				ldm_arb_valid <= data_fifo_rd;
+				ldm_arb_valid <= data_fifo_rd and not data_fifo_empty;
 				ldm_arb_tkeep_o <= x"FF";
 			when L2P_LAST_DATA =>
 			    if (l2p_64b_address = '1') then

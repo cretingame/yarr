@@ -10,6 +10,7 @@ int main(int argc, char **argv) {
         specNum = atoi(argv[1]);
     SpecController mySpec(specNum);
     std::string tmp;
+    //const size_t size = 32768;
     //const size_t size = 8550;
     //const size_t size = 8548;
     const size_t size = 512;

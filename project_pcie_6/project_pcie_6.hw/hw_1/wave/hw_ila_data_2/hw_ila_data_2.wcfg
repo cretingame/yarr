@@ -9,17 +9,24 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="229117fs"></ZoomStartTime>
-      <ZoomEndTime time="256118fs"></ZoomEndTime>
-      <Cursor1Time time="232000fs"></Cursor1Time>
+      <ZoomStartTime time="570350fs"></ZoomStartTime>
+      <ZoomEndTime time="598351fs"></ZoomEndTime>
+      <Cursor1Time time="578000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="16" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_l2p_s">
+   <wvobject type="array" fp_name="app_0/dma_adr_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ctrl_start_l2p_s</obj_property>
-      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_adr_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_adr_s[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ctrl_start_l2p_s_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ctrl_start_l2p_s_2</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_s_2</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/dma_ctrl_start_next_s">
@@ -34,11 +41,10 @@
       <obj_property name="ObjectShortName">dma_ctrl_start_p2l_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_adr_s">
+   <wvobject type="logic" fp_name="app_0/dma_cyc_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_adr_s[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_adr_s[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_cyc_s</obj_property>
+      <obj_property name="ObjectShortName">dma_cyc_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/dma_dat_m2s_s">
@@ -48,11 +54,17 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="app_0/dma_dat_s2m_s">
+   <wvobject type="array" fp_name="app_0/dma_dat_s2m_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_dat_s2m_s[63:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_dat_s2m_s[63:0]</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_dat_s2m_s_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_dat_s2m_s_1[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/dma_ack_s_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_ack_s_1</obj_property>
+      <obj_property name="ObjectShortName">dma_ack_s_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="app_0/dma_sel_s">
@@ -62,10 +74,10 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_we_s">
+   <wvobject type="logic" fp_name="app_0/dma_stall_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_we_s</obj_property>
-      <obj_property name="ObjectShortName">dma_we_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_stall_s_1</obj_property>
+      <obj_property name="ObjectShortName">dma_stall_s_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="app_0/dma_stb_s">
@@ -74,34 +86,36 @@
       <obj_property name="ObjectShortName">dma_stb_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/p2l_dma_cyc_s">
+   <wvobject type="logic" fp_name="app_0/dma_we_s">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/p2l_dma_cyc_s</obj_property>
-      <obj_property name="ObjectShortName">p2l_dma_cyc_s</obj_property>
+      <obj_property name="ElementShortName">app_0/dma_we_s</obj_property>
+      <obj_property name="ObjectShortName">dma_we_s</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/l2p_dma_cyc_s">
+   <wvobject type="logic" fp_name="app_0/l2p_dma_cyc_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/l2p_dma_cyc_s</obj_property>
-      <obj_property name="ObjectShortName">l2p_dma_cyc_s</obj_property>
+      <obj_property name="ElementShortName">app_0/l2p_dma_cyc_s_1</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_cyc_s_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_cyc_s_1">
+   <wvobject type="logic" fp_name="app_0/p2l_dma_cyc_s_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_cyc_s_1</obj_property>
-      <obj_property name="ObjectShortName">dma_cyc_s_1</obj_property>
+      <obj_property name="ElementShortName">app_0/p2l_dma_cyc_s_1</obj_property>
+      <obj_property name="ObjectShortName">p2l_dma_cyc_s_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_ack_s">
+   <wvobject type="array" fp_name="app_0/ddr_rd_data_rd_data_count_ds">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_ack_s</obj_property>
-      <obj_property name="ObjectShortName">dma_ack_s</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_rd_data_rd_data_count_ds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_data_rd_data_count_ds[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="app_0/dma_stall_s">
+   <wvobject type="array" fp_name="app_0/ddr_rd_mask_rd_data_count_ds">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">app_0/dma_stall_s</obj_property>
-      <obj_property name="ObjectShortName">dma_stall_s</obj_property>
+      <obj_property name="ElementShortName">app_0/ddr_rd_mask_rd_data_count_ds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_mask_rd_data_count_ds[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>
