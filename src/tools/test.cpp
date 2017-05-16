@@ -10,12 +10,19 @@ int main(int argc, char **argv) {
         specNum = atoi(argv[1]);
     SpecController mySpec(specNum);
     std::string tmp;
-    //const size_t size = 32768;
-    //const size_t size = 8550;
-    //const size_t size = 8548;
-    const size_t size = 512;
+    //const size_t size = 16777216;
+    //const size_t size = 2097152;
+    //const size_t size = 1048576;
+    //const size_t size = 524288;
+    //const size_t size = 262144;
+    //const size_t size = 131072;
+    const size_t size = 65536; // may crash
+    //const size_t size = 32768; // ok
+    //const size_t size = 16384; // ok
+    //const size_t size = 512;
     //const size_t size = 256;
     //const size_t size = 128;
+    //const size_t size = 8000;
     const bool errorOnly = true;    
 
     unsigned err_count = 0;
@@ -63,7 +70,7 @@ int main(int argc, char **argv) {
     if (err_count == 0)
         std::cout << "\e[1m\e[32m" << "Success! No errors." << std::endl;
     else
-	std::cout << std::endl << "\e[1m\e[31m" << err_count << " errors." << std::endl;
+	std::cout << std::endl << "\e[1m\e[31m" << std::dec << err_count << " errors." << std::endl;
     
     delete[] data;
     delete[] resp;

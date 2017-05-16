@@ -664,12 +664,11 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="pcie_7x_0_synth_1" Type="Ft3:Synth" SrcSet="pcie_7x_0" Part="xc7k160tfbg676-2" ConstrsSet="pcie_7x_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/pcie_7x_0_synth_1" IncludeInArchive="true">
+    <Run Id="pcie_7x_0_synth_1" Type="Ft3:Synth" SrcSet="pcie_7x_0" Part="xc7k160tfbg676-2" ConstrsSet="pcie_7x_0" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="l2p_fifo64_synth_1" Type="Ft3:Synth" SrcSet="l2p_fifo64" Part="xc7k160tfbg676-2" ConstrsSet="l2p_fifo64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/l2p_fifo64_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">

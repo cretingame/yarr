@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
     SpecController mySpec(specNum);
     std::string tmp;
     //const size_t size = 8550;
-    const size_t size = 64;
+    const size_t size = 32;
     
     uint32_t *data = new uint32_t[size];
     for(unsigned i=0; i<size;i++)

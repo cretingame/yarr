@@ -56,12 +56,14 @@ architecture Behavioral of test_bench is
 begin
 
 
-    process(clk_i,rst_i)
+    process(clk_i)
     
     begin
-        if rst_i='1' then
-            state <= start;
-        elsif clk_i='1' and clk_i'event then
+
+        if clk_i='1' and clk_i'event then
+            if rst_i='1' then
+                state <= start;
+            end if;
             case state is
                     when start =>
                         state <= read_0;
@@ -80,10 +82,7 @@ begin
         
             end case;                        
         end if;
-    end process;
-    
-	process (state)
-    begin
+        
         case state is
             when start =>
                 wb_adr_o <= (others => '0');
@@ -128,6 +127,9 @@ begin
                 wb_stb_o <= '0';
                 wb_cyc_o <= '0';
         end case;
-     end process;
+        
+    end process;
+    
+
 
 end Behavioral;

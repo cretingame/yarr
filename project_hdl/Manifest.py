@@ -1,14 +1,11 @@
 files = [
-"Manifest.py",
-"design_1.bd",
-"design_1_wrapper.vhd",
-"design_1.vhd",
 "ram_ctrl.vhd",
 "ram_interface.vhd",
 "simple_counter.vhd",
 "test_bench.vhd",
 "top_level.vhd",
-"project_2.xdc",
+"ila_0.xci",
+"project_2.xdc"
 ]
 
 target = "xilinx" 

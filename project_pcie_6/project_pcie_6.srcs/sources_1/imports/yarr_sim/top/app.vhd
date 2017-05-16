@@ -85,6 +85,7 @@ entity app is
            cfg_function_number_i : in STD_LOGIC_VECTOR(2 DOWNTO 0);
            
            -- PCIe debug
+           tx_err_drop_i: in STD_LOGIC;
            cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
            
            --DDR3
@@ -1214,7 +1215,7 @@ begin
           probe19(0) => cfg_interrupt_rdy_i,
           probe20(0) => dma_ctrl_done_s,
           probe21 => dma_ctrl_current_state_ds,
-          probe22(0) => next_item_valid_s
+          probe22(0) => tx_err_drop_i--next_item_valid_s
       );
   end generate dbg_0;
   

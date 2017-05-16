@@ -108,6 +108,17 @@ architecture Behavioral of top_level is
            regce_i : in STD_LOGIC;
            clk_i : in STD_LOGIC);
     end component;
+    
+    COMPONENT ila_0
+    
+    PORT (
+        clk : IN STD_LOGIC;
+    
+    
+    
+        probe0 : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+    );
+    END COMPONENT  ;
 
     signal sys_clk : STD_LOGIC;
     signal sys_clk_fb : STD_LOGIC;
@@ -180,6 +191,8 @@ begin
     clk_i => sys_clk
   );
   
+  ram_en_s <= '1';
+  
   u4:ram_interface
   port map(
     addr_i => ram_addr_s,
@@ -192,37 +205,6 @@ begin
     clk_i => sys_clk
   );
   
---    cmp_sys_clk_pll : PLL_BASE
---    generic map (
---      BANDWIDTH          => "OPTIMIZED",
---      CLK_FEEDBACK       => "CLKFBOUT",
---      COMPENSATION       => "INTERNAL",
---      DIVCLK_DIVIDE      => 1,
---      CLKFBOUT_MULT      => 4,
---      CLKFBOUT_PHASE     => 0.000,
---      CLKOUT0_DIVIDE     => 1,
---      CLKOUT0_PHASE      => 0.000,
---      CLKOUT0_DUTY_CYCLE => 0.500,
---      CLKOUT1_DIVIDE     => 2,
---      CLKOUT1_PHASE      => 0.000,
---      CLKOUT1_DUTY_CYCLE => 0.500,
---      CLKOUT2_DIVIDE     => 3,
---      CLKOUT2_PHASE      => 0.000,
---      CLKOUT2_DUTY_CYCLE => 0.500,
---      CLKIN_PERIOD       => 50.0,
---      REF_JITTER         => 0.016)
---    port map (
---      CLKFBOUT => sys_clk_fb,
---      CLKOUT0  => clk_1000,
---      CLKOUT1  => open,
---      CLKOUT2  => open,
---      CLKOUT3  => open,
---      CLKOUT4  => open,
---      CLKOUT5  => open,
---      LOCKED   => open,
---      RST      => '0',
---      CLKFBIN  => sys_clk_fb,
---      CLKIN    => sys_clk);
   
   usr_led_o <= '1' & usr_sw_i;
   --usr_led_o <= ram_do_s(0) & usr_sw_i;
@@ -233,5 +215,14 @@ begin
   with ram_do_s select front_led_o <=
       "1010" when X"AAAA5555",
       count_s(28 downto 25) when others;
+      
+  u5 : ila_0
+      PORT MAP (
+          clk => sys_clk,
+      
+      
+      
+          probe0 => usr_sw_i
+      );
   
 end Behavioral;

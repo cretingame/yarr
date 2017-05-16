@@ -221,6 +221,7 @@ architecture Behavioral of top_level is
                cfg_function_number_i : in STD_LOGIC_VECTOR(2 DOWNTO 0);
                
                -- PCIe debug
+               tx_err_drop_i : in STD_LOGIC;
                cfg_dstatus_i : in STD_LOGIC_VECTOR(15 DOWNTO 0);
                
                --DDR3
@@ -286,6 +287,7 @@ architecture Behavioral of top_level is
     -- PCIE signals
     signal user_lnk_up_s : STD_LOGIC;
     signal user_app_rdy_s : STD_LOGIC;
+    signal tx_err_drop_s : STD_LOGIC;
     signal cfg_interrupt_s : STD_LOGIC;
     signal cfg_interrupt_rdy_s : STD_LOGIC;
     signal cfg_interrupt_assert_s : STD_LOGIC;
@@ -355,6 +357,7 @@ begin
         user_reset_out => open, -- TODO
         user_lnk_up => user_lnk_up_s,
         user_app_rdy => user_app_rdy_s,
+        tx_err_drop => tx_err_drop_s,
         s_axis_tx_tready => s_axis_tx_tready_s,
         s_axis_tx_tdata => s_axis_tx_tdata_s,
         s_axis_tx_tkeep => s_axis_tx_tkeep_s,
@@ -433,6 +436,7 @@ begin
         cfg_function_number_i => cfg_function_number_s,
         
         -- PCIe debug
+        tx_err_drop_i => tx_err_drop_s,
         cfg_dstatus_i => cfg_dstatus_s,
         
         --DDR3

@@ -11,8 +11,11 @@ set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir /home/asautaux/yarr/project_hdl/project_hdl.cache/wt [current_project]
 set_property parent.project_path /home/asautaux/yarr/project_hdl/project_hdl.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
+add_files -quiet /home/asautaux/yarr/project_hdl/project_hdl.srcs/sources_1/ip/ila_0/ila_0.dcp
+set_property used_in_implementation false [get_files /home/asautaux/yarr/project_hdl/project_hdl.srcs/sources_1/ip/ila_0/ila_0.dcp]
 read_vhdl -library xil_defaultlib {
   /home/asautaux/yarr/project_hdl/ram_interface.vhd
   /home/asautaux/yarr/project_hdl/ram_ctrl.vhd
@@ -23,6 +26,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/asautaux/yarr/project_hdl/project_hdl.srcs/constrs_1/imports/project_hdl/project_2.xdc
+set_property used_in_implementation false [get_files /home/asautaux/yarr/project_hdl/project_hdl.srcs/constrs_1/imports/project_hdl/project_2.xdc]
+
 
 synth_design -top top_level -part xc7k160tfbg676-2
 

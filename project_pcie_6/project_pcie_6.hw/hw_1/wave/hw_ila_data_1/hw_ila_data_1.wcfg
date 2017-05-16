@@ -9,11 +9,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="623617fs"></ZoomStartTime>
-      <ZoomEndTime time="679918fs"></ZoomEndTime>
-      <Cursor1Time time="633000fs"></Cursor1Time>
+      <ZoomStartTime time="63062fs"></ZoomStartTime>
+      <ZoomEndTime time="68693fs"></ZoomEndTime>
+      <Cursor1Time time="64000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wave_markers>
    </wave_markers>
    <wvobject type="array" fp_name="app_0/s_axis_rx_tdata_s">
@@ -130,6 +130,12 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">app_0/cfg_interrupt_rdy_i</obj_property>
       <obj_property name="ObjectShortName">cfg_interrupt_rdy_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_0/tx_err_drop_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_0/tx_err_drop_i</obj_property>
+      <obj_property name="ObjectShortName">tx_err_drop_i</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>
