@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Mar 31 14:02:28 2017">
+<application name="pa" timeStamp="Wed May 17 13:48:37 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="d77e6f57acee419cbf91b1b471e4a1f9" type="ProjectID"/>
 <property name="ProjectIteration" value="48" type="ProjectIteration"/>
@@ -45,7 +45,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OpenBlockDesign" value="27" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="90" type="JavaHandler"/>
 <property name="OpenIPLocationHandler" value="1" type="JavaHandler"/>
-<property name="OpenProject" value="8" type="JavaHandler"/>
+<property name="OpenProject" value="9" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="17" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="11" type="JavaHandler"/>
 <property name="ProgramDevice" value="24" type="JavaHandler"/>
@@ -85,43 +85,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ZoomOut" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="FINISH, Finish" value="1" type="GuiResourceData"/>
-<property name="NEXT, Next " value="1" type="GuiResourceData"/>
 <property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY, Add Repository..." value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, null, -1, null, -1, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_ADD_SOURCES, Add Sources..." value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_OPEN_IP_LOCATION, Open IP Location..." value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_REPORT_IP_STATUS, Report IP Status" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, design_1_wrapper - STRUCTURE (design_1_wrapper.vhd" value="4" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources], 5, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, IP Catalog], 4, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.IPStatusSectionPanel_RE_RUN_REPORT, (String" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, /pcie_7x_0 ; false ; design_1_pcie_7x_0_0 [7 Series Integrated Block for PCI Express] (Up-to-date" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, /pcie_axi_lite_v1_0_0 ; false ; design_1_pcie_axi_lite_v1_0_0_1 [pcie_axi_lite_v1_0] (IP definition not found" value="16" type="GuiResourceData"/>
-<property name="PAResourceItoN.IPStatusTablePanel_MORE_INFO, Add IP definition to catalog" value="3" type="GuiResourceData"/>
-<property name="PAResourceItoN.IPStatusTablePanel_MORE_INFO, IP definition not found" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FLOW, Flow" value="6" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_CHECKPOINT, Open Recent Checkpoint" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, design_1_wrapper - STRUCTURE (design_1_wrapper.vhd" value="2" type="GuiResourceData"/>
 <property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_REPORT, Report" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_TOOLS, Tools" value="8" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_WINDOW, Window" value="6" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, Add Files" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcFilePropPanels_MORE_INFO, more info" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="1" type="GuiResourceData"/>
-<property name="RDIResource.AddRepositoryInfoDialog_INFO_LIST,   axi_lite_bridge  (/home/asautaux/yarr" value="1" type="GuiResourceData"/>
-<property name="RDIResource.AddRepositoryInfoDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="RDIResource.MainWinMenuMgr_LAYOUT, Layout" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainToolbarMgr_OPEN, (String" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="336" type="GuiMode"/>
+<property name="GuiMode" value="488" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="289" type="TclMode"/>
+<property name="TclMode" value="418" type="TclMode"/>
 </item>
 </section>
 </application>

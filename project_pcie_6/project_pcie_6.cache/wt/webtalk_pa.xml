@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue May 16 10:25:09 2017">
+<application name="pa" timeStamp="Wed May 17 15:20:25 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="39085c961e7a496c993e3fc055b0107d" type="ProjectID"/>
 <property name="ProjectIteration" value="319" type="ProjectIteration"/>
@@ -47,15 +47,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ManageCompositeTargets" value="5" type="JavaHandler"/>
 <property name="NewFile" value="1" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="4" type="JavaHandler"/>
-<property name="NewProject" value="2" type="JavaHandler"/>
+<property name="NewProject" value="4" type="JavaHandler"/>
 <property name="OpenExample" value="4" type="JavaHandler"/>
 <property name="OpenFile" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="604" type="JavaHandler"/>
-<property name="OpenProject" value="11" type="JavaHandler"/>
+<property name="OpenProject" value="13" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="17" type="JavaHandler"/>
 <property name="ProgramCfgMem" value="6" type="JavaHandler"/>
 <property name="ProgramDevice" value="280" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="54" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="56" type="JavaHandler"/>
 <property name="RecustomizeCore" value="260" type="JavaHandler"/>
 <property name="RefreshDevice" value="13" type="JavaHandler"/>
 <property name="ReportDRC" value="2" type="JavaHandler"/>
@@ -108,20 +108,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ui.views.b.h.f" value="2" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_RESET_RUNS, Reset Runs" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, pcie_7x_0_synth_1 ; pcie_7x_0 ; synth_design Complete! ;  ;  ;  ;  ;  ;  ; 1973 ; 3063 ; 8 ; 0 ; 0 ; Tue May 16 10:12:13 PDT 2017 ; 00:00:46 ; Vivado Synthesis Defaults (Vivado Synthesis 2016" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, Reset" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_COPY, Copy" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 259, 81" value="1" type="GuiResourceData"/>
-<property name="RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 75, 68, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="4" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_NEW_PROJECT, New Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Project Settings], 1, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, /home/asautaux/yarr/project_pcie_6/project_pcie_6.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PartChooser_PARTS, xc7k160tfbg676-2 ; 676 ; 325 ; 600 ; 202800 ; 0 ; 8 ; 400 ; 101400 ; 8 ; 1 ; 85 ; 0 ; 85 ; C ; 1.03 ; 0.97 ; 0.97 ; 8 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0, 0, 600, 3" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, project_vivado" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String" value="1" type="GuiResourceData"/>
+<property name="RDIResourceCommand.RDICommands_COPY, Copy" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="485" type="GuiMode"/>
+<property name="GuiMode" value="489" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="415" type="TclMode"/>
+<property name="TclMode" value="419" type="TclMode"/>
 </item>
 </section>
 </application>
