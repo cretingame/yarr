@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/asautaux/yarr/mig_7series_0_example/mig_7series_0_example.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2432fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="153" />
+   <wvobject type="array" fp_name="cal2_state_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">cal2_state_r[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cal2_state_r[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cal1_cnt_cpt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cal1_cnt_cpt_r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cal1_cnt_cpt_r[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cal1_state_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cal1_state_r[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cal1_state_r[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_cmd_wdt_err_w">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmd_wdt_err_w</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmd_wdt_err_w</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cmp_addr_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmp_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmp_addr_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cmp_bl_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmp_bl_i[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmp_bl_i[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cmp_data_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmp_data_r[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmp_data_r[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_cmp_data_valid">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmp_data_valid</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmp_data_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_cmp_error">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cmp_error</obj_property>
+      <obj_property name="ObjectShortName">dbg_cmp_error</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_first_edge_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_first_edge_cnt[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_first_edge_cnt[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_first_edge_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_first_edge_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_first_edge_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_second_edge_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_second_edge_cnt[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_second_edge_cnt[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_second_edge_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_second_edge_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_second_edge_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_tap_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_tap_cnt[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_tap_cnt[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cpt_tap_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cpt_tap_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cpt_tap_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_cumlative_dq_lane_error">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_cumlative_dq_lane_error[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_cumlative_dq_lane_error[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_data_offset">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_data_offset[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_data_offset[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_data_offset_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_data_offset_1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_data_offset_1[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_data_offset_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_data_offset_2[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_data_offset_2[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dbg_calib_rd_data_offset_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dbg_calib_rd_data_offset_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dbg_calib_rd_data_offset_1[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dbg_calib_rd_data_offset_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dbg_calib_rd_data_offset_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dbg_calib_rd_data_offset_2[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ddrx_ila_rdpath_765_764">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ddrx_ila_rdpath_765_764[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ddrx_ila_rdpath_765_764[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dq_error_bytelane_cmp">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dq_error_bytelane_cmp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dq_error_bytelane_cmp[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dq_idelay_tap_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dq_idelay_tap_cnt[89:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dq_idelay_tap_cnt[89:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dq_idelay_tap_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dq_idelay_tap_cnt_by_dqs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dq_idelay_tap_cnt_by_dqs[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_dqs_cnt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_dqs_cnt_r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_dqs_cnt_r[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_early1_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_early1_data</obj_property>
+      <obj_property name="ObjectShortName">dbg_early1_data</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_early1_data_match_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_early1_data_match_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_early1_data_match_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_early2_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_early2_data</obj_property>
+      <obj_property name="ObjectShortName">dbg_early2_data</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_early2_data_match_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_early2_data_match_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_early2_data_match_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_fine_adjust_done_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_fine_adjust_done_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_fine_adjust_done_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_init_calib_complete">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">dbg_init_calib_complete</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_mcb_cmd_full_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mcb_cmd_full_i</obj_property>
+      <obj_property name="ObjectShortName">dbg_mcb_cmd_full_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_mcb_rd_empty_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mcb_rd_empty_i</obj_property>
+      <obj_property name="ObjectShortName">dbg_mcb_rd_empty_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_mcb_wr_full_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mcb_wr_full_i</obj_property>
+      <obj_property name="ObjectShortName">dbg_mcb_wr_full_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_fall0_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_fall0_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_fall0_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_fall1_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_fall1_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_fall1_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_fall2_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_fall2_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_fall2_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_fall3_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_fall3_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_fall3_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_rise0_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_rise0_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_rise0_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_rise1_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_rise1_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_rise1_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_rise2_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_rise2_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_rise2_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_mux_rd_rise3_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_rise3_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_rise3_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_mux_rd_valid_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_mux_rd_valid_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_mux_rd_valid_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_ocal_center_calib_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_center_calib_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_center_calib_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_ocal_center_calib_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_center_calib_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_center_calib_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_fuzz2oneeighty">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_fuzz2oneeighty[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_fuzz2oneeighty[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_fuzz2zero">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_fuzz2zero[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_fuzz2zero[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_ocal_lim_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_lim_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_lim_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_oclkdelay_calib_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_oclkdelay_calib_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_oclkdelay_calib_cnt[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_oneeighty2fuzz">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_oneeighty2fuzz[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_oneeighty2fuzz[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_ocal_scan_win_not_found">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_scan_win_not_found</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_scan_win_not_found</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_stg3_left_lim">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_stg3_left_lim[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_stg3_left_lim[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_stg3_right_lim">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_stg3_right_lim[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_stg3_right_lim[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_tap_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_tap_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_tap_cnt[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_ocal_zero2fuzz">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_ocal_zero2fuzz[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_ocal_zero2fuzz[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_oclkdelay_calib_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_oclkdelay_calib_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_oclkdelay_calib_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_oclkdelay_calib_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_oclkdelay_calib_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_oclkdelay_calib_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_init_5_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_init_5_0[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_init_5_0[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_oclkdelay_cal_57_54">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_oclkdelay_cal_57_54[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_oclkdelay_cal_57_54[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_oclkdelay_cal_taps">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_oclkdelay_cal_taps[53:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_oclkdelay_cal_taps[53:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_oclkdelay_zfo">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_oclkdelay_zfo[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_oclkdelay_zfo[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_wrlvl_128_75">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_wrlvl_128_75[53:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_wrlvl_128_75[53:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_phy_wrlvl_155_129">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_phy_wrlvl_155_129[26:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_phy_wrlvl_155_129[26:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_pi_dqs_found_lanes_phy4lanes">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_dqs_found_lanes_phy4lanes[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_dqs_found_lanes_phy4lanes[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_dqsfound_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_dqsfound_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_dqsfound_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_dqsfound_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_dqsfound_err</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_dqsfound_err</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_dqsfound_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_dqsfound_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_dqsfound_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_pi_phase_locked_phy4lanes">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_phase_locked_phy4lanes[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_phase_locked_phy4lanes[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_phaselock_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_phaselock_err</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_phaselock_err</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_phaselock_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_phaselock_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_phaselock_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_pi_phaselocked_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_pi_phaselocked_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_pi_phaselocked_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_final_dqs_tap_cnt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_final_dqs_tap_cnt_r[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_final_dqs_tap_cnt_r[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_first_edge_taps">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_first_edge_taps[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_first_edge_taps[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_f0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_f0</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_f0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_f1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_f1</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_f1</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_f2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_f2</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_f2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_f3">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_f3</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_f3</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_pb_and">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_pb_and</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_pb_and</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_compare_err_pb_latch_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_pb_latch_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_pb_latch_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_r0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_r0</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_r0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_r1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_r1</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_r1</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_r2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_r2</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_r2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_compare_err_r3">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_compare_err_r3</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_compare_err_r3</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_complex_victim_inc">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_complex_victim_inc</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_complex_victim_inc</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_fine_delay_incdec_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_fine_delay_incdec_pb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_fine_delay_incdec_pb[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_fine_delay_sel">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_fine_delay_sel</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_fine_delay_sel</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_fine_dly_error">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_fine_dly_error</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_fine_dly_error</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_fine_inc_stage">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_fine_inc_stage</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_fine_inc_stage</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_fine_pi_dec_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_fine_pi_dec_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_fine_pi_dec_cnt[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_largest_left_edge">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_largest_left_edge[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_largest_left_edge[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_left_edge_found_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_left_edge_found_pb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_left_edge_found_pb[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_left_edge_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_left_edge_pb[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_left_edge_pb[47:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_left_edge_pb_dqs_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_left_edge_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_left_edge_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_left_loss_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_left_loss_pb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_left_loss_pb[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_match_flag_and">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_match_flag_and[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_match_flag_and[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_phy_if_empty">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_phy_if_empty</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_phy_if_empty</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_pi_counter_read_val">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_pi_counter_read_val[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_pi_counter_read_val[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_prbs_dqs_cnt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_dqs_cnt_r[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_dqs_cnt_r[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_prbs_dqs_tap_cnt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_dqs_tap_cnt_r[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_dqs_tap_cnt_r[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_prbs_found_1st_edge_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_found_1st_edge_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_found_1st_edge_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_prbs_found_2nd_edge_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_found_2nd_edge_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_found_2nd_edge_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_prbs_rdlvl_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_rdlvl_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_rdlvl_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_prbs_rdlvl_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_rdlvl_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_rdlvl_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_prbs_state_r1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_prbs_state_r1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_prbs_state_r1[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_rd_valid_r2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_rd_valid_r2</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_rd_valid_r2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_rd_victim_sel">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_rd_victim_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_rd_victim_sel[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_ref_bit">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_ref_bit[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_ref_bit[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_prbs_rdlvl_right_edge_found">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_edge_found</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_edge_found</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_right_edge_found_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_edge_found_pb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_edge_found_pb[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_right_edge_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_edge_pb[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_edge_pb[47:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_right_edge_pb_dqs_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_edge_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_edge_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_right_gain_pb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_gain_pb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_gain_pb[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_right_gain_pb_dqs_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_right_gain_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_right_gain_pb_dqs_cnt[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_smallest_right_edge">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_smallest_right_edge[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_smallest_right_edge[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_rdlvl_stage_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_rdlvl_stage_cnt[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_rdlvl_stage_cnt[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_prbs_second_edge_taps">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_prbs_second_edge_taps[107:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_prbs_second_edge_taps[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_rd_data_edge_detect_r_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rd_data_edge_detect_r_by_dqs</obj_property>
+      <obj_property name="ObjectShortName">dbg_rd_data_edge_detect_r_by_dqs</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_rd_data_offset">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rd_data_offset[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_rd_data_offset[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_rd_wdt_err_w">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rd_wdt_err_w</obj_property>
+      <obj_property name="ObjectShortName">dbg_rd_wdt_err_w</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_rddata_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rddata_r[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_rddata_r[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_rddata_valid_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rddata_valid_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_rddata_valid_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_rdlvl_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rdlvl_done[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_rdlvl_done[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_rdlvl_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rdlvl_err[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_rdlvl_err[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_rdlvl_pat_data_match_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rdlvl_pat_data_match_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_rdlvl_pat_data_match_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_rdlvl_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_rdlvl_start[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_rdlvl_start[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_tg_compare_error">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_tg_compare_error</obj_property>
+      <obj_property name="ObjectShortName">dbg_tg_compare_error</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_fall0_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_fall0_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_fall0_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_fall1_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_fall1_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_fall1_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_fall2_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_fall2_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_fall2_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_fall3_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_fall3_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_fall3_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_rise0_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_rise0_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_rise0_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_rise1_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_rise1_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_rise1_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_rise2_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_rise2_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_rise2_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wcal_mux_rd_rise3_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_mux_rd_rise3_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_mux_rd_rise3_r[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wcal_sanity_pat_data_match_valid_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wcal_sanity_pat_data_match_valid_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_wcal_sanity_pat_data_match_valid_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wl_edge_detect_valid_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wl_edge_detect_valid_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_wl_edge_detect_valid_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wl_po_coarse_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wl_po_coarse_cnt_by_dqs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wl_po_coarse_cnt_by_dqs[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wl_po_fine_cnt_by_dqs">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wl_po_fine_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wl_po_fine_cnt_by_dqs[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wl_state_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wl_state_r[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wl_state_r[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wr_wdt_err_w">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wr_wdt_err_w</obj_property>
+      <obj_property name="ObjectShortName">dbg_wr_wdt_err_w</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrcal_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="dbg_wrcal_dqs_cnt_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_dqs_cnt_r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_dqs_cnt_r[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrcal_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_err</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_err</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrcal_pat_data_match_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_pat_data_match_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_pat_data_match_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrcal_pat_data_match_valid_r">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_pat_data_match_valid_r</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_pat_data_match_valid_r</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrcal_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrcal_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrcal_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrlvl_done">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrlvl_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrlvl_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrlvl_err">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrlvl_err</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrlvl_err</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="dbg_wrlvl_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">dbg_wrlvl_start</obj_property>
+      <obj_property name="ObjectShortName">dbg_wrlvl_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="device_temp">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">device_temp[11:0]</obj_property>
+      <obj_property name="ObjectShortName">device_temp[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="not_empty_wait_cnt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">not_empty_wait_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">not_empty_wait_cnt[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+</wave_config>

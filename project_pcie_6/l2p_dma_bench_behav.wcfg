@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="l2p_dma_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common_pkg" />
+            <top_module name="glbl" />
+            <top_module name="gn4124_core_pkg" />
+            <top_module name="l2p_dma_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="150000000fs"></ZoomStartTime>
+      <ZoomEndTime time="7170000001fs"></ZoomEndTime>
+      <Cursor1Time time="4900000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="41" />
+   <wvobject type="logic" fp_name="/l2p_dma_bench/clk_tbs">
+      <obj_property name="ElementShortName">clk_tbs</obj_property>
+      <obj_property name="ObjectShortName">clk_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/rst_tbs">
+      <obj_property name="ElementShortName">rst_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/rst_n_tbs">
+      <obj_property name="ElementShortName">rst_n_tbs</obj_property>
+      <obj_property name="ObjectShortName">rst_n_tbs</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/l2p_dma_bench/step">
+      <obj_property name="ElementShortName">step</obj_property>
+      <obj_property name="ObjectShortName">step</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dma_ctrl_target_addr_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_target_addr_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_target_addr_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dma_ctrl_host_addr_h_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_host_addr_h_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_h_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dma_ctrl_host_addr_l_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_host_addr_l_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_host_addr_l_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dma_ctrl_len_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_len_tbs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_len_tbs[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dma_ctrl_start_l2p_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_start_l2p_tbs</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_start_l2p_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dma_ctrl_done_s">
+      <obj_property name="ElementShortName">dma_ctrl_done_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_done_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dma_ctrl_error_s">
+      <obj_property name="ElementShortName">dma_ctrl_error_s</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_error_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dma_ctrl_byte_swap_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_byte_swap_tbs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_byte_swap_tbs[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dma_ctrl_abort_tbs">
+      <obj_property name="ElementShortName">dma_ctrl_abort_tbs</obj_property>
+      <obj_property name="ObjectShortName">dma_ctrl_abort_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dut1/data_fifo_rd">
+      <obj_property name="ElementShortName">data_fifo_rd</obj_property>
+      <obj_property name="ObjectShortName">data_fifo_rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/dut1/data_fifo_empty">
+      <obj_property name="ElementShortName">data_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">data_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/ldm_arb_tvalid_s">
+      <obj_property name="ElementShortName">ldm_arb_tvalid_s</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_tvalid_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/ldm_arb_tlast_s">
+      <obj_property name="ElementShortName">ldm_arb_tlast_s</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_tlast_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/ldm_arb_tdata_s">
+      <obj_property name="ElementShortName">ldm_arb_tdata_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_tdata_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/ldm_arb_tkeep_s">
+      <obj_property name="ElementShortName">ldm_arb_tkeep_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_tkeep_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/ldm_arb_tready_tbs">
+      <obj_property name="ElementShortName">ldm_arb_tready_tbs</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_tready_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/ldm_arb_req_s">
+      <obj_property name="ElementShortName">ldm_arb_req_s</obj_property>
+      <obj_property name="ObjectShortName">ldm_arb_req_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/arb_ldm_gnt_tbs">
+      <obj_property name="ElementShortName">arb_ldm_gnt_tbs</obj_property>
+      <obj_property name="ObjectShortName">arb_ldm_gnt_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_edb_s">
+      <obj_property name="ElementShortName">l2p_edb_s</obj_property>
+      <obj_property name="ObjectShortName">l2p_edb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_rdy_tbs">
+      <obj_property name="ElementShortName">l2p_rdy_tbs</obj_property>
+      <obj_property name="ObjectShortName">l2p_rdy_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_64b_address_tbs">
+      <obj_property name="ElementShortName">l2p_64b_address_tbs</obj_property>
+      <obj_property name="ObjectShortName">l2p_64b_address_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/tx_error_tbs">
+      <obj_property name="ElementShortName">tx_error_tbs</obj_property>
+      <obj_property name="ObjectShortName">tx_error_tbs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/l2p_dma_adr_s">
+      <obj_property name="ElementShortName">l2p_dma_adr_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_adr_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/l2p_dma_dat_s2m_s">
+      <obj_property name="ElementShortName">l2p_dma_dat_s2m_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_dat_s2m_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/l2p_dma_dat_m2s_s">
+      <obj_property name="ElementShortName">l2p_dma_dat_m2s_s[63:0]</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_dat_m2s_s[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/l2p_dma_sel_s">
+      <obj_property name="ElementShortName">l2p_dma_sel_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_sel_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_cyc_s">
+      <obj_property name="ElementShortName">l2p_dma_cyc_s</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_cyc_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_stb_s">
+      <obj_property name="ElementShortName">l2p_dma_stb_s</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_stb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_we_s">
+      <obj_property name="ElementShortName">l2p_dma_we_s</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_we_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_ack_s">
+      <obj_property name="ElementShortName">l2p_dma_ack_s</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_ack_s</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/l2p_dma_dat_s2m_tbs">
+      <obj_property name="ElementShortName">l2p_dma_dat_s2m_tbs[63:0]</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_dat_s2m_tbs[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_ack_tbs">
+      <obj_property name="ElementShortName">l2p_dma_ack_tbs</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_ack_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/l2p_dma_stall_tbs">
+      <obj_property name="ElementShortName">l2p_dma_stall_tbs</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_stall_tbs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/l2p_dma_bench/p2l_dma_cyc_tbs">
+      <obj_property name="ElementShortName">p2l_dma_cyc_tbs</obj_property>
+      <obj_property name="ObjectShortName">p2l_dma_cyc_tbs</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/l2p_dma_bench/dut1/l2p_dma_current_state">
+      <obj_property name="ElementShortName">l2p_dma_current_state</obj_property>
+      <obj_property name="ObjectShortName">l2p_dma_current_state</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/l2p_dma_bench/dut1/wb_timeout_cnt">
+      <obj_property name="ElementShortName">wb_timeout_cnt[12:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_timeout_cnt[12:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/l2p_dma_bench/debug_time">
+      <obj_property name="ElementShortName">debug_time</obj_property>
+      <obj_property name="ObjectShortName">debug_time</obj_property>
+   </wvobject>
+</wave_config>

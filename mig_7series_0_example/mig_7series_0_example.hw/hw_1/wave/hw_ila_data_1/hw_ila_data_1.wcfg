@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/asautaux/yarr/mig_7series_0_example/mig_7series_0_example.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="144000fs"></ZoomStartTime>
+      <ZoomEndTime time="155261fs"></ZoomEndTime>
+      <Cursor1Time time="150000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="14" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="app_addr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_addr[28:0]</obj_property>
+      <obj_property name="ObjectShortName">app_addr[28:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_cmd">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_cmd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">app_cmd[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_en">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_en</obj_property>
+      <obj_property name="ObjectShortName">app_en</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_rd_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_rd_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">app_rd_data[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_rd_data_end">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_rd_data_end</obj_property>
+      <obj_property name="ObjectShortName">app_rd_data_end</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_rd_data_valid">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_rd_data_valid</obj_property>
+      <obj_property name="ObjectShortName">app_rd_data_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_rdy">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_rdy</obj_property>
+      <obj_property name="ObjectShortName">app_rdy</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_wdf_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_wdf_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_data[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="app_wdf_mask">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_wdf_mask[31:0]</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_mask[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_wdf_rdy">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_wdf_rdy</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_rdy</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_wdf_end">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_wdf_end</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_end</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="app_wdf_wren">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">app_wdf_wren</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_wren</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="init_calib_complete_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">init_calib_complete_i</obj_property>
+      <obj_property name="ObjectShortName">init_calib_complete_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="rst">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+</wave_config>
